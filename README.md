@@ -2,7 +2,7 @@
 
 Reusable enablement skills for AI agents.
 
-Built for enablement teams, PMMs, RevOps, sales leaders, and frontline managers who want repeatable workflows for messaging, coaching, launches, programs, and measurement.
+Built specifically for sales and revenue enablement professionals, and also useful for revenue leaders, RevOps teams, frontline managers, account leaders, and other customer-facing teams that need repeatable workflows for messaging, coaching, launches, programs, and measurement.
 
 Works with agent tools such as Claude Code and Codex.
 
@@ -89,15 +89,27 @@ Example prompts:
 - `Summarize forecast risks from these deal notes and manager comments.`
 - `Draft an executive briefing for this customer account before the QBR.`
 
-## Common Starting Points
+## Featured Skills
 
-- not sure which skill to use: [`enablement-router`](skills/enablement-router/SKILL.md)
-- need shared company context first: [`revenue-enablement-context`](skills/revenue-enablement-context/SKILL.md)
-- messaging work: `value-prop-and-positioning`, `talk-track-builder`, `objection-library-builder`, `battlecard-builder`
-- coaching work: `call-review-coach`, `deal-inspection-coach`, `manager-coaching-cadence`, `forecast-risk-brief`
-- program work: `onboarding-program-builder`, `certification-program-builder`
-- launch work: `product-launch-enablement`, `release-notes-to-seller-updates`
-- account and leadership prep: `account-brief-builder`, `executive-briefing-builder`, `qbr-ebr-builder`
+| Skill | What it does |
+| --- | --- |
+| [`enablement-router`](skills/enablement-router/SKILL.md) | Routes revenue enablement requests to the best-fit skill or sequence of skills. Use it when the ask is ambiguous or combines multiple deliverables. |
+| [`revenue-enablement-context`](skills/revenue-enablement-context/SKILL.md) | Creates or updates a shared enablement context covering ICP, personas, sales stages, objections, pricing, and competitors. Use it when downstream outputs need a stronger company baseline. |
+| [`value-prop-and-positioning`](skills/value-prop-and-positioning/SKILL.md) | Builds differentiated positioning and persona-specific value propositions for revenue teams. It is useful for clarifying alternatives, proof points, and seller-ready messaging. |
+| [`talk-track-builder`](skills/talk-track-builder/SKILL.md) | Creates stage- and persona-specific talk tracks for live sales conversations. Use it for discovery, demo, commercial, or manager-led conversation flows. |
+| [`objection-library-builder`](skills/objection-library-builder/SKILL.md) | Builds a reusable objection handling library with response patterns, proof guidance, and escalation rules. It helps teams answer common pushback consistently without sounding scripted. |
+| [`battlecard-builder`](skills/battlecard-builder/SKILL.md) | Creates competitor battlecards with counters, landmines, proof, and win-loss signals. Use it for head-to-head deals and seller-ready compete guidance. |
+| [`call-review-coach`](skills/call-review-coach/SKILL.md) | Reviews a specific sales call and returns evidence-backed coaching feedback. It prioritizes the next practice actions that should improve execution on the next call. |
+| [`deal-inspection-coach`](skills/deal-inspection-coach/SKILL.md) | Inspects an active deal and produces a manager-ready view of risk, evidence quality, and next steps. Use it for structured deal reviews and stall-risk diagnosis. |
+| [`manager-coaching-cadence`](skills/manager-coaching-cadence/SKILL.md) | Designs repeatable coaching rhythms for managers, including agendas, prompts, and inspection loops. It is useful when you want stronger coaching consistency without adding heavy process. |
+| [`forecast-risk-brief`](skills/forecast-risk-brief/SKILL.md) | Builds a concise forecast risk brief for sales leadership. It highlights confidence, at-risk deals, and the interventions most likely to improve the forecast. |
+| [`onboarding-program-builder`](skills/onboarding-program-builder/SKILL.md) | Creates role-based onboarding programs that reduce ramp time and improve early performance quality. Use it for 30-60-90 plans, competency ramps, and manager-guided onboarding. |
+| [`certification-program-builder`](skills/certification-program-builder/SKILL.md) | Creates certification programs with scoring criteria, evaluation prompts, and calibration rules. It is useful for readiness assessments and repeatable pass-fail standards. |
+| [`product-launch-enablement`](skills/product-launch-enablement/SKILL.md) | Builds internal launch enablement plans that prepare revenue teams to sell and support product changes confidently. Use it for readiness plans, internal FAQs, and rollout guidance tied to launches. |
+| [`release-notes-to-seller-updates`](skills/release-notes-to-seller-updates/SKILL.md) | Converts release notes into concise seller-ready updates with customer impact and action guidance. It helps field teams understand what changed, why it matters, and how to talk about it. |
+| [`account-brief-builder`](skills/account-brief-builder/SKILL.md) | Builds concise account briefs for internal reviews, meeting prep, and deal strategy. Use it to summarize account risk, upside, stakeholders, and next steps in one read. |
+| [`executive-briefing-builder`](skills/executive-briefing-builder/SKILL.md) | Creates executive-facing briefing materials for strategic customer meetings and leadership prep. It focuses on decision-oriented talking points and meeting goals rather than broad account summaries. |
+| [`qbr-ebr-builder`](skills/qbr-ebr-builder/SKILL.md) | Builds QBR and EBR materials that connect customer goals, outcomes, risks, and forward plans. Use it for outcome-led business reviews with customer leadership teams. |
 
 ## Working With AI Agents
 
