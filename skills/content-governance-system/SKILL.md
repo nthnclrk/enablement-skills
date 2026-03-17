@@ -53,7 +53,7 @@ Build a lightweight governance operating model that keeps enablement content acc
 - Exception workflow for urgent launch or legal/compliance-triggered changes.
 - Assumptions list when source inputs were incomplete.
 
-## Failure Modes To Avoid
+## What To Avoid
 - Designing governance that only works for large teams.
 - Blocking urgent launch updates because exception paths are undefined.
 - Treating taxonomy cleanup as governance while ownership remains ambiguous.

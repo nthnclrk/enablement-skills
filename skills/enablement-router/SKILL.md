@@ -33,7 +33,7 @@ Read [references/route-map.md](references/route-map.md) when choosing between ne
 7. Return a route with execution order and handoff outputs between steps.
 8. Flag adjacent tasks that should explicitly not be included.
 
-## Common Failure Modes
+## What To Avoid
 
 - Bloated routes that stack too many skills for a simple request.
 - Missing context step before context-sensitive skills.

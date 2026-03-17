@@ -49,7 +49,7 @@ Build practical, role-specific talk tracks that help sellers run clearer, more o
 - Manager inspection checklist for track adherence and effectiveness.
 - Assumptions list when source inputs were incomplete.
 
-## Failure Modes To Avoid
+## What To Avoid
 - Writing polished scripts that sound unnatural in live calls.
 - Mixing discovery and demo goals into one unfocused conversation.
 - Ignoring role/stage differences and shipping a one-size-fits-all track.

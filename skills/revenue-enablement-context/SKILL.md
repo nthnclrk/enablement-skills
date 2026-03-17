@@ -38,7 +38,7 @@ Read [references/context-schema.yaml](references/context-schema.yaml) when the u
 7. Add a missing-information checklist for future refinement.
 8. Return the updated context plus the top unresolved decisions.
 
-## Common Failure Modes
+## What To Avoid
 
 - Generic context that cannot drive role-specific outputs.
 - Hidden contradictions between sales-stage definitions and qualification guidance.

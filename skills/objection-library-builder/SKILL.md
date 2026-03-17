@@ -43,7 +43,7 @@ Build a reusable objection response system that helps teams respond consistently
 - Coaching notes for managers.
 - Assumptions list when source inputs were incomplete.
 
-## Failure Modes To Avoid
+## What To Avoid
 - Treating all objections as equal without prioritization by deal risk.
 - Shipping rebuttals without diagnostic lines that uncover root cause.
 - Publishing responses without ownership or approval status.

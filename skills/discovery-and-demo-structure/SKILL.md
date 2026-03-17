@@ -47,7 +47,7 @@ Ask for only missing essentials. If details remain unknown, proceed with labeled
 - `Next-Step Script`: commitment language and meeting close structure.
 - `Variant Notes`: adjustments for executive, technical, or multi-stakeholder contexts.
 
-## Failure Modes To Avoid
+## What To Avoid
 - Using one discovery path for every stakeholder profile.
 - Running feature-order demos disconnected from agreed buyer outcomes.
 - Ending without clear owner/date commitments for the next decision step.

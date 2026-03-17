@@ -48,7 +48,7 @@ Convert raw customer evidence into a concise case narrative that revenue teams c
 - Anonymization profile and disclosure constraints.
 - Assumptions list when source inputs were incomplete.
 
-## Failure Modes To Avoid
+## What To Avoid
 - Treating directional anecdotes as quantified outcomes.
 - Publishing customer evidence before approval status is explicit.
 - Dropping anonymization details that affect safe reuse.

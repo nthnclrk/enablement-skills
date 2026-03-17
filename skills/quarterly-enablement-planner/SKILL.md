@@ -36,7 +36,7 @@ Read [references/quarterly-plan-template.md](references/quarterly-plan-template.
 8. Define monthly review moments and change-control rules.
 9. Produce a quarter calendar plus a short execution brief.
 
-## Common Failure Modes
+## What To Avoid
 
 - Quarter plans that exceed real capacity.
 - Prioritizing visible activity over high-impact initiatives.

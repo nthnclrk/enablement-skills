@@ -43,7 +43,7 @@ Build differentiated positioning and persona-level value messaging that revenue 
 - Stress test summary by decision lens.
 - Assumptions list when source inputs were incomplete.
 
-## Failure Modes To Avoid
+## What To Avoid
 - Treating positioning as slogan copy instead of decision support.
 - Reusing one message across all personas with only cosmetic edits.
 - Leading with claims that have no defensible proof path.

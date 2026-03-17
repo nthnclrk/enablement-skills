@@ -42,7 +42,7 @@ Build balanced, field-usable battlecards that help reps handle real competitive 
 - Do-not-say list and escalation notes.
 - Assumptions list when source inputs were incomplete.
 
-## Failure Modes To Avoid
+## What To Avoid
 - Repeating stale competitive claims without verification date/source.
 - Treating battlecards as one-sided attack sheets instead of tradeoff guides.
 - Letting reps use counters that have no legal-safe proof path.

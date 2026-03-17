@@ -36,7 +36,7 @@ Read [references/impact-story-template.md](references/impact-story-template.md) 
 8. Provide next-quarter actions based on findings.
 9. Produce executive-ready summary and appendix-ready evidence list.
 
-## Common Failure Modes
+## What To Avoid
 
 - Overstating causality when evidence is directional.
 - Burying critical caveats in appendix notes.

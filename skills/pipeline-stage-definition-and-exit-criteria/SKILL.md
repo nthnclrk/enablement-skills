@@ -15,7 +15,7 @@ Confirm the minimum design inputs:
 - Current stage map and definitions
 - Target sales motions (new business, expansion, partner-led, enterprise, SMB)
 - Qualification method in use (for example MEDDICC or similar)
-- Forecasting pain points and inspection failure modes
+- Forecasting pain points and inspection problems
 - Intended operators (AEs, managers, RevOps)
 
 If inputs are partial, ask only for missing essentials or proceed with labeled assumptions.
@@ -27,7 +27,7 @@ If inputs are partial, ask only for missing essentials or proceed with labeled a
 
 ## Default Workflow
 
-1. Diagnose current failure modes.
+1. Diagnose what is going wrong today.
 Identify where stages are ambiguous, skip-prone, or weakly inspectable.
 
 2. Redefine stage intent.
@@ -75,4 +75,4 @@ Default output includes:
 - Stage progression logic is clear and mutually exclusive enough for reporting.
 - Governance is explicit enough for manager coaching and forecast reviews.
 - Output includes practical implementation details for operations teams.
-- Design addresses known failure modes from current process.
+- Design addresses known problem areas from the current process.

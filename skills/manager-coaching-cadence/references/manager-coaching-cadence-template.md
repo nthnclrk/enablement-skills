@@ -89,7 +89,7 @@ Recommended outputs:
 - Focus on renewal risk, expansion qualification, and value-story execution.
 - Include handoff quality and account-health evidence in observation logs.
 
-## 7) Common Failure Modes
+## 7) What To Avoid
 
 - Turning coaching sessions into generic status updates.
 - Tracking activity counts instead of behavior changes.

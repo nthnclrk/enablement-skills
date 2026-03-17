@@ -48,7 +48,7 @@ Identify the most important enablement content gaps and prioritize them by busin
 - Ownership suggestions and target completion windows.
 - Assumptions and confidence notes when source data is partial.
 
-## Failure Modes To Avoid
+## What To Avoid
 - Calling everything a content gap when discovery/distribution is the real issue.
 - Treating low usage as low quality without discoverability checks.
 - Prioritizing by stakeholder volume instead of business impact and frequency.

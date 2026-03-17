@@ -52,7 +52,7 @@ If inputs are incomplete, ask for only the highest-impact gaps. If the user pref
 - Variant-ready copies for requested channels:
   Slack, email, wiki, or manager briefing
 
-## Failure Modes To Avoid
+## What To Avoid
 - Translating technical changes without stating customer-facing impact.
 - Mixing internal uncertainty with confident seller guidance.
 - Publishing one format and expecting it to work for every channel.

@@ -207,7 +207,7 @@ Use these as starting points in Claude Code/Codex:
 - Keep source links/citations in outputs so teams can audit recommendations.
 - Redact sensitive customer information before broad distribution.
 
-## Common Failure Modes And Fixes
+## Common Issues And Fixes
 
 - Missing query results: confirm the parent database/page is shared with the integration and that capabilities are enabled.
 - Slow/partial content reads: handle pagination and recursively fetch nested blocks.

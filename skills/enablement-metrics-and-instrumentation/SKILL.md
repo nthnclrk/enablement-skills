@@ -37,7 +37,7 @@ Read [references/kpi-tree-examples.md](references/kpi-tree-examples.md) when you
 8. Add data quality checks and interpretation caveats.
 9. Produce KPI tree and instrumentation plan.
 
-## Common Failure Modes
+## What To Avoid
 
 - Using activity counts as success metrics with no behavior or outcome link.
 - Tracking too many KPIs to drive decisions.

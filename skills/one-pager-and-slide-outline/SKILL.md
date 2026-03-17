@@ -42,7 +42,7 @@ Turn messy source input into a clear narrative brief and a slide-ready structure
 - Suggested appendix topics and notes.
 - Assumptions list when source inputs were incomplete.
 
-## Failure Modes To Avoid
+## What To Avoid
 - Mixing multiple objectives into one overloaded narrative.
 - Producing topic-label slides instead of assertion headlines.
 - Reusing one audience voice across exec, seller, partner, and launch contexts.

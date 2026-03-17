@@ -36,7 +36,7 @@ Read [references/program-charter-template.md](references/program-charter-templat
 8. Identify operating risks and mitigation actions.
 9. Produce a charter and 90-day execution plan.
 
-## Common Failure Modes
+## What To Avoid
 
 - Framing a training activity as the goal instead of behavior change.
 - Missing sponsor and decision-right clarity across teams.
