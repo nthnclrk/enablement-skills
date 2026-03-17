@@ -1,0 +1,4 @@
+interface:
+  display_name: "Enablement Metrics"
+  short_description: "Define KPI trees and instrumentation"
+  default_prompt: "Use $enablement-metrics-and-instrumentation to create a KPI tree and instrumentation plan for this enablement initiative."

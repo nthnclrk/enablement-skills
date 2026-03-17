@@ -1,0 +1,65 @@
+{
+  "skill": "win-loss-synthesis",
+  "source": "skills/win-loss-synthesis/SKILL.md",
+  "notes": "Starter eval scaffold. Expand prompts and checks with real traces.",
+  "should_trigger": [
+    {
+      "prompt": "Use $win-loss-synthesis for this request.",
+      "expected": "trigger"
+    },
+    {
+      "prompt": "I need help with win loss synthesis.",
+      "expected": "trigger"
+    },
+    {
+      "prompt": "Please create a first draft using the win loss synthesis workflow.",
+      "expected": "trigger"
+    }
+  ],
+  "should_not_trigger": [
+    {
+      "prompt": "Write a short poem about quarterly planning.",
+      "expected": "do_not_trigger"
+    },
+    {
+      "prompt": "Refactor this Python function for performance.",
+      "expected": "do_not_trigger"
+    },
+    {
+      "prompt": "What is the weather in Sydney today?",
+      "expected": "do_not_trigger"
+    },
+    {
+      "prompt": "This request should use $battlecard-builder rather than $win-loss-synthesis.",
+      "expected": "do_not_trigger"
+    }
+  ],
+  "output_structure_checks": [
+    {
+      "name": "contains_output_element_1",
+      "type": "contains_phrase",
+      "phrase": "Findings summary by outcome with top coded themes"
+    },
+    {
+      "name": "contains_output_element_2",
+      "type": "contains_phrase",
+      "phrase": "Segment/persona/competitor comparison table"
+    },
+    {
+      "name": "contains_output_element_3",
+      "type": "contains_phrase",
+      "phrase": "Priority implications by function (enablement, PMM, sales management, product)"
+    },
+    {
+      "name": "contains_output_element_4",
+      "type": "contains_phrase",
+      "phrase": "Action plan with owner suggestions and 30/60/90-day sequence"
+    },
+    {
+      "name": "contains_output_element_5",
+      "type": "contains_phrase",
+      "phrase": "Assumptions, confidence notes, and unresolved questions"
+    }
+  ],
+  "managed_by": "starter"
+}

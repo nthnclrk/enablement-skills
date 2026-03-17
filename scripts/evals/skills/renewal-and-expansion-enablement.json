@@ -1,0 +1,65 @@
+{
+  "skill": "renewal-and-expansion-enablement",
+  "source": "skills/renewal-and-expansion-enablement/SKILL.md",
+  "notes": "Starter eval scaffold. Expand prompts and checks with real traces.",
+  "should_trigger": [
+    {
+      "prompt": "Use $renewal-and-expansion-enablement for this request.",
+      "expected": "trigger"
+    },
+    {
+      "prompt": "I need help with renewal and expansion enablement.",
+      "expected": "trigger"
+    },
+    {
+      "prompt": "Please create a first draft using the renewal and expansion enablement workflow.",
+      "expected": "trigger"
+    }
+  ],
+  "should_not_trigger": [
+    {
+      "prompt": "Write a short poem about quarterly planning.",
+      "expected": "do_not_trigger"
+    },
+    {
+      "prompt": "Refactor this Python function for performance.",
+      "expected": "do_not_trigger"
+    },
+    {
+      "prompt": "What is the weather in Sydney today?",
+      "expected": "do_not_trigger"
+    },
+    {
+      "prompt": "This request should use $qbr-ebr-builder rather than $renewal-and-expansion-enablement.",
+      "expected": "do_not_trigger"
+    }
+  ],
+  "output_structure_checks": [
+    {
+      "name": "contains_output_element_1",
+      "type": "contains_phrase",
+      "phrase": "Renewal and expansion play matrix by segment"
+    },
+    {
+      "name": "contains_output_element_2",
+      "type": "contains_phrase",
+      "phrase": "Risk and opportunity qualification criteria"
+    },
+    {
+      "name": "contains_output_element_3",
+      "type": "contains_phrase",
+      "phrase": "Product-usage signal map with threshold guidance"
+    },
+    {
+      "name": "contains_output_element_4",
+      "type": "contains_phrase",
+      "phrase": "Commercial governance-state map with owner by state"
+    },
+    {
+      "name": "contains_output_element_5",
+      "type": "contains_phrase",
+      "phrase": "Role-based talk-track and action prompts"
+    }
+  ],
+  "managed_by": "starter"
+}

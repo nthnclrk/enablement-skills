@@ -1,0 +1,5 @@
+interface:
+  display_name: "Forecast Risk Brief"
+  short_description: "Summarize forecast risk and interventions"
+  default_prompt: "Use $forecast-risk-brief to assess this period's forecast risk and return an intervention-focused leadership brief."
+

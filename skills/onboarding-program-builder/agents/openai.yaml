@@ -1,0 +1,4 @@
+interface:
+  display_name: "Onboarding Program Builder"
+  short_description: "Build role-based onboarding plans"
+  default_prompt: "Use $onboarding-program-builder to create a role-based 30-60-90 onboarding plan with competencies and checkpoints."

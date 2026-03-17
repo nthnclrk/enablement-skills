@@ -1,0 +1,4 @@
+interface:
+  display_name: "Account Brief Builder"
+  short_description: "Create concise strategic account briefs"
+  default_prompt: "Use $account-brief-builder to prepare a decision-ready account brief with stakeholders, risks, and a 30-day action plan."

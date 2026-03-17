@@ -1,0 +1,4 @@
+interface:
+  display_name: "Onboarding To Value Playbook"
+  short_description: "Design customer onboarding to value"
+  default_prompt: "Use $onboarding-to-value-playbook to build a time-to-value onboarding playbook with milestones, owners, and risk controls."

@@ -1,0 +1,69 @@
+{
+  "skill": "value-prop-and-positioning",
+  "source": "skills/value-prop-and-positioning/SKILL.md",
+  "notes": "Starter eval scaffold. Expand prompts and checks with real traces.",
+  "should_trigger": [
+    {
+      "prompt": "Use $value-prop-and-positioning for this request.",
+      "expected": "trigger"
+    },
+    {
+      "prompt": "I need help with value prop and positioning.",
+      "expected": "trigger"
+    },
+    {
+      "prompt": "Please create a first draft using the value prop and positioning workflow.",
+      "expected": "trigger"
+    },
+    {
+      "prompt": "Please define differentiation, alternatives framing, proof points, why-now narrative, or seller-ready messaging by persona.",
+      "expected": "trigger"
+    }
+  ],
+  "should_not_trigger": [
+    {
+      "prompt": "Write a short poem about quarterly planning.",
+      "expected": "do_not_trigger"
+    },
+    {
+      "prompt": "Refactor this Python function for performance.",
+      "expected": "do_not_trigger"
+    },
+    {
+      "prompt": "What is the weather in Sydney today?",
+      "expected": "do_not_trigger"
+    },
+    {
+      "prompt": "This request should use $battlecard-builder rather than $value-prop-and-positioning.",
+      "expected": "do_not_trigger"
+    }
+  ],
+  "output_structure_checks": [
+    {
+      "name": "contains_output_element_1",
+      "type": "contains_phrase",
+      "phrase": "Positioning thesis and category framing."
+    },
+    {
+      "name": "contains_output_element_2",
+      "type": "contains_phrase",
+      "phrase": "Alternatives map: status quo, in-house, and competitor options."
+    },
+    {
+      "name": "contains_output_element_3",
+      "type": "contains_phrase",
+      "phrase": "Persona value matrix with role-specific pain, value, and proof."
+    },
+    {
+      "name": "contains_output_element_4",
+      "type": "contains_phrase",
+      "phrase": "Why-now narrative and disqualification conditions."
+    },
+    {
+      "name": "contains_output_element_5",
+      "type": "contains_phrase",
+      "phrase": "Message hierarchy: headline, pillar statements, and support points."
+    }
+  ],
+  "managed_by": "starter"
+}

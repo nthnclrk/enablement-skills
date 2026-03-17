@@ -1,0 +1,4 @@
+interface:
+  display_name: "Enablement Router"
+  short_description: "Route requests across enablement skills"
+  default_prompt: "Use $enablement-router to map my request to the right skill sequence with clear boundaries and inputs."

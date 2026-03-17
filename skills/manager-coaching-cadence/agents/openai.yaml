@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manager Coaching Cadence"
+  short_description: "Design repeatable manager coaching rhythms"
+  default_prompt: "Use $manager-coaching-cadence to design a practical weekly coaching rhythm for my managers and team."

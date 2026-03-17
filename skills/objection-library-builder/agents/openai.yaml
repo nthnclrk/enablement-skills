@@ -1,0 +1,4 @@
+interface:
+  display_name: "Objection Library Builder"
+  short_description: "Create proof-backed objection response systems"
+  default_prompt: "Use $objection-library-builder to build a prioritized objection library with response patterns, proof links, and escalation rules."

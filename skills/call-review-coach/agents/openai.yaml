@@ -1,0 +1,5 @@
+interface:
+  display_name: "Call Review Coach"
+  short_description: "Coach sales calls with evidence and next steps"
+  default_prompt: "Use $call-review-coach to review this sales call and produce prioritized coaching feedback with concrete next actions."
+

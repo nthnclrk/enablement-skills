@@ -1,0 +1,5 @@
+interface:
+  display_name: "Roleplay Scenario Builder"
+  short_description: "Build realistic sales practice scenarios"
+  default_prompt: "Use $roleplay-scenario-builder to create progressive roleplay drills with scoring prompts for this team."
+

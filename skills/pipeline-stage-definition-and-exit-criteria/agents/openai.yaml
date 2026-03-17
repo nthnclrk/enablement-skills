@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pipeline Stage Design"
+  short_description: "Define inspectable pipeline stage criteria"
+  default_prompt: "Use $pipeline-stage-definition-and-exit-criteria to define stage entry and exit criteria with clear evidence requirements and governance rules."

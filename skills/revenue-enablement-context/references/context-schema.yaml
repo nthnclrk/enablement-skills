@@ -1,0 +1,69 @@
+# Revenue Enablement Context (machine-readable scaffold)
+# Replace placeholder values with confirmed data where possible.
+
+metadata:
+  owner: "[team-or-person]"
+  last_updated: "YYYY-MM-DD"
+  confidence: "high|medium|low"
+  source_of_truth: "[url-or-doc-path]"
+
+business_snapshot:
+  company: "[name]"
+  product_lines: []
+  target_market: "[description]"
+  revenue_model: "[e.g., subscription]"
+
+icp_and_segments:
+  primary_icp: "[definition]"
+  segments:
+    - name: "[segment-name]"
+      company_size: "[range]"
+      industry: "[industry]"
+      geography: "[region]"
+  exclusions: []
+
+buying_committee:
+  personas:
+    - role: "[title]"
+      accountability: "[what they own]"
+      business_pain: "[pain]"
+      decision_criteria: []
+      typical_objections: []
+
+sales_motion:
+  stages:
+    - name: "[stage]"
+      entry_criteria: []
+      exit_criteria: []
+      conversion_risks: []
+  qualification_definition: "[framework-or-rule]"
+
+packaging_and_commercials:
+  packaging_summary: "[summary]"
+  pricing_logic: "[summary]"
+  discount_constraints: "[rules]"
+
+messaging_baseline:
+  positioning_statement: "[statement]"
+  value_pillars: []
+  proof_points: []
+
+competitive_context:
+  alternatives:
+    - name: "[competitor-or-status-quo]"
+      where_they_are_strong: []
+      where_we_are_strong: []
+      common_traps: []
+      response_guidance: []
+
+current_initiatives:
+  quarter_priorities: []
+  launches_or_changes: []
+  enablement_dependencies:
+    - item: "[dependency]"
+      deadline: "YYYY-MM-DD"
+      owner: "[owner]"
+
+governance:
+  open_assumptions: []
+  unresolved_decisions: []

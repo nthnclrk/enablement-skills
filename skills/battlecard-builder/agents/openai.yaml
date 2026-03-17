@@ -1,0 +1,4 @@
+interface:
+  display_name: "Battlecard Builder"
+  short_description: "Create field-ready competitor battlecards"
+  default_prompt: "Use $battlecard-builder to create a competitor battlecard with win zones, claim counters, proof points, and landmines."

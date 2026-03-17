@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mutual Action Plan Builder"
+  short_description: "Build shared milestone-driven MAPs"
+  default_prompt: "Use $mutual-action-plan-builder to create a shared MAP with milestones, owners, dependencies, and exit criteria."

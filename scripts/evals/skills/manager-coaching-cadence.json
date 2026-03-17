@@ -1,0 +1,61 @@
+{
+  "skill": "manager-coaching-cadence",
+  "source": "skills/manager-coaching-cadence/SKILL.md",
+  "notes": "Curated eval focused on repeatable manager rhythms, not one-off coaching analysis.",
+  "should_trigger": [
+    {
+      "prompt": "Design a weekly coaching cadence for six mid-market sales managers. We need a repeatable rhythm for call review, deal inspection, rep commitments, and monthly trend reviews without creating a heavy process tax.",
+      "expected": "trigger"
+    },
+    {
+      "prompt": "Build an enterprise manager coaching system with agenda templates, observation logs, escalation triggers, and implementation guidance for the first 30 days.",
+      "expected": "trigger"
+    },
+    {
+      "prompt": "Our post-sale leaders coach inconsistently. Create a sustainable coaching cadence by team type, including time budgets and commitment tracking.",
+      "expected": "trigger"
+    }
+  ],
+  "should_not_trigger": [
+    {
+      "prompt": "Coach this single discovery call and identify what the rep should have done differently.",
+      "expected": "do_not_trigger"
+    },
+    {
+      "prompt": "Inspect this one stalled enterprise deal and tell the manager what to do next.",
+      "expected": "do_not_trigger"
+    },
+    {
+      "prompt": "Create a roleplay scenario pack for new SDRs handling pricing objections.",
+      "expected": "do_not_trigger"
+    }
+  ],
+  "output_structure_checks": [
+    {
+      "name": "contains_weekly_schedule",
+      "type": "contains_phrase",
+      "phrase": "Weekly coaching cadence schedule by manager"
+    },
+    {
+      "name": "contains_agenda_prompts",
+      "type": "contains_phrase",
+      "phrase": "Session agenda template and coaching-question prompts"
+    },
+    {
+      "name": "contains_observation_log",
+      "type": "contains_phrase",
+      "phrase": "Observation log template for calls/deals/behavior checkpoints"
+    },
+    {
+      "name": "contains_commitment_tracker",
+      "type": "contains_phrase",
+      "phrase": "Rep commitment tracker with due dates and verification signals"
+    },
+    {
+      "name": "contains_monthly_trend_review",
+      "type": "contains_phrase",
+      "phrase": "Monthly trend review template and interpretation guidance"
+    }
+  ],
+  "managed_by": "curated"
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Case Study Extractor"
+  short_description: "Build proof-led case narratives from raw data"
+  default_prompt: "Use $case-study-extractor to turn customer notes and transcripts into a quantified, evidence-graded case study for revenue use."

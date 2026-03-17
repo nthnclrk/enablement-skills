@@ -1,0 +1,69 @@
+{
+  "skill": "discovery-rubric-auditor",
+  "source": "skills/discovery-rubric-auditor/SKILL.md",
+  "notes": "Starter eval scaffold. Expand prompts and checks with real traces.",
+  "should_trigger": [
+    {
+      "prompt": "Use $discovery-rubric-auditor for this request.",
+      "expected": "trigger"
+    },
+    {
+      "prompt": "I need help with discovery rubric auditor.",
+      "expected": "trigger"
+    },
+    {
+      "prompt": "Please create a first draft using the discovery rubric auditor workflow.",
+      "expected": "trigger"
+    },
+    {
+      "prompt": "Please score discovery quality across one or more calls, compare rep performance, or find recurring discovery gaps.",
+      "expected": "trigger"
+    }
+  ],
+  "should_not_trigger": [
+    {
+      "prompt": "Write a short poem about quarterly planning.",
+      "expected": "do_not_trigger"
+    },
+    {
+      "prompt": "Refactor this Python function for performance.",
+      "expected": "do_not_trigger"
+    },
+    {
+      "prompt": "What is the weather in Sydney today?",
+      "expected": "do_not_trigger"
+    },
+    {
+      "prompt": "This request should use $discovery-and-demo-structure rather than $discovery-rubric-auditor.",
+      "expected": "do_not_trigger"
+    }
+  ],
+  "output_structure_checks": [
+    {
+      "name": "contains_output_element_1",
+      "type": "contains_phrase",
+      "phrase": "Audit Scope`: who, what calls, and scoring window."
+    },
+    {
+      "name": "contains_output_element_2",
+      "type": "contains_phrase",
+      "phrase": "Rubric Scores`: per-dimension scores with evidence."
+    },
+    {
+      "name": "contains_output_element_3",
+      "type": "contains_phrase",
+      "phrase": "Pattern Summary`: recurring strengths and recurring gaps."
+    },
+    {
+      "name": "contains_output_element_4",
+      "type": "contains_phrase",
+      "phrase": "Priority Interventions`: top coaching moves ranked by likely impact."
+    },
+    {
+      "name": "contains_output_element_5",
+      "type": "contains_phrase",
+      "phrase": "Manager Action Plan`: what to inspect next week and what to reinforce."
+    }
+  ],
+  "managed_by": "starter"
+}

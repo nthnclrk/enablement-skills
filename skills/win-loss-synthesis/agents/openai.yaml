@@ -1,0 +1,4 @@
+interface:
+  display_name: "Win Loss Synthesis"
+  short_description: "Synthesize win loss interviews clearly"
+  default_prompt: "Use $win-loss-synthesis to analyze win-loss evidence and produce themes, implications, and prioritized enablement actions."

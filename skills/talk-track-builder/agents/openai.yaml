@@ -1,0 +1,4 @@
+interface:
+  display_name: "Talk Track Builder"
+  short_description: "Build persona and stage sales talk tracks"
+  default_prompt: "Use $talk-track-builder to draft persona-specific talk tracks with discovery prompts, proof inserts, and clear next-step language."

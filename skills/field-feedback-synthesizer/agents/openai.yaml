@@ -1,0 +1,4 @@
+interface:
+  display_name: "Field Feedback Synthesizer"
+  short_description: "Convert field noise into prioritized insights"
+  default_prompt: "Use $field-feedback-synthesizer to consolidate rep and manager feedback into quantified themes, issue clusters, and owner-ready actions."

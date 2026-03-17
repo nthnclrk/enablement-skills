@@ -1,0 +1,5 @@
+interface:
+  display_name: "Discovery and Demo Structure"
+  short_description: "Design outcome-first discovery and demo flows"
+  default_prompt: "Use $discovery-and-demo-structure to design a discovery guide and demo flow for this audience and stage."
+

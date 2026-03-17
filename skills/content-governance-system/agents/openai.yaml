@@ -1,0 +1,4 @@
+interface:
+  display_name: "Content Governance System"
+  short_description: "Design scalable enablement content governance"
+  default_prompt: "Use $content-governance-system to define taxonomy, lifecycle rules, ownership, and quality checks for our enablement content."

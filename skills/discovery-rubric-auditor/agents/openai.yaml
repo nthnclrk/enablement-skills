@@ -1,0 +1,5 @@
+interface:
+  display_name: "Discovery Rubric Auditor"
+  short_description: "Audit discovery quality with consistent scoring"
+  default_prompt: "Use $discovery-rubric-auditor to score these discovery calls and return prioritized coaching actions."
+

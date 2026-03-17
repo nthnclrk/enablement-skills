@@ -1,0 +1,4 @@
+interface:
+  display_name: "Enablement Program Design"
+  short_description: "Design scoped enablement programs"
+  default_prompt: "Use $enablement-program-design to create a program charter and phased rollout plan for this enablement initiative."

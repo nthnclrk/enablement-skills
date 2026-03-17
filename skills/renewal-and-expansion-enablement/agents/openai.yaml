@@ -1,0 +1,4 @@
+interface:
+  display_name: "Renewal And Expansion Enablement"
+  short_description: "Build renewal and expansion plays"
+  default_prompt: "Use $renewal-and-expansion-enablement to create renewal and expansion plays, role guides, and execution checkpoints."

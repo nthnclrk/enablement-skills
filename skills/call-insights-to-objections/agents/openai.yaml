@@ -1,0 +1,4 @@
+interface:
+  display_name: "Call Insights To Objections"
+  short_description: "Extract objection patterns from calls"
+  default_prompt: "Use $call-insights-to-objections to cluster objections from transcript sets and produce a prioritized enablement brief with evidence."

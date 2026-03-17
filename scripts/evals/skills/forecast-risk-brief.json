@@ -1,0 +1,61 @@
+{
+  "skill": "forecast-risk-brief",
+  "source": "skills/forecast-risk-brief/SKILL.md",
+  "notes": "Curated eval focused on period-level forecast reliability rather than single-deal coaching.",
+  "should_trigger": [
+    {
+      "prompt": "Prepare a Q2 forecast risk brief for our enterprise segment. Highlight unstable commits, concentration risk by rep and stage, likely slippage patterns, and the interventions sales leadership should make this week.",
+      "expected": "trigger"
+    },
+    {
+      "prompt": "I have a CRM export with amount, close date, stage, forecast category, last stage change date, and next-step quality. Turn it into a concise leadership-ready forecast risk summary with confidence bands and caveats.",
+      "expected": "trigger"
+    },
+    {
+      "prompt": "Assess forecast reliability for the APAC team and separate structural risk drivers from deal-specific noise. I need a brief for the weekly leadership review.",
+      "expected": "trigger"
+    }
+  ],
+  "should_not_trigger": [
+    {
+      "prompt": "Inspect this one strategic deal and tell me whether the rep has enough stakeholder coverage to advance.",
+      "expected": "do_not_trigger"
+    },
+    {
+      "prompt": "Rewrite our stage definitions and exit criteria so managers can inspect them more consistently.",
+      "expected": "do_not_trigger"
+    },
+    {
+      "prompt": "Coach this pricing call and identify the rep behaviors that need improvement.",
+      "expected": "do_not_trigger"
+    }
+  ],
+  "output_structure_checks": [
+    {
+      "name": "contains_forecast_summary",
+      "type": "contains_phrase",
+      "phrase": "`Forecast Summary`: scope, confidence band, and key caveats."
+    },
+    {
+      "name": "contains_risk_tier_breakdown",
+      "type": "contains_phrase",
+      "phrase": "`Risk Tier Breakdown`: low/moderate/high-risk deal counts and value."
+    },
+    {
+      "name": "contains_top_risk_drivers",
+      "type": "contains_phrase",
+      "phrase": "`Top Risk Drivers`: structural patterns affecting reliability."
+    },
+    {
+      "name": "contains_intervention_plan",
+      "type": "contains_phrase",
+      "phrase": "`Intervention Plan`: owner, action, and timeline by risk class."
+    },
+    {
+      "name": "contains_leadership_notes",
+      "type": "contains_phrase",
+      "phrase": "`Leadership Notes`: decisions to make now vs monitor later."
+    }
+  ],
+  "managed_by": "curated"
+}

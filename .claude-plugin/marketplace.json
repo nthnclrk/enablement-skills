@@ -1,0 +1,44 @@
+{
+  "name": "enablement-skills",
+  "strict": false,
+  "metadata": {
+    "description": "Enablement skills marketplace with domain-specific install bundles."
+  },
+  "plugins": [
+    {
+      "source": "./plugins/enablement-core",
+      "version": "latest",
+      "releaseChannel": "stable"
+    },
+    {
+      "source": "./plugins/enablement-messaging",
+      "version": "latest",
+      "releaseChannel": "stable"
+    },
+    {
+      "source": "./plugins/enablement-programs",
+      "version": "latest",
+      "releaseChannel": "stable"
+    },
+    {
+      "source": "./plugins/enablement-measurement",
+      "version": "latest",
+      "releaseChannel": "stable"
+    },
+    {
+      "source": "./plugins/enablement-launches",
+      "version": "latest",
+      "releaseChannel": "stable"
+    },
+    {
+      "source": "./plugins/enablement-crm-pack",
+      "version": "latest",
+      "releaseChannel": "stable"
+    },
+    {
+      "source": "./plugins/enablement-ci-pack",
+      "version": "latest",
+      "releaseChannel": "stable"
+    }
+  ]
+}

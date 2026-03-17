@@ -1,0 +1,61 @@
+{
+  "skill": "product-launch-enablement",
+  "source": "skills/product-launch-enablement/SKILL.md",
+  "notes": "Curated eval focused on internal field readiness and cross-functional launch execution.",
+  "should_trigger": [
+    {
+      "prompt": "Build an internal launch enablement plan for a new enterprise security feature. We need readiness requirements by role, manager inspection prompts, a cross-functional owner matrix, and a 30-day post-launch signal review.",
+      "expected": "trigger"
+    },
+    {
+      "prompt": "Turn this product launch spec into a field-ready enablement package for AEs, SEs, CSMs, managers, and support. Include FAQs, talk-track changes, readiness gates, and reinforcement checkpoints.",
+      "expected": "trigger"
+    },
+    {
+      "prompt": "We are rolling out a packaging change next month. Create the internal launch narrative, training plan, go/no-go checklist, and owner handoffs for the revenue org.",
+      "expected": "trigger"
+    }
+  ],
+  "should_not_trigger": [
+    {
+      "prompt": "Translate these engineering release notes into a short seller-ready Slack update and email digest.",
+      "expected": "do_not_trigger"
+    },
+    {
+      "prompt": "Build a quarter-wide enablement roadmap and help me decide which launch work to defer.",
+      "expected": "do_not_trigger"
+    },
+    {
+      "prompt": "Create a partner enablement package for channel reps with certification and co-sell guidance.",
+      "expected": "do_not_trigger"
+    }
+  ],
+  "output_structure_checks": [
+    {
+      "name": "contains_readiness_matrix",
+      "type": "contains_phrase",
+      "phrase": "Launch tier and readiness matrix"
+    },
+    {
+      "name": "contains_owner_matrix",
+      "type": "contains_phrase",
+      "phrase": "Cross-functional owner and handoff matrix"
+    },
+    {
+      "name": "contains_launch_narrative",
+      "type": "contains_phrase",
+      "phrase": "Internal launch narrative and FAQ"
+    },
+    {
+      "name": "contains_training_plan",
+      "type": "contains_phrase",
+      "phrase": "Training and reinforcement plan"
+    },
+    {
+      "name": "contains_signal_review",
+      "type": "contains_phrase",
+      "phrase": "30-day post-launch signal review plan"
+    }
+  ],
+  "managed_by": "curated"
+}

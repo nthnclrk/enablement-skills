@@ -1,0 +1,4 @@
+interface:
+  display_name: "Partner Enablement"
+  short_description: "Create practical partner enablement packs"
+  default_prompt: "Use $partner-enablement-package to produce a partner enablement package with onboarding, sales assets, and certification guidance."
