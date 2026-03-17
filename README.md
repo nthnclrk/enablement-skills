@@ -1,8 +1,10 @@
 # Enablement Skills
 
-`enablement-skills` is an open-source skill pack for revenue enablement work with agent tools such as Claude Code and Codex.
+Reusable enablement skills for AI agents.
 
-This repo packages reusable skills, system playbooks, install bundles, examples, and validation scripts for recurring B2B SaaS enablement workflows.
+Built for enablement teams, PMMs, RevOps, sales leaders, and frontline managers who want repeatable workflows for messaging, coaching, launches, programs, and measurement.
+
+Works with agent tools such as Claude Code and Codex.
 
 ## At A Glance
 
@@ -10,104 +12,47 @@ This repo packages reusable skills, system playbooks, install bundles, examples,
 - `7` system playbooks in [`systems/`](systems/) plus a registry in [`systems/REGISTRY.md`](systems/REGISTRY.md)
 - `7` install bundles in [`plugins/`](plugins/)
 - `8` example workflows in [`examples/`](examples/)
-- repo-level validation and skill scaffolding in [`scripts/`](scripts/)
+- validation and skill scaffolding in [`scripts/`](scripts/)
 
-## What To Expect In This Package
+## What You Can Use It For
 
-- A portable repo of focused enablement skills
-- A packaging layer for installing those skills through external tooling
-- A set of workflow playbooks for turning source-system data into agent-ready inputs
-- A starting point that teams can inspect, fork, vendor, and adapt
-
-## Why It Exists
-
-Generic agents can be useful for one-off drafting, analysis, and synthesis. They are usually less reliable for repeated enablement work because they often lack:
-
-- stable workflow boundaries between adjacent tasks
-- reusable shared context
-- practical guidance for using real CRM, conversation, content, and workspace data
-- packaging that makes the same operating model available across a team
-
-This repo exists to add that missing layer.
+- build battlecards, objection handling, talk tracks, and positioning docs
+- review calls, inspect deals, and generate manager coaching guidance
+- turn release notes into seller updates and launch enablement plans
+- create onboarding and certification programs
+- prepare account briefs, executive briefings, and QBR or EBR materials
+- define enablement metrics, stage criteria, and operational guidance
 
 ## What's Included
 
-| Layer | What it does | Canonical location |
+| Layer | What it does | Where to start |
 | --- | --- | --- |
 | Skills | Defines task behavior for specific enablement jobs | [`skills/`](skills/) |
-| Systems | Explains how to prepare better inputs from common operating systems | [`systems/`](systems/) |
+| Systems | Shows how to prepare inputs from common operating systems | [`systems/`](systems/) |
 | Plugins | Groups skills into install bundles | [`plugins/`](plugins/) |
 | Examples | Shows representative prompts, inputs, and output shapes | [`examples/`](examples/) |
 | Scripts | Validates and scaffolds the repo | [`scripts/`](scripts/) |
 
-Representative skills include:
+## Install
 
-- foundational: `revenue-enablement-context`, `enablement-router`, `quarterly-enablement-planner`
-- messaging: `value-prop-and-positioning`, `talk-track-builder`, `objection-library-builder`, `battlecard-builder`
-- coaching: `call-review-coach`, `deal-inspection-coach`, `manager-coaching-cadence`, `forecast-risk-brief`
-- programs: `onboarding-program-builder`, `certification-program-builder`
-- launch and field readiness: `product-launch-enablement`, `release-notes-to-seller-updates`
-- account and leadership prep: `account-brief-builder`, `executive-briefing-builder`, `qbr-ebr-builder`
+### Option 1: Agent Skills CLI
 
-Representative system playbooks include:
-
-- [`systems/salesforce.md`](systems/salesforce.md)
-- [`systems/hubspot.md`](systems/hubspot.md)
-- [`systems/gong.md`](systems/gong.md)
-- [`systems/highspot.md`](systems/highspot.md)
-- [`systems/seismic.md`](systems/seismic.md)
-- [`systems/notion.md`](systems/notion.md)
-- [`systems/slack.md`](systems/slack.md)
-
-## How It Works
-
-```mermaid
-flowchart LR
-    A["User request"] --> B["Choose a skill"]
-    B --> C["Read SKILL.md"]
-    C --> D["Load references only if needed"]
-    D --> E["Use system playbook if source data matters"]
-    E --> F["Produce output"]
-    F --> G["Optionally install a bundle for team reuse"]
-```
-
-The canonical source of behavior is always [`skills/`](skills/). The other directories support installation, validation, input preparation, examples, and reuse.
-
-## Where To Start
-
-If the right skill is unclear:
-- use `enablement-router`
-
-If the team lacks shared operating context:
-- start with `revenue-enablement-context`
-
-If the need is clearly role-specific:
-- enablement leader: `quarterly-enablement-planner`, `content-governance-system`, `enablement-impact-story`
-- frontline manager: `manager-coaching-cadence`, `call-review-coach`, `deal-inspection-coach`, `forecast-risk-brief`
-- PMM: `value-prop-and-positioning`, `talk-track-builder`, `objection-library-builder`, `battlecard-builder`
-- RevOps: `pipeline-stage-definition-and-exit-criteria`, `enablement-metrics-and-instrumentation`, `forecast-risk-brief`
-- account / leadership prep: `account-brief-builder`, `executive-briefing-builder`, `qbr-ebr-builder`
-
-## Installation And Distribution
-
-This repo is packaged for two external distribution paths. The install commands below assume the relevant external tooling is available in the target environment.
-
-### Agent Skills CLI
+Recommended if you want the full repo available as a reusable skills source.
 
 ```bash
 npx agent-skills-cli add nthnclrk/enablement-skills
 ```
 
-In this mode, the external CLI is the installer. This repo is content and packaging, not a CLI product of its own.
+### Option 2: Claude Code Marketplace
 
-### Claude Code Marketplace
+Recommended if you want to install a smaller bundle by domain.
 
 ```text
 /plugin marketplace add nthnclrk/enablement-skills
 /plugin install enablement-core@enablement-skills
 ```
 
-Additional bundles are available under [`plugins/`](plugins/):
+Available bundles:
 
 - `enablement-core`
 - `enablement-messaging`
@@ -117,13 +62,13 @@ Additional bundles are available under [`plugins/`](plugins/):
 - `enablement-crm-pack`
 - `enablement-ci-pack`
 
-### Clone, Vendor, Or Fork
+### Option 3: Clone Or Vendor
 
-Teams that want a reviewed internal baseline can:
+Use this if you want to inspect, adapt, or distribute the repo inside a broader workspace.
 
-- clone the repo directly
-- vendor it into a larger workspace
-- fork it and use the fork as the install source
+```bash
+git clone https://github.com/nthnclrk/enablement-skills.git
+```
 
 Example submodule install:
 
@@ -131,70 +76,44 @@ Example submodule install:
 git submodule add https://github.com/nthnclrk/enablement-skills.git vendor/enablement-skills
 ```
 
-## For AI Agents Using This Package
+## How To Use It
 
-If you are an agent using this repo as an input source, treat it as a skill pack and workflow guide.
+Start with the skill that best matches the job. If the request is ambiguous, use [`enablement-router`](skills/enablement-router/SKILL.md). If the work depends on shared company context, start with [`revenue-enablement-context`](skills/revenue-enablement-context/SKILL.md).
 
-### How Agents Should Use It
+Example prompts:
 
-1. Start with [`skills/`](skills/). Each skill folder is the unit of behavior.
-2. Read `SKILL.md` first and only load supporting files when they are actually needed.
-3. If the request is ambiguous or multi-part, start with [`enablement-router`](skills/enablement-router/SKILL.md).
-4. If the request depends on shared company context, prefer [`revenue-enablement-context`](skills/revenue-enablement-context/SKILL.md) before running downstream skills.
-5. Use `references/` progressively. Do not bulk-load every reference file.
-6. Treat [`systems/`](systems/) as optional workflow playbooks for input preparation and safe write-back boundaries, not as executable integrations.
-7. Use [`examples/`](examples/) as shape guidance for prompts and outputs, not as golden truth.
-8. Preserve uncertainty. If source data is stale, sparse, or contradictory, label assumptions and confidence rather than fabricating precision.
-9. Keep writeback conservative. These skills are designed to help draft, analyze, and structure work, not to assume automatic writes into source systems.
+- `Build a battlecard for [competitor] using these notes and call excerpts.`
+- `Turn these call notes into manager coaching guidance for next week's 1:1.`
+- `Create a launch enablement plan for this release announcement and feature set.`
+- `Review our certification program and suggest improvements for ramp speed and consistency.`
+- `Summarize forecast risks from these deal notes and manager comments.`
+- `Draft an executive briefing for this customer account before the QBR.`
 
-### Suggested Agent Flow
+## Common Starting Points
 
-```mermaid
-flowchart TD
-    A["Incoming request"] --> B{"Single clear skill?"}
-    B -->|No| C["Use enablement-router"]
-    B -->|Yes| D["Open the target SKILL.md"]
-    C --> D
-    D --> E{"Shared context needed?"}
-    E -->|Yes| F["Use or create revenue-enablement-context"]
-    E -->|No| G["Continue"]
-    F --> G
-    G --> H{"Source-system data involved?"}
-    H -->|Yes| I["Use skill-local source guidance and/or systems playbook"]
-    H -->|No| J["Draft output directly"]
-    I --> J
-    J --> K["Return output with assumptions, confidence, and next steps"]
-```
+- not sure which skill to use: [`enablement-router`](skills/enablement-router/SKILL.md)
+- need shared company context first: [`revenue-enablement-context`](skills/revenue-enablement-context/SKILL.md)
+- messaging work: `value-prop-and-positioning`, `talk-track-builder`, `objection-library-builder`, `battlecard-builder`
+- coaching work: `call-review-coach`, `deal-inspection-coach`, `manager-coaching-cadence`, `forecast-risk-brief`
+- program work: `onboarding-program-builder`, `certification-program-builder`
+- launch work: `product-launch-enablement`, `release-notes-to-seller-updates`
+- account and leadership prep: `account-brief-builder`, `executive-briefing-builder`, `qbr-ebr-builder`
 
-### Agent Guardrails
+## Working With AI Agents
 
-- Do not assume every system capability described in a vendor product exists in the user's tenant.
-- Do not assume the repo provides API clients, MCP servers, or direct integrations.
-- Do not assume every workflow should start with a system playbook.
-- Do not assume bundle installation changes how the skill itself behaves; bundles are packaging, not alternate logic.
+If you use this repo with an AI agent:
 
-## Package Structure
+- start in [`skills/`](skills/) and read `SKILL.md` first
+- load `references/` only when the skill calls for them
+- use [`systems/`](systems/) when source-system exports or write-back boundaries matter
+- use [`examples/`](examples/) as guidance for structure, not as rigid templates
+- keep a human review step for anything customer-facing, regulated, or revenue-critical
 
-```text
-.
-├─ skills/                          # canonical skill source
-├─ systems/                         # source-system playbooks and registry
-├─ plugins/                         # install bundles
-├─ examples/                        # representative usage examples
-├─ scripts/                         # validation, eval scaffolding, scaffolding
-├─ templates/                       # skill templates used by the scaffold
-├─ .claude-plugin/                  # marketplace manifest
-├─ README.md
-├─ ARCHITECTURE.md
-├─ AGENTS.md
-└─ VERSIONS.md
-```
-
-See [`ARCHITECTURE.md`](ARCHITECTURE.md) for the fuller repo model.
+System playbooks describe common workflows, but tenant capabilities vary by environment. This repo does not ship API clients, MCP servers, or direct integrations.
 
 ## Examples
 
-Representative example workflows live in [`examples/`](examples/), including:
+Representative example workflows:
 
 - [`examples/revenue-enablement-context/README.md`](examples/revenue-enablement-context/README.md)
 - [`examples/enablement-router/README.md`](examples/enablement-router/README.md)
@@ -213,7 +132,7 @@ Run repo validation before publishing changes:
 bash scripts/validate.sh
 ```
 
-This checks repo-specific conventions including:
+This checks:
 
 - skill structure
 - required metadata
@@ -222,19 +141,19 @@ This checks repo-specific conventions including:
 - scaffold placeholder leakage
 - eval artifact presence
 
-For optional ecosystem validation against an external Agent Skills validator:
+Optional ecosystem validation:
 
 ```bash
 bash scripts/validate-official.sh
 ```
 
-That script uses `skills-ref`, `skills`, or `agent-skills-cli` if one of them is available in the environment.
+That script uses `skills-ref`, `skills`, or `agent-skills-cli` when one of them is available.
 
-## Adding Or Updating Skills
+## Contributing
 
 New skills should stay compact, procedural, and bounded.
 
-Design rules used in this repo:
+Design rules:
 
 - keep `SKILL.md` focused on what to do
 - keep deep frameworks in `references/`
@@ -248,21 +167,13 @@ Use the scaffold to create a new skill:
 bash scripts/new-skill.sh my-new-skill
 ```
 
-## Scope And Limits
+See [`ARCHITECTURE.md`](ARCHITECTURE.md), [`CONTRIBUTING.md`](CONTRIBUTING.md), and [`VERSIONS.md`](VERSIONS.md) for the repo model, contribution guidance, and version history.
 
-This package provides representative, practical guidance for common enablement workflows. It is intentionally selective rather than exhaustive.
+## Scope And Responsibility
 
-The systems in this space change quickly, including AI-native workflows inside the tools themselves. Treat the system layer as a starting point for reliable export, analysis, and controlled write-back patterns. Verify advanced, tenant-specific, or newly released capabilities against current vendor documentation and the user's actual workspace setup.
+This repo is a practical, selective library for common enablement workflows. It is not meant to capture every vendor capability or every possible workflow variation.
 
-## Use And Responsibility
-
-This package is freely distributed under the [MIT License](LICENSE) and is provided on an `as is` basis.
-
-In practice, that means:
-
-- there is no warranty that a skill, example, system playbook, or output will fit your exact environment or use case
-- you are responsible for reviewing outputs, verifying assumptions, and deciding what to publish, automate, or act on
-- maintainers and contributors do not assume liability for losses, damages, or business outcomes resulting from use, misuse, or reliance on this package or its outputs
+Verify advanced, tenant-specific, or newly released product behavior against current vendor documentation and the actual workspace you are operating in.
 
 If you use this repo in production, customer-facing work, regulated environments, or revenue-critical decisions, keep a human review step in the loop.
 
