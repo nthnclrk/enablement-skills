@@ -13,7 +13,7 @@ This file tracks repo-level and bundle-level versions for packaging and update c
 
 | Component | Version | Last Updated | Status | Notes |
 | --- | --- | --- | --- | --- |
-| `repo` | `0.2.1` | `2026-03-17` | `active` | Added stronger packaging validation and fixed broken routing/scaffold gaps. |
+| `repo` | `1.0.0` | `2026-03-17` | `active` | First stable public release with packaged skills, plugin bundles, validation, and refreshed docs. |
 
 ## Bundle Versions
 
@@ -28,6 +28,12 @@ This file tracks repo-level and bundle-level versions for packaging and update c
 | `enablement-ci-pack` | `0.1.0` | `2026-03-17` | `active` | Conversation-intelligence-oriented workflows and analysis skills. |
 
 ## Change Log Summary
+
+### 1.0.0 - 2026-03-17
+
+- Declared the first stable public release of the repo.
+- Added stronger README positioning, featured skill guidance, and cleaner repo-facing copy.
+- Replaced internal-sounding "failure mode" terminology with plainer language across skills and systems docs.
 
 ### 0.2.1 - 2026-03-17
 

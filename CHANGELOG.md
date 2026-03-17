@@ -4,6 +4,14 @@ All notable changes to this repo should be recorded here.
 
 The format is intentionally lightweight. Keep entries concise and useful for operators adopting updates.
 
+## [1.0.0] - 2026-03-17
+
+First stable public release.
+
+- Promoted the repo to `v1.0.0` as the first stable packaged release.
+- Refined the README with clearer audience positioning, installation guidance, example prompts, and featured skills.
+- Replaced internal-sounding "failure mode" terminology with plainer language across skills and systems docs.
+
 ## [0.2.1] - 2026-03-17
 
 Validation and packaging integrity fixes.
