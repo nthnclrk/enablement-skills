@@ -16,7 +16,7 @@
       "expected": "trigger"
     },
     {
-      "prompt": "Please turn messy source material into proof-led narratives for sales and enablement use.",
+      "prompt": "Please turn messy source material into customer stories, proof points, or enablement-ready case studies.",
       "expected": "trigger"
     }
   ],

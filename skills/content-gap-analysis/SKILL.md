@@ -1,10 +1,10 @@
 ---
 name: content-gap-analysis
-description: Analyze revenue enablement content coverage and prioritize the highest-impact gaps by role, stage, and use case. Use when asked to audit existing enablement assets, identify missing content, or produce a prioritized content backlog. Route content creation to one-pager-and-slide-outline, battlecard-builder, or talk-track-builder.
+description: Audit revenue enablement content coverage and prioritize the highest-impact gaps by role, stage, and use case. Use when asked to review existing assets, identify missing or stale content, or produce a prioritized content backlog. Route content creation to one-pager-and-slide-outline, battlecard-builder, or talk-track-builder.
 ---
 
 # Content Gap Analysis
-Identify the most important enablement content gaps and prioritize them by business impact rather than volume.
+Identify the most important content gaps and prioritize them by business impact rather than volume.
 
 ## Confirm Inputs First
 - If a current `revenue-enablement-context` exists, use it first for role taxonomy, stage naming, and priority motions.
@@ -23,10 +23,10 @@ Identify the most important enablement content gaps and prioritize them by busin
 1. Build a clean inventory of current assets with owner and freshness metadata.
 2. Map each asset to role, stage, and job-to-be-done coverage.
 3. Identify high-friction moments with weak or missing content support.
-4. Classify observed problems before scoring:
-   low usage, low quality, or low discoverability.
+4. Classify the issue before scoring:
+   missing, stale, hard to find, underused, or wrong format.
 5. Score each candidate gap by business impact, frequency, confidence, and effort.
-6. Separate net-new creation from update/retire opportunities.
+6. Separate net-new creation from update, consolidate, or retire opportunities.
 7. Build a sequenced backlog with owners and expected outcome metrics.
 8. Route adjacent work:
    For synthesis of raw field notes, use field-feedback-synthesizer.

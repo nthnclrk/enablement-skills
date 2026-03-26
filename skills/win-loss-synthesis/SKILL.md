@@ -1,22 +1,22 @@
 ---
 name: win-loss-synthesis
-description: Synthesize win-loss interviews, notes, and deal evidence into defensible themes and prioritized enablement actions. Use when the user asks to analyze why deals were won or lost, compare patterns by segment or competitor, or extract implications for messaging, process, and coaching. For a single competitive asset, route to battlecard-builder.
+description: Synthesize win-loss interviews, notes, and deal evidence into clear themes and actions. Use when asked why deals were won or lost, how patterns vary by segment or competitor, or what to change in messaging, process, or coaching. For a single competitive asset, route to battlecard-builder.
 ---
 
 # Win Loss Synthesis
 
-Turn mixed win-loss evidence into clear findings that change enablement priorities.
+Turn mixed win-loss evidence into findings that change enablement priorities.
 
 ## Confirm Inputs First
 
 Confirm the minimum analysis scope:
 
-- If a current revenue-enablement-context exists, use it first for ICP, stage, competitor frame, and message guardrails. If not, ask for only the highest-impact missing context.
+- If a current `revenue-enablement-context` exists, use it first for ICP, stage, competitor frame, and message guardrails. If not, ask for only the highest-impact missing context.
 - Data sources (interviews, CRM notes, call snippets, closed-lost reasons)
 - Time window and segment scope
 - Deal sample and win/loss mix
 - Competitors or alternatives in scope
-- Decision audience (PMM, enablement, sales leadership)
+- Decision audience: PMM, enablement, or sales leadership
 
 Ask for only missing items. If the user wants a fast draft, proceed with labeled assumptions.
 
@@ -36,7 +36,7 @@ Convert source artifacts into a consistent dataset with stage, segment, persona,
 Tag primary and secondary reasons using the shared coding framework.
 
 4. Separate evidence from inference.
-Keep raw observations separate from hypothesis-level interpretation.
+Keep raw observations separate from interpretation.
 
 5. Check coverage and bias.
 Flag selection bias, missing segments, and skewed deal mix before drawing broad conclusions.

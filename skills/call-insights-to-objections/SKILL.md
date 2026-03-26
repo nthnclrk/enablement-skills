@@ -1,22 +1,22 @@
 ---
 name: call-insights-to-objections
-description: Extract recurring objection patterns from call transcripts and call notes, then convert them into evidence-backed enablement priorities. Use when the user asks to analyze call sets, identify common pushback themes, or prioritize objection training updates by segment, persona, or deal stage. For coaching a single call, use call-review-coach. For writing the final objection messaging asset, use objection-library-builder.
+description: Turn call transcripts and notes into an objection playbook update. Use when asked to find recurring pushback, objection themes, or message gaps by segment, persona, or stage. For one-call coaching, use call-review-coach. For the final objection asset, use objection-library-builder.
 ---
 
 # Call Insights To Objections
 
-Convert raw call evidence into prioritized objection insights that enablement and PMM teams can act on.
+Convert raw call evidence into prioritized objection themes that enablement and PMM teams can act on.
 
 ## Confirm Inputs First
 
 Confirm the minimum required inputs before analysis:
 
-- If a current revenue-enablement-context exists, use it first for ICP, persona, stage, and message guardrails. If not, ask for only the highest-impact missing context.
+- If a current `revenue-enablement-context` exists, use it first for ICP, persona, stage, and message guardrails. If not, ask for only the highest-impact missing context.
 - Transcript or note source and time window
 - Segment and persona scope
 - Call types in scope (discovery, demo, pricing, procurement, renewal)
 - Minimum sample expectation or available call count
-- Desired output audience (enablement, PMM, sales leadership)
+- Desired output audience: enablement, PMM, or sales leadership
 
 If any of these are missing, ask for only the missing items. If the user prefers speed, proceed with labeled assumptions.
 
@@ -31,7 +31,7 @@ If any of these are missing, ask for only the missing items. If the user prefers
 Lock the analysis window, segment, and persona scope so counts are interpretable.
 
 2. Prepare source evidence.
-Normalize transcripts or notes into comparable units with call metadata (date, segment, stage, outcome).
+Normalize transcripts or notes into comparable units with call metadata.
 
 3. Code objections using the reference taxonomy.
 Tag explicit and implied objections, then assign root-cause and severity tags.
@@ -43,10 +43,10 @@ Rank by frequency, deal impact, and recurrence across segments. Collapse near-du
 Provide concrete snippets or examples for each high-priority objection theme.
 
 6. Translate insights into actions.
-Propose specific enablement updates: talk-track revisions, battlecard updates, drills, and manager coaching prompts.
+Propose specific updates to talk tracks, battlecards, drills, and manager coaching prompts.
 
 7. Check weighting and bias.
-Avoid over-weighting loud reps, one team, or a narrow call slice when generalizing themes.
+Avoid over-weighting one rep, one team, or a narrow call slice.
 
 8. Flag confidence and blind spots.
 Show where sample size, source quality, or segment coverage weakens confidence.

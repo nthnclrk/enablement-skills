@@ -1,11 +1,11 @@
 ---
 name: certification-program-builder
-description: Create role-based certification programs with clear scoring criteria, evaluation prompts, and calibration rules. Use when the user asks to design readiness certification, pass/fail standards, assessor guides, or repeatable certification workflows for sales or customer-facing roles. Route broader onboarding plan design to onboarding-program-builder.
+description: Create role-based readiness certifications with clear scoring, evaluation prompts, and calibration rules. Use when the user asks to design pass/fail standards, assessor guides, or repeatable certification workflows for sales or customer-facing roles. Route broader ramp-planning work to onboarding-program-builder.
 ---
 
 # Certification Program Builder
 
-Design certification that evaluates real role competence with consistent scoring.
+Design certification that checks real job readiness, not course completion.
 
 ## Confirm Inputs First
 
@@ -26,13 +26,13 @@ Read [references/certification-scoring-rules.md](references/certification-scorin
 
 ## Default Workflow
 
-1. Define certification scope by capability, not by content completion.
-2. Build rubric dimensions with behavioral indicators per score band.
-3. Define evidence types and minimum proof needed to pass.
+1. Define the skills being certified, not the training content being completed.
+2. Build score bands with clear behavior examples.
+3. Define what proof is needed to pass.
 4. Write evaluation prompts and practical scenarios.
-5. Set pass/fail logic, retake guardrails, and recertification cadence.
-6. Add assessor anti-bias prompts, calibration workflow, and drift checks.
-7. Produce certification pack and scoring guide.
+5. Set pass/fail rules, retake rules, and recertification timing.
+6. Add assessor calibration and bias checks.
+7. Produce the certification pack and scoring guide.
 
 ## Tool Notes
 

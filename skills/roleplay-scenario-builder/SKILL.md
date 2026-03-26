@@ -1,11 +1,11 @@
 ---
 name: roleplay-scenario-builder
-description: Build realistic sales roleplay scenarios with facilitator instructions, scoring prompts, and progression levels for coaching and readiness programs. Use when asked to create practice drills for discovery, demos, objections, negotiation, or executive conversations. Route requests to score real call performance to call-review-coach and requests to audit discovery execution against a rubric to discovery-rubric-auditor.
+description: Build sales role-play scenarios with facilitator notes, scoring prompts, and difficulty levels. Use when asked to create practice drills for discovery, demos, objections, negotiation, or executive conversations. Route real-call coaching to call-review-coach and discovery scoring to discovery-rubric-auditor.
 ---
 
 # Roleplay Scenario Builder
 
-Design scenario packs that produce measurable behavior change, not scripted theater.
+Design practice scenarios that change how reps actually sell.
 
 ## Confirm Inputs First
 
@@ -24,13 +24,13 @@ If inputs are incomplete, ask only for missing essentials. If needed, proceed wi
 
 ## Default Workflow
 
-1. Define the behavior target and anti-patterns to avoid.
-2. Choose scenario archetypes and difficulty progression from the reference.
-3. If real call or objection evidence is available, ground scenarios in anonymized field patterns.
-4. Create scenario brief for participant, buyer persona, and facilitator.
-5. Add realistic tension points, curveballs, and decision moments.
-6. Provide scoring prompts aligned to observable behaviors.
-7. Add debrief prompts that convert outcomes into next-practice actions.
+1. Define the behavior you want and the habits you want to stop.
+2. Pick scenario types and difficulty levels from the reference.
+3. If you have real field evidence, base the scenario on anonymized examples.
+4. Write the participant brief, buyer role, and facilitator notes.
+5. Add the pressure points, objections, and decision moments the rep needs to handle.
+6. Add scoring prompts tied to visible behavior.
+7. End with debrief questions and a next-practice action.
 
 ## Tool Notes
 

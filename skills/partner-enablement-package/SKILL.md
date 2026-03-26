@@ -1,6 +1,6 @@
 ---
 name: partner-enablement-package
-description: Build partner-ready enablement packages that translate your direct sales motion into partner-safe messaging, onboarding, and field assets. Use when asked to create partner training, reseller onboarding, channel talk tracks, partner certification guidance, or partner launch support. Route direct-sales rep onboarding to onboarding-program-builder and internal-only launch enablement to product-launch-enablement.
+description: Build partner-ready enablement packages that translate a direct sales motion into partner-safe messaging, onboarding, and field assets. Use when asked to create partner training, reseller onboarding, channel talk tracks, partner certification guidance, or partner launch support. Route direct-sales rep onboarding to onboarding-program-builder and internal-only launch enablement to product-launch-enablement.
 ---
 
 # Partner Enablement Package
@@ -25,15 +25,22 @@ If critical inputs are missing, ask for the smallest missing set. If the user pr
 - Read [references/partner-package-blueprint.md](references/partner-package-blueprint.md) before defining archetype variants and co-sell controls.
 
 ## Default Workflow
-
-1. Review the source material and isolate what partners truly need versus what only internal sellers need.
-2. Translate positioning, qualification, and proof into partner-safe language that avoids internal jargon and unsupported claims.
-3. Define the minimum enablement package by partner role: what to say, what to ask, how to qualify, when to escalate, and what not to promise.
-4. Structure onboarding, core assets, and certification guidance around the partner's actual motion and access level.
-5. Map approved source assets and identify restricted internal-only content.
-6. Add co-sell economics and governance visibility: lead registration, ownership, conflict handling, and approval thresholds.
-7. Add clear boundaries for handoff points, services expectations, pricing caveats, and support responsibilities.
-8. Return a package that can be delivered directly to partner managers, enablement leads, or channel teams.
+1. Sort partner needs from internal needs.
+Keep only the material a partner can use safely and effectively.
+2. Translate the message.
+Rewrite positioning, qualification, and proof in partner-safe language with no internal jargon.
+3. Define the partner motion.
+Decide what the partner needs to say, ask, qualify, and hand off.
+4. Build the core package.
+Include the onboarding guide, talk track, deck outline, certification guidance, and launch notes the partner actually needs.
+5. Map approved content.
+List the source assets partners can use and the material they cannot see.
+6. Add co-sell rules.
+Spell out lead registration, ownership, conflict handling, pricing authority, and escalation paths.
+7. Set the support boundaries.
+Clarify services scope, handoff points, implementation expectations, and what not to promise.
+8. Package for delivery.
+Return something partner managers and channel teams can use without extra rewriting.
 
 ## Tool Notes
 

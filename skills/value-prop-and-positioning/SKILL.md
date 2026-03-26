@@ -1,10 +1,10 @@
 ---
 name: value-prop-and-positioning
-description: Build and refine positioning and persona-specific value propositions for revenue teams. Use when asked to define differentiation, alternatives framing, proof points, why-now narrative, or seller-ready messaging by persona. Route competitor-specific compete guidance to battlecard-builder and objection response systems to objection-library-builder.
+description: Build and refine value propositions and messaging frameworks for revenue teams. Use when asked to define positioning, differentiation, alternatives framing, proof points, why-now narrative, or persona-specific messaging. Route competitor-specific compete guidance to battlecard-builder and objection handling to objection-library-builder.
 ---
 
 # Value Prop And Positioning
-Build differentiated positioning and persona-level value messaging that revenue teams can use in live conversations.
+Build differentiated positioning and persona-level value messaging that sales and marketing teams can actually reuse.
 
 ## Confirm Inputs First
 - If a current `revenue-enablement-context` exists, use it first for ICP, personas, stage language, and proof standards.
@@ -20,19 +20,26 @@ Build differentiated positioning and persona-level value messaging that revenue 
 - Read [references/positioning-canvas.md](references/positioning-canvas.md) when you need a stable framework for framing alternatives, value pillars, and proof.
 
 ## Default Workflow
-1. Define the decision context: buyer, problem, trigger, and current alternatives.
-2. State the positioning thesis in one sentence with a clear category anchor.
-3. Build three to five value pillars tied to concrete buyer outcomes.
-4. Translate value pillars into persona-specific value messages.
-5. Attach proof to each value pillar, preferring quantified evidence.
-6. Draft a why-now narrative that reflects timing pressure and business risk.
-7. Stress test messaging across decision lenses:
-   status quo inertia, named competitor pressure, procurement scrutiny, and executive buyer risk.
-8. Remove or downgrade unsupported claims that fail the stress test.
+1. Define the buying situation.
+Capture the buyer, problem, trigger, current alternative, and what changes if they do nothing.
+2. Write the positioning statement.
+Use one sentence that says who it is for, what it helps them do, and why it is different.
+3. Build the message pillars.
+Limit to three to five value pillars tied to measurable buyer outcomes.
+4. Translate by persona.
+Show how the message changes for the economic buyer, champion, technical buyer, and end user.
+5. Attach proof points.
+Use customer results, product proof, or other evidence for each pillar and note the strength of the proof.
+6. Add the why-now story.
+Explain the business pressure, timing, or risk that makes action worth taking now.
+7. Check against real alternatives.
+Compare the message to the status quo, in-house build, and named competitors.
+8. Remove weak claims.
+Drop anything that cannot be defended in a live conversation or in a review with leadership.
 9. Route adjacent work:
-   For live conversation scripts, use talk-track-builder.
-   For objection-specific counters, use objection-library-builder.
-   For competitor tactical positioning, use battlecard-builder.
+   For call-level talk tracks, use talk-track-builder.
+   For objection handling, use objection-library-builder.
+   For competitor-specific guidance, use battlecard-builder.
 
 ## Output Contract
 - Positioning thesis and category framing.
@@ -40,7 +47,7 @@ Build differentiated positioning and persona-level value messaging that revenue 
 - Persona value matrix with role-specific pain, value, and proof.
 - Why-now narrative and disqualification conditions.
 - Message hierarchy: headline, pillar statements, and support points.
-- Stress test summary by decision lens.
+- Proof notes with source strength.
 - Assumptions list when source inputs were incomplete.
 
 ## What To Avoid

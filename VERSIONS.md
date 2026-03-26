@@ -13,21 +13,27 @@ This file tracks repo-level and bundle-level versions for packaging and update c
 
 | Component | Version | Last Updated | Status | Notes |
 | --- | --- | --- | --- | --- |
-| `repo` | `1.0.0` | `2026-03-17` | `active` | First stable public release with packaged skills, plugin bundles, validation, and refreshed docs. |
+| `repo` | `1.1.0` | `2026-03-26` | `active` | Practitioner-language refresh across skill workflows, output contracts, and repo-facing routing copy. |
 
 ## Bundle Versions
 
 | Bundle | Version | Last Updated | Status | Notes |
 | --- | --- | --- | --- | --- |
-| `enablement-core` | `0.1.0` | `2026-03-17` | `active` | Foundational context, routing, program design, planning. |
-| `enablement-messaging` | `0.1.1` | `2026-03-17` | `active` | Positioning, talk tracks, objections, battlecards, content workflows. |
-| `enablement-programs` | `0.1.0` | `2026-03-17` | `active` | Onboarding, certification, coaching, and inspection workflows. |
-| `enablement-measurement` | `0.1.0` | `2026-03-17` | `active` | Metrics instrumentation and impact narrative skills. |
-| `enablement-launches` | `0.1.1` | `2026-03-17` | `active` | Product launch and seller-update workflows. |
-| `enablement-crm-pack` | `0.1.0` | `2026-03-17` | `active` | CRM-oriented workflows and integration-linked skills. |
-| `enablement-ci-pack` | `0.1.0` | `2026-03-17` | `active` | Conversation-intelligence-oriented workflows and analysis skills. |
+| `enablement-core` | `0.2.0` | `2026-03-26` | `active` | Practitioner-language refresh for context, routing, planning, and program design skills. |
+| `enablement-messaging` | `0.2.0` | `2026-03-26` | `active` | Reworked messaging, battlecard, objection, talk track, and content asset workflows in practitioner terms. |
+| `enablement-programs` | `0.2.0` | `2026-03-26` | `active` | Coaching, ramp, certification, and launch/program workflows now use plainer operator-facing guidance. |
+| `enablement-measurement` | `0.2.0` | `2026-03-26` | `active` | Metrics, ROI-story, content-ops, and audit skills now use clearer enablement and RevOps language. |
+| `enablement-launches` | `0.2.0` | `2026-03-26` | `active` | Launch readiness and seller-update workflows now use field-facing launch language and tighter action guidance. |
+| `enablement-crm-pack` | `0.2.0` | `2026-03-26` | `active` | Stage, deal review, forecast, account, MAP, renewal, and pipeline workflows rewritten in sales/CS/RevOps language. |
+| `enablement-ci-pack` | `0.2.0` | `2026-03-26` | `active` | Call review, objection mining, field feedback, and win/loss skills now use practical coaching and insight language. |
 
 ## Change Log Summary
+
+### 1.1.0 - 2026-03-26
+
+- Rewrote the practitioner-facing `SKILL.md` files to replace abstract framework language with terms used by proposal, enablement, PMM, sales, CS, and RevOps teams.
+- Tightened default workflows so they read like operator playbooks instead of internal planning notes.
+- Updated output contracts and quality bars to match deliverables teams already recognize, such as requirement matrices, business reviews, ROI stories, scorecards, launch kits, and exit criteria.
 
 ### 1.0.0 - 2026-03-17
 

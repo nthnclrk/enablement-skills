@@ -1,11 +1,11 @@
 ---
 name: qbr-ebr-builder
-description: Build QBR and EBR deliverables that align customer goals, business outcomes, risks, and forward plans. Use when asked to prepare a quarterly business review, executive business review, or account review narrative for customer leadership. Route internal-only account review prep to account-brief-builder. For one-off executive meeting prep, use executive-briefing-builder.
+description: Build QBR and EBR deliverables that align customer goals, business outcomes, risks, and next steps. Use when asked to prepare a quarterly business review, executive business review, or customer account review for leadership. Route internal-only account review prep to account-brief-builder. For one-off executive meeting prep, use executive-briefing-builder.
 ---
 
 # QBR EBR Builder
 
-Create outcome-led QBR/EBR materials that help both teams decide priorities and next actions.
+Create outcome-led QBR/EBR materials that help both teams agree what happened, what changed, and what to do next.
 
 ## Confirm Inputs First
 
@@ -28,22 +28,21 @@ If critical inputs are missing, ask for the smallest missing set. If the user wa
 ## Default Workflow
 
 1. Clarify review objective.
-Define what decision or alignment this review needs to produce.
+Define what the review needs to decide, align on, or move forward.
 Confirm whether the output is customer-facing or internal-only.
 
 2. Anchor on customer outcomes.
-Frame around customer business goals, not product activity volume.
+Frame the review around the customer's business goals, not your activity volume.
 
 3. Build evidence narrative.
-Show progress from baseline to current state with key metrics and qualitative evidence.
+Show progress from baseline to current state with key metrics, customer feedback, and proof points.
 
 4. Surface risks and opportunities.
-Separate leading risk indicators from confirmed issues.
-Include expansion or acceleration opportunities where supported.
+Call out risks, blockers, and expansion or acceleration opportunities that are actually supported.
 
 5. Convert to joint plan.
-Define prioritized next-quarter actions, owners, and check-in cadence.
-For internal-only reviews, include internal owner controls and escalation notes outside customer-facing outputs.
+Define the next-quarter actions, owners, and check-in cadence.
+For internal-only reviews, keep internal controls and escalation notes outside the customer-facing version.
 
 ## Tool Notes
 
@@ -68,9 +67,9 @@ Deliver:
 
 ## Quality Bar
 
-- Keep narrative tied to customer outcomes and business impact.
-- Balance metrics with decision-relevant interpretation.
+- Keep the narrative tied to customer outcomes and business impact.
+- Use metrics with enough interpretation to drive a decision.
 - Make risks explicit with trigger and mitigation.
-- Make the action plan bilateral with clear ownership.
-- Internal-only commentary is removed or clearly separated before customer-facing use.
+- Make the action plan shared, with clear ownership on both sides.
+- Remove internal-only commentary before customer-facing use.
 - Do not overstate impact or fabricate metrics.

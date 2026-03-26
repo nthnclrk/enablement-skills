@@ -48,12 +48,12 @@
     {
       "name": "contains_output_element_3",
       "type": "contains_phrase",
-      "phrase": "Claim-counter-proof matrix."
+      "phrase": "Claim-response-proof table."
     },
     {
       "name": "contains_output_element_4",
       "type": "contains_phrase",
-      "phrase": "Claim freshness and verification notes."
+      "phrase": "Freshness and source notes."
     },
     {
       "name": "contains_output_element_5",

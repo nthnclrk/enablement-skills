@@ -1,6 +1,6 @@
 ---
 name: onboarding-to-value-playbook
-description: Design customer onboarding-to-value playbooks that reduce time-to-value and early churn risk across segments. Use when the user asks to map implementation milestones, define handoffs, or operationalize customer outcomes in the first 30-90 days. For internal seller onboarding programs, use onboarding-program-builder.
+description: Build customer onboarding-to-value playbooks that get customers to first value fast and reduce early churn risk. Use when asked to map implementation milestones, handoffs, adoption signals, or first-90-day customer outcomes. For internal seller onboarding, use onboarding-program-builder.
 ---
 
 # Onboarding To Value Playbook
@@ -16,7 +16,7 @@ Confirm these minimum inputs:
 - Desired first value outcome and target timeframe
 - Implementation constraints (integrations, data readiness, stakeholder availability)
 - Team handoffs (sales to CS to support or services)
-- Renewal/expansion horizon and commercially critical checkpoints
+- Renewal or expansion horizon and commercially critical checkpoints
 - Known early-risk signals or churn reasons
 
 If inputs are incomplete, ask for minimum gaps or proceed with explicit assumptions.
@@ -27,29 +27,29 @@ If inputs are incomplete, ask for minimum gaps or proceed with explicit assumpti
 
 ## Default Workflow
 
-1. Define value moment.
-Specify the first verifiable customer outcome that matters commercially.
+1. Define the first value outcome.
+Specify the first customer result that matters commercially and when it should happen.
 
 2. Segment the journey.
-Adjust milestone depth and support intensity by segment and complexity.
+Adjust milestone depth and support intensity by customer type and complexity.
 
-3. Build milestone map.
-Design onboarding phases with owner, expected outputs, and due windows.
+3. Build the milestone plan.
+Design phases with owner, expected output, due window, and acceptance criteria.
 
 4. Define handoffs and responsibilities.
-Clarify who owns each transition and what data/context must transfer.
+Clarify who owns each transition and what data or context must transfer.
 
 5. Add risk controls.
 Attach early warning signals, interventions, and escalation paths.
 
-6. Add instrumentation.
-Define leading indicators for adoption and value progression.
+6. Add adoption signals.
+Define the leading indicators that show the customer is moving toward value.
 
-7. Create dual operating views.
-Produce a customer-visible milestone plan and an internal operating cadence with additional risk controls.
+7. Create customer-visible and internal views.
+Produce a customer-facing plan plus an internal operating cadence with added risk controls.
 
-8. Operationalize.
-Define cadence, templates, and review loops for consistent execution.
+8. Operationalize the cadence.
+Define weekly check-ins, templates, and review loops for consistent execution.
 
 ## Tool Notes
 
@@ -66,7 +66,7 @@ Default output includes:
 - Internal operating cadence and control plan
 - Milestone acceptance criteria and artifact checklist
 - Risk trigger list with response plays
-- Renewal/expansion handoff hooks and checkpoint criteria
+- Renewal or expansion handoff hooks and checkpoint criteria
 - KPI and leading indicator set with target thresholds
 - 30/60/90-day operating cadence
 

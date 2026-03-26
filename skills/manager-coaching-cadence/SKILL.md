@@ -1,11 +1,11 @@
 ---
 name: manager-coaching-cadence
-description: Design repeatable manager coaching cadences for revenue teams, including weekly agendas, coaching prompts, and inspection loops. Use when the user asks to improve manager coaching consistency, create ongoing coaching rhythms, or operationalize call and deal coaching without adding heavy process. Route one-call analysis to call-review-coach and deal-level diagnostics to deal-inspection-coach.
+description: Design a repeatable manager coaching cadence for revenue teams, including weekly agendas, prompts, and inspection loops. Use when the user asks to improve coaching consistency, create an ongoing rhythm, or operationalize call and deal coaching without heavy process. Route one-call analysis to call-review-coach and deal diagnostics to deal-inspection-coach.
 ---
 
 # Manager Coaching Cadence
 
-Build a manager coaching rhythm that drives continuous behavior improvement.
+Build a coaching rhythm that managers can actually run every week.
 
 ## Confirm Inputs First
 
@@ -27,15 +27,14 @@ If key data is missing, ask for only what is needed to design a workable cadence
 
 ## Default Workflow
 
-1. Define the top 2-3 behaviors to improve and tie each to observable inspection signals.
-2. Choose a cadence variant by team type (SMB, mid-market, enterprise, post-sale) from the reference.
-3. Build the weekly loop with time budgets:
-   inspect evidence, run focused coaching, capture rep commitments, schedule follow-up checks.
-4. Create a manager agenda template and observation log template.
-5. Add commitment tracking with owner, due date, verification signal, and carry-forward status.
-6. Build a monthly trend review that separates recurring skill gaps from pipeline/process issues.
-7. Define escalation triggers for persistent underperformance and support actions.
-8. Produce a rollout plan managers can run immediately with minimal setup.
+1. Pick the 2-3 behaviors you want to improve and the signals that prove they happened.
+2. Choose the cadence pattern that fits the team type in the reference.
+3. Build the weekly loop with a clear time budget for evidence review, coaching, and follow-up.
+4. Create a manager agenda and an observation log.
+5. Track rep commitments with owner, due date, and proof of follow-through.
+6. Add a monthly review that separates skill gaps from pipeline or process problems.
+7. Define when managers should escalate and what support should kick in.
+8. Produce a rollout plan managers can start using right away.
 
 ## Tool Notes
 

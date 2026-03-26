@@ -1,11 +1,10 @@
 ---
 name: release-notes-to-seller-updates
-description: Convert product or engineering release notes into concise seller-ready updates with customer impact, positioning implications, and action guidance. Use when asked to summarize releases for sales, update talk tracks after product changes, or create enablement-ready release briefings. Route full launch enablement to product-launch-enablement and public-facing release notes to the user's external marketing or product comms workflow.
+description: Convert product or engineering release notes into concise field updates with customer impact, positioning implications, and action guidance. Use when asked to summarize releases for sales, update talk tracks after product changes, or create enablement-ready release briefs. Route full launch enablement to product-launch-enablement and public-facing release notes to the user's external marketing or product comms workflow.
 ---
 
 # Release Notes To Seller Updates
-
-Turn product release details into seller updates that clarify why the change matters, who it matters to, and how to use it in the field.
+Turn product release details into field updates that clarify why the change matters, who it matters to, and how to use it.
 
 ## Confirm Inputs First
 
@@ -19,15 +18,20 @@ Turn product release details into seller updates that clarify why the change mat
 If inputs are incomplete, ask for only the highest-impact gaps. If the user prefers speed, proceed with labeled assumptions.
 
 ## Default Workflow
-
-1. Read the source notes and separate technical changes from seller-relevant implications.
-2. Identify who should care, what customer problem changed, and what behavior should change in the field.
-3. Translate the release into practical seller language: customer impact, qualification triggers, proof points, landmines, and likely objections or FAQs.
-4. Separate what changed from what did not change so the update does not create accidental confusion.
-5. Select output variant(s) needed:
-   Slack update, email digest, wiki/changelog entry, or manager briefing notes.
-6. Package the output for the requested audience and urgency level.
-7. Return a concise update that sales or enablement can distribute with minimal editing.
+1. Read the source note.
+Separate the product change from the seller implication.
+2. Identify who should care.
+Call out the personas, segments, or use cases that are affected.
+3. Translate into field language.
+Write the customer impact, qualification cues, proof points, likely objections, and what sellers should say differently.
+4. State what did not change.
+Prevent confusion by saying what the release does not affect.
+5. Choose the format.
+Pick the right output for Slack, email, wiki, changelog, or manager briefing.
+6. Package it for the audience.
+Adjust depth and urgency for AEs, SDRs, SEs, managers, or CS.
+7. Keep it short enough to use.
+Return something a rep or manager can read quickly and apply immediately.
 
 ## Read The Right Reference
 
@@ -42,7 +46,6 @@ If inputs are incomplete, ask for only the highest-impact gaps. If the user pref
 - If the change is still ambiguous or the source notes are incomplete, preserve uncertainty instead of over-translating.
 
 ## Output Contract
-
 - Default to these deliverables unless the user asks for a narrower output:
 - Seller summary with customer impact
 - Audience and use-case guidance

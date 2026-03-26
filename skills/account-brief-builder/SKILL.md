@@ -5,7 +5,7 @@ description: Build concise, decision-ready account briefs for account reviews, i
 
 # Account Brief Builder
 
-Produce an account brief that helps teams make better account decisions in one read.
+Produce an account brief that helps teams make a better account decision in one read.
 
 ## Confirm Inputs First
 
@@ -29,17 +29,18 @@ If critical inputs are missing, ask for the smallest missing set. If the user pr
 ## Default Workflow
 
 1. Define the briefing objective.
-State the decision or action this brief must support.
+State the decision or action the brief must support.
 
 2. Build stakeholder coverage.
-Map champion, economic buyer, technical approvers, procurement/legal, and blockers.
-Flag single-thread risk explicitly.
+Map the champion, economic buyer, technical approvers, procurement/legal, and blockers.
+Call out single-thread risk.
 
 3. Summarize business context.
-Capture priorities, active initiatives, current solution fit, and recent change signals.
+Capture account priorities, active initiatives, current solution fit, and recent change signals.
 
 4. Set source-priority and freshness rules.
-Define source priority (for example CRM over anecdotal notes) and mark stale or conflicting data explicitly.
+Use a simple source order, such as CRM first, then call notes, then anecdotal inputs.
+Mark stale or conflicting data clearly.
 
 5. Assess opportunity and risk.
 Separate upside from risk.
@@ -47,7 +48,7 @@ Include probability, impact, and near-term trigger signals.
 
 6. Recommend the next 30 days.
 Produce a short action sequence with owner and due date.
-Prioritize actions that improve stakeholder alignment and de-risk execution.
+Prioritize actions that improve alignment and reduce risk.
 
 ## Tool Notes
 
@@ -72,9 +73,9 @@ Deliver:
 
 ## Quality Bar
 
-- Tie major claims to evidence from provided context.
-- Keep content concise and decision-oriented.
+- Tie major claims to evidence from the provided context.
+- Keep the brief concise and decision-oriented.
 - Make stakeholder mapping actionable, not a static contact list.
-- Include clear owners, dates, and expected outcomes for actions.
+- Include clear owners, dates, and expected outcomes.
 - Make staleness and source quality visible when evidence is incomplete or conflicting.
 - Do not fabricate account facts, stakeholder roles, or commercial metrics.

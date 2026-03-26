@@ -16,7 +16,7 @@
       "expected": "trigger"
     },
     {
-      "prompt": "Please score discovery quality across one or more calls, compare rep performance, or find recurring discovery gaps.",
+      "prompt": "Please compare rep discovery quality, find recurring gaps, or assess a team baseline.",
       "expected": "trigger"
     }
   ],

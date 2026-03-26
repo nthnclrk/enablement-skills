@@ -1,11 +1,11 @@
 ---
 name: revenue-enablement-context
-description: Create or update a canonical revenue enablement context used by other enablement skills. Use when the user needs to document ICP, personas, sales stages, qualification rules, pricing and packaging, core objections, competitors, and current initiatives, or when downstream skill outputs are weak because shared context is missing. Route multi-skill sequencing requests to enablement-router.
+description: Create or update a canonical GTM context used by other enablement skills. Use when the user needs to document ICP, personas, sales stages, qualification rules, pricing and packaging, core objections, competitors, and current initiatives, or when downstream skill outputs are weak because shared context is missing. Route multi-skill sequencing requests to enablement-router.
 ---
 
 # Revenue Enablement Context
 
-Build one reliable context baseline that other enablement skills can reuse.
+Build one reliable source of truth that other enablement skills can reuse.
 
 ## Confirm Inputs First
 
@@ -17,7 +17,7 @@ Confirm these items before drafting:
 - Pricing and packaging basics
 - Top objections and common competitive alternatives
 - Current quarter initiatives and key risks
-- Existing context artifact location and last-updated date (if it exists)
+- Existing context artifact location and last-updated date, if it exists
 
 If key items are missing, ask only for the highest-impact gaps. If the user wants speed, proceed with clearly labeled assumptions.
 
@@ -33,8 +33,7 @@ Read [references/context-schema.yaml](references/context-schema.yaml) when the u
 3. Mark unknowns as assumptions, not facts.
 4. Flag contradictions across sources and propose one canonical version.
 5. Add a short dependency block listing which downstream skills depend on each section.
-6. Create a compact context handshake block:
-   source location, version date, owner, and confidence rating.
+6. Create a compact context handshake block with source, version date, owner, and confidence.
 7. Add a missing-information checklist for future refinement.
 8. Return the updated context plus the top unresolved decisions.
 
@@ -49,8 +48,8 @@ Read [references/context-schema.yaml](references/context-schema.yaml) when the u
 
 Default output includes:
 
-- A canonical revenue enablement context document with all schema sections populated
-- A compact context handshake block (owner, freshness, confidence, and source)
+- A canonical GTM context document with all schema sections populated
+- A compact context handshake block with owner, freshness, confidence, and source
 - A machine-readable context object when requested
 - A labeled assumptions list
 - A missing-information checklist prioritized by downstream impact

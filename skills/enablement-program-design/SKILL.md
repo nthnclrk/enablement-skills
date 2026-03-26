@@ -1,6 +1,6 @@
 ---
 name: enablement-program-design
-description: Design end-to-end revenue enablement programs with clear scope, delivery plans, and measurable outcomes. Use when the user asks for a new enablement initiative, program charter, rollout plan, or structured program design for onboarding, launches, coaching, or readiness. Route quarter-level scheduling requests to quarterly-enablement-planner.
+description: Design revenue enablement programs with a clear charter, rollout plan, and measurement plan. Use when the user asks for a new enablement initiative, program design, rollout, or structured plan for onboarding, launches, coaching, or readiness. Route quarter-level scheduling requests to quarterly-enablement-planner.
 ---
 
 # Enablement Program Design
@@ -27,13 +27,13 @@ Read [references/program-charter-template.md](references/program-charter-templat
 ## Default Workflow
 
 1. Reuse current `revenue-enablement-context` if available; otherwise label foundational assumptions.
-2. Define target behavior change and why it matters to revenue outcomes.
-3. Set scope boundaries, in-scope roles, and exclusions.
+2. Define the business problem, target behavior change, and why it matters.
+3. Set scope boundaries, in-scope roles, exclusions, and success criteria.
 4. Build a phased plan: design, pilot, rollout, reinforcement.
-5. Map required assets and owners by phase.
-6. Build a cross-functional owner matrix and change-management plan.
-7. Define measurement plan with leading and lagging indicators.
-8. Identify operating risks and mitigation actions.
+5. Map required assets, owners, and dependencies by phase.
+6. Build a cross-functional owner matrix and manager enablement plan.
+7. Define a measurement plan with leading and lagging indicators.
+8. Identify rollout risks, adoption risks, and mitigation actions.
 9. Produce a charter and 90-day execution plan.
 
 ## What To Avoid
@@ -41,7 +41,7 @@ Read [references/program-charter-template.md](references/program-charter-templat
 - Framing a training activity as the goal instead of behavior change.
 - Missing sponsor and decision-right clarity across teams.
 - Overloaded rollout scope with no pilot boundary.
-- No reinforcement plan after initial launch.
+- No reinforcement plan after launch.
 
 ## Tool Notes
 

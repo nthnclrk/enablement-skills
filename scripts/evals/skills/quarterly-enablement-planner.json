@@ -38,7 +38,7 @@
     {
       "name": "contains_output_element_1",
       "type": "contains_phrase",
-      "phrase": "Quarterly enablement calendar"
+      "phrase": "Quarterly enablement roadmap or calendar"
     },
     {
       "name": "contains_output_element_2",
@@ -48,7 +48,7 @@
     {
       "name": "contains_output_element_3",
       "type": "contains_phrase",
-      "phrase": "Stop/defer list with rationale and re-entry conditions"
+      "phrase": "Defer list with rationale and re-entry conditions"
     },
     {
       "name": "contains_output_element_4",

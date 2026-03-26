@@ -1,11 +1,11 @@
 ---
 name: renewal-and-expansion-enablement
-description: Build practical renewal and expansion enablement plays that help customer-facing teams protect recurring revenue and grow accounts. Use when the user asks to design renewal motions, expansion qualification plays, or manager inspection standards for post-sale revenue. For QBR/EBR narrative outputs, use qbr-ebr-builder.
+description: Build renewal and expansion plays for customer-facing teams. Use when the user asks for renewal motions, save plays, expansion qualification, health signals, or post-sale inspection. For QBR/EBR narrative outputs, use qbr-ebr-builder.
 ---
 
 # Renewal And Expansion Enablement
 
-Create repeatable post-sale plays that connect value realization to renewal and growth outcomes.
+Create repeatable post-sale plays that connect adoption, value realization, and growth outcomes.
 
 ## Confirm Inputs First
 
@@ -15,7 +15,7 @@ Confirm these minimum inputs:
 - Business model and contract model (annual, multi-year, usage-based)
 - Target segments and ownership model (CSM, AM, hybrid)
 - Current renewal and expansion performance baseline
-- Available product-usage/adoption signals
+- Available product-usage and adoption signals
 - Commercial governance states (legal, procurement, pricing approvals, deal desk)
 - Common risk patterns and expansion blockers
 - Desired reporting horizon (quarterly, half-year, annual)
@@ -28,29 +28,29 @@ If critical items are missing, ask for the smallest missing set or proceed with 
 
 ## Default Workflow
 
-1. Define lifecycle windows.
-Set pre-renewal windows and expansion trigger windows by segment.
+1. Define the renewal and expansion windows by segment.
+Set the timeframes when each motion starts, who owns it, and what counts as late.
 
-2. Build renewal risk model.
-Define health indicators, warning thresholds, and escalation actions.
+2. Separate save motions from growth motions.
+Define the signals that indicate retention risk versus whitespace or expansion potential.
 
-3. Build expansion qualification model.
-Define expansion readiness signals tied to adoption, outcomes, and stakeholder access.
+3. Build the signal map.
+Use adoption, product usage, stakeholder coverage, outcome attainment, and commercial timing as the core inputs.
 
-4. Design plays.
-Create role-specific plays for standard renewal, at-risk renewal, and expansion scenarios.
+4. Design the plays.
+Write specific plays for healthy renewals, at-risk renewals, and expansion opportunities.
 
-5. Add manager inspection.
-Define weekly and monthly inspection prompts and scorecard checkpoints.
+5. Add talk tracks and next actions.
+Give CS, AM, Sales, and Support a clear playbook for what to say and do next.
 
-6. Integrate usage and adoption evidence.
-Define usage thresholds and pattern shifts that trigger renewal risk or expansion readiness actions.
+6. Add commercial guardrails.
+Define discount authority, deal desk handoffs, legal/procurement states, and exception rules.
 
-7. Add commercial controls.
-Define discount authority, deal desk handoffs, legal/procurement states, and renewal exception policies.
+7. Define manager inspection points.
+Set weekly and monthly review prompts, owner follow-up, and escalation triggers.
 
-8. Operationalize.
-Set ownership, reporting cadence, and handoff rules between CS, AM, Sales, and RevOps.
+8. Operationalize the cadence.
+Lock ownership, reporting cadence, and handoff rules into the team workflow.
 
 ## Tool Notes
 
@@ -63,18 +63,18 @@ Set ownership, reporting cadence, and handoff rules between CS, AM, Sales, and R
 Default output includes:
 
 - Renewal and expansion play matrix by segment
-- Risk and opportunity qualification criteria
-- Product-usage signal map with threshold guidance
+- Risk and expansion trigger map
+- Product-usage and adoption signal map
 - Commercial governance-state map with owner by state
-- Role-based talk-track and action prompts
+- Role-based talk tracks and action prompts
 - Manager inspection checklist and cadence
 - KPI set with baseline and target recommendations
 
 ## Quality Bar
 
 - Plays are tied to measurable account signals, not generic account management advice.
-- Roles and handoffs are explicit.
+- Roles, handoffs, and escalation points are explicit.
 - Inspection criteria are concrete and repeatable.
 - Recommendations reflect real commercial constraints.
-- Usage signals and governance states are translated into actionable plays.
+- Usage and adoption signals are translated into specific plays.
 - Output supports immediate team rollout.

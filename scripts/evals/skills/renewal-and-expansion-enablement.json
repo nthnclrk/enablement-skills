@@ -43,12 +43,12 @@
     {
       "name": "contains_output_element_2",
       "type": "contains_phrase",
-      "phrase": "Risk and opportunity qualification criteria"
+      "phrase": "Risk and expansion trigger map"
     },
     {
       "name": "contains_output_element_3",
       "type": "contains_phrase",
-      "phrase": "Product-usage signal map with threshold guidance"
+      "phrase": "Product-usage and adoption signal map"
     },
     {
       "name": "contains_output_element_4",
@@ -58,7 +58,7 @@
     {
       "name": "contains_output_element_5",
       "type": "contains_phrase",
-      "phrase": "Role-based talk-track and action prompts"
+      "phrase": "Role-based talk tracks and action prompts"
     }
   ],
   "managed_by": "starter"

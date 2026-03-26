@@ -48,12 +48,12 @@
     {
       "name": "contains_output_element_3",
       "type": "contains_phrase",
-      "phrase": "Assumptions and risk section"
+      "phrase": "Assumptions and limits section"
     },
     {
       "name": "contains_output_element_4",
       "type": "contains_phrase",
-      "phrase": "Decisions to make now (with options and trade-offs)"
+      "phrase": "Decisions to make now with options and trade-offs"
     },
     {
       "name": "contains_output_element_5",

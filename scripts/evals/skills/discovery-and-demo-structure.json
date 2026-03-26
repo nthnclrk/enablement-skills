@@ -16,7 +16,7 @@
       "expected": "trigger"
     },
     {
-      "prompt": "Please create or improve discovery guides, question architecture, or demo sequencing for a specific role or segment.",
+      "prompt": "Please create or improve discovery guides, question ladders, or demo sequencing for a role or segment.",
       "expected": "trigger"
     }
   ],

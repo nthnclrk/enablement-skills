@@ -1,11 +1,11 @@
 ---
 name: discovery-rubric-auditor
-description: Audit discovery call execution using a consistent scoring rubric and produce prioritized coaching actions for managers and enablement leads. Use when asked to score discovery quality across one or more calls, compare rep performance, or find recurring discovery gaps. Route requests to design discovery flows and demo structures to discovery-and-demo-structure and requests for single-call coaching feedback to call-review-coach.
+description: Score discovery calls with one consistent rubric and turn the results into coaching priorities. Use when asked to compare rep discovery quality, find recurring gaps, or assess a team baseline. Route discovery design work to discovery-and-demo-structure and single-call coaching to call-review-coach.
 ---
 
 # Discovery Rubric Auditor
 
-Score discovery execution consistently and turn findings into manager-ready coaching priorities.
+Score discovery consistently and turn the pattern into manager-ready coaching.
 
 ## Confirm Inputs First
 
@@ -25,13 +25,13 @@ Ask for only missing essentials. If required, continue with explicit assumptions
 
 ## Default Workflow
 
-1. Normalize context so calls are scored against the same role and segment expectations.
-2. Score each call dimension with explicit evidence and confidence notes.
-3. Aggregate findings into pattern-level strengths and gap clusters.
-4. Separate skill gaps from process/compliance gaps.
-5. Check for scoring consistency and note inter-rater reliability risks when multiple reviewers are involved.
-6. Prioritize top coaching interventions by impact and fixability.
-7. Produce reviewer notes managers can apply in the next coaching cycle.
+1. Normalize the context so each call is judged against the same role, segment, and stage.
+2. Score each dimension with exact evidence and a confidence note.
+3. Roll the findings up into strengths, gap clusters, and recurring patterns.
+4. Separate rep skill gaps from process or process-adherence issues.
+5. Check whether different reviewers would score the same call the same way.
+6. Prioritize the coaching moves that will change the most behavior fastest.
+7. Write reviewer notes a manager can use in the next coaching cycle.
 
 ## Tool Notes
 
@@ -50,7 +50,7 @@ Ask for only missing essentials. If required, continue with explicit assumptions
 ## Quality Bar
 
 - Keep scoring consistent across calls and reviewers.
-- Anchor every finding to explicit call evidence.
-- Prioritize fewer, high-impact improvements over broad critique.
-- Distinguish skill-quality issues from missing process data.
-- Avoid team-level judgments when the sample is too small or role/segment mix is skewed.
+- Anchor every finding to call evidence, not rep memory.
+- Focus on a few high-impact improvements rather than a long critique list.
+- Separate skill issues from missing process data.
+- Avoid team-level conclusions when the sample is too small or mixed.

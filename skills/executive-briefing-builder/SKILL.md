@@ -1,11 +1,11 @@
 ---
 name: executive-briefing-builder
-description: Build executive-facing briefing materials for strategic customer meetings, internal leadership prep, and high-stakes decision discussions. Use when asked to prepare an executive briefing, align leadership on meeting goals, or craft concise decision-oriented talking points. For recurring business review cadence decks, use qbr-ebr-builder.
+description: Build executive briefing notes and pre-reads for strategic customer meetings, internal leadership prep, and high-stakes decision discussions. Use when asked to prepare an executive briefing, align leaders on the meeting objective, or craft concise decision-oriented talking points. For recurring business review decks, use qbr-ebr-builder.
 ---
 
 # Executive Briefing Builder
 
-Produce a strategic briefing that equips leaders to drive a specific decision in a customer or internal executive meeting.
+Produce a briefing that helps leaders walk into the meeting with a clear ask, clear story, and clear fallback positions.
 
 ## Confirm Inputs First
 
@@ -28,21 +28,20 @@ If critical inputs are missing, ask for the smallest missing set. If speed is pr
 ## Default Workflow
 
 1. Define the decision frame.
-State what decision, commitment, or alignment is required from the meeting.
-Tailor the frame for internal alignment versus customer-facing negotiation.
+State the decision, commitment, or alignment the meeting needs to produce.
 
 2. Calibrate to audience.
-Map attendee priorities, influence, likely objections, and decision authority.
+Map each attendee's priority, influence, likely objection, and decision authority.
 
-3. Build the strategic narrative.
-Structure as current situation, business impact, recommendation, and explicit ask.
+3. Build the briefing note.
+Use a simple flow: current situation, why it matters, recommendation, ask, and fallback.
 
-4. Prepare meeting choreography.
-Set opening narrative, role assignments, objection handling moments, and close plan.
+4. Prepare meeting flow.
+Set the opener, speaker roles, objection moments, and close plan.
 
 5. Stress-test the brief.
-Check for unsupported claims, unclear asks, and message overload.
-Reduce to the few points leaders must remember.
+Check for unsupported claims, unclear asks, and too many points.
+Trim the brief to the few things leaders must remember.
 
 ## Tool Notes
 
@@ -67,9 +66,9 @@ Deliver:
 
 ## Quality Bar
 
-- Keep content short enough for executive pre-read.
-- Make the decision request explicit and testable.
+- Keep it short enough to use as a pre-read.
+- Make the decision request explicit and easy to repeat.
 - Tie recommendations to evidence, not opinion.
-- Limit messaging to essential points only.
-- Internal-only strategy notes are clearly separated from customer-facing material.
+- Limit the message to the essential points.
+- Keep internal notes separate from customer-facing material.
 - Do not fabricate account facts, business metrics, or stakeholder positions.

@@ -1,22 +1,22 @@
 ---
 name: product-launch-enablement
-description: Build internal product launch enablement plans that prepare revenue teams to sell and support changes confidently. Use when the user asks for launch enablement, seller readiness plans, launch training, internal FAQs, talk-track updates, or cross-functional rollout plans tied to product releases. Route quarter-wide prioritization to quarterly-enablement-planner.
+description: Build launch readiness plans and field-ready launch assets for revenue teams. Use when the user asks for launch enablement, seller FAQs, talk-track updates, training, go/no-go checks, or post-launch adoption review. Route quarter-wide prioritization to quarterly-enablement-planner.
 ---
 
 # Product Launch Enablement
 
-Turn product changes into field-ready messaging, execution guidance, and launch adoption plans.
+Turn product changes into launch readiness, seller guidance, and post-launch follow-through.
 
 ## Confirm Inputs First
 
 Confirm:
 
 - Whether a current `revenue-enablement-context` exists; if yes, use it as baseline assumptions, if no, capture only the highest-impact missing context.
-- What changed and why it matters
+- What changed and why it matters to the field
 - Target audience and impacted teams
-- Launch date and rollout model
+- Launch date, rollout model, and required approvals
 - Cross-functional owner model (PMM, Enablement, Sales, CS, RevOps, Support)
-- Commercial implications and risks
+- Commercial implications, risks, and non-goals
 - Required behavior changes for field teams
 
 If details are incomplete, request missing blockers or proceed with assumptions labeled by risk.
@@ -28,15 +28,15 @@ Read [references/source-system-guide.md](references/source-system-guide.md) when
 
 ## Default Workflow
 
-1. Classify launch tier by expected field impact.
-2. Define readiness requirements by team and role.
-3. Build launch narrative, FAQs, and talk-track updates.
-4. Create training plan and reinforcement checkpoints.
-5. Add manager inspection prompts for first weeks post-launch.
-6. Define readiness gates and go/no-go criteria.
-7. Build a cross-functional owner matrix with explicit handoffs and escalation paths.
-8. Add a 30-day post-launch signal review loop for adoption, friction, and message drift.
-9. Produce launch enablement package and execution timeline.
+1. Classify the launch by field impact and rollout scope.
+2. Define what each team needs to know, do, and stop doing.
+3. Write the field message: what changed, why it matters, when to use it, and what not to say.
+4. Build the launch kit: FAQ, talk track, objection notes, and any rep-facing proof points.
+5. Set training, practice, and manager inspection checkpoints.
+6. Define go/no-go criteria and the owners who sign off.
+7. Map handoffs and escalation paths across PMM, enablement, sales, CS, RevOps, and support.
+8. Add a 30-day review loop for adoption, friction, and message drift.
+9. Produce a launch timeline and owner matrix.
 
 ## Tool Notes
 
@@ -50,16 +50,16 @@ Default output includes:
 
 - Launch tier and readiness matrix
 - Cross-functional owner and handoff matrix
-- Internal launch narrative and FAQ
+- Field message summary and FAQ
 - Talk-track and objection updates
-- Training and reinforcement plan
+- Training and practice plan
 - Go/no-go readiness checklist
 - 30-day post-launch signal review plan
 
 ## Quality Bar
 
 - Launch guidance is role-specific and action-oriented.
-- Field teams can explain the change and when to use it.
+- Field teams can explain the change, when to use it, and what not to say.
 - Cross-functional ownership and escalation paths are unambiguous.
-- Risks and escalation paths are explicit.
-- Readiness criteria are concrete before launch day.
+- Risks and readiness gates are explicit.
+- The review loop catches message drift and adoption issues early.

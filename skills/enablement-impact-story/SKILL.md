@@ -1,6 +1,6 @@
 ---
 name: enablement-impact-story
-description: Create leadership-ready narratives that explain revenue enablement impact with evidence, assumptions, and risks. Use when the user asks for an enablement ROI story, executive impact summary, board-ready narrative, or initiative outcome communication tied to performance and strategic priorities. Route metric architecture and instrumentation setup to enablement-metrics-and-instrumentation.
+description: Create leadership-ready ROI stories that explain enablement impact with evidence, assumptions, and risks. Use when the user asks for an enablement impact story, executive summary, board-ready narrative, or initiative outcome update tied to performance and strategic priorities. Route metric design and instrumentation setup to enablement-metrics-and-instrumentation.
 ---
 
 # Enablement Impact Story
@@ -15,7 +15,7 @@ Confirm:
 - Baseline and current performance data
 - Time period
 - Audience and decision context
-- Known assumptions and confounders
+- Known assumptions and other factors that may have influenced results
 - Whether a current context artifact from `revenue-enablement-context` exists
 
 If critical evidence is missing, ask for the smallest set needed to avoid speculative claims.
@@ -27,20 +27,20 @@ Read [references/impact-story-template.md](references/impact-story-template.md) 
 ## Default Workflow
 
 1. Reuse current `revenue-enablement-context` if available; otherwise label foundational assumptions.
-2. Define decision context and narrative objective.
-3. Summarize initiative actions and expected behavior shifts.
-4. Present evidence in a contribution chain from activity to outcome.
-5. Separate observed facts from interpretation.
-6. State assumptions, confounders, and risk to confidence.
-7. Add a `decisions to make now` section with explicit options and trade-offs.
-8. Provide next-quarter actions based on findings.
-9. Produce executive-ready summary and appendix-ready evidence list.
+2. Define the decision context and what leadership needs to decide.
+3. Summarize the enablement work, the behavior shift, and the time period.
+4. Show baseline, current state, and the main proof points.
+5. Separate observed results from interpretation.
+6. State assumptions and limits on what the evidence can support.
+7. Add a `decisions to make now` section with options and trade-offs.
+8. Recommend next actions for the next quarter.
+9. Produce an executive-ready summary and a simple evidence appendix.
 
 ## What To Avoid
 
-- Overstating causality when evidence is directional.
+- Overstating causality when the evidence is directional.
 - Burying critical caveats in appendix notes.
-- Failing to convert narrative into clear leadership decisions.
+- Failing to convert the story into clear leadership decisions.
 - Mixing observation and recommendation in the same claim.
 
 ## Tool Notes
@@ -54,8 +54,8 @@ Default output includes:
 
 - Executive summary narrative
 - Evidence table with confidence labels
-- Assumptions and risk section
-- Decisions to make now (with options and trade-offs)
+- Assumptions and limits section
+- Decisions to make now with options and trade-offs
 - Recommended next actions
 - Optional appendix outline for deeper review
 

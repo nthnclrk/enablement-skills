@@ -16,7 +16,7 @@
       "expected": "trigger"
     },
     {
-      "prompt": "Please create or improve a MAP, align buyers and sellers on milestones, or define stage-based execution with owners and exit criteria.",
+      "prompt": "Please create or improve a MAP, align buyers and sellers on milestones, or define stage-based execution with owners and dates.",
       "expected": "trigger"
     }
   ],

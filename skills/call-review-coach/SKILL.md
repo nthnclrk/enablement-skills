@@ -1,11 +1,11 @@
 ---
 name: call-review-coach
-description: Review a specific sales call and deliver evidence-backed coaching feedback with prioritized next-practice actions. Use when asked to coach a rep from a call recording, transcript, or notes across discovery, demo, objection, or closing moments. Route requests to create roleplay drills to roleplay-scenario-builder and requests to define discovery scoring standards to discovery-rubric-auditor.
+description: Review one sales call and turn it into clear coaching priorities and next-practice actions. Use when asked to coach a rep from a recording, transcript, or notes across discovery, demo, objection handling, or closing. Route practice-drill requests to roleplay-scenario-builder and discovery scoring standards to discovery-rubric-auditor.
 ---
 
 # Call Review Coach
 
-Turn one sales call into clear coaching priorities that improve next-call execution.
+Turn one sales call into coaching that changes the next call.
 
 ## Confirm Inputs First
 
@@ -24,13 +24,13 @@ If any required item is missing, ask for the minimum missing details. If the use
 
 ## Default Workflow
 
-1. Frame the review objective and success criteria for this specific call type.
-2. Extract high-signal moments with concrete evidence from transcript lines or notes.
-3. Check evidence quality and coverage (full transcript vs partial notes) and label confidence before scoring.
-4. Score performance using the reference rubric with explicit rationale per dimension.
-5. Separate strengths from gaps, then rank the top 1-3 coaching priorities.
-6. Convert priorities into next-call practice actions with observable behavior targets.
-7. Provide a short manager follow-up plan for reinforcement on the next call.
+1. Set the call objective and what good looks like for this call type.
+2. Pull the moments that mattered most, with exact evidence from the transcript or notes.
+3. Check how complete the evidence is and label confidence before scoring.
+4. Score against the rubric with brief, plain-language reasons.
+5. Separate what the rep did well from the biggest gaps, then pick the top 1-3 priorities.
+6. Turn each priority into a specific next-call behavior the rep can practice.
+7. Add a short manager follow-up so the next call gets inspected for the same behavior.
 
 ## Tool Notes
 

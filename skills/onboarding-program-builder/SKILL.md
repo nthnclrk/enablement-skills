@@ -1,11 +1,11 @@
 ---
 name: onboarding-program-builder
-description: Build role-based onboarding programs that reduce ramp time and improve early performance quality. Use when the user asks for onboarding plans, 30-60-90 structures, competency-based ramp plans, manager-guided onboarding, or onboarding validation checkpoints for sales or customer-facing teams. Route formal readiness scoring and assessor calibration to certification-program-builder.
+description: Build role-based ramp plans that help new hires become productive faster. Use when the user asks for onboarding plans, 30-60-90 structures, competency-based ramp plans, manager check-ins, or onboarding checkpoints for sales or customer-facing teams. Route formal readiness scoring and assessor calibration to certification-program-builder.
 ---
 
 # Onboarding Program Builder
 
-Design onboarding that builds real role competence and measurable time-to-productivity.
+Design onboarding that builds real job competence and faster time to first performance.
 
 ## Confirm Inputs First
 
@@ -27,14 +27,14 @@ Read [references/onboarding-framework.md](references/onboarding-framework.md) be
 
 ## Default Workflow
 
-1. Define role outcomes expected by day 30, 60, and 90.
-2. Build experience-level variants for new hires, internal transfers, and experienced external hires.
-3. Map competencies to evidence of proficiency.
-4. Build a weekly sequence of learn, practice, apply, and review.
-5. Add manager-led coaching moments and certification checkpoints.
-6. Design reinforcement loops to avoid one-and-done training.
-7. Add failure triggers and recovery interventions.
-8. Produce an onboarding plan and readiness scorecard.
+1. Define what good looks like by day 30, 60, and 90.
+2. Build different paths for new hires, internal transfers, and experienced hires.
+3. Map each core skill to proof that the rep can do it.
+4. Build a weekly loop of learn, practice, apply, and review.
+5. Add manager coaching moments and check-ins.
+6. Add reinforcement so the team does not forget after week one.
+7. Define where people usually get stuck and what recovery looks like.
+8. Produce the ramp plan and readiness scorecard.
 
 ## Tool Notes
 

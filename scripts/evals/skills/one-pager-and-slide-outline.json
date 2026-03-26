@@ -16,7 +16,7 @@
       "expected": "trigger"
     },
     {
-      "prompt": "Please transform source material into structured narrative artifacts for seller training, launch enablement, stakeholder briefings, or internal rollouts.",
+      "prompt": "Please turn source material into a leave-behind, briefing note, internal memo, or slide outline for seller training, launch enablement, stakeholder briefings, or rollouts.",
       "expected": "trigger"
     }
   ],

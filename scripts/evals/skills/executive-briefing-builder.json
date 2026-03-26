@@ -16,7 +16,7 @@
       "expected": "trigger"
     },
     {
-      "prompt": "Please prepare an executive briefing, align leadership on meeting goals, or craft concise decision-oriented talking points.",
+      "prompt": "Please prepare an executive briefing, align leaders on the meeting objective, or craft concise decision-oriented talking points.",
       "expected": "trigger"
     }
   ],

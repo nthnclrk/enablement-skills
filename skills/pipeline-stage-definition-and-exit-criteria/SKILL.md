@@ -1,17 +1,17 @@
 ---
 name: pipeline-stage-definition-and-exit-criteria
-description: Define or redesign pipeline stages with clear entry and exit criteria that sales managers can inspect and enforce. Use when the user asks to tighten stage hygiene, standardize progression rules, or connect qualification evidence to forecasting discipline. For reviewing specific deals against existing criteria, use deal-inspection-coach. For period-level risk reporting, use forecast-risk-brief.
+description: Define sales stages, exit criteria, and required proof that managers can inspect and RevOps can enforce. Use when the user asks to tighten stage hygiene, standardize progression rules, or connect qualification evidence to forecasting. For specific deal reviews, use deal-inspection-coach. For forecast summaries, use forecast-risk-brief.
 ---
 
 # Pipeline Stage Definition And Exit Criteria
 
-Define pipeline stages as evidence-based operating rules, not activity checklists.
+Define pipeline stages as buyer-signal checkpoints, not activity checklists.
 
 ## Confirm Inputs First
 
 Confirm the minimum design inputs:
 
-- If a current revenue-enablement-context exists, use it first for ICP, stage language, qualification norms, and messaging boundaries. If not, ask for only the highest-impact missing context.
+- If a current `revenue-enablement-context` exists, use it first for ICP, stage language, qualification norms, and messaging boundaries. If not, ask for only the highest-impact missing context.
 - Current stage map and definitions
 - Target sales motions (new business, expansion, partner-led, enterprise, SMB)
 - Qualification method in use (for example MEDDICC or similar)
@@ -27,29 +27,29 @@ If inputs are partial, ask only for missing essentials or proceed with labeled a
 
 ## Default Workflow
 
-1. Diagnose what is going wrong today.
-Identify where stages are ambiguous, skip-prone, or weakly inspectable.
+1. Diagnose where the current model breaks.
+Find the stages that are vague, skipped, or impossible to inspect.
 
-2. Redefine stage intent.
-Assign each stage a single progression purpose and expected customer signal.
+2. Rewrite each stage around a single buyer signal.
+Give every stage one clear purpose and one clear reason to move forward.
 
 3. Set entry and exit criteria.
-Use evidence-based criteria tied to stakeholder and deal risk signals.
+Define the proof required to enter and leave each stage.
 
-4. Add verification rules.
-Define what proof is required and who confirms it.
+4. Add anti-patterns and exception paths.
+Call out the common ways reps misuse stages and how managers should handle exceptions.
 
-5. Add guardrails and anti-patterns.
-Define blocked transitions, exception paths, and common misuse examples.
+5. Map the stage model to CRM and reporting.
+Translate the rules into fields, notes, and dashboards the team can actually use.
 
-6. Define inspection cadence.
-Specify manager and RevOps checks by stage and forecast period.
+6. Align the model with the team’s qualification method.
+Map stage expectations to MEDDPICC, SPICED, or the org’s standard framework when needed.
 
-7. Plan system mapping.
-Map new criteria to CRM fields, required notes, and reporting views.
+7. Define inspection cadence.
+Set how managers and RevOps will review stage movement and forecast hygiene.
 
-8. Add optional methodology mapping.
-Translate stage expectations to common methods (for example MEDDPICC/SPICED) when the team uses them.
+8. Produce the transition plan.
+Show how the team moves from the current model to the new one.
 
 ## Tool Notes
 

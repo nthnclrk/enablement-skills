@@ -1,11 +1,11 @@
 ---
 name: proposal-rfp-orchestrator
-description: Orchestrate proposal and RFP response workflows across contributors, deadlines, and compliance requirements. Use when asked to coordinate an RFP response, build a proposal workplan, enforce compliance coverage, or run structured review cycles. This is optional where dedicated proposal ops already owns execution. For single-meeting briefing needs, use executive-briefing-builder or account-brief-builder.
+description: Orchestrate proposal and RFP response work across owners, deadlines, compliance, and review cycles. Use when asked to coordinate an RFP response, build a proposal workplan, map requirements to owners, or run structured proposal reviews. For single-meeting briefing needs, use executive-briefing-builder or account-brief-builder.
 ---
 
 # Proposal RFP Orchestrator
 
-Create a controlled, deadline-safe response process that improves compliance, clarity, and win quality.
+Create a controlled response process that keeps the team compliant, on time, and focused on the buyer's evaluation criteria.
 
 ## Confirm Inputs First
 
@@ -27,24 +27,23 @@ If critical inputs are missing, ask for the smallest missing set. If speed is re
 
 ## Default Workflow
 
-1. Run bid/no-bid and scope check.
-Confirm fit, constraints, and response viability before detailed drafting.
+1. Decide bid/no-bid and response scope.
+Confirm fit, required effort, and whether the team should respond at all.
 
-2. Build compliance matrix.
-Map every buyer requirement to response owner, source evidence, and completion status.
+2. Build the requirement matrix.
+List every requirement, where it is answered, who owns it, and what proof supports it.
 
-3. Build response plan.
-Set timeline, owners, dependencies, and handoffs for sections and supporting artifacts.
+3. Assign section owners and source inputs.
+Set the writer, SME, approver, and source of truth for each section.
 
-4. Define win themes and response strategy.
-Align differentiators, proof points, and response architecture before writing.
-Anchor themes to approved source content so responses stay governed.
+4. Shape the response strategy.
+Define the main buyer problems, win themes, proof points, and any gaps that need escalation.
 
-5. Execute structured reviews.
-Run staged reviews (for example draft, challenge, final quality pass) with clear entry and exit criteria.
+5. Run structured reviews.
+Use a draft review, challenge review, and final proofing pass with clear gates.
 
-6. Finalize submission package.
-Verify compliance, formatting requirements, approvals, and delivery checklist.
+6. Finalize the submission package.
+Check compliance, formatting, approvals, and delivery instructions before sending.
 
 ## Tool Notes
 
@@ -59,7 +58,7 @@ Keep workflow tool-agnostic when these systems are unavailable.
 Deliver:
 
 1. Response strategy summary
-2. Compliance matrix
+2. Requirement matrix
 3. Section owner plan and timeline
 4. Win-theme and proof-point map
 5. Approved-content source map and reuse rules
@@ -69,9 +68,9 @@ Deliver:
 
 ## Quality Bar
 
-- Cover all buyer requirements with explicit ownership and evidence.
-- Ensure timeline includes review buffers before final deadline.
-- Keep differentiators specific and evidence-backed.
-- Detect and remove unsupported claims or missing compliance items.
-- Restrict responses to approved sources when governance requires it.
+- Every requirement is answered once and owned by someone specific.
+- The response uses buyer language, not internal jargon.
+- Proof points are current and tied to approved sources.
+- Review buffers are built in before the deadline.
+- Unsupported claims, missing compliance items, and stale content are removed.
 - Do not fabricate qualifications, certifications, references, or customer outcomes.

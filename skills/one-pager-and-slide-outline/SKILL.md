@@ -1,10 +1,10 @@
 ---
 name: one-pager-and-slide-outline
-description: Create concise one-pagers and slide outlines for revenue enablement and product messaging use cases. Use when asked to transform source material into structured narrative artifacts for seller training, launch enablement, stakeholder briefings, or internal rollouts. Route message strategy to value-prop-and-positioning.
+description: Create concise sales one-pagers and slide outlines for revenue enablement and product messaging use cases. Use when asked to turn source material into a leave-behind, briefing note, internal memo, or slide outline for seller training, launch enablement, stakeholder briefings, or rollouts. Route message strategy to value-prop-and-positioning.
 ---
 
 # One Pager And Slide Outline
-Turn messy source input into a clear narrative brief and a slide-ready structure that teams can execute quickly.
+Turn messy source input into a clear one-pager and slide-ready structure that teams can use quickly.
 
 ## Confirm Inputs First
 - If a current `revenue-enablement-context` exists, use it first for ICP/persona language, stage context, and proof norms.
@@ -19,20 +19,25 @@ Turn messy source input into a clear narrative brief and a slide-ready structure
 - Read [references/narrative-outline-template.md](references/narrative-outline-template.md) when you need the default structure and section-level constraints.
 
 ## Default Workflow
-1. Define one core thesis and one target action for the audience.
-2. Distill source material into claims, evidence, and implications.
-3. Draft one-pager with a strict narrative arc:
-   context, problem, approach, proof, decision, next actions.
-4. Select audience variant:
-   executive brief, seller enablement, partner package, or launch update.
-5. If one-pager only is needed, run memo-only path and skip slide conversion.
-6. Convert narrative sections into slide headlines using assertion style.
-7. Build slide-level outline:
-   one idea per slide, evidence cue, and speaker note intent.
-8. Add appendix candidates for detail that should stay off core slides.
+1. Define one thesis and one ask.
+Decide what the audience should believe and what you want them to do next.
+2. Pull the source into claims, proof, and implications.
+Separate the facts from the interpretation.
+3. Draft the one-pager.
+Use a simple flow: context, problem, approach, proof, decision, and next steps.
+4. Pick the audience version.
+Adjust the tone and emphasis for exec, seller, partner, or launch use.
+5. Skip the slides if you do not need them.
+If the ask is only for a memo, stop at the one-pager.
+6. Turn sections into slide headlines.
+Write assertion headlines, not topic labels.
+7. Build the outline.
+Use one idea per slide, plus the supporting proof and speaker note intent.
+8. Move extra detail to the appendix.
+Keep the core slides tight and decision-oriented.
 9. Route adjacent work:
    For message strategy, use value-prop-and-positioning.
-   For final visual slide production, use the user's existing presentation tooling outside this repo.
+   For final visual production, use the user's presentation tool of choice.
 
 ## Output Contract
 - One-page narrative brief with concise sectioning.

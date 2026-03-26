@@ -16,7 +16,7 @@
       "expected": "trigger"
     },
     {
-      "prompt": "Please prepare a quarterly business review, executive business review, or account review narrative for customer leadership.",
+      "prompt": "Please prepare a quarterly business review, executive business review, or customer account review for leadership.",
       "expected": "trigger"
     }
   ],

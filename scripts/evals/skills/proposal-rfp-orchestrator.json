@@ -16,7 +16,7 @@
       "expected": "trigger"
     },
     {
-      "prompt": "Please coordinate an RFP response, build a proposal workplan, enforce compliance coverage, or run structured review cycles.",
+      "prompt": "Please coordinate an RFP response, build a proposal workplan, map requirements to owners, or run structured proposal reviews.",
       "expected": "trigger"
     }
   ],

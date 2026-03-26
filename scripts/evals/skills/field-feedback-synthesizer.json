@@ -16,7 +16,7 @@
       "expected": "trigger"
     },
     {
-      "prompt": "Please consolidate rep, manager, call, survey, or CRM notes into decision-ready outputs for enablement and product marketing.",
+      "prompt": "Please synthesize rep notes, manager feedback, call snippets, surveys, or CRM comments for enablement, PMM, sales leadership, or product.",
       "expected": "trigger"
     }
   ],

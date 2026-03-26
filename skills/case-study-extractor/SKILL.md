@@ -1,10 +1,10 @@
 ---
 name: case-study-extractor
-description: Extract and structure credible customer case studies from raw notes, transcripts, and outcome data. Use when asked to turn messy source material into proof-led narratives for sales and enablement use. Route broad feedback synthesis to field-feedback-synthesizer and slide packaging to one-pager-and-slide-outline.
+description: Extract and structure credible customer case studies from raw notes, transcripts, and outcome data. Use when asked to turn messy source material into customer stories, proof points, or enablement-ready case studies. Route broad feedback synthesis to field-feedback-synthesizer and slide packaging to one-pager-and-slide-outline.
 ---
 
 # Case Study Extractor
-Convert raw customer evidence into a concise case narrative that revenue teams can reuse confidently.
+Convert raw customer evidence into a concise customer story that revenue teams can reuse confidently.
 
 ## Confirm Inputs First
 - If a current `revenue-enablement-context` exists, use it first for ICP framing, persona naming, and proof-quality expectations.
@@ -19,19 +19,23 @@ Convert raw customer evidence into a concise case narrative that revenue teams c
 - Read [references/case-study-template.md](references/case-study-template.md) for structure, evidence grading, and quote handling.
 
 ## Default Workflow
-1. Validate source reliability and permission boundaries.
-2. Extract core arc:
-   initial state, challenge, approach, results, and implications.
-3. Separate measurable outcomes from directional claims.
-4. Capture implementation details that make results believable.
-5. Grade evidence strength and remove weak unsupported claims.
-6. Define privacy mode:
-   named customer, anonymized customer, or internal-only narrative.
-7. Draft narrative variants:
-   short proof snippet and full case summary.
+1. Check the source and permission.
+Make sure the material is usable and approved for the intended audience.
+2. Pull the story arc.
+Capture the starting point, challenge, approach, results, and why it mattered.
+3. Separate proof from claims.
+Keep measured outcomes distinct from directional language.
+4. Add the context that makes the result believable.
+Include implementation details, timeline, and any adoption or rollout notes that matter.
+5. Grade the evidence.
+Keep strong proof points and remove weak or unsupported claims.
+6. Set the privacy mode.
+Decide whether the story is named, anonymized, or internal-only.
+7. Draft the usable versions.
+Produce a short proof snippet and a fuller case summary.
 8. Route adjacent work:
    For cross-account pattern synthesis, use field-feedback-synthesizer.
-   For downstream one-pager or slide packaging, use one-pager-and-slide-outline.
+   For one-pager or slide packaging, use one-pager-and-slide-outline.
 
 ## Tool Notes
 - Optional tools may improve data quality:

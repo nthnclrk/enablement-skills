@@ -4,6 +4,15 @@ All notable changes to this repo should be recorded here.
 
 The format is intentionally lightweight. Keep entries concise and useful for operators adopting updates.
 
+## [1.1.0] - 2026-03-26
+
+Practitioner language refresh across the skill pack.
+
+- Refined skill language to align more closely with revenue, enablement, PMM, CS, and RevOps operating standards.
+- Tightened workflow steps so skills read more like operator playbooks and less like generic process notes.
+- Improved output contracts and quality bars across planning, messaging, coaching, launch, proposal, and post-sale skills.
+- Updated tracked bundle versions and aligned starter eval artifacts with the refreshed skill content.
+
 ## [1.0.0] - 2026-03-17
 
 First stable public release.

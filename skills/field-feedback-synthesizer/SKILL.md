@@ -1,18 +1,18 @@
 ---
 name: field-feedback-synthesizer
-description: Synthesize revenue field feedback into clear themes, issue clusters, and prioritized actions. Use when asked to consolidate rep, manager, call, survey, or CRM notes into decision-ready outputs for enablement and product marketing. Route asset coverage audits to content-gap-analysis and one-off call coaching to call-review-coach.
+description: Turn field feedback into clear themes, issue clusters, and owner-ready actions. Use when asked to synthesize rep notes, manager feedback, call snippets, surveys, or CRM comments for enablement, PMM, sales leadership, or product. Route content gap work to content-gap-analysis and single-call coaching to call-review-coach.
 ---
 
 # Field Feedback Synthesizer
-Turn noisy field input into actionable insights with clear confidence and priority signals.
+Turn noisy field input into actionable themes with clear confidence and priority signals.
 
 ## Confirm Inputs First
-- If a current revenue-enablement-context exists, use it first for ICP, persona, stage, and current initiative framing. If not, ask for only the highest-impact missing context.
+- If a current `revenue-enablement-context` exists, use it first for ICP, persona, stage, and current initiative framing. If not, ask for only the highest-impact missing context.
 - Confirm source types and timeframe.
 - Confirm target teams and segments.
-- Confirm desired decision context (launch, QBR, quarterly planning, manager coaching).
-- Confirm whether structured taxonomy already exists.
-- Confirm output audience (enablement, PMM, sales leadership, product).
+- Confirm the decision context: launch, QBR, quarterly planning, manager coaching, or product feedback.
+- Confirm whether a structured taxonomy already exists.
+- Confirm output audience: enablement, PMM, sales leadership, or product.
 - If inputs are incomplete, ask for only the minimum missing items or proceed with labeled assumptions.
 
 ## Read The Right Reference
@@ -21,15 +21,13 @@ Turn noisy field input into actionable insights with clear confidence and priori
 ## Default Workflow
 1. Normalize all sources into a consistent record format.
 2. De-duplicate repeated statements without losing signal strength.
-3. Tag feedback across theme, stage, persona, and severity.
-4. Apply source weighting (for example call evidence, CRM notes, surveys, manager anecdotes) before ranking themes.
+3. Tag feedback by theme, stage, persona, and severity.
+4. Weight sources so direct evidence matters more than anecdotes.
 5. Separate evidence statements from interpretation statements.
 6. Quantify recurring themes by frequency and business impact.
-7. Identify top issue clusters, likely causes, and recommended actions.
+7. Identify the top issue clusters, likely causes, and recommended actions.
 8. Label confidence by source quality and sample breadth.
-9. Route adjacent work:
-   For content backlog prioritization, use content-gap-analysis.
-   For creating new messaging artifacts, use the relevant content skill.
+9. Route adjacent work to content-gap-analysis or the relevant content skill.
 
 ## Tool Notes
 - Optional tools can accelerate synthesis but are not required:

@@ -1,6 +1,6 @@
 ---
 name: enablement-metrics-and-instrumentation
-description: Define revenue enablement metrics and instrumentation plans that connect enablement activities to business outcomes. Use when the user asks for KPI frameworks, leading and lagging indicator design, measurement plans, or instrumentation mapping across CRM, learning, content, and performance systems. Route executive narrative packaging of results to enablement-impact-story.
+description: Define revenue enablement KPI trees and measurement plans that connect enablement work to business outcomes. Use when the user asks for KPI frameworks, leading and lagging indicators, measurement plans, or instrumentation across CRM, learning, content, and performance systems. Route executive narrative packaging of results to enablement-impact-story.
 ---
 
 # Enablement Metrics And Instrumentation
@@ -35,13 +35,13 @@ Read [references/kpi-tree-examples.md](references/kpi-tree-examples.md) when you
 6. Map each metric to owner, source system, and refresh cadence.
 7. Set baseline, target, and review thresholds.
 8. Add data quality checks and interpretation caveats.
-9. Produce KPI tree and instrumentation plan.
+9. Produce a KPI tree and measurement plan.
 
 ## What To Avoid
 
 - Using activity counts as success metrics with no behavior or outcome link.
 - Tracking too many KPIs to drive decisions.
-- Claiming causality from one trend line without confounder checks.
+- Claiming causality from one trend line without checking other factors.
 - Defining metrics that no system can actually measure.
 
 ## Tool Notes

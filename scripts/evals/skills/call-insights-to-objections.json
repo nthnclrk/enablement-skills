@@ -14,6 +14,10 @@
     {
       "prompt": "Please create a first draft using the call insights to objections workflow.",
       "expected": "trigger"
+    },
+    {
+      "prompt": "Please find recurring pushback, objection themes, or message gaps by segment, persona, or stage.",
+      "expected": "trigger"
     }
   ],
   "should_not_trigger": [

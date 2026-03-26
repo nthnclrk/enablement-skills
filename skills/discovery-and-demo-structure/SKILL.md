@@ -1,11 +1,11 @@
 ---
 name: discovery-and-demo-structure
-description: Design structured discovery flows and demo narratives that map to buyer outcomes, stakeholder priorities, and deal-stage decisions. Use when asked to create or improve discovery guides, question architecture, or demo sequencing for a specific role or segment. Route requests to score discovery performance to discovery-rubric-auditor and requests to coach a specific call to call-review-coach.
+description: Build discovery flows and demo structure for a specific sales motion. Use when asked to create or improve discovery guides, question ladders, or demo sequencing for a role or segment. Route discovery scoring to discovery-rubric-auditor and single-call coaching to call-review-coach.
 ---
 
 # Discovery And Demo Structure
 
-Build practical discovery and demo structures that improve deal progression and buying confidence.
+Build discovery and demo structure that helps reps learn the right things, show the right proof, and close on a clear next step.
 
 ## Confirm Inputs First
 
@@ -24,14 +24,13 @@ Ask for only missing essentials. If details remain unknown, proceed with labeled
 
 ## Default Workflow
 
-1. Define call outcome and decision quality required for this stage.
-2. Build a question ladder that moves from context to impact to commitment.
-3. Map stakeholder-specific concerns and value hypotheses.
-4. Design demo sequence around buyer outcomes, proof, and risk handling.
-5. Add transition language from discovery findings into tailored demo moments.
-6. Select the right variant:
-   executive discovery, technical demo, or multi-stakeholder decision meeting.
-7. End with explicit next-step commitments, owners, and timeline.
+1. Define the call goal and the decision the buyer should be ready to make next.
+2. Build a question ladder that moves from context to pain, then to impact, then to commitment.
+3. Map the main buyer roles, what each one cares about, and what proof they need to see.
+4. Design the demo around buyer outcomes, not feature order.
+5. Add transitions that connect what the buyer said in discovery to what the rep shows in the demo.
+6. Pick the right version for the situation: executive discovery, technical demo, or multi-stakeholder meeting.
+7. Close with a concrete next step, owner, and date.
 
 ## Tool Notes
 
@@ -54,7 +53,8 @@ Ask for only missing essentials. If details remain unknown, proceed with labeled
 
 ## Quality Bar
 
-- Tie every discovery and demo step to customer outcomes, not feature order.
-- Keep questions layered, not checklist-style interrogation.
-- Include explicit risk-handling paths for objections or uncertainty.
-- Ensure final next step is concrete, owned, and time-bound.
+- Tie every step to a buyer outcome or decision point.
+- Keep the question path natural, not like a checklist.
+- Make the demo proof match the buyer concern being addressed.
+- Include a path for pushback, uncertainty, or a technical concern.
+- End with a next step that has an owner and a date.

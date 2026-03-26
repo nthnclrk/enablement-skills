@@ -1,10 +1,10 @@
 ---
 name: content-governance-system
-description: Design a practical governance system for revenue enablement content, including taxonomy, ownership, lifecycle controls, and quality checks. Use when asked to reduce content sprawl, define source-of-truth rules, or operationalize publishing and retirement workflows. Route gap prioritization to content-gap-analysis.
+description: Design a practical content ops system for revenue enablement content, including taxonomy, ownership, lifecycle controls, and quality checks. Use when asked to reduce content sprawl, define source-of-truth rules, or operationalize publishing and retirement workflows. Route gap prioritization to content-gap-analysis.
 ---
 
 # Content Governance System
-Build a lightweight governance operating model that keeps enablement content accurate, findable, and actively maintained.
+Build a lightweight governance model that keeps enablement content accurate, findable, and actively maintained.
 
 ## Confirm Inputs First
 - If a current `revenue-enablement-context` exists, use it first for role naming, stage language, and evidence standards.
@@ -24,13 +24,13 @@ Build a lightweight governance operating model that keeps enablement content acc
 2. Establish a taxonomy that balances discoverability and maintainability.
 3. Define lifecycle states and SLA expectations:
    draft, review, publish, monitor, refresh, retire.
-4. Assign ownership model and approval boundaries.
-5. Define intake and prioritization process for new content requests.
-6. Define quality checks for messaging, evidence, and compliance.
+4. Assign ownership and approval boundaries.
+5. Define intake and prioritization for new content requests.
+6. Define quality checks for message accuracy, proof, and compliance.
 7. Define source-of-truth and distribution rules across systems.
-8. Add exception handling for urgent launches and time-boxed hotfix content.
-9. Define reporting metrics and review cadence.
-10. Define governance operating mode:
+8. Add an exception path for urgent launches and time-boxed hotfix content.
+9. Define reporting metrics and a review cadence.
+10. Choose an operating mode:
    lightweight for small teams, full mode for multi-team operations.
 11. Route adjacent work:
    For identifying high-impact missing assets, use content-gap-analysis.

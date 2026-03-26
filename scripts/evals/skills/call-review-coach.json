@@ -16,7 +16,7 @@
       "expected": "trigger"
     },
     {
-      "prompt": "Please coach a rep from a call recording, transcript, or notes across discovery, demo, objection, or closing moments.",
+      "prompt": "Please coach a rep from a recording, transcript, or notes across discovery, demo, objection handling, or closing.",
       "expected": "trigger"
     }
   ],

@@ -1,11 +1,11 @@
 ---
 name: mutual-action-plan-builder
-description: Build shared mutual action plans (MAPs) for complex deals and coordinated customer initiatives. Use when asked to create or improve a MAP, align buyers and sellers on milestones, or define stage-based execution with owners and exit criteria. For proposal or RFP process orchestration, use proposal-rfp-orchestrator.
+description: Build mutual action plans for complex deals and coordinated customer initiatives. Use when asked to create or improve a MAP, align buyers and sellers on milestones, or define stage-based execution with owners and dates. For proposal or RFP process orchestration, use proposal-rfp-orchestrator.
 ---
 
 # Mutual Action Plan Builder
 
-Create a shared execution plan with the customer that makes owners, milestones, and success criteria explicit.
+Create a shared plan with the customer that makes owners, milestones, and success criteria explicit.
 
 ## Confirm Inputs First
 
@@ -30,7 +30,7 @@ If critical inputs are missing, ask for the smallest missing set. If the user pr
 Define the concrete outcome the plan must deliver and by when.
 
 2. Reverse-map milestones.
-Build milestones backward from target date and include entry and exit criteria.
+Work backward from the target date and list the milestones needed to get there.
 
 3. Assign shared ownership.
 Set internal and customer owners for each milestone.
@@ -40,11 +40,11 @@ Make dependencies and handoffs explicit.
 Attach risk signals, mitigation actions, and escalation triggers to critical milestones.
 
 5. Validate mutuality.
-Ensure the plan is not seller-only.
-Confirm customer obligations, commitments, and artifacts are clear.
+Make sure the plan is not seller-only.
+Confirm customer commitments and required artifacts are clear.
 
 6. Split customer-visible and internal-private views.
-Keep shared commitments in the external MAP and reserve internal risk commentary, negotiation strategy, and contingency notes for an internal companion view.
+Keep shared commitments in the customer-facing MAP and move internal risk commentary, negotiation strategy, and contingency notes to an internal companion view.
 
 ## Tool Notes
 
@@ -70,8 +70,8 @@ Deliver:
 
 ## Quality Bar
 
-- Ensure each milestone has owner, due date, and clear completion criteria.
-- Ensure customer-side actions are explicit, not implied.
+- Ensure each milestone has an owner, due date, and clear completion criteria.
+- Make customer-side actions explicit, not implied.
 - Keep sequencing realistic and dependency-aware.
 - Include escalation logic for high-risk milestones.
 - Keep internal-only commentary out of customer-visible outputs.

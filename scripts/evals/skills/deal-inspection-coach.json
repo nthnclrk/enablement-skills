@@ -16,7 +16,7 @@
       "expected": "trigger"
     },
     {
-      "prompt": "Please review a specific deal, diagnose stall risk, or prepare a structured deal review.",
+      "prompt": "Please inspect a specific opportunity, diagnose stall risk, or prepare a deal review.",
       "expected": "trigger"
     }
   ],
@@ -57,7 +57,7 @@
     {
       "name": "contains_output_element_4",
       "type": "contains_phrase",
-      "phrase": "Advance Plan`: owner, action, and due date for each critical move."
+      "phrase": "Next Actions`: owner, action, and due date for each critical move."
     },
     {
       "name": "contains_output_element_5",
