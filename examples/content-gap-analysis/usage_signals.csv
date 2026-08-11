@@ -1,0 +1,11 @@
+signal_id,asset_id_or_topic,signal_type,count,last_observed,notes
+U-001,A-101,Unique viewers,4,2026-07-20,Previous 90 days
+U-002,A-102,Unique viewers,86,2026-07-23,Previous 90 days
+U-003,A-103,Unique viewers,6,2026-07-18,Previous 90 days
+U-004,Security FAQ,Failed searches,19,2026-07-22,Enablement hub only
+U-005,A-104,Unique viewers,9,2026-07-21,Previous 90 days
+U-006,Pricing objection guidance,Field requests,17,2026-07-23,Requests across manager office hours and intake channel
+U-007,A-105,Unique viewers,0,2026-07-24,Previous 90 days
+U-008,A-106,Unique viewers,43,2026-07-22,Previous 90 days
+U-009,Mid-market ROI template,Field requests,14,2026-07-23,No matching in-scope asset found
+U-010,A-108,Unique viewers,0,2026-07-24,Asset is still draft and not distributed

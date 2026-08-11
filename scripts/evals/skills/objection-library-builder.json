@@ -1,69 +1,52 @@
 {
+  "schema_version": 2,
   "skill": "objection-library-builder",
   "source": "skills/objection-library-builder/SKILL.md",
-  "notes": "Starter eval scaffold. Expand prompts and checks with real traces.",
+  "notes": "Generated routing and basic-output starter. Curate realistic prompts and example-backed task scenarios before treating it as behavior evidence.",
+  "managed_by": "starter-generator",
   "should_trigger": [
     {
-      "prompt": "Use $objection-library-builder for this request.",
-      "expected": "trigger"
+      "prompt": "Please build a structured objection handling library from qualified objection evidence, with response patterns, proof, and escalation rules.",
+      "expected": true
     },
     {
-      "prompt": "I need help with objection library builder.",
-      "expected": "trigger"
+      "prompt": "Please create or improve reusable objection handling by segment, stage, persona, or competitor context.",
+      "expected": true
     },
     {
-      "prompt": "Please create a first draft using the objection library builder workflow.",
-      "expected": "trigger"
-    },
-    {
-      "prompt": "Please create or improve objection handling by segment, stage, persona, or competitor context.",
-      "expected": "trigger"
+      "prompt": "I have rough notes. Please turn them into a usable objection library and label anything that still needs confirmation.",
+      "expected": true
     }
   ],
   "should_not_trigger": [
     {
-      "prompt": "Write a short poem about quarterly planning.",
-      "expected": "do_not_trigger"
+      "prompt": "Please analyze a defined set of sales calls or notes and produce an evidence-backed objection brief by segment, persona, or stage.",
+      "expected": false,
+      "adjacent_skill": "call-insights-to-objections"
     },
     {
-      "prompt": "Refactor this Python function for performance.",
-      "expected": "do_not_trigger"
+      "prompt": "Please review one sales call and turn recording, transcript, or notes evidence into clear coaching priorities and next-practice actions.",
+      "expected": false,
+      "adjacent_skill": "call-review-coach"
     },
     {
-      "prompt": "What is the weather in Sydney today?",
-      "expected": "do_not_trigger"
-    },
-    {
-      "prompt": "This request should use $call-review-coach rather than $objection-library-builder.",
-      "expected": "do_not_trigger"
+      "prompt": "Please build and refine value propositions and messaging frameworks for revenue teams.",
+      "expected": false,
+      "adjacent_skill": "value-prop-and-positioning"
     }
   ],
   "output_structure_checks": [
     {
-      "name": "contains_output_element_1",
-      "type": "contains_phrase",
-      "phrase": "Objection taxonomy with priority tiers."
+      "name": "objection-library-builder-core-output",
+      "type": "structure",
+      "description": "Produces Objection taxonomy with priority tiers; Source-linked objection evidence register with verbatim or labeled paraphrased examples.",
+      "critical": true
     },
     {
-      "name": "contains_output_element_2",
-      "type": "contains_phrase",
-      "phrase": "Response play cards for each tier-one objection."
-    },
-    {
-      "name": "contains_output_element_3",
-      "type": "contains_phrase",
-      "phrase": "Proof and collateral map per response."
-    },
-    {
-      "name": "contains_output_element_4",
-      "type": "contains_phrase",
-      "phrase": "Response governance status and owner per play card."
-    },
-    {
-      "name": "contains_output_element_5",
-      "type": "contains_phrase",
-      "phrase": "Escalation matrix by objection type."
+      "name": "objection-library-builder-decision-discipline",
+      "type": "semantic",
+      "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
+      "critical": true
     }
-  ],
-  "managed_by": "starter"
+  ]
 }

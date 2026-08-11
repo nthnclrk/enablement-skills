@@ -1,6 +1,6 @@
 ---
 name: {{SKILL_NAME}}
-description: [REQUIRED] Describe what this skill does, when to use it, and nearby boundary guidance.
+description: [REQUIRED] State what this skill produces and when to use it. Include the closest should-not-trigger boundary when one exists.
 ---
 
 # {{DISPLAY_NAME}}
@@ -9,31 +9,38 @@ description: [REQUIRED] Describe what this skill does, when to use it, and nearb
 
 ## Confirm Inputs First
 
-- Confirm the minimum inputs required for a useful output.
-- Confirm audience, scope, and timing.
-- If critical information is missing, ask only for the smallest set of blockers.
+- Use relevant context the user has already provided.
+- Confirm the audience, decision or behavior to support, scope, timing, and required source material.
+- If critical information is missing, ask only for the smallest blocking set.
+- Do not delay a self-contained task with an unnecessary intake process.
 
 ## Default Workflow
 
-1. Define the task scope and operating assumptions.
-2. Review the source material and normalize it into a usable working set.
-3. Apply the skill-specific framework or method.
+1. Define the practitioner job, audience, deliverable, and operating assumptions.
+2. Review the source material and separate evidence from assumptions or gaps.
+3. Apply the skill-specific method at the level of detail the task requires.
 4. Produce the requested output in a format the user can use immediately.
-5. Label assumptions, gaps, and any follow-up actions.
+5. Check the result against the output contract and quality bar; revise material gaps.
+6. Label follow-up actions, owners, or inspection points where relevant.
 
 ## Tool Notes
 
 - Keep the workflow tool-agnostic by default.
-- Link to `../../systems/*.md` playbooks only when a system-specific path materially improves the result.
+- Do not assume a system integration, connector, or package is installed.
+- Keep external writes, sends, publishing, and destructive actions behind explicit user approval.
+- Bundle any required portable instructions or resources inside this skill folder.
 
 ## Output Contract
 
-- Primary deliverable
-- Secondary supporting elements
-- Assumptions and caveats
+- Primary practitioner-ready deliverable
+- Evidence, assumptions, freshness, and caveats where relevant
+- Decision, action, owner, or next inspection point where relevant
+- Internal-only or customer-facing mode when the distinction matters
 
 ## Quality Bar
 
-- Output is specific enough to act on.
-- Assumptions are labeled rather than hidden.
-- The result matches the user-facing purpose of the skill.
+- The intended practitioner can use the output without reconstructing the analysis.
+- Claims are supported by the supplied evidence and uncertainty is visible.
+- The level of detail matches the audience, channel, and decision.
+- The result stays within the skill's stated boundary.
+- No external action is taken without explicit approval.

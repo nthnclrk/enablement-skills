@@ -1,5 +1,11 @@
 {
   "name": "enablement-messaging",
-  "version": "0.2.0",
-  "description": "Messaging and content bundle for positioning, talk tracks, objections, battlecards, and related artifacts."
+  "version": "0.3.0",
+  "description": "Messaging and content bundle with reusable context, positioning, talk tracks, objections, and battlecards.",
+  "author": {
+    "name": "Nathan Clark"
+  },
+  "homepage": "https://github.com/nthnclrk/enablement-skills",
+  "repository": "https://github.com/nthnclrk/enablement-skills",
+  "license": "MIT"
 }

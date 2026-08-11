@@ -1,5 +1,4 @@
 interface:
   display_name: "Deal Inspection Coach"
   short_description: "Inspect one deal and coach next actions"
-  default_prompt: "Use $deal-inspection-coach to inspect this opportunity and return a risk-ranked advancement plan."
-
+  default_prompt: "Use $deal-inspection-coach to inspect this opportunity and separate stage support, evidence confidence, risks, and proposed next actions."

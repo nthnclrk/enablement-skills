@@ -2,6 +2,8 @@
 
 This guide shows how enablement teams can use Seismic data and workflows with this repository's skills.
 
+> Last verified: 2026-07-31. Seismic app scopes, tenant products, reporting tables, Early Access events, and write operations vary by tenant; verify them in the current data dictionary and developer portal.
+
 ## Scope And Limits
 
 This playbook focuses on practical Seismic patterns for content, reporting, learning, and controlled sharing workflows. It is not a complete inventory of Seismic products, connectors, or rapidly changing AI-assisted capabilities.
@@ -24,6 +26,7 @@ Goal: Identify what content is underperforming and what to build next.
 Export/use from Seismic:
 - Reporting API v2 datasets for content usage, content views, library content metadata, search behavior, and user activity.
 - Data dictionary (`fields` and `tables`) to avoid metric-definition drift.
+- Reporting API data is designed for ETL rather than high-frequency interactive reads and is updated at least once every 24 hours under the standard SLA.
 
 Repo skills that benefit:
 - `content-gap-analysis`
@@ -57,7 +60,10 @@ Repo skills that benefit:
 Agent-ready formats:
 - `livesend_links.csv`
 - `livesend_link_contents.csv`
-- `interaction_summary.csv`
+- `livesend_link_members.csv`
+- `livesend_viewing_sessions.csv`
+- `livesend_content_viewing_sessions.csv`
+- `livesend_page_views.csv`
 
 Outputs to publish back carefully:
 - Updated objection library and talk tracks.
@@ -91,6 +97,7 @@ Goal: Reduce lag between content changes and enablement action.
 
 Export/use from Seismic:
 - Webhook events (content manager changes, workflow states, LiveDoc completion, user/group lifecycle, program/planner updates).
+- Check each selected event in the current webhook catalog: several content, LiveSend, user/group, and program-task events are marked Early Access even when adjacent event families are generally available.
 
 Repo skills that benefit:
 - `content-governance-system`
@@ -114,8 +121,23 @@ Create a recurring extract package:
 - `library_contents.csv`
 - `livesend_links.csv`
 - `livesend_link_contents.csv`
+- `livesend_link_members.csv`
+- `livesend_viewing_sessions.csv`
+- `livesend_content_viewing_sessions.csv`
+- `livesend_page_views.csv`
 - `learning_progress.csv`
 - `webhook_events.jsonl` (if used)
+
+Keep raw reporting data separate from canonical concepts and derived analysis:
+
+| Raw Seismic dataset | Canonical concept | Derived signal (label as analysis) |
+| --- | --- | --- |
+| Library/content metadata and usage tables | `content_id`, `owner`, `audience`, `stage`, `used_at` | staleness, governance priority, content gap |
+| LiveSend links, members, sessions, content sessions, page views | `share_id`, `recipient_id`, `session_id`, `content_id`, `viewed_at` | engagement depth, follow-up signal, message/content hypothesis |
+| Assignments and learning progress | `learner_id`, `assignment_id`, `status`, `completed_at` | readiness gap, completion trend |
+| Webhook envelope (`id`, `version`, `occurredAt`, `tenantId`, `data`) | `event_id`, `schema_version`, `occurred_at`, `tenant_id`, `payload` | routing priority, governance alert |
+
+LiveSend engagement is directional. Do not convert views or time spent into objections, intent, or revenue influence without call/CRM evidence and an explicit analytical method.
 
 ## Formats Agents Can Reliably Work From
 
@@ -164,5 +186,9 @@ Avoid by default:
 - [Generate LiveSend Link](https://developer.seismic.com/seismicsoftware/reference/generatelivesendlink)
 - [LiveSend Links Reporting](https://developer.seismic.com/seismicsoftware/reference/reporting-livesendlinksget)
 - [LiveSend Link Contents Reporting](https://developer.seismic.com/seismicsoftware/reference/reporting-livesendlinkcontentsget)
+- [LiveSend Link Members Reporting](https://developer.seismic.com/seismicsoftware/reference/reporting-livesendlinkmembersget)
+- [LiveSend Viewing Sessions Reporting](https://developer.seismic.com/seismicsoftware/reference/reporting-livesendviewingsessionsget)
+- [LiveSend Content Viewing Sessions Reporting](https://developer.seismic.com/seismicsoftware/reference/reporting-livesendcontentviewingsessionsget)
+- [LiveSend Page Views Reporting](https://developer.seismic.com/seismicsoftware/reference/reporting-livesendpageviewsget)
 - [Microsoft Power Automate Seismic Configuration Connector](https://learn.microsoft.com/en-us/connectors/seismicconfiguration/)
 - [Microsoft Power Automate Seismic Library Connector](https://learn.microsoft.com/en-us/connectors/seismiclibrary/)

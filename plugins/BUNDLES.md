@@ -1,8 +1,16 @@
 # Plugin Bundles
 
-All plugin bundles use symlinks under `plugins/<bundle>/skills/` that point to the canonical skill folders in `skills/`. This keeps bundle manifests explicit while avoiding duplicated skill copies.
+All plugin bundles use symlinks under `plugins/<bundle>/skills/` that point to the canonical skill folders in `skills/`. This keeps bundle membership explicit while avoiding duplicated skill copies.
+
+Every bundle includes `revenue-enablement-context`, so it can stand alone. Use that skill only when shared GTM context is missing, stale, or conflicting; direct specialist requests should go straight to the relevant specialist skill.
 
 ## enablement-core
+
+**Purpose:** Foundational planning, routing, program design, and common field-execution workflows.
+
+**Best for:** Enablement leaders and operators who want the broadest starting bundle or need to coordinate work across several enablement disciplines.
+
+**Prerequisite:** None. Start with `revenue-enablement-context` when durable company context is needed, or `enablement-router` when the request spans multiple deliverables.
 
 - `revenue-enablement-context`
 - `enablement-router`
@@ -17,6 +25,13 @@ All plugin bundles use symlinks under `plugins/<bundle>/skills/` that point to t
 
 ## enablement-messaging
 
+**Purpose:** Positioning, sales messaging, objection handling, competitive guidance, and content operations.
+
+**Best for:** Product marketing, enablement, and sales teams building or improving field-facing messaging and assets.
+
+**Prerequisite:** Bring current product, buyer, competitor, and proof context. Use the included context skill first only when that foundation is incomplete.
+
+- `revenue-enablement-context`
 - `value-prop-and-positioning`
 - `talk-track-builder`
 - `objection-library-builder`
@@ -30,6 +45,13 @@ All plugin bundles use symlinks under `plugins/<bundle>/skills/` that point to t
 
 ## enablement-programs
 
+**Purpose:** Onboarding, certification, manager coaching, practice, call review, and deal inspection.
+
+**Best for:** Enablement leaders and frontline managers designing repeatable development and inspection programs.
+
+**Prerequisite:** Confirm the target roles, observable behavior change, manager ownership, and evidence available for evaluation.
+
+- `revenue-enablement-context`
 - `onboarding-program-builder`
 - `certification-program-builder`
 - `manager-coaching-cadence`
@@ -42,6 +64,13 @@ All plugin bundles use symlinks under `plugins/<bundle>/skills/` that point to t
 
 ## enablement-measurement
 
+**Purpose:** KPI design, evidence synthesis, impact narratives, stage governance, and content-performance analysis.
+
+**Best for:** Enablement operations, RevOps, and leadership teams defining success or explaining impact without overstating attribution.
+
+**Prerequisite:** Bring metric definitions, source dates, ownership, and known data limitations. Treat causal claims as unproven unless the evidence supports them.
+
+- `revenue-enablement-context`
 - `enablement-metrics-and-instrumentation`
 - `enablement-impact-story`
 - `win-loss-synthesis`
@@ -50,6 +79,13 @@ All plugin bundles use symlinks under `plugins/<bundle>/skills/` that point to t
 
 ## enablement-launches
 
+**Purpose:** Product-change readiness, seller updates, partner preparation, and supporting launch assets.
+
+**Best for:** Product marketing and enablement teams preparing revenue roles and partners for a release or change.
+
+**Prerequisite:** Confirm the source of truth, launch tier, affected audiences, timing, owners, and approval path before producing distribution-ready material.
+
+- `revenue-enablement-context`
 - `product-launch-enablement`
 - `release-notes-to-seller-updates`
 - `partner-enablement-package`
@@ -58,6 +94,13 @@ All plugin bundles use symlinks under `plugins/<bundle>/skills/` that point to t
 
 ## enablement-crm-pack
 
+**Purpose:** Account planning, deal inspection, forecasting, stage governance, proposals, renewals, and customer-value workflows.
+
+**Best for:** Revenue leaders, RevOps, sales managers, and customer teams working from CRM and account evidence.
+
+**Prerequisite:** Use scoped, current exports and preserve stable record IDs. Keep analysis read-only until the user explicitly approves a write-back.
+
+- `revenue-enablement-context`
 - `account-brief-builder`
 - `executive-briefing-builder`
 - `mutual-action-plan-builder`
@@ -71,6 +114,13 @@ All plugin bundles use symlinks under `plugins/<bundle>/skills/` that point to t
 
 ## enablement-ci-pack
 
+**Purpose:** Conversation-intelligence analysis for call review, objection mining, discovery quality, field feedback, and win/loss learning.
+
+**Best for:** Enablement and sales teams turning call and interview evidence into coaching and program decisions. Here, `ci` means conversation intelligence.
+
+**Prerequisite:** Bring permissioned transcripts or excerpts with dates, speaker attribution, and useful segment or stage metadata. Treat recordings and transcripts as sensitive.
+
+- `revenue-enablement-context`
 - `call-insights-to-objections`
 - `call-review-coach`
 - `discovery-rubric-auditor`

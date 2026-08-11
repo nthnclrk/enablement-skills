@@ -1,65 +1,52 @@
 {
+  "schema_version": 2,
   "skill": "win-loss-synthesis",
   "source": "skills/win-loss-synthesis/SKILL.md",
-  "notes": "Starter eval scaffold. Expand prompts and checks with real traces.",
+  "notes": "Generated routing and basic-output starter. Curate realistic prompts and example-backed task scenarios before treating it as behavior evidence.",
+  "managed_by": "starter-generator",
   "should_trigger": [
     {
-      "prompt": "Use $win-loss-synthesis for this request.",
-      "expected": "trigger"
+      "prompt": "Please synthesize win-loss interviews, notes, and deal evidence into clear themes and actions.",
+      "expected": true
     },
     {
-      "prompt": "I need help with win loss synthesis.",
-      "expected": "trigger"
+      "prompt": "I need to understand why deals were won or lost, how patterns vary by segment or competitor, or what to change in messaging, process, or coaching.",
+      "expected": true
     },
     {
-      "prompt": "Please create a first draft using the win loss synthesis workflow.",
-      "expected": "trigger"
+      "prompt": "I have rough notes. Please turn them into a usable win loss synthesis and label anything that still needs confirmation.",
+      "expected": true
     }
   ],
   "should_not_trigger": [
     {
-      "prompt": "Write a short poem about quarterly planning.",
-      "expected": "do_not_trigger"
+      "prompt": "Please create seller-ready competitor battlecards with fit guidance, discovery questions, supported responses, proof, and escalation boundaries.",
+      "expected": false,
+      "adjacent_skill": "battlecard-builder"
     },
     {
-      "prompt": "Refactor this Python function for performance.",
-      "expected": "do_not_trigger"
+      "prompt": "Please synthesize multi-source field feedback into traceable themes, segment differences, evidence limits, and owner-ready actions for enablement, product marketing, sales leadership, or product.",
+      "expected": false,
+      "adjacent_skill": "field-feedback-synthesizer"
     },
     {
-      "prompt": "What is the weather in Sydney today?",
-      "expected": "do_not_trigger"
-    },
-    {
-      "prompt": "This request should use $battlecard-builder rather than $win-loss-synthesis.",
-      "expected": "do_not_trigger"
+      "prompt": "Please analyze a defined set of sales calls or notes and produce an evidence-backed objection brief by segment, persona, or stage.",
+      "expected": false,
+      "adjacent_skill": "call-insights-to-objections"
     }
   ],
   "output_structure_checks": [
     {
-      "name": "contains_output_element_1",
-      "type": "contains_phrase",
-      "phrase": "Findings summary by outcome with top coded themes"
+      "name": "win-loss-synthesis-core-output",
+      "type": "structure",
+      "description": "Produces Findings summary by outcome with top coded themes; Sample-accounting table with population, selection, participation, evidence, exclusions, and denominators.",
+      "critical": true
     },
     {
-      "name": "contains_output_element_2",
-      "type": "contains_phrase",
-      "phrase": "Segment/persona/competitor comparison table"
-    },
-    {
-      "name": "contains_output_element_3",
-      "type": "contains_phrase",
-      "phrase": "Priority implications by function (enablement, PMM, sales management, product)"
-    },
-    {
-      "name": "contains_output_element_4",
-      "type": "contains_phrase",
-      "phrase": "Action plan with owner suggestions and 30/60/90-day sequence"
-    },
-    {
-      "name": "contains_output_element_5",
-      "type": "contains_phrase",
-      "phrase": "Assumptions, confidence notes, and unresolved questions"
+      "name": "win-loss-synthesis-decision-discipline",
+      "type": "semantic",
+      "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
+      "critical": true
     }
-  ],
-  "managed_by": "starter"
+  ]
 }

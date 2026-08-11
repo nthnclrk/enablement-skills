@@ -1,5 +1,11 @@
 {
   "name": "enablement-crm-pack",
-  "version": "0.2.0",
-  "description": "CRM-adjacent workflow bundle for account planning, deal inspection, forecasting, and renewal execution."
+  "version": "0.3.0",
+  "description": "CRM workflow bundle with reusable context, account planning, deal inspection, forecasting, and renewals.",
+  "author": {
+    "name": "Nathan Clark"
+  },
+  "homepage": "https://github.com/nthnclrk/enablement-skills",
+  "repository": "https://github.com/nthnclrk/enablement-skills",
+  "license": "MIT"
 }

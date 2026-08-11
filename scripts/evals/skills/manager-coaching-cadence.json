@@ -1,61 +1,101 @@
 {
+  "schema_version": 2,
   "skill": "manager-coaching-cadence",
   "source": "skills/manager-coaching-cadence/SKILL.md",
   "notes": "Curated eval focused on repeatable manager rhythms, not one-off coaching analysis.",
+  "managed_by": "curated",
   "should_trigger": [
     {
       "prompt": "Design a weekly coaching cadence for six mid-market sales managers. We need a repeatable rhythm for call review, deal inspection, rep commitments, and monthly trend reviews without creating a heavy process tax.",
-      "expected": "trigger"
+      "expected": true
     },
     {
       "prompt": "Build an enterprise manager coaching system with agenda templates, observation logs, escalation triggers, and implementation guidance for the first 30 days.",
-      "expected": "trigger"
+      "expected": true
     },
     {
       "prompt": "Our post-sale leaders coach inconsistently. Create a sustainable coaching cadence by team type, including time budgets and commitment tracking.",
-      "expected": "trigger"
+      "expected": true
     }
   ],
   "should_not_trigger": [
     {
       "prompt": "Coach this single discovery call and identify what the rep should have done differently.",
-      "expected": "do_not_trigger"
+      "expected": false,
+      "adjacent_skill": "call-review-coach"
     },
     {
       "prompt": "Inspect this one stalled enterprise deal and tell the manager what to do next.",
-      "expected": "do_not_trigger"
+      "expected": false,
+      "adjacent_skill": "deal-inspection-coach"
     },
     {
       "prompt": "Create a roleplay scenario pack for new SDRs handling pricing objections.",
-      "expected": "do_not_trigger"
+      "expected": false,
+      "adjacent_skill": "roleplay-scenario-builder"
     }
   ],
   "output_structure_checks": [
     {
-      "name": "contains_weekly_schedule",
-      "type": "contains_phrase",
-      "phrase": "Weekly coaching cadence schedule by manager"
+      "name": "manager-coaching-cadence-output-01",
+      "type": "structure",
+      "description": "The output substantively includes: Weekly coaching cadence schedule by manager",
+      "critical": true
     },
     {
-      "name": "contains_agenda_prompts",
-      "type": "contains_phrase",
-      "phrase": "Session agenda template and coaching-question prompts"
+      "name": "manager-coaching-cadence-output-02",
+      "type": "structure",
+      "description": "The output substantively includes: Session agenda template and coaching-question prompts",
+      "critical": true
     },
     {
-      "name": "contains_observation_log",
-      "type": "contains_phrase",
-      "phrase": "Observation log template for calls/deals/behavior checkpoints"
+      "name": "manager-coaching-cadence-output-03",
+      "type": "structure",
+      "description": "The output substantively includes: Observation log template for calls/deals/behavior checkpoints",
+      "critical": false
     },
     {
-      "name": "contains_commitment_tracker",
-      "type": "contains_phrase",
-      "phrase": "Rep commitment tracker with due dates and verification signals"
+      "name": "manager-coaching-cadence-output-04",
+      "type": "structure",
+      "description": "The output substantively includes: Rep commitment tracker with due dates and verification signals",
+      "critical": false
     },
     {
-      "name": "contains_monthly_trend_review",
-      "type": "contains_phrase",
-      "phrase": "Monthly trend review template and interpretation guidance"
+      "name": "manager-coaching-cadence-output-05",
+      "type": "structure",
+      "description": "The output substantively includes: Monthly trend review template and interpretation guidance",
+      "critical": false
     }
   ],
-  "managed_by": "curated"
+  "task_scenarios": [
+    {
+      "id": "manager-coaching-cadence-conflicting-evidence",
+      "input_state": "conflicting",
+      "prompt": "Using team-context.md and current-coaching-pains.md, design a lightweight weekly coaching cadence for the next four weeks. Keep it within the manager's available capacity, focus on the fewest behaviors likely to improve outcomes, and include an observation loop, commitment tracker, and monthly trend review. Explain how you handled the conflict between the manager's hypothesis and the call evidence.",
+      "files": [
+        "examples/manager-coaching-cadence/team-context.md",
+        "examples/manager-coaching-cadence/current-coaching-pains.md"
+      ],
+      "assertions": [
+        {
+          "name": "coaching-cadence-capacity",
+          "type": "structure",
+          "description": "The weekly cadence fits within 4.5 hours and targets no more than two active team behaviors.",
+          "critical": true
+        },
+        {
+          "name": "coaching-cadence-evidence-conflict",
+          "type": "semantic",
+          "description": "Treats the manager's pricing hypothesis as a hypothesis while prioritizing the stronger call evidence.",
+          "critical": true
+        },
+        {
+          "name": "coaching-cadence-no-overclaim",
+          "type": "forbidden_behavior",
+          "description": "Does not infer individual performance or outcome causality from the incomplete team-level sample, compress evidence review unrealistically, present generated weekdays or deadlines as existing policy, or invent numeric promotion or escalation thresholds without a grounded rule.",
+          "critical": true
+        }
+      ]
+    }
+  ]
 }

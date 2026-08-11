@@ -1,48 +1,74 @@
 # Case Study Template
 
-Use this template to keep case narratives credible and reusable.
+Use this template when the user does not specify a format. Evidence status does not grant publication permission.
 
-## 1) Customer Context
+## 1) Use Status
 
-- Segment:
-- Company profile:
-- Initial state:
-- Trigger event:
+- Working title:
+- Intended audience and channel:
+- Status: `Internal`, `Customer review`, `Approved`, `Restricted`, or `Unknown`
+- Customer identity mode: `Named`, `Anonymized`, or `Undecided`
+- As-of date:
 
-## 2) Challenge
+## 2) Customer Context And Challenge
 
-- Business problem:
+- Segment and relevant profile:
+- Starting state:
+- Trigger or problem:
 - Operational constraints:
-- Cost of inaction:
+- Source IDs:
 
 ## 3) Approach
 
 - What changed:
 - Who was involved:
-- Rollout method:
+- Adoption or rollout conditions:
 - Time to first value:
+- Source IDs:
 
 ## 4) Outcomes
 
-| Metric | Baseline | Current | Timeframe | Evidence Grade |
-| --- | --- | --- | --- | --- |
-|  |  |  |  |  |
-|  |  |  |  |  |
+| Claim | Metric Definition | Baseline Or Comparison | Result | Period | Population | Calculation | Attribution Limit | Source ID | Claim Status |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
-Evidence grade:
+Use these evidence statuses:
 
-- `A`: Verified quantitative source.
-- `B`: Directional or partial quantitative source.
-- `C`: Qualitative signal only.
+- `Verified`: a primary record or direct customer evidence supports the wording and required context.
+- `Supported`: reliable evidence supports the direction, but part of the baseline, population, calculation, or context is incomplete.
+- `Anecdotal`: a qualitative observation or single reported experience.
+- `Unverified`: evidence is missing, contradictory, or does not support the wording.
 
 ## 5) Quote Bank
 
-| Quote | Speaker Role | Context | Confidence |
-| --- | --- | --- | --- |
-|  |  |  |  |
+| Exact Quote | Speaker Role | Date And Context | Source Locator | Evidence Status | Quote Permission | Permitted Audience And Channel |
+| --- | --- | --- | --- | --- | --- | --- |
 
-## 6) Reuse Snippets
+Do not put paraphrases in quotation marks.
 
-- 30-second proof story:
-- One-paragraph case summary:
-- Objection rebuttal snippet:
+## 6) Claim Ledger
+
+| Proposed Claim | Evidence IDs | Counterevidence Or Qualification | Claim Status | Permission Status | Permitted Use |
+| --- | --- | --- | --- | --- | --- |
+
+## 7) Permission Matrix
+
+| Item | Scope | Status | Approver Or Source | Approved Audience And Channel | Expiry Or Review Date |
+| --- | --- | --- | --- | --- | --- |
+| Customer name |  |  |  |  |  |
+| Logo |  |  |  |  |  |
+| Each quote |  |  |  |  |  |
+| Each metric or claim |  |  |  |  |  |
+| Anonymized reuse |  |  |  |  |  |
+
+## 8) Reuse Formats
+
+- Internal proof snippet:
+- Full internal narrative:
+- Customer-review draft, only if permitted:
+
+## 9) Gaps And Review Requests
+
+- Unknown or conflicting evidence:
+- Attribution limitations:
+- Approval needed:
+- Confidential details to remove:

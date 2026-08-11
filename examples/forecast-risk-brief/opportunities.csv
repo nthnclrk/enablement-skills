@@ -1,0 +1,7 @@
+opportunity_id,opportunity_name,owner,segment,stage,amount_aud,close_date,forecast_category,last_stage_change_date,last_activity_date,next_step,stakeholder_count,slip_count,procurement_status
+OP-101,Northwind Distribution,Ava,Enterprise,Commercial Review,280000,2026-08-14,Commit,2026-06-28,2026-07-22,"Buyer legal review on 2026-07-29; customer general counsel owns",4,0,Legal review active
+OP-102,BluePeak Logistics,Ben,Enterprise,Technical Validation,410000,2026-08-01,Commit,2026-05-18,2026-07-09,"Follow up soon",1,2,Not started
+OP-103,Cedar Health,Ava,Enterprise,Proposal,190000,2026-09-18,Best Case,2026-07-11,2026-07-23,"Security workshop on 2026-08-04; CISO delegate owns",3,0,Security pending
+OP-104,Delta Foods,Carmen,Enterprise,Discovery,520000,2026-09-30,Upside,2026-07-20,2026-07-21,"Confirm executive sponsor by 2026-08-05; seller owns outreach",2,1,Not applicable
+OP-105,Evertrail Energy,Ben,Enterprise,Commercial Review,330000,2026-08-28,Commit,2026-07-17,2026-07-24,"Procurement redlines due 2026-07-31; customer procurement lead owns",5,1,Active
+OP-106,ForestLabs,Carmen,Enterprise,Proposal,150000,2026-09-25,Best Case,2026-06-02,2026-06-30,"",2,2,Unknown

@@ -1,0 +1,9 @@
+asset_id,title,owner,segment,role,stage,job_to_be_done,status,last_updated,approval_state,source_of_truth,duplicate_or_replacement
+A-101,Mid-Market Discovery Guide v1,Revenue Enablement,Mid-market,AE,Discovery,Diagnose business impact,Published,2025-02-10,Approved,Legacy wiki,Duplicates A-102
+A-102,Mid-Market Discovery Guide v2,Revenue Enablement,Mid-market,AE,Discovery,Diagnose business impact,Published,2026-06-15,Approved,Enablement hub,Canonical replacement for A-101
+A-103,Security FAQ,Product Marketing,All,AE and SE,Evaluation,Handle security review,Published,2026-05-30,Approved,Enablement hub,
+A-104,Pricing Objection Sheet,Product Marketing,Mid-market,AE,Commercial,Defend value under budget pressure,Published,2024-11-12,Review overdue,Enablement hub,
+A-105,2024 Platform Webinar Deck,Product Marketing,All,AE,Discovery,Introduce platform,Deprecated,2024-04-01,Not current,Legacy wiki,Replaced by A-106
+A-106,2026 Platform One-Pager,Product Marketing,All,AE,Discovery,Introduce platform,Published,2026-04-20,Approved,Enablement hub,Canonical replacement for A-105
+A-107,Enterprise ROI Calculator,Finance,Enterprise,AE,Commercial,Build business case,Published,2026-02-14,Approved,Enablement hub,
+A-108,Technical Evaluation Checklist,Sales Engineering,Mid-market,SE,Evaluation,Run technical validation,Draft,2026-07-18,Draft,Working docs,

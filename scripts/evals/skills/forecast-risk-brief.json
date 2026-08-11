@@ -1,61 +1,107 @@
 {
+  "schema_version": 2,
   "skill": "forecast-risk-brief",
   "source": "skills/forecast-risk-brief/SKILL.md",
   "notes": "Curated eval focused on period-level forecast reliability rather than single-deal coaching.",
+  "managed_by": "curated",
   "should_trigger": [
     {
       "prompt": "Prepare a Q2 forecast risk brief for our enterprise segment. Highlight unstable commits, concentration risk by rep and stage, likely slippage patterns, and the interventions sales leadership should make this week.",
-      "expected": "trigger"
+      "expected": true
     },
     {
       "prompt": "I have a CRM export with amount, close date, stage, forecast category, last stage change date, and next-step quality. Turn it into a concise leadership-ready forecast risk summary with confidence bands and caveats.",
-      "expected": "trigger"
+      "expected": true
     },
     {
       "prompt": "Assess forecast reliability for the APAC team and separate structural risk drivers from deal-specific noise. I need a brief for the weekly leadership review.",
-      "expected": "trigger"
+      "expected": true
     }
   ],
   "should_not_trigger": [
     {
       "prompt": "Inspect this one strategic deal and tell me whether the rep has enough stakeholder coverage to advance.",
-      "expected": "do_not_trigger"
+      "expected": false,
+      "adjacent_skill": "deal-inspection-coach"
     },
     {
       "prompt": "Rewrite our stage definitions and exit criteria so managers can inspect them more consistently.",
-      "expected": "do_not_trigger"
+      "expected": false,
+      "adjacent_skill": "pipeline-stage-definition-and-exit-criteria"
     },
     {
       "prompt": "Coach this pricing call and identify the rep behaviors that need improvement.",
-      "expected": "do_not_trigger"
+      "expected": false,
+      "adjacent_skill": "call-review-coach"
     }
   ],
   "output_structure_checks": [
     {
-      "name": "contains_forecast_summary",
-      "type": "contains_phrase",
-      "phrase": "`Forecast Summary`: scope, confidence band, and key caveats."
+      "name": "forecast-risk-brief-output-01",
+      "type": "structure",
+      "description": "The output substantively includes: Forecast Summary: scope, confidence band, and key caveats",
+      "critical": true
     },
     {
-      "name": "contains_risk_tier_breakdown",
-      "type": "contains_phrase",
-      "phrase": "`Risk Tier Breakdown`: low/moderate/high-risk deal counts and value."
+      "name": "forecast-risk-brief-output-02",
+      "type": "structure",
+      "description": "The output substantively includes: A visible tier-decision legend and low/moderate/high-risk deal counts and value, with indeterminate exposure reported separately and no uncalibrated point score determining the tiers",
+      "critical": true
     },
     {
-      "name": "contains_top_risk_drivers",
-      "type": "contains_phrase",
-      "phrase": "`Top Risk Drivers`: structural patterns affecting reliability."
+      "name": "forecast-risk-brief-output-03",
+      "type": "structure",
+      "description": "The output substantively includes: Top Risk Drivers: structural patterns affecting reliability",
+      "critical": false
     },
     {
-      "name": "contains_intervention_plan",
-      "type": "contains_phrase",
-      "phrase": "`Intervention Plan`: owner, action, and timeline by risk class."
+      "name": "forecast-risk-brief-output-04",
+      "type": "structure",
+      "description": "The output substantively includes: Intervention Plan with owner, action, confirmed or proposed timeline, date state, and verification checkpoint",
+      "critical": false
     },
     {
-      "name": "contains_leadership_notes",
-      "type": "contains_phrase",
-      "phrase": "`Leadership Notes`: decisions to make now vs monitor later."
+      "name": "forecast-risk-brief-output-05",
+      "type": "structure",
+      "description": "The output substantively includes: Leadership Notes: decisions to make now vs monitor later",
+      "critical": false
     }
   ],
-  "managed_by": "curated"
+  "task_scenarios": [
+    {
+      "id": "forecast-risk-brief-conflicting-sources",
+      "input_state": "conflicting",
+      "prompt": "Review opportunities.csv and context.md for the 24 July enterprise forecast meeting. Summarize forecast coverage, classify each deal by risk, identify concentration and likely slippage, and propose the smallest useful intervention plan with owners and review points. Label any generated date as proposed. Show conflicts and missing evidence rather than choosing the most optimistic source.",
+      "files": [
+        "examples/forecast-risk-brief/opportunities.csv",
+        "examples/forecast-risk-brief/context.md"
+      ],
+      "assertions": [
+        {
+          "name": "forecast-risk-reconciliation",
+          "type": "structure",
+          "description": "Reconciles forecast totals and presents deal-level risk, evidence, confidence, and interventions with owner, date state, and verification point.",
+          "critical": true
+        },
+        {
+          "name": "forecast-risk-conflicts",
+          "type": "semantic",
+          "description": "Keeps seller-entered fields as the base record while making conflicting manager or call evidence visible.",
+          "critical": true
+        },
+        {
+          "name": "forecast-risk-no-optimistic-fill",
+          "type": "forbidden_behavior",
+          "description": "Does not fill blank evidence, silently select the optimistic source, present a generated date as an existing commitment, or imply CRM changes were approved.",
+          "critical": true
+        },
+        {
+          "name": "forecast-risk-no-uncalibrated-score",
+          "type": "forbidden_behavior",
+          "description": "Does not invent equal signal weights, generic stage-aging cutoffs, or fixed score bands to classify exposure when no approved organization-specific model was supplied.",
+          "critical": true
+        }
+      ]
+    }
+  ]
 }

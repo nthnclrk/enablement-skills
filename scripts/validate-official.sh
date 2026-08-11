@@ -5,40 +5,59 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
 SKILLS_DIR="${REPO_ROOT}/skills"
+SKILLS_REF_VERSION="0.1.1"
 
 if [[ ! -d "${SKILLS_DIR}" ]]; then
   echo "ERROR: skills directory not found at ${SKILLS_DIR}" >&2
   exit 1
 fi
 
-VALIDATOR=""
-
 if command -v skills-ref >/dev/null 2>&1; then
-  VALIDATOR="skills-ref"
-elif command -v skills >/dev/null 2>&1; then
-  VALIDATOR="skills"
-elif command -v npx >/dev/null 2>&1; then
-  VALIDATOR="npx agent-skills-cli"
+  validator_mode="skills-ref"
+elif command -v agentskills >/dev/null 2>&1; then
+  validator_mode="agentskills"
+elif [[ "${ENABLE_UVX_SKILLS_REF_FALLBACK:-0}" == "1" ]]; then
+  if ! command -v uvx >/dev/null 2>&1; then
+    echo "ERROR: ENABLE_UVX_SKILLS_REF_FALLBACK=1 but uvx is unavailable." >&2
+    exit 1
+  fi
+  validator_mode="uvx"
 else
-  echo "ERROR: no external skill validator found." >&2
-  echo "Install one of: skills-ref, skills, or agent-skills-cli" >&2
+  echo "ERROR: skills-ref is required for Agent Skills specification validation." >&2
+  echo "Install the pinned CI version with: python3 -m pip install skills-ref==${SKILLS_REF_VERSION}" >&2
+  echo "Or opt into the pinned one-shot fallback with: ENABLE_UVX_SKILLS_REF_FALLBACK=1 bash scripts/validate-official.sh" >&2
   exit 1
 fi
 
-echo "==> Running Agent Skills validator against each local skill"
+run_validator() {
+  local skill_dir="$1"
+
+  if [[ "${validator_mode}" == "skills-ref" ]]; then
+    skills-ref validate "${skill_dir}"
+    return
+  fi
+
+  if [[ "${validator_mode}" == "agentskills" ]]; then
+    agentskills validate "${skill_dir}"
+    return
+  fi
+
+  if [[ "${validator_mode}" == "uvx" ]]; then
+    uvx --from "skills-ref==${SKILLS_REF_VERSION}" agentskills validate "${skill_dir}"
+    return
+  fi
+}
+
+echo "==> Running skills-ref against each canonical skill"
 
 status=0
-
-while IFS= read -r -d '' skill_dir; do
+for skill_dir in "${SKILLS_DIR}"/*; do
+  [[ -d "${skill_dir}" ]] || continue
   echo "==> Validating ${skill_dir#${REPO_ROOT}/}"
-  if [[ "${VALIDATOR}" == "skills-ref" ]]; then
-    skills-ref validate "${skill_dir}" || status=$?
-  elif [[ "${VALIDATOR}" == "skills" ]]; then
-    skills validate "${skill_dir}" || status=$?
-  else
-    npx agent-skills-cli validate "${skill_dir}" || status=$?
+  if ! run_validator "${skill_dir}"; then
+    status=1
   fi
-done < <(find "${SKILLS_DIR}" -mindepth 1 -maxdepth 1 -type d -print0 | sort -z)
+done
 
 if [[ "${status}" -ne 0 ]]; then
   echo "OFFICIAL VALIDATION FAILED" >&2

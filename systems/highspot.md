@@ -2,6 +2,8 @@
 
 This guide shows how enablement teams can use Highspot data and workflows with this repository's skills.
 
+> Last verified: 2026-07-31. Highspot support/developer details, exports, scorecards, APIs, Nexus features, and admin actions can be tenant- or contract-gated; confirm the exact workflow in the target workspace.
+
 ## Scope And Limits
 
 This playbook is intentionally conservative. It covers representative Highspot workflows that are useful for agent-assisted enablement work, not the full product surface or every AI-enabled experience inside the platform.
@@ -36,7 +38,7 @@ Repo skills that benefit:
 
 Agent-ready formats:
 - CSV exports from analytics/reporting views or connected CRM/BI extracts.
-- JSON exports if your team has governed API access.
+- JSON only if your tenant's governed API access and current developer documentation support the required objects and fields.
 - Tabular copies from dashboard views when exports are restricted.
 
 Outputs to publish back carefully:
@@ -104,7 +106,17 @@ Create a recurring extract package:
 
 Minimum columns to include:
 - Content ID, title, owner, team, persona, stage, created/updated date.
-- Views, shares, downloads, buyer/room engagement, influenced outcomes where available.
+- Separately labeled seller views, external shares, buyer views, downloads, and buyer/room engagement where available.
+- CRM-linked outcome fields only when the join and metric definition are documented. Treat “influence” as directional unless RevOps has validated the method.
+
+Keep vendor fields, canonical concepts, and analysis separate:
+
+| Highspot source concept | Canonical concept | Derived signal (label as analysis) |
+| --- | --- | --- |
+| Content ID, title, owner, metadata/tags | `content_id`, `title`, `owner`, `audience`, `stage` | taxonomy gap, ownership gap, staleness |
+| Internal views/usage | `seller_usage_events` | adoption hypothesis |
+| External shares and buyer/room engagement | `buyer_engagement_events` | follow-up signal, content resonance hypothesis |
+| CRM-linked outcome | `opportunity_id`, `outcome` | directional association; not causal influence by default |
 
 ## Example Prompts Using Repo Skills
 

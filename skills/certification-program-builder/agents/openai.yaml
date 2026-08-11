@@ -1,4 +1,4 @@
 interface:
   display_name: "Certification Program Builder"
-  short_description: "Design certification and scoring rules"
-  default_prompt: "Use $certification-program-builder to create a role-based certification rubric, scoring logic, and calibration plan."
+  short_description: "Design defensible readiness certifications"
+  default_prompt: "Use $certification-program-builder to create a role-based readiness standard, evidence plan, anchored rubric, and assessor calibration process."

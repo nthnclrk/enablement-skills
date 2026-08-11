@@ -1,4 +1,4 @@
 interface:
   display_name: "QBR EBR Builder"
   short_description: "Build outcome-led QBR and EBR packs"
-  default_prompt: "Use $qbr-ebr-builder to draft a QBR or EBR with customer outcomes, risk analysis, and a joint next-quarter action plan."
+  default_prompt: "Use $qbr-ebr-builder to draft a QBR or EBR with customer outcomes, risk analysis, and a joint action plan for the next agreed review horizon."

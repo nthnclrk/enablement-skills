@@ -1,4 +1,4 @@
 interface:
   display_name: "Executive Briefing Builder"
-  short_description: "Create strategic executive meeting briefs"
-  default_prompt: "Use $executive-briefing-builder to prepare a concise executive briefing with decision framing, audience mapping, and meeting choreography."
+  short_description: "Prepare decision-ready executive briefs"
+  default_prompt: "Use $executive-briefing-builder to prepare an evidence-based executive brief with the decision frame, audience map, authorized asks, fallbacks, and meeting plan."

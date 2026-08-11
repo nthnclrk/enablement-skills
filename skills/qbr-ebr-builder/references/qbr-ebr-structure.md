@@ -6,7 +6,7 @@ Use this guide to choose the right review format.
 
 - `QBR` focuses on period performance, execution progress, and tactical alignment.
 - `EBR` focuses on strategic outcomes, executive-level decisions, and long-range direction.
-- `Internal account review` focuses on internal controls, risk posture, and manager/leadership decisions before customer-facing reviews.
+- An `internal prep appendix` may support either format, but it is not a standalone internal account review and must remain separate from customer-facing material.
 
 ## Suggested Agenda by Type
 
@@ -16,7 +16,7 @@ Use this guide to choose the right review format.
 2. Performance summary
 3. What worked and what did not
 4. Top risks and mitigations
-5. Next-quarter plan
+5. Plan for the next agreed review horizon
 
 ### EBR Agenda
 
@@ -26,20 +26,29 @@ Use this guide to choose the right review format.
 4. Decision points and executive asks
 5. Joint strategic priorities and governance cadence
 
-### Internal Account Review Agenda
+### Optional Internal Prep Appendix
 
-1. Revenue objective and risk posture
-2. Account execution health and evidence quality
-3. Commercial and stakeholder risks
-4. Internal decisions required now
-5. Next-cycle owner plan and escalation rules
+1. Evidence gaps and confidence concerns
+2. Account, commercial, and stakeholder risks not appropriate for customer circulation
+3. Internal negotiation boundaries and escalation paths
+4. Internal decisions required before the review
+5. Customer-safety and leakage checklist
 
 ## Outcome Scorecard Template
 
-| Goal | Baseline | Current | Trend | Business Impact | Confidence |
-| --- | --- | --- | --- | --- | --- |
+| Goal | Metric Definition | Baseline | Current | Trend | Business Impact | Source | As-Of Date | Evidence Confidence | Attribution Status | Causal Basis / Alternatives | Customer Acceptance |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+
+Use `unknown` or `conflicted` when evidence does not support a value. Evidence confidence describes whether the metric is measured reliably; attribution status describes whether the intervention's contribution is supported. Do not infer attribution from correlation alone.
+
+## Prior Commitment Check
+
+| Commitment | Customer Owner | Internal Owner | Due Date | Agreement State | Confirmation Source / Date | Execution Status | Evidence Or Blocker |
+| --- | --- | --- | --- | --- | --- | --- | --- |
 
 ## Action Plan Template
 
-| Priority | Owner | Due Date | Expected Outcome | Success Signal |
-| --- | --- | --- | --- | --- |
+| Priority | Customer Owner | Internal Owner | Due Date | Agreement State | Confirmation Source / Date | Expected Outcome | Success Signal |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+
+Use `draft`, `proposed`, `agreed`, or `changed` for agreement state. An internal owner may commit internally; a customer owner or date remains proposed until supported by explicit customer confirmation.

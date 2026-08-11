@@ -1,51 +1,62 @@
 # Account Brief Template
 
-Use this template when the user does not specify a format.
+Use this template when the user does not specify a format. Keep unsupported fields as `Unknown` rather than completing them from inference.
 
-## 1) Executive Summary
+## 1) Brief Header
 
-- Account:
-- Segment:
+- Account and business unit:
+- Commercial motion:
 - As-of date:
-- Primary objective:
-- One-line status:
-- Most important decision required:
+- Decision window:
+- Decision required:
+- Intended audience:
 
-## 2) Account Context
+## 2) Executive View
 
-- Business priorities:
-- Current initiatives:
-- Current relationship state:
-- Commercial snapshot:
+- Current state:
+- Material change since the last review:
+- Most important upside or risk:
+- Recommended decision or intervention:
+- Evidence caveat:
 
-## 3) Stakeholder Map
+## 3) Commercial Snapshot
 
-| Stakeholder | Role | Influence | Current Stance | Evidence | Next Action |
-| --- | --- | --- | --- | --- | --- |
-
-## 4) Upside Opportunities
-
-| Opportunity | Business Value | Confidence | Required Stakeholders | Near-Term Step |
+| Item | Recorded State | Source ID | Source Date | Freshness Or Conflict Note |
 | --- | --- | --- | --- | --- |
 
-## 5) Risk Register
+## 4) Stakeholder Map
 
-| Risk | Probability | Impact | Trigger Signal | Mitigation | Owner |
-| --- | --- | --- | --- | --- | --- |
+| Stakeholder | Buying Role | Influence | Stance | Status | Evidence | Coverage Gap | Next Move |
+| --- | --- | --- | --- | --- | --- | --- | --- |
 
-## 6) 30-Day Action Plan
+Use `Confirmed`, `Inferred`, or `Unknown` for status. Do not infer a role or stance from title alone.
 
-| Action | Owner | Due Date | Intended Outcome | Dependency |
+## 5) Upside And Risk
+
+| Item | Type | Evidence | Consequence | Time Sensitivity | Decision Impact | Evidence Confidence | Action Priority | Recommended Response |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+
+Use `Upside` or `Risk` for type. Explain evidence confidence separately from likelihood or value.
+
+## 6) Near-Term Action Plan
+
+| Action | Owner | Owner Status | Due Date | Date Status | Dependency | Completion Evidence |
+| --- | --- | --- | --- | --- | --- | --- |
+
+Use `Confirmed`, `Proposed`, or `Unknown` for owner and date status.
+Set the horizon from the decision window and latest-safe-start dates; do not default to 30 days.
+
+## 7) Evidence And Conflict Notes
+
+| Source ID | Source And Locator | Source Date | Fields Supported | Authority Or Limitation |
 | --- | --- | --- | --- | --- |
 
-## 7) Data Freshness and Source Priority
+- Conflicting sources:
+- Stale sources:
+- Restricted evidence:
 
-- Source priority rule (for example CRM > call notes > anecdotal comments):
-- Data freshness window:
-- Known stale fields:
-- Conflicting-source notes:
+## 8) Open Questions And Planning Assumptions
 
-## 8) Open Questions and Assumptions
-
-- Open questions:
-- Assumptions used:
+- Decision-changing questions:
+- Reversible planning assumptions:
+- Facts that remain unknown:

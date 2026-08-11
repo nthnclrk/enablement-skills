@@ -1,49 +1,52 @@
 {
+  "schema_version": 2,
   "skill": "executive-briefing-builder",
   "source": "skills/executive-briefing-builder/SKILL.md",
-  "notes": "Starter eval scaffold. Expand prompts and checks with real traces.",
+  "notes": "Generated routing and basic-output starter. Curate realistic prompts and example-backed task scenarios before treating it as behavior evidence.",
+  "managed_by": "starter-generator",
   "should_trigger": [
     {
-      "prompt": "Use $executive-briefing-builder for this request.",
-      "expected": "trigger"
+      "prompt": "Please build a concise, decision-oriented executive briefing and meeting plan for a strategic customer or commercial meeting, negotiation, escalation, or internal alignment on that same decision.",
+      "expected": true
     },
     {
-      "prompt": "I need help with executive briefing builder.",
-      "expected": "trigger"
+      "prompt": "I need help with leaders need a reliable pre-read, audience and decision map, talking points, authorized asks, fallback positions, and meeting choreography.",
+      "expected": true
     },
     {
-      "prompt": "Please create a first draft using the executive briefing builder workflow.",
-      "expected": "trigger"
-    },
-    {
-      "prompt": "Please prepare an executive briefing, align leaders on the meeting objective, or craft concise decision-oriented talking points.",
-      "expected": "trigger"
+      "prompt": "I have rough notes. Please turn them into a usable executive briefing and label anything that still needs confirmation.",
+      "expected": true
     }
   ],
   "should_not_trigger": [
     {
-      "prompt": "Write a short poem about quarterly planning.",
-      "expected": "do_not_trigger"
+      "prompt": "Please build customer-facing QBR and EBR deliverables that align customer goals, business outcomes, decisions, risks, and next steps.",
+      "expected": false,
+      "adjacent_skill": "qbr-ebr-builder"
     },
     {
-      "prompt": "Refactor this Python function for performance.",
-      "expected": "do_not_trigger"
+      "prompt": "Please build concise, decision-ready account briefs for account reviews, account planning, renewal or expansion reviews, and customer meeting preparation.",
+      "expected": false,
+      "adjacent_skill": "account-brief-builder"
     },
     {
-      "prompt": "What is the weather in Sydney today?",
-      "expected": "do_not_trigger"
-    },
-    {
-      "prompt": "This request should use $qbr-ebr-builder rather than $executive-briefing-builder.",
-      "expected": "do_not_trigger"
+      "prompt": "Please build reusable renewal and expansion motions for customer-facing teams across a segment or book of business.",
+      "expected": false,
+      "adjacent_skill": "renewal-and-expansion-enablement"
     }
   ],
   "output_structure_checks": [
     {
-      "name": "contains_clear_output_structure",
-      "type": "contains_phrase",
-      "phrase": "Output"
+      "name": "executive-briefing-builder-core-output",
+      "type": "structure",
+      "description": "Produces One-page executive core: objective, decision requested, recommendation, material evidence, principal risk, and open approvals; Evidence and source-status notes for decision-critical facts.",
+      "critical": true
+    },
+    {
+      "name": "executive-briefing-builder-decision-discipline",
+      "type": "semantic",
+      "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
+      "critical": true
     }
-  ],
-  "managed_by": "starter"
+  ]
 }

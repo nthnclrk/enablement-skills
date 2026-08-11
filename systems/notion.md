@@ -4,6 +4,8 @@ This playbook explains how revenue enablement operators can use Notion as an inp
 
 It is intentionally workflow-first (what to pull, what to produce, how to write back safely), not API-admin documentation.
 
+> Last verified: 2026-07-31. The latest Notion REST API version is `2026-03-11`; Notion MCP tools, workspace permissions, connection capabilities, and Enterprise governance controls can vary by workspace.
+
 ## Scope And Limits
 
 This playbook covers common Notion workflows that are dependable for agent-assisted planning, synthesis, and controlled write-back. It does not document every Notion capability, integration path, or fast-changing AI-native feature.
@@ -38,7 +40,7 @@ Most relevant skills:
 
 Use this when working directly from Claude Code/Codex with connected Notion.
 
-- Official basis: Notion MCP is a hosted server for AI tools with OAuth and read/write workspace access.
+- Official basis: Notion MCP is a hosted, actively maintained server for AI tools with OAuth and read/write access constrained by the authorizing user's workspace permissions.
 - Good for interactive search, page creation, and updates during a live workflow.
 
 ### Pattern B: Notion API (best for scripted pipelines)
@@ -46,7 +48,8 @@ Use this when working directly from Claude Code/Codex with connected Notion.
 Use this when your team runs repeatable scripts or integrations.
 
 - Use `data_sources` endpoints for structured tables and row queries.
-- Use page/block endpoints for document content.
+- Send an explicit `Notion-Version: 2026-03-11` header for current REST API behavior.
+- Prefer the enhanced Markdown page endpoints for agent-friendly document reads and writes. Use page/block endpoints when exact block structure or an unsupported Markdown block type is required.
 
 ### Pattern C: UI Export/Import (best for low-setup teams)
 
@@ -143,12 +146,15 @@ These are the safest structures to feed into skills:
 
 1. Data source rows with typed properties (`status`, `select`, `people`, `date`, `number`, `relation`)
 2. Template-backed pages for recurring deliverables
-3. Markdown + CSV exports from Notion UI
-4. Page block trees fetched recursively (for long pages with nested blocks)
+3. Enhanced Markdown returned by `GET /v1/pages/:page_id/markdown`, with `truncated` and `unknown_block_ids` checked
+4. Markdown + CSV exports from Notion UI
+5. Page block trees fetched recursively when enhanced Markdown cannot represent the required block type
 
 Operational notes from official docs:
 
-- `data_sources` are the current table model in Notion API versions `2025-09-03+`.
+- `data_sources` are the current table model in Notion API versions `2025-09-03+`; the latest API version is `2026-03-11`.
+- The `2026-03-11` API uses `position` instead of `after` for block placement, `in_trash` instead of `archived`, and `meeting_notes` instead of `transcription`.
+- Enhanced Markdown endpoints can create, retrieve, and update page content. Large or permission-limited pages may return unknown blocks that require follow-up reads.
 - For large pages, block retrieval is paginated and nested blocks require recursive fetches.
 - Search is name-oriented and not guaranteed for full workspace enumeration.
 - For formulas/rollups/relations, retrieve page property items for more accurate values.
@@ -169,7 +175,7 @@ Best when delivering repeatable outputs like QBR drafts, briefings, or launch up
 
 Best when refining an in-flight document.
 
-- Update page properties and append content blocks.
+- Update page properties and use enhanced Markdown insert/replace operations when they preserve the intended structure; use block operations for unsupported or precisely positioned content.
 - Keep updates additive by default.
 - For major rewrites, create a draft page first, then replace after review.
 
@@ -179,7 +185,7 @@ Best when your team wants low-risk collaboration.
 
 - Post draft recommendations as page comments.
 - Use discussion replies for revisions and approvals.
-- Remember API limitations: cannot start new inline threads or edit existing comments via API.
+- Remember API limitations: integrations cannot start a new inline discussion thread. They can update or delete only comments created by that same integration/connection.
 
 ### Option D: CSV import/merge for tracker updates
 
@@ -187,7 +193,7 @@ Best when operators run manual workflows from exported files.
 
 - Import CSV to create/extend a data source.
 - Merge CSV into an existing data source when needed.
-- Plan for limitations: imports add rows, do not update existing rows, and relation fields cannot be mapped in CSV import.
+- Plan for limitations: imports and merges add rows rather than update existing rows. A new CSV import cannot create relations, but a merge into an existing data source can map a column to an existing relation property.
 
 ## Example Prompts (Repo Skill + Notion Workflow)
 
@@ -211,18 +217,24 @@ Use these as starting points in Claude Code/Codex:
 
 - Missing query results: confirm the parent database/page is shared with the integration and that capabilities are enabled.
 - Slow/partial content reads: handle pagination and recursively fetch nested blocks.
+- Truncated enhanced Markdown: inspect `unknown_block_ids`, attempt follow-up reads, and treat permission failures as explicit missing context.
 - Duplicate rows after CSV workflows: imports/merges append rows; use explicit dedupe keys externally.
 - Broken formula/rollup assumptions: retrieve individual page property items for high-confidence calculations.
 - Empty relation data: confirm related databases are also shared with the integration.
 
 ## Official Notion Docs Used
 
-- Notion MCP: https://developers.notion.com/guides/mcp/mcp
+- Notion MCP overview: https://developers.notion.com/guides/mcp/overview
+- Connect to hosted Notion MCP: https://developers.notion.com/guides/mcp/get-started-with-mcp
+- Upgrade to API version `2026-03-11`: https://developers.notion.com/guides/get-started/upgrade-guide-2026-03-11
 - Data source object: https://developers.notion.com/reference/data-source
 - Query a data source: https://developers.notion.com/reference/query-a-data-source
 - Create a page: https://developers.notion.com/reference/post-page
 - Update a page: https://developers.notion.com/reference/patch-page
 - Working with page content: https://developers.notion.com/guides/data-apis/working-with-page-content
+- Working with enhanced Markdown content: https://developers.notion.com/guides/data-apis/working-with-markdown-content
+- Retrieve a page as Markdown: https://developers.notion.com/reference/retrieve-page-markdown
+- Update page Markdown: https://developers.notion.com/reference/update-page-markdown
 - Append block children: https://developers.notion.com/reference/patch-block-children
 - Page property values: https://developers.notion.com/reference/page-property-values
 - Retrieve page property item: https://developers.notion.com/reference/retrieve-a-page-property
@@ -235,6 +247,8 @@ Use these as starting points in Claude Code/Codex:
 - Comments:
   - https://developers.notion.com/guides/data-apis/working-with-comments
   - https://developers.notion.com/reference/create-a-comment
+  - https://developers.notion.com/reference/update-a-comment
+  - https://developers.notion.com/reference/delete-a-comment
 - Integration capabilities: https://developers.notion.com/reference/capabilities
 - Notion Help (export/import):
   - https://www.notion.com/help/export-your-content

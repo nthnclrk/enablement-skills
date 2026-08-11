@@ -1,4 +1,4 @@
 interface:
   display_name: "Revenue Enablement Context"
-  short_description: "Build canonical enablement context"
-  default_prompt: "Use $revenue-enablement-context to build or update our canonical enablement context from the source material I provide."
+  short_description: "Set up reusable enablement context"
+  default_prompt: "Use $revenue-enablement-context to set up or refresh .enablement/context.md from the sources I provide, previewing changes before writing."

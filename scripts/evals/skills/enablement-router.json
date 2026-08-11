@@ -1,61 +1,70 @@
 {
+  "schema_version": 2,
   "skill": "enablement-router",
   "source": "skills/enablement-router/SKILL.md",
   "notes": "Curated eval focused on sequencing, near-miss boundary checks, and context insertion.",
+  "managed_by": "curated",
   "should_trigger": [
     {
       "prompt": "I need a quarter plan for new-product launch enablement, but we also need seller talk tracks and a way to measure whether the rollout worked. Which skills should I run and in what order?",
-      "expected": "trigger"
+      "expected": true
     },
     {
       "prompt": "This request mixes onboarding redesign, certification refresh, and manager coaching. Route it to the smallest useful sequence and tell me the handoffs between each step.",
-      "expected": "trigger"
+      "expected": true
     },
     {
       "prompt": "We have no current enablement context, and I want objection mining from Gong plus updated battlecards for enterprise reps. Give me the right staged workflow.",
-      "expected": "trigger"
+      "expected": true
     }
   ],
   "should_not_trigger": [
     {
       "prompt": "Create stage-specific talk tracks for enterprise AEs handling security and procurement pressure.",
-      "expected": "do_not_trigger"
+      "expected": false,
+      "adjacent_skill": "talk-track-builder"
     },
     {
       "prompt": "Design a manager coaching cadence for a six-manager mid-market team with weekly call review and deal inspection loops.",
-      "expected": "do_not_trigger"
+      "expected": false,
+      "adjacent_skill": "manager-coaching-cadence"
     },
     {
       "prompt": "Summarize this quarter's enablement metrics and turn them into a leadership impact narrative.",
-      "expected": "do_not_trigger"
+      "expected": false,
+      "adjacent_skill": "enablement-impact-story"
     }
   ],
   "output_structure_checks": [
     {
-      "name": "contains_sequence",
-      "type": "contains_phrase",
-      "phrase": "A recommended skill sequence with rationale"
+      "name": "enablement-router-output-01",
+      "type": "structure",
+      "description": "The output substantively includes: A recommended skill sequence with rationale",
+      "critical": true
     },
     {
-      "name": "contains_boundary_notes",
-      "type": "contains_phrase",
-      "phrase": "A one-line boundary note per skill in the sequence"
+      "name": "enablement-router-output-02",
+      "type": "structure",
+      "description": "The output substantively includes: A one-line boundary note per skill in the sequence",
+      "critical": true
     },
     {
-      "name": "contains_required_inputs",
-      "type": "contains_phrase",
-      "phrase": "Required inputs for each step"
+      "name": "enablement-router-output-03",
+      "type": "structure",
+      "description": "The output substantively includes: Required inputs for each step",
+      "critical": false
     },
     {
-      "name": "contains_expected_outputs",
-      "type": "contains_phrase",
-      "phrase": "Expected output from each step"
+      "name": "enablement-router-output-04",
+      "type": "structure",
+      "description": "The output substantively includes: Expected output from each step",
+      "critical": false
     },
     {
-      "name": "contains_out_of_scope_items",
-      "type": "contains_phrase",
-      "phrase": "Explicit out-of-scope items to prevent skill drift"
+      "name": "enablement-router-output-05",
+      "type": "structure",
+      "description": "The output substantively includes: Explicit out-of-scope items to prevent skill drift",
+      "critical": false
     }
-  ],
-  "managed_by": "curated"
+  ]
 }

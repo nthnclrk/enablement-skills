@@ -61,7 +61,7 @@ sed \
   -e "s/{{DEFAULT_PROMPT}}/${DEFAULT_PROMPT//\//\\/}/g" \
   "${TEMPLATE_DIR}/openai.yaml.tmpl" > "${SKILL_DIR}/agents/openai.yaml"
 
-python3 "${REPO_ROOT}/scripts/evals/generate_starter_evals.py"
+python3 "${REPO_ROOT}/scripts/evals/generate_starter_evals.py" --generate
 
 cat <<EOF
 Created skill scaffold:

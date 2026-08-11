@@ -1,60 +1,57 @@
 ---
 name: discovery-and-demo-structure
-description: Build discovery flows and demo structure for a specific sales motion. Use when asked to create or improve discovery guides, question ladders, or demo sequencing for a role or segment. Route discovery scoring to discovery-rubric-auditor and single-call coaching to call-review-coach.
+description: Design an adaptive discovery guide and outcome-led demo flow for a defined buyer, segment, stage, and meeting type. Use to create or improve question paths, stakeholder coverage, demo sequencing, and next-step structure. Use discovery-rubric-auditor to score completed discovery, call-review-coach to coach one recorded call, and talk-track-builder for a standalone pitch or spoken message.
 ---
 
 # Discovery And Demo Structure
 
-Build discovery and demo structure that helps reps learn the right things, show the right proof, and close on a clear next step.
+Design conversations that uncover decision-relevant information, demonstrate only relevant proof, and earn a clear next step.
 
 ## Confirm Inputs First
 
-- If a current `revenue-enablement-context` exists, use it first for persona language, stage goals, and approved proof expectations.
-- Confirm target audience: role, segment, and deal complexity.
-- Confirm use case and product scope for the conversation.
-- Confirm stage objective: qualification, evaluation, alignment, or commercial progression.
-- Confirm known buyer risks: competition, timing, budget, technical constraints.
-- Confirm current failure pattern if available: weak discovery depth, feature dumping, or poor next-step conversion.
+- Use current context supplied by the user. If `.enablement/context.md` is available, read only the relevant persona, stage, value, product, and proof sections. Treat stale, inferred, or conflicted context as provisional and never update it silently.
+- Confirm the meeting type: discovery, demo, or combined; target roles and segment; deal complexity; product or use-case scope; current stage; time available; and desired buyer decision.
+- Confirm what is already known, what must be learned, prior buyer statements, stakeholder tensions, and likely risks.
+- Confirm approved capabilities, proof, customer examples, and any demo-environment limits before placing them in the flow.
+- Ask only for missing inputs that materially change the structure. Do not force shared-context setup for a self-contained request.
 
-Ask for only missing essentials. If details remain unknown, proceed with labeled assumptions.
+Use assumptions only to form reversible pre-call hypotheses. Do not assume facts, metrics, quotes, buyer commitments, dates, approvals, requirements, capabilities, or customer and product claims. Keep unverified items labeled as hypotheses or unknown until confirmed.
 
 ## Read The Right Reference
 
-- Read [references/discovery-demo-framework.md](references/discovery-demo-framework.md) before building the structure.
+- Read [references/discovery-demo-framework.md](references/discovery-demo-framework.md) before building the question path, demo selection, or close.
 
 ## Default Workflow
 
-1. Define the call goal and the decision the buyer should be ready to make next.
-2. Build a question ladder that moves from context to pain, then to impact, then to commitment.
-3. Map the main buyer roles, what each one cares about, and what proof they need to see.
-4. Design the demo around buyer outcomes, not feature order.
-5. Add transitions that connect what the buyer said in discovery to what the rep shows in the demo.
-6. Pick the right version for the situation: executive discovery, technical demo, or multi-stakeholder meeting.
-7. Close with a concrete next step, owner, and date.
+1. **Define the decision.** State what the buyer should be able to decide next and what the seller must learn or prove for that decision. If the meeting has no credible decision objective, propose one for review.
+2. **Separate knowns from hypotheses.** Carry forward verified buyer context. Turn each consequential unknown into a question or validation step instead of writing it as fact.
+3. **Build an adaptive question path.** For each topic, include the reason to ask, a natural opening, what to listen for, and explicit if/then follow-up branches. Prioritize; do not turn the guide into a script that must be completed in order.
+4. **Plan stakeholder coverage.** Identify what each attending role can confirm, what may require another stakeholder, and where perspectives may conflict. Do not assign authority or commitment without evidence.
+5. **Gate the demo.** Map each demonstration block to an expressed buyer outcome, decision criterion, or risk. Use only verified capabilities and approved proof; mark anything requiring product or legal confirmation.
+6. **Connect discovery to proof.** Add short transitions that restate what was heard and ask permission to show the relevant workflow. Include branches for mismatch, uncertainty, and deeper technical validation.
+7. **Design the close.** Summarize confirmed outcomes and unresolved questions, test whether the decision criteria were met, then ask for an appropriate next step. Distinguish a proposed action from an agreed buyer commitment.
+8. **Prepare capture fields.** Define the few notes needed after the meeting: confirmed facts, changed hypotheses, open requirements, stakeholder position, proof response, and next-step status.
 
 ## Tool Notes
 
-- Keep workflow tool-agnostic by default.
-- If CRM fields or CI tags are available, align structure to those fields only when useful.
+- Keep the structure portable. Align to CRM fields or conversation tags only when they support the team's operating process.
+- For live product demonstrations, verify environment readiness, data handling, and role permissions before the call.
+- Keep internal hypotheses and coaching notes out of customer-facing material.
 
 ## Output Contract
 
-- `Discovery Guide`: objective, question ladder, and red-flag checks.
-- `Stakeholder Map`: likely concerns and validation prompts by role.
-- `Demo Flow`: sequence, proof points, and risk-handling moments.
-- `Transition Prompts`: how to move from discovery to demo naturally.
-- `Next-Step Script`: commitment language and meeting close structure.
-- `Variant Notes`: adjustments for executive, technical, or multi-stakeholder contexts.
-
-## What To Avoid
-- Using one discovery path for every stakeholder profile.
-- Running feature-order demos disconnected from agreed buyer outcomes.
-- Ending without clear owner/date commitments for the next decision step.
+- `Meeting Frame`: meeting type, audience, known context, hypotheses, decision objective, and time allocation.
+- `Discovery Path`: priority topic, reason, opening prompt, listen-for signals, if/then branches, and red flags.
+- `Stakeholder Coverage`: role, likely decision contribution, information to validate, and missing access.
+- `Demo Map`: buyer statement or criterion, outcome to show, approved proof, transition, risk branch, and stop condition.
+- `Close Plan`: recap prompts, unresolved questions, next-step options, ownership, and confirmation language.
+- `Capture Plan`: facts and decisions to record after the meeting, with unknowns preserved as unknown.
 
 ## Quality Bar
 
-- Tie every step to a buyer outcome or decision point.
-- Keep the question path natural, not like a checklist.
-- Make the demo proof match the buyer concern being addressed.
-- Include a path for pushback, uncertainty, or a technical concern.
-- End with a next step that has an owner and a date.
+- Tie every question and demo block to the stated buyer decision; remove anything merely interesting.
+- Keep the guide usable in conversation, with clear priorities and if/then branches rather than a long checklist.
+- Distinguish pre-call hypotheses from buyer-confirmed facts and update status only from evidence.
+- Never fabricate a capability, proof point, customer result, requirement, or commitment.
+- Provide a discovery-only, demo-only, or combined structure appropriate to the actual meeting.
+- End with a credible next-step path while allowing the buyer to decline or request more evidence.

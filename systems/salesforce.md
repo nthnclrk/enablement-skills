@@ -2,6 +2,8 @@
 
 Use this playbook when a repo skill needs CRM evidence from Salesforce and you want consistent, agent-friendly inputs.
 
+> Last verified: 2026-07-31. Salesforce editions, permissions, custom objects, report types, API versions, and field names vary by org; verify them in the target org.
+
 ## Scope And Limits
 
 This playbook covers common Salesforce patterns that are reliable for enablement workflows. It is not a complete map of Salesforce features, ecosystem tooling, or newer AI-assisted capabilities.
@@ -33,16 +35,19 @@ Use the lightest path that fits the task:
 - Use Setup -> Data Export for object-level CSV backups in zip files.
 - Good for larger periodic snapshots and cross-skill analysis.
 - Better for broad context building than for immediate tactical coaching.
+- Select only the required objects when using an export as agent input. Scheduled cadence is edition-dependent, and generated zip files are short-lived.
 
 3. Data Loader export (repeatable and higher volume)
 - Use Data Loader when you need repeatable exports, larger volumes, or command-line automation.
 - Good for scheduled extracts feeding recurring enablement workflows.
+- The Data Loader UI supports Windows and macOS; its command-line automation interface is Windows-only.
 
 ## Minimal Data To Pull Per Skill
 
 Use these as minimum columns so agents can produce reliable outputs.
 
 ### `forecast-risk-brief`
+
 - Objects: `Opportunity` (required), `Account` (recommended)
 - Minimum fields:
   - Opportunity ID
@@ -58,16 +63,18 @@ Use these as minimum columns so agents can produce reliable outputs.
   - Created Date
 
 ### `deal-inspection-coach`
+
 - Objects: `Opportunity`, `Account`, `Contact Roles` (if available)
 - Minimum fields:
   - Opportunity ID and Name
-  - Stage and Stage Duration proxy (Created Date + Last Modified Date)
+  - Stage and a real stage-timing source, such as Opportunity History / Stage Duration
   - Amount
   - Close Date
   - Next Step
   - Primary contact/stakeholder fields available in your org
 
 ### `account-brief-builder` and `executive-briefing-builder`
+
 - Objects: `Account`, `Opportunity`, recent activity source
 - Minimum fields:
   - Account Name
@@ -77,6 +84,7 @@ Use these as minimum columns so agents can produce reliable outputs.
   - Recent activity timestamps
 
 ### `pipeline-stage-definition-and-exit-criteria`
+
 - Objects: `Opportunity`
 - Minimum fields:
   - Stage
@@ -85,6 +93,7 @@ Use these as minimum columns so agents can produce reliable outputs.
   - Close Date variance patterns
 
 ### `qbr-ebr-builder` and `renewal-and-expansion-enablement`
+
 - Objects: `Account`, `Opportunity` (renewal/expansion), optional product/usage source outside Salesforce
 - Minimum fields:
   - Account ID/Name
@@ -92,6 +101,19 @@ Use these as minimum columns so agents can produce reliable outputs.
   - Expansion opportunity fields
   - Amount and stage
   - Owner
+
+## Raw Fields, Canonical Concepts, And Derived Signals
+
+| Salesforce raw field or report column | Canonical concept | Derived signal (do not present as a raw field) |
+| --- | --- | --- |
+| Opportunity ID, Account ID | `opportunity_id`, `account_id` | join coverage, duplicate risk |
+| Stage, Forecast Category | `stage`, `forecast_category` | forecast confidence, stage-fit assessment |
+| Amount, Close Date | `amount`, `close_date` | weighted exposure, timing risk |
+| Created Date, Last Modified Date | `created_at`, `updated_at` | record age and staleness; not stage duration |
+| Opportunity History: From Stage, To Stage, Stage Duration | `stage_from`, `stage_to`, `stage_duration_days` | stage velocity, stall risk |
+| Next Step, Last Activity | `next_step`, `last_activity_at` | next-step quality, inactivity risk |
+
+Do not infer stage duration from `Created Date` and `Last Modified Date`. Either use the Opportunity History report type and its Stage Duration field, or label stage timing as unavailable.
 
 ## Agent-Friendly Input Formats
 
@@ -118,8 +140,9 @@ Usually safe to write back:
 
 If you must import updates into Salesforce:
 
-- Use Data Import Wizard for smaller loads and common objects.
+- Use Data Import Wizard only for smaller loads of objects it explicitly supports. It does not import Opportunity records.
 - Use Data Loader for larger/batch updates or recurring loads.
+- Use Data Loader or an approved API path for Opportunity updates.
 - Start with a small test file before full import.
 
 ## Example Prompts For This Repo
@@ -149,5 +172,8 @@ If you must import updates into Salesforce:
 - [Data Export Service and Data Loader (Trailhead)](https://trailhead.salesforce.com/content/learn/modules/lex_implementation_data_management/lex_implementation_data_export)
 - [Salesforce Data Loader (Developer)](https://developer.salesforce.com/tools/data-loader)
 - [Data Import Best Practices (Trailhead)](https://trailhead.salesforce.com/content/learn/modules/lex_implementation_data_management/lex_implementation_data_import)
-- [Data Analysis with Reports and Dashboards (Trailhead)](https://trailhead.salesforce.com/content/learn/modules/lightning-experience-productivity/analyze-your-data-with-reports-and-dashboards)
+- [Reports and Dashboards: Quick Look (Trailhead)](https://trailhead.salesforce.com/content/learn/modules/reports-dashboards-quick-look/learn-about-reports-and-dashboards)
 - [Manage Reported Data: Export report details as CSV (Trailhead project)](https://trailhead.salesforce.com/content/learn/projects/create-reports-and-dashboards-for-sales-and-marketing-managers/manage-reported-data)
+- [Create a report on Opportunity stage duration](https://help.salesforce.com/s/articleView?id=000392663&language=en_US&type=1)
+- [Opportunity report fields, including Stage Duration](https://help.salesforce.com/s/articleView?id=sf.reports_oppforesales_tips.htm&language=en_US&type=5)
+- [Data Import Wizard supported record types](https://help.salesforce.com/s/articleView?id=sf.records_gen_info.htm&language=en_US&type=5)

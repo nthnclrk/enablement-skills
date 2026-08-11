@@ -1,61 +1,108 @@
 {
+  "schema_version": 2,
   "skill": "content-gap-analysis",
   "source": "skills/content-gap-analysis/SKILL.md",
   "notes": "Curated eval focused on distinguishing missing content from quality, discoverability, and governance issues.",
+  "managed_by": "curated",
   "should_trigger": [
     {
       "prompt": "Audit our current enablement content for enterprise AEs and SEs. Use the inventory from Highspot plus Slack field requests to identify the highest-impact gaps by role, stage, and job-to-be-done.",
-      "expected": "trigger"
+      "expected": true
     },
     {
       "prompt": "We have too many assets but reps still complain they cannot find what they need. Analyze whether the issue is low usage, low quality, low discoverability, or missing content, then build a prioritized backlog.",
-      "expected": "trigger"
+      "expected": true
     },
     {
       "prompt": "Create a quarterly content gap analysis from our wiki, LMS usage exports, and manager feedback. I need scoring, owners, and target completion windows.",
-      "expected": "trigger"
+      "expected": true
     }
   ],
   "should_not_trigger": [
     {
       "prompt": "Design a governance model with taxonomy, ownership, lifecycle rules, and review SLAs for all enablement content.",
-      "expected": "do_not_trigger"
+      "expected": false,
+      "adjacent_skill": "content-governance-system"
     },
     {
       "prompt": "Synthesize raw field notes and frontline feedback into recurring themes for leadership.",
-      "expected": "do_not_trigger"
+      "expected": false,
+      "adjacent_skill": "field-feedback-synthesizer"
     },
     {
       "prompt": "Create a new battlecard and one-pager for our AI assistant launch.",
-      "expected": "do_not_trigger"
+      "expected": false,
+      "adjacent_skill": "one-pager-and-slide-outline"
     }
   ],
   "output_structure_checks": [
     {
-      "name": "contains_coverage_map",
-      "type": "contains_phrase",
-      "phrase": "Coverage map by role, stage, and job-to-be-done."
+      "name": "content-gap-analysis-output-01",
+      "type": "structure",
+      "description": "The output substantively includes: Coverage map by role, stage, and job-to-be-done",
+      "critical": true
     },
     {
-      "name": "contains_prioritized_backlog",
-      "type": "contains_phrase",
-      "phrase": "Prioritized gap backlog with scoring and rationale."
+      "name": "content-gap-analysis-output-02",
+      "type": "structure",
+      "description": "The output substantively includes: A prioritized gap backlog with anchored value dimensions, evidence confidence, decision tier, and rationale; it does not let an unconfirmed weighted score determine the order",
+      "critical": true
     },
     {
-      "name": "contains_action_types",
-      "type": "contains_phrase",
-      "phrase": "Recommended action type per gap:"
+      "name": "content-gap-analysis-output-03",
+      "type": "structure",
+      "description": "The output substantively includes: Recommended action type per gap",
+      "critical": false
     },
     {
-      "name": "contains_gap_cause_tag",
-      "type": "contains_phrase",
-      "phrase": "Gap cause tag per item:"
+      "name": "content-gap-analysis-output-04",
+      "type": "structure",
+      "description": "The output substantively includes: Gap cause tag per item",
+      "critical": false
     },
     {
-      "name": "contains_confidence_notes",
-      "type": "contains_phrase",
-      "phrase": "Assumptions and confidence notes when source data is partial."
+      "name": "content-gap-analysis-output-05",
+      "type": "structure",
+      "description": "The output substantively includes: Assumptions and confidence notes when source data is partial",
+      "critical": false
     }
   ],
-  "managed_by": "curated"
+  "task_scenarios": [
+    {
+      "id": "content-gap-analysis-evidence-limited",
+      "input_state": "partial",
+      "prompt": "Audit content_inventory.csv against usage_signals.csv and scope.md. Build a coverage view and a sequenced 90-day backlog using create, update, consolidate, or retire. Explain the evidence and confidence behind each recommendation, distinguish content quality from discoverability, and do not treat low views alone as a retirement case.",
+      "files": [
+        "examples/content-gap-analysis/content_inventory.csv",
+        "examples/content-gap-analysis/usage_signals.csv",
+        "examples/content-gap-analysis/scope.md"
+      ],
+      "assertions": [
+        {
+          "name": "content-gap-action-backlog",
+          "type": "structure",
+          "description": "Provides a scoped coverage view and owner-timed backlog using create, update, consolidate, or retire.",
+          "critical": true
+        },
+        {
+          "name": "content-gap-problem-types",
+          "type": "semantic",
+          "description": "Distinguishes missing, stale, duplicated, low-quality, and hard-to-find content using the supplied evidence.",
+          "critical": true
+        },
+        {
+          "name": "content-gap-no-usage-overreach",
+          "type": "forbidden_behavior",
+          "description": "Does not treat low views alone as evidence for retirement or take irreversible content action.",
+          "critical": true
+        },
+        {
+          "name": "content-gap-no-arbitrary-weighting",
+          "type": "semantic",
+          "description": "Keeps impact, frequency, strategic urgency, evidence confidence, and effort visible; any composite weighting is supplied by the organization or clearly proposed for confirmation rather than presented as policy.",
+          "critical": true
+        }
+      ]
+    }
+  ]
 }

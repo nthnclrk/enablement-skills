@@ -4,6 +4,17 @@ All notable changes to this repo should be recorded here.
 
 The format is intentionally lightweight. Keep entries concise and useful for operators adopting updates.
 
+## [1.2.0] - 2026-08-11
+
+Evidence-led workflow and release-quality update.
+
+- Deepened all 37 skills with sharper routing boundaries, decision-changing intake, practitioner-grade decision rules, and usable output contracts.
+- Added the reusable `.enablement/context.md` workflow with source states, provenance, freshness, sensitivity, preview-before-write, and scoped briefs.
+- Tightened assumptions, claim support, approval boundaries, confidentiality, capacity, sampling, calibration, and external-action safeguards across the collection.
+- Added realistic example packets and compact eval definitions with natural routing cases, fixture-backed scenarios, strict validation, and a quality rubric.
+- Refreshed Salesforce, HubSpot, Gong, Highspot, Seismic, Notion, and Slack playbooks against current public guidance.
+- Corrected Claude marketplace metadata, added shared context to every bundle, and expanded read-only packaging and specification checks.
+
 ## [1.1.0] - 2026-03-26
 
 Practitioner language refresh across the skill pack.

@@ -1,46 +1,77 @@
 # Objection Coding Framework
 
-Use this framework to code objections consistently before synthesis.
+Use this framework to code conversation evidence before synthesis.
+
+## Unit Of Analysis
+
+- Use the eligible conversation as the denominator for prevalence.
+- Count a theme at most once per conversation for prevalence, even when it appears several times.
+- Track repeated instances separately when they reveal intensity or response failure.
+- Exclude unusable sources from the denominator and report why they were unusable.
+- Do not treat an unmentioned objection as disproved; mark it `not observed in available evidence`.
+
+## Evidence Record
+
+Capture:
+
+- source ID and date
+- account, rep or team, segment, persona, and call type or stage when available
+- `explicit objection`, `implied concern`, `buyer question`, or `seller interpretation`
+- short excerpt or precise paraphrase
+- seller response and buyer reaction, when present
+- observed consequence, when present
+- objection type, root-cause hypothesis, and coding notes
 
 ## Objection Types
 
-- `Value`: "Not enough ROI" or "no clear business case"
-- `Priority`: "Not urgent now"
-- `Product Fit`: missing capability, weak workflow fit, or technical gap
-- `Implementation Risk`: migration, integration, adoption, or support concerns
-- `Trust`: security, compliance, vendor risk, or credibility concerns
-- `Commercial`: price, terms, procurement, legal, or budget timing
-- `Change Cost`: switching effort, retraining, process disruption
+- `Value`: expected impact or business case is unclear or insufficient.
+- `Priority`: urgency or relative importance is weak.
+- `Product Fit`: capability, workflow, or technical fit is questioned.
+- `Implementation Risk`: migration, integration, adoption, or support is a concern.
+- `Trust`: security, compliance, vendor risk, evidence, or credibility is questioned.
+- `Commercial`: price, budget, terms, procurement, or legal conditions are at issue.
+- `Change Cost`: switching effort, retraining, disruption, or internal capacity is a concern.
+- `Decision Alignment`: stakeholders, criteria, or approval path are not aligned.
 
-## Evidence Rules
+Code the buyer's underlying concern, not merely the seller's response. Apply more than one type only when the evidence contains genuinely distinct concerns.
 
-- Code only claims grounded in transcript text or explicit note language.
-- Mark as `implied` only when context strongly indicates objection intent.
-- Keep quote snippets short and linked to call metadata.
+## Impact Status
 
-## Root-Cause Tags
+- `Blocking`: the buyer explicitly conditions or stops progress on the concern.
+- `Material friction`: the concern causes extra validation, delay, escalation, or a requested concession.
+- `Open concern`: the issue is raised but its effect is not established.
+- `Unknown`: the source does not show the consequence.
 
-- `messaging_gap`
+Do not infer causation from a later stall or loss without corroborating evidence.
+
+## Root-Cause Hypotheses
+
+- `message_gap`
 - `proof_gap`
 - `process_gap`
 - `product_gap`
+- `commercial_mismatch`
 - `competitive_pressure`
 - `stakeholder_misalignment`
 
-## Severity Scale
+Label root cause as a hypothesis unless direct evidence supports it. A product objection can still originate in proof, positioning, or process.
 
-- `High`: repeatedly blocks progression or forces major concessions
-- `Medium`: slows progression or requires additional validation
-- `Low`: manageable concern with minimal impact on progression
+## Confidence Decision
 
-## Confidence Tiers
+Assess confidence from four visible factors:
 
-- `High`: repeated pattern across multiple calls and reps in the same segment
-- `Medium`: repeated pattern with limited sample or partial consistency
-- `Low`: isolated signal or weak evidence quality
+1. recurrence across independent conversations
+2. source fidelity and metadata completeness
+3. representation across the intended slice
+4. consistency of buyer language and observed consequence
 
-## Output Minimums
+Use `high`, `medium`, or `low` only after stating the reasons. Do not rely on a universal call-count threshold; the necessary sample depends on the decision, market, and available population.
 
-- Include frequency counts and affected personas/stages for each top theme.
-- Include at least one representative evidence snippet per top theme.
-- Include one concrete enablement action per top theme.
+## Comparison Rules
+
+- Show counts and denominators together.
+- Show unique call, account, and rep or team coverage so one source concentration is visible.
+- When several calls come from one account, report unique-account recurrence alongside call prevalence.
+- Prefer counts over percentages for small samples.
+- Do not rank slices whose coverage or inclusion rules are materially different without a clear caveat.
+- Keep an important isolated signal separate from the recurring-theme ranking.

@@ -1,65 +1,52 @@
 {
+  "schema_version": 2,
   "skill": "pipeline-stage-definition-and-exit-criteria",
   "source": "skills/pipeline-stage-definition-and-exit-criteria/SKILL.md",
-  "notes": "Starter eval scaffold. Expand prompts and checks with real traces.",
+  "notes": "Generated routing and basic-output starter. Curate realistic prompts and example-backed task scenarios before treating it as behavior evidence.",
+  "managed_by": "starter-generator",
   "should_trigger": [
     {
-      "prompt": "Use $pipeline-stage-definition-and-exit-criteria for this request.",
-      "expected": "trigger"
+      "prompt": "Please define sales stages, exit criteria, and required proof that managers can inspect and RevOps can enforce.",
+      "expected": true
     },
     {
-      "prompt": "I need help with pipeline stage definition and exit criteria.",
-      "expected": "trigger"
+      "prompt": "Please tighten stage hygiene, standardize progression rules, or connect qualification evidence to forecasting.",
+      "expected": true
     },
     {
-      "prompt": "Please create a first draft using the pipeline stage definition and exit criteria workflow.",
-      "expected": "trigger"
+      "prompt": "I have rough notes. Please turn them into a usable pipeline stage definition and exit criteria and label anything that still needs confirmation.",
+      "expected": true
     }
   ],
   "should_not_trigger": [
     {
-      "prompt": "Write a short poem about quarterly planning.",
-      "expected": "do_not_trigger"
+      "prompt": "Please inspect one live opportunity and produce an evidence-backed manager view of stage validity, deal risk, missing proof, and next actions.",
+      "expected": false,
+      "adjacent_skill": "deal-inspection-coach"
     },
     {
-      "prompt": "Refactor this Python function for performance.",
-      "expected": "do_not_trigger"
+      "prompt": "Please build a concise forecast risk brief that highlights commit risk, slippage, and intervention priorities for sales leadership.",
+      "expected": false,
+      "adjacent_skill": "forecast-risk-brief"
     },
     {
-      "prompt": "What is the weather in Sydney today?",
-      "expected": "do_not_trigger"
-    },
-    {
-      "prompt": "This request should use $deal-inspection-coach rather than $pipeline-stage-definition-and-exit-criteria.",
-      "expected": "do_not_trigger"
+      "prompt": "Please analyze a defined set of sales calls or notes and produce an evidence-backed objection brief by segment, persona, or stage.",
+      "expected": false,
+      "adjacent_skill": "call-insights-to-objections"
     }
   ],
   "output_structure_checks": [
     {
-      "name": "contains_output_element_1",
-      "type": "contains_phrase",
-      "phrase": "Stage card table: stage name, purpose, entry criteria, exit criteria, required proof"
+      "name": "pipeline-stage-definition-and-exit-criteria-core-output",
+      "type": "structure",
+      "description": "Produces Stage card table: stage name, purpose, entry criteria, exit criteria, required proof; Recommended proof and exception owner by stage.",
+      "critical": true
     },
     {
-      "name": "contains_output_element_2",
-      "type": "contains_phrase",
-      "phrase": "Anti-pattern list and exception rules"
-    },
-    {
-      "name": "contains_output_element_3",
-      "type": "contains_phrase",
-      "phrase": "Inspection cadence by role"
-    },
-    {
-      "name": "contains_output_element_4",
-      "type": "contains_phrase",
-      "phrase": "Optional methodology mapping notes by stage"
-    },
-    {
-      "name": "contains_output_element_5",
-      "type": "contains_phrase",
-      "phrase": "CRM and reporting implementation notes"
+      "name": "pipeline-stage-definition-and-exit-criteria-decision-discipline",
+      "type": "semantic",
+      "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
+      "critical": true
     }
-  ],
-  "managed_by": "starter"
+  ]
 }

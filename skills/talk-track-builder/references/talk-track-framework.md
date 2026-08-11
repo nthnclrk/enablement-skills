@@ -70,4 +70,4 @@ Minimum output should include:
 - Branch cards for likely turns
 - Proof snippets with source confidence
 - Next-step ask language
-- Manager inspection checks
+- Manager inspection checks only when the request includes coaching, inspection, or adoption

@@ -18,5 +18,24 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Run validation
+      - name: Install Agent Skills reference validator
+        run: python -m pip install skills-ref==0.1.1
+
+      - name: Run repository validation
         run: bash scripts/validate.sh
+
+      - name: Run Agent Skills specification validation
+        run: bash scripts/validate-official.sh
+
+      - name: Run Claude packaging validation when available
+        shell: bash
+        run: |
+          if ! command -v claude >/dev/null 2>&1; then
+            echo "Claude CLI unavailable; repository marketplace schema checks already passed."
+            exit 0
+          fi
+          claude plugin validate --strict .
+          for plugin_dir in plugins/*; do
+            [[ -d "${plugin_dir}" ]] || continue
+            claude plugin validate --strict "${plugin_dir}"
+          done

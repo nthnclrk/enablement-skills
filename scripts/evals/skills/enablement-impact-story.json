@@ -1,65 +1,52 @@
 {
+  "schema_version": 2,
   "skill": "enablement-impact-story",
   "source": "skills/enablement-impact-story/SKILL.md",
-  "notes": "Starter eval scaffold. Expand prompts and checks with real traces.",
+  "notes": "Generated routing and basic-output starter. Curate realistic prompts and example-backed task scenarios before treating it as behavior evidence.",
+  "managed_by": "starter-generator",
   "should_trigger": [
     {
-      "prompt": "Use $enablement-impact-story for this request.",
-      "expected": "trigger"
+      "prompt": "Please create leadership-ready enablement impact narratives and, only when the evidence supports it, financial ROI analysis with explicit assumptions and risks.",
+      "expected": true
     },
     {
-      "prompt": "I need help with enablement impact story.",
-      "expected": "trigger"
+      "prompt": "I need an enablement impact story, executive summary, board-ready narrative, initiative outcome update, or defensible ROI calculation tied to performance and strategic priorities.",
+      "expected": true
     },
     {
-      "prompt": "Please create a first draft using the enablement impact story workflow.",
-      "expected": "trigger"
+      "prompt": "I have rough notes. Please turn them into a usable enablement impact story and label anything that still needs confirmation.",
+      "expected": true
     }
   ],
   "should_not_trigger": [
     {
-      "prompt": "Write a short poem about quarterly planning.",
-      "expected": "do_not_trigger"
+      "prompt": "Please define revenue enablement KPI trees and measurement plans that connect enablement work to business outcomes.",
+      "expected": false,
+      "adjacent_skill": "enablement-metrics-and-instrumentation"
     },
     {
-      "prompt": "Refactor this Python function for performance.",
-      "expected": "do_not_trigger"
+      "prompt": "Please create role-based readiness certifications with evidence requirements, defensible pass/fail standards, behaviorally anchored scoring, and assessor calibration.",
+      "expected": false,
+      "adjacent_skill": "certification-program-builder"
     },
     {
-      "prompt": "What is the weather in Sydney today?",
-      "expected": "do_not_trigger"
-    },
-    {
-      "prompt": "This request should use $enablement-metrics-and-instrumentation rather than $enablement-impact-story.",
-      "expected": "do_not_trigger"
+      "prompt": "Please synthesize multi-source field feedback into traceable themes, segment differences, evidence limits, and owner-ready actions for enablement, product marketing, sales leadership, or product.",
+      "expected": false,
+      "adjacent_skill": "field-feedback-synthesizer"
     }
   ],
   "output_structure_checks": [
     {
-      "name": "contains_output_element_1",
-      "type": "contains_phrase",
-      "phrase": "Executive summary narrative"
+      "name": "enablement-impact-story-core-output",
+      "type": "structure",
+      "description": "Produces Executive summary narrative; Claim mode and why the evidence supports it.",
+      "critical": true
     },
     {
-      "name": "contains_output_element_2",
-      "type": "contains_phrase",
-      "phrase": "Evidence table with confidence labels"
-    },
-    {
-      "name": "contains_output_element_3",
-      "type": "contains_phrase",
-      "phrase": "Assumptions and limits section"
-    },
-    {
-      "name": "contains_output_element_4",
-      "type": "contains_phrase",
-      "phrase": "Decisions to make now with options and trade-offs"
-    },
-    {
-      "name": "contains_output_element_5",
-      "type": "contains_phrase",
-      "phrase": "Recommended next actions"
+      "name": "enablement-impact-story-decision-discipline",
+      "type": "semantic",
+      "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
+      "critical": true
     }
-  ],
-  "managed_by": "starter"
+  ]
 }

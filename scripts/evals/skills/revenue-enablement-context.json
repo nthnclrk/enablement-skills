@@ -1,61 +1,74 @@
 {
+  "schema_version": 2,
   "skill": "revenue-enablement-context",
   "source": "skills/revenue-enablement-context/SKILL.md",
   "notes": "Curated eval focused on foundational context creation and update behavior.",
+  "managed_by": "curated",
   "should_trigger": [
     {
       "prompt": "Build a reusable revenue enablement context for our PLG-to-sales-assist motion. Include ICP, personas, sales stages, qualification rules, pricing basics, top objections, competitors, and current quarter priorities so downstream enablement work stops re-asking foundational questions.",
-      "expected": "trigger"
+      "expected": true
     },
     {
       "prompt": "We have three conflicting docs describing our enterprise sales stages and buyer personas. Normalize them into one canonical enablement context with assumptions called out and a freshness marker.",
-      "expected": "trigger"
+      "expected": true
     },
     {
       "prompt": "Create a machine-readable context pack the rest of the enablement skills can reuse. I want a compact handshake block, confidence level, and unresolved questions.",
-      "expected": "trigger"
+      "expected": true
+    },
+    {
+      "prompt": "Before you build this launch plan, establish only the relevant working context from the files I supplied. Keep it in this task rather than creating a persistent context file, distinguish confirmed facts from assumptions and conflicts, then continue with the launch plan.",
+      "expected": true
     }
   ],
   "should_not_trigger": [
     {
       "prompt": "Route this mixed request into the right enablement skills and tell me the best order to run them.",
-      "expected": "do_not_trigger"
+      "expected": false,
+      "adjacent_skill": "enablement-router"
     },
     {
       "prompt": "Draft a competitive battlecard for Gong vs Chorus focused on enterprise security objections.",
-      "expected": "do_not_trigger"
+      "expected": false,
+      "adjacent_skill": "battlecard-builder"
     },
     {
       "prompt": "Prepare a one-time QBR deck outline for next week's customer executive review.",
-      "expected": "do_not_trigger"
+      "expected": false,
+      "adjacent_skill": "qbr-ebr-builder"
     }
   ],
   "output_structure_checks": [
     {
-      "name": "contains_context_document",
-      "type": "contains_phrase",
-      "phrase": "A canonical revenue enablement context document with all schema sections populated"
+      "name": "revenue-enablement-context-output-01",
+      "type": "structure",
+      "description": "The output substantively includes: All downstream-relevant context sections, with deliberate omissions or missing sections identified instead of placeholder prose",
+      "critical": true
     },
     {
-      "name": "contains_handshake_block",
-      "type": "contains_phrase",
-      "phrase": "A compact context handshake block (owner, freshness, confidence, and source)"
+      "name": "revenue-enablement-context-output-02",
+      "type": "structure",
+      "description": "The output substantively includes: A compact context handshake with mode, relevant confirmed/provisional/conflicted/missing information, sources, requested output, and stop conditions; persistent mode also includes path, owner, and freshness",
+      "critical": true
     },
     {
-      "name": "contains_machine_readable_object",
-      "type": "contains_phrase",
-      "phrase": "A machine-readable context object when requested"
+      "name": "revenue-enablement-context-output-03",
+      "type": "structure",
+      "description": "The output substantively includes: A machine-readable context object when requested",
+      "critical": false
     },
     {
-      "name": "contains_assumptions",
-      "type": "contains_phrase",
-      "phrase": "A labeled assumptions list"
+      "name": "revenue-enablement-context-output-04",
+      "type": "structure",
+      "description": "The output substantively includes: A labeled assumptions list",
+      "critical": false
     },
     {
-      "name": "contains_missing_information_checklist",
-      "type": "contains_phrase",
-      "phrase": "A missing-information checklist prioritized by downstream impact"
+      "name": "revenue-enablement-context-output-05",
+      "type": "structure",
+      "description": "The output substantively includes: A missing-information checklist prioritized by downstream impact",
+      "critical": false
     }
-  ],
-  "managed_by": "curated"
+  ]
 }

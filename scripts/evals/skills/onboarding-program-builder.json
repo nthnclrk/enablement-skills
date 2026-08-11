@@ -1,65 +1,52 @@
 {
+  "schema_version": 2,
   "skill": "onboarding-program-builder",
   "source": "skills/onboarding-program-builder/SKILL.md",
-  "notes": "Starter eval scaffold. Expand prompts and checks with real traces.",
+  "notes": "Generated routing and basic-output starter. Curate realistic prompts and example-backed task scenarios before treating it as behavior evidence.",
+  "managed_by": "starter-generator",
   "should_trigger": [
     {
-      "prompt": "Use $onboarding-program-builder for this request.",
-      "expected": "trigger"
+      "prompt": "Please build role-based ramp plans that help new hires become productive faster through job-critical practice, evidence checkpoints, and manager coaching.",
+      "expected": true
     },
     {
-      "prompt": "I need help with onboarding program builder.",
-      "expected": "trigger"
+      "prompt": "I need onboarding plans, 30-60-90 views, competency-based ramp plans, manager check-ins, or diagnostic onboarding checkpoints for sales or customer-facing teams.",
+      "expected": true
     },
     {
-      "prompt": "Please create a first draft using the onboarding program builder workflow.",
-      "expected": "trigger"
+      "prompt": "I have rough notes. Please turn them into a usable onboarding program and label anything that still needs confirmation.",
+      "expected": true
     }
   ],
   "should_not_trigger": [
     {
-      "prompt": "Write a short poem about quarterly planning.",
-      "expected": "do_not_trigger"
+      "prompt": "Please create role-based readiness certifications with evidence requirements, defensible pass/fail standards, behaviorally anchored scoring, and assessor calibration.",
+      "expected": false,
+      "adjacent_skill": "certification-program-builder"
     },
     {
-      "prompt": "Refactor this Python function for performance.",
-      "expected": "do_not_trigger"
+      "prompt": "Please build developmental sales role-play scenarios with facilitator-only briefs, behaviorally anchored feedback, and run protocols.",
+      "expected": false,
+      "adjacent_skill": "roleplay-scenario-builder"
     },
     {
-      "prompt": "What is the weather in Sydney today?",
-      "expected": "do_not_trigger"
-    },
-    {
-      "prompt": "This request should use $certification-program-builder rather than $onboarding-program-builder.",
-      "expected": "do_not_trigger"
+      "prompt": "Please audit a sample of discovery calls with one consistent rubric and turn portfolio-level patterns into manager-ready coaching priorities.",
+      "expected": false,
+      "adjacent_skill": "discovery-rubric-auditor"
     }
   ],
   "output_structure_checks": [
     {
-      "name": "contains_output_element_1",
-      "type": "contains_phrase",
-      "phrase": "30-60-90 onboarding plan"
+      "name": "onboarding-program-builder-core-output",
+      "type": "structure",
+      "description": "Produces Outcome-gated ramp plan, with a 30-60-90 view only when requested or useful; Experience-level variant notes by role profile.",
+      "critical": true
     },
     {
-      "name": "contains_output_element_2",
-      "type": "contains_phrase",
-      "phrase": "Experience-level variant notes by role profile"
-    },
-    {
-      "name": "contains_output_element_3",
-      "type": "contains_phrase",
-      "phrase": "Competency and evidence matrix"
-    },
-    {
-      "name": "contains_output_element_4",
-      "type": "contains_phrase",
-      "phrase": "Weekly manager check-in agenda"
-    },
-    {
-      "name": "contains_output_element_5",
-      "type": "contains_phrase",
-      "phrase": "Validation and certification checkpoints"
+      "name": "onboarding-program-builder-decision-discipline",
+      "type": "semantic",
+      "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
+      "critical": true
     }
-  ],
-  "managed_by": "starter"
+  ]
 }

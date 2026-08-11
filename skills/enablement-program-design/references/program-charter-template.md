@@ -1,58 +1,71 @@
 # Program Charter Template
 
-## 1) Program Intent
+Use the shortest version that supports the decision. Mark unknown items instead of filling them with plausible detail.
 
-- Program name
-- Business problem
-- Target behavior change
-- Expected business outcome
+## 1. Decision Brief
 
-## 2) Scope
+- Program name and status: discovery, draft, approved, in pilot, rolling out, or reinforcing
+- Decision required and decision owner
+- Business problem and supporting evidence
+- Facts, interpretations, planning assumptions, conflicts, and unknowns
+- Urgency and consequence of no action
 
-- Roles in scope
-- Teams in scope
-- Regions or segments in scope
-- Explicit exclusions
+## 2. Target Change
 
-## 3) Timeline And Milestones
+| Role and workflow moment | Current behavior | Target behavior | Observable evidence | Intended outcome |
+| --- | --- | --- | --- | --- |
 
-- Design start and end
-- Pilot window
-- Rollout windows
-- Reinforcement checkpoints
+List explicit exclusions and adjacent problems this program will not solve.
 
-## 4) Workstreams
+## 3. Scope And Capacity
 
-- Content and assets
-- Delivery and facilitation
-- Manager enablement
-- Measurement and reporting
+- Roles, teams, regions, segments, and cohorts in scope
+- Audience volume and cohort sequence
+- Facilitator, manager, content, operations, and reporting capacity
+- Fixed timeline, budget, system, policy, and accessibility constraints
+- Scope reductions required to stay within capacity
 
-## 5) Ownership Model
+## 4. Intervention Map
 
-- Executive sponsor
-- Program owner
-- Workstream owners
-- Approver and decision cadence
+| Diagnosed barrier | Evidence and confidence | Intervention | Reinforcement in workflow | Owner |
+| --- | --- | --- | --- | --- |
 
-## 6) Cross-Functional Change Plan
+Do not use training to compensate for an unresolved process, incentive, product, data, or management problem.
 
-- Stakeholder groups affected
-- Change impact by role/team
-- Adoption risks by group
-- Manager reinforcement plan
-- Escalation and communications cadence
+## 5. Pilot And Phase Gates
 
-## 7) Success Measures
+| Phase | Entry criteria | Work and owner | Evidence collected | Exit decision | Approver |
+| --- | --- | --- | --- | --- | --- |
+| Design |  |  |  | Ready for pilot / revise |  |
+| Pilot |  |  |  | Continue / adjust / stop |  |
+| Rollout |  |  |  | Expand / hold / revise |  |
+| Reinforcement |  |  |  | Sustain / retire / replace |  |
 
-- Leading indicators
-- Lagging indicators
-- Baseline values
-- Target values and review cadence
+Record dates only when confirmed. Otherwise name the scheduling owner and open decision.
 
-## 8) Risks And Mitigations
+## 6. Ownership And Governance
 
-- Top delivery risks
-- Adoption risks
-- Data quality risks
-- Mitigation owner and due date
+| Decision or workstream | Accountable owner | Contributors | Approver | Escalation path |
+| --- | --- | --- | --- | --- |
+
+- Customer-facing or regulated content approval path
+- Change-control process
+- Internal-only information and distribution boundary
+
+## 7. Measurement And Decisions
+
+| Level | Metric and definition | Baseline status | Source and owner | Limitation | Decision threshold |
+| --- | --- | --- | --- | --- | --- |
+| Activity |  |  |  |  |  |
+| Behavior |  |  |  |  |  |
+| Business outcome |  |  |  |  |  |
+
+State attribution limits. Do not set a numeric target without a verified baseline or an approved basis.
+
+## 8. Risks, Dependencies, And Approvals
+
+| Risk or dependency | Likelihood and impact | Mitigation | Owner | Trigger or due point |
+| --- | --- | --- | --- | --- |
+
+| Approval or open decision | Decision owner | Evidence needed | Status | Due point |
+| --- | --- | --- | --- | --- |

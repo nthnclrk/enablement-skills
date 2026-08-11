@@ -1,65 +1,52 @@
 {
+  "schema_version": 2,
   "skill": "certification-program-builder",
   "source": "skills/certification-program-builder/SKILL.md",
-  "notes": "Starter eval scaffold. Expand prompts and checks with real traces.",
+  "notes": "Generated routing and basic-output starter. Curate realistic prompts and example-backed task scenarios before treating it as behavior evidence.",
+  "managed_by": "starter-generator",
   "should_trigger": [
     {
-      "prompt": "Use $certification-program-builder for this request.",
-      "expected": "trigger"
+      "prompt": "Please create role-based readiness certifications with evidence requirements, defensible pass/fail standards, behaviorally anchored scoring, and assessor calibration.",
+      "expected": true
     },
     {
-      "prompt": "I need help with certification program builder.",
-      "expected": "trigger"
+      "prompt": "Please design or govern certification standards, practical assessments, assessor guides, retakes, or recertification for sales or customer-facing roles.",
+      "expected": true
     },
     {
-      "prompt": "Please create a first draft using the certification program builder workflow.",
-      "expected": "trigger"
+      "prompt": "I have rough notes. Please turn them into a usable certification program and label anything that still needs confirmation.",
+      "expected": true
     }
   ],
   "should_not_trigger": [
     {
-      "prompt": "Write a short poem about quarterly planning.",
-      "expected": "do_not_trigger"
+      "prompt": "Please build role-based ramp plans that help new hires become productive faster through job-critical practice, evidence checkpoints, and manager coaching.",
+      "expected": false,
+      "adjacent_skill": "onboarding-program-builder"
     },
     {
-      "prompt": "Refactor this Python function for performance.",
-      "expected": "do_not_trigger"
+      "prompt": "Please build developmental sales role-play scenarios with facilitator-only briefs, behaviorally anchored feedback, and run protocols.",
+      "expected": false,
+      "adjacent_skill": "roleplay-scenario-builder"
     },
     {
-      "prompt": "What is the weather in Sydney today?",
-      "expected": "do_not_trigger"
-    },
-    {
-      "prompt": "This request should use $onboarding-program-builder rather than $certification-program-builder.",
-      "expected": "do_not_trigger"
+      "prompt": "Please build partner-ready enablement packages with separated external and internal operator assets, permitted-motion guidance, governed claims, and package-level readiness criteria.",
+      "expected": false,
+      "adjacent_skill": "partner-enablement-package"
     }
   ],
   "output_structure_checks": [
     {
-      "name": "contains_output_element_1",
-      "type": "contains_phrase",
-      "phrase": "Certification blueprint"
+      "name": "certification-program-builder-core-output",
+      "type": "structure",
+      "description": "Produces Certification blueprint; Readiness claim and job-task-to-standard map.",
+      "critical": true
     },
     {
-      "name": "contains_output_element_2",
-      "type": "contains_phrase",
-      "phrase": "Scoring rubric with behavior anchors"
-    },
-    {
-      "name": "contains_output_element_3",
-      "type": "contains_phrase",
-      "phrase": "Evaluation prompt and scenario set"
-    },
-    {
-      "name": "contains_output_element_4",
-      "type": "contains_phrase",
-      "phrase": "Pass/fail and retake rules"
-    },
-    {
-      "name": "contains_output_element_5",
-      "type": "contains_phrase",
-      "phrase": "Recertification cadence and scope rules"
+      "name": "certification-program-builder-decision-discipline",
+      "type": "semantic",
+      "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
+      "critical": true
     }
-  ],
-  "managed_by": "starter"
+  ]
 }

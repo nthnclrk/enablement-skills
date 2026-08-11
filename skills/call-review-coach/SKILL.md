@@ -1,6 +1,6 @@
 ---
 name: call-review-coach
-description: Review one sales call and turn it into clear coaching priorities and next-practice actions. Use when asked to coach a rep from a recording, transcript, or notes across discovery, demo, objection handling, or closing. Route practice-drill requests to roleplay-scenario-builder and discovery scoring standards to discovery-rubric-auditor.
+description: Review one sales call and turn recording, transcript, or notes evidence into clear coaching priorities and next-practice actions. Use for single-call coaching across discovery, demo, objection handling, technical validation, or closing, including a single discovery call. Route practice-drill creation to roleplay-scenario-builder and multi-call discovery baselines, comparisons, or trend audits to discovery-rubric-auditor.
 ---
 
 # Call Review Coach
@@ -9,14 +9,15 @@ Turn one sales call into coaching that changes the next call.
 
 ## Confirm Inputs First
 
-- If a current revenue-enablement-context exists, use it first for ICP, persona, stage, and messaging expectations. If not, ask for only the highest-impact missing context.
-- Confirm the call source: transcript, recording notes, or summary.
-- Confirm call type: discovery, demo, technical validation, commercial review, or close.
+- Use supplied current context or relevant sections of `.enablement/context.md` when available. Treat stale, inferred, or conflicted material as provisional; never update shared context silently.
+- Confirm the call source and access: recording, transcript, timestamped notes, or summary. If a referenced recording is not accessible, request the file, transcript, or notes.
+- Confirm call type, intended outcome, participants, and any known speaker-attribution gaps.
 - Confirm rep context: role, tenure, and target segment.
 - Confirm the coaching objective: discovery depth, commercial framing, next-step control, or objection handling.
 - Confirm scoring standard: use provided rubric or default to `references/call-coaching-rubric.md`.
+- Confirm whether names or customer details must be anonymized and that the supplied material may be used for coaching.
 
-If any required item is missing, ask for the minimum missing details. If the user wants speed, proceed with labeled assumptions.
+Ask only for missing blockers. Continue from summaries or partial transcripts with lower confidence, but never imply that you heard a recording or observed a moment you could not access.
 
 ## Read The Right Reference
 
@@ -24,24 +25,28 @@ If any required item is missing, ask for the minimum missing details. If the use
 
 ## Default Workflow
 
-1. Set the call objective and what good looks like for this call type.
-2. Pull the moments that mattered most, with exact evidence from the transcript or notes.
-3. Check how complete the evidence is and label confidence before scoring.
-4. Score against the rubric with brief, plain-language reasons.
-5. Separate what the rep did well from the biggest gaps, then pick the top 1-3 priorities.
-6. Turn each priority into a specific next-call behavior the rep can practice.
-7. Add a short manager follow-up so the next call gets inspected for the same behavior.
+1. Set the call objective and choose only the rubric dimensions that should be observable for this call type.
+2. Establish evidence coverage. Review the recording directly when accessible; otherwise use the transcript or notes and record source limitations, missing sections, and speaker uncertainty.
+3. Build a moment log with timestamp or transcript location, speaker, observation, and why it mattered. Quote only the minimum needed.
+4. Score each applicable dimension against the `1`, `3`, and `5` behavior anchors. Use `2` or `4` only when evidence falls between anchors, and `N/O` when the behavior was not observable.
+5. Attach evidence and confidence to every score. Do not average unobserved dimensions or treat silence in partial evidence as failure.
+6. Separate strengths from gaps, then choose the top 1-3 behaviors with the greatest likely effect on the next comparable call.
+7. Turn each priority into a practice instruction, an in-call cue, and an observable success signal.
+8. Add a manager follow-up for the next 1-2 calls and restate that one call is directional evidence, not a rep-level verdict.
 
 ## Tool Notes
 
-- If conversation intelligence tools are available, use timestamps, talk tracks, and question-level snippets as evidence.
-- If no tooling exists, score from notes and call summary without inventing evidence.
-- Keep method tool-agnostic: evidence quality matters more than system choice.
+- For accessible audio or video, review the source and capture timestamps; use a transcript for search and quoting, not as a substitute for tone or sequencing when the recording is available.
+- Treat automated transcripts as fallible. Preserve uncertain wording and speaker attribution rather than silently correcting them.
+- If only notes or a summary exist, report lower evidence coverage and avoid precise claims about phrasing, timing, talk ratio, or tone.
+- Minimize sensitive excerpts, anonymize when requested, and do not publish coaching material without explicit approval.
 
 ## Output Contract
 
 - `Call Context`: type, segment, rep level, and review objective.
-- `Scorecard`: dimension-by-dimension score with evidence.
+- `Evidence Coverage`: source used, accessible portion, transcript or speaker limitations, and overall confidence.
+- `Moment Log`: the few decisive moments with timestamp or transcript location.
+- `Scorecard`: applicable dimension score or `N/O`, behavior anchor, evidence, and confidence.
 - `Strengths To Keep`: behaviors to preserve.
 - `Top Gaps`: prioritized coaching gaps with impact notes.
 - `Next-Call Practice Plan`: concrete drills and execution checkpoints.
@@ -50,6 +55,7 @@ If any required item is missing, ask for the minimum missing details. If the use
 ## Quality Bar
 
 - Tie every score or claim to explicit call evidence.
+- Apply the same anchors regardless of rep confidence, style, accent, or familiarity.
 - Limit coaching to the fewest high-impact priorities instead of long issue lists.
 - Make actions behavior-specific and testable in the next call.
 - Avoid generic advice that cannot be inspected by a manager.

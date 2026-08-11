@@ -26,3 +26,4 @@ Use this when stage redesign must eventually map into CRM fields, required notes
 
 - Do not assume a direct one-to-one mapping from new stage cards to current CRM configuration.
 - Recommend field, validation, and reporting changes separately.
+- Do not create fields, change validation or automation, or move live opportunities without explicit approval of the exact configuration and migration plan.

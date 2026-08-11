@@ -1,69 +1,52 @@
 {
+  "schema_version": 2,
   "skill": "partner-enablement-package",
   "source": "skills/partner-enablement-package/SKILL.md",
-  "notes": "Starter eval scaffold. Expand prompts and checks with real traces.",
+  "notes": "Generated routing and basic-output starter. Curate realistic prompts and example-backed task scenarios before treating it as behavior evidence.",
+  "managed_by": "starter-generator",
   "should_trigger": [
     {
-      "prompt": "Use $partner-enablement-package for this request.",
-      "expected": "trigger"
+      "prompt": "Please build partner-ready enablement packages with separated external and internal operator assets, permitted-motion guidance, governed claims, and package-level readiness criteria.",
+      "expected": true
     },
     {
-      "prompt": "I need help with partner enablement package.",
-      "expected": "trigger"
+      "prompt": "I need help with partner training, reseller onboarding, channel talk tracks, or partner launch support.",
+      "expected": true
     },
     {
-      "prompt": "Please create a first draft using the partner enablement package workflow.",
-      "expected": "trigger"
-    },
-    {
-      "prompt": "Please create partner training, reseller onboarding, channel talk tracks, partner certification guidance, or partner launch support.",
-      "expected": "trigger"
+      "prompt": "I have rough notes. Please turn them into a usable partner enablement package and label anything that still needs confirmation.",
+      "expected": true
     }
   ],
   "should_not_trigger": [
     {
-      "prompt": "Write a short poem about quarterly planning.",
-      "expected": "do_not_trigger"
+      "prompt": "Please create role-based readiness certifications with evidence requirements, defensible pass/fail standards, behaviorally anchored scoring, and assessor calibration.",
+      "expected": false,
+      "adjacent_skill": "certification-program-builder"
     },
     {
-      "prompt": "Refactor this Python function for performance.",
-      "expected": "do_not_trigger"
+      "prompt": "Please build role-based ramp plans that help new hires become productive faster through job-critical practice, evidence checkpoints, and manager coaching.",
+      "expected": false,
+      "adjacent_skill": "onboarding-program-builder"
     },
     {
-      "prompt": "What is the weather in Sydney today?",
-      "expected": "do_not_trigger"
-    },
-    {
-      "prompt": "This request should use $onboarding-program-builder rather than $partner-enablement-package.",
-      "expected": "do_not_trigger"
+      "prompt": "Please build cross-functional launch readiness plans and field-ready launch assets for revenue teams.",
+      "expected": false,
+      "adjacent_skill": "product-launch-enablement"
     }
   ],
   "output_structure_checks": [
     {
-      "name": "contains_output_element_1",
-      "type": "contains_phrase",
-      "phrase": "Default to these deliverables unless the user asks for a narrower package:"
+      "name": "partner-enablement-package-core-output",
+      "type": "structure",
+      "description": "Produces Partner-Facing Package, limited to approved and relevant deliverables: positioning/talk track, qualification, handoff, onboarding, support, and readiness guidance; Internal Operator Pack: partner rights and motion, economics/governance, claim and source ledger, restricted-content map, readiness evidence, exceptions, support ownership, and risks.",
+      "critical": true
     },
     {
-      "name": "contains_output_element_2",
-      "type": "contains_phrase",
-      "phrase": "Partner positioning and talk track summary"
-    },
-    {
-      "name": "contains_output_element_3",
-      "type": "contains_phrase",
-      "phrase": "Qualification and handoff guidance"
-    },
-    {
-      "name": "contains_output_element_4",
-      "type": "contains_phrase",
-      "phrase": "Partner onboarding outline"
-    },
-    {
-      "name": "contains_output_element_5",
-      "type": "contains_phrase",
-      "phrase": "Core enablement asset list with purpose by asset"
+      "name": "partner-enablement-package-decision-discipline",
+      "type": "semantic",
+      "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
+      "critical": true
     }
-  ],
-  "managed_by": "starter"
+  ]
 }

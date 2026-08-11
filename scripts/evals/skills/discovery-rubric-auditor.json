@@ -1,69 +1,52 @@
 {
+  "schema_version": 2,
   "skill": "discovery-rubric-auditor",
   "source": "skills/discovery-rubric-auditor/SKILL.md",
-  "notes": "Starter eval scaffold. Expand prompts and checks with real traces.",
+  "notes": "Generated routing and basic-output starter. Curate realistic prompts and example-backed task scenarios before treating it as behavior evidence.",
+  "managed_by": "starter-generator",
   "should_trigger": [
     {
-      "prompt": "Use $discovery-rubric-auditor for this request.",
-      "expected": "trigger"
+      "prompt": "Please audit a sample of discovery calls with one consistent rubric and turn portfolio-level patterns into manager-ready coaching priorities.",
+      "expected": true
     },
     {
-      "prompt": "I need help with discovery rubric auditor.",
-      "expected": "trigger"
+      "prompt": "Please compare discovery quality across calls or reps, find recurring gaps, or establish a cohort or team baseline.",
+      "expected": true
     },
     {
-      "prompt": "Please create a first draft using the discovery rubric auditor workflow.",
-      "expected": "trigger"
-    },
-    {
-      "prompt": "Please compare rep discovery quality, find recurring gaps, or assess a team baseline.",
-      "expected": "trigger"
+      "prompt": "I have rough notes. Please turn them into a usable discovery rubric audit and label anything that still needs confirmation.",
+      "expected": true
     }
   ],
   "should_not_trigger": [
     {
-      "prompt": "Write a short poem about quarterly planning.",
-      "expected": "do_not_trigger"
+      "prompt": "Please design an adaptive discovery guide and outcome-led demo flow for a defined buyer, segment, stage, and meeting type.",
+      "expected": false,
+      "adjacent_skill": "discovery-and-demo-structure"
     },
     {
-      "prompt": "Refactor this Python function for performance.",
-      "expected": "do_not_trigger"
+      "prompt": "Please review one sales call and turn recording, transcript, or notes evidence into clear coaching priorities and next-practice actions.",
+      "expected": false,
+      "adjacent_skill": "call-review-coach"
     },
     {
-      "prompt": "What is the weather in Sydney today?",
-      "expected": "do_not_trigger"
-    },
-    {
-      "prompt": "This request should use $discovery-and-demo-structure rather than $discovery-rubric-auditor.",
-      "expected": "do_not_trigger"
+      "prompt": "Please create role-based readiness certifications with evidence requirements, defensible pass/fail standards, behaviorally anchored scoring, and assessor calibration.",
+      "expected": false,
+      "adjacent_skill": "certification-program-builder"
     }
   ],
   "output_structure_checks": [
     {
-      "name": "contains_output_element_1",
-      "type": "contains_phrase",
-      "phrase": "Audit Scope`: who, what calls, and scoring window."
+      "name": "discovery-rubric-auditor-core-output",
+      "type": "structure",
+      "description": "Produces Audit Scope: who, what calls, and scoring window; Sample Shape: counts by comparison unit, exclusions, coverage, and material skew.",
+      "critical": true
     },
     {
-      "name": "contains_output_element_2",
-      "type": "contains_phrase",
-      "phrase": "Rubric Scores`: per-dimension scores with evidence."
-    },
-    {
-      "name": "contains_output_element_3",
-      "type": "contains_phrase",
-      "phrase": "Pattern Summary`: recurring strengths and recurring gaps."
-    },
-    {
-      "name": "contains_output_element_4",
-      "type": "contains_phrase",
-      "phrase": "Priority Interventions`: top coaching moves ranked by likely impact."
-    },
-    {
-      "name": "contains_output_element_5",
-      "type": "contains_phrase",
-      "phrase": "Manager Action Plan`: what to inspect next week and what to reinforce."
+      "name": "discovery-rubric-auditor-decision-discipline",
+      "type": "semantic",
+      "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
+      "critical": true
     }
-  ],
-  "managed_by": "starter"
+  ]
 }

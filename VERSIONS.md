@@ -13,21 +13,28 @@ This file tracks repo-level and bundle-level versions for packaging and update c
 
 | Component | Version | Last Updated | Status | Notes |
 | --- | --- | --- | --- | --- |
-| `repo` | `1.1.0` | `2026-03-26` | `active` | Practitioner-language refresh across skill workflows, output contracts, and repo-facing routing copy. |
+| `repo` | `1.2.0` | `2026-08-11` | `active` | Evidence-led skill workflows, reusable context setup, stronger examples and evals, and validated distribution packaging. |
 
 ## Bundle Versions
 
 | Bundle | Version | Last Updated | Status | Notes |
 | --- | --- | --- | --- | --- |
-| `enablement-core` | `0.2.0` | `2026-03-26` | `active` | Practitioner-language refresh for context, routing, planning, and program design skills. |
-| `enablement-messaging` | `0.2.0` | `2026-03-26` | `active` | Reworked messaging, battlecard, objection, talk track, and content asset workflows in practitioner terms. |
-| `enablement-programs` | `0.2.0` | `2026-03-26` | `active` | Coaching, ramp, certification, and launch/program workflows now use plainer operator-facing guidance. |
-| `enablement-measurement` | `0.2.0` | `2026-03-26` | `active` | Metrics, ROI-story, content-ops, and audit skills now use clearer enablement and RevOps language. |
-| `enablement-launches` | `0.2.0` | `2026-03-26` | `active` | Launch readiness and seller-update workflows now use field-facing launch language and tighter action guidance. |
-| `enablement-crm-pack` | `0.2.0` | `2026-03-26` | `active` | Stage, deal review, forecast, account, MAP, renewal, and pipeline workflows rewritten in sales/CS/RevOps language. |
-| `enablement-ci-pack` | `0.2.0` | `2026-03-26` | `active` | Call review, objection mining, field feedback, and win/loss skills now use practical coaching and insight language. |
+| `enablement-core` | `0.3.0` | `2026-08-11` | `active` | Stronger program, coaching, account, and planning judgment with the shared context workflow. |
+| `enablement-messaging` | `0.3.0` | `2026-08-11` | `active` | Evidence and approval controls across positioning, competitive, talk-track, objection, and content work. |
+| `enablement-programs` | `0.3.0` | `2026-08-11` | `active` | Outcome-gated onboarding, certification, coaching, practice, and inspection workflows. |
+| `enablement-measurement` | `0.3.0` | `2026-08-11` | `active` | Auditable metrics, impact, win-loss, content, and stage-analysis workflows. |
+| `enablement-launches` | `0.3.0` | `2026-08-11` | `active` | Evidence-backed launch gates, seller updates, partner controls, and field asset guidance. |
+| `enablement-crm-pack` | `0.3.0` | `2026-08-11` | `active` | Stronger account, deal, forecast, proposal, renewal, MAP, and customer-value decision support. |
+| `enablement-ci-pack` | `0.3.0` | `2026-08-11` | `active` | Better sampling, scoring, privacy, and evidence discipline for conversation-based analysis and coaching. |
 
 ## Change Log Summary
+
+### 1.2.0 - 2026-08-11
+
+- Deepened all 37 skills with clearer routing, decision rules, evidence boundaries, and operator-ready outputs.
+- Added a reusable `.enablement/context.md` setup and safe handoff pattern across every bundle.
+- Added realistic example packets, compact routing evals, a practical quality rubric, and read-only release validation.
+- Refreshed system playbooks and corrected Claude marketplace packaging for current distribution tooling.
 
 ### 1.1.0 - 2026-03-26
 

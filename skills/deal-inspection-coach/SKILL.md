@@ -1,57 +1,60 @@
 ---
 name: deal-inspection-coach
-description: Review a live deal and produce a manager-ready view of risk, proof gaps, and next actions. Use when asked to inspect a specific opportunity, diagnose stall risk, or prepare a deal review. Route portfolio forecast questions to forecast-risk-brief and call-only coaching to call-review-coach.
+description: Inspect one live opportunity and produce an evidence-backed manager view of stage validity, deal risk, missing proof, and next actions. Use for a specific deal review, stalled-deal diagnosis, or manager inspection. Use forecast-risk-brief for portfolio forecasting, call-review-coach for seller behavior on one call, and mutual-action-plan-builder for a buyer-shared execution plan.
 ---
 
 # Deal Inspection Coach
 
-Turn a single opportunity into a clear risk diagnosis and next-step plan.
+Turn one opportunity into a defensible diagnosis and a focused manager coaching plan.
 
 ## Confirm Inputs First
 
-- If a current `revenue-enablement-context` exists, use it first for ICP, stage definitions, and commercial messaging constraints. If not, ask for only the highest-impact missing context.
-- Confirm deal context: segment, ACV range, stage, and target close period.
-- Confirm the customer decision group: champion, evaluator, economic approver, and blockers.
-- Confirm evidence sources: CRM notes, call summaries, emails, MAP, and proposal status.
-- Confirm decision objective: advance stage, recover a stalled deal, or prep for forecast review.
-- Confirm manager constraints: timeline, resource limits, and escalation options.
-- Confirm qualification framework preference if one exists (for example MEDDPICC, SPICED, or org-specific).
+- Use current context supplied by the user. If `.enablement/context.md` is available, read only the relevant ICP, stage, qualification, and commercial sections. Treat stale, inferred, or conflicted context as provisional and never update it silently.
+- Confirm the inspection objective, as-of date, account and opportunity, current stage, target close period, amount or range, and seller's stated next step.
+- Confirm available evidence: CRM record and history, buyer communications, call records, mutual action plan, proposal, security or procurement status, and product validation.
+- Confirm the organization's stage criteria and qualification method when they exist. Do not impose an external method in place of the team's operating model.
+- Confirm the manager's available interventions and whether the output is internal-only.
+- Ask only for missing inputs that would materially change the recommendation.
 
-If essential inputs are missing, ask only for those items. If urgent, continue with labeled assumptions.
+Use assumptions only to draft reversible coaching options. Do not assume facts, metrics, quotes, stakeholder roles, commitments, dates, approvals, requirements, stage evidence, or customer and product claims. Leave them unknown until verified.
 
 ## Read The Right Reference
 
-- Read [references/deal-inspection-framework.md](references/deal-inspection-framework.md) before producing the inspection.
-- Read [references/source-system-guide.md](references/source-system-guide.md) when the deal evidence is coming from CRM or call platforms.
+- Read [references/deal-inspection-framework.md](references/deal-inspection-framework.md) before rating evidence, risk, or stage validity.
+- Read [references/source-system-guide.md](references/source-system-guide.md) when evidence comes from CRM, conversation intelligence, or email summaries.
 
 ## Default Workflow
 
-1. Validate the current stage against evidence, not seller narrative.
-2. Check qualification depth across pain, impact, decision process, stakeholders, timing, and competition.
-3. Identify the proof that is missing and what is slowing the deal down.
-4. Separate controllable risk from external risk.
-5. Build a short action plan with owner, date, and next checkpoint.
-6. Write manager coaching notes for the next review.
+1. **Set the inspection decision.** State whether the manager needs to validate stage, recover momentum, test forecast confidence, or choose an intervention. Keep the analysis to one opportunity.
+2. **Build the evidence ledger.** For each material claim, record the source, source date, whether it is buyer-confirmed or internally asserted, and whether it is current, stale, missing, or conflicted.
+3. **Test stage validity.** Compare evidence with the organization's required exit criteria. If those criteria are unavailable, assess the underlying buying decisions but do not invent a stage gate.
+4. **Inspect the buying path.** Check problem priority, value, stakeholders, decision criteria and process, alternatives, commercial path, implementation confidence, and timing. Distinguish an unanswered question from negative evidence.
+5. **Diagnose risk.** Separate verified risks from evidence gaps. Assess consequence, urgency, controllability, and confidence without turning the result into a false-precision score.
+6. **Choose the next move.** Prioritize the few actions that resolve a consequential uncertainty or create buyer progress. Separate buyer commitments from internal seller tasks; label proposed dates as proposals, not commitments.
+7. **Prepare manager coaching.** Give the manager the question to ask, the evidence to inspect, the decision to make, and the condition for escalation or reassessment.
+8. **Protect the record.** Do not change stage, close date, probability, qualification fields, or customer-facing material without explicit approval.
 
 ## Tool Notes
 
-- If CRM and call intelligence are available, use them for evidence triangulation.
-- Use [references/source-system-guide.md](references/source-system-guide.md) for source priority, minimum inputs, and safe writeback boundaries.
-- If data quality is low, mark confidence explicitly and avoid false precision.
-- Keep framework portable across CRM tooling and sales methods.
+- Use CRM as the base record, then triangulate material claims with buyer communications, calls, and execution artifacts.
+- Prefer direct, recent buyer evidence over seller summaries. Show conflicts rather than selecting the most favorable source.
+- Treat automatic scores and summaries as pointers for inspection, not proof.
 
 ## Output Contract
 
-- `Deal Snapshot`: stage, objective, and confidence level.
-- `Qualification Status`: strengths, missing proof, and uncertainty.
-- `Risk Register`: top risks with severity and controllability.
-- `Next Actions`: owner, action, and due date for each critical move.
-- `Manager Coaching Plan`: what to inspect in the next review.
+- `Inspection Decision`: objective, as-of date, current stage, stage-validity finding, and overall evidence confidence.
+- `Evidence Ledger`: material claim, status, source, source date, conflict, and proof still needed.
+- `Buying-Path Review`: confirmed progress and unresolved decisions across the relevant qualification blocks.
+- `Risk Register`: risk or evidence gap, consequence, urgency, controllability, confidence, and trigger for reassessment.
+- `Priority Actions`: owner, action, intended buyer progress, timing status, and verification checkpoint.
+- `Manager Coaching Plan`: inspection questions, coaching focus, escalation conditions, and next review trigger.
 
 ## Quality Bar
 
-- Distinguish facts from assumptions and seller opinion.
-- Focus on progression evidence, not activity volume.
-- Prioritize actions that materially improve win likelihood.
-- Produce a plan a frontline manager can execute this week.
-- Label stale or sparse evidence explicitly rather than inferring certainty.
+- Base stage and risk findings on evidence available as of a stated date.
+- Report stage support separately from evidence confidence; strong evidence can show that a stage is unsupported.
+- Separate buyer-confirmed facts, seller assertions, analyst inference, and missing evidence.
+- Do not mistake activity volume, an internal task, or a future meeting for buyer progress.
+- Keep verified risk distinct from missing proof; both matter, but they require different actions.
+- Prioritize a small set of actions the team can execute and verify.
+- Make stage, forecast, or CRM changes recommendations only unless explicit approval is given.

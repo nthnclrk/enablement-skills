@@ -1,69 +1,52 @@
 {
+  "schema_version": 2,
   "skill": "deal-inspection-coach",
   "source": "skills/deal-inspection-coach/SKILL.md",
-  "notes": "Starter eval scaffold. Expand prompts and checks with real traces.",
+  "notes": "Generated routing and basic-output starter. Curate realistic prompts and example-backed task scenarios before treating it as behavior evidence.",
+  "managed_by": "starter-generator",
   "should_trigger": [
     {
-      "prompt": "Use $deal-inspection-coach for this request.",
-      "expected": "trigger"
+      "prompt": "Please inspect one live opportunity and produce an evidence-backed manager view of stage validity, deal risk, missing proof, and next actions.",
+      "expected": true
     },
     {
-      "prompt": "I need help with deal inspection coach.",
-      "expected": "trigger"
+      "prompt": "I need help with a specific deal review, stalled-deal diagnosis, or manager inspection.",
+      "expected": true
     },
     {
-      "prompt": "Please create a first draft using the deal inspection coach workflow.",
-      "expected": "trigger"
-    },
-    {
-      "prompt": "Please inspect a specific opportunity, diagnose stall risk, or prepare a deal review.",
-      "expected": "trigger"
+      "prompt": "I have rough notes. Please turn them into a usable deal inspection and label anything that still needs confirmation.",
+      "expected": true
     }
   ],
   "should_not_trigger": [
     {
-      "prompt": "Write a short poem about quarterly planning.",
-      "expected": "do_not_trigger"
+      "prompt": "Please build a concise forecast risk brief that highlights commit risk, slippage, and intervention priorities for sales leadership.",
+      "expected": false,
+      "adjacent_skill": "forecast-risk-brief"
     },
     {
-      "prompt": "Refactor this Python function for performance.",
-      "expected": "do_not_trigger"
+      "prompt": "Please review one sales call and turn recording, transcript, or notes evidence into clear coaching priorities and next-practice actions.",
+      "expected": false,
+      "adjacent_skill": "call-review-coach"
     },
     {
-      "prompt": "What is the weather in Sydney today?",
-      "expected": "do_not_trigger"
-    },
-    {
-      "prompt": "This request should use $forecast-risk-brief rather than $deal-inspection-coach.",
-      "expected": "do_not_trigger"
+      "prompt": "Please build mutual action plans for complex deals and coordinated customer initiatives.",
+      "expected": false,
+      "adjacent_skill": "mutual-action-plan-builder"
     }
   ],
   "output_structure_checks": [
     {
-      "name": "contains_output_element_1",
-      "type": "contains_phrase",
-      "phrase": "Deal Snapshot`: stage, objective, and confidence level."
+      "name": "deal-inspection-coach-core-output",
+      "type": "structure",
+      "description": "Produces Inspection Decision: objective, as-of date, current stage, stage-validity finding, and overall evidence confidence; Evidence Ledger: material claim, status, source, source date, conflict, and proof still needed.",
+      "critical": true
     },
     {
-      "name": "contains_output_element_2",
-      "type": "contains_phrase",
-      "phrase": "Qualification Status`: strengths, missing proof, and uncertainty."
-    },
-    {
-      "name": "contains_output_element_3",
-      "type": "contains_phrase",
-      "phrase": "Risk Register`: top risks with severity and controllability."
-    },
-    {
-      "name": "contains_output_element_4",
-      "type": "contains_phrase",
-      "phrase": "Next Actions`: owner, action, and due date for each critical move."
-    },
-    {
-      "name": "contains_output_element_5",
-      "type": "contains_phrase",
-      "phrase": "Manager Coaching Plan`: what to inspect in the next review."
+      "name": "deal-inspection-coach-decision-discipline",
+      "type": "semantic",
+      "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
+      "critical": true
     }
-  ],
-  "managed_by": "starter"
+  ]
 }

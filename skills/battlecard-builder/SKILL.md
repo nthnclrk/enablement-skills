@@ -1,61 +1,69 @@
 ---
 name: battlecard-builder
-description: Create competitor battlecards for revenue teams with practical talk tracks, proof, and red flags. Use when asked for compete guidance, head-to-head positioning, buyer objections, or seller-ready competitive artifacts. Route broad positioning strategy to value-prop-and-positioning and objection handling systems to objection-library-builder.
+description: Create seller-ready competitor battlecards with fit guidance, discovery questions, supported responses, proof, and escalation boundaries. Use when asked for head-to-head compete guidance, competitive call preparation, buyer comparison handling, or a field-ready battlecard. Route category positioning to value-prop-and-positioning, recurring objections to objection-library-builder, and account-specific preparation to account-brief-builder.
 ---
 
 # Battlecard Builder
-Build concise battlecards that help reps handle real competitive situations without guessing.
+
+Build a compact decision guide that helps sellers handle a competitive situation accurately and credibly.
 
 ## Confirm Inputs First
-- If a current `revenue-enablement-context` exists, use it first for ICP, persona priorities, and approved claim boundaries.
-- Confirm competitor scope and market context.
-- Confirm target segment and common deal scenarios.
-- Confirm known competitor claims and buyer perceptions.
-- Confirm internal strengths, limitations, and no-go claims.
-- Confirm available win-loss evidence and proof artifacts.
-- Confirm enablement audience (new reps, enterprise AEs, managers).
-- If inputs are incomplete, ask for only the minimum missing items or proceed with labeled assumptions.
+
+- Use current context supplied by the user or `.enablement/context.md` when available for ICP, buyer priorities, positioning, and claim boundaries.
+- Treat stale, inferred, or conflicted context as provisional. Never silently update shared context.
+- Confirm the exact competitor, product or edition, geography, segment, use case, and as-of date.
+- Confirm the buyer's decision criteria, incumbent or alternative, deal stage, and competitive moment the card must support.
+- Confirm available evidence: current first-party competitor material, buyer statements, win-loss findings, call evidence, product documentation, and approved internal proof.
+- Confirm the internal audience, intended use, and legal, security, confidentiality, or brand restrictions.
+
+Ask only for missing inputs that could change the guidance. If material competitive evidence is unavailable, return a research and validation brief rather than a definitive battlecard.
+
+Use assumptions only for reversible planning choices, such as section priority. Keep competitor facts, pricing, metrics, quotes, commitments, dates, approvals, requirements, capabilities, security or compliance statements, and customer claims unknown until verified.
 
 ## Read The Right Reference
-- Read [references/battlecard-template.md](references/battlecard-template.md) when you need a stable structure and claim handling rules.
+
+- Read [references/battlecard-template.md](references/battlecard-template.md) for the default structure and evidence fields.
 
 ## Default Workflow
-1. Define the competitor and the deal context.
-Note where this competitor shows up, which segment it shows up in, and why buyers care.
-2. Capture the competitor story.
-Summarize strengths, common buyer appeal, and the claims reps hear most often.
-3. Clarify where you win.
-Call out win zones, disqualifying fit conditions, and the situations where you should not compete hard.
-4. Build the claim-response-proof table.
-For each high-frequency claim, add the response, proof point, and when to use it.
-5. Check freshness.
-Note the source and date for each competitive claim so the card does not go stale.
-6. Add trap handling.
-Include the comparisons and questions that usually pull reps off message.
-7. Add do-not-say guardrails.
-List claims that are too weak, too broad, or not approved.
-8. Route adjacent work:
-   For category messaging, use value-prop-and-positioning.
-   For objection playbooks, use objection-library-builder.
-   For account-specific prep, use account-brief-builder.
+
+1. Define the competitive decision.
+   State what the buyer is choosing, why the alternative is credible, and which decision criteria matter in this scenario.
+2. Build the evidence ledger.
+   Separate verified competitor facts, buyer-reported perceptions, internal hypotheses, and approved claims. Record product scope, geography, source, date, and permitted use.
+3. Map fit conditions.
+   Identify supported win zones, neutral tradeoffs, loss-risk conditions, and situations to qualify out or escalate. Do not turn a product difference into a buyer advantage without a supported mechanism and outcome.
+4. Write diagnostic questions.
+   Give sellers questions that reveal the buyer's objective, current constraint, evaluation method, and consequence of each tradeoff before they respond.
+5. Build response paths.
+   For each common claim or buyer concern, acknowledge the goal, clarify the context, state the supported differentiation, cite proof, and propose a next step. Turn stale or unverified comparisons into validation questions or evidence gaps, not counters. Provide customer-safe wording only when approved.
+6. Add traps and boundaries.
+   Flag unverifiable comparisons, confidential information, absolute claims, security or legal assertions, pricing exceptions, and implementation guarantees.
+7. Set maintenance controls.
+   Show the as-of date, evidence gaps, owner if supplied, and event that should trigger review. Leave unsupplied ownership or review dates unknown.
+8. Route adjacent work.
+   Use value-prop-and-positioning for category strategy, objection-library-builder for recurring objection systems, and account-brief-builder for account-specific preparation.
+
+## Tool Notes
+
+- Verify fast-changing competitor details against current authoritative sources before using them.
+- Treat buyer and seller reports as evidence of perception or deal experience, not automatically as competitor fact.
+- Do not publish, distribute, or write competitive claims into shared systems without explicit approval.
 
 ## Output Contract
-- Competitor snapshot with overlap context.
-- Win zones and loss-risk conditions.
-- Claim-response-proof table.
-- Freshness and source notes.
-- Trap handling and red-flag guidance.
-- Do-not-say list and escalation notes.
-- Assumptions list when source inputs were incomplete.
 
-## What To Avoid
-- Repeating stale competitive claims without verification date/source.
-- Treating battlecards as one-sided attack sheets instead of tradeoff guides.
-- Letting reps use counters that have no legal-safe proof path.
+- `Fast Scan`: competitive scenario, buyer criteria, and recommended posture
+- `Fit Map`: win zones, neutral tradeoffs, loss risks, and qualify-out conditions
+- `Discovery Questions`: questions tied to the decision criteria
+- `Response Paths`: concern, clarification, supported response, proof, next step, and customer-safe status
+- `Evidence Ledger`: source, scope, date, claim type, confidence, and permitted use
+- `Landmines And Escalations`: do-not-say claims and specialist handoffs
+- `Maintenance`: as-of date, evidence gaps, owner status, and review trigger
 
 ## Quality Bar
-- Guidance reflects credible market tradeoffs, not one-sided hype.
-- Counters are evidence-backed and legally safe.
-- Win conditions are specific enough for rep decision-making.
-- Landmines prevent common self-inflicted errors.
-- Output is compact enough for quick call prep.
+
+- Represent credible buyer tradeoffs instead of producing an attack sheet.
+- Keep competitor fact, market perception, internal hypothesis, and approved customer-facing claim distinct.
+- Make each response conditional on buyer context and traceable to current proof.
+- State where the company should not compete hard or cannot substantiate an advantage.
+- Never fabricate or overstate competitor weaknesses, customer outcomes, security, compliance, pricing, roadmap, or legal claims.
+- Keep the fast-scan view usable during call preparation without hiding evidence limits.

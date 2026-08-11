@@ -1,5 +1,11 @@
 {
   "name": "enablement-programs",
-  "version": "0.2.0",
-  "description": "Program design, onboarding, certification, coaching, and inspection bundle."
+  "version": "0.3.0",
+  "description": "Program bundle with reusable context, onboarding, certification, coaching, and inspection skills.",
+  "author": {
+    "name": "Nathan Clark"
+  },
+  "homepage": "https://github.com/nthnclrk/enablement-skills",
+  "repository": "https://github.com/nthnclrk/enablement-skills",
+  "license": "MIT"
 }

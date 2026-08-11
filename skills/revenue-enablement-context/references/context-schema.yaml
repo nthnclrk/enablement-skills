@@ -1,69 +1,130 @@
-# Revenue Enablement Context (machine-readable scaffold)
-# Replace placeholder values with confirmed data where possible.
+# Optional machine-readable export of `.enablement/context.md`.
+# Do not create this by default. Preserve unresolved and sensitive states.
 
+schema_version: 1
 metadata:
+  canonical_path: ".enablement/context.md"
+  business_scope: "[company, business-unit, or workspace]"
   owner: "[team-or-person]"
-  last_updated: "YYYY-MM-DD"
-  confidence: "high|medium|low"
-  source_of_truth: "[url-or-doc-path]"
+  last_reviewed: "YYYY-MM-DD"
+  default_sensitivity: "public|internal|confidential|restricted"
+  approved_uses: []
+  excluded_material: []
 
-business_snapshot:
-  company: "[name]"
-  product_lines: []
-  target_market: "[description]"
-  revenue_model: "[e.g., subscription]"
+sections:
+  company_product:
+    governance:
+      state: "confirmed|inferred|conflicted|missing"
+      last_verified: "YYYY-MM-DD"
+      review_after: "YYYY-MM-DD"
+      reuse: "approved|limited|not-approved"
+      reuse_scope: "[required when reuse is limited]"
+      sensitivity: "public|internal|confidential|restricted"
+      sources:
+        - reference: "[path, URL, or source name]"
+          as_of: "YYYY-MM-DD"
+          authority: "primary|secondary|unverified"
+    company: "[name]"
+    revenue_model: "[model]"
+    product_lines: []
+    use_cases: []
+    constraints: []
 
-icp_and_segments:
-  primary_icp: "[definition]"
-  segments:
-    - name: "[segment-name]"
-      company_size: "[range]"
-      industry: "[industry]"
-      geography: "[region]"
-  exclusions: []
+  audiences_buying_committee:
+    governance:
+      state: "confirmed|inferred|conflicted|missing"
+      last_verified: "YYYY-MM-DD"
+      review_after: "YYYY-MM-DD"
+      reuse: "approved|limited|not-approved"
+      reuse_scope: "[required when reuse is limited]"
+      sensitivity: "public|internal|confidential|restricted"
+      sources: []
+    primary_icp: "[definition]"
+    segments: []
+    exclusions: []
+    personas: []
+    customer_language: []
 
-buying_committee:
-  personas:
-    - role: "[title]"
-      accountability: "[what they own]"
-      business_pain: "[pain]"
-      decision_criteria: []
-      typical_objections: []
+  sales_process:
+    governance:
+      state: "confirmed|inferred|conflicted|missing"
+      last_verified: "YYYY-MM-DD"
+      review_after: "YYYY-MM-DD"
+      reuse: "approved|limited|not-approved"
+      reuse_scope: "[required when reuse is limited]"
+      sensitivity: "public|internal|confidential|restricted"
+      sources: []
+    stages: []
+    qualification_definition: "[framework-or-rule]"
+    roles_and_handoffs: []
 
-sales_motion:
-  stages:
-    - name: "[stage]"
-      entry_criteria: []
-      exit_criteria: []
-      conversion_risks: []
-  qualification_definition: "[framework-or-rule]"
+  packaging_commercials:
+    governance:
+      state: "confirmed|inferred|conflicted|missing"
+      last_verified: "YYYY-MM-DD"
+      review_after: "YYYY-MM-DD"
+      reuse: "approved|limited|not-approved"
+      reuse_scope: "[required when reuse is limited]"
+      sensitivity: "public|internal|confidential|restricted"
+      sources: []
+    packaging_summary: "[summary]"
+    pricing_logic: "[summary]"
+    approval_constraints: []
 
-packaging_and_commercials:
-  packaging_summary: "[summary]"
-  pricing_logic: "[summary]"
-  discount_constraints: "[rules]"
+  messaging_objections_evidence:
+    governance:
+      state: "confirmed|inferred|conflicted|missing"
+      last_verified: "YYYY-MM-DD"
+      review_after: "YYYY-MM-DD"
+      reuse: "approved|limited|not-approved"
+      reuse_scope: "[required when reuse is limited]"
+      sensitivity: "public|internal|confidential|restricted"
+      sources: []
+    positioning_statement: "[statement]"
+    value_pillars: []
+    proof_points: []
+    objections: []
+    claim_boundaries: []
 
-messaging_baseline:
-  positioning_statement: "[statement]"
-  value_pillars: []
-  proof_points: []
+  competitive_context:
+    governance:
+      state: "confirmed|inferred|conflicted|missing"
+      last_verified: "YYYY-MM-DD"
+      review_after: "YYYY-MM-DD"
+      reuse: "approved|limited|not-approved"
+      reuse_scope: "[required when reuse is limited]"
+      sensitivity: "public|internal|confidential|restricted"
+      sources: []
+    alternatives: []
 
-competitive_context:
-  alternatives:
-    - name: "[competitor-or-status-quo]"
-      where_they_are_strong: []
-      where_we_are_strong: []
-      common_traps: []
-      response_guidance: []
+  tools_canonical_sources:
+    governance:
+      state: "confirmed|inferred|conflicted|missing"
+      last_verified: "YYYY-MM-DD"
+      review_after: "YYYY-MM-DD"
+      reuse: "approved|limited|not-approved"
+      reuse_scope: "[required when reuse is limited]"
+      sensitivity: "public|internal|confidential|restricted"
+      sources: []
+    systems: []
 
-current_initiatives:
-  quarter_priorities: []
-  launches_or_changes: []
-  enablement_dependencies:
-    - item: "[dependency]"
-      deadline: "YYYY-MM-DD"
-      owner: "[owner]"
+  current_priorities:
+    governance:
+      state: "confirmed|inferred|conflicted|missing"
+      last_verified: "YYYY-MM-DD"
+      review_after: "YYYY-MM-DD"
+      reuse: "approved|limited|not-approved"
+      reuse_scope: "[required when reuse is limited]"
+      sensitivity: "public|internal|confidential|restricted"
+      sources: []
+    initiatives: []
+    dependencies: []
+    risks: []
+    success_measures: []
 
-governance:
-  open_assumptions: []
-  unresolved_decisions: []
+conflicts_and_gaps:
+  - item: "[decision or missing fact]"
+    state: "conflicted|missing"
+    evidence_or_gap: "[summary]"
+    decision_owner: "[owner]"
+    next_review: "YYYY-MM-DD"

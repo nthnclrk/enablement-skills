@@ -1,65 +1,52 @@
 {
+  "schema_version": 2,
   "skill": "battlecard-builder",
   "source": "skills/battlecard-builder/SKILL.md",
-  "notes": "Starter eval scaffold. Expand prompts and checks with real traces.",
+  "notes": "Generated routing and basic-output starter. Curate realistic prompts and example-backed task scenarios before treating it as behavior evidence.",
+  "managed_by": "starter-generator",
   "should_trigger": [
     {
-      "prompt": "Use $battlecard-builder for this request.",
-      "expected": "trigger"
+      "prompt": "Please create seller-ready competitor battlecards with fit guidance, discovery questions, supported responses, proof, and escalation boundaries.",
+      "expected": true
     },
     {
-      "prompt": "I need help with battlecard builder.",
-      "expected": "trigger"
+      "prompt": "I need head-to-head compete guidance, competitive call preparation, buyer comparison handling, or a field-ready battlecard.",
+      "expected": true
     },
     {
-      "prompt": "Please create a first draft using the battlecard builder workflow.",
-      "expected": "trigger"
+      "prompt": "I have rough notes. Please turn them into a usable battlecard and label anything that still needs confirmation.",
+      "expected": true
     }
   ],
   "should_not_trigger": [
     {
-      "prompt": "Write a short poem about quarterly planning.",
-      "expected": "do_not_trigger"
+      "prompt": "Please build and refine value propositions and messaging frameworks for revenue teams.",
+      "expected": false,
+      "adjacent_skill": "value-prop-and-positioning"
     },
     {
-      "prompt": "Refactor this Python function for performance.",
-      "expected": "do_not_trigger"
+      "prompt": "Please build a structured objection handling library from qualified objection evidence, with response patterns, proof, and escalation rules.",
+      "expected": false,
+      "adjacent_skill": "objection-library-builder"
     },
     {
-      "prompt": "What is the weather in Sydney today?",
-      "expected": "do_not_trigger"
-    },
-    {
-      "prompt": "This request should use $value-prop-and-positioning rather than $battlecard-builder.",
-      "expected": "do_not_trigger"
+      "prompt": "Please build concise, decision-ready account briefs for account reviews, account planning, renewal or expansion reviews, and customer meeting preparation.",
+      "expected": false,
+      "adjacent_skill": "account-brief-builder"
     }
   ],
   "output_structure_checks": [
     {
-      "name": "contains_output_element_1",
-      "type": "contains_phrase",
-      "phrase": "Competitor snapshot with overlap context."
+      "name": "battlecard-builder-core-output",
+      "type": "structure",
+      "description": "Produces Fast Scan: competitive scenario, buyer criteria, and recommended posture; Fit Map: win zones, neutral tradeoffs, loss risks, and qualify-out conditions.",
+      "critical": true
     },
     {
-      "name": "contains_output_element_2",
-      "type": "contains_phrase",
-      "phrase": "Win zones and loss-risk conditions."
-    },
-    {
-      "name": "contains_output_element_3",
-      "type": "contains_phrase",
-      "phrase": "Claim-response-proof table."
-    },
-    {
-      "name": "contains_output_element_4",
-      "type": "contains_phrase",
-      "phrase": "Freshness and source notes."
-    },
-    {
-      "name": "contains_output_element_5",
-      "type": "contains_phrase",
-      "phrase": "Trap handling and red-flag guidance."
+      "name": "battlecard-builder-decision-discipline",
+      "type": "semantic",
+      "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
+      "critical": true
     }
-  ],
-  "managed_by": "starter"
+  ]
 }

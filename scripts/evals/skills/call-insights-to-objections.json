@@ -1,64 +1,89 @@
 {
+  "schema_version": 2,
   "skill": "call-insights-to-objections",
   "source": "skills/call-insights-to-objections/SKILL.md",
-  "notes": "Starter eval scaffold. Expand prompts and checks with real traces.",
+  "notes": "Curated eval focused on multi-call objection analysis, coverage discipline, and the boundary with governed response assets.",
+  "managed_by": "curated",
   "should_trigger": [
     {
-      "prompt": "Use $call-insights-to-objections for this request.",
-      "expected": "trigger"
+      "prompt": "Analyze these 24 discovery and demo calls to find recurring buyer objections by persona and stage. Show the denominator, account breadth, evidence confidence, and the two enablement actions that deserve priority.",
+      "expected": true
     },
     {
-      "prompt": "I need help with call insights to objections.",
-      "expected": "trigger"
+      "prompt": "Our managers keep saying implementation capacity is blocking deals. Check the supplied call set, separate explicit buyer language from seller interpretation, and tell me whether the pattern is broad enough to act on.",
+      "expected": true
     },
     {
-      "prompt": "Please create a first draft using the call insights to objections workflow.",
-      "expected": "trigger"
-    },
-    {
-      "prompt": "Please find recurring pushback, objection themes, or message gaps by segment, persona, or stage.",
-      "expected": "trigger"
+      "prompt": "Turn this month of call notes into an evidence-backed objection brief. Some records have transcripts and others only summaries, so make coverage and source quality visible.",
+      "expected": true
     }
   ],
   "should_not_trigger": [
     {
-      "prompt": "Write a short poem about quarterly planning.",
-      "expected": "do_not_trigger"
+      "prompt": "Coach this one discovery call and give the rep two behaviors to practice before the next meeting.",
+      "expected": false,
+      "adjacent_skill": "call-review-coach"
     },
     {
-      "prompt": "Refactor this Python function for performance.",
-      "expected": "do_not_trigger"
+      "prompt": "Build the approved objection-response library, including proof, do-not-say guidance, lifecycle ownership, and escalation rules.",
+      "expected": false,
+      "adjacent_skill": "objection-library-builder"
     },
     {
-      "prompt": "What is the weather in Sydney today?",
-      "expected": "do_not_trigger"
-    },
-    {
-      "prompt": "This request should use $call-review-coach rather than $call-insights-to-objections.",
-      "expected": "do_not_trigger"
+      "prompt": "Synthesize buyer interviews and closed-deal evidence to explain why we won or lost across segments.",
+      "expected": false,
+      "adjacent_skill": "win-loss-synthesis"
     }
   ],
   "output_structure_checks": [
     {
-      "name": "contains_output_element_1",
-      "type": "contains_phrase",
-      "phrase": "Objection theme table: theme, frequency, severity, affected personas/stages, confidence"
+      "name": "call-insights-scope-and-coverage",
+      "type": "structure",
+      "description": "Includes the decision question, inclusion rules, eligible and usable calls, denominators, unique-account and rep breadth, source quality, and material coverage gaps.",
+      "critical": true
     },
     {
-      "name": "contains_output_element_2",
-      "type": "contains_phrase",
-      "phrase": "Evidence pack: representative snippets per theme"
+      "name": "call-insights-evidence-separation",
+      "type": "semantic",
+      "description": "Keeps buyer evidence, analyst interpretation, root-cause hypotheses, observed consequences, and recommendations distinct and traceable.",
+      "critical": true
     },
     {
-      "name": "contains_output_element_3",
-      "type": "contains_phrase",
-      "phrase": "Top enablement actions: owner, expected impact, suggested timeline"
-    },
-    {
-      "name": "contains_output_element_4",
-      "type": "contains_phrase",
-      "phrase": "Assumptions and data quality caveats"
+      "name": "call-insights-governance-boundary",
+      "type": "forbidden_behavior",
+      "description": "Does not turn sparse or uneven evidence into organization-wide prevalence, individual performance conclusions, or approved objection-response language.",
+      "critical": true
     }
   ],
-  "managed_by": "starter"
+  "task_scenarios": [
+    {
+      "id": "call-insights-mixed-source-coverage",
+      "input_state": "partial",
+      "prompt": "Analyze calls.json using scope.md. Cluster recurring objections, quantify frequency and independent-account breadth, attach short representative evidence, and recommend no more than two enablement actions. Keep observation, interpretation, and recommendation separate, and make weak coverage visible.",
+      "files": [
+        "examples/call-insights-to-objections/calls.json",
+        "examples/call-insights-to-objections/scope.md"
+      ],
+      "assertions": [
+        {
+          "name": "call-insights-seven-record-scope",
+          "type": "semantic",
+          "description": "Uses exactly seven in-scope records, excludes the enterprise procurement call, and weights transcript evidence above the summary-only record.",
+          "critical": true
+        },
+        {
+          "name": "call-insights-breadth-and-uncertainty",
+          "type": "semantic",
+          "description": "Reports call frequency and independent-account or rep breadth, keeps the isolated security concern visible without calling it recurring, and preserves the unknown outcome.",
+          "critical": true
+        },
+        {
+          "name": "call-insights-no-governed-publication",
+          "type": "forbidden_behavior",
+          "description": "Does not invent deal outcomes, make rep-level performance claims, or publish a governed objection library from this analysis.",
+          "critical": true
+        }
+      ]
+    }
+  ]
 }

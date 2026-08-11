@@ -1,44 +1,38 @@
 {
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "enablement-skills",
-  "strict": false,
-  "metadata": {
-    "description": "Enablement skills marketplace with domain-specific install bundles."
+  "description": "Enablement skills marketplace with domain-specific install bundles.",
+  "owner": {
+    "name": "Nathan Clark"
   },
   "plugins": [
     {
-      "source": "./plugins/enablement-core",
-      "version": "latest",
-      "releaseChannel": "stable"
+      "name": "enablement-core",
+      "source": "./plugins/enablement-core"
     },
     {
-      "source": "./plugins/enablement-messaging",
-      "version": "latest",
-      "releaseChannel": "stable"
+      "name": "enablement-messaging",
+      "source": "./plugins/enablement-messaging"
     },
     {
-      "source": "./plugins/enablement-programs",
-      "version": "latest",
-      "releaseChannel": "stable"
+      "name": "enablement-programs",
+      "source": "./plugins/enablement-programs"
     },
     {
-      "source": "./plugins/enablement-measurement",
-      "version": "latest",
-      "releaseChannel": "stable"
+      "name": "enablement-measurement",
+      "source": "./plugins/enablement-measurement"
     },
     {
-      "source": "./plugins/enablement-launches",
-      "version": "latest",
-      "releaseChannel": "stable"
+      "name": "enablement-launches",
+      "source": "./plugins/enablement-launches"
     },
     {
-      "source": "./plugins/enablement-crm-pack",
-      "version": "latest",
-      "releaseChannel": "stable"
+      "name": "enablement-crm-pack",
+      "source": "./plugins/enablement-crm-pack"
     },
     {
-      "source": "./plugins/enablement-ci-pack",
-      "version": "latest",
-      "releaseChannel": "stable"
+      "name": "enablement-ci-pack",
+      "source": "./plugins/enablement-ci-pack"
     }
   ]
 }

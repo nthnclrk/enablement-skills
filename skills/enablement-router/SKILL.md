@@ -1,59 +1,72 @@
 ---
 name: enablement-router
-description: Route revenue enablement requests to the best-fit skill or sequence of skills. Use when the user asks which enablement skill to use, combines multiple enablement asks in one prompt, or needs a staged workflow across planning, messaging, coaching, delivery, and measurement. Route single-artifact requests directly to the corresponding specialist skill instead of this router.
+description: Route revenue enablement requests to the smallest coherent skill or sequence. Use when the user asks which skill to use, combines multiple enablement jobs, needs a staged workflow, or describes a performance problem without knowing the right enablement response. Route clear single-artifact requests directly to the corresponding specialist skill.
 ---
 
 # Enablement Router
 
-Choose the right enablement skill or sequence when the request covers more than one job.
+Choose the shortest executable path from the user's outcome to the right enablement work.
 
 ## Confirm Inputs First
 
-Confirm only the minimum:
+Derive these from the request and workspace before asking:
 
-- The user request
-- Main deliverable needed
-- Audience and time horizon
-- Whether a current `revenue-enablement-context` already exists
+- Required decision or deliverable
+- Audience and timing when they affect the route
+- Evidence needed for the first step
+- Whether current shared GTM context matters and exists
+- Which named skills the environment exposes
 
-If one of these is missing, ask once. If speed matters more than precision, make labeled assumptions and continue.
+Ask one concise question only when its answer changes the primary skill, order, or audience mode. Combine at most three decision variables. Do not request visible context or an installed-skill inventory. If a safe assumption is possible, label it and continue.
 
 ## Read The Right Reference
 
-Read [references/route-map.md](references/route-map.md) when choosing between similar skills or building a multi-step path.
+Read [references/route-map.md](references/route-map.md) before routing. Use it to identify the primary job, nearest boundary, and shortest handoff.
 
 ## Default Workflow
 
-1. Split the request into the actual jobs to be done.
-2. Pick one primary skill for each job.
-3. Check nearby skills so the route does not drift into the wrong deliverable.
-4. Collapse overlaps and keep the path as short as possible.
-5. Check prerequisites, especially shared context, metrics, or source material.
-6. If key context is missing and later skills depend on it, add `revenue-enablement-context` first.
-7. Return the recommended order, expected handoff from each step, and what the user can skip.
-8. Call out related asks that should stay out of scope for this run.
+1. Translate the request into jobs and one observable end result.
+   If the user reports a performance miss without a diagnosed cause, route first to `enablement-program-design` in discovery mode. Do not assume training; end the route if the evidence points to a non-enablement cause.
+2. Separate the required outcome from related, unrequested work.
+3. Match required jobs to the map; use boundaries to resolve close alternatives.
+4. Add `revenue-enablement-context` only when missing or stale assumptions would materially weaken later work. Do not force setup for a narrow source transformation.
+5. Check the visible skill catalog or installed paths. Mark each step `Available now` or `Additional skill needed`; never imply an unavailable skill can run.
+6. Select one skill by default. Add another only when its predecessor produces a required handoff.
+7. Keep the route to three skills or fewer. If more are necessary, return a first phase, its completion evidence, the trigger for phase two, and a reusable handoff packet.
+8. Ask the decision-changing question only if a real fork remains; otherwise state the assumption.
+9. Return the next action, route, boundaries, handoffs, availability, and exact first input. Do not ask again for a confirmed input unless it is stale, conflicted, or needs a more specific definition for the selected job.
 
-## What To Avoid
+## Tool Notes
 
-- Overcomplicating a simple request with too many skills.
-- Skipping the context step when downstream work clearly depends on it.
-- Putting a build or writing skill before the inputs it needs exist.
-- Letting adjacent asks creep into the route without saying they are separate work.
+- The route map lists capabilities; it does not prove installation.
+- Prefer the environment's catalog over asking the user what is available.
+- Do not invent install commands, package names, or fallback capabilities. Mark the missing job `Additional skill needed`.
+- Route only unless the user also asked to execute the selected work.
 
 ## Output Contract
 
-Default output includes:
+For a direct route, return a short answer with:
 
-- A recommended skill sequence with rationale
-- A one-line boundary note per skill in the sequence
-- Required inputs for each step
-- Expected output from each step
-- Explicit out-of-scope items so the route stays tight
+- What to do next, why, and what not to do yet
+- Primary skill and availability status
+- Its nearest boundary
+- Exact first input needed
+
+For a sequence, return a compact table with:
+
+- Order and selected skill
+- `Available now` or `Additional skill needed`
+- Job performed and why it belongs
+- Canonical artifact, input or handoff required, and what must not be redone
+- Expected output
+
+Include assumptions, deferred work, phase-exit evidence when relevant, and one starting action. A handoff packet contains relevant confirmed facts, provisional or conflicting facts, blocking unknowns, source references, requested output, and stop condition. Do not use a multi-step table for a single-skill route.
 
 ## Quality Bar
 
-- Route is short, clear, and easy to run.
-- Each selected skill has an obvious reason to be there.
-- Dependencies are explicit so work does not stall midway.
-- Route order is practical and avoids circular handoffs.
-- The user can start the first step immediately.
+- One skill is the default; every extra step requires a handoff.
+- Questions change the route rather than collect nice-to-have detail.
+- Context setup is selective, not ritualistic.
+- Boundaries are explicit and unavailable skills are not presented as executable.
+- Dependencies are ordered, with no circular handoffs.
+- The user can start immediately; related work stays deferred.

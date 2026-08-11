@@ -1,61 +1,100 @@
 {
+  "schema_version": 2,
   "skill": "talk-track-builder",
   "source": "skills/talk-track-builder/SKILL.md",
   "notes": "Curated eval focused on live-conversation usefulness rather than generic copywriting.",
+  "managed_by": "curated",
   "should_trigger": [
     {
       "prompt": "Create a discovery talk track for enterprise AEs selling to VP Operations. It should diagnose urgency, surface workflow pain, handle a likely 'we already have a process' objection, and end with a concrete next-step ask.",
-      "expected": "trigger"
+      "expected": true
     },
     {
       "prompt": "Build a renewal-expansion talk track for CSMs preparing for a pricing increase conversation with skeptical customers. Keep it natural and add branch paths for budget pressure and competitor comparisons.",
-      "expected": "trigger"
+      "expected": true
     },
     {
       "prompt": "I need a demo talk track for SEs with role-specific transitions, proof inserts under 20 seconds, and manager inspection cues so leaders can coach against it.",
-      "expected": "trigger"
+      "expected": true
     }
   ],
   "should_not_trigger": [
     {
       "prompt": "Create the core positioning strategy and differentiated value proposition for our new AI analytics product.",
-      "expected": "do_not_trigger"
+      "expected": false,
+      "adjacent_skill": "value-prop-and-positioning"
     },
     {
       "prompt": "Build a governed objection library with approved responses, escalation rules, and response status labels.",
-      "expected": "do_not_trigger"
+      "expected": false,
+      "adjacent_skill": "objection-library-builder"
     },
     {
       "prompt": "Outline a one-pager and deck narrative for our annual kickoff presentation.",
-      "expected": "do_not_trigger"
+      "expected": false,
+      "adjacent_skill": "one-pager-and-slide-outline"
     }
   ],
   "output_structure_checks": [
     {
-      "name": "contains_versioned_tracks",
-      "type": "contains_phrase",
-      "phrase": "Talk tracks versioned by role, persona, and stage"
+      "name": "talk-track-builder-output-01",
+      "type": "structure",
+      "description": "The output substantively includes: Talk tracks versioned by role, persona, and stage",
+      "critical": true
     },
     {
-      "name": "contains_question_set",
-      "type": "contains_phrase",
-      "phrase": "Discovery question set grouped by objective"
+      "name": "talk-track-builder-output-02",
+      "type": "structure",
+      "description": "The output substantively includes: Discovery question set grouped by objective",
+      "critical": true
     },
     {
-      "name": "contains_transitions",
-      "type": "contains_phrase",
-      "phrase": "Transition lines and checkpoint language"
+      "name": "talk-track-builder-output-03",
+      "type": "structure",
+      "description": "The output substantively includes: Transition lines and checkpoint language",
+      "critical": false
     },
     {
-      "name": "contains_proof_snippets",
-      "type": "contains_phrase",
-      "phrase": "Proof snippets and when to deploy them"
+      "name": "talk-track-builder-output-04",
+      "type": "structure",
+      "description": "The output substantively includes: Proof snippets and when to deploy them",
+      "critical": false
     },
     {
-      "name": "contains_branch_paths",
-      "type": "contains_phrase",
-      "phrase": "Branch-path response lines for common derailments"
+      "name": "talk-track-builder-output-05",
+      "type": "structure",
+      "description": "The output substantively includes: Branch-path response lines for common derailments",
+      "critical": false
     }
   ],
-  "managed_by": "curated"
+  "task_scenarios": [
+    {
+      "id": "talk-track-builder-discovery-track",
+      "input_state": "partial",
+      "prompt": "Review message-inputs.md and build a natural 12-minute discovery talk track for the first substantive call. Give the AE an opening frame, a short question path, transitions, and branch responses for the two likely objections. End with a concrete next-step ask. Keep proof inside the approved boundaries and make any unsupported area explicit.",
+      "files": [
+        "examples/talk-track-builder/message-inputs.md"
+      ],
+      "assertions": [
+        {
+          "name": "talk-track-live-structure",
+          "type": "structure",
+          "description": "Includes one call objective, a progressive question path, objection branches, transitions, and one explicit next-step ask.",
+          "critical": true
+        },
+        {
+          "name": "talk-track-proof-boundaries",
+          "type": "semantic",
+          "description": "Retains the pilot caveat and does not generalize standard-integration evidence to custom ERP work.",
+          "critical": true
+        },
+        {
+          "name": "talk-track-no-invention",
+          "type": "forbidden_behavior",
+          "description": "Does not invent pricing, customer logos, implementation guarantees, or universal ROI.",
+          "critical": true
+        }
+      ]
+    }
+  ]
 }

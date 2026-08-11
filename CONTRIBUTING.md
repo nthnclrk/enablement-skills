@@ -1,71 +1,137 @@
 # Contributing
 
-Thanks for contributing to `enablement-skills`.
-
-## What This Repo Is
-
-This repo packages reusable skills and supporting workflow guidance for enablement professionals using agent tools such as Claude Code and Codex.
-
-It is not:
-- a private prompt dump
-- a full vendor-integration codebase
-- an exhaustive product-documentation mirror
+Contributions should make an enablement workflow clearer, more dependable, or easier to adopt without making the package harder to route or maintain.
 
 ## Before You Change Anything
 
 Read:
-- [README.md](README.md)
-- [AGENTS.md](AGENTS.md)
-- [ARCHITECTURE.md](ARCHITECTURE.md)
-- [systems/REGISTRY.md](systems/REGISTRY.md) if your change touches system playbooks
 
-## Contribution Rules
+- [README.md](README.md) for audience, startup, and installation guidance
+- [AGENTS.md](AGENTS.md) for repository rules
+- [ARCHITECTURE.md](ARCHITECTURE.md) for standards, packaging, and validation boundaries
+- [systems/REGISTRY.md](systems/REGISTRY.md) if the change touches a system playbook
 
-For skill changes:
-1. Update the relevant file under `skills/<skill-name>/`.
-2. Prefer starting with `bash scripts/new-skill.sh <skill-name>` for new skills.
+## Portable Standard And Repository Policy
+
+The portable Agent Skills format requires a skill folder with `SKILL.md` and the required `name` and `description` frontmatter fields.
+
+This repository applies a stricter contribution contract. Every canonical skill must also:
+
+- live at `skills/<skill-name>/`
+- use frontmatter containing exactly `name` and `description`
+- include `agents/openai.yaml`
+- include the required workflow and output sections
+- link directly to any bundled references it needs
+- have a matching eval artifact under `scripts/evals/skills/`
+
+Treat these as repository consistency rules rather than universal requirements of the Agent Skills standard.
+
+## Change A Skill
+
+For a new skill, start with:
+
+```bash
+bash scripts/new-skill.sh my-new-skill
+```
+
+For new and existing skills:
+
+1. Start from a concrete user job and deliverable.
+2. Make the frontmatter description state what the skill does, when it should trigger, and its closest boundaries.
 3. Keep `SKILL.md` compact and procedural.
-4. Preserve frontmatter shape: `name` and `description` only.
-5. Update eval fixtures if the trigger boundary or output contract changed.
-6. Update [VERSIONS.md](VERSIONS.md) and [CHANGELOG.md](CHANGELOG.md) for meaningful behavior changes.
+4. Put reusable detailed frameworks in direct `references/` only when they improve repeated execution.
+5. Use scripts only for deterministic work that is safer or more reliable than instructions.
+6. Update should-trigger, should-not-trigger, and output scenarios when behavior or routing changes.
+7. Confirm that `agents/openai.yaml` still matches the skill.
 
-For system playbook changes:
-1. Keep guidance workflow-first.
-2. Prefer common, reliable patterns over exhaustive feature lists.
-3. Be explicit when capabilities are tenant-specific, rapidly evolving, or not fully verified from public docs.
-4. Do not imply this repo ships adapters or native integrations unless code actually exists for that.
+Do not make a portable skill depend on a relative path outside its folder. Repository-level system playbooks can inform the design, but a skill installed on its own must retain the instructions and resources it needs.
+
+## Write For The Practitioner
+
+A useful skill should work for someone who knows the business problem but may not know the package.
+
+- name the deliverable in familiar enablement language
+- ask only for inputs that materially affect the result
+- use existing context instead of repeating intake questions
+- distinguish sourced evidence, assumptions, freshness, and confidence
+- make audience and usage mode explicit
+- end with decisions, actions, owners, or inspection points where relevant
+- avoid fabricating facts or presenting directional evidence as certainty
+
+If shared company context is missing and the gap would materially weaken the result, request the smallest source packet needed. Do not force a full context-building workflow for a self-contained task.
+
+## Change A System Playbook
+
+System playbooks are representative workflow guidance, not complete vendor documentation.
+
+1. Keep the guidance focused on inputs, important fields, evidence quality, and safe write-back boundaries.
+2. Prefer common, reliable workflows over broad feature inventories.
+3. Verify exact product claims against current vendor documentation.
+4. State when behavior is tenant-specific, permission-gated, rapidly changing, or not fully verified.
+5. Do not imply that the repository ships an adapter, API client, MCP server, or native integration unless that code exists.
+
+## Change Packaging Or Bundles
+
+Canonical skill behavior remains under `skills/`. Bundle entries must resolve to those canonical folders.
+
+When membership changes, update together:
+
+- `plugins/BUNDLES.md`
+- the affected bundle entries and manifest
+- `VERSIONS.md`
+- `CHANGELOG.md`
+- README bundle guidance when the user-facing choice changes
+
+Keep host-specific packaging claims narrow. The current plugin manifests are for Claude marketplace distribution; portable skill folders are the cross-host layer.
 
 ## Validation
 
-Run:
+### Repository structure
 
 ```bash
 bash scripts/validate.sh
 ```
 
-Optional external-spec check:
+This is a read-only check of canonical structure, Markdown links, interface metadata, eval coverage and schema, starter freshness, marketplace and plugin metadata, versions, and bundle membership.
+
+### Portable specification
 
 ```bash
-bash scripts/validate-official.sh
+skills-ref validate skills/<skill-name>
 ```
 
-If you add or substantially change examples, check them manually for:
-- realistic inputs
-- realistic prompts
-- output shapes that match the target skill
+Run the reference validator for each changed skill. Use `bash scripts/validate-official.sh` for the full collection. CI installs `skills-ref==0.1.1`; the wrapper also documents an opt-in `uvx` fallback pinned to that version.
+
+### Behavior
+
+Structural checks do not execute eval prompts. For behavior changes, run representative should-trigger, should-not-trigger, and output scenarios with the intended host or model. Compare the result with the previous behavior and record any important routing boundary uncovered by the test.
+
+Score material changes with the [quality rubric](scripts/evals/README.md#quality-rubric). The structural checker cannot substitute for an executed task or practitioner review.
+
+If examples change, check that each still has a realistic use case, inputs, prompt, and expected output shape.
+
+## Release Records
+
+For a meaningful shipped behavior change:
+
+- update `VERSIONS.md` for repository and bundle state
+- update `CHANGELOG.md` with the user-visible change
+- update eval scenarios for every changed trigger or output contract
+
+Use semantic versioning as defined in `VERSIONS.md`. Keep changes small enough that a practitioner can understand what changed and why.
 
 ## Pull Requests
 
-A good PR should state:
-- what changed
-- why it changed
-- which skills or system playbooks are affected
-- whether validation passed
+A pull request should state:
 
-Use small, reviewable PRs. Avoid bundling unrelated skill changes together.
+- the practitioner problem addressed
+- the skills, systems, or bundles affected
+- the behavior and routing changes
+- the validation and behavior scenarios run
+- any known limitations or follow-up work
+
+Avoid combining unrelated skill families or packaging changes in one pull request.
 
 ## Licensing And Attribution
 
-By contributing to this repo, you agree that your contributions will be licensed under the MIT license in [LICENSE](LICENSE).
-
-Vendor names referenced in this repo remain the property of their respective owners. Do not imply partnership, endorsement, or affiliation where none exists.
+Contributions are licensed under the MIT license in [LICENSE](LICENSE). Vendor names remain the property of their respective owners. Do not imply partnership, endorsement, or affiliation where none exists.

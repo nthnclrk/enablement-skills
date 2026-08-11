@@ -1,61 +1,70 @@
 {
+  "schema_version": 2,
   "skill": "account-brief-builder",
   "source": "skills/account-brief-builder/SKILL.md",
   "notes": "Curated eval focused on internal account decision support rather than external executive briefings.",
+  "managed_by": "curated",
   "should_trigger": [
     {
-      "prompt": "Prepare an internal account brief for our top expansion target in EMEA. I need stakeholder mapping, upside and risk, a 30-day action plan, and freshness notes because our CRM and Gong records are inconsistent.",
-      "expected": "trigger"
+      "prompt": "Prepare an internal account brief for our top expansion target in EMEA. I need stakeholder mapping, upside and risk, a near-term action plan aligned to the decision window, and freshness notes because our CRM and Gong records are inconsistent.",
+      "expected": true
     },
     {
       "prompt": "Build a concise account brief for a weekly deal strategy review. Include commercial state, blockers, champion strength, procurement risk, and the specific decisions we need to make this week.",
-      "expected": "trigger"
+      "expected": true
     },
     {
       "prompt": "Summarize this account into one decision-ready internal brief using CRM history, recent calls, and internal notes. Flag stale data explicitly and do not fabricate missing facts.",
-      "expected": "trigger"
+      "expected": true
     }
   ],
   "should_not_trigger": [
     {
       "prompt": "Create an executive-facing briefing memo for our CEO before tomorrow's customer meeting.",
-      "expected": "do_not_trigger"
+      "expected": false,
+      "adjacent_skill": "executive-briefing-builder"
     },
     {
       "prompt": "Build a QBR structure for a strategic customer renewal conversation.",
-      "expected": "do_not_trigger"
+      "expected": false,
+      "adjacent_skill": "qbr-ebr-builder"
     },
     {
       "prompt": "Draft a mutual action plan with owners, dates, and buyer-visible milestones.",
-      "expected": "do_not_trigger"
+      "expected": false,
+      "adjacent_skill": "mutual-action-plan-builder"
     }
   ],
   "output_structure_checks": [
     {
-      "name": "contains_exec_summary",
-      "type": "contains_phrase",
-      "phrase": "Executive summary (5-8 lines)"
+      "name": "account-brief-builder-output-01",
+      "type": "structure",
+      "description": "The output substantively includes: Executive summary (5-8 lines)",
+      "critical": true
     },
     {
-      "name": "contains_stakeholder_map",
-      "type": "contains_phrase",
-      "phrase": "Stakeholder map with influence/stance"
+      "name": "account-brief-builder-output-02",
+      "type": "structure",
+      "description": "The output substantively includes: Stakeholder map with influence/stance",
+      "critical": true
     },
     {
-      "name": "contains_risk_register",
-      "type": "contains_phrase",
-      "phrase": "Risk register with trigger and mitigation"
+      "name": "account-brief-builder-output-03",
+      "type": "structure",
+      "description": "The output substantively includes: Risk register with trigger and mitigation",
+      "critical": false
     },
     {
-      "name": "contains_30_day_plan",
-      "type": "contains_phrase",
-      "phrase": "30-day action plan with owners/dates"
+      "name": "account-brief-builder-output-04",
+      "type": "structure",
+      "description": "The output substantively includes: A near-term action plan aligned to the decision window, with owners and verified or proposed dates",
+      "critical": false
     },
     {
-      "name": "contains_freshness_notes",
-      "type": "contains_phrase",
-      "phrase": "Data freshness and source-priority notes"
+      "name": "account-brief-builder-output-05",
+      "type": "structure",
+      "description": "The output substantively includes: Data freshness and source-priority notes",
+      "critical": false
     }
-  ],
-  "managed_by": "curated"
+  ]
 }

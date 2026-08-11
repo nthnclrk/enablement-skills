@@ -1,49 +1,52 @@
 {
+  "schema_version": 2,
   "skill": "qbr-ebr-builder",
   "source": "skills/qbr-ebr-builder/SKILL.md",
-  "notes": "Starter eval scaffold. Expand prompts and checks with real traces.",
+  "notes": "Generated routing and basic-output starter. Curate realistic prompts and example-backed task scenarios before treating it as behavior evidence.",
+  "managed_by": "starter-generator",
   "should_trigger": [
     {
-      "prompt": "Use $qbr-ebr-builder for this request.",
-      "expected": "trigger"
+      "prompt": "Please build customer-facing QBR and EBR deliverables that align customer goals, business outcomes, decisions, risks, and next steps.",
+      "expected": true
     },
     {
-      "prompt": "I need help with qbr ebr builder.",
-      "expected": "trigger"
+      "prompt": "Please prepare a quarterly business review or executive business review, with an optional internal prep appendix for that same review.",
+      "expected": true
     },
     {
-      "prompt": "Please create a first draft using the qbr ebr builder workflow.",
-      "expected": "trigger"
-    },
-    {
-      "prompt": "Please prepare a quarterly business review, executive business review, or customer account review for leadership.",
-      "expected": "trigger"
+      "prompt": "I have rough notes. Please turn them into a usable qbr ebr and label anything that still needs confirmation.",
+      "expected": true
     }
   ],
   "should_not_trigger": [
     {
-      "prompt": "Write a short poem about quarterly planning.",
-      "expected": "do_not_trigger"
+      "prompt": "Please build concise, decision-ready account briefs for account reviews, account planning, renewal or expansion reviews, and customer meeting preparation.",
+      "expected": false,
+      "adjacent_skill": "account-brief-builder"
     },
     {
-      "prompt": "Refactor this Python function for performance.",
-      "expected": "do_not_trigger"
+      "prompt": "Please build a concise, decision-oriented executive briefing and meeting plan for a strategic customer or commercial meeting, negotiation, escalation, or internal alignment on that same decision.",
+      "expected": false,
+      "adjacent_skill": "executive-briefing-builder"
     },
     {
-      "prompt": "What is the weather in Sydney today?",
-      "expected": "do_not_trigger"
-    },
-    {
-      "prompt": "This request should use $account-brief-builder rather than $qbr-ebr-builder.",
-      "expected": "do_not_trigger"
+      "prompt": "Please build reusable renewal and expansion motions for customer-facing teams across a segment or book of business.",
+      "expected": false,
+      "adjacent_skill": "renewal-and-expansion-enablement"
     }
   ],
   "output_structure_checks": [
     {
-      "name": "contains_clear_output_structure",
-      "type": "contains_phrase",
-      "phrase": "Output"
+      "name": "qbr-ebr-builder-core-output",
+      "type": "structure",
+      "description": "Produces a usable qbr ebr deliverable matched to the requested scope.",
+      "critical": true
+    },
+    {
+      "name": "qbr-ebr-builder-decision-discipline",
+      "type": "semantic",
+      "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
+      "critical": true
     }
-  ],
-  "managed_by": "starter"
+  ]
 }

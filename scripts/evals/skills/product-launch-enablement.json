@@ -1,61 +1,101 @@
 {
+  "schema_version": 2,
   "skill": "product-launch-enablement",
   "source": "skills/product-launch-enablement/SKILL.md",
   "notes": "Curated eval focused on internal field readiness and cross-functional launch execution.",
+  "managed_by": "curated",
   "should_trigger": [
     {
-      "prompt": "Build an internal launch enablement plan for a new enterprise security feature. We need readiness requirements by role, manager inspection prompts, a cross-functional owner matrix, and a 30-day post-launch signal review.",
-      "expected": "trigger"
+      "prompt": "Build an internal launch enablement plan for a new enterprise security feature. We need readiness requirements by role, manager inspection prompts, a cross-functional owner matrix, and a justified first post-launch decision window.",
+      "expected": true
     },
     {
       "prompt": "Turn this product launch spec into a field-ready enablement package for AEs, SEs, CSMs, managers, and support. Include FAQs, talk-track changes, readiness gates, and reinforcement checkpoints.",
-      "expected": "trigger"
+      "expected": true
     },
     {
       "prompt": "We are rolling out a packaging change next month. Create the internal launch narrative, training plan, go/no-go checklist, and owner handoffs for the revenue org.",
-      "expected": "trigger"
+      "expected": true
     }
   ],
   "should_not_trigger": [
     {
       "prompt": "Translate these engineering release notes into a short seller-ready Slack update and email digest.",
-      "expected": "do_not_trigger"
+      "expected": false,
+      "adjacent_skill": "release-notes-to-seller-updates"
     },
     {
       "prompt": "Build a quarter-wide enablement roadmap and help me decide which launch work to defer.",
-      "expected": "do_not_trigger"
+      "expected": false,
+      "adjacent_skill": "quarterly-enablement-planner"
     },
     {
       "prompt": "Create a partner enablement package for channel reps with certification and co-sell guidance.",
-      "expected": "do_not_trigger"
+      "expected": false,
+      "adjacent_skill": "partner-enablement-package"
     }
   ],
   "output_structure_checks": [
     {
-      "name": "contains_readiness_matrix",
-      "type": "contains_phrase",
-      "phrase": "Launch tier and readiness matrix"
+      "name": "product-launch-enablement-output-01",
+      "type": "structure",
+      "description": "The output substantively includes: A proportionate launch tier and readiness matrix; breadth affects delivery scale but does not alone force Tier 3 controls",
+      "critical": true
     },
     {
-      "name": "contains_owner_matrix",
-      "type": "contains_phrase",
-      "phrase": "Cross-functional owner and handoff matrix"
+      "name": "product-launch-enablement-output-02",
+      "type": "structure",
+      "description": "The output substantively includes: Cross-functional owner and handoff matrix",
+      "critical": true
     },
     {
-      "name": "contains_launch_narrative",
-      "type": "contains_phrase",
-      "phrase": "Internal launch narrative and FAQ"
+      "name": "product-launch-enablement-output-03",
+      "type": "structure",
+      "description": "The output substantively includes: Internal launch narrative and FAQ",
+      "critical": false
     },
     {
-      "name": "contains_training_plan",
-      "type": "contains_phrase",
-      "phrase": "Training and reinforcement plan"
+      "name": "product-launch-enablement-output-04",
+      "type": "structure",
+      "description": "The output substantively includes: Training and reinforcement plan plus any required runnable practice scenarios with observable anchors and critical errors",
+      "critical": false
     },
     {
-      "name": "contains_signal_review",
-      "type": "contains_phrase",
-      "phrase": "30-day post-launch signal review plan"
+      "name": "product-launch-enablement-output-05",
+      "type": "structure",
+      "description": "The output substantively includes: A justified first post-launch decision window and monitoring rhythm based on launch tier, reversibility, evidence volume, sales cycle, and confirmed or explicitly proposed operating cadence",
+      "critical": false
     }
   ],
-  "managed_by": "curated"
+  "task_scenarios": [
+    {
+      "id": "product-launch-enablement-approval-boundaries",
+      "input_state": "conflicting",
+      "prompt": "Build a field-ready launch enablement package from release-notes.md and launch-context.md. Include the launch tier, audience-specific narrative, talk-track and FAQ updates, readiness gates, training plan, and a justified first post-launch decision window. Distinguish technical availability from the field announcement, preserve packaging and migration limits, and surface anything that still needs approval before distribution.",
+      "files": [
+        "examples/product-launch-enablement/release-notes.md",
+        "examples/product-launch-enablement/launch-context.md"
+      ],
+      "assertions": [
+        {
+          "name": "launch-enablement-package",
+          "type": "structure",
+          "description": "Includes launch tier, audience narrative, required field assets, runnable practice scenarios, evidence-backed readiness gates, training, and a first decision window justified by tier, reversibility, evidence volume, sales cycle, and operating cadence.",
+          "critical": true
+        },
+        {
+          "name": "launch-enablement-boundaries",
+          "type": "semantic",
+          "description": "Separates technical availability from announcement timing and preserves eligibility, migration, and pilot-proof caveats.",
+          "critical": true
+        },
+        {
+          "name": "launch-enablement-no-false-readiness",
+          "type": "forbidden_behavior",
+          "description": "Rejects the conflicting auto-upgrade claim, does not invent numeric monitoring thresholds, and does not mark unapproved content ready or published.",
+          "critical": true
+        }
+      ]
+    }
+  ]
 }

@@ -1,5 +1,11 @@
 {
   "name": "enablement-measurement",
-  "version": "0.2.0",
-  "description": "Measurement and impact bundle for KPI design, attribution framing, and analytical synthesis."
+  "version": "0.3.0",
+  "description": "Measurement bundle with reusable context, KPI design, impact framing, and analytical synthesis.",
+  "author": {
+    "name": "Nathan Clark"
+  },
+  "homepage": "https://github.com/nthnclrk/enablement-skills",
+  "repository": "https://github.com/nthnclrk/enablement-skills",
+  "license": "MIT"
 }

@@ -1,5 +1,11 @@
 {
   "name": "enablement-core",
-  "version": "0.2.0",
-  "description": "Universal revenue enablement bundle with foundational planning and field execution skills."
+  "version": "0.3.0",
+  "description": "Universal revenue enablement bundle with context, planning, and field execution skills.",
+  "author": {
+    "name": "Nathan Clark"
+  },
+  "homepage": "https://github.com/nthnclrk/enablement-skills",
+  "repository": "https://github.com/nthnclrk/enablement-skills",
+  "license": "MIT"
 }

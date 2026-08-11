@@ -1,65 +1,52 @@
 {
+  "schema_version": 2,
   "skill": "renewal-and-expansion-enablement",
   "source": "skills/renewal-and-expansion-enablement/SKILL.md",
-  "notes": "Starter eval scaffold. Expand prompts and checks with real traces.",
+  "notes": "Generated routing and basic-output starter. Curate realistic prompts and example-backed task scenarios before treating it as behavior evidence.",
+  "managed_by": "starter-generator",
   "should_trigger": [
     {
-      "prompt": "Use $renewal-and-expansion-enablement for this request.",
-      "expected": "trigger"
+      "prompt": "Please build reusable renewal and expansion motions for customer-facing teams across a segment or book of business.",
+      "expected": true
     },
     {
-      "prompt": "I need help with renewal and expansion enablement.",
-      "expected": "trigger"
+      "prompt": "I need renewal plays, save motions, expansion qualification, signal design, or repeatable post-sale inspection.",
+      "expected": true
     },
     {
-      "prompt": "Please create a first draft using the renewal and expansion enablement workflow.",
-      "expected": "trigger"
+      "prompt": "I have rough notes. Please turn them into a usable renewal and expansion enablement and label anything that still needs confirmation.",
+      "expected": true
     }
   ],
   "should_not_trigger": [
     {
-      "prompt": "Write a short poem about quarterly planning.",
-      "expected": "do_not_trigger"
+      "prompt": "Please build concise, decision-ready account briefs for account reviews, account planning, renewal or expansion reviews, and customer meeting preparation.",
+      "expected": false,
+      "adjacent_skill": "account-brief-builder"
     },
     {
-      "prompt": "Refactor this Python function for performance.",
-      "expected": "do_not_trigger"
+      "prompt": "Please build mutual action plans for complex deals and coordinated customer initiatives.",
+      "expected": false,
+      "adjacent_skill": "mutual-action-plan-builder"
     },
     {
-      "prompt": "What is the weather in Sydney today?",
-      "expected": "do_not_trigger"
-    },
-    {
-      "prompt": "This request should use $qbr-ebr-builder rather than $renewal-and-expansion-enablement.",
-      "expected": "do_not_trigger"
+      "prompt": "Please build customer-facing QBR and EBR deliverables that align customer goals, business outcomes, decisions, risks, and next steps.",
+      "expected": false,
+      "adjacent_skill": "qbr-ebr-builder"
     }
   ],
   "output_structure_checks": [
     {
-      "name": "contains_output_element_1",
-      "type": "contains_phrase",
-      "phrase": "Renewal and expansion play matrix by segment"
+      "name": "renewal-and-expansion-enablement-core-output",
+      "type": "structure",
+      "description": "Produces Renewal and expansion play matrix by segment; Contract-derived milestone map with source, owner, latest safe start, and unresolved gaps.",
+      "critical": true
     },
     {
-      "name": "contains_output_element_2",
-      "type": "contains_phrase",
-      "phrase": "Risk and expansion trigger map"
-    },
-    {
-      "name": "contains_output_element_3",
-      "type": "contains_phrase",
-      "phrase": "Product-usage and adoption signal map"
-    },
-    {
-      "name": "contains_output_element_4",
-      "type": "contains_phrase",
-      "phrase": "Commercial governance-state map with owner by state"
-    },
-    {
-      "name": "contains_output_element_5",
-      "type": "contains_phrase",
-      "phrase": "Role-based talk tracks and action prompts"
+      "name": "renewal-and-expansion-enablement-decision-discipline",
+      "type": "semantic",
+      "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
+      "critical": true
     }
-  ],
-  "managed_by": "starter"
+  ]
 }

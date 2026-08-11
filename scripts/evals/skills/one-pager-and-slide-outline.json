@@ -1,69 +1,52 @@
 {
+  "schema_version": 2,
   "skill": "one-pager-and-slide-outline",
   "source": "skills/one-pager-and-slide-outline/SKILL.md",
-  "notes": "Starter eval scaffold. Expand prompts and checks with real traces.",
+  "notes": "Generated routing and basic-output starter. Curate realistic prompts and example-backed task scenarios before treating it as behavior evidence.",
+  "managed_by": "starter-generator",
   "should_trigger": [
     {
-      "prompt": "Use $one-pager-and-slide-outline for this request.",
-      "expected": "trigger"
+      "prompt": "Please package a defined or approved narrative into a concise one-pager, an assertion-led slide outline, or both from supplied source material.",
+      "expected": true
     },
     {
-      "prompt": "I need help with one pager and slide outline.",
-      "expected": "trigger"
+      "prompt": "I need help with leave-behinds, briefing notes, internal memos, and stakeholder updates when the underlying strategy already exists.",
+      "expected": true
     },
     {
-      "prompt": "Please create a first draft using the one pager and slide outline workflow.",
-      "expected": "trigger"
-    },
-    {
-      "prompt": "Please turn source material into a leave-behind, briefing note, internal memo, or slide outline for seller training, launch enablement, stakeholder briefings, or rollouts.",
-      "expected": "trigger"
+      "prompt": "I have rough notes. Please turn them into a usable one pager and slide outline and label anything that still needs confirmation.",
+      "expected": true
     }
   ],
   "should_not_trigger": [
     {
-      "prompt": "Write a short poem about quarterly planning.",
-      "expected": "do_not_trigger"
+      "prompt": "Please build cross-functional launch readiness plans and field-ready launch assets for revenue teams.",
+      "expected": false,
+      "adjacent_skill": "product-launch-enablement"
     },
     {
-      "prompt": "Refactor this Python function for performance.",
-      "expected": "do_not_trigger"
+      "prompt": "Please convert product or engineering release notes into concise field updates with customer impact, positioning implications, and action guidance.",
+      "expected": false,
+      "adjacent_skill": "release-notes-to-seller-updates"
     },
     {
-      "prompt": "What is the weather in Sydney today?",
-      "expected": "do_not_trigger"
-    },
-    {
-      "prompt": "This request should use $value-prop-and-positioning rather than $one-pager-and-slide-outline.",
-      "expected": "do_not_trigger"
+      "prompt": "Please build and refine value propositions and messaging frameworks for revenue teams.",
+      "expected": false,
+      "adjacent_skill": "value-prop-and-positioning"
     }
   ],
   "output_structure_checks": [
     {
-      "name": "contains_output_element_1",
-      "type": "contains_phrase",
-      "phrase": "One-page narrative brief with concise sectioning."
+      "name": "one-pager-and-slide-outline-core-output",
+      "type": "structure",
+      "description": "Produces If one-pager is requested: deliver the one-page narrative brief only; If slide outline is requested: deliver the assertion-led slide outline only.",
+      "critical": true
     },
     {
-      "name": "contains_output_element_2",
-      "type": "contains_phrase",
-      "phrase": "Slide outline with takeaway headline per slide."
-    },
-    {
-      "name": "contains_output_element_3",
-      "type": "contains_phrase",
-      "phrase": "Audience variant notes and emphasis guidance."
-    },
-    {
-      "name": "contains_output_element_4",
-      "type": "contains_phrase",
-      "phrase": "Evidence map linked to each core claim."
-    },
-    {
-      "name": "contains_output_element_5",
-      "type": "contains_phrase",
-      "phrase": "Suggested appendix topics and notes."
+      "name": "one-pager-and-slide-outline-decision-discipline",
+      "type": "semantic",
+      "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
+      "critical": true
     }
-  ],
-  "managed_by": "starter"
+  ]
 }

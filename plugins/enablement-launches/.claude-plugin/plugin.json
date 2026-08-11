@@ -1,5 +1,11 @@
 {
   "name": "enablement-launches",
-  "version": "0.2.0",
-  "description": "Launch-focused bundle for product-change enablement, seller updates, and channel rollout support."
+  "version": "0.3.0",
+  "description": "Launch bundle with reusable context, product-change enablement, seller updates, and partner support.",
+  "author": {
+    "name": "Nathan Clark"
+  },
+  "homepage": "https://github.com/nthnclrk/enablement-skills",
+  "repository": "https://github.com/nthnclrk/enablement-skills",
+  "license": "MIT"
 }

@@ -4,18 +4,19 @@ Use this when the inventory is pulled from a content system, wiki, or field-sign
 
 ## Useful Inputs
 
-- Content repositories: title, owner, type, audience, last updated date, usage or view counts.
-- Knowledge bases / wikis: source-of-truth pages, linked enablement assets, update history.
-- Slack or request channels: recurring asks, repeated asset searches, field complaints.
+- Content repositories: stable asset ID, canonical location, owner, type, audience, status, last reviewed date, and usage with an eligible-audience denominator.
+- Knowledge bases / wikis: source-of-truth pages, taxonomy, permissions, search/findability signals, linked assets, and update history.
+- Field-signal channels: recurring asks, repeated searches, workflow blockers, and independent source count.
 
 ## Minimum Pull
 
-- Asset title
+- Stable asset ID, title, and canonical location
 - Owner
 - Audience / role
 - Stage or job-to-be-done
-- Last updated date
-- Usage or evidence of demand when available
+- Publication status and last reviewed date
+- Usage numerator and eligible-audience denominator when available
+- Evidence source, date, and independence when demand is qualitative
 
 ## Recommended Handling
 
@@ -23,6 +24,7 @@ Use this when the inventory is pulled from a content system, wiki, or field-sign
   missing asset, weak asset, stale asset, low discoverability, fragmented duplicates.
 - Keep low-usage interpretation conservative unless discoverability and freshness are known.
 - Separate content creation opportunities from taxonomy and governance problems.
+- Preserve value, confidence, and effort as separate fields in exports and recommendations.
 
 ## Safe Writeback Boundary
 

@@ -2,6 +2,8 @@
 
 Use Slack as a high-signal source for field feedback and enablement distribution, not as a primary system of record.
 
+> Last verified: 2026-07-31. Export coverage, retention, app scopes, API rates, Slack Connect behavior, MCP tools, and write permissions vary by plan, workspace policy, app type, and channel membership.
+
 ## Scope And Limits
 
 This playbook focuses on reliable Slack patterns for exports, message analysis, and controlled posting workflows. It is not a full guide to Slack platform development or the growing set of AI-driven features available inside Slack.
@@ -40,7 +42,8 @@ Use either exports or API reads, depending on access and policy.
 
 - Workspace export JSON for channel content and file links.
 - Thread context from per-channel JSON files in export archives.
-- Use this when API setup is blocked or cross-team access is inconsistent.
+- Standard workspace exports cover public channels. Private channels and direct messages require an eligible Business+ or Enterprise plan plus approved export access; exports contain file links rather than the files in most cases.
+- Use this when API setup is blocked and the approved export scope matches the task. Do not treat legal/compliance export access as a general-purpose data entitlement.
 
 ### API-Based Pull (better for recurring workflows)
 
@@ -50,6 +53,15 @@ Use either exports or API reads, depending on access and policy.
 - Message posting: `chat.postMessage`
 - Scheduled posting: `chat.scheduleMessage`
 - User metadata enrichment: `users.info` (if permitted)
+
+Required scopes and accessible conversations depend on token type. Bot/app tokens generally read only conversations the app has joined; user tokens follow the authorizing user's access. For commercially distributed, non-Marketplace apps, `conversations.history` and `conversations.replies` can be limited to 1 request per minute and 15 items per response. Marketplace and internal customer-built apps retain higher Tier 3 limits.
+
+### MCP / Real-Time Search Pull (best for interactive agent discovery)
+
+- Slack's hosted MCP server can search messages/files/users/channels and can expose write tools such as sending messages or adding reactions.
+- Real-Time Search provides permission-aware search without requiring a full workspace export.
+- Treat every MCP write tool as an external side effect: search/read first, draft locally, and obtain explicit user approval for the exact channel and content before posting.
+- Confirm the connected client's approved scopes and effective user identity; never assume private-channel or DM coverage.
 
 ## Minimal Input Shape For Agents
 
@@ -70,6 +82,15 @@ For each extraction job, include:
 - Channel/thread scope
 - Any known redactions
 - Confidence caveats (missing threads, restricted channels, low context)
+
+Keep raw Slack fields separate from canonical concepts and derived analysis:
+
+| Raw Slack field | Canonical concept | Derived signal (label as analysis) |
+| --- | --- | --- |
+| `channel_id`, `ts`, `thread_ts` | `source_id`, `message_id`, `thread_id` | thread coverage, response lag |
+| `user_id` | `author_id` | role/team pattern only after governed enrichment |
+| `text`, file links | `evidence_text`, `source_links` | theme, sentiment, objection, urgency |
+| reactions | `engagement_events` | directional salience, never business impact by itself |
 
 ## Skills That Benefit Most
 
@@ -126,3 +147,6 @@ For each extraction job, include:
 - [Working with files and external upload flow](https://api.slack.com/messaging/files/uploading)
 - [files.upload retirement notice](https://docs.slack.dev/changelog/2024-04-a-better-way-to-upload-files-is-here-to-stay)
 - [`users.info`](https://api.slack.com/methods/users.info)
+- [Rate limits for non-Marketplace apps](https://docs.slack.dev/changelog/2025/05/29/rate-limit-changes-for-non-marketplace-apps/)
+- [Slack MCP server overview](https://docs.slack.dev/ai/slack-mcp-server/)
+- [Slack MCP server and Real-Time Search announcement](https://docs.slack.dev/changelog/2026/02/17/slack-mcp)
