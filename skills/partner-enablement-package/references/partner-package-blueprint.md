@@ -1,82 +1,67 @@
-# Partner Enablement Package Blueprint
+# Partner package judgment
 
-Use this blueprint to structure partner enablement assets and execution.
+Use this when you are classifying sources, drawing the permitted-motion line, or splitting partner-facing from internal. The skill body has the procedure.
 
-## 1) Audience Boundary
+## The copy-paste tell
+
+If you can find-replace "AE" with "partner" and ship it, it is not a partner package.
+
+**Fails.** The direct-sales battlecard, internal win rate, and Q3 discount grid, lightly rebranded.
+
+**Passes.** "You may position MosaicOps to mid-market ops buyers and register the lead. You may not quote discount, promise custom ERP, or share the four-customer pilot."
+
+Approval for direct sellers does not approve partner use. Preserve customer-reference permission, branding, confidentiality, territory, and agreement restrictions.
+
+## Partner-safe versus internal
 
 Classify every source and deliverable:
 
-| Item | Classification | Approved Audience | Owner | Version/Date | Allowed Use | Restriction/Blocker |
+| Item | Classification | Approved audience | Owner | Version | Allowed use | Blocker |
 | --- | --- | --- | --- | --- | --- | --- |
 
-- `partner_safe`: explicitly approved for the named partner audience and use.
-- `internal_only`: required by the channel/operator team but not releasable externally.
-- `unverified`: source, permission, freshness, or agreement fit is incomplete; block from partner-facing output.
+- `partner_safe`: explicitly approved for the named partner audience and use
+- `internal_only`: required by the channel team, not releasable
+- `unverified`: source, permission, freshness, or agreement fit is incomplete; keep it out of partner-facing output
 
-Approval for direct sellers does not automatically approve partner use. Preserve customer-reference permission, branding, confidentiality, territory, and agreement restrictions.
+Never nest an internal-only section inside a document meant for partners. Produce a second artifact.
 
-## 2) Permitted-Motion Matrix
+## Permitted motion
 
-For the actual partner, record:
+Partner type is context, not permission. Derive scope from the agreement, product access, operating model, and owner approvals.
 
-| Activity | Permitted Scope | Required Access | Readiness Evidence | Handoff/Support Owner | Prohibited Commitment |
+| Activity | Permitted scope | Required access | Readiness evidence | Handoff owner | Prohibited commitment |
 | --- | --- | --- | --- | --- | --- |
 | Position |  |  |  |  |  |
 | Qualify |  |  |  |  |  |
 | Demo |  |  |  |  |  |
-| Sell/Co-sell |  |  |  |  |  |
-| Implement/Service |  |  |  |  |  |
-| Support/Handoff |  |  |  |  |  |
+| Sell / co-sell |  |  |  |  |  |
+| Implement / service |  |  |  |  |  |
+| Support / handoff |  |  |  |  |  |
 
-Partner type is context, not permission. Derive permitted scope from the agreement, product access, operating model, and owner approvals.
+If demo access is not granted, do not write a partner demo track. If they cannot discount, do not include a discount talk track.
 
-## 3) Claim And Source Ledger
+## Claims
 
-| Claim ID | Exact Approved Wording | Source | Evidence Scope | Owner | Approved Audience | Review Trigger | Status |
-| --- | --- | --- | --- | --- | --- | --- | --- |
+An external claim must be approved, current, no broader than its evidence, and permitted for this partner audience. A capability you can demonstrate is not an outcome claim.
 
-- An external claim must be `approved`, current, no broader than its evidence, and permitted for the named partner audience.
-- Product capability that can be demonstrated does not by itself support an outcome claim.
-- Do not expose confidential customer proof, roadmap, pricing, margin, discount, account strategy, or internal competitive notes unless the authorized owner explicitly approves that exact use.
+Do not expose confidential customer proof, roadmap, pricing, margin, discount, account strategy, or internal competitive notes unless the authorized owner approves that exact partner use. Do not invent a partner-safe version of an internal claim.
 
-## 4) Readiness Contract
+## Readiness
 
-For each capability define:
+Attendance is not ready. Define an observable task, evidence, standard, assessor, and remediation. Statuses: `not_assessed`, `ready_for_scope`, `not_ready`. Never infer readiness outside the assessed product, region, segment, or motion.
 
-| Capability/Scope | Observable Task | Required Evidence | Standard | Assessor/Owner | Status | Remediation | Reassessment Trigger |
-| --- | --- | --- | --- | --- | --- | --- | --- |
+If the decision is a formal pass/fail, use `certification-program-builder` and consume that artifact.
 
-Use `not_assessed`, `ready_for_scope`, or `not_ready`. Training attendance or content completion alone is not readiness. Never infer readiness outside the assessed product, region, customer segment, or motion.
+Reassess when the product, claim set, agreement, access, or required task changes. Do not invent a recurring review interval.
 
-Reassess when the product, claim set, agreement, compliance rule, delivery responsibility, or required task materially changes.
+## Internal operator pack
 
-## 5) Internal Co-Sell And Governance Pack
+Keep these internal unless the exact partner-facing wording is approved: lead registration and ownership, account conflict, support boundary, pricing and discount authority, margin and payment, contract and territory, exceptions.
 
-- lead registration and ownership rule
-- account conflict and escalation rule
-- technical support boundary
-- pricing and discount authority
-- margin/economics and payment rules
-- contract, territory, data-sharing, and services obligations
-- exception owner and approval evidence
+**Fails.** A partner one-pager that includes "our standard 15% partner discount" when that rule was never approved for external use.
 
-Keep these internal unless the exact rule or partner-facing version is approved for release.
+**Passes.** Internal pack states the discount authority and exception owner. Partner-facing pack says "pricing exceptions go through your channel manager."
 
-## 6) Partner-Facing Package
+## Thin evidence
 
-Select only what the permitted motion requires:
-
-- approved ICP/opportunity guidance and value narrative
-- qualification, discovery, and handoff guidance
-- approved proof, objection, and competitive handling
-- product/demo/support instructions within granted access
-- readiness requirements, remediation route, and escalation contacts
-
-Do not include an internal-only section inside a document intended for partners; produce a separate internal operator artifact.
-
-## 7) Review And Release Triggers
-
-- Validate the package before first use and review evidence from the first live motion when available.
-- Review after material product, agreement, claim, compliance, branding, access, or support changes.
-- Use the operating review cadence agreed with the partner owner; do not invent a recurring interval.
-- Publishing, portal access, readiness-state changes, and external sends require explicit user authorization.
+Missing rights, claims, or economics block partner-facing language. They do not block an internal workplan that keeps those gaps visible. Do not invent partner claims, territories, or readiness to finish the pack.

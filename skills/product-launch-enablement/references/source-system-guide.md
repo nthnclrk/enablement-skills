@@ -1,32 +1,24 @@
-Use this when launch readiness or distribution depends on real operating systems rather than a standalone plan.
+# Launch source and destination judgment
 
-# Source System Guide
+Use this when the launch has to land in real systems, not a standalone plan.
 
-## Useful Inputs
+## What the systems are for
 
-- Wiki / docs source-of-truth for launch scope and FAQs
-- Slack or internal comms norms for rapid updates
-- Enablement platforms for governed field-facing assets
-- Project trackers for owner and deadline visibility
+Keep the readiness plan independent of tooling first: the three sentences, owners, gates, and the first decision window. Then map each artifact to a destination.
 
-## Recommended Handling
+- Wiki or docs: durable source of truth for scope, FAQ, and eligibility
+- Slack: awareness only. A posted update is not a passed gate
+- Enablement platform or LMS: governed field assets and required practice
+- Project tracker: owners and dates, never the claim ledger
 
-- Keep the launch plan independent of tooling first:
-  readiness requirements, owner matrix, talk-track changes, manager inspection prompts, signal review.
-- Then map each deliverable to the right destination:
-  docs for durable reference, Slack for awareness, enablement platform for packaged assets.
-- Keep source-of-truth and distribution layers distinct.
+**Fails.** Marking "field ready" because the FAQ was posted in Slack.
 
-## Minimum Pull
+**Passes.** Slack carries the four-line announcement after the FAQ, claims, and support path are `ready` in the ledger.
 
-- Launch tier
-- Launch date
-- Impacted teams
-- Owner matrix
-- Required field-facing assets
-- Training or reinforcement needs
+## Minimum pull
 
-## Safe Writeback Boundary
+Pull only what changes readiness: what changed, launch or announcement date if known, impacted roles, owner matrix, required field assets, and whether practice is required. Do not scrape a tracker to invent a date the source does not state.
 
-- Do not publish launch content or mark readiness gates complete automatically.
-- Return the package, destinations, and owner handoffs for human approval.
+## Safe writeback
+
+Do not publish launch content, change live status, or mark a gate complete in an external system. Return the package, destinations, and owner handoffs for human approval.

@@ -3,67 +3,75 @@ name: qbr-ebr-builder
 description: Build customer-facing QBR and EBR deliverables that align customer goals, business outcomes, decisions, risks, and next steps. Use when asked to prepare a quarterly business review or executive business review, with an optional internal prep appendix for that same review. Route standalone internal account diagnosis to account-brief-builder and one-off executive meeting prep to executive-briefing-builder.
 ---
 
-# QBR EBR Builder
+# QBR EBR builder
 
-Create outcome-led QBR/EBR materials that help both teams agree what happened, what changed, and what to do next.
+Write the review around customer outcomes. If it reads like a vendor activity recap, rewrite it.
+
+A QBR or EBR is a customer-facing review unless the user asks for internal mode. If they want a standalone internal account diagnosis, use `account-brief-builder`. If they want a one-off executive meeting with an ask, use `executive-briefing-builder`.
+
+**Customer outcome.** "Time-to-invoice dropped from 9 days to 4. You still miss the 2-day target you set in January. Decision: fund the AP automation work this quarter, or accept 4 days as the new baseline."
+
+**Vendor recap.** "This quarter our team delivered 14 enablement sessions, launched two playbooks, and completed three QBRs. We remain committed to your success."
+
+If the customer would hear internal risk language — churn risk, weak champion, discount ceiling — it is not a customer pack.
 
 ## Confirm Inputs First
 
-Collect the minimum required inputs:
+Ask only for the inputs that change the review:
 
-- Use supplied current context or relevant sections of `.enablement/context.md` when available. Treat stale, inferred, or conflicted material as provisional; never update shared context silently.
-- Review type (`QBR` or `EBR`)
-- Customer audience, seniority, and decisions or commitments sought
-- Customer goals and success criteria
-- Review period, baseline, and prior-cycle commitments
-- Performance metrics with source, as-of date, evidence confidence, attribution status, and known alternative explanations
-- Renewal or commercial timing, material risks, and supported opportunities
-- Requested format and whether an internal prep appendix is needed
+1. QBR or EBR, audience seniority, and the decisions you want in the room
+2. Customer goals and success criteria they already accepted
+3. Review period, baseline, and prior-cycle commitments
+4. Outcome metrics with source, as-of date, and whether the customer accepts the interpretation
+5. Format, and whether they also want an internal prep appendix
 
-If evidence is incomplete, ask for the smallest blocking set. Never invent metrics, customer commitments, or attribution; label unresolved items instead.
+If evidence is thin, ask for the smallest blocking set. Do not invent metrics, logos, attribution, pricing, or customer commitments.
 
 ## Read The Right Reference
 
-- For QBR vs EBR distinctions and default structure, read [references/qbr-ebr-structure.md](references/qbr-ebr-structure.md).
+Read [references/qbr-ebr-structure.md](references/qbr-ebr-structure.md) for QBR vs EBR shape, the outcome test, and leakage rules. Skip it if the user already gave an agenda and only wants the narrative filled.
 
 ## Default Workflow
 
-1. Define the audience, review objective, and decisions or commitments sought.
-2. Reconcile the evidence. Record each metric's definition, source, as-of date, baseline, current value, and evidence confidence. Separately record attribution status, causal basis, alternative explanations, and whether the customer accepts the interpretation; preserve conflicts or missing data.
-3. Close the prior loop. Show the status of previous commitments before proposing new work.
-4. Build the customer narrative around goals, outcome movement, interpretation, and business impact rather than activity volume.
-5. Surface only evidence-supported risks and opportunities, with trigger, impact, and response.
-6. Convert the review into explicit executive asks and a joint action plan. Mark each action `draft`, `proposed`, `agreed`, or `changed`; attach confirmation evidence before treating a customer owner or date as a commitment.
-7. If requested, create a clearly separated internal prep appendix for the same review. Keep negotiation posture, account risk, and escalation notes out of the customer artifact.
-8. Run a customer-safety check for unsupported attribution, confidential commentary, internal-only data, and accidental overstatement.
+1. Name the mode.
+   Customer-facing is the default. Internal prep is a separate appendix, only when asked. Done when you can point to which pages the customer will see.
+2. Name the decisions the room must make.
+   One to three executive asks. If there is no decision, it is a status deck — rewrite until there is one.
+3. Reconcile the scorecard.
+   Each metric: definition, source, as-of date, baseline, current value, evidence confidence. Attribution stays separate. Preserve conflicts. Correlation is not causation.
+4. Close the prior loop.
+   Status of last cycle's commitments before any new work. Unconfirmed customer owners stay proposed.
+5. Write the outcome narrative.
+   Goals, movement, interpretation, business impact. Cut vendor activity that does not change an outcome they care about.
+6. Surface only supported risks and opportunities.
+   Trigger, impact, response. Customer-safe wording in the pack. Internal commercial risk stays in the appendix.
+7. Convert to a joint action plan.
+   Customer owner and internal owner on each item. Mark `draft`, `proposed`, `agreed`, or `changed`. Treat a customer date as a commitment only with confirmation evidence.
+8. Leakage check.
+   Internal risk language, negotiation posture, confidential commentary, unsupported attribution. If it would surprise the customer, it does not belong on their pages.
 
-## Tool Notes
+Do not publish or share the customer pack without explicit approval.
 
-- Use CRM and CS data for account and commercial context, BI for defined outcome metrics, and customer-approved evidence where available.
-- Reconcile conflicting values rather than silently choosing one source. Keep reusable source tables separate from presentation copy.
-- Do not publish or share the customer-facing artifact without explicit user approval.
-
-Keep workflow tool-agnostic when these systems are unavailable.
+For standalone internal diagnosis use `account-brief-builder`. For a one-off executive meeting use `executive-briefing-builder`.
 
 ## Output Contract
 
-Deliver a customer-facing QBR or EBR pack with:
+Return a customer-facing pack:
 
-1. Review objective, audience, and executive decisions or commitments requested
-2. Customer goals, prior commitments, and baseline snapshot
-3. Outcome scorecard with source, as-of date, interpretation, evidence confidence, attribution status, and customer acceptance
-4. Evidence-supported risks, opportunities, and recommendations
-5. Joint action plan with agreement state, confirmation evidence, internal commitments, and proposed or agreed customer commitments
-6. Open questions, evidence gaps, and explicitly labeled assumptions
+- Review type, audience, and the decisions requested
+- Customer goals, prior commitments, and baseline
+- Outcome scorecard with source, as-of date, interpretation, and attribution status
+- Evidence-supported risks, opportunities, and recommendations
+- Joint action plan with agreement state and both-side owners
+- Open questions and labeled gaps
 
-Include a separate internal prep appendix only when requested. Never mix its content into the customer-facing pack.
+Include an internal prep appendix only when requested. Never mix it into the customer pack.
 
 ## Quality Bar
 
-- Keep the narrative tied to customer outcomes and business impact.
-- Use metrics with enough interpretation to drive a decision.
-- Make risks explicit with trigger and mitigation.
-- Make the action plan shared, with clear ownership on both sides.
-- Make every requested decision or commitment explicit enough to answer in the meeting.
-- Remove internal-only commentary before customer-facing use and perform a final leakage check.
-- Do not overstate impact or fabricate metrics.
+- The narrative is about their outcomes, not our activity.
+- Every metric can drive a decision, or it is cut.
+- Risks have a trigger and a response the customer can hear.
+- Each action has a customer-side owner and an internal owner.
+- Internal-only language is absent from customer pages.
+- The pack refused the account brief and the one-off exec meeting that do not belong here.

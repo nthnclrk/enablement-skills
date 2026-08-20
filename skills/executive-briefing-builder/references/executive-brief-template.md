@@ -1,76 +1,67 @@
-# Executive Brief Template
+# Executive brief judgment
 
-Use this structure when the user does not provide a preferred format. Keep the core to one page where practical and move source detail to an appendix.
+Use this when you are writing or checking an executive briefing. The skill body has the procedure.
 
-## 1. Brief Control
+## Ask test
 
-- Meeting type, date, duration, and location or channel:
-- Brief owner and last verified:
-- Distribution: named internal recipients only / approved customer-shareable extract
-- Restricted or sensitive content:
-- Approval status:
+Name the meeting type first: inform, align, unblock, or negotiate. Then write one primary ask and one fallback. If you cannot, you are still in research.
 
-## 2. Executive Core
+A brief fails the test when it:
 
-- Objective:
-- Decision or commitment requested and decision owner:
-- Primary recommendation:
-- Desired and minimum acceptable outcomes:
-- Principal risk or sensitivity:
-- Next step if no decision is reached:
+- Uses "align," "explore," or "discuss" as the ask
+- Has a desired outcome but no fallback
+- Puts an unapproved concession in the customer extract
+- Treats a hypothesized stance as a confirmed position
 
-## 3. Evidence Ledger
+**Fails.** "Secure executive alignment on the partnership and next-phase value."
 
-| Material fact, metric, date, or commitment | Status | Source and as-of date | Conflict or limitation |
-| --- | --- | --- | --- |
+**Passes.** "Ask: approve the 12-month expansion at the current discount. Fallback: 60-day commercial hold plus a named security-review start date. If neither, dated next meeting and no new concession."
 
-Use `confirmed`, `conflicted`, or `unknown` for source claims. Use `planning assumption` only for reversible internal preparation.
+## Ask types
 
-## 4. Audience And Authority Map
+- **Inform.** The room needs a fact or a recommendation. The ask is acknowledgment or a dated follow-up, not a signature.
+- **Align.** Two sides disagree on priority or sequence. The ask is a shared decision, not a status update.
+- **Unblock.** Something is stuck: security, legal, a missing owner. The ask names the blocker and the person who can clear it.
+- **Negotiate.** Commercial terms are in play. The ask, fallback, and walk-away all need confirmed authority before the meeting.
 
-| Attendee | Confirmed role and authority | Confirmed priority | Hypothesized concern | Desired movement | Evidence status |
-| --- | --- | --- | --- | --- | --- |
+Write the fallback in the same sentence shape as the ask. "Leave with a next meeting" is only a fallback when no commercial move is authorized.
 
-Do not turn an inferred stance into a confirmed position.
+## Authority
 
-## 5. Strategic Narrative
+Pair every ask, offer, and concession with an approver and a status. Unapproved items stay in the internal brief.
 
-- Current situation:
-- Material impact:
-- Recommendation:
-- Supporting proof:
-- Why the decision matters now:
-- Important uncertainty or dissent:
+**Fails.** Customer extract: "We can do 18% if we get the three-year term."
 
-## 6. Meeting Plan
+**Passes.** Internal: "Discount above 12% needs VP Finance. Not approved. Do not offer." Customer extract omits the number.
 
-| Segment | Time | Owner | Purpose | Evidence or question | Decision checkpoint |
-| --- | --- | --- | --- | --- | --- |
+## Room map
 
-End with the exact decision check, commitment recap, follow-up owner, and confirmation method.
+Confirmed role and authority are facts. Concern and desired movement are often hypotheses. Label them.
 
-## 7. Ask, Offer, And Fallback Matrix
+Do not invent a decision-maker because the meeting is "executive." If authority is unknown, the brief is internal working material until someone names who can say yes.
 
-| Item | Conditions | Authority or approver | Approval status | Fallback | Escalation trigger |
-| --- | --- | --- | --- | --- | --- |
+## Layers
 
-Keep negotiation limits, unapproved concessions, and escalation thresholds internal-only.
+Internal-only: negotiation limits, stakeholder hypotheses, fallback ceilings, walk-away, unapproved claims.
 
-## 8. Concerns And Responses
+Customer-shareable: the situation they already know, the decision requested, evidence they can inspect, the next step if they say no.
 
-| Likely concern | Evidence for concern | Response guidance | Supporting proof | Owner |
-| --- | --- | --- | --- | --- |
+If the user did not ask for a customer extract, do not write one.
 
-Label an unverified concern as a hypothesis.
+## Thin evidence
 
-## 9. Distribution Layers
+Missing ask, missing authority, or missing shareability boundary: label the brief internal working material and block the affected external section. Do not invent the number that would make the story land.
 
-- Internal-only strategy and stakeholder hypotheses:
-- Restricted commercial, legal, security, or personal information:
-- Approved customer-shareable material:
-- Content or claim awaiting approval:
+## Optional shape
 
-## 10. Open Decisions
+Use this only when the user wants a one-page scan.
 
-| Question, conflict, or approval | Owner | Evidence needed | Due point | Effect if unresolved |
-| --- | --- | --- | --- | --- |
+```text
+Meeting / date / duration / distribution
+The ask (spoken) and the fallback (spoken)
+Recommendation, material evidence, principal risk
+Open approvals
+Room: confirmed authority vs hypothesized stance
+Timed plan (owner, purpose, decision check)
+Ask / offer / fallback matrix (internal)
+```

@@ -8,8 +8,8 @@ The canonical skills follow the portable Agent Skills folder format and can be u
 
 ## At A Glance
 
-- Current release: [`v1.2.0`](https://github.com/nthnclrk/enablement-skills/releases/tag/v1.2.0) — evidence-led workflows, shared context, stronger examples and evals, and stricter release validation
-- `37` canonical skills in [`skills/`](skills/)
+- Current release: [`v1.4.0`](https://github.com/nthnclrk/enablement-skills/releases/tag/v1.4.0) — practitioner-written skills, house-style safety, craft jobs over identical headings
+- `38` canonical skills in [`skills/`](skills/)
 - `7` system playbooks in [`systems/`](systems/) plus [`systems/REGISTRY.md`](systems/REGISTRY.md)
 - `7` Claude marketplace bundles in [`plugins/`](plugins/)
 - `8` example workflows in [`examples/`](examples/)
@@ -29,7 +29,7 @@ If the request depends on company-specific facts, begin with [`revenue-enablemen
 
 The skill separates confirmed, inferred, conflicted, and missing information; records provenance, freshness, sensitivity, and reuse boundaries; and exposes important gaps. For an immediate task, it can return a lightweight working-context handshake without creating a file. When reusable storage is useful and wanted, it proposes `.enablement/context.md`, previews the content before writing, and asks for confirmation. Downstream skills receive only the relevant sections and do not reopen confirmed inputs without a reason.
 
-Skip this step when the request is self-contained or the required context is already current. Do not turn context setup into a blocker for a simple, well-specified job.
+Skip this step when the request is self-contained or the required context is already current. Do not turn context setup into a blocker for a simple, well-specified job. Shared safety rules live in [`enablement-house-style`](skills/enablement-house-style/SKILL.md). Do not open that skill to build a specialist artifact.
 
 ### Choose The Work
 
@@ -61,7 +61,7 @@ Install the full skill source when you want the complete library. Choose a bundl
 
 Some skills appear in more than one bundle because they support more than one operating team. [`plugins/BUNDLES.md`](plugins/BUNDLES.md) is the explicit membership list; [`skills/`](skills/) remains the source of truth.
 
-Every bundle includes `revenue-enablement-context` so it can stand alone. Use it only when shared context is missing, stale, or conflicting; direct specialist requests should still go straight to the specialist skill.
+Every bundle includes `revenue-enablement-context` and `enablement-house-style` so it can stand alone. Use context only when shared context is missing, stale, or conflicting. House style is shared safety, not a deliverable. Direct specialist requests should still go straight to the specialist skill.
 
 ## What You Can Use It For
 

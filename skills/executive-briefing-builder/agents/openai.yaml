@@ -1,4 +1,4 @@
 interface:
   display_name: "Executive Briefing Builder"
-  short_description: "Prepare decision-ready executive briefs"
-  default_prompt: "Use $executive-briefing-builder to prepare an evidence-based executive brief with the decision frame, audience map, authorized asks, fallbacks, and meeting plan."
+  short_description: "The ask and fallback, not a status memo"
+  default_prompt: "Use $executive-briefing-builder to prepare an executive brief with one ask, a fallback, the room map, authorized offers, and the meeting plan."

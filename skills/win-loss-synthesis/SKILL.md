@@ -3,90 +3,69 @@ name: win-loss-synthesis
 description: Synthesize win-loss interviews, notes, and deal evidence into clear themes and actions. Use when asked why deals were won or lost, how patterns vary by segment or competitor, or what to change in messaging, process, or coaching. For a single competitive asset, route to battlecard-builder.
 ---
 
-# Win Loss Synthesis
+# Win-loss synthesis
 
-Turn mixed win-loss evidence into findings that change enablement priorities.
+Turn mixed win-loss evidence into findings a leader can defend. Separate what the source said from what you think it means. Do not recommend until the sample shape is on the page.
+
+**Fails.** "Price is why we lose. 67% of interviews mentioned it."
+
+**Passes.** "Price was the primary coded reason in 8 of 12 interviewed losses (12 of 41 eligible losses participated). Direct buyer evidence in 5. Counterexamples: two losses where price was accepted and security stalled the deal. This is the interviewed sample, not the closed-lost population."
+
+For a single competitive asset, use `battlecard-builder`. For recurring objections across live calls, use `call-insights-to-objections`.
 
 ## Confirm Inputs First
 
-Confirm the minimum analysis scope:
+Ask only for the inputs that change the findings:
 
-- Use supplied current context or relevant sections of `.enablement/context.md` when available. Treat stale, inferred, or conflicted material as provisional; never update shared context silently.
-- Data sources (interviews, CRM notes, call snippets, closed-lost reasons)
-- Time window, segment scope, and total eligible closed-deal population
-- Inclusion/exclusion rules, selection method, and win/loss/no-decision mix
-- Interview/contact, response, and evidence-availability counts by material slice
-- Competitors or alternatives in scope
-- Confidentiality, consent, attribution, and minimum-cell rules for quotes and segmented reporting
-- Decision audience: PMM, enablement, or sales leadership
+1. Time window, segment, and the eligible closed-deal population
+2. Sources on hand: interviews, CRM notes, call snippets, closed-lost reasons
+3. Selection method and the win / loss / no-decision mix
+4. Confidentiality, consent, and who will see quotes
 
-Ask for only missing items. If the user wants a fast draft, proceed with labeled limitations, but do not imply the sample represents the eligible population when sample accounting is incomplete.
+If sample accounting is incomplete, proceed with labeled limits. Do not imply the sample represents the eligible population. Do not invent win rates.
 
 ## Read The Right Reference
 
-- Read [references/win-loss-coding-framework.md](references/win-loss-coding-framework.md) before classifying themes or quantifying findings.
+Read [references/win-loss-coding-framework.md](references/win-loss-coding-framework.md) before you code themes, assign a primary reason, or quantify a finding. Skip it only if the user already coded the set and wants implications from a finished ledger.
 
 ## Default Workflow
 
-1. Set analysis boundaries.
-Define the eligible population, inclusion/exclusion rules, outcome definitions, and what counts as evidence.
-
+1. Draw the boundary.
+   Eligible population, inclusion rules, outcome definitions, and what counts as evidence. Done when a reviewer can see who is in and who is out.
 2. Build the sample ledger.
-Account for eligible, selected, contacted, participated, evidence-available, coded, and excluded deals by outcome and material segment.
+   Eligible, selected, contacted, participated, evidence-available, coded, excluded. By outcome and any material segment. No ledger, no prevalence language.
+3. Keep evidence and interpretation apart.
+   Observed fact, stakeholder-reported reason, contributing factor, and analyst root-cause hypothesis are four fields. A CRM close reason is one input, not the finding.
+4. Calibrate, then code.
+   One primary reason only when the evidence supports a dominant reason; otherwise `mixed` or `unresolved`. Preserve secondary reasons and disagreements between buyer, seller, and system. Version the codebook.
+5. Assign confidence from the slice, not the story.
+   Independent deals, direct buyer evidence, coverage, source mix, counterexamples. High never transfers automatically to another segment or competitor.
+6. Protect people and accounts.
+   Approved attribution only. Suppress thin cells. No rep-performance verdicts unless that use was approved.
+7. Recommend only what the sample can carry.
+   Owner-addressable messaging, coaching, process, or product moves. Sequence by evidence, not by how strongly someone feels.
 
-3. Normalize evidence.
-Use stable deal and evidence IDs; preserve source, date, speaker role, attribution permission, stage, segment, alternative, and outcome.
-
-4. Code reasons and context.
-Separate observed fact, stakeholder-reported reason, contributing factor, and analyst root-cause hypothesis before assigning a primary outcome reason.
-
-5. Calibrate the coding process.
-Double-code a representative subset when multiple analysts are involved, adjudicate disagreements against source evidence, and freeze a versioned codebook before the main pass. With one analyst, use a delayed blind recode against benchmark examples and report that inter-rater reliability was not established.
-
-6. Check coverage and bias.
-Compare coded deals with the eligible population; show response and evidence-coverage denominators before drawing broad conclusions.
-
-7. Compare patterns.
-Show supporting deals, counterexamples, source mix, and denominators for differences by segment, persona, stage, and alternative.
-
-8. Assign finding confidence.
-Apply the reference rules using independent-deal count, direct buyer evidence, coverage, source diversity, and contradiction.
-
-9. Protect confidentiality.
-Use only approved attribution, redact restricted detail, and suppress or aggregate slices that would expose a person or account.
-
-10. Prioritize implications.
-Translate defensible findings into owner-addressable messaging, coaching, process, and product decisions.
-
-## Tool Notes
-
-- Tool-agnostic default: interviews and notes are sufficient for useful synthesis.
-- Optional tools: CRM exports and call-intelligence snippets improve speed and traceability.
-- Treat standardized CRM reason codes as one input only; validate against qualitative evidence.
-- Do not publish identifiable quotes, deal details, or rep-level conclusions outside the approved audience.
-- Audience approval does not authorize a send or system write. Do not publish, distribute, or update an external system without explicit user approval of the exact artifact, destination, and scope.
+Do not publish identifiable quotes or write findings into an external system without explicit approval of the artifact, audience, and destination.
 
 ## Output Contract
 
-Default output includes:
+Return a synthesis a leader can inspect:
 
-- Findings summary by outcome with top coded themes
-- Sample-accounting table with population, selection, participation, evidence, exclusions, and denominators
-- Auditable finding table with supporting deals, counterexamples, source mix, confidence, and confidentiality status
-- Coding-calibration record with codebook version, agreement or recode result, adjudication decisions, and reliability limits
-- Segment/persona/alternative comparison table
-- Priority implications by function (enablement, PMM, sales management, product)
-- Action plan with owner, decision, dependency, and evidence-based sequence
-- Assumptions, confidence notes, and unresolved questions
+- Sample-accounting table: population, selection, participation, evidence, exclusions, denominators
+- Findings by outcome, each with supporting deals, counterexamples, source mix, and confidence
+- Evidence vs interpretation, labeled on every material claim
+- Segment or competitor cuts only where the slice can support them
+- Coding-calibration note: codebook version, agreement or recode, reliability limits
+- Implications with owner, decision, and dependency
+- What the sample cannot support, including invented win rates you refused
+
+Do not produce a battlecard or a governed objection library from this pass.
 
 ## Quality Bar
 
-- Evidence coverage is broad enough to avoid single-deal storytelling.
-- Counts always include the relevant denominator and outcome mix.
-- Reported reasons, contributing factors, and analyst root-cause hypotheses remain distinct.
-- Interpretation is clearly distinguished from observed facts.
-- Recommendations are specific and owner-addressable.
-- Insights are segmented where materially different.
-- Findings can be defended in leadership review.
-- Selection-bias and sample-shape risks are explicitly labeled before strategic recommendations.
-- Confidentiality and attribution rules are enforced at quote, deal, and segmented-output level.
+- Sample shape appears before any percentage or priority list.
+- Interview shares are not presented as population prevalence unless the design supports it.
+- Reported reasons and analyst hypotheses stay distinct.
+- Every material finding has a denominator, a counterexample check, and a confidence label.
+- Recommendations are owner-addressable and proportionate to coverage.
+- Confidentiality holds at quote, deal, and slice level.

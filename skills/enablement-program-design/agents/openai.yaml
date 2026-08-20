@@ -1,4 +1,4 @@
 interface:
   display_name: "Enablement Program Design"
-  short_description: "Design executable enablement programs"
+  short_description: "Behavior change, not a kickoff deck"
   default_prompt: "Use $enablement-program-design to turn this field-performance problem into a scoped program with a pilot, governance, reinforcement, and measurement plan."

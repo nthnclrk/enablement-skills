@@ -1,85 +1,68 @@
-# Certification Scoring Rules
+# Certification judgment
 
-## 1) Readiness Claim And Dimensions
+Use this when you are writing or checking a gate. The skill body has the procedure.
 
-State what a certified person may do, with what independence, in which situations. Use 4-6 dimensions tied to critical job tasks and failure risk. Example dimensions:
+## Observable-gate test
 
-- Discovery quality
-- Value articulation
-- Objection handling
-- Process execution
+Keep a standard if two assessors can watch the same work and reach the same pass or fail. Cut it if a quiz, tenure, confidence, or a manager's familiarity could pass someone.
 
-Training completion is not a rubric dimension and is not readiness evidence.
+**Fails.** "80% on the product quiz plus manager sign-off."
 
-## 2) Behavior Anchors
+**Passes.** "Certified AE may run first-call discovery unsupervised. Pass: independently gets problem, cost, and a mutual next step. Hard fail: invents a customer result."
 
-Define behavior anchors for each band:
+## Dimensions from the job
 
-- `1 — Unsafe or materially below standard`: critical omissions, harmful action, or inability to complete the task even with ordinary support.
-- `2 — Developing`: partial execution, material prompting, or inconsistent control of normal cases.
-- `3 — Meets standard`: independently completes representative work to the defined quality and risk standard.
-- `4 — Exceeds standard`: handles complexity and trade-offs while maintaining quality; do not require this score to pass unless the role standard genuinely demands it.
+State what a certified person may do, with what independence, in which situations. Use 4-6 dimensions tied to critical tasks and failure risk. Training completion is not a dimension.
 
-Write dimension-specific examples for `1`, `2`, `3`, and `4`. Generic labels alone are not a usable rubric.
+Write dimension-specific examples for each band:
 
-## 3) Evidence Requirements
+- `1` Unsafe or materially below: critical omission, harmful action, or cannot complete the task with ordinary support
+- `2` Developing: partial execution, material prompting, inconsistent on normal cases
+- `3` Meets standard: independently completes representative work
+- `4` Exceeds: handles complexity without losing quality. Do not require `4` to pass unless the role truly demands it
 
-For each dimension, define:
+Generic labels are not a rubric.
 
-- Required evidence type
-- Minimum evidence quantity
-- Representative conditions or variation
-- Allowed prompts, references, or support
-- Disqualifying errors
-- Evidence source and retention rule
+## Evidence
 
-## 4) Standard Setting And Pass Logic
+For each dimension: evidence type, minimum quantity, representative conditions, allowed support, disqualifying errors, source and retention. A course score cannot stand in for the work.
 
-1. Ask job-standard owners and subject-matter experts to describe the minimally competent independent performance for each critical task.
-2. Translate that performance into the `3` anchors and critical errors.
-3. Have experts judge representative ready, borderline, and not-ready samples independently before discussion.
-4. Set the overall threshold only after defining minimums for critical dimensions and non-compensable hard fails.
-5. Pilot the proposed standard. If known-ready and known-not-ready samples behave unexpectedly, inspect task validity and anchor clarity before moving the threshold.
-6. Mark the standard `provisional` until the owner approves it and pilot evidence is reviewed; record the rationale and version.
+## Standard setting
 
-Avoid arbitrary round-number pass marks. A high score in a non-critical dimension must not compensate for a critical safety, compliance, or customer-risk failure.
+1. Job-standard owners describe minimally competent independent performance.
+2. That performance becomes the `3` anchors and the hard fails.
+3. Experts score ready, borderline, and not-ready samples independently before discussion.
+4. Set the overall threshold only after critical-dimension minimums and non-compensable hard fails exist.
+5. Pilot. If known-ready people fail, fix the task or the anchors before moving the number.
+6. Mark `provisional` until the owner approves and the pilot is reviewed.
 
-## 5) Assessor Calibration
+Avoid round-number convenience marks. A high score on a safe dimension cannot compensate a safety, compliance, or customer-risk fail.
 
-1. Use at least three benchmark samples where practical: clear pass, borderline, and clear non-pass.
-2. Have assessors score independently and cite evidence before discussion.
-3. Compare dimension scores, hard-fail decisions, final decisions, and rationales.
-4. Resolve every hard-fail disagreement and every dimension difference greater than one point.
-5. Rescore a benchmark. Do not approve live scoring until assessors apply the same anchors and decision rules.
-6. Record exact agreement and within-one-point agreement. Set the required agreement gate according to stakes; for high-stakes decisions, require independent governance rather than relying on a generic default.
-7. Double-score an early live sample and a periodic sample thereafter to detect drift.
+**Fails.** "Pass at 80% overall" after a hard fail on invented proof.
 
-If agreement remains weak, revise anchors or benchmark guidance; do not average away unresolved interpretation differences.
+**Passes.** "Pass requires `3` on discovery and next-step, no hard fail. Value-framing `4` does not offset fabricated proof. Status: provisional, pending owner review."
 
-## 6) Retake Rules
+## Calibration
 
-- Define cooldown period
-- Require targeted remediation on failed dimensions
-- Reassess only failed dimensions when appropriate
-- Define moderation and appeal handling separately from a retake
+Use a clear pass, a borderline, and a clear non-pass. Assessors score independently and cite evidence. Resolve every hard-fail disagreement and every gap greater than one point. Rescore a benchmark before live decisions. Double-score early live work and a periodic sample after. If agreement stays weak, revise anchors. Do not average away the fight.
 
-## 7) Recertification Cadence
+## Thin evidence
 
-- Define default recertification window by role criticality (for example every 6-12 months).
-- Trigger early recertification after major message/process changes.
-- Require delta-only recertification where change scope is narrow.
-- Version the rubric and preserve the standard used for each historical decision.
+No authentic work samples yet: do not invent a pass mark. Return the claim, the evidence you still need, and keep the standard `provisional`. Course completion, tenure, and confidence stay out of the decision record.
 
-## 8) Assessor Anti-Bias Prompts
+Retakes: cooldown, targeted remediation, reassess failed dimensions when appropriate. Appeals are not retakes.
 
-Before scoring, require assessors to check:
+Recertify on a window the role risk can defend, and earlier after a major message or process change. Version the rubric. Historical decisions keep the standard they used.
 
-- Am I scoring observed behavior rather than confidence, style, or familiarity?
-- Am I applying the same anchor definitions used in calibration?
-- Am I weighting one strong/weak moment more than the full evidence set?
-- Did accessibility needs or the assessment format interfere with demonstrating the target behavior?
-- Would I score the same evidence the same way without knowing the person's identity, tenure, prior result, or manager opinion?
+Before scoring, assessors check: am I scoring the work, not the person? Same anchors as calibration? One flashy moment is not the file. Would I score this evidence the same without the name?
 
-## 9) Decision Record
+## Optional shape
 
-Capture learner, assessor, evidence links, rubric version, dimension scores, critical-error decisions, rationale, final status, moderation or appeal, and recertification due date. Restrict access to sensitive assessment records.
+```text
+Readiness claim
+Dimensions and anchors
+Evidence and hard fails
+Pass logic (owner, version, provisional | validated)
+Calibration gate
+Capacity decision
+```

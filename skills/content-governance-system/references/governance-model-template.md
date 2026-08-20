@@ -1,84 +1,60 @@
-# Governance Model Template
+# Governance model judgment
 
-Use this model to define a maintainable enablement content system.
+Use this when you are designing the weekly operating model. The skill body has the procedure. This is not a content inventory.
 
-## 1) Scope And Decision Rights
+## Weekly cadence first
 
-- In-scope content types:
-- Out-of-scope content types:
-- Final decision owner:
-- Escalation path:
-- Content approval authority:
-- System-write authority:
+If you cannot name the weekly job, the rest of the model will not run.
 
-## 2) Taxonomy And Metadata
+**Fails.** "Stand up a content council. Review all 400 assets quarterly. Clean the taxonomy first."
 
-| Field | Purpose |
-| --- | --- |
-| Stable content ID | Preserve identity across systems and versions |
-| Canonical location | Identify the authoritative content object |
-| Role / stage / job | Support findability and intended use |
-| Content owner | Own accuracy and lifecycle decisions |
-| Evidence or claim owner | Approve domain-specific claims |
-| Version and effective date | Prevent silent divergence |
-| Publication status | `draft`, `in_review`, `approved`, `published`, or `retired` |
-| Review status | `current`, `due`, `overdue`, or `blocked` |
-| Approved audience | Separate internal, partner, and customer-safe use |
-| Approved by / approved at | Preserve the approval record |
-| Last reviewed / review trigger | Show freshness and why review is due |
+**Passes.** "Wednesday, 45 minutes. Owners clear due and overdue reviews. Intake owner picks one request. Publishers ship only approved versions. Exception queue is time-boxed. Done when overdue reviews are owned, not when every asset is perfect."
 
-## 3) Publication And Review Policies
+Scale the cadence to the people who will actually show up. Unused councils are failed governance.
 
-### Publication Status
+## Two axes
 
-| State | Entry Criteria | Allowed Transition | Exit Evidence |
+Keep publication and review independent.
+
+Publication: `draft` → `in_review` → `approved` → `published` → `retired`.
+
+Review: `current`, `due`, `overdue`, `blocked`.
+
+A published asset stays `published` while review is `due`, `overdue`, or `blocked`. Review status must not remove a live asset from published-content denominators.
+
+| Publication | Entry | Allowed next | Exit evidence |
 | --- | --- | --- | --- |
-| `draft` | Owner and scope assigned | `in_review` | Review package and source evidence complete |
-| `in_review` | Required reviewers and version fixed | `draft` or `approved` | Approval decision, comments, approver, and date recorded |
-| `approved` | All required claim and compliance approvals recorded | `published` or `draft` | Publish authorization or revision decision recorded |
-| `published` | Approved version published to the canonical location | `in_review` or `retired` | Live version, audience, publisher, and publish date recorded |
-| `retired` | Owner approved retirement and dependencies were checked | None, except a new version starts at `draft` | Archive/redirect location, successor, and retirement date recorded |
+| `draft` | Owner and scope assigned | `in_review` | Review package complete |
+| `in_review` | Reviewers and version fixed | `draft` or `approved` | Decision, approver, date |
+| `approved` | Required claim and compliance approvals recorded | `published` or `draft` | Publish authorization or revision |
+| `published` | Approved version at the canonical location | `in_review` or `retired` | Live version, audience, publisher, date |
+| `retired` | Owner approved retirement; dependencies checked | New version starts at `draft` | Archive or redirect, successor, date |
 
-### Review Status
+Set review targets by risk, deadline, change rate, and owner capacity. Legal, security, pricing, and product claims use source-change or validity triggers. Do not assign one universal review interval.
 
-| State | Meaning | Exit Evidence |
-| --- | --- | --- |
-| `current` | No review trigger is active and approved validity has not ended | New trigger or due condition recorded |
-| `due` | A review trigger fired and the conditional review window remains open | Review completed or due window elapsed |
-| `overdue` | The conditional review window elapsed without a completed decision | Review decision and follow-up recorded |
-| `blocked` | Review cannot finish because evidence, approval, or ownership is missing | Blocker resolved and review resumes |
+## Approval is not publish permission
 
-A published asset retains `publication_status: published` while its review status is `due`, `overdue`, or `blocked`. Review status must not make a live asset disappear from published-content denominators.
+A claim owner may approve wording without authorizing publication. A publisher may implement only the approved version, audience, location, and permissions. An agent may draft the matrix and the change set, but must not publish, unpublish, relabel, archive, move, or change access without explicit authorization for the resolved targets.
 
-Set target times by content risk, deadline, change rate, and available owner capacity. Legal, security, pricing, product, or time-bound claims should use source-change or validity triggers; do not assign one universal review interval.
+An urgent exception records scope, approver, expiry or review trigger, and follow-up owner. It cannot bypass a mandatory legal, security, or compliance approval.
 
-## 4) Approval And Write Boundary
+Distribution copies inherit the canonical content ID and version. Changes belong in the canonical source.
 
-Content approval and system mutation are separate decisions:
+## Taxonomy you will maintain
 
-- A claim owner may approve wording without authorizing publication.
-- A publisher may implement only the approved version, audience, location, and permissions.
-- An agent may draft the matrix, migration plan, and proposed changes, but must not publish, unpublish, relabel, archive, move, or change access without explicit user authorization for the resolved targets.
-- An urgent exception must record scope, approver, expiry or review trigger, and follow-up owner. It cannot bypass a mandatory legal, security, or compliance approval.
-- Distribution copies inherit the canonical content ID and version. Changes belong in the canonical source, then propagate through the approved process.
+Keep only fields someone will update: stable content ID, canonical location, role / stage / job, content owner, evidence or claim owner, version and effective date, publication status, review status, approved audience, approved by / at, last reviewed / review trigger.
 
-## 5) Ownership Matrix
+Unused metadata is not governance.
 
-| Activity | Responsible | Approver | Consulted | Informed |
-| --- | --- | --- | --- | --- |
-| New request triage |  |  |  |  |
-| Content drafting |  |  |  |  |
-| Messaging QA |  |  |  |  |
-| Compliance QA |  |  |  |  |
-| Publish and distribution |  |  |  |  |
-| Refresh and retirement |  |  |  |  |
+## Operating metrics
 
-Add separate rows for `claim approval`, `publish authorization`, and `system write` when different people hold those rights.
+- `Current-content rate = live published assets with review_status current / live published assets in scope`
+- `Orphan rate = published assets without an active owner / published assets in scope`
+- `Review completion rate = due reviews completed by their conditional SLA / reviews due`
+- `Canonical coverage = distributed assets linked to a canonical content ID and version / distributed assets in scope`
 
-## 6) Operating Metrics
+Track adoption only when audience eligibility and usage definitions exist. Do not invent usage.
 
-- `Current-content rate = live published assets with review_status current / all live published assets in scope`.
-- `Orphan rate = published assets without an active owner / published assets in scope`.
-- `Review completion rate = due reviews completed by their conditional SLA / reviews due`.
-- `Canonical coverage = distributed assets linked to a canonical content ID and version / distributed assets in scope`.
-- Track adoption or performance only when audience eligibility and usage definitions are available.
+## Thin evidence
+
+If ownership is unknown, design the ownership pass before the taxonomy cleanup. If the team cannot staff a council, give one intake owner and one publish owner. Route the one-time backlog to `content-gap-analysis`.

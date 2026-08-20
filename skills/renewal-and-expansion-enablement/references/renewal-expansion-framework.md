@@ -1,92 +1,84 @@
-# Renewal And Expansion Framework
+# Renewal and expansion judgment
 
-Use this framework to keep post-sale revenue plays consistent across teams.
+Use this when you are writing segment plays, signals, or manager checkpoints. One named account belongs in `account-brief-builder`.
 
-## Contract-Derived Milestones
+## Three plays, not one motion
 
-Build timing from verified account milestones:
+Save, healthy renewal, and expansion have different triggers and different commercial rules.
 
-| Milestone | Date/Duration | Source | Required Lead Time | Owner | Latest Safe Start | Confidence/Gap |
-| --- | --- | --- | --- | --- | --- | --- |
+**Fails.** Every account gets a QBR, a 10% discount ladder, and an upsell talk track at 90 days.
 
-Include only milestones that apply, such as contract end, renewal or termination notice, pricing notice, budget decision, procurement intake, legal/security review, executive approval, amendment, and signature.
+**Passes.** Save: restore the purchased outcome and named executive coverage before commercials. Healthy renewal: lock notice, budget, and signature against the contract. Expansion: only after value, a new buyer task, stakeholders, capacity, and commercial path are present.
+
+A healthy renewal is not expansion-ready. An at-risk account does not get a growth play because whitespace exists.
+
+## Contract-derived time
+
+Build timing from verified milestones: term end, renewal or termination notice, pricing notice, budget, procurement, legal or security, executive approval, amendment, signature.
 
 `Latest Safe Start = Required Completion Date - Verified Lead Time - Owner-Approved Contingency`
 
-Use contract documents or approved commercial records for contractual dates. Do not substitute a CRM close date when it conflicts with the contract. If lead time or notice terms are unknown, show the timeline as incomplete and assign an owner to verify them; do not insert a standard countdown.
+Use the contract or approved commercial record. Do not substitute a CRM close date when it conflicts. If notice or lead time is unknown, the timeline is incomplete. Do not insert a standard countdown.
 
-## Signal Contract
+## Signal contract
 
 For every signal define:
 
-- exact formula or observable condition
+- formula or observable condition
 - source and as-of date
 - account or approved peer baseline
-- observation window and minimum data coverage
-- `positive`, `caution`, `risk`, and `unknown` definitions
-- threshold owner and last approval date
+- observation window and minimum coverage
+- `positive`, `caution`, `risk`, and `unknown`
+- threshold owner and last approval
 - play triggered and evidence needed to clear it
 
-Thresholds must come from contract terms, validated historical behavior, product expectations for the use case, support/commercial policy, or an accountable owner. Never invent a numeric threshold to complete the framework.
+Thresholds come from contract terms, validated history, product expectations for the use case, support or commercial policy, or an accountable owner. Never invent a numeric cutoff to finish the framework.
 
-## Signal Families
+System health scores are inputs. Keep the component signals and their freshness.
 
-### Adoption And Usage
+## Signal families
 
-- active-user trend vs account baseline
-- core-workflow completion or feature adoption relative to the purchased use case
-- usage concentration risk (single team/champion dependency)
-- licensed or eligible population coverage where relevant
+Adoption and usage: trend versus this account's baseline, completion of the purchased workflow, concentration risk, licensed coverage. Low usage is not automatically risk. Read it against expected use, rollout stage, seasonality, and data coverage.
 
-Low usage is not automatically risk. Interpret it against expected use, rollout stage, seasonality, data coverage, and the customer's chosen outcome.
+Value: customer-agreed outcome, baseline, current value, review date, and whether the decision owner understands it.
 
-### Value Realization
+Stakeholders and delivery: sponsor continuity, required roles, implementation or support blockers with severity, age, and SLA status.
 
-- customer-agreed outcome metric, baseline, current value, and review date
-- evidence that realized value is understood by the decision owner
-- unresolved value commitments or measurement gaps
+Commercial readiness: notice, budget, procurement, legal, security, pricing, approval, amendment, signature. Owner, required date, dependency, verified next step.
 
-### Stakeholder And Delivery
+## Expansion readiness
 
-- sponsor/economic owner continuity and engagement evidence
-- coverage of required decision and operational roles
-- implementation or support blockers, severity, age, and policy/SLA status
+All of these, not one of them:
 
-### Commercial Readiness
-
-- notice, budget, procurement, legal, security, pricing, approval, amendment, and signature status
-- owner, required completion date, dependency, and verified next step for each applicable state
-
-## Expansion Readiness Indicators
-
-- clear value realization in current scope
-- an engaged decision owner and required stakeholder coverage
-- an adjacent buyer task with measurable business upside
-- implementation capacity and timing fit
+- value realized in current scope
+- engaged decision owner and required coverage
+- adjacent buyer task with measurable upside
+- implementation capacity and timing
 - commercial path and account-rights fit
 
-Keep expansion readiness separate from renewal health. A healthy renewal is not automatically expansion-ready, and an at-risk account should not receive a growth play merely because whitespace exists.
+## Play design
 
-## Commercial Governance States
+For each play: trigger, owner, sequence, commercial boundary, exit evidence, inspection checkpoint.
 
-Define explicit owners and transitions for:
+- Standard renewal when required signals are positive and confidence is sufficient
+- Save when a defined risk trigger fires
+- Verify data first when a material signal is unknown
+- Expansion discovery only when the readiness set is present
+- Expansion close only when qualification and commercial path are verified
 
-- pricing/discount approval
-- procurement status
-- legal/security review
-- deal desk review
-- executive escalation
+Do not change a live health, renewal, or expansion field automatically.
 
-## Play Design
+## Thin evidence
 
-Create only the plays supported by the in-scope contract model, signal states, and commercial motion. For each selected play, define trigger, owner, sequence, commercial boundary, evidence needed to exit, and inspection checkpoint.
+If usage exports or notice terms are missing, write the play structure and mark the signal `unknown`. Do not invent usage metrics, health thresholds, or pricing.
 
-Select plays using signal state and contract milestone:
+## Optional shape
 
-- use a standard renewal play when required signals are positive and evidence confidence is sufficient
-- use an at-risk play when a defined risk trigger fires
-- verify data first when a material signal is unknown
-- use expansion discovery only when value, buyer task, stakeholder, capacity, and commercial-path evidence support it
-- add an expansion close play only when qualification is complete and the commercial path is verified
-
-Do not change a live account health, renewal, or expansion field automatically. Return the evidence and recommended transition for explicit operator approval.
+```text
+Segment / owner model
+Milestones (source, latest safe start, gap)
+Signals (positive / caution / risk / unknown)
+Plays: save | healthy renewal | expansion
+Commercial guardrails
+Manager inspect
+```

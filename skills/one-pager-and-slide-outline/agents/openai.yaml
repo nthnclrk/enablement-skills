@@ -1,4 +1,4 @@
 interface:
   display_name: "One Pager And Slide Outline"
-  short_description: "Create concise briefs and slide structures"
+  short_description: "One-pagers and assertion-led slide outlines"
   default_prompt: "Use $one-pager-and-slide-outline to turn this source material into the requested one-pager, assertion-led slide outline, or both."

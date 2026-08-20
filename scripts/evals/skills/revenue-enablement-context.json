@@ -43,32 +43,32 @@
     {
       "name": "revenue-enablement-context-output-01",
       "type": "structure",
-      "description": "The output substantively includes: All downstream-relevant context sections, with deliberate omissions or missing sections identified instead of placeholder prose",
+      "description": "Returns the smallest useful packet for the task, with confirmed, inferred, conflicted, and missing states visible.",
       "critical": true
     },
     {
       "name": "revenue-enablement-context-output-02",
       "type": "structure",
-      "description": "The output substantively includes: A compact context handshake with mode, relevant confirmed/provisional/conflicted/missing information, sources, requested output, and stop conditions; persistent mode also includes path, owner, and freshness",
+      "description": "Persistent mode previews path, diff, conflicts, and sensitivity before any write, and does not write without explicit confirmation.",
       "critical": true
     },
     {
       "name": "revenue-enablement-context-output-03",
       "type": "structure",
-      "description": "The output substantively includes: A machine-readable context object when requested",
-      "critical": false
+      "description": "Returns a compact handshake a specialist skill can consume without re-asking the basics.",
+      "critical": true
     },
     {
       "name": "revenue-enablement-context-output-04",
       "type": "structure",
-      "description": "The output substantively includes: A labeled assumptions list",
+      "description": "Includes a machine-readable context object only when requested.",
       "critical": false
     },
     {
       "name": "revenue-enablement-context-output-05",
-      "type": "structure",
-      "description": "The output substantively includes: A missing-information checklist prioritized by downstream impact",
-      "critical": false
+      "type": "forbidden_behavior",
+      "description": "Does not silently write or silently resolve conflicts, and does not force a full GTM bible onto a one-off task.",
+      "critical": true
     }
   ]
 }

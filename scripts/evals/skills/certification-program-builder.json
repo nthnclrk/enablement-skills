@@ -2,8 +2,8 @@
   "schema_version": 2,
   "skill": "certification-program-builder",
   "source": "skills/certification-program-builder/SKILL.md",
-  "notes": "Generated routing and basic-output starter. Curate realistic prompts and example-backed task scenarios before treating it as behavior evidence.",
-  "managed_by": "starter-generator",
+  "notes": "Curated eval for the craft-pass output contract. Routing prompts stay on practitioner language; output checks require the skill's leading test, not a section list.",
+  "managed_by": "curated",
   "should_trigger": [
     {
       "prompt": "Please create role-based readiness certifications with evidence requirements, defensible pass/fail standards, behaviorally anchored scoring, and assessor calibration.",
@@ -37,15 +37,33 @@
   ],
   "output_structure_checks": [
     {
-      "name": "certification-program-builder-core-output",
+      "name": "certification-program-builder-output-01",
       "type": "structure",
-      "description": "Produces Certification blueprint; Readiness claim and job-task-to-standard map.",
+      "description": "States a readiness claim: what the person may do, in which situations, with what independence.",
       "critical": true
     },
     {
-      "name": "certification-program-builder-decision-discipline",
+      "name": "certification-program-builder-output-02",
+      "type": "structure",
+      "description": "Defines authentic evidence, critical errors, and dimension-specific behavior anchors.",
+      "critical": true
+    },
+    {
+      "name": "certification-program-builder-output-03",
+      "type": "structure",
+      "description": "Sets pass/fail logic with owner, version, and provisional or validated status, including non-compensable hard fails.",
+      "critical": true
+    },
+    {
+      "name": "certification-program-builder-output-04",
+      "type": "structure",
+      "description": "Includes assessor calibration, decision and retake rules, and a capacity ledger with fits, reduce, sequence, or blocked.",
+      "critical": true
+    },
+    {
+      "name": "certification-program-builder-output-05",
       "type": "semantic",
-      "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
+      "description": "Refuses course completion, quiz scores, tenure, or manager familiarity as the pass, and does not write the onboarding curriculum.",
       "critical": true
     }
   ]

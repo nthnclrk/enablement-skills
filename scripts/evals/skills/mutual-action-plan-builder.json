@@ -2,8 +2,8 @@
   "schema_version": 2,
   "skill": "mutual-action-plan-builder",
   "source": "skills/mutual-action-plan-builder/SKILL.md",
-  "notes": "Generated routing and basic-output starter. Curate realistic prompts and example-backed task scenarios before treating it as behavior evidence.",
-  "managed_by": "starter-generator",
+  "notes": "Curated eval for mutual action plans that require a buyer-side and seller-side owner on every milestone. Near-misses keep RFP orchestration, deal inspection, and account briefs on adjacent skills.",
+  "managed_by": "curated",
   "should_trigger": [
     {
       "prompt": "Please build mutual action plans for complex deals and coordinated customer initiatives.",
@@ -15,6 +15,10 @@
     },
     {
       "prompt": "I have rough notes. Please turn them into a usable mutual action plan and label anything that still needs confirmation.",
+      "expected": true
+    },
+    {
+      "prompt": "Build a shared mutual action plan for the Acme close. Every milestone needs a buyer-side owner and a seller-side owner, inspectable exit criteria, and whether the customer has actually agreed.",
       "expected": true
     }
   ],
@@ -33,20 +37,48 @@
       "prompt": "Please inspect one live opportunity and produce an evidence-backed manager view of stage validity, deal risk, missing proof, and next actions.",
       "expected": false,
       "adjacent_skill": "deal-inspection-coach"
+    },
+    {
+      "prompt": "Prepare Thursday's internal account review brief for Acme. One decision: do we assign a new executive sponsor before we send commercial paper.",
+      "expected": false,
+      "adjacent_skill": "account-brief-builder"
+    },
+    {
+      "prompt": "Prepare our CRO's pre-read for tomorrow's 30-minute meeting with Acme's COO. We need one ask, a fallback if they will not move, and talking points.",
+      "expected": false,
+      "adjacent_skill": "executive-briefing-builder"
     }
   ],
   "output_structure_checks": [
     {
-      "name": "mutual-action-plan-builder-core-output",
+      "name": "mutual-action-plan-builder-output-01",
       "type": "structure",
-      "description": "Produces a usable mutual action plan deliverable matched to the requested scope.",
+      "description": "States the target outcome, target date, and agreement state.",
       "critical": true
     },
     {
-      "name": "mutual-action-plan-builder-decision-discipline",
-      "type": "semantic",
-      "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
+      "name": "mutual-action-plan-builder-output-02",
+      "type": "structure",
+      "description": "Gives every milestone a buyer-side owner and a seller-side owner, or marks the missing buyer owner as a gap.",
       "critical": true
+    },
+    {
+      "name": "mutual-action-plan-builder-output-03",
+      "type": "structure",
+      "description": "Includes inspectable entry or exit criteria, not status labels only.",
+      "critical": true
+    },
+    {
+      "name": "mutual-action-plan-builder-output-04",
+      "type": "structure",
+      "description": "Records agreement state and confirmation source for customer commitments, or leaves them proposed.",
+      "critical": true
+    },
+    {
+      "name": "mutual-action-plan-builder-output-05",
+      "type": "structure",
+      "description": "Makes a schedule-feasibility call, including target infeasible when the critical path misses the date, and separates customer-visible from internal-private content.",
+      "critical": false
     }
   ]
 }

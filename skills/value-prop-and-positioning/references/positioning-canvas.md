@@ -1,71 +1,43 @@
-# Positioning Canvas
+# Positioning judgment
 
-Use this canvas to produce a compact, evidence-backed positioning artifact.
+Use this when building or checking a thesis. The skill body has the procedure.
 
-## 1) Buyer Task And Decision Context
+## Alternative first
 
-- Buyer segment:
-- Buyer role and decision role:
-- Trigger event:
-- Progress sought / job to be done:
-- Current approach and why it persists:
-- Success criteria:
-- Cost or consequence of the current approach:
-- Commercial motion:
+If the alternatives map does not include no change, start over. Most deals are lost to the status quo, not to a named competitor.
 
-## 2) Alternatives Map
+**Fails.** "Unlike legacy tools, we are the AI-powered platform of record."
 
-| Alternative Actually Used/Considered | Evidence | Why It Is Attractive | Trade-off For This Buyer Task | Change Trigger |
-| --- | --- | --- | --- | --- |
+**Passes.** "Ops keeps the spreadsheet because it is already in the Friday review. We are for teams whose missed handoffs now have a named cost."
 
-Include no change, manual work, in-house approaches, adjacent categories, and named competitors only when evidence shows they are real options. Do not invent a competitor set to fill the table.
+Do not invent competitors to fill the table.
 
-## 3) Differentiation Chain
+## Differentiation chain
 
-| Differentiated Capability | Mechanism | Buyer Outcome | Relevant Decision Criterion | Proof Claim ID |
-| --- | --- | --- | --- | --- |
+Capability → mechanism → buyer outcome → proof.
 
-A capability belongs here only when it is relevant to the buyer task, meaningfully distinct from real alternatives, and defensible. “Easy,” “integrated,” “AI-powered,” or “best-in-class” is not differentiation without a specific mechanism and comparison.
+"Easy," "integrated," "AI-powered," and "best-in-class" are not chains.
 
-## 4) Positioning Thesis
+**Fails.** "We are more intuitive than the incumbent."
 
-Choose one mode. Do not force an outcome claim when the available evidence supports only a demonstrable mechanism.
+**Passes.** "Handoff requests are captured from email and assigned an owner. The Friday review then shows unresolved items by team, so the VP can see where work dies."
 
-- `Evidence-backed`: `For [buyer in situation] trying to [task/progress], [product] is the [frame] that [supported outcome] through [differentiated mechanism], unlike [real alternative], as shown by [approved proof].`
-- `Product-demonstrable`: `For [buyer in situation] trying to [task/progress], [product] is the [frame] that uses [demonstrable mechanism] to help them [intended progress], unlike [real alternative].` Do not convert intended progress into a measured outcome.
-- `Internal hypothesis`: `We believe [buyer in situation] may prefer [frame/mechanism] because [evidence or reasoning].` Add validation questions, evidence needed, owner, and `External use: prohibited until validated`.
+## Thesis modes
 
-## 5) Value Pillars
+Pick one. Do not force an outcome claim the evidence cannot carry.
 
-| Pillar | Buyer Task/Decision Criterion | Capability And Mechanism | Outcome | Proof Claim ID |
-| --- | --- | --- | --- | --- |
+- `Evidence-backed`: For [buyer in situation] trying to [task], [product] is the [frame] that [supported outcome] through [mechanism], unlike [real alternative], as shown by [approved proof].
+- `Product-demonstrable`: same shape, but do not convert intended progress into a measured outcome.
+- `Internal hypothesis`: "We believe..." plus validation questions. External use prohibited until validated.
 
-Include only pillars needed to explain the buying decision. Do not target a fixed count.
+## Role translation
 
-## 6) Decision-Role Message Matrix
+If two roles can swap sentences and nothing breaks, you only changed vocabulary. Change the task, the criterion, the proof, and the risk.
 
-| Role | Task And Decision Criterion | Outcome | Approved Proof | Risk Or Trade-off | Next Decision |
-| --- | --- | --- | --- | --- | --- |
+## Why-now
 
-## 7) Why-Now Narrative
+Write it only when there is a trigger, a cost of delay, or a real decision window. Manufactured urgency is a tell.
 
-- Business pressure:
-- Cost of delay:
-- Time window:
-- Risk of no decision:
+## Optional canvas
 
-If there is no verified trigger, cost of delay, or decision window, omit urgency language.
-
-## 8) Proof Ledger
-
-| Claim ID | Exact Claim | Source And Date | Population/Timeframe | Evidence Type | Owner | Approved Audience | Permitted Wording | Review Trigger/Expiry | Status |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-
-Use these statuses:
-
-- `verified_quantitative`: source, denominator, population, timeframe, and calculation are known.
-- `verified_qualitative`: attributable customer or buyer evidence is approved for the stated use.
-- `product_demonstrable`: the capability and mechanism can be shown, but an outcome claim is not supported.
-- `unverified`: source, permission, freshness, or claim fit is incomplete; do not use externally.
-
-The claim must be no broader than its evidence. Preserve confidentiality, customer attribution rights, and audience restrictions. Rewrite or remove claims whose permitted wording cannot support the positioning.
+Buyer task, alternatives map, differentiation chain, thesis, pillars, proof ledger, disqualification.

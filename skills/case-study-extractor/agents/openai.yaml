@@ -1,4 +1,4 @@
 interface:
   display_name: "Case Study Extractor"
-  short_description: "Extract credible, permission-safe customer proof"
+  short_description: "Permissioned customer proof, not overclaimed stories"
   default_prompt: "Use $case-study-extractor to turn customer evidence into a traceable case-study draft with verified claims, exact quotes, and granular reuse permissions."

@@ -3,63 +3,76 @@ name: discovery-rubric-auditor
 description: Audit a sample of discovery calls with one consistent rubric and turn portfolio-level patterns into manager-ready coaching priorities. Use when asked to compare discovery quality across calls or reps, find recurring gaps, or establish a cohort or team baseline. Route discovery-call design to discovery-and-demo-structure, any single-call review or coaching request to call-review-coach, and formal pass/fail readiness decisions to certification-program-builder.
 ---
 
-# Discovery Rubric Auditor
+# Discovery rubric auditor
 
-Score discovery consistently and turn the pattern into manager-ready coaching.
+Score the pattern, not the one-off. If the finding could be one bad call, do not coach the team on it.
+
+An audit needs a comparable sample, one rubric, and a few recurring gaps. One recorded call is `call-review-coach`. A pass/fail readiness decision is `certification-program-builder`.
+
+**Pattern.** "In 7 of 9 mid-market first calls, reps named a problem and never asked what it costs. Coach the cost question next week. Do not rank the AE with two calls."
+
+**One-off.** "The team needs better discovery. AE3 scored 2.1. Roll out a discovery refresh."
+
+If you cannot say how often the gap appeared, in which comparable slice, it is not a pattern.
 
 ## Confirm Inputs First
 
-- Use supplied current context or relevant sections of `.enablement/context.md` when available. Treat stale, inferred, or conflicted material as provisional; never update shared context silently.
-- Confirm audit scope: call sample, rep cohort, or team baseline. If only one call is in scope, route to `call-review-coach`.
-- Confirm sampling frame, time window, included roles, segments, stages, and outcome mix.
-- Confirm input source and coverage: recordings, transcripts, notes, or recorded call summaries.
-- Confirm rubric source: provided rubric or `references/discovery-rubric-framework.md`.
-- Confirm the comparison or decision required: coaching priority, trend diagnosis, or baseline.
-- Confirm sample-sufficiency rule and minimum comparable calls per reported unit.
-- Confirm reviewer group and whether calibration or double-scoring has already occurred.
-- Confirm authorized use, access, anonymization, retention, and whether customer or rep identifiers may appear in call-level output.
+Ask only for the inputs that change the audit:
 
-Ask for only missing essentials. If required, continue with explicit assumptions.
+1. The sample and why these calls. One call: route to `call-review-coach`
+2. Comparison units: role, segment, stage, call type, time window
+3. Source coverage: recordings, transcripts, notes, or summaries
+4. Rubric source, or use the reference
+5. Reviewer count and whether they already calibrated
+6. The decision this audit must support: coaching priority or baseline, not certification
+
+Continue from a thin sample with the limits named. Do not invent a leaderboard.
 
 ## Read The Right Reference
 
-- Read [references/discovery-rubric-framework.md](references/discovery-rubric-framework.md) before scoring.
+Read [references/discovery-rubric-framework.md](references/discovery-rubric-framework.md) for anchors, calibration, and when a number is only directional. Skip it if the user already supplied a calibrated rubric and only wants the pattern read.
 
 ## Default Workflow
 
-1. Define the sampling frame and comparison units. Separate unlike roles, segments, stages, or call types rather than forcing one leaderboard.
-2. Calibrate reviewers on the same benchmark calls before scoring the portfolio. Resolve anchor disagreements and record calibration status. With one reviewer, use benchmark anchors plus a delayed blind rescore and label inter-rater reliability `not established`.
-3. Score each applicable dimension with exact evidence, evidence coverage, and confidence. Use `N/O` rather than zero when a behavior was not observable.
-4. With multiple reviewers, double-score a representative subset to detect rater drift. With one reviewer, blindly rescore the subset after a delay and report self-consistency without implying inter-rater reliability. Pause aggregation when material anchor disagreements remain unresolved.
-5. Aggregate comparable calls using sample count, median, distribution, and evidence coverage. Label small or skewed samples as directional.
-6. Roll evidence into recurring strengths and gap clusters without converting frequency into causation.
-7. Separate likely rep-skill gaps from process design, missing data, manager expectations, or sample-shape issues.
-8. Prioritize a few coaching interventions and define what managers should inspect in the next call sample.
+1. Frame the sample.
+   Separate unlike roles, segments, stages, or call types. Done when each reported unit is comparable.
+2. Calibrate, or label the single-reviewer path.
+   Agree anchors on benchmark calls first. One reviewer: delayed blind rescore and `inter-rater reliability: not established`. Done when disagreements greater than one point are resolved or named.
+3. Score with evidence.
+   Every dimension gets a score or `N/O`, coverage, and confidence. Silence in missing audio is not a `1`. Done when call-level evidence can be inspected.
+4. Check drift.
+   Double-score a subset, or blindly rescore after a delay. Pause aggregation if anchors still disagree.
+5. Aggregate only comparable units.
+   Count, median, distribution, `N/O` rate, coverage. Every number keeps its denominator. Fewer than three comparable calls per unit is directional.
+6. Separate pattern from one-off.
+   Recurring clusters only. Frequency is not causation. Skill gap, process gap, and sample-shape issue are different findings.
+7. Pick a few interventions.
+   What managers inspect in the next call sample. Done when each action has a behavior and a slice.
 
-## Tool Notes
+Conversation-intelligence scores are leads, not ground truth. Default reporting is de-identified.
 
-- If conversation intelligence platforms are available, pull the defined call sample, metadata, and snippet evidence without relying on platform-generated scores as ground truth.
-- If no tools exist, use manual notes and call summaries with conservative scoring confidence.
-- Keep output independent of any single platform schema unless asked otherwise.
-- Default aggregate reporting to de-identified evidence. Keep any identifiable call-level appendix restricted, optional, and within the confirmed access and retention boundary.
+For meeting architecture use `discovery-and-demo-structure`. For one call use `call-review-coach`. For a formal gate use `certification-program-builder`.
 
 ## Output Contract
 
-- `Audit Scope`: who, what calls, and scoring window.
-- `Sample Shape`: counts by comparison unit, exclusions, coverage, and material skew.
-- `Calibration Record`: benchmark calls, reviewer agreement, unresolved differences, and drift-check status.
-- `Rubric Results`: de-identified call-level evidence plus comparable aggregate scores and distributions; an identifiable appendix only when explicitly authorized.
-- `Pattern Summary`: recurring strengths and gaps with frequency, impact, and confidence.
-- `Priority Interventions`: top coaching moves ranked by likely impact.
-- `Manager Action Plan`: what to inspect next week and what to reinforce.
-- `Limitations`: small samples, missing evidence, mixed contexts, and conclusions that remain directional.
+Return an audit a manager can act on next week:
+
+- Scope: who, which calls, scoring window
+- Sample shape: counts by unit, exclusions, coverage, skew
+- Calibration record, including single-reviewer limits
+- De-identified results with distributions; identifiable appendix only if authorized
+- Patterns with frequency, impact, and confidence
+- A few coaching moves, ranked by likely effect
+- What to inspect in the next sample
+- Limitations that keep conclusions directional
+
+Do not rank reps from a mixed or tiny sample. Do not issue a pass/fail.
 
 ## Quality Bar
 
-- Keep scoring consistent across calls and reviewers.
-- Anchor every finding to call evidence, not rep memory.
-- Focus on a few high-impact improvements rather than a long critique list.
-- Separate skill issues from missing process data.
-- Avoid team-level conclusions when the sample is too small or mixed.
-- Never turn a portfolio audit into a formal readiness or employment decision without a separately governed certification standard.
-- Never imply inter-rater reliability when only one reviewer performed the audit.
+- Unlike calls are not on one leaderboard.
+- Every finding cites call evidence and a denominator.
+- `N/O` is never averaged as zero.
+- One reviewer is labeled `inter-rater reliability: not established`.
+- Interventions are few, and each is a pattern, not a one-off.
+- The audit refused the single-call review and the certification decision.

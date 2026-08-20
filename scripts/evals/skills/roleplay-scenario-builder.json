@@ -2,8 +2,8 @@
   "schema_version": 2,
   "skill": "roleplay-scenario-builder",
   "source": "skills/roleplay-scenario-builder/SKILL.md",
-  "notes": "Generated routing and basic-output starter. Curate realistic prompts and example-backed task scenarios before treating it as behavior evidence.",
-  "managed_by": "starter-generator",
+  "notes": "Curated eval for the craft-pass output contract. Routing prompts stay on practitioner language; output checks require the skill's leading test, not a section list.",
+  "managed_by": "curated",
   "should_trigger": [
     {
       "prompt": "Please build developmental sales role-play scenarios with facilitator-only briefs, behaviorally anchored feedback, and run protocols.",
@@ -37,15 +37,33 @@
   ],
   "output_structure_checks": [
     {
-      "name": "roleplay-scenario-builder-core-output",
+      "name": "roleplay-scenario-builder-output-01",
       "type": "structure",
-      "description": "Produces Scenario: one focused scenario by default, or a justified progression that changes one variable at a time; Participant Brief: context, objective, constraints, and success criteria.",
+      "description": "Delivers one focused scenario, or a progression that changes one difficulty variable at a time.",
       "critical": true
     },
     {
-      "name": "roleplay-scenario-builder-decision-discipline",
+      "name": "roleplay-scenario-builder-output-02",
+      "type": "structure",
+      "description": "Separates the participant brief from facilitator-only hidden facts, reveal conditions, and cues.",
+      "critical": true
+    },
+    {
+      "name": "roleplay-scenario-builder-output-03",
+      "type": "structure",
+      "description": "Includes buyer responses tied to seller behavior and a run protocol with timebox and retry rules.",
+      "critical": true
+    },
+    {
+      "name": "roleplay-scenario-builder-output-04",
+      "type": "structure",
+      "description": "Scores observable behavior with cited evidence and uses a pass rule only if one was supplied.",
+      "critical": true
+    },
+    {
+      "name": "roleplay-scenario-builder-output-05",
       "type": "semantic",
-      "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
+      "description": "Tests one target behavior rather than theater or personality, and does not issue a readiness decision.",
       "critical": true
     }
   ]

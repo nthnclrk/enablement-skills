@@ -1,4 +1,4 @@
 interface:
   display_name: "Proposal RFP Orchestrator"
-  short_description: "Coordinate compliant proposal responses"
-  default_prompt: "Use $proposal-rfp-orchestrator to coordinate an RFP response with a compliance matrix, owner timeline, review gates, and submission checklist."
+  short_description: "Bid/no-bid first, then a compliance matrix"
+  default_prompt: "Use $proposal-rfp-orchestrator to decide bid/no-bid, then coordinate the RFP response with a compliance matrix, owners, review gates, and a readiness verdict."

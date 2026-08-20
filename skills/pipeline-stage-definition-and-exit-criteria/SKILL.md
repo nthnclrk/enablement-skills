@@ -3,84 +3,72 @@ name: pipeline-stage-definition-and-exit-criteria
 description: Define sales stages, exit criteria, and required proof that managers can inspect and RevOps can enforce. Use when the user asks to tighten stage hygiene, standardize progression rules, or connect qualification evidence to forecasting. For specific deal reviews, use deal-inspection-coach. For forecast summaries, use forecast-risk-brief.
 ---
 
-# Pipeline Stage Definition And Exit Criteria
+# Pipeline stage definition and exit criteria
 
-Define pipeline stages as buyer-signal checkpoints, not activity checklists.
+Write stages as buyer-signal checkpoints. If a seller can pass a stage by sending a deck, the stage is broken.
+
+A good stage says what the buyer decided and what proof a manager can inspect. If the user wants one live deal reviewed, use `deal-inspection-coach`. If they want a period forecast, use `forecast-risk-brief`.
+
+**Buyer-signal exit.** "Discovery exits when the buyer names the problem, its cost, and why it is funded this cycle. Required proof: a buyer-authored problem statement or recorded confirmation from the economic buyer."
+
+**Activity checklist.** "Discovery exits when the AE logs a discovery call and fills the MEDDPICC fields."
+
+If two stages can be true at once, they are not stages yet.
 
 ## Confirm Inputs First
 
-Confirm the minimum design inputs:
+Ask only for the inputs that change the model:
 
-- Use supplied current context or relevant sections of `.enablement/context.md` when available. Treat stale, inferred, or conflicted material as provisional; never update shared context silently.
-- Current stage map and definitions
-- Historical stage evidence: stage-entry and exit dates, conversion, aging, regressions, exceptions, and closed outcome for a representative period
-- Target sales motions (new business, expansion, partner-led, enterprise, SMB)
-- Qualification method in use (for example MEDDICC or similar)
-- Forecasting pain points and inspection problems
-- Intended operators (AEs, managers, RevOps)
+1. Current stage map and who operates it
+2. Historical stage evidence for a representative period, if it exists
+3. Target motions and the qualification method in use
+4. The inspection and forecast problems this redesign must fix
 
-If inputs are partial, ask only for missing essentials. Use labeled assumptions only to propose a testable stage model; keep historical findings, proof requirements, thresholds, ownership, and system behavior unknown until verified.
+If history is missing, label the model a hypothesis. Do not invent conversion rates, aging norms, or CRM behavior.
 
 ## Read The Right Reference
 
-- Read [references/stage-exit-framework.md](references/stage-exit-framework.md) before proposing stage cards or governance controls.
-- Read [references/source-system-guide.md](references/source-system-guide.md) when the output will later be mapped into CRM fields and reporting views.
+Read [references/stage-exit-framework.md](references/stage-exit-framework.md) before writing stage cards or governance. Read [references/source-system-guide.md](references/source-system-guide.md) when the output must later map into CRM fields and reporting.
 
 ## Default Workflow
 
-1. Establish the historical baseline.
-Use stage-history data and a representative deal audit to find stages that are vague, skipped, slow, frequently regressed, or weakly associated with outcomes. Record data gaps rather than treating missing history as evidence.
-
-2. Rewrite each stage around a single buyer signal.
-Give every stage one clear purpose and one clear reason to move forward.
-
-3. Set entry and exit criteria.
-Separate `required proof`, whose absence blocks progression except through a documented exception, from `recommended proof`, which informs coaching but does not block movement. Keep required proof to the minimum buyer-validated evidence needed to reduce the stage's stated risk.
-
-4. Add anti-patterns and exception paths.
-Call out the common ways reps misuse stages and how managers should handle exceptions.
-
-5. Map the stage model to CRM and reporting.
-Translate the rules into fields, notes, and dashboards the team can actually use.
-
-6. Align the model with the team’s qualification method.
-Map stage expectations to MEDDPICC, SPICED, or the org’s standard framework when needed.
-
-7. Backtest the proposed model.
-Apply the criteria to a representative sample of won, lost, no-decision, and open deals. Report how many deals would progress, remain, regress, or require an exception and whether the evidence distinguishes outcomes. If history is insufficient, label the criteria as hypotheses and define a pilot.
-
-8. Define inspection cadence.
-Set how managers and RevOps will review stage movement and forecast hygiene.
-
-9. Produce the transition and rollback plan.
-Before rollout, set baseline-linked success thresholds and rollback triggers for data completeness, exception rate, stage aging, conversion, and forecast variance. Name the rollback decision owner, review date, and restoration path to the prior rules.
-
-## Tool Notes
-
-- Tool-agnostic default: define the operating model first, then map to systems.
-- Use [references/source-system-guide.md](references/source-system-guide.md) for the minimum system-mapping inputs and implementation risks.
-- BI layers can enforce reporting once the CRM design is stable.
-- Do not design stages around CRM defaults; design for selling reality and inspection quality.
+1. Establish the baseline.
+   Find stages that are vague, skipped, slow, frequently regressed, or weakly tied to outcomes. Record data gaps. Done when you can name the broken stages and what evidence you lack.
+2. Give each stage one buyer signal.
+   One purpose. One reason to move. Done when you can say the buyer state in a sentence a manager would use in inspect.
+3. Set entry, exit, and proof.
+   Required proof blocks progression except through a documented exception. Recommended proof coaches; it does not block. Keep required proof to the minimum buyer-validated evidence that reduces that stage's named risk.
+4. Name the anti-patterns.
+   Sent proposal, booked meeting, populated field, and seller assertion are activity until buyer evidence shows what changed. Write how managers handle exceptions.
+5. Map to the qualification method.
+   Attach only the MEDDPICC, SPICED, or local checks that belong to this stage's risk. Do not reprint the whole framework on every card.
+6. Backtest before rollout.
+   Apply the criteria to won, lost, no-decision, and open deals. Report how many would progress, remain, regress, or need an exception. If history cannot support that, define a pilot.
+7. Set inspection and rollback.
+   Manager and RevOps cadence. Success thresholds for completeness, exception rate, aging, conversion, and forecast variance. Named rollback owner and restoration path.
+8. Map to systems last.
+   Design the operating logic first. Then recommend fields, notes, and dashboards. Do not move live opportunities or flip required fields without explicit approval.
 
 ## Output Contract
 
-Default output includes:
+Return a stage model RevOps can implement and a manager can inspect:
 
-- Stage card table: stage name, purpose, entry criteria, exit criteria, required proof
-- Recommended proof and exception owner by stage
-- Historical baseline and backtest results, including data limitations
-- Anti-pattern list and exception rules
+- Stage cards: name, buyer state, purpose, entry, exit, required proof, recommended proof, exception owner
+- Historical baseline and backtest, including data limits
+- Anti-patterns and exception rules
 - Inspection cadence by role
-- Optional methodology mapping notes by stage
-- CRM and reporting implementation notes
-- Transition, pilot, and rollback plan from current to future model
+- Qualification-method notes only where they change a gate
+- CRM and reporting recommendations
+- Transition, pilot, and rollback plan
+- Assumptions, if you had to make any
+
+Do not inspect a named live deal or produce a forecast brief here.
 
 ## Quality Bar
 
-- Criteria are inspectable and evidence-based, not activity-based.
-- Required proof is minimal and distinct from recommended coaching evidence.
-- Stage progression logic is clear and mutually exclusive enough for reporting.
-- Governance is explicit enough for manager coaching and forecast reviews.
-- Output includes practical implementation details for operations teams.
-- Design addresses known problem areas from the current process.
-- Backtest findings, pilot success thresholds, and rollback criteria are explicit.
+- A manager can pass or fail a deal against a stage without a side conversation.
+- Required proof is minimal, buyer-validated, and distinct from coaching evidence.
+- Stages are mutually exclusive enough to report.
+- Backtest findings or an explicit pilot hypothesis are present.
+- No invented historical rates, thresholds, or CRM capabilities.
+- System changes stay recommendations.

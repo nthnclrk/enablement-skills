@@ -1,69 +1,80 @@
-# Forecast Risk Framework
+# Forecast risk judgment
 
-Use this framework for portfolio-level forecast reliability analysis. It is a decision aid, not a close-probability model.
+Use this for portfolio-level forecast reliability. It is a decision aid, not a close-probability model. One deal belongs in `deal-inspection-coach`.
 
-## Keep Four Concepts Separate
+## Four things that are not the same
 
-- `Forecast category`: the seller or manager classification recorded in the operating system.
-- `Deal risk`: evidence that an opportunity may not close in the stated window.
-- `Evidence confidence`: how trustworthy and complete the inputs are.
-- `Portfolio exposure`: the amount and concentration of forecast value affected by risk.
+- `Forecast category`: what the seller or manager recorded
+- `Deal risk`: evidence the opportunity may miss the stated window
+- `Evidence confidence`: how trustworthy the inputs are
+- `Portfolio exposure`: the value affected by risk or uncertainty
 
-A high-risk deal can have high evidence confidence. A low-risk label with low evidence confidence is not reassuring; it means the deal needs verification.
+A high-risk deal can have high confidence. A low-risk label with low confidence is not reassuring.
 
-## Risk Checks And Tier Decision
+**Fails.** Commit looks healthy. Most fields are populated and the AE is confident.
 
-Use the organization's approved risk model when one exists. Record its owner, version, inputs, and known calibration limits. Do not create an equally weighted point score or universal ratio cutoff when the organization has not supplied one.
+**Passes.** Commit is indeterminate. Amount and category are present. Buyer next step, approval path, and push history are missing, so the date cannot be tiered.
 
-Review each deal against the same decision-relevant checks:
+## Checks and tiers
+
+Use the organization's approved model when one exists. Record owner, version, and calibration limits. Do not invent equal weights or a universal aging cutoff.
 
 | Check | Clear | Watch | Material concern | Unknown |
 | --- | --- | --- | --- | --- |
-| Time feasibility | Current stage, mandatory lead times, and buyer dates support the close window | Slack is narrow but the required path remains feasible | A mandatory dependency, approval, or realistic stage-to-close path conflicts with the date | Snapshot date, close date, dependencies, or relevant baseline is missing or unusable |
-| Buyer-confirmed progression | Recent buyer evidence shows material progress against the confirmed motion cadence | Progress is weak, seller-reported, or awaiting buyer confirmation | Buyer commitments repeatedly slip or no credible material progression supports the stated timing | Progression definition, cadence, or evidence is missing or conflicting |
-| Next step | Dated, buyer-owned, decision-relevant, and before the required milestone | Seller-owned, vague, or not tied to a buyer decision | Missing, overdue, outside the forecast window, or unable to advance the decision | Sources conflict or the next step cannot be verified |
-| Decision and stakeholder coverage | Decision path, critical roles, and approval sequence are verified | One material role or approval remains uncertain but a verification path exists | Economic approval, decision authority, or a required stakeholder path is absent for the stated timing | Stakeholder or decision evidence is too incomplete to judge |
-| Commercial and technical path | Required validation, security, legal, procurement, and commercials are complete or feasibly sequenced | A bounded dependency is open with an owner and credible resolution path | A mandatory dependency lacks time, owner, evidence, or authority to resolve inside the window | Required dependencies or their status are not known |
-| Date stability | Movement is explained by new buyer evidence and the revised plan remains feasible | The date moved without enough buyer evidence to establish stability | Repeated or late movement masks an unchanged decision path or infeasible dependency | Push history or prior close dates are unavailable |
+| Time feasibility | Stage, lead times, and buyer dates support the window | Slack is narrow but the path is feasible | A mandatory dependency conflicts with the date | Snapshot, close date, or dependency is missing |
+| Buyer-confirmed progression | Recent buyer evidence shows material progress | Progress is weak or seller-reported | Commitments slip or no buyer progress supports the timing | Progression definition or evidence is missing |
+| Next step | Dated, buyer-owned, decision-relevant | Seller-owned or vague | Missing, overdue, or unable to advance the decision | Cannot be verified |
+| Stakeholders | Decision path and approvals are verified | One material role is uncertain with a test | Economic approval is absent for the stated timing | Too incomplete to judge |
+| Commercial and technical path | Required work is complete or feasibly sequenced | A bounded dependency has an owner | A mandatory dependency cannot resolve in the window | Dependencies unknown |
+| Date stability | Movement is explained by new buyer evidence | Date moved without enough buyer evidence | Repeated movement masks an unchanged path | Push history unavailable |
 
-Stage-aging and remaining-time ratios are useful only against relevant, sufficiently representative historical cohorts. Show the cohort, period, sample size, and definition when using them. Without that basis, report elapsed time and remaining time as facts and assess the actual dependency path instead of applying a generic ratio threshold.
+Stage-aging ratios need a named historical cohort. Without one, report elapsed and remaining time as facts and assess the dependency path.
 
-Assign the tier from the reasoned combination of checks:
+Tier from the checks, not from activity volume:
 
-- `High`: a hard stop makes the stated date infeasible, or current evidence shows a material threat that cannot be resolved through a credible path before the required decision point.
-- `Moderate`: a credible material risk could disrupt the date, but the close remains feasible if a specific verification or intervention succeeds.
-- `Low`: no material threat is evident, critical evidence is current and consistent, and the close path is feasible. Low risk requires high evidence confidence; missing critical evidence is not reassuring.
-- `Indeterminate`: a critical unknown or source conflict prevents a defensible tier. Report the exposure separately and name the smallest verification that would resolve it.
+- `High`: a hard stop makes the date infeasible, or a material threat has no credible path
+- `Moderate`: a material risk exists, but the close remains feasible if a named intervention works
+- `Low`: no material threat, critical evidence current and consistent, path feasible. Low risk requires high confidence
+- `Indeterminate`: a critical unknown or conflict blocks a defensible tier
 
-For every tier, state the decisive evidence and why it meets the rule. Date pushes, stage age, activity volume, or one weak field never determine a tier on their own.
+Date pushes, stage age, or one weak field never determine a tier alone.
 
-## Evidence Confidence
+## Evidence confidence
 
-Rate confidence separately from risk. Judge critical fields before overall completeness; a large number of populated low-value fields cannot compensate for a missing amount, close date, category, material approval, buyer next step, or snapshot date.
+Rate confidence separately from risk. Judge critical fields first: amount, close date, category, material approval, buyer next step, snapshot date.
 
-- `High`: all decision-critical fields are present and current for the confirmed operating cadence; no unresolved material source conflict exists; relevant historical baselines support the comparisons.
-- `Medium`: the assessment is usable but one material input is stale, conflicting, or dependent on a clearly labeled directional baseline. No missing field makes the tier itself ambiguous.
-- `Low`: a decision-critical field or snapshot date is missing, material conflicts remain unresolved, the comparison baseline is unusable, or a critical unknown prevents a stable tier.
+- `High`: decision-critical fields current; no unresolved material conflict; baselines usable
+- `Medium`: usable, but one material input is stale, conflicting, or directional
+- `Low`: a decision-critical field is missing, conflicts remain, or the tier itself is unstable
 
-State which condition determined the rating. Do not upgrade confidence because the deal appears healthy.
+Do not upgrade confidence because the deal looks healthy.
 
-## Risk-Confidence Decision Matrix
+## What to do with the pair
 
-| Deal Risk | Evidence Confidence | Default Decision |
+| Deal risk | Confidence | Default |
 | --- | --- | --- |
-| High | High or Medium | Intervene now on the named blocker; set owner, due date, and checkpoint. |
-| High | Low | Verify the missing facts immediately, then decide whether rescue is feasible. |
-| Moderate | High | Tighten the weakest progression signal and monitor at the next relevant decision point. |
-| Moderate | Low | Repair evidence before treating the deal as stable or unstable. |
-| Low | High | Monitor without adding process. |
-| Indeterminate | Any | Keep exposure outside the low/moderate/high totals; verify the named critical inputs before making a tier-based intervention. |
+| High | High or medium | Intervene now on the named blocker |
+| High | Low | Verify the missing facts, then decide if rescue is feasible |
+| Moderate | High | Tighten the weakest signal; monitor at the next decision point |
+| Moderate | Low | Repair evidence before treating the deal as stable |
+| Low | High | Monitor |
+| Indeterminate | Any | Hold out of tier totals; verify the named inputs |
 
-At portfolio level, escalate when high-risk commit value, late-period concentration, or single-deal dependency exceeds the leadership tolerance supplied by the user. If no tolerance is supplied, show the exposure and ask leadership to set one rather than inventing it.
+Escalate concentration only against a tolerance the user supplied. Otherwise show the exposure and ask.
 
-For intervention timing, preserve supplied owner commitments and dates exactly. A date created to make the workplan usable is `proposed`, not agreed; show the confirmation owner and the operating event it should precede.
+Preserve supplied owner dates. A date you created is `proposed`.
 
-## Intervention Horizon
+## Thin evidence
 
-- `Immediate`: resolve hard stops and verify low-confidence commits before the next forecast decision.
-- `Near-term`: repair moderate-risk progression gaps before the next named buyer or operating milestone.
-- `Structural`: recalibrate stages, baselines, and inspection rules when the same risk signal repeats across the portfolio.
+If the export lacks next steps, push history, or a snapshot date, say what you can count and keep the rest indeterminate. Do not invent amounts, categories, or cycle-time norms.
+
+## Optional shape
+
+```text
+Window / scope / as-of / currency
+Totals by category
+Tier counts and value (indeterminate held out)
+Priority deals: decisive check, tier, confidence
+Interventions: owner, proposed or confirmed date, verify
+Decisions now vs monitor
+```

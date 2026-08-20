@@ -2,7 +2,7 @@
 
 All plugin bundles use symlinks under `plugins/<bundle>/skills/` that point to the canonical skill folders in `skills/`. This keeps bundle membership explicit while avoiding duplicated skill copies.
 
-Every bundle includes `revenue-enablement-context`, so it can stand alone. Use that skill only when shared GTM context is missing, stale, or conflicting; direct specialist requests should go straight to the relevant specialist skill.
+Every bundle includes `revenue-enablement-context` and `enablement-house-style`, so it can stand alone. Use context only when shared GTM context is missing, stale, or conflicting. House style is shared safety, not a deliverable. Direct specialist requests should go straight to the relevant specialist skill.
 
 ## enablement-core
 
@@ -13,6 +13,7 @@ Every bundle includes `revenue-enablement-context`, so it can stand alone. Use t
 **Prerequisite:** None. Start with `revenue-enablement-context` when durable company context is needed, or `enablement-router` when the request spans multiple deliverables.
 
 - `revenue-enablement-context`
+- `enablement-house-style`
 - `enablement-router`
 - `enablement-program-design`
 - `quarterly-enablement-planner`
@@ -32,6 +33,7 @@ Every bundle includes `revenue-enablement-context`, so it can stand alone. Use t
 **Prerequisite:** Bring current product, buyer, competitor, and proof context. Use the included context skill first only when that foundation is incomplete.
 
 - `revenue-enablement-context`
+- `enablement-house-style`
 - `value-prop-and-positioning`
 - `talk-track-builder`
 - `objection-library-builder`
@@ -52,6 +54,7 @@ Every bundle includes `revenue-enablement-context`, so it can stand alone. Use t
 **Prerequisite:** Confirm the target roles, observable behavior change, manager ownership, and evidence available for evaluation.
 
 - `revenue-enablement-context`
+- `enablement-house-style`
 - `onboarding-program-builder`
 - `certification-program-builder`
 - `manager-coaching-cadence`
@@ -71,6 +74,7 @@ Every bundle includes `revenue-enablement-context`, so it can stand alone. Use t
 **Prerequisite:** Bring metric definitions, source dates, ownership, and known data limitations. Treat causal claims as unproven unless the evidence supports them.
 
 - `revenue-enablement-context`
+- `enablement-house-style`
 - `enablement-metrics-and-instrumentation`
 - `enablement-impact-story`
 - `win-loss-synthesis`
@@ -86,6 +90,7 @@ Every bundle includes `revenue-enablement-context`, so it can stand alone. Use t
 **Prerequisite:** Confirm the source of truth, launch tier, affected audiences, timing, owners, and approval path before producing distribution-ready material.
 
 - `revenue-enablement-context`
+- `enablement-house-style`
 - `product-launch-enablement`
 - `release-notes-to-seller-updates`
 - `partner-enablement-package`
@@ -101,6 +106,7 @@ Every bundle includes `revenue-enablement-context`, so it can stand alone. Use t
 **Prerequisite:** Use scoped, current exports and preserve stable record IDs. Keep analysis read-only until the user explicitly approves a write-back.
 
 - `revenue-enablement-context`
+- `enablement-house-style`
 - `account-brief-builder`
 - `executive-briefing-builder`
 - `mutual-action-plan-builder`
@@ -121,6 +127,7 @@ Every bundle includes `revenue-enablement-context`, so it can stand alone. Use t
 **Prerequisite:** Bring permissioned transcripts or excerpts with dates, speaker attribution, and useful segment or stage metadata. Treat recordings and transcripts as sensitive.
 
 - `revenue-enablement-context`
+- `enablement-house-style`
 - `call-insights-to-objections`
 - `call-review-coach`
 - `discovery-rubric-auditor`

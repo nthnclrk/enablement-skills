@@ -3,68 +3,75 @@ name: account-brief-builder
 description: Build concise, decision-ready account briefs for account reviews, account planning, renewal or expansion reviews, and customer meeting preparation. Use when asked to summarize an account's commercial state, stakeholders, risks, upside, or next actions. Route single-opportunity inspection to deal-inspection-coach and executive meeting narratives to executive-briefing-builder.
 ---
 
-# Account Brief Builder
+# Account brief builder
 
-Produce an account brief that helps a team make the next account decision in one read.
+Write the brief for one decision moment. If it reads like an account wiki, rewrite it.
+
+An account brief covers one account, one meeting or decision, and the next actions that resolve it. If the user wants a customer-facing QBR, use `qbr-ebr-builder`. If they want an executive meeting narrative with an ask, use `executive-briefing-builder`. If they want one opportunity inspected, use `deal-inspection-coach`.
+
+**Decision moment.** "Acme EMEA renewal is 47 days out. Champion left 9 April. Thursday's review decides whether we assign a new executive sponsor before we send commercial paper, or we walk into procurement single-threaded."
+
+**Account wiki.** "Acme is a strategic enterprise account with strong expansion potential. We should deepen multi-threading, mitigate churn risk, and align stakeholders on value."
+
+If a manager cannot decide from the first screen, it is not done.
 
 ## Confirm Inputs First
 
-- Use current context supplied by the user or `.enablement/context.md` when available. Use only the parts relevant to the account and task.
-- Treat stale, inferred, or conflicted context as provisional. Never silently update shared context.
-- Confirm the account and business unit in scope, the as-of date, the commercial motion, and the decision the brief must support.
-- Confirm the source packet: CRM snapshot, contract or renewal data, buyer communications, call evidence, account plan, support or product signals, and recent notes as available.
-- Confirm known stakeholders, decision timing, commercial constraints, and the intended audience.
+Ask only for the inputs that change the decision:
 
-Ask only for missing inputs that could change the decision. If material account evidence is unavailable, produce a clearly labeled briefing framework and evidence request instead of a factual account brief.
+1. The account and business unit in scope
+2. The meeting or decision this brief is for, and who owns it
+3. The as-of date and the source packet you actually have
+4. Known stakeholders and commercial constraints
 
-Use assumptions only for reversible planning choices, such as a proposed review cadence. Keep source facts, metrics, quotes, commitments, dates, approvals, requirements, and customer or product claims unknown until verified.
+If material account evidence is missing, return a labeled briefing frame and an evidence request. Do not invent metrics, logos, contract terms, or stakeholder roles.
 
 ## Read The Right Reference
 
-- Read [references/account-brief-template.md](references/account-brief-template.md) for the default output structure.
-- Read [references/source-system-guide.md](references/source-system-guide.md) when the brief draws from CRM, call, product, support, or internal planning systems.
+Read [references/account-brief-template.md](references/account-brief-template.md) for the decision-moment test, conflict handling, and the scanned card. Skip it if the user already gave a structure and only wants the operating view.
+
+Read [references/source-system-guide.md](references/source-system-guide.md) when the brief draws from CRM, calls, product, support, or contract records.
 
 ## Default Workflow
 
-1. Set the decision frame.
-   State the account scope, as-of date, decision needed, decision owner, and time horizon. Leave an unsupplied owner or deadline unknown.
-2. Freeze the evidence snapshot.
-   Record each material source, date, locator, and field authority. Preserve conflicts rather than blending them into a single account story.
-3. Establish the commercial state.
-   Separate recorded commercial facts from buyer-reported signals and internal interpretation. Show open opportunities, renewal or expansion status, and material dependencies only when supported.
-4. Map stakeholders.
-   Classify buying role, influence, stance, evidence, and coverage status as confirmed, inferred, or unknown. Highlight missing decision roles and single-thread risk.
-5. Assess upside and risk.
-   For each item, show evidence, consequence, trigger, and confidence in the evidence. Keep evidence confidence separate from likelihood or commercial value.
-6. Define the next decision and actions.
-   Recommend the smallest actions that reduce uncertainty, build alignment, or move the commercial path. Mark owners and dates as confirmed, proposed, or unknown.
-7. Compress the brief.
-   Lead with what changed, what matters, and what must be decided. Move source notes and unresolved conflicts below the operating view.
+1. Name the decision moment.
+   One meeting or decision. One owner. One time horizon. Done when you can say what the named meeting must decide, and what happens if it does not.
+2. Freeze the evidence.
+   Record source, date, and locator for each material claim. Preserve conflicts. Do not blend CRM, call, and chat into one story.
+3. State the commercial facts.
+   Open opportunities, renewal or expansion status, and material dependencies only when a source supports them. Separate recorded fields from buyer signals from internal interpretation.
+4. Map the room that matters.
+   Buying role, influence, stance, and coverage: confirmed, inferred, or unknown. Title is not a role. Flag missing decision-makers and single-thread risk.
+5. Name upside and risk that change this decision.
+   Each item: evidence, consequence, trigger, and confidence in the evidence. Skip items that do not affect this moment.
+6. Recommend the smallest next moves.
+   Actions that reduce uncertainty, restore coverage, or move the commercial path. Mark owners and dates confirmed, proposed, or unknown.
+7. Compress.
+   Lead with what changed, what matters, and what must be decided. Source notes and unresolved conflicts sit below the operating view.
 
-## Tool Notes
+Do not write to CRM, account plans, or customer-facing material without explicit approval.
 
-- Use read-only exports or snapshots by default. Do not alter CRM fields, account plans, notes, tasks, or customer-facing material without explicit approval.
-- Apply field-level source authority rather than a universal source ranking. See [references/source-system-guide.md](references/source-system-guide.md).
-- Keep the workflow tool-agnostic when source systems are unavailable.
+For a single-opportunity inspect use `deal-inspection-coach`. For a customer QBR use `qbr-ebr-builder`. For an executive meeting with an ask use `executive-briefing-builder`.
 
 ## Output Contract
 
-Deliver:
+Return a brief a manager can open in the meeting:
 
-1. Brief header: account scope, as-of date, objective, and decision required
-2. Executive view: current state, material change, recommendation, and evidence caveat
-3. Commercial snapshot with sources and freshness
-4. Stakeholder map with coverage gaps and next moves
-5. Upside and risk register with triggers, evidence, and confidence
-6. Near-term action plan aligned to the decision horizon, with owner/date status, dependencies, and completion evidence
-7. Source and conflict notes
-8. Open questions and reversible planning assumptions
+- Account, as-of date, the decision moment, and who owns it
+- Current state, material change, recommendation, and evidence caveat
+- Commercial snapshot with sources and freshness
+- Stakeholders that matter for this decision, with coverage gaps
+- Upside and risk that change the decision, with triggers
+- Near-term actions with owner and date status
+- Source conflicts and open questions
+
+Do not add a customer-facing narrative, meeting choreography, or a full account plan unless this moment needs it.
 
 ## Quality Bar
 
-- Make every material account claim traceable to a current source.
-- Keep recorded facts, buyer signals, and internal hypotheses distinct.
-- Make contradictions, stale evidence, and missing decision roles visible.
-- Recommend actions that resolve a decision or risk, not generic account-management activity.
-- Do not invent account facts, stakeholder roles, commercial metrics, commitments, owners, or deadlines.
-- Keep the operating view concise enough for a live account review.
+- A manager can decide from the first screen.
+- Every material claim has a current source, or is marked unknown.
+- Recorded facts, buyer signals, and internal hypotheses stay distinct.
+- Conflicts and missing decision roles stay visible.
+- Actions resolve this decision, not generic account hygiene.
+- The brief refused the QBR, the exec meeting script, and the single-deal inspect that do not belong here.

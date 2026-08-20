@@ -1,56 +1,73 @@
-# Mutual Action Plan Framework
+# MAP judgment
 
-Use this framework when creating or auditing a MAP.
+Use this when you are writing or checking a mutual action plan. The skill body has the procedure.
 
-## Core Rules
+## Two-owner test
 
-- Define the target business outcome before tasks.
-- Work backward from target date to milestones.
-- Require both internal and customer owners.
-- Use explicit completion criteria, not vague status labels.
-- Keep the MAP as a living document, not a static attachment.
-- Keep customer-visible commitments separate from internal strategy commentary.
-- Record agreement and completion evidence separately.
+Every milestone has a buyer-side owner and a seller-side owner. If only sellers have names, it is a task list.
 
-## Agreement And Evidence States
+A plan fails the test when it:
+
+- Assigns security, legal, or procurement work to the AE
+- Uses "customer" or "the team" as an owner
+- Treats a calendar invite or CRM note as agreement
+- Compresses unknown lead time to hit a target date
+
+**Fails.** "Complete security review. Owner: AE. Due: end of quarter."
+
+**Passes.** "Security questionnaire submitted — buyer: Priya (InfoSec), seller: Jordan (SE). Exit: filed in their portal. Agreed 22 April, Priya's email."
+
+## Agreement and evidence
 
 Use one agreement state per customer-side commitment:
 
 - `draft`: seller-authored and not yet shared
-- `proposed`: shared or discussed, but not explicitly confirmed
-- `agreed`: explicitly confirmed by the customer, with source and date
-- `changed`: previously agreed content changed and needs reconfirmation
-- `declined`: the customer explicitly rejected the commitment
+- `proposed`: shared or discussed, not explicitly confirmed
+- `agreed`: customer confirmed, with source and date
+- `changed`: previously agreed content changed; needs reconfirmation
+- `declined`: customer explicitly rejected it
 
 Use one completion-evidence state independently:
 
 - `none`: no completion claim
-- `reported`: a named party reports completion, but no artifact is linked
-- `artifact-linked`: a required artifact or system record is linked
+- `reported`: a named party says it is done, no artifact
+- `artifact-linked`: required artifact or system record is linked
 - `jointly-accepted`: both sides accepted the exit criteria as met
 
-Do not convert silence, meeting attendance, or seller-entered CRM notes into `agreed`. If a material field changes, retain the change history and return it to `proposed` or `changed`.
+Do not convert silence, meeting attendance, or seller-entered CRM notes into `agreed`. If a material field changes, keep the history and return it to `proposed` or `changed`.
 
-## Milestone Table Template
+## Dates
 
-| Milestone | Duration / Lead Time | Dependency | Latest Safe Start | Due Date | Slack | Internal Owner | Customer Owner | Agreement State | Entry Criteria | Exit Criteria | Completion Evidence | Confirmation Source / Date | Risk Trigger |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+Work backward from the target using verified durations, mandatory lead times, capacity, and blackout dates. Name the critical path, latest-safe-start dates, and slack.
 
-Use verified contractual, operational, or owner-confirmed durations and blackout dates. Leave unknown timing unresolved and show its effect on the possible schedule. If the critical path exceeds the target date, return `target infeasible — replan required` with the blocking constraint and decision owner.
+If the critical path exceeds the target, return `target infeasible — replan required` with the blocking constraint and the decision owner. Do not hide the miss by assuming people will go faster.
 
-## Quality Checks
+Unknown duration stays unknown. Show what it does to the possible schedule.
 
-- Every critical milestone has a customer-side owner.
-- Every milestone has a measurable exit criterion.
-- Dependencies are visible and sequenced.
-- The critical path, latest-safe-start dates, and remaining slack are visible; infeasible timing is not hidden by assumed compression.
-- Escalation trigger is defined for high-impact items.
-- The next agreed planning horizon is concrete and assigned.
-- Every `agreed` or completed customer action has traceable evidence.
+## Exit criteria
 
-## Dual-View Pattern
+A third party should be able to inspect done. "Security complete" is a status label. "Questionnaire submitted in their portal, ticket ID attached" is an exit.
 
-- Customer-visible MAP:
-  shared milestones, owners, dates, dependencies, and agreed risks.
-- Internal-private MAP:
-  negotiation strategy, internal risk scoring, and contingency planning.
+## Views
+
+Customer-visible: shared milestones, both owners, dates, dependencies, and agreed risks.
+
+Internal-private: negotiation strategy, internal risk scoring, contingency, discount or legal posture.
+
+Do not put internal scoring on the shared plan.
+
+## Thin evidence
+
+Missing buyer owner, missing confirmation, or missing lead time: leave the field proposed or unknown and show the effect. Do not invent a customer name to make the table look mutual.
+
+## Optional shape
+
+Use this only when the user wants a scanned table.
+
+```text
+Outcome / target date / agreement state
+Milestone | buyer owner | seller owner | latest safe start | due | slack
+Entry / exit | agreement state | completion evidence | confirmation source
+Critical path or: target infeasible — replan required
+Customer view | internal view
+```

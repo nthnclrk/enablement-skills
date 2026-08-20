@@ -1,27 +1,31 @@
-Use this only when forecast data is coming from an operating system rather than a manually prepared brief.
+# Source system judgment
 
-# Source System Guide
+Use this when forecast data is coming from CRM or BI instead of a prepared brief.
 
-## CRM Inputs
+## Freeze one snapshot
 
-- Minimum fields: stable opportunity ID, opportunity name, owner, segment, amount, currency, close date, forecast category, stage, last stage change date, next step, next-step date, last material buyer activity date, and export as-of date.
-- Useful extras: stakeholder roles and engagement, procurement or approval status, MEDDPICC/SPICED fields, push history, commit notes, historical stage duration, and median time from stage to close.
-- Sanity checks:
-  - duplicate opportunity IDs or mixed currencies
-  - stale close dates
-  - unchanged stages for long periods
-  - missing next-step fields
-  - forecast categories used inconsistently across managers
-  - snapshot fields updated after the stated as-of date
+Counts, value, aging, and concentration are meaningless across mixed as-of times. Freeze the export time before you calculate.
 
-## Recommended Handling
+**Fails.** Combining Tuesday's commit list with Thursday's manager notes and calling both "this week's forecast."
 
-- Freeze one as-of snapshot before calculating counts, value, aging, or concentration.
-- Use CRM exports as the recorded base layer, then use buyer communications, call evidence, and approved plans to verify progression claims.
-- Preserve source conflicts. Do not silently replace a recorded field with the most optimistic narrative.
-- Calculate evidence confidence separately from deal risk and identify the missing or stale fields that caused the downgrade.
+**Passes.** As-of 24 July 17:00. Manager notes can challenge a field. They do not silently replace it.
 
-## Safe Writeback Boundary
+CRM is the recorded base layer. Buyer comms and call evidence verify progression claims. Keep conflicts visible.
 
-- Do not recommend writing forecast category, stage, or close-date changes back automatically.
-- Return intervention guidance first; let managers decide what should change in-system.
+## What to pull
+
+Minimum: stable opportunity ID, name, owner, segment, amount, currency, close date, forecast category, stage, last stage change, next step, next-step date, last material buyer activity, export as-of date.
+
+Useful extras: stakeholder roles, procurement status, qualification fields, push history, commit notes, historical stage duration.
+
+Sanity checks: duplicate IDs, mixed currencies, stale close dates, stages unchanged for long periods, missing next steps, categories used inconsistently, fields updated after the stated as-of date.
+
+## What the fields cannot do
+
+Last activity date is not buyer progress. Forecast category is not your risk tier. A verbal-yes note is not legal progress.
+
+Without a representative historical cohort, do not apply a generic stage-aging cutoff.
+
+## Safe writeback
+
+Do not write forecast category, stage, or close-date changes back automatically. Return the intervention. Let managers decide what changes in-system.

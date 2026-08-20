@@ -2,8 +2,8 @@
   "schema_version": 2,
   "skill": "proposal-rfp-orchestrator",
   "source": "skills/proposal-rfp-orchestrator/SKILL.md",
-  "notes": "Generated routing and basic-output starter. Curate realistic prompts and example-backed task scenarios before treating it as behavior evidence.",
-  "managed_by": "starter-generator",
+  "notes": "Curated eval for bid/no-bid then compliance-matrix orchestration. Routing cases stay on response work, not meeting briefs.",
+  "managed_by": "curated",
   "should_trigger": [
     {
       "prompt": "Please orchestrate proposal and RFP response work across owners, deadlines, compliance, and review cycles.",
@@ -20,32 +20,50 @@
   ],
   "should_not_trigger": [
     {
-      "prompt": "Please build a concise, decision-oriented executive briefing and meeting plan for a strategic customer or commercial meeting, negotiation, escalation, or internal alignment on that same decision.",
+      "prompt": "Build a concise executive briefing and meeting plan for tomorrow's negotiation with the economic buyer.",
       "expected": false,
       "adjacent_skill": "executive-briefing-builder"
     },
     {
-      "prompt": "Please build concise, decision-ready account briefs for account reviews, account planning, renewal or expansion reviews, and customer meeting preparation.",
+      "prompt": "Build a decision-ready account brief for this customer's upcoming renewal review.",
       "expected": false,
       "adjacent_skill": "account-brief-builder"
     },
     {
-      "prompt": "Please build customer-facing QBR and EBR deliverables that align customer goals, business outcomes, decisions, risks, and next steps.",
+      "prompt": "Build a customer-facing QBR that aligns outcomes, risks, and next steps for this account.",
       "expected": false,
       "adjacent_skill": "qbr-ebr-builder"
     }
   ],
   "output_structure_checks": [
     {
-      "name": "proposal-rfp-orchestrator-core-output",
+      "name": "proposal-rfp-orchestrator-output-01",
       "type": "structure",
-      "description": "Produces a usable proposal rfp workplan deliverable matched to the requested scope.",
+      "description": "States an explicit bid, no-bid, or dated-exception decision with owner before assigning drafting work.",
       "critical": true
     },
     {
-      "name": "proposal-rfp-orchestrator-decision-discipline",
+      "name": "proposal-rfp-orchestrator-output-02",
+      "type": "structure",
+      "description": "Includes an atomic requirement matrix with parent traceability, owner, verification state, and status.",
+      "critical": true
+    },
+    {
+      "name": "proposal-rfp-orchestrator-output-03",
+      "type": "structure",
+      "description": "Includes review gates and a submission readiness verdict of ready, ready with approved exception, or not ready.",
+      "critical": true
+    },
+    {
+      "name": "proposal-rfp-orchestrator-output-04",
       "type": "semantic",
-      "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
+      "description": "Keeps unverified mandatory answers blocked rather than converting placeholders into buyer-facing yes answers.",
+      "critical": true
+    },
+    {
+      "name": "proposal-rfp-orchestrator-output-05",
+      "type": "forbidden_behavior",
+      "description": "Does not invent certifications, pricing, SLAs, capacity, or customer references, and does not send or upload the package.",
       "critical": true
     }
   ]

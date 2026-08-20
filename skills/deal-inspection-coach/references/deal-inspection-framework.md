@@ -1,65 +1,83 @@
-# Deal Inspection Framework
+# Deal inspection judgment
 
-Use this framework to inspect one opportunity consistently without replacing the organization's sales method.
+Use this when you are rating evidence, stage validity, or risk. The skill body has the procedure. One opportunity only.
 
-## Evidence Status
+## Buyer proof versus seller activity
 
-Classify each material claim before drawing a conclusion:
+Buyer proof is something the buyer said, wrote, scheduled, or approved. Seller activity is what the team did.
 
-- `Confirmed`: supported by current, direct evidence from the buyer or an authoritative record.
-- `Supported`: consistent across credible sources but not directly confirmed by the relevant decision-maker.
-- `Inferred`: a plausible interpretation that still needs verification.
-- `Conflicted`: credible sources disagree.
-- `Stale`: once supported, but too old for the current decision.
-- `Missing`: required evidence is unavailable.
+**Fails.** Stage is valid because the AE ran a demo, sent a proposal, and logged eight activities this week.
 
-Record the source and source date. Evidence strength is not the same as a positive or negative deal signal.
+**Passes.** Stage is unsupported. The buyer has not confirmed a problem owner or a decision date. The demo and proposal are activity.
 
-## Buying-Path Blocks
+A future meeting, open task, or populated field is activity until buyer evidence shows what changed.
 
-- `Problem And Priority`: the buyer recognizes the problem and its place among competing priorities.
-- `Value Case`: expected impact and measurement approach are credible to the buyer.
-- `Stakeholder Coverage`: relevant users, evaluators, approvers, and blockers are known and engaged as needed.
-- `Decision Criteria`: evaluation requirements and trade-offs are explicit.
-- `Decision Process`: steps, owners, approvals, procurement, security, and legal path are understood.
-- `Alternatives`: status quo, internal options, and external competitors are understood.
-- `Execution Confidence`: implementation, adoption, resources, and change risks are addressed.
-- `Timing`: the target decision and implementation timing are supported by a buyer-owned reason.
+## Evidence status
 
-Use only the blocks relevant to the deal. Map them to the organization's chosen qualification framework when one exists.
+Classify each material claim before you conclude:
 
-## Stage Validity Decision
+- `Confirmed`: current, direct evidence from the buyer or an authoritative record
+- `Supported`: consistent across credible sources, not yet confirmed by the decision-maker
+- `Inferred`: plausible, still needs a test
+- `Conflicted`: credible sources disagree
+- `Stale`: once supported, too old for this decision
+- `Missing`: required evidence is unavailable
 
-1. Identify the team's required exit criteria for the claimed stage.
+Record source and source date. Strong evidence can prove the stage is wrong. Weak evidence cannot prove the stage is right.
+
+Show conflicts. Do not pick the optimistic source.
+
+## Buying-path blocks
+
+Use only the blocks this deal needs. Map them to the team's qualification method when one exists.
+
+- Problem and priority
+- Value case
+- Stakeholder coverage
+- Decision criteria
+- Decision process
+- Alternatives
+- Execution confidence
+- Timing with a buyer-owned reason
+
+An unanswered question is not negative evidence. A buyer saying "not this quarter" is.
+
+## Stage validity
+
+1. Take the team's exit criteria for the claimed stage.
 2. Match each criterion to current evidence.
-3. Mark the criterion met, not met, conflicted, stale, or unknown.
-4. Recommend `retain`, `advance`, `reassess`, or `unable to determine`, with reasons.
+3. Mark met, not met, conflicted, stale, or unknown.
+4. Recommend `retain`, `advance`, `reassess`, or `unable to determine`.
 
-Do not mark a criterion met from inference alone. Do not invent universal exit criteria or change the system record. If no organizational criteria are available, report buying-path readiness instead of declaring the stage valid.
+Do not mark a criterion met from inference. Do not invent universal gates. If the team has no criteria, report buying-path readiness instead of declaring the stage valid.
 
-## Risk Versus Evidence Gap
+## Risk versus gap
 
-- A `risk` is a supported condition that could reduce progress or win likelihood.
-- An `evidence gap` is a consequential unknown.
-- A `negative signal` is observed behavior or information that supports a risk.
-- A `hypothesis` is a possible explanation that still requires a test.
+- A `risk` is a supported condition that can reduce progress or win likelihood.
+- A `gap` is a consequential unknown.
+- A `negative signal` is observed behavior that supports a risk.
+- A `hypothesis` still needs a test.
 
-For each item, assess:
+For each item: consequence, time sensitivity, controllability, evidence confidence, next verification.
 
-- consequence if unresolved
-- time sensitivity
-- team controllability
-- evidence confidence
-- next verification event
+Skip an aggregate score unless the organization supplied a governed model.
 
-Avoid an aggregate numeric score unless the organization supplies a governed model and valid inputs.
+## Thin evidence
 
-## Action Decision Rule
+If you lack economic buyer, timing, or a buyer-owned next step, the inspect should name that gap and the smallest test that would close it. Do not paper it over with activity volume.
 
-Prioritize an action when it:
+Do not invent CRM fields, amounts, close dates, stakeholders, or commitments.
 
-1. addresses a high-consequence risk or unknown,
-2. is feasible within the current decision window, and
-3. creates observable buyer progress or resolves evidence.
+## Optional shape
 
-State whether timing is buyer-confirmed, internally committed, or proposed. Every action needs one owner and one verification checkpoint; it does not require a fabricated due date.
+Use this only when the user wants a scanned card.
+
+```text
+One deal / as-of / claimed stage / objective
+Stage validity + evidence confidence (separate)
+Evidence ledger (claim, status, source, date)
+Open buyer decision
+Risks vs gaps
+Next moves (owner, buyer progress, proposed timing)
+Manager question
+```

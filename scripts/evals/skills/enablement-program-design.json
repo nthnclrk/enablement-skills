@@ -2,8 +2,8 @@
   "schema_version": 2,
   "skill": "enablement-program-design",
   "source": "skills/enablement-program-design/SKILL.md",
-  "notes": "Generated routing and basic-output starter. Curate realistic prompts and example-backed task scenarios before treating it as behavior evidence.",
-  "managed_by": "starter-generator",
+  "notes": "Curated eval for behavior-change programs. Routing keeps program charters off quarter stacks and standalone launch kits. Output checks require manager-inspectable behavior, not a kickoff deck.",
+  "managed_by": "curated",
   "should_trigger": [
     {
       "prompt": "Please diagnose an unclear field-performance problem or design the cross-functional wrapper for a multi-intervention revenue enablement initiative, including charter, capacity, pilot, governance, rollout, and measurement.",
@@ -33,19 +33,36 @@
       "prompt": "Please create role-based readiness certifications with evidence requirements, defensible pass/fail standards, behaviorally anchored scoring, and assessor calibration.",
       "expected": false,
       "adjacent_skill": "certification-program-builder"
+    },
+    {
+      "prompt": "Plan next quarter's enablement stack and tell me what we will not do this quarter given real capacity.",
+      "expected": false,
+      "adjacent_skill": "quarterly-enablement-planner"
     }
   ],
   "output_structure_checks": [
     {
-      "name": "enablement-program-design-core-output",
+      "name": "enablement-program-design-output-01",
       "type": "structure",
-      "description": "Produces Decision brief: problem, evidence status, target behavior, outcome, scope, and open decisions; Program charter with exclusions, sponsor, owner, contributors, and decision rights.",
+      "description": "States the performance problem, target behavior, and the evidence a manager can inspect in the workflow.",
       "critical": true
     },
     {
-      "name": "enablement-program-design-decision-discipline",
+      "name": "enablement-program-design-output-02",
+      "type": "structure",
+      "description": "Includes a pilot with continue, adjust, or stop criteria.",
+      "critical": true
+    },
+    {
+      "name": "enablement-program-design-output-03",
       "type": "semantic",
-      "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
+      "description": "Interventions map to diagnosed barriers and refuse a kickoff-deck journey of completions.",
+      "critical": true
+    },
+    {
+      "name": "enablement-program-design-output-04",
+      "type": "forbidden_behavior",
+      "description": "Does not invent capacity, baselines, or dates.",
       "critical": true
     }
   ]

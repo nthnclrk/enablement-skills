@@ -1,61 +1,60 @@
-# Release Note Transformation Guide
+# Release to seller-update judgment
 
-Use this guide to convert product-centric source material into an accurate field change record, asset diff, and seller action.
+Use this when you are translating notes into a field-usable update. The skill body has the procedure.
 
-## Factual Change Record
+## Field-usable test
 
-For every change, capture:
+Can a seller act on it in the channel you named, without opening a launch plan?
 
-- `change_type`: capability, enhancement, fix, deprecation, packaging, policy, or rollout change
-- `release_status`: planned, rolling-out, available, paused, rolled-back, or deprecated
-- `effective_date`: date, timezone, rollout scope, and any cohort or region boundary
-- `eligibility`: product, edition, segment, geography, migration, or contract conditions
-- `source`: authoritative source, locator, owner, and as-of date
-- `seller_action`: what the affected role should start, stop, continue, or verify
-- `approval_state`: approved wording, unresolved claim, and decision owner
+**Fails.** A training agenda, go/no-go ledger, and owner matrix attached to a changelog.
 
-Do not translate code completion, an announcement, a beta, or partial rollout into general availability.
+**Passes.** Four Slack lines: who it is for, when it is true, what to say, what not to say.
 
-## Field Relevance Test
+If the user asked for launch training or gates, stop and use `product-launch-enablement`.
+
+## Code complete is not available
+
+For every change, capture status exactly: `planned`, `rolling-out`, `available`, `paused`, `rolled-back`, or `deprecated`. Preserve the effective date, timezone, and rollout scope when the source has them. If it does not, write `unknown`.
+
+Do not translate code completion, an announcement, a beta, or a partial rollout into general availability. Do not invent the date to make the update feel finished.
+
+## Field relevance
 
 Include a change only when it alters at least one of:
 
-- who should be targeted or qualified
-- what a seller may accurately claim
+- who to target or qualify
+- what a seller may claim
 - what the buyer can do or expect
-- the sales, implementation, renewal, or support workflow
-- pricing, packaging, eligibility, migration, or risk
-- an existing talk track, FAQ, demo, battlecard, playbook, or manager inspection point
+- a sales, implementation, renewal, or support workflow
+- pricing, packaging, eligibility, or risk
+- a current talk track, FAQ, demo, or battlecard
 
-Routine fixes with no field action can stay in a compact awareness digest or be omitted from the requested seller update.
+Routine fixes with no field action stay in a compact digest or drop out.
 
-## Seller Translation Template
+## What did not change
 
-For each relevant change, produce:
+Say it out loud. Sellers assume adjacent things moved.
 
-- exact change and effective status
-- affected roles, segments, use cases, and customer states
-- customer impact and the evidence supporting it
-- when to mention it, the qualification cue, and the next seller action
-- approved proof, what did not change, and what not to say
-- eligibility, rollout, migration, commercial, or support caveats
-- escalation owner for unresolved questions
+**Fails.** "New conditional triggers are live for Pro and Enterprise."
 
-## Asset Diff
+**Passes.** "New conditional triggers are live for Pro and Enterprise. Starter is unchanged. Existing rules keep running. Custom ERP triggers still need a services review. Do not say every workspace is upgraded."
 
-Compare the new facts with supplied current field assets. Use one row per affected section:
+## Channel rewrite
 
-| Asset | Current version / source | Disposition | Exact section or claim | Effective date | Owner | Approval status |
-| --- | --- | --- | --- | --- | --- | --- |
+One factual record. Different copy per channel.
 
-Allowed dispositions are `create`, `update`, `no_change`, and `retire`. Do not rewrite an entire asset when only one approved section changed.
+**Fails.** The same 400-word brief pasted into Slack, email, and the wiki.
 
-When no current asset or version is supplied, use `current asset not supplied` and describe only the candidate impact and evidence needed. Do not assign a disposition or claim an exact diff.
+**Passes.** Slack: four lines and a "what not to say." Email: the same facts plus one FAQ. Wiki: the change register. Manager briefing: the inspection cue.
 
-## Channel And Approval Rules
+Match depth to the audience. An SDR needs the qualification cue. An SE needs the limitation. A manager needs the line to listen for.
 
-- Match the depth and action to the audience: AE, SDR, SE, manager, CS, Support, or partner.
-- Create only the requested channel variants. Preserve one factual change record beneath all versions.
-- Keep uncertainty internal; seller guidance should state a verified boundary or an explicit open question, not false certainty.
-- Mark a draft review-ready until claims, availability, dates, and affected assets have the required approval.
-- Do not distribute updates, change shared assets, or mark an asset retired without explicit approval of the content and destination.
+## Asset diffs
+
+Compare only when current assets were supplied. Allowed dispositions: `create`, `update`, `no_change`, `retire`. Do not rewrite a whole battlecard when one approved sentence changed.
+
+When no current asset was supplied, write `current asset not supplied` and name the candidate impact. Do not invent a disposition.
+
+## Thin evidence
+
+Keep uncertainty internal. Seller-facing copy states a verified boundary or an explicit open question, not false certainty. Mark the draft review-ready until claims, dates, and availability have the required approval.

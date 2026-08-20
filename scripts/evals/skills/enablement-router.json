@@ -39,7 +39,7 @@
     {
       "name": "enablement-router-output-01",
       "type": "structure",
-      "description": "The output substantively includes: A recommended skill sequence with rationale",
+      "description": "Defaults to one skill for a single-artifact ask. Extra steps have a required handoff and an availability mark.",
       "critical": true
     },
     {

@@ -1,71 +1,73 @@
-# Proposal RFP Governance Framework
+# Proposal governance judgment
 
-Use this framework to keep proposal and RFP responses controlled and auditable.
+Use this when you are deciding bid/no-bid, building the matrix, or calling readiness. The skill body has the procedure.
 
-## 1) Solicitation Control Log
+## Bid/no-bid before writing
 
-| Document / Addendum | Version | Issued At | Authority / Precedence | Questions Due | Submission Due | Source And Locator | Reconciled By / At |
-| --- | --- | --- | --- | --- | --- | --- | --- |
+A writing plan is wasted work if a mandatory disqualifier is already true.
 
-Use the buyer's stated precedence rules. If two documents conflict and precedence is unclear, mark the affected requirements blocked and raise a clarification question; do not choose silently.
+**Fails.** Kick off drafting while security "looks into" a required certification.
 
-## 2) Compliance Matrix Template
+**Passes.** Required certification is unmet. Bid/no-bid owner: VP Sales. Path: no-bid, or a dated security exception before any section is assigned.
 
-| Atomic Requirement ID | Parent ID | Buyer Requirement | Mandatory? | Source Document / Version | Addendum | Page / Section | Response Section Or Cross-Reference | Owner | Evidence Source | Verification | Status | Notes |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+Test: mandatory disqualifiers, buyer access, solution fit, delivery capacity, economics, evidence readiness, required effort, decision authority.
 
-Split compound requirements into atomic child IDs so one satisfied clause cannot hide another unresolved clause. Keep the original parent and locator for auditability. One response may be cross-referenced from several atomic rows, but each requirement retains its own verification and status.
+If two documents conflict and precedence is unclear, block the affected requirements and raise a clarification. Do not choose silently.
 
-## 2a) Approved Source Map Template
+## Atomic requirements
 
-| Source Asset | Owner | Approved Use | Last Reviewed | Restricted Notes |
-| --- | --- | --- | --- | --- |
+Split compound clauses. One satisfied sentence cannot hide another unmet shall.
 
-Use `verified`, `unverified`, or `not applicable` in the verification field. `Not applicable` requires an owner-approved rationale.
+Each row keeps parent ID, source document, version, addendum, page or section, response location or cross-reference, owner, evidence, verification, and status.
 
-## 3) Hard-Stop Rules
+One response may support several rows. Each row still gets its own verification.
+
+Verification is `verified`, `unverified`, or `not applicable` with an owner-approved rationale.
+
+## Hard stops
 
 Never infer, soften, or complete an answer from general knowledge when it concerns:
 
-- mandatory compliance or eligibility requirements
+- mandatory compliance or eligibility
 - security, privacy, regulatory, accessibility, or legal representations
 - certifications, insurance, financial standing, or corporate qualifications
-- pricing, discounts, contract terms, warranties, SLAs, or indemnities
-- implementation capacity, dates, staffing, integrations, or product roadmap commitments
-- customer references, customer permission, performance claims, or measured outcomes
+- pricing, discounts, terms, warranties, SLAs, or indemnities
+- implementation capacity, dates, staffing, integrations, or roadmap
+- customer references, permission, or measured outcomes
 
-Use this internal placeholder instead:
+Internal placeholder:
 
-`UNVERIFIED — owner: <name/role>; evidence required: <artifact>; due: <time>; submission impact: <blocker/risk>`
+`UNVERIFIED — owner: <role>; evidence required: <artifact>; due: <time>; submission impact: <blocker/risk>`
 
-Do not copy that placeholder into a buyer-facing answer. If a mandatory item remains unverified at the final gate, mark the package `NOT READY` and surface the bid/no-bid or exception decision to the authorized owner.
+Do not copy that placeholder into a buyer-facing answer. An internal exception can authorize submission with a disclosed gap. It cannot make an unmet requirement true or justify an unsupported yes.
 
-An internal exception can authorize submission with a disclosed gap; it cannot make an unmet buyer requirement true, waive the buyer's rule, or justify an unsupported `yes` answer.
+## Review gates
 
-## 4) Review Gate Model
+Use three gates unless the user asks for another model:
 
-Use three gates unless the user requests a different model:
+- Draft: version, addenda, structure, coverage, owners, placeholders
+- Challenge: recheck addenda, then stress-test claims, evidence, exceptions, and risk
+- Final: no unreconciled buyer update; every mandatory item, approval, attachment, format rule, and delivery instruction
 
-- Draft gate: confirm solicitation version, addenda reconciliation, structure, requirement coverage, owners, and internal placeholders.
-- Challenge gate: recheck addenda, then stress-test claims, evidence, differentiation, exceptions, and risk.
-- Final gate: confirm no unreconciled buyer update remains, then verify every mandatory item, required approval, attachment, format rule, and submission instruction.
+## Readiness verdict
 
-## 5) Submission Readiness Checklist
+Authorized owner records `READY`, `READY WITH APPROVED EXCEPTION`, or `NOT READY`.
 
-- All requirements mapped in the compliance matrix
-- All mandatory artifacts included
-- Claims matched to evidence
-- Approvals captured
-- Delivery method and timing confirmed
-- No unresolved hard-stop placeholder in buyer-facing content
-- Authorized owner records `READY`, `READY WITH APPROVED EXCEPTION`, or `NOT READY`
-- User explicitly approves any external send or upload
+The package is not ready while a mandatory answer, artifact, or approval is unverified. Do not send or upload without explicit user approval.
 
-## 6) Role Definitions
+## Roles
 
-- Proposal lead: owns timeline, risk, and final integration.
-- Section owner: owns content quality and requirement coverage.
-- Reviewer: challenges evidence, clarity, and evaluator alignment.
-- Content steward: approves reusable source assets and restricted-use boundaries.
+- Proposal lead: timeline, risk, final integration. Does not assume legal, security, finance, or product authority.
+- Section owner: content quality and coverage
+- Reviewer: challenges evidence and evaluator alignment
+- Content steward: reusable sources and restricted-use boundaries
 
-Only the authorized legal, security, finance, product, or executive owner may approve exceptions in their domain. The proposal lead coordinates those decisions but does not assume that authority.
+## Optional forms
+
+Use these only when the user wants a scanned log.
+
+Solicitation control: document, version, issued at, precedence, questions due, submission due, source, reconciled by.
+
+Matrix: atomic ID, parent, requirement, mandatory, source/version, addendum, locator, response or cross-reference, owner, evidence, verification, status.
+
+Source map: asset, owner, approved use, last reviewed, restrictions.

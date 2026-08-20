@@ -66,6 +66,9 @@ When an execution harness is available, run cases in clean sessions and repeat
 trials. Compare with-skill results to no-skill or previous-version results, and
 retain outputs, trajectories, timing, and grader evidence separately.
 
+For the with-skill vs no-skill protocol and the first recorded comparisons, see
+[behavior/README.md](behavior/README.md).
+
 ## Quality Rubric
 
 Repository validation is a gate, not a score. Frontmatter, references,

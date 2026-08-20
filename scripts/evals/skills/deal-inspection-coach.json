@@ -2,8 +2,8 @@
   "schema_version": 2,
   "skill": "deal-inspection-coach",
   "source": "skills/deal-inspection-coach/SKILL.md",
-  "notes": "Generated routing and basic-output starter. Curate realistic prompts and example-backed task scenarios before treating it as behavior evidence.",
-  "managed_by": "starter-generator",
+  "notes": "Curated eval for one-deal buyer-proof inspection. Routing cases stay on a single opportunity. Output checks require buyer proof, not seller activity.",
+  "managed_by": "curated",
   "should_trigger": [
     {
       "prompt": "Please inspect one live opportunity and produce an evidence-backed manager view of stage validity, deal risk, missing proof, and next actions.",
@@ -20,32 +20,55 @@
   ],
   "should_not_trigger": [
     {
-      "prompt": "Please build a concise forecast risk brief that highlights commit risk, slippage, and intervention priorities for sales leadership.",
+      "prompt": "Prepare a Q2 forecast risk brief for the enterprise segment. Flag unstable commits, concentration by rep, and the interventions leadership should make this week.",
       "expected": false,
       "adjacent_skill": "forecast-risk-brief"
     },
     {
-      "prompt": "Please review one sales call and turn recording, transcript, or notes evidence into clear coaching priorities and next-practice actions.",
+      "prompt": "Review this discovery call recording and give the AE next-call coaching priorities.",
       "expected": false,
       "adjacent_skill": "call-review-coach"
     },
     {
-      "prompt": "Please build mutual action plans for complex deals and coordinated customer initiatives.",
+      "prompt": "Build a mutual action plan the buyer and we will share for this complex evaluation.",
       "expected": false,
       "adjacent_skill": "mutual-action-plan-builder"
+    },
+    {
+      "prompt": "Rewrite our pipeline stages and exit criteria so managers can inspect progression consistently.",
+      "expected": false,
+      "adjacent_skill": "pipeline-stage-definition-and-exit-criteria"
     }
   ],
   "output_structure_checks": [
     {
-      "name": "deal-inspection-coach-core-output",
+      "name": "deal-inspection-coach-output-01",
       "type": "structure",
-      "description": "Produces Inspection Decision: objective, as-of date, current stage, stage-validity finding, and overall evidence confidence; Evidence Ledger: material claim, status, source, source date, conflict, and proof still needed.",
+      "description": "Names one opportunity, as-of date, claimed stage, stage-validity finding, and evidence confidence as separate results.",
       "critical": true
     },
     {
-      "name": "deal-inspection-coach-decision-discipline",
+      "name": "deal-inspection-coach-output-02",
+      "type": "structure",
+      "description": "Includes an evidence ledger that labels buyer-confirmed, seller-asserted, inferred, conflicted, or missing claims with source and date.",
+      "critical": true
+    },
+    {
+      "name": "deal-inspection-coach-output-03",
       "type": "semantic",
-      "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
+      "description": "Treats seller activity, internal tasks, and future meetings as activity rather than buyer progress.",
+      "critical": true
+    },
+    {
+      "name": "deal-inspection-coach-output-04",
+      "type": "structure",
+      "description": "Separates verified risks from evidence gaps and gives each a next verification or action.",
+      "critical": true
+    },
+    {
+      "name": "deal-inspection-coach-output-05",
+      "type": "forbidden_behavior",
+      "description": "Does not invent CRM fields, amounts, dates, stakeholders, or commitments, and does not apply stage or field changes.",
       "critical": true
     }
   ]

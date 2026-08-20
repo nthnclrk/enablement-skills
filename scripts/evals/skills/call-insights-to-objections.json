@@ -2,7 +2,7 @@
   "schema_version": 2,
   "skill": "call-insights-to-objections",
   "source": "skills/call-insights-to-objections/SKILL.md",
-  "notes": "Curated eval focused on multi-call objection analysis, coverage discipline, and the boundary with governed response assets.",
+  "notes": "Curated eval focused on multi-call objection clustering, coverage discipline, and the boundary with the governed response library.",
   "managed_by": "curated",
   "should_trigger": [
     {
@@ -30,6 +30,11 @@
       "adjacent_skill": "objection-library-builder"
     },
     {
+      "prompt": "Write the final governed objection library from these call themes, with approved responses and status labels.",
+      "expected": false,
+      "adjacent_skill": "objection-library-builder"
+    },
+    {
       "prompt": "Synthesize buyer interviews and closed-deal evidence to explain why we won or lost across segments.",
       "expected": false,
       "adjacent_skill": "win-loss-synthesis"
@@ -49,9 +54,9 @@
       "critical": true
     },
     {
-      "name": "call-insights-governance-boundary",
+      "name": "call-insights-library-boundary",
       "type": "forbidden_behavior",
-      "description": "Does not turn sparse or uneven evidence into organization-wide prevalence, individual performance conclusions, or approved objection-response language.",
+      "description": "Does not publish approved objection-response language or turn sparse or uneven evidence into organization-wide prevalence or individual performance conclusions.",
       "critical": true
     }
   ],

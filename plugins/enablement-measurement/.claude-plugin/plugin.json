@@ -1,6 +1,6 @@
 {
   "name": "enablement-measurement",
-  "version": "0.3.0",
+  "version": "0.5.0",
   "description": "Measurement bundle with reusable context, KPI design, impact framing, and analytical synthesis.",
   "author": {
     "name": "Nathan Clark"

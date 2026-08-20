@@ -1,55 +1,36 @@
-# Narrative Outline Template
+# Narrative outline judgment
 
-Use the shared evidence spine, then apply only the requested output branch.
+Use this when packaging an existing narrative. The skill body has the procedure.
 
-## Shared Evidence Spine
+## Assertion headlines
 
-| Claim | Status (`fact`, `interpretation`, `assumption`) | Evidence Or Source | Approval Status | Audience Implication |
+**Fails.** "Overview." "Solution." "Next steps."
+
+**Passes.** "Missed handoffs are now a Friday-ship risk, not an ops nuisance."
+
+If the headline cannot be argued with, it is a topic label.
+
+## One job
+
+One thesis, one ask. A one-pager that also tries to train the field and close a deal has two jobs. Split it.
+
+## Evidence spine
+
+| Claim | Status (`fact`, `interpretation`, `assumption`) | Source | Approval | Audience implication |
 | --- | --- | --- | --- | --- |
 
-Define one thesis and one ask after reviewing the evidence. Do not carry internal-only claims into customer- or partner-facing outputs.
+Do not carry internal-only claims into customer or partner outputs.
 
-## One-Pager Structure
+## One-pager flow
 
-1. `Title`: One-line assertion.
-2. `Context`: Why this matters now.
-3. `Problem`: Current gap and consequence.
-4. `Approach`: What to do and for whom.
-5. `Proof`: Metrics, examples, or observed outcomes.
-6. `Decision`: What needs approval or adoption.
-7. `Next Actions`: Owner and timing.
+Title as assertion. Context. Problem and consequence. Approach. Proof. Decision. Next actions with owners.
 
-Fit the selected channel and length constraint. Do not create a slide outline unless requested.
+Fit the channel. Do not also produce slides unless asked.
 
-## Slide Outline Rules
+## Slide rules
 
-- Use one assertion headline per slide.
-- Include one evidence cue per slide.
-- Add one note describing speaker intent.
-- Move detail-heavy material to appendix.
-- Do not create a one-pager unless requested.
+One assertion, one evidence cue, one speaker intent per slide. Detail goes to an appendix. Do not also produce a one-pager unless asked.
 
-## Slide Mapping Table
+## Thin evidence
 
-| Slide | Assertion Headline | Evidence Cue And Source | Speaker Intent |
-| --- | --- | --- | --- |
-| 1 |  |  |  |
-| 2 |  |  |  |
-| 3 |  |  |  |
-| 4 |  |  |  |
-
-## Audience Job Checks
-
-- `Executive decision`: lead with the decision, stakes, options, and evidence.
-- `Seller action`: lead with what changes in field behavior, when, and why.
-- `Partner execution`: use approved external language and explicit handoff boundaries.
-- `Launch understanding`: lead with what changed, affected audiences, action, and caveats.
-- `Internal alignment`: make ownership, trade-offs, and unresolved decisions explicit.
-
-## Common Failure Checks
-
-- Topic labels instead of claims.
-- Multiple arguments in one slide.
-- Unsupported claims.
-- Missing explicit next action.
-- Wrong artifact branch, audience permissions, or level of detail.
+If the strategy is not yet defined, stop and use `value-prop-and-positioning`. This skill packages. It does not invent the argument.

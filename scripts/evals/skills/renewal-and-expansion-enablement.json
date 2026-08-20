@@ -2,8 +2,8 @@
   "schema_version": 2,
   "skill": "renewal-and-expansion-enablement",
   "source": "skills/renewal-and-expansion-enablement/SKILL.md",
-  "notes": "Generated routing and basic-output starter. Curate realistic prompts and example-backed task scenarios before treating it as behavior evidence.",
-  "managed_by": "starter-generator",
+  "notes": "Curated eval for reusable save, healthy-renewal, and expansion plays. Routing cases stay on the segment motion, not one account.",
+  "managed_by": "curated",
   "should_trigger": [
     {
       "prompt": "Please build reusable renewal and expansion motions for customer-facing teams across a segment or book of business.",
@@ -20,32 +20,50 @@
   ],
   "should_not_trigger": [
     {
-      "prompt": "Please build concise, decision-ready account briefs for account reviews, account planning, renewal or expansion reviews, and customer meeting preparation.",
+      "prompt": "Build a decision-ready account brief for this one customer's renewal review.",
       "expected": false,
       "adjacent_skill": "account-brief-builder"
     },
     {
-      "prompt": "Please build mutual action plans for complex deals and coordinated customer initiatives.",
+      "prompt": "Build a mutual action plan the customer and we will share for this renewal.",
       "expected": false,
       "adjacent_skill": "mutual-action-plan-builder"
     },
     {
-      "prompt": "Please build customer-facing QBR and EBR deliverables that align customer goals, business outcomes, decisions, risks, and next steps.",
+      "prompt": "Build a customer-facing QBR that aligns outcomes, risks, and next steps for this account.",
       "expected": false,
       "adjacent_skill": "qbr-ebr-builder"
     }
   ],
   "output_structure_checks": [
     {
-      "name": "renewal-and-expansion-enablement-core-output",
+      "name": "renewal-and-expansion-enablement-output-01",
       "type": "structure",
-      "description": "Produces Renewal and expansion play matrix by segment; Contract-derived milestone map with source, owner, latest safe start, and unresolved gaps.",
+      "description": "Separates save, healthy-renewal, and expansion plays rather than combining them into one motion.",
       "critical": true
     },
     {
-      "name": "renewal-and-expansion-enablement-decision-discipline",
+      "name": "renewal-and-expansion-enablement-output-02",
+      "type": "structure",
+      "description": "Includes a contract-derived milestone map with source, owner, latest safe start, and unresolved gaps.",
+      "critical": true
+    },
+    {
+      "name": "renewal-and-expansion-enablement-output-03",
       "type": "semantic",
-      "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
+      "description": "Defines unknown as a signal state and does not treat missing usage or health data as healthy.",
+      "critical": true
+    },
+    {
+      "name": "renewal-and-expansion-enablement-output-04",
+      "type": "semantic",
+      "description": "Keeps expansion gated on value, buyer task, stakeholders, capacity, and commercial path rather than whitespace alone.",
+      "critical": false
+    },
+    {
+      "name": "renewal-and-expansion-enablement-output-05",
+      "type": "forbidden_behavior",
+      "description": "Does not invent contract dates, usage metrics, health thresholds, or pricing, and does not diagnose a named account as the primary deliverable.",
       "critical": true
     }
   ]

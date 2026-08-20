@@ -1,4 +1,4 @@
 interface:
   display_name: "Certification Program Builder"
-  short_description: "Design defensible readiness certifications"
-  default_prompt: "Use $certification-program-builder to create a role-based readiness standard, evidence plan, anchored rubric, and assessor calibration process."
+  short_description: "An observable gate, not a quiz"
+  default_prompt: "Use $certification-program-builder to create a role-based readiness gate with observable evidence, anchored scoring, and assessor calibration."

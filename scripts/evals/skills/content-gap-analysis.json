@@ -2,7 +2,7 @@
   "schema_version": 2,
   "skill": "content-gap-analysis",
   "source": "skills/content-gap-analysis/SKILL.md",
-  "notes": "Curated eval focused on distinguishing missing content from quality, discoverability, and governance issues.",
+  "notes": "Curated eval focused on exists vs used, and on distinguishing missing content from quality, discoverability, and governance work.",
   "managed_by": "curated",
   "should_trigger": [
     {
@@ -25,6 +25,11 @@
       "adjacent_skill": "content-governance-system"
     },
     {
+      "prompt": "Set up the weekly content-ops cadence, publication and review statuses, and who is allowed to publish.",
+      "expected": false,
+      "adjacent_skill": "content-governance-system"
+    },
+    {
       "prompt": "Synthesize raw field notes and frontline feedback into recurring themes for leadership.",
       "expected": false,
       "adjacent_skill": "field-feedback-synthesizer"
@@ -37,34 +42,28 @@
   ],
   "output_structure_checks": [
     {
-      "name": "content-gap-analysis-output-01",
+      "name": "content-gap-exists-vs-used",
       "type": "structure",
-      "description": "The output substantively includes: Coverage map by role, stage, and job-to-be-done",
+      "description": "Separates exists from used on priority items and includes a coverage map by role, stage, and job-to-be-done.",
       "critical": true
     },
     {
-      "name": "content-gap-analysis-output-02",
+      "name": "content-gap-action-types",
       "type": "structure",
-      "description": "The output substantively includes: A prioritized gap backlog with anchored value dimensions, evidence confidence, decision tier, and rationale; it does not let an unconfirmed weighted score determine the order",
+      "description": "Assigns create, update, consolidate, retire, improve discoverability, or reinforce distribution with a visible decision tier.",
       "critical": true
     },
     {
-      "name": "content-gap-analysis-output-03",
-      "type": "structure",
-      "description": "The output substantively includes: Recommended action type per gap",
-      "critical": false
+      "name": "content-gap-scoring-discipline",
+      "type": "semantic",
+      "description": "Keeps impact, frequency, strategic urgency, evidence confidence, and effort visible; any composite weighting is supplied or proposed, not presented as policy.",
+      "critical": true
     },
     {
-      "name": "content-gap-analysis-output-04",
-      "type": "structure",
-      "description": "The output substantively includes: Gap cause tag per item",
-      "critical": false
-    },
-    {
-      "name": "content-gap-analysis-output-05",
-      "type": "structure",
-      "description": "The output substantively includes: Assumptions and confidence notes when source data is partial",
-      "critical": false
+      "name": "content-gap-no-usage-overreach",
+      "type": "forbidden_behavior",
+      "description": "Does not treat low views alone as a retirement case, invent usage or ROI, or design the weekly operating model.",
+      "critical": true
     }
   ],
   "task_scenarios": [

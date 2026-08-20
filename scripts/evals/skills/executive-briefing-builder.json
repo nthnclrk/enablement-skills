@@ -2,8 +2,8 @@
   "schema_version": 2,
   "skill": "executive-briefing-builder",
   "source": "skills/executive-briefing-builder/SKILL.md",
-  "notes": "Generated routing and basic-output starter. Curate realistic prompts and example-backed task scenarios before treating it as behavior evidence.",
-  "managed_by": "starter-generator",
+  "notes": "Curated eval for one-meeting executive briefs built around an ask and fallback. Near-misses keep QBR and internal account briefs on adjacent skills.",
+  "managed_by": "curated",
   "should_trigger": [
     {
       "prompt": "Please build a concise, decision-oriented executive briefing and meeting plan for a strategic customer or commercial meeting, negotiation, escalation, or internal alignment on that same decision.",
@@ -16,6 +16,10 @@
     {
       "prompt": "I have rough notes. Please turn them into a usable executive briefing and label anything that still needs confirmation.",
       "expected": true
+    },
+    {
+      "prompt": "Prepare our CRO's pre-read for tomorrow's 30-minute meeting with Acme's COO. One ask, a fallback if they will not move, authorized concessions, and a timed meeting plan.",
+      "expected": true
     }
   ],
   "should_not_trigger": [
@@ -25,7 +29,17 @@
       "adjacent_skill": "qbr-ebr-builder"
     },
     {
+      "prompt": "Write the customer-facing quarterly review deck for Acme with an outcome scorecard and a joint next-quarter plan.",
+      "expected": false,
+      "adjacent_skill": "qbr-ebr-builder"
+    },
+    {
       "prompt": "Please build concise, decision-ready account briefs for account reviews, account planning, renewal or expansion reviews, and customer meeting preparation.",
+      "expected": false,
+      "adjacent_skill": "account-brief-builder"
+    },
+    {
+      "prompt": "Prepare Thursday's internal account review brief for Acme. One decision: do we assign a new executive sponsor before we send commercial paper.",
       "expected": false,
       "adjacent_skill": "account-brief-builder"
     },
@@ -37,15 +51,33 @@
   ],
   "output_structure_checks": [
     {
-      "name": "executive-briefing-builder-core-output",
+      "name": "executive-briefing-builder-output-01",
       "type": "structure",
-      "description": "Produces One-page executive core: objective, decision requested, recommendation, material evidence, principal risk, and open approvals; Evidence and source-status notes for decision-critical facts.",
+      "description": "States one primary ask and one fallback as sentences a leader can say, plus the meeting objective.",
       "critical": true
     },
     {
-      "name": "executive-briefing-builder-decision-discipline",
-      "type": "semantic",
-      "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
+      "name": "executive-briefing-builder-output-02",
+      "type": "structure",
+      "description": "Includes a one-page core with recommendation, material evidence, principal risk, and open approvals.",
+      "critical": true
+    },
+    {
+      "name": "executive-briefing-builder-output-03",
+      "type": "structure",
+      "description": "Maps the room with confirmed authority distinct from hypothesized stance.",
+      "critical": true
+    },
+    {
+      "name": "executive-briefing-builder-output-04",
+      "type": "structure",
+      "description": "Pairs asks, offers, or concessions with authority or marks them unapproved and internal.",
+      "critical": false
+    },
+    {
+      "name": "executive-briefing-builder-output-05",
+      "type": "structure",
+      "description": "Labels internal-only material separately from any customer-shareable extract.",
       "critical": true
     }
   ]

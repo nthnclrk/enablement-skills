@@ -2,7 +2,7 @@
   "schema_version": 2,
   "skill": "forecast-risk-brief",
   "source": "skills/forecast-risk-brief/SKILL.md",
-  "notes": "Curated eval focused on period-level forecast reliability rather than single-deal coaching.",
+  "notes": "Curated eval focused on period-level forecast reliability rather than single-deal coaching. Output checks require deal risk and data-quality risk to stay separate.",
   "managed_by": "curated",
   "should_trigger": [
     {
@@ -39,31 +39,31 @@
     {
       "name": "forecast-risk-brief-output-01",
       "type": "structure",
-      "description": "The output substantively includes: Forecast Summary: scope, confidence band, and key caveats",
+      "description": "States forecast scope, as-of date, and a confidence band defined as evidence quality rather than deal health.",
       "critical": true
     },
     {
       "name": "forecast-risk-brief-output-02",
       "type": "structure",
-      "description": "The output substantively includes: A visible tier-decision legend and low/moderate/high-risk deal counts and value, with indeterminate exposure reported separately and no uncalibrated point score determining the tiers",
+      "description": "Reports low, moderate, and high-risk counts and value, with indeterminate exposure held outside those tiers and no homemade point score.",
       "critical": true
     },
     {
       "name": "forecast-risk-brief-output-03",
-      "type": "structure",
-      "description": "The output substantively includes: Top Risk Drivers: structural patterns affecting reliability",
-      "critical": false
+      "type": "semantic",
+      "description": "Keeps deal risk separate from data-quality risk and does not treat evidence confidence as close likelihood.",
+      "critical": true
     },
     {
       "name": "forecast-risk-brief-output-04",
       "type": "structure",
-      "description": "The output substantively includes: Intervention Plan with owner, action, confirmed or proposed timeline, date state, and verification checkpoint",
+      "description": "Includes an intervention plan with owner, confirmed or proposed date state, and verification checkpoint.",
       "critical": false
     },
     {
       "name": "forecast-risk-brief-output-05",
       "type": "structure",
-      "description": "The output substantively includes: Leadership Notes: decisions to make now vs monitor later",
+      "description": "Separates decisions to make now from items to monitor later.",
       "critical": false
     }
   ],

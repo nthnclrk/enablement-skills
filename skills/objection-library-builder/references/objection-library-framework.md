@@ -1,66 +1,40 @@
-# Objection Library Framework
+# Objection library judgment
 
-Use this framework to build consistent objection handling artifacts.
+Use this when writing or checking play cards. The skill body has the procedure.
 
-## Objection Card Template
+## Diagnose first
 
-| Field | Guidance |
-| --- | --- |
-| Objection label | Short phrase the team recognizes quickly |
-| Typical wording | Verbatim examples or explicitly labeled paraphrases; never rewrite a paraphrase as a quotation |
-| Evidence reference | Source ID or link, observed date, transcript confidence, and anonymized context |
-| Persona and stage | Who raises it and when |
-| Priority | Priority 1, 2, or 3, with the decision rule shown |
-| Prevalence | Observed count, usable-source denominator, unique-account breadth, and concentration note |
-| Business / deal impact | Blocking, material, or limited, with evidence |
-| Influenceability | High, mixed, or low within the team's control |
-| Evidence confidence | High, medium, or low based on coverage, source quality, and consistency |
-| Analyst interpretation | Root cause hypothesis such as risk, misunderstanding, fit gap, or timing; keep separate from source wording |
-| Response path | Acknowledge -> Diagnose -> Reframe -> Proof -> Confirm |
-| Proof source | Source reference, approved wording, owner, last-verified date, and approval status |
-| Escalation owner | Role to involve when objection cannot be resolved in call |
-| Landmine | Statement to avoid |
-| Lifecycle | Owner, version, status, last-reviewed date, and review triggers |
+**Fails.** "It's too expensive." → "Other customers saw 3x ROI."
 
-## Priority Matrix
+**Passes.** "Compared with what: staying on the spreadsheet, or a number already in a budget line?"
 
-Start with impact and prevalence, then adjust the response investment for influenceability and confidence:
+Path: acknowledge → diagnose → answer → prove → confirm the next step.
 
-| Business / Deal Impact | Higher Prevalence | Lower Prevalence |
+## Priority
+
+Impact first, then prevalence.
+
+| Impact | Higher prevalence | Lower prevalence |
 | --- | --- | --- |
-| Blocking or material | `Priority 1` | `Priority 1` if it can block the decision; otherwise `Priority 2` with explicit monitoring |
-| Limited | `Priority 2` when a reusable response removes recurring friction | `Priority 3` |
+| Blocking or material | Priority 1 | Priority 1 if it can block the deal; else Priority 2 with monitoring |
+| Limited | Priority 2 if a reusable card removes friction | Priority 3 |
 
-- Low influenceability increases escalation and expectation-setting; it does not erase impact.
-- Low confidence creates a validation action and can limit response investment, but a rare potential blocker remains visible until resolved.
-- Report observed counts, usable-source denominator, unique-account breadth, and concentration. Do not equate repeated mentions from one account with broad prevalence.
+A rare blocker stays visible. Mentions from one account are not market frequency. Report observed count, usable-source denominator, and unique-account breadth.
 
-When the source set is incomplete, report observed count and coverage rather than asserting organization-wide frequency.
+Low influenceability means escalate and set expectations. It does not erase impact. Low confidence means validate before you scale the card.
 
-## Response Pattern
+## Evidence
 
-1. Acknowledge the concern in neutral language.
-2. Diagnose with one or two clarifying questions.
-3. Reframe the decision criterion around buyer outcomes.
-4. Support with the strongest available proof.
-5. Confirm the next decision step.
+Keep source wording separate from the analyst label. Never promote a paraphrase into a quotation. Record source, date, transcript confidence, and anonymized context.
 
-## Escalation Rules
+## Proof and lifecycle
 
-- Escalate legal terms to legal or deal desk.
-- Escalate security architecture to security or product.
-- Escalate pricing exceptions to approved commercial owners.
-- Escalate implementation commitments to services or CS.
+Proof needs approved wording, owner, last-verified date, and status. Product, pricing, policy, or legal changes retire the card. Do not leave two active versions.
 
-Do not provide commitments outside approved policy.
+## Escalation
 
-## Lifecycle Governance
+Name the owner: legal, security, pricing, implementation. "Escalate if needed" is not a rule.
 
-Use these states:
+## Optional card fields
 
-- `draft`: evidence and response are still being assembled
-- `reviewed`: the designated subject-matter owner has checked accuracy
-- `approved`: authorized for the stated audience and channel
-- `retired`: superseded, invalidated, or no longer safe to use
-
-Trigger review when product behavior, pricing, policy, legal guidance, proof, buyer wording, or observed outcomes materially change. Keep one active version, retain the superseded reference, and record who approved the change.
+Label, typical wording, evidence reference, persona and stage, priority, prevalence, impact, influenceability, confidence, interpretation, response path, proof, landmine, escalation, owner, version, review trigger.

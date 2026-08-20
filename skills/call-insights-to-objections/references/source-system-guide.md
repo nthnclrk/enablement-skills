@@ -1,42 +1,29 @@
-# Source System Guide
+# Source system guide
 
 Use this when objections are being mined from call platforms, shared notes, or message exports.
 
-## Best Evidence Inputs
+## Best evidence
 
-- Call transcripts or detailed summaries with date, segment, role, stage, and outcome metadata.
-- Manager notes or rep notes only when transcripts are unavailable.
-- Slack or internal message threads only when they capture repeated field questions or escalation patterns.
+Transcripts or detailed summaries with date, segment, role, stage, and outcome beat manager anecdotes. Slack threads help only when they capture repeated field questions, not one loud thread.
 
-## Minimum Pull
+## Minimum pull
 
-- Stable source ID
-- Call date
-- Segment / persona
-- Deal stage or call type
-- Objection snippet or summary
-- Source type and transcript or note availability
-- Deal outcome when available
+Stable source ID, call date, segment or persona, deal stage or call type, objection snippet, source type, transcript-or-note availability, and deal outcome when it exists.
 
-## Recommended Handling
+## Handling
 
-- Weight transcripts higher than anecdotal summaries.
-- Collapse duplicate wording into root objection themes.
-- Separate observed objections from the team's interpretation of why they happened.
-- If coverage is uneven by segment or team, label confidence by slice.
-- Preserve the export or query date and disclose filters that shaped the source set.
-- Treat platform summaries, sentiment, and topic tags as leads to inspect, not verified evidence.
-- Do not interpret absent transcript text as evidence that no objection occurred.
+- Weight transcripts higher than summaries.
+- Platform sentiment and topic tags are leads to inspect, not verified evidence.
+- Missing transcript text is not evidence that no objection occurred.
+- Preserve the export date and the filters that shaped the set.
+- Collapse duplicate wording only when the underlying concern is the same.
 
-## Access And Privacy
+**Fails.** Treating a Gong topic tag of "Pricing" as a priced-out deal.
 
-- Use only sources the user is authorized to access for this purpose.
-- Keep source IDs for traceability, but redact names and sensitive customer details from broad-circulation outputs.
-- Quote only where source permissions allow it; otherwise use a labeled paraphrase.
-- Avoid individual rep comparisons unless the approved purpose and sample support them.
+**Passes.** Opening the transcript, quoting the buyer, and coding `Commercial` only if price or terms were the concern.
 
-## Safe Writeback Boundary
+## Access and writeback
 
-- Do not publish objection messaging directly from raw analysis.
-- Route final governed responses to objection-library-builder.
-- Do not write themes, scores, or coaching judgments back to source systems without explicit approval.
+Use only sources the user is authorized to access for this purpose. Keep source IDs. Redact names and sensitive customer detail from broad-circulation outputs. Quote only where permissions allow it; otherwise use a labeled paraphrase.
+
+Do not publish objection messaging from raw analysis. Route the governed response to `objection-library-builder`. Do not write themes, scores, or coaching judgments back to source systems without explicit approval. Avoid individual rep comparisons unless the approved purpose and sample support them.

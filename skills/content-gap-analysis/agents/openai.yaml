@@ -1,4 +1,4 @@
 interface:
   display_name: "Content Gap Analysis"
-  short_description: "Prioritize high-impact enablement content gaps"
+  short_description: "Exists vs used; create, update, consolidate, retire"
   default_prompt: "Use $content-gap-analysis to audit our current enablement assets and produce a prioritized content gap backlog by role and stage."

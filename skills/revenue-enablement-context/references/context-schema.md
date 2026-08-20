@@ -1,6 +1,10 @@
-# Revenue Enablement Context Schema
+# Revenue enablement context schema
 
-Use this schema for the user-owned `.enablement/context.md`. Keep sections concise, omit irrelevant fields, and preserve unresolved information instead of inventing answers.
+Use this for `.enablement/context.md`. Keep sections short. Empty is better than generic. Preserve unresolved information. Do not invent answers.
+
+**Fails.** A persona section that says "economic buyers care about ROI."
+
+**Passes.** "VP Ops owns the Friday review. They will not change tools unless missed handoffs show up as a named delivery risk."
 
 ## Contents
 

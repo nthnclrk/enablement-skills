@@ -2,8 +2,8 @@
   "schema_version": 2,
   "skill": "discovery-and-demo-structure",
   "source": "skills/discovery-and-demo-structure/SKILL.md",
-  "notes": "Generated routing and basic-output starter. Curate realistic prompts and example-backed task scenarios before treating it as behavior evidence.",
-  "managed_by": "starter-generator",
+  "notes": "Curated eval for the craft-pass output contract. Routing prompts stay on practitioner language; output checks require the skill's leading test, not a section list.",
+  "managed_by": "curated",
   "should_trigger": [
     {
       "prompt": "Please design an adaptive discovery guide and outcome-led demo flow for a defined buyer, segment, stage, and meeting type.",
@@ -39,7 +39,7 @@
     {
       "name": "discovery-and-demo-structure-core-output",
       "type": "structure",
-      "description": "Produces Meeting Frame: meeting type, audience, known context, hypotheses, decision objective, and time allocation; Discovery Path: priority topic, reason, opening prompt, listen-for signals, if/then branches, and red flags.",
+      "description": "Names the meeting decision, gates each demo block on a buyer signal, and keeps hypotheses labeled until confirmed.",
       "critical": true
     },
     {

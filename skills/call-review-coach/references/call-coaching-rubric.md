@@ -1,45 +1,70 @@
-# Call Coaching Rubric
+# Call coaching judgment
 
-Use this rubric when reviewing one call. Score only behavior that the available evidence and call type made observable.
+Use this when you are scoring or checking a review. The skill body has the procedure.
 
-## Scoring Scale
+## Next-call test
 
-- `N/O`: Not observable or not applicable in this call. Exclude from any rollup.
-- `1`: Observable behavior is absent when required or actively harms the call outcome.
-- `3`: Observable behavior meets the baseline independently, with some gaps that do not derail the call.
-- `5`: Observable behavior is consistently strong, adaptive to buyer signals, and improves the call outcome.
-- Use `2` or `4` only when the evidence clearly falls between adjacent anchors.
+Keep a coaching note if a manager can hear the change on the next comparable call. Cut it if it names a theme, a personality trait, or a career verdict.
 
-Do not award `5` from one isolated moment. Do not assign `1` because a partial transcript or call design did not expose the behavior.
+A note fails the test when it:
+
+- Could be pasted onto any other call
+- Scores energy, confidence, accent, or likability
+- Treats one call as proof the rep "is" or "is not" ready
+- Assigns `1` because the notes never reached that part of the call
+
+**Fails.** "Great energy. Needs to be more consultative. Discovery 2."
+
+**Passes.** "At 11:40 the buyer named missed handoffs. The rep went to product. Next call: ask what a miss costs before you demo. Success: they name a number or the owner of that number."
+
+## Score only what appeared
+
+- `N/O`: the available evidence never exposed the behavior. Exclude from any rollup.
+- `1`: required behavior was absent or actively harmed the outcome.
+- `3`: baseline, with gaps that did not derail the call.
+- `5`: consistently strong, adaptive, and it improved the outcome.
+- Use `2` or `4` only between adjacent anchors.
+
+Do not award `5` from one isolated moment. Do not assign `1` because a partial transcript or the call design never gave the behavior a chance.
 
 ## Dimensions
 
-| Dimension | `1` Anchor | `3` Anchor | `5` Anchor |
+| Dimension | `1` | `3` | `5` |
 | --- | --- | --- | --- |
-| Call control and agenda | Runs an unstructured conversation or ends without a usable next step when one was required. | Sets purpose, manages the main checkpoints, and confirms a next step with basic ownership. | Adapts the agenda with buyer agreement, protects time for the decision, and secures a specific mutual next step. |
-| Discovery quality | Stays at surface questions, leads the buyer, or misses material context needed for the call. | Establishes current state, problem, impact, urgency, and relevant stakeholder context to baseline depth. | Follows buyer signals into root cause, quantified or qualified consequence, priority trade-offs, and stakeholder dynamics. |
-| Value framing | Defaults to unsupported feature claims or disconnects the solution from the stated problem. | Connects relevant capabilities to the buyer's stated outcomes in customer language. | Builds a concise, evidence-bounded value case from the buyer's own priorities and tests whether it resonates. |
-| Objection handling | Dismisses, debates, or answers before understanding the concern. | Acknowledges, diagnoses, responds within approved boundaries, and checks whether the concern moved. | Distinguishes the root cause, adapts the response with credible proof, and advances the decision without overclaiming. |
-| Commercial progression | Leaves material ambiguity about decision process, roles, timing, or ownership when those were in scope. | Clarifies the relevant decision path, timing, roles, and next action. | Exposes hidden dependencies or risk, aligns stakeholders on the decision path, and reduces material deal uncertainty. |
-| Executive communication | Buries the point in jargon, excessive detail, or unsupported certainty. | Communicates clearly and concisely with an outcome-first structure. | Synthesizes complexity into decision-relevant language, adapts under pushback, and preserves credibility. |
+| Call control and agenda | Unstructured, or ends with no usable next step. | Purpose, checkpoints, and a next step with basic ownership. | Adapts the agenda with the buyer and locks a specific mutual next step. |
+| Discovery quality | Surface questions, leading, or misses material context. | Current state, problem, impact, urgency, relevant stakeholders. | Follows signals into root cause, consequence, trade-offs, and politics. |
+| Value framing | Feature claims, or the solution misses the stated problem. | Ties capabilities to the buyer's stated outcomes. | Builds a bounded value case from the buyer's priorities and tests it. |
+| Objection handling | Dismisses, debates, or answers before diagnosing. | Acknowledges, diagnoses, responds in bounds, checks movement. | Finds the root concern, uses credible proof, advances the decision. |
+| Commercial progression | Leaves process, roles, timing, or ownership vague when in scope. | Clarifies the path, timing, roles, and next action. | Surfaces hidden risk and reduces material deal uncertainty. |
+| Executive communication | Jargon, excess detail, or unsupported certainty. | Clear, concise, outcome first. | Synthesizes for the decision and holds under pushback. |
 
-## Call-Type Applicability
+## What this call type can show
 
-- `Discovery`: call control, discovery, executive communication, and progression are usually observable; value or objections only when they occur.
-- `Demo or technical validation`: call control, value framing, executive communication, and progression are usually observable; score discovery only if discovery was an explicit objective.
-- `Commercial review or close`: call control, objection handling, commercial progression, and executive communication are usually observable.
-- Mark dimensions `N/O` when the call purpose or available evidence did not expose them.
+- Discovery: control, discovery, executive communication, progression. Value or objections only if they happened.
+- Demo or technical validation: control, value, executive communication, progression. Discovery only if it was an objective.
+- Commercial or close: control, objections, progression, executive communication.
 
-## Evidence Rules
+Mark the rest `N/O`.
 
-- Cite a timestamp, transcript location, or clearly labeled note for every score.
-- Record evidence coverage and confidence separately from performance.
-- Treat summaries as directional evidence; do not infer exact wording, timing, or tone.
-- Do not calculate an overall score unless the user needs one. If used, include only applicable dimensions and report coverage.
+## Thin evidence
 
-## Coaching Translation Rules
+Summaries cannot support claims about wording, timing, talk ratio, or tone. Automated transcripts mis-attribute speakers. Preserve the uncertainty.
 
-- Keep only top 1-3 priorities per call.
-- Convert each priority into one observable behavior.
-- Pair the behavior with an in-call cue and success signal.
-- Set a checkpoint for the next call review.
+**Fails.** Discovery `1` because the eight-minute notes never mentioned stakeholders.
+
+**Passes.** Discovery stakeholder work `N/O`. Notes cover the open only. Do not treat the missing stretch as failure.
+
+Cite a timestamp, transcript location, or labeled note for every score. Do not average unobserved dimensions. Skip an overall score unless asked; if used, report coverage.
+
+## Optional shape
+
+Use this only when the user wants a scanned card. The notes still have to pass the next-call test.
+
+```text
+Call / segment / source / coverage
+Moments (located)
+Scores (anchor, evidence, or N/O)
+Keep
+Next-call behaviors (cue + success signal)
+Inspect next 1-2 calls
+```

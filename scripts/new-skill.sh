@@ -68,8 +68,9 @@ Created skill scaffold:
   ${SKILL_DIR}
 
 Next steps:
-  1. Edit ${SKILL_DIR}/SKILL.md
+  1. Replace the [REQUIRED] markers in ${SKILL_DIR}/SKILL.md. Read templates/skill/README.md. Heading names may change.
   2. Edit ${SKILL_DIR}/agents/openai.yaml
   3. Run: bash scripts/validate.sh
   4. Optionally run: bash scripts/validate-official.sh
+  5. Curate scripts/evals/skills/${SKILL_NAME}.json. Do not treat the starter as behavior evidence.
 EOF

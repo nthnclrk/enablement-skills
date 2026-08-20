@@ -2,8 +2,8 @@
   "schema_version": 2,
   "skill": "qbr-ebr-builder",
   "source": "skills/qbr-ebr-builder/SKILL.md",
-  "notes": "Generated routing and basic-output starter. Curate realistic prompts and example-backed task scenarios before treating it as behavior evidence.",
-  "managed_by": "starter-generator",
+  "notes": "Curated eval for customer-facing QBR and EBR packs built around customer outcomes. Near-misses keep internal account briefs and one-off executive meetings on adjacent skills.",
+  "managed_by": "curated",
   "should_trigger": [
     {
       "prompt": "Please build customer-facing QBR and EBR deliverables that align customer goals, business outcomes, decisions, risks, and next steps.",
@@ -16,6 +16,10 @@
     {
       "prompt": "I have rough notes. Please turn them into a usable qbr ebr and label anything that still needs confirmation.",
       "expected": true
+    },
+    {
+      "prompt": "Write the customer-facing quarterly review deck for Acme with an outcome scorecard, last quarter's commitments, and a joint next-quarter plan. Keep internal churn notes out of the customer pack.",
+      "expected": true
     }
   ],
   "should_not_trigger": [
@@ -25,7 +29,17 @@
       "adjacent_skill": "account-brief-builder"
     },
     {
+      "prompt": "Prepare Thursday's internal account review brief for Acme. One decision: do we assign a new executive sponsor before we send commercial paper.",
+      "expected": false,
+      "adjacent_skill": "account-brief-builder"
+    },
+    {
       "prompt": "Please build a concise, decision-oriented executive briefing and meeting plan for a strategic customer or commercial meeting, negotiation, escalation, or internal alignment on that same decision.",
+      "expected": false,
+      "adjacent_skill": "executive-briefing-builder"
+    },
+    {
+      "prompt": "Prepare our CRO's pre-read for tomorrow's 30-minute meeting with Acme's COO. We need one ask, a fallback if they will not move, and talking points.",
       "expected": false,
       "adjacent_skill": "executive-briefing-builder"
     },
@@ -37,15 +51,33 @@
   ],
   "output_structure_checks": [
     {
-      "name": "qbr-ebr-builder-core-output",
+      "name": "qbr-ebr-builder-output-01",
       "type": "structure",
-      "description": "Produces a usable qbr ebr deliverable matched to the requested scope.",
+      "description": "States review type, audience, and the decisions or commitments requested in the room.",
       "critical": true
     },
     {
-      "name": "qbr-ebr-builder-decision-discipline",
+      "name": "qbr-ebr-builder-output-02",
+      "type": "structure",
+      "description": "Centers the narrative on customer outcomes and goals, not vendor activity volume.",
+      "critical": true
+    },
+    {
+      "name": "qbr-ebr-builder-output-03",
+      "type": "structure",
+      "description": "Includes an outcome scorecard with source, as-of date, and attribution or acceptance status, or an explicit gap.",
+      "critical": true
+    },
+    {
+      "name": "qbr-ebr-builder-output-04",
+      "type": "structure",
+      "description": "Includes a joint action plan with customer-side and internal owners and an agreement state.",
+      "critical": true
+    },
+    {
+      "name": "qbr-ebr-builder-output-05",
       "type": "semantic",
-      "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
+      "description": "Keeps internal risk language out of the customer-facing pack unless internal mode was requested.",
       "critical": true
     }
   ]

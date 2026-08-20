@@ -1,69 +1,60 @@
-# Quarterly Enablement Plan Template
+# Quarterly plan judgment
 
-## 1) Quarter Context
+Use this when you are scoring the stack, naming deferrals, or testing capacity. The skill body has the procedure.
 
-- Quarter
-- Revenue priorities
-- Strategic initiatives
-- Immovable decision, launch, compliance, or customer dates
+## The defer test
 
-## 2) Capacity Ledger
+A plan is done when you can name what will not happen this quarter, who decided, and what would put it back.
+
+**Fails.** Twelve initiatives, all P1, owners TBD.
+
+**Passes.** "We ship the packaging launch and the AE qualification program. Partner certification, the battlecard refresh, and the new-hire rewrite wait. Capacity is 18 delivery days; those three do not fit. Re-enter partner certification if the channel lead frees 6 days after week 4."
+
+If the defer list is empty and the stack is long, you have a wish list.
+
+## Capacity first
 
 Calculate by owner or constrained role and time period:
 
 `Net Capacity = Gross Working Capacity - BAU - Committed Carryover - Leave - Protected Contingency`
 
-Use the contingency supplied or approved by the user; do not invent a percentage. Track the units the team actually plans in—hours, days, or points—and do not mix units in one ledger.
+Use the contingency they supplied or approved. Do not invent a percentage. Track the unit the team actually plans in. Do not mix hours and points in one ledger.
 
-Initiative load must include design, SME input, production, approval, delivery, manager enablement, reinforcement, and measurement. A plan is over capacity if any required owner or time period is over capacity, even when total team capacity appears sufficient.
+Initiative load includes design, SME input, production, approval, delivery, manager enablement, reinforcement, and measurement. A plan is over capacity if any required owner or period is over, even when the team total looks fine.
 
-## 3) Anchored Initiative Assessment
+Do not invent capacity to make a must-do fit.
 
-Score these dimensions from 1 to 5:
+## Scoring anchors
 
-| Score | Business Impact | Strategic Necessity | Evidence Confidence |
+Score impact, necessity, and confidence from 1 to 5. Record effort and dependencies separately. Do not divide priority by effort.
+
+| Score | Business impact | Strategic necessity | Evidence confidence |
 | --- | --- | --- | --- |
-| 1 | Convenience or activity output with no demonstrated behavior/outcome link | No current objective or decision depends on it | Assumption or isolated request |
-| 2 | Local friction with limited commercial consequence | Indirect support for a lower-priority objective | A few signals from one source class |
-| 3 | Material behavior or workflow improvement for one in-scope audience | Supports a committed team or quarter objective | Repeated current evidence with known gaps |
-| 4 | Expected material movement in readiness, conversion, cycle time, retention, or launch execution | Direct dependency for a committed business initiative | Independent qualitative and operational evidence converge |
-| 5 | Prevents a critical commercial, customer, regulatory, or contractual failure | Mandatory or time-critical decision with a verified deadline | Representative evidence links the intervention to the target behavior or outcome |
+| 1 | Convenience. No behavior or outcome link | No current objective depends on it | Assumption or isolated request |
+| 2 | Local friction, limited commercial consequence | Indirect support for a lower-priority objective | A few signals from one source class |
+| 3 | Material behavior or workflow gain for one audience | Supports a committed team or quarter objective | Repeated current evidence with known gaps |
+| 4 | Expected movement in readiness, conversion, cycle time, retention, or launch execution | Direct dependency for a committed initiative | Independent qualitative and operational evidence converge |
+| 5 | Prevents a critical commercial, customer, regulatory, or contractual failure | Mandatory or time-critical decision with a verified deadline | Representative evidence links the intervention to the outcome |
 
-Record effort and dependencies separately; do not divide priority by effort.
+## Priority labels
 
-## 4) Priority Decision Rules
+- `must do`: mandatory obligation or hard dependency with a verified due date, or high-impact work required for a committed objective. Still needs an owner, viable scope, and capacity.
+- `should do`: evidence-backed value that fits after must-do without overloading a constrained owner.
+- `validate`: high potential, weak evidence. Fund only the smallest test for the next decision.
+- `defer`: dependencies, evidence, timing, or capacity are not ready. Record the re-entry condition and decision owner.
 
-- `Must do`: mandatory obligation or hard dependency with a verified due date, or high-impact work directly required for a committed objective. It must still have an owner, viable scope, and capacity plan.
-- `Should do`: evidence-backed value that fits after must-do commitments without overloading a constrained owner.
-- `Validate`: high-potential work with weak evidence or an unresolved solution assumption; fund only the smallest test needed for the next decision.
-- `Defer`: dependencies, evidence, timing, or capacity are not ready. Record the re-entry condition and decision owner.
+Must-do without capacity is a conflict, not a calendar entry. Resolve it by cutting scope, moving a deadline with the authorized owner, adding verified capacity, or displacing another item. Do not silently overbook.
 
-When must-do load exceeds capacity, surface the conflict. Resolve it by reducing scope, moving a deadline with the authorized owner, adding verified capacity, or displacing another item. Do not silently overbook the quarter.
+## Sequence and absorption
 
-## 5) Initiative Backlog
+Sequence around real decision and delivery dates, not equal calendar blocks. Limit concurrent work to what the most constrained owner can support.
 
-For each initiative record objective, target behavior, audience, impact anchor, necessity anchor, confidence, effort by owner, dependencies, decision date, and expected measure.
+Check field absorption. Overlapping launches, training, coaching, and comms can exceed audience capacity even when the enablement team has time.
 
-## 6) Calendar And Milestones
+## Change control
 
-- Sequence around actual decision and delivery dates, not equal calendar blocks.
-- Include approval, delivery, reinforcement, and measurement milestones.
-- Limit concurrent work to what the most constrained owner can support.
-- Check field absorption: overlapping launches, training, coaching, and communications may exceed audience capacity even when the enablement team has capacity.
+Re-plan when a hard date, scope, dependency, evidence assumption, or available capacity materially changes. New work enters through an explicit trade-off: consume contingency, reduce scope, or displace another item. Record who approved the trade-off.
 
-## 7) Ownership
+## Thin evidence
 
-- Initiative owner
-- Required contributors and their reserved capacity
-- Decision owner
-- Approval owner
-
-## 8) Operating Cadence
-
-Set reviews at initiative decision gates, material dependency dates, and the team's existing operating review. Use a calendar cadence only where it helps decisions.
-
-## 9) Risks And Change Control
-
-- Trigger re-planning when a hard date, scope, dependency, evidence assumption, or available capacity materially changes.
-- New work enters through an explicit trade-off: consume contingency, reduce scope, or displace/defer another item.
-- Record who approved the trade-off and which outcome or commitment changed.
+Unknown owner capacity leaves that work unscheduled. Unknown dates stay unknown. Do not invent either to close the quarter story.

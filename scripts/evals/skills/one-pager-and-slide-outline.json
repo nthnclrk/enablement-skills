@@ -2,8 +2,8 @@
   "schema_version": 2,
   "skill": "one-pager-and-slide-outline",
   "source": "skills/one-pager-and-slide-outline/SKILL.md",
-  "notes": "Generated routing and basic-output starter. Curate realistic prompts and example-backed task scenarios before treating it as behavior evidence.",
-  "managed_by": "starter-generator",
+  "notes": "Curated eval for the craft-pass output contract. Routing prompts stay on practitioner language; output checks require the skill's leading test, not a section list.",
+  "managed_by": "curated",
   "should_trigger": [
     {
       "prompt": "Please package a defined or approved narrative into a concise one-pager, an assertion-led slide outline, or both from supplied source material.",
@@ -39,7 +39,7 @@
     {
       "name": "one-pager-and-slide-outline-core-output",
       "type": "structure",
-      "description": "Produces If one-pager is requested: deliver the one-page narrative brief only; If slide outline is requested: deliver the assertion-led slide outline only.",
+      "description": "Delivers only the requested branch. Slide headlines are assertions. Includes an evidence map and does not invent strategy.",
       "critical": true
     },
     {

@@ -1,4 +1,4 @@
 interface:
   display_name: "Enablement Impact Story"
-  short_description: "Write evidence-led impact narratives"
+  short_description: "Name what the evidence cannot claim"
   default_prompt: "Use $enablement-impact-story to draft a leadership-ready impact narrative from our enablement initiatives and outcome data."

@@ -1,77 +1,78 @@
-# Time-To-Value Playbook Framework
+# Time-to-value judgment
 
-Use this framework to design post-sale onboarding around outcomes.
+Use this when you are defining first value, milestones, or early-risk triggers. Seller ramp belongs in `onboarding-program-builder`.
 
-## Core Definitions
+## First value is not activation
 
-- `time_to_first_value`: elapsed time from the agreed operational start event to the first measurable customer outcome, excluding only documented pauses
-- `activation_milestone`: required setup step that enables usage
-- `value_horizon`: customer-agreed or explicitly proposed window in which the outcome must become observable
-- `value_event`: an observed behavior or result that demonstrates the agreed outcome
+Activation is the setup that makes usage possible. First value is the first customer result that matters commercially.
 
-Define every value event with:
+**Fails.** Time-to-value equals days to kickoff plus admin login.
 
-- actor or customer group
-- observable behavior or result
-- evidence source and baseline when available
-- acceptance criteria and who confirms them
-- observed date or measurement window
+**Passes.** Time-to-value equals days from data-ready to the ops owner closing their first exception in the new queue, confirmed in the week-2 review.
 
-Define the measurement clock separately:
+Define every value event with actor, observable result, evidence source, baseline when available, acceptance criteria, who confirms, and the measurement window.
 
-- start event and evidence source, such as contract activation, provisioning complete, data ready, kickoff, or another agreed operational event
-- end event and acceptance owner
-- pauses or exclusions and who may approve them
-- observation window and accountable metric owner
+If evidence, baseline, timing, or acceptance is unavailable, keep the field `TBD` and add a confirmation action.
 
-Do not default the clock to kickoff when another contractual or operational event governs the work.
+## The clock
 
-Do not relabel activation as value. If evidence, baseline, timing, or acceptance criteria are unavailable, keep the field `TBD` and add a measurement or confirmation action.
+- `time_to_first_value`: elapsed time from the agreed start event to the first measurable outcome, excluding only documented pauses
+- `value_horizon`: customer-agreed or explicitly proposed window
+- Start event and source: contract activation, provisioning, data-ready, kickoff, or another agreed operational event
+- End event and acceptance owner
+- Pauses or exclusions and who may approve them
+- Observation window and metric owner
 
-## Milestone Design Template
+Do not default the start to kickoff when another contractual or operational event governs the work. Do not treat login or provisioning as value unless that is the agreed outcome.
 
-For each milestone, specify:
+## Milestones
 
-- objective
-- owner
-- required inputs
-- completion criteria
-- due window
-- risk trigger if delayed
-- relationship to the value event and horizon
+Work backward from the value event. For each milestone: objective, owner, required inputs, completion criteria, due window, risk trigger if delayed, and relationship to the value event.
 
-## Common Early Risk Signals
+Design only the enabling activation, adoption, and outcome steps this segment needs. Self-serve, assisted, and enterprise should not share one depth of support.
 
-- delayed kickoff or no executive sponsor attendance
+## Early risk
+
+Common tells, used qualitatively unless a sourced threshold exists:
+
+- delayed kickoff or no executive sponsor
 - missing data access or integration owner
-- activation below the sourced or agreed expectation within the applicable value horizon
-- unresolved implementation blockers older than agreed SLA
-- no agreed success metric baseline
+- activation below the agreed expectation inside the horizon
+- implementation blockers older than the agreed SLA
+- no agreed success-metric baseline
 
-## Intervention Pattern
+Intervention: classify severity, assign owner and due date, define customer and executive path, re-baseline only with explicit approval.
 
-- classify risk severity
-- assign owner and due date for mitigation
-- define customer communication and executive path
-- re-baseline timeline only with explicit stakeholder approval
+Do not invent numeric TTV targets, usage cutoffs, or SLAs. Leave them `TBD`.
 
-## Dual-View Operating Pattern
+## Two views
 
-- Customer-visible view: milestone commitments, owners, due windows, success checks.
-- Internal view: risk thresholds, escalation logic, and operational caveats.
-- Keep both views synchronized on dates and milestone definitions.
+Customer-visible: milestone commitments, owners, due windows, success checks.
 
-## Metrics Minimum
+Internal: risk thresholds, escalation, operational caveats.
 
-- agreed-start-event-to-activation time
-- activation-to-first-value time
-- milestone completion rate by segment
-- churn or downgrade signals during the applicable onboarding horizon
+Keep both synchronized on dates and milestone definitions.
 
-Use numeric targets only when they come from customer agreement, operational SLA, historical segment performance, or a measured baseline. Otherwise describe the observable condition and leave the threshold `TBD`.
+## Metrics minimum
 
-## Renewal And Expansion Handoff Hooks
+- agreed-start to activation
+- activation to first value
+- milestone completion by segment
+- churn or downgrade signals during the onboarding horizon
 
-- Define the renewal-readiness checkpoint from the contract horizon and the lead time needed to demonstrate value before the renewal decision.
-- Define expansion-readiness signal checks tied to adoption/outcome depth.
-- Assign handoff owner for CS-to-AM/Sales transition where applicable.
+Use a number only when it comes from customer agreement, operational SLA, historical segment performance, or a measured baseline.
+
+## Later handoffs
+
+Renewal-readiness from the contract horizon and the lead time needed to show value before the renewal decision. Expansion-readiness from adoption and outcome depth, not from first login. Assign the CS-to-AM owner when that motion exists.
+
+## Optional shape
+
+```text
+Segment / motion
+First-value event (actor, evidence, who confirms)
+Clock (start, end, pauses, owner)
+Milestones (owner, acceptance, due window)
+Customer view / internal view
+Early-risk triggers
+```

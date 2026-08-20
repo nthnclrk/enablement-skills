@@ -2,7 +2,7 @@
   "schema_version": 2,
   "skill": "account-brief-builder",
   "source": "skills/account-brief-builder/SKILL.md",
-  "notes": "Curated eval focused on internal account decision support rather than external executive briefings.",
+  "notes": "Curated eval for one-decision account briefs. Near-misses keep QBR, executive briefing, and MAP on adjacent skills. Output checks require a named decision moment, not an account wiki.",
   "managed_by": "curated",
   "should_trigger": [
     {
@@ -16,6 +16,10 @@
     {
       "prompt": "Summarize this account into one decision-ready internal brief using CRM history, recent calls, and internal notes. Flag stale data explicitly and do not fabricate missing facts.",
       "expected": true
+    },
+    {
+      "prompt": "I need Thursday's internal account review brief for Acme. One decision: do we assign a new executive sponsor before we send commercial paper. CRM and call notes disagree on the renewal number.",
+      "expected": true
     }
   ],
   "should_not_trigger": [
@@ -25,7 +29,17 @@
       "adjacent_skill": "executive-briefing-builder"
     },
     {
+      "prompt": "Prepare our CRO's pre-read for tomorrow's 30-minute meeting with Acme's COO. We need one ask, a fallback if they will not move, and talking points.",
+      "expected": false,
+      "adjacent_skill": "executive-briefing-builder"
+    },
+    {
       "prompt": "Build a QBR structure for a strategic customer renewal conversation.",
+      "expected": false,
+      "adjacent_skill": "qbr-ebr-builder"
+    },
+    {
+      "prompt": "Write the customer-facing quarterly review deck for Acme with an outcome scorecard and a joint next-quarter plan.",
       "expected": false,
       "adjacent_skill": "qbr-ebr-builder"
     },
@@ -39,31 +53,31 @@
     {
       "name": "account-brief-builder-output-01",
       "type": "structure",
-      "description": "The output substantively includes: Executive summary (5-8 lines)",
+      "description": "Names the account, as-of date, the one decision moment or meeting, and who owns that decision.",
       "critical": true
     },
     {
       "name": "account-brief-builder-output-02",
       "type": "structure",
-      "description": "The output substantively includes: Stakeholder map with influence/stance",
+      "description": "States current state, material change, a recommendation, and an evidence caveat.",
       "critical": true
     },
     {
       "name": "account-brief-builder-output-03",
       "type": "structure",
-      "description": "The output substantively includes: Risk register with trigger and mitigation",
-      "critical": false
+      "description": "Includes a stakeholder map for the people who can move this decision, with coverage gaps.",
+      "critical": true
     },
     {
       "name": "account-brief-builder-output-04",
       "type": "structure",
-      "description": "The output substantively includes: A near-term action plan aligned to the decision window, with owners and verified or proposed dates",
+      "description": "Names upside or risk that changes this decision, with evidence and a trigger, or an explicit gap.",
       "critical": false
     },
     {
       "name": "account-brief-builder-output-05",
       "type": "structure",
-      "description": "The output substantively includes: Data freshness and source-priority notes",
+      "description": "Includes near-term actions with owner and date status, plus source conflicts or open questions.",
       "critical": false
     }
   ]

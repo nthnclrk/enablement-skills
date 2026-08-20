@@ -1,117 +1,85 @@
-# Impact Story Framework
+# Impact story judgment
 
-Select the strongest claim the evidence supports. Do not write the narrative first and retrofit evidence afterward.
+Use this when you are choosing a claim or checking a memo. The skill body has the procedure.
 
-## Contents
+## Claim mode
 
-1. Decision Context
-2. Initiatives In Scope
-3. Evidence Summary
-4. Claim Mode
-5. Contribution Narrative
-6. Financial ROI Method
-7. Assumptions And Confounders
-8. Recommended Next Actions
-9. Decisions To Make Now
+Use one label per claim. Default to the least assertive mode that still helps the decision.
 
-## 1) Decision Context
+| Mode | What you may say | What you may not say |
+| --- | --- | --- |
+| Observed result | The metric changed for this population and window | Enablement caused it |
+| Contribution | Timing, adoption, and behavior make enablement a plausible contributor | Isolated effect or ROI |
+| Causal effect | A credible experiment or quasi-experiment estimates the initiative effect | A pre/post line "basically proves it" |
+| Financial ROI | Monetized attributable benefit versus complete incremental cost | Pipeline influenced, unmonetized movement, or a missing-cost ratio |
 
-- Audience
-- Decision needed
-- Time horizon
+**Fails.** "Enablement drove a 9-point win-rate lift and 4.2x ROI."
 
-## 2) Initiatives In Scope
+**Passes.** "Launch-eligible win rate moved from 22% to 31% for the exposed mid-market cohort. Observed result. We cannot claim causality: no comparison group, and pricing changed in the same window. We cannot claim ROI: incremental cost is incomplete."
 
-For each initiative:
+A pre/post change alone supports an observed result, not causality.
 
-- Objective
-- Target behavior
-- Rollout period
+## What we cannot claim yet
 
-## 3) Evidence Summary
+Write this as its own section. Name the blocked claim, the missing evidence, and the cheapest next proof.
 
-For each material metric, record:
+Typical blocks:
 
-- definition, population, denominator, source, and as-of date
-- baseline and comparison periods
-- baseline value, current value, absolute change, and relative change
-- known confounders or comparison limits
-- claim-level confidence
+- Causality, when there is no comparison or the confounders are material
+- ROI, when cost, attributable share, or economic value per unit is missing
+- Segment generalization, when one team or one quarter carries the number
+- Monetized benefit, when only pipeline or gross revenue is available
 
-Do not calculate relative change when the baseline is zero. Do not compare values with different definitions or populations.
+Do not bury these in an appendix.
 
-## 4) Claim Mode
+## Movement table
 
-Use only one of these labels per claim:
+For each material metric record definition, population, denominator, source, as-of date, baseline and comparison periods, baseline value, current value, absolute change, and relative change.
 
-- `Observed result`: the metric changed; no attribution claim.
-- `Contribution`: timing, adoption, and behavior evidence make enablement a plausible contributor, but other causes remain.
-- `Causal effect`: a credible experimental or quasi-experimental comparison isolates the initiative effect.
-- `Financial ROI`: an attributable benefit is monetized and compared with complete incremental cost.
+Do not calculate relative change when the baseline is zero. Do not compare values with different definitions or populations. Do not invent the missing cell.
 
-Default to the least assertive mode that remains decision-useful. A pre/post change alone supports an observed result, not causality.
+## Contribution chain
 
-## 5) Contribution Narrative
+Enablement action → behavior change observed → business outcome movement.
 
-Describe likely contribution chain:
+Strengthen a contribution claim with independent signals: exposure, adoption, the intended behavior, timing, segment consistency, and a comparison when you have one. Missing a link means the claim stops.
 
-1. Enablement action
-2. Behavior change observed
-3. Business outcome movement
+## Financial ROI method
 
-Do not present this as guaranteed causality.
-
-Strengthen a contribution claim with several independent signals: initiative exposure, adoption, the intended behavior change, timing consistency, segment consistency, and a comparison group or trend when available.
-
-## 6) Financial ROI Method
-
-Use financial language only when the required inputs are verified.
-
-Required inputs:
+Use financial language only when the required inputs are verified:
 
 - an outcome delta with a consistent population and time horizon
 - a defensible attributable share or sensitivity range
-- a verified economic value per outcome unit, such as contribution margin, cash benefit, or cost avoided
+- a verified economic value per unit (contribution margin, cash benefit, or cost avoided)
 - complete incremental costs for the same period
 
-Calculate:
+```text
+Attributable Benefit = Outcome Delta × Attributable Share × Value Per Unit
+Total Incremental Cost = Build + Delivery + Tools + Participant Time + Other
+Net Benefit = Attributable Benefit − Total Incremental Cost
+ROI % = (Net Benefit / Total Incremental Cost) × 100
+```
 
-- `Attributable Benefit = Outcome Delta x Attributable Share x Value Per Unit`
-- `Total Incremental Cost = Build + Delivery + Tools + Participant Time + Other Incremental Cost`
-- `Net Benefit = Attributable Benefit - Total Incremental Cost`
-- `ROI % = (Net Benefit / Total Incremental Cost) x 100`
-- `Payback Period = Total Incremental Cost / Monthly Attributable Benefit`
+Gross revenue is not economic benefit. If only revenue is available, label it a `revenue-to-cost scenario` and do not call it ROI. Pipeline influenced is not realized benefit. Do not add leading and lagging indicators together or count the same benefit twice.
 
-State currency and whether value is contribution margin, cash benefit, cost avoided, or another economic measure. Gross revenue alone is not economic benefit; if only revenue is available, label the calculation a `revenue-to-cost scenario` and do not report it as ROI. Do not treat pipeline influenced as realized benefit, add leading and lagging indicators together, or count the same benefit twice.
+If total cost is zero, material cost is missing, or monthly attributable economic benefit is not positive, do not calculate ROI. An unsupported attribution guess blocks ROI.
 
-When a supported attributable share, value per unit, or cost has a bounded uncertainty range, show conservative, base, and optimistic cases. If total cost is zero, material cost inputs are absent, or monthly attributable economic benefit is not positive, do not calculate ROI or payback as applicable.
+Only when the user explicitly asks for a planning model may you build one. Label it `Hypothetical planning scenario — not an impact result`.
 
-An unsupported attribution guess blocks ROI. Only when the user explicitly requests a hypothetical planning model may it be used; label that output `Hypothetical planning scenario — not an impact result`, keep the assumption visible beside every result, and do not present it as realized or forecast ROI.
+## Confidence
 
-## 7) Assumptions And Confounders
+- `High`: definitions and sources reconcile, and the comparison supports the claim mode
+- `Medium`: one material limitation remains
+- `Low`: directional result, weak source, or major unresolved confounders
 
-- Assumptions used
-- External factors that may influence outcomes
-- Confidence level per claim
+Place the caveat beside the claim.
 
-Place the caveat beside the affected claim, not only in an appendix.
+## Optional shape
 
-Use `High` confidence only when definitions and sources reconcile and the comparison supports the claim mode; use `Medium` when one material limitation remains; use `Low` when the result is directional, source quality is weak, or major confounders remain unresolved.
-
-## 8) Recommended Next Actions
-
-- Continue
-- Adjust
-- Stop
-
-Include owner and expected impact for each recommendation.
-
-## 9) Decisions To Make Now
-
-For each decision:
-
-- Decision statement
-- Options considered
-- Trade-offs and risk
-- Recommended option
-- Decision owner and due date
+```text
+Decision this memo is for
+Claim mode
+Movement (definition, population, windows, values)
+What we cannot claim yet
+Continue / adjust / stop
+```

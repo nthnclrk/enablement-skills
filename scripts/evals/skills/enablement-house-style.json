@@ -1,0 +1,57 @@
+{
+  "schema_version": 2,
+  "skill": "enablement-house-style",
+  "source": "skills/enablement-house-style/SKILL.md",
+  "notes": "Curated eval for shared pack safety. Must not steal specialist deliverables.",
+  "managed_by": "curated",
+  "should_trigger": [
+    {
+      "prompt": "What are the shared safety rules for this enablement skill pack around context files and external writes?",
+      "expected": true
+    },
+    {
+      "prompt": "Before I run a specialist skill, remind me when I may edit .enablement/context.md and what I must not invent.",
+      "expected": true
+    },
+    {
+      "prompt": "Set the package conventions for evidence, assumptions, and CRM write-back.",
+      "expected": true
+    }
+  ],
+  "should_not_trigger": [
+    {
+      "prompt": "Write spoken opener and close lines for a 12-minute discovery call.",
+      "expected": false,
+      "adjacent_skill": "talk-track-builder"
+    },
+    {
+      "prompt": "Build a competitor battlecard with win zones and qualify-out conditions.",
+      "expected": false,
+      "adjacent_skill": "battlecard-builder"
+    },
+    {
+      "prompt": "Create or refresh our reusable revenue enablement context file.",
+      "expected": false,
+      "adjacent_skill": "revenue-enablement-context"
+    },
+    {
+      "prompt": "Review this one sales call and give me next-call coaching.",
+      "expected": false,
+      "adjacent_skill": "call-review-coach"
+    }
+  ],
+  "output_structure_checks": [
+    {
+      "name": "enablement-house-style-rules",
+      "type": "structure",
+      "description": "States the shared rules for context, invention, assumptions, and external writes.",
+      "critical": true
+    },
+    {
+      "name": "enablement-house-style-not-deliverable",
+      "type": "forbidden_behavior",
+      "description": "Does not produce a talk track, battlecard, context file, or other specialist artifact.",
+      "critical": true
+    }
+  ]
+}

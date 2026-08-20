@@ -1,4 +1,4 @@
 interface:
   display_name: "Content Governance System"
-  short_description: "Design scalable enablement content governance"
+  short_description: "Weekly content ops, not a one-time inventory"
   default_prompt: "Use $content-governance-system to define taxonomy, publication and review statuses, ownership, and quality checks for our enablement content."

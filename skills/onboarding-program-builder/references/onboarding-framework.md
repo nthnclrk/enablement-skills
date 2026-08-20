@@ -1,75 +1,66 @@
-# Onboarding Framework
+# Onboarding judgment
 
-This framework combines competency-based ramp planning with reinforcement loops.
+Use this when you are writing or checking a ramp. The skill body has the procedure.
 
-## 1) Outcome-Gated Ramp Phases
+## Weekly-proof test
 
-- `Foundation`: explain and practice the core task safely; exit when baseline knowledge and guided execution are evidenced.
-- `Application`: perform the task in supervised or low-risk work; exit when the behavior is repeatable with limited prompting.
-- `Autonomy`: perform independently in representative work with manager inspection.
+Keep a week if a manager can watch the hire do the job and say pass-this-week or not-yet. Cut it if the proof is a module, a date, or "completed onboarding."
 
-Use 30-60-90 dates as a planning view, not as automatic evidence of progression. Extend or compress phases according to role complexity, prior experience, and observed evidence.
+**Fails.** "Days 1-30: complete product training and shadow four calls."
 
-## 1a) Experience-Level Variants
+**Passes.** "Week 3 exit: 12-minute discovery on a live qualified opp. Manager hears problem, cost, and a dated next step. LMS does not count."
 
-- New hire: higher manager touch, more guided practice, tighter evidence checkpoints.
-- Internal transfer: compress company/process orientation and increase role-transition drills.
-- Experienced external hire: accelerate baseline ramp but add stronger product/process calibration.
+## Phases are evidence gates
 
-## 2) Job-Task And Competency Model
+- Foundation: explain and practice the task safely. Exit when guided execution is evidenced.
+- Application: do the task in supervised or low-risk work. Exit when it repeats with limited prompting.
+- Autonomy: do representative work independently, with manager inspection.
 
-Start with the work, then define the competency. For each item capture:
+30-60-90 dates are a planning view. They do not move someone to the next phase.
 
-- Critical job task and expected outcome
-- Costly failure or risk to prevent
-- Skill statement
-- Observable behavior at the current ramp phase
-- Practice activity
-- Live-work evidence source
-- Diagnostic manager check and next action
+**Fails.** "Day 60: the hire is pipeline-ready."
 
-These checks guide coaching and phase progression. They do not create a formal certification threshold.
+**Passes.** "Autonomy starts when two live discoveries show problem, cost, and a mutual next step without a manager prompt. That may be week 5 or week 9."
 
-## 2a) Starting Baseline
+## Start from the job
 
-Use a short knowledge check, work sample, roleplay, or manager-observed task to determine what can be compressed and where support is needed. Treat missing evidence as unknown, not as low ability.
+For each critical task capture: expected outcome, costly failure, skill statement, observable behavior at this phase, practice, live-work evidence, manager check. These checks coach and sequence. They do not create a certification pass mark.
 
-## 3) Weekly Pattern
+Missing starting evidence is unknown, not low ability. Compress or add support only after a short baseline: knowledge check, work sample, roleplay, or observed task.
 
-Use this sequence each week:
+## Experience changes the support
 
-1. Learn key concept
-2. Practice in low-risk setting
-3. Apply on real work
-4. Review with manager feedback
+- New hire: more guided practice, tighter weekly proof.
+- Internal transfer: compress company process, add role-transition drills.
+- Experienced external: faster baseline, stronger product and process calibration.
 
-## 4) Reinforcement Guidance
+Do not give all three the same 30-60-90 and call it a variant.
 
-- Revisit core skills in multiple contexts
-- Use spaced review instead of single-pass training
-- Include manager-led feedback after live application
+## Weekly loop
 
-## 5) Risk Triggers
+Learn the concept. Practice in a low-risk setting. Apply on real work. Review with the manager. Revisit the same skill in a new context. Single-pass training is not a ramp.
 
-Watch for:
+## Thin evidence and capacity
 
-- Missing or repeatedly late evidence
-- Repeated observable execution errors
-- Dependence on prompting beyond the expected phase
-- Manager capacity too low to inspect the required work
+Watch for missing or late evidence, repeated execution errors, prompting past the phase, or a manager who cannot inspect the work. Add targeted practice. Do not advance the date.
 
-For triggered risks, add targeted practice and tighter coaching cadence.
+Build the ledger before assigning the cohort: learners, facilitators, SMEs, managers, systems, timezones. `fits`, `reduce`, `sequence`, or `blocked`. Course completion never fills a capacity hole.
 
-## 6) Minimum Handshake With Shared Context
+**Fails.** "Twelve AEs start Monday. Managers will certify readiness in week 4."
 
-Before finalizing a plan, confirm:
+**Passes.** "Four managers can inspect two live calls a week. Sequence the cohort or drop the live-call gate to a roleplay until capacity `fits`."
 
-- role priorities from the current enablement context
-- expected talk-track or process standards
-- current manager operating constraints
+## Certification and customer value stay outside
 
-## 7) Boundary With Certification
+Onboarding owns sequence, practice, diagnostic feedback, and evidence collection. Certification owns the readiness claim, anchors, pass/fail, and the assessor decision. Customer first-value milestones belong in `onboarding-to-value-playbook`.
 
-- Onboarding owns learning sequence, practice, diagnostic feedback, and evidence collection.
-- Certification owns the readiness claim, behavior anchors, pass/fail standard, assessor calibration, and final decision.
-- Course completion or elapsed time never proves certification by itself.
+## Optional shape
+
+```text
+Role / profile / phase gate
+This week's proof (observable)
+Practice and live-work evidence
+Manager check
+Capacity decision
+Certification handoff, if any
+```

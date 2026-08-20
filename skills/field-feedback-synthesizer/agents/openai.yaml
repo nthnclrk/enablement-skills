@@ -1,4 +1,4 @@
 interface:
   display_name: "Field Feedback Synthesizer"
-  short_description: "Synthesize field feedback with evidence"
+  short_description: "Observation vs recommendation, scored for breadth"
   default_prompt: "Use $field-feedback-synthesizer to analyze this feedback corpus into traceable themes, segment differences, evidence limits, and owner-ready actions."

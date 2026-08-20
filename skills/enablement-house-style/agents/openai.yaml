@@ -1,0 +1,4 @@
+interface:
+  display_name: "Enablement house style"
+  short_description: "Shared safety: context, evidence, no silent writes"
+  default_prompt: "Use $enablement-house-style only for package safety rules. Then return to the specialist skill for the actual deliverable."

@@ -3,76 +3,70 @@ name: content-gap-analysis
 description: Audit revenue enablement content coverage and prioritize the highest-impact gaps by role, stage, and use case. Use when asked to review existing assets, identify missing or stale content, or produce a prioritized content backlog. Route content creation to one-pager-and-slide-outline, battlecard-builder, or talk-track-builder.
 ---
 
-# Content Gap Analysis
+# Content gap analysis
 
-Identify the most important content gaps and prioritize them by business impact rather than volume.
+Decide what to create, update, consolidate, or retire. First separate exists from used. An asset on the wiki that no one can find is not coverage.
+
+**Fails.** "Zero views this quarter, so retire the security FAQ."
+
+**Passes.** "The security FAQ exists, is current, and drew 19 failed searches against 6 views. Action: improve discoverability, not retire. The mid-market ROI template does not exist; the enterprise calculator is out of scope. Action: create."
+
+A weekly operating model for owners, review, and publishing is `content-governance-system`. Raw field-note synthesis is `field-feedback-synthesizer`.
 
 ## Confirm Inputs First
 
-- Use supplied current context or relevant sections of `.enablement/context.md` when available. Treat stale, inferred, or conflicted material as provisional; never update shared context silently.
-- Confirm the content inventory scope and source.
-- Confirm which roles and teams the audit should cover.
-- Confirm stages or lifecycle moments to map against.
-- Confirm known recurring field requests and blockers.
-- Confirm evaluation horizon (this quarter, half, annual planning).
-- If inputs are incomplete, ask for only the minimum missing items. Use labeled assumptions only for reversible audit scope or backlog sequencing; keep asset facts, usage signals, ownership, dates, approvals, and retirement decisions unknown until verified.
+Ask only for the inputs that change the backlog:
+
+1. Inventory source and the roles, stages, and jobs in scope
+2. Known field requests, failed searches, or usage with an eligible-audience denominator
+3. Evaluation horizon: this quarter, half, or annual planning
+4. Who can own create, update, consolidate, or retire work
+
+If usage, ownership, or freshness is unknown, leave it unknown. Do not invent usage or ROI.
 
 ## Read The Right Reference
 
-- Read [references/content-gap-prioritization.md](references/content-gap-prioritization.md) for scoring rules and output format.
-- Read [references/source-system-guide.md](references/source-system-guide.md) when the inventory is pulled from a content repository, wiki, or field-signal channel.
+Read [references/content-gap-prioritization.md](references/content-gap-prioritization.md) for exists-vs-used tests, action types, and scoring rules. Read [references/source-system-guide.md](references/source-system-guide.md) when the inventory comes from a content repository, wiki, or field-signal channel.
 
 ## Default Workflow
 
-1. Build a clean inventory of current assets with owner and freshness metadata.
-2. Map each asset to role, stage, and job-to-be-done coverage.
-3. Identify high-friction moments with weak or missing content support.
-4. Classify the issue before scoring:
-   missing, stale, duplicated, hard to find, underused, or wrong format.
-5. Rate value using anchored impact, frequency, and strategic-alignment criteria. Keep the dimensions visible; do not combine them with unconfirmed weights.
-6. Grade evidence confidence separately; do not let weak evidence inflate or erase potential value.
-7. Assign a decision tier: mandatory, commit now, validate first, plan, or monitor. State the reason and any unresolved evidence requirement.
-8. Choose the root-cause action: create, update, consolidate, retire, improve discoverability, or reinforce distribution.
-9. Sequence within priority tiers using deadline, dependency, effort, and owner capacity.
-10. Build a backlog with owners, validation steps, and expected outcome metrics.
-11. Route adjacent work:
-   For synthesis of raw field notes, use field-feedback-synthesizer.
-   For creating prioritized assets, use the relevant content production skill.
+1. Build the inventory you can defend.
+   Stable ID, owner, audience, status, last reviewed date, canonical location. Done when each in-scope asset has enough metadata to judge exists vs used.
+2. Map coverage.
+   Role, stage, job-to-be-done. An enterprise-only asset does not cover a mid-market job.
+3. Classify the problem before you score it.
+   Missing, stale, duplicated, hard to find, underused, or wrong format. Low usage is a clue, not a diagnosis.
+4. Separate exists from used.
+   Fit-for-purpose and findable is coverage. Fit-for-purpose and invisible is discoverability. Findable and unused is a distribution or quality question. Missing is create.
+5. Rate value with visible dimensions.
+   Impact, frequency, strategic alignment. Evidence confidence and effort stay separate. Do not invent weights or divide by effort.
+6. Assign a decision tier.
+   Mandatory, commit now, validate first, plan, or monitor. High potential with weak evidence is validate first, not build.
+7. Choose the action.
+   Create, update, consolidate, retire, improve discoverability, or reinforce distribution. Retire only with a successor or an authorized owner, never from low usage alone.
+8. Sequence within the tier.
+   Deadline, dependency, effort, owner capacity. Route asset production to `one-pager-and-slide-outline`, `battlecard-builder`, or `talk-track-builder`.
 
-## Tool Notes
-
-- Optional tools can speed inventory quality but are not required:
-  docs repositories, Notion, CMS exports, LMS usage reports, and call libraries.
-- Use [references/source-system-guide.md](references/source-system-guide.md) for minimum fields, gap-cause classification, and safe writeback boundaries.
-- If tool exports are unavailable, proceed with manual inventory and labeled confidence.
+Do not retire, relabel, or republish anything without explicit approval of the exact targets.
 
 ## Output Contract
 
-- Coverage map by role, stage, and job-to-be-done.
-- Prioritized gap backlog with dimension ratings, decision tier, and rationale.
-- Recommended action type per gap:
-  create, update, consolidate, retire, improve discoverability, or reinforce distribution.
-- Gap cause tag per item:
-  missing, accuracy/freshness, format/quality, duplication, discoverability, distribution/adoption, or mixed.
-- Separate value dimensions, evidence confidence, and effort estimate. Use a composite score only when the organization has supplied or confirmed the weighting and decision rules.
-- Ownership suggestions and target completion windows.
-- Assumptions and confidence notes when source data is partial.
+Return a backlog a planning owner can run this horizon:
 
-## What To Avoid
+- Coverage map by role, stage, and job
+- Exists vs used on every priority item
+- Prioritized gaps with impact, frequency, alignment, confidence, decision tier, and rationale
+- Action type per gap: create, update, consolidate, retire, improve discoverability, or reinforce distribution
+- Owners, windows, and the validation or outcome signal
+- Assumptions, and usage or ROI you refused to invent
 
-- Calling everything a content gap when discovery/distribution is the real issue.
-- Treating low usage as low quality without discoverability checks.
-- Prioritizing by stakeholder volume instead of business impact and frequency.
-- Dividing by effort in a way that makes easy, low-value work outrank important work.
-- Presenting arbitrary weights or cutoffs as an established prioritization policy.
-- Recommending retirement from low usage alone.
+Do not design the operating model. That is `content-governance-system`.
 
 ## Quality Bar
 
-- Prioritization reflects impact and frequency, not stakeholder volume.
-- Value, evidence confidence, and delivery effort remain separate and visible.
-- Every priority tier can be traced to evidence, materiality, urgency, and the stated decision rule; no unexplained weighted score determines the backlog.
-- Coverage model is explicit and reproducible.
-- Recommendations include realistic owners and sequence.
-- Low-confidence findings are clearly labeled.
-- Output can be used directly for quarterly planning.
+- Exists and used are not treated as the same fact.
+- Prioritization reflects impact and frequency, not who asked loudest.
+- Value, confidence, and effort remain visible; no unexplained composite score.
+- Low usage never retires an asset by itself.
+- Each recommendation has a realistic owner and a next validation.
+- No invented usage, win rates, or ROI.

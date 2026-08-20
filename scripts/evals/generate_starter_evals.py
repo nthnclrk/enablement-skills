@@ -182,6 +182,8 @@ def generate_for_skill(skill_name: str) -> dict[str, Any]:
     description = parse_frontmatter(text).get("description", "")
     human_name = humanize_skill_name(skill_name)
     output_items = section_bullets(text, "Output Contract")[:2]
+    if not output_items:
+        output_items = section_bullets(text, "What to return")[:2]
     if output_items:
         core_output = "; ".join(output_items)
     else:

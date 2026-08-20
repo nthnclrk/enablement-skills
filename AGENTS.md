@@ -36,19 +36,21 @@ Frontmatter in canonical `SKILL.md` files must contain exactly:
 
 Use lowercase hyphenated names, match the folder name, and keep published names stable. Treat these additional rules as repository policy rather than requirements of the portable standard.
 
-## Recommended `SKILL.md` Structure
+## Craft Contract
 
-Use this order unless the workflow has a clear reason to differ:
+Heading names are not required. A coaching skill, a router, and a house-style skill should not look the same. Every canonical skill must still do these jobs, under whatever headings fit:
 
-1. Title and one-line mission
-2. `## Confirm Inputs First`
-3. `## Read The Right Reference` when `references/` exists
-4. `## Default Workflow`
-5. `## Tool Notes` when needed
-6. `## Output Contract`
-7. `## Quality Bar`
+1. One job, said in a sentence a practitioner would say out loud.
+2. One leading concept, plus a short good excerpt and a short bad excerpt.
+3. Intake only for inputs that change this output.
+4. A procedure or named rules, with a checkable done-test on each step.
+5. Gotchas the model will hit without being told, and a quality bar a human can score in two minutes.
 
-Required sections are `Confirm Inputs First`, `Default Workflow`, `Output Contract`, and `Quality Bar`.
+Shared safety belongs in `enablement-house-style`. Do not copy it into every leaf.
+
+A common specialist shape is still fine: inputs, when to load a reference, procedure, what to return, done-when. Use it when it helps. Drop it when the job is a map, a gate, or a short principle.
+
+See `templates/skill/` for a worked example, not a blank form.
 
 ## Trigger Quality
 
@@ -133,7 +135,7 @@ Use three distinct validation layers:
 
 1. `bash scripts/validate.sh` for read-only repository, Markdown-link, eval-definition, and packaging checks.
 2. `skills-ref validate skills/<skill-name>` for the portable Agent Skills specification; use `bash scripts/validate-official.sh` for the full collection.
-3. Executed behavior scenarios for routing and output quality.
+3. Executed behavior scenarios for routing and output quality, including with-skill versus no-skill messy prompts in `scripts/evals/behavior/`.
 
 Do not present fixture presence or structural validation as evidence that behavior scenarios passed.
 

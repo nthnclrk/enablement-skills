@@ -1,46 +1,51 @@
 ---
 name: {{SKILL_NAME}}
-description: [REQUIRED] State what this skill produces and when to use it. Include the closest should-not-trigger boundary when one exists.
+description: [REQUIRED] State the deliverable and when to use it in language a practitioner would type. End with the closest should-not-trigger skill.
 ---
 
 # {{DISPLAY_NAME}}
 
-[REQUIRED] Add a one-line mission for the skill here.
+[REQUIRED] One sentence: the job, and the tell that the output is still a draft.
 
-## Confirm Inputs First
+<!--
+  Jobs, not headings: taste, intake, procedure with done-checks, quality.
+  The headings below are one specialist shape. A map, gate, or principle skill
+  may look different. See templates/skill/README.md.
+-->
 
-- Use relevant context the user has already provided.
-- Confirm the audience, decision or behavior to support, scope, timing, and required source material.
-- If critical information is missing, ask only for the smallest blocking set.
-- Do not delay a self-contained task with an unnecessary intake process.
+**[REQUIRED good excerpt.]** A short example a practitioner would keep.
 
-## Default Workflow
+**[REQUIRED bad excerpt.]** The version this skill exists to stop.
 
-1. Define the practitioner job, audience, deliverable, and operating assumptions.
-2. Review the source material and separate evidence from assumptions or gaps.
-3. Apply the skill-specific method at the level of detail the task requires.
-4. Produce the requested output in a format the user can use immediately.
-5. Check the result against the output contract and quality bar; revise material gaps.
-6. Label follow-up actions, owners, or inspection points where relevant.
+If a tired practitioner would have to rewrite this before using it, it is not done.
 
-## Tool Notes
+## Inputs
 
-- Keep the workflow tool-agnostic by default.
-- Do not assume a system integration, connector, or package is installed.
-- Keep external writes, sends, publishing, and destructive actions behind explicit user approval.
-- Bundle any required portable instructions or resources inside this skill folder.
+Ask only for the inputs that change this output:
 
-## Output Contract
+1. [REQUIRED]
+2. [REQUIRED]
 
-- Primary practitioner-ready deliverable
-- Evidence, assumptions, freshness, and caveats where relevant
-- Decision, action, owner, or next inspection point where relevant
-- Internal-only or customer-facing mode when the distinction matters
+If a material fact is missing, leave it unknown. Do not invent proof, pricing, customers, or dates.
 
-## Quality Bar
+## Procedure
 
-- The intended practitioner can use the output without reconstructing the analysis.
-- Claims are supported by the supplied evidence and uncertainty is visible.
-- The level of detail matches the audience, channel, and decision.
-- The result stays within the skill's stated boundary.
-- No external action is taken without explicit approval.
+1. [REQUIRED first move.]
+   Done when [REQUIRED check].
+2. [REQUIRED next move.]
+   Done when [REQUIRED check].
+
+If this skill has a `references/` file, say when to open it. Skip it when the user already gave you the structure.
+
+## What to return
+
+Return the artifact the practitioner will use, not a section list.
+
+- [REQUIRED what they can act on]
+- Assumptions, if you had to make any
+
+## Done when
+
+- A practitioner can use this without reconstructing your reasoning.
+- The bad excerpt above would fail these checks.
+- No external write, send, or publish without an explicit yes.

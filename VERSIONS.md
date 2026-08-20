@@ -13,21 +13,35 @@ This file tracks repo-level and bundle-level versions for packaging and update c
 
 | Component | Version | Last Updated | Status | Notes |
 | --- | --- | --- | --- | --- |
-| `repo` | `1.2.0` | `2026-08-11` | `active` | Evidence-led skill workflows, reusable context setup, stronger examples and evals, and validated distribution packaging. |
+| `repo` | `1.4.0` | `2026-08-20` | `active` | Craft jobs over required headings, house-style skill, template is a worked example, with-skill vs no-skill behavior notes. |
 
 ## Bundle Versions
 
 | Bundle | Version | Last Updated | Status | Notes |
 | --- | --- | --- | --- | --- |
-| `enablement-core` | `0.3.0` | `2026-08-11` | `active` | Stronger program, coaching, account, and planning judgment with the shared context workflow. |
-| `enablement-messaging` | `0.3.0` | `2026-08-11` | `active` | Evidence and approval controls across positioning, competitive, talk-track, objection, and content work. |
-| `enablement-programs` | `0.3.0` | `2026-08-11` | `active` | Outcome-gated onboarding, certification, coaching, practice, and inspection workflows. |
-| `enablement-measurement` | `0.3.0` | `2026-08-11` | `active` | Auditable metrics, impact, win-loss, content, and stage-analysis workflows. |
-| `enablement-launches` | `0.3.0` | `2026-08-11` | `active` | Evidence-backed launch gates, seller updates, partner controls, and field asset guidance. |
-| `enablement-crm-pack` | `0.3.0` | `2026-08-11` | `active` | Stronger account, deal, forecast, proposal, renewal, MAP, and customer-value decision support. |
-| `enablement-ci-pack` | `0.3.0` | `2026-08-11` | `active` | Better sampling, scoring, privacy, and evidence discipline for conversation-based analysis and coaching. |
+| `enablement-core` | `0.5.0` | `2026-08-20` | `active` | Adds house-style; router and context may use their own file shapes. |
+| `enablement-messaging` | `0.5.0` | `2026-08-20` | `active` | Adds house-style; specialist files no longer repeat pack safety. |
+| `enablement-programs` | `0.5.0` | `2026-08-20` | `active` | Adds house-style; specialist files no longer repeat pack safety. |
+| `enablement-measurement` | `0.5.0` | `2026-08-20` | `active` | Adds house-style; specialist files no longer repeat pack safety. |
+| `enablement-launches` | `0.5.0` | `2026-08-20` | `active` | Adds house-style; specialist files no longer repeat pack safety. |
+| `enablement-crm-pack` | `0.5.0` | `2026-08-20` | `active` | Adds house-style; specialist files no longer repeat pack safety. |
+| `enablement-ci-pack` | `0.5.0` | `2026-08-20` | `active` | Adds house-style; specialist files no longer repeat pack safety. |
 
 ## Change Log Summary
+
+### 1.4.0 - 2026-08-20
+
+- Validation now checks craft jobs, not identical heading names. Skills may take different shapes.
+- Added `enablement-house-style` and removed the copied context paragraph from specialist leaves.
+- Replaced the blank skill template with a worked example. New skills are no longer born as forms.
+- Added a with-skill vs no-skill behavior protocol and recorded the first four comparisons.
+
+### 1.3.0 - 2026-08-20
+
+- Rewrote all 37 skills around one leading concept, a good/bad excerpt, done-checked procedures, and a quality bar a practitioner can score.
+- Replaced form-first references with judgment files that teach the fail/pass test for that skill.
+- Tightened evals so output checks require the new contracts, not section-list prose.
+- Kept portable frontmatter as `name` and `description` only; trigger language stayed stable.
 
 ### 1.2.0 - 2026-08-11
 

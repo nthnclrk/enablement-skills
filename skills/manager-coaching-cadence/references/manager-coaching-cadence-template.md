@@ -1,137 +1,67 @@
-# Manager Coaching Cadence Template
+# Coaching cadence judgment
 
-Use this template to build a repeatable coaching rhythm that fits real manager capacity.
+Use this when you are designing or checking a manager rhythm. The skill body has the procedure.
 
-## Contents
+## Inspect-one-behavior test
 
-- Capacity envelope and cadence skeleton
-- Session, observation, and commitment templates
-- Trend review
-- Team-type variants
-- Employee-data and performance boundaries
-- Failure modes and practical defaults
+Keep a session design if the manager will listen for one behavior and leave with one commitment. Cut it if the hour is a pipeline review with coaching vocabulary.
 
-## 1) Capacity Envelope And Cadence Skeleton
+**Fails.** "Weekly 45-minute 1:1. Cover forecast, stuck deals, activity, and any coaching needs."
 
-Calculate capacity before assigning coverage:
+**Passes.** "This week: next-step quality. One clip. One keep. One change. One commitment due Friday. Forecast stays in the pipeline meeting."
 
-- protected coaching minutes per cycle
-- shared evidence-review and administration time
-- preparation, session, and follow-up minutes per individual session
-- number of reps and minimum coverage expectation
+## Capacity before coverage
 
-Use:
+```text
+sustainable individual sessions = floor((protected minutes - shared review) / minutes per complete session)
+```
 
-`sustainable individual sessions = floor((protected minutes - shared review/admin) / minutes per complete session)`
+State the evidence sample and review time you assumed. If the number does not cover the team:
 
-If capacity does not cover every rep in the cycle:
+1. Prioritize individual time by current, reviewable behavior evidence
+2. Use group time only for a genuinely shared gap
+3. Rotate the rest on a visible schedule
+4. Name the shortfall. Do not delete review or follow-up to make the math work
 
-1. Prioritize individual sessions using current, reviewable behavior evidence and business impact.
-2. Use small-group reinforcement for a genuinely shared behavior gap.
-3. Rotate remaining individual coverage on a visible schedule.
-4. Escalate a structural capacity gap instead of silently reducing evidence review or follow-up.
+New weekdays and deadlines are proposals until the manager confirms them.
 
-State the evidence sample, average review time, and any call-intelligence or search capability assumed in the calculation. Newly designed weekdays, evidence deadlines, or review frequencies are proposed operating choices until the accountable manager confirms them. If no escalation threshold exists, describe the observable persistence, breadth, consequence, and evidence sufficiency that should prompt a decision; leave any numeric cutoff unset until it is grounded in policy, risk, historical evidence, or accountable-owner approval.
+**Fails.** "Coach all eight AEs weekly" inside 4.5 hours, with no review time shown.
 
-## 2) Session Agenda Template
+**Passes.** "4.5 hours. Three individual inspects, one 30-minute group on the shared cost-question gap, five AEs rotate next week."
 
-Use this structure per coaching session:
+## Team type changes the inspect, not the loop
 
-1. Clarify target behavior for this session.
-2. Review concrete evidence (call snippet, deal checkpoint, notes).
-3. Confirm what worked and should be repeated.
-4. Isolate one high-impact gap.
-5. Define rep commitment with verification signal and due date.
-6. Confirm next checkpoint and what success will look like.
+- SMB velocity: shorter, more frequent inspects. Discovery, objections, next-step control.
+- Mid-market: mix a call clip with one deal-progression checkpoint.
+- Enterprise: fewer, deeper inspects. Stakeholders, decision process, multi-threading.
+- Post-sale: renewal risk, expansion qualification, handoff quality.
 
-## 3) Observation Log Template
+Do not copy an enterprise deep-dive onto an SMB team and call it coverage.
 
-Capture these fields per observed interaction:
+## Thin evidence
 
-- Rep
-- Date
-- Context (call/deal type, segment, stage)
-- Target behavior
-- Evidence source or reference
-- Evidence observed
-- Gap category
-- Coaching note
-- Confidence level (high/medium/low)
-- Rep context, correction, or disagreement
+If you do not yet know the behaviors or the evidence is unusable, return an observation-baseline: owner, sample, review point, and the decision needed before cadence design. Do not ship a full rhythm on a hypothesis.
 
-## 4) Commitment Tracker Template
+Automated scores are leads for human review, not findings. One interaction is not a performance decision. The rep sees the evidence, adds context, and can correct facts.
 
-Track commitments using:
+Do not invent a number of missed commitments or coached cycles as an escalation rule. Use persistence, breadth, consequence, and evidence sufficiency. Name who must set a numeric cutoff.
 
-- Rep
-- Commitment statement
-- Owner
-- Due date
-- Verification signal
-- Status (new, in-progress, met, missed, carry-forward)
-- Follow-up date
+**Fails.** "Escalate after three missed commitments" with no policy owner.
 
-## 5) Trend Review Template
+**Passes.** "If the same behavior is still absent after two inspected cycles and the next-step quality is costing late-stage deals, the manager and People partner decide whether this leaves coaching. No numeric rule exists yet."
 
-Set the review frequency from evidence volume and decision need. Use each review to separate:
+## Employee-data boundary
 
-- `Recurring skill gaps`
-- `Process/compliance gaps`
-- `Pipeline/territory constraints`
+Capture the minimum role-relevant evidence. Do not copy health, family, or protected-characteristic information into coaching notes. Keep developmental records out of formal performance files unless an authorized process requires the move.
 
-Recommended outputs:
+## Optional shape
 
-- Top coaching priorities for the next review cycle
-- Team-level reinforcement actions
-- Manager enablement needs
-- Escalations requiring leadership or RevOps support
-
-## 6) Cadence Variants By Team Type
-
-### SMB Velocity
-
-- Higher frequency, shorter sessions.
-- Focus on discovery discipline, objection handling, and next-step control.
-- Favor higher-frequency trend checks when evidence volume supports them; avoid long narrative reviews that arrive too late to coach the motion.
-
-### Mid-Market
-
-- Balanced frequency and depth.
-- Blend call coaching with deal progression checkpoints.
-- Trend reviews should isolate segment-specific patterns.
-
-### Enterprise
-
-- Fewer but deeper sessions per rep.
-- Emphasize stakeholder mapping, decision process, and multi-threading quality.
-- Use commitment tracker rigorously for long-cycle deals.
-
-### Post-Sale / Expansion
-
-- Focus on renewal risk, expansion qualification, and value-story execution.
-- Include handoff quality and account-health evidence in observation logs.
-
-## 7) Employee Data And Performance Boundaries
-
-- Capture the minimum role-relevant evidence needed for coaching; do not copy sensitive personal information into coaching records.
-- Limit access and retention to the organization's approved coaching policy and systems.
-- Treat automated scores as leads for human review, not findings about capability or intent.
-- Let the rep see the behavior evidence used, add context, and correct factual errors.
-- Keep developmental coaching separate from formal performance management. Route disciplinary, accommodation, protected-characteristic, or employment-status decisions through authorized People and legal processes.
-
-## 8) What To Avoid
-
-- Turning coaching sessions into generic status updates.
-- Tracking activity counts instead of behavior changes.
-- Overloading reps with too many commitments at once.
-- Drawing strong conclusions from weak or sparse evidence.
-- Ignoring manager capacity and creating unsustainable cadences.
-- Ranking employees from opaque scores or isolated interactions.
-
-## 9) Practical Defaults
-
-- Keep active coaching priorities to `2-3` behaviors at a time.
-- Prefer one concrete commitment per session.
-- Carry unresolved commitments forward explicitly.
-- Require observable verification for every “completed” commitment.
-- Do not invent a number of missed commitments, reps, examples, or coached cycles as an escalation threshold—even as a proposed pilot rule. Set it from risk, evidence, policy, and the accountable manager's decision; until then, use a qualitative condition and show the unresolved decision.
+```text
+Capacity (minutes, coverage, who rotates)
+This week's inspect (one behavior, success signal)
+Session: evidence / keep / change / commitment
+Observation fields
+Commitment fields (owner, date, proof)
+Trend review (skill vs process vs pipeline)
+Escalation condition (owner of any numeric rule)
+```

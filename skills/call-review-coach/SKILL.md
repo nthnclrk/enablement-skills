@@ -3,60 +3,73 @@ name: call-review-coach
 description: Review one sales call and turn recording, transcript, or notes evidence into clear coaching priorities and next-practice actions. Use for single-call coaching across discovery, demo, objection handling, technical validation, or closing, including a single discovery call. Route practice-drill creation to roleplay-scenario-builder and multi-call discovery baselines, comparisons, or trend audits to discovery-rubric-auditor.
 ---
 
-# Call Review Coach
+# Call review coach
 
-Turn one sales call into coaching that changes the next call.
+Turn one call into the next call's behavior. If the note could apply to any rep, rewrite it.
+
+A review covers one conversation, a few moments, and one to three things to try next time. A sample of discovery calls is `discovery-rubric-auditor`. A practice drill is `roleplay-scenario-builder`.
+
+**Next-call behavior.** "After the buyer names a pain, ask what it costs before you talk product. Success on the next call: they name a number or the person who owns that number."
+
+**Generic note.** "Be more consultative and tighten discovery. Work on active listening and next-step control."
+
+If a manager cannot hear the change on the next comparable call, it is not coaching.
 
 ## Confirm Inputs First
 
-- Use supplied current context or relevant sections of `.enablement/context.md` when available. Treat stale, inferred, or conflicted material as provisional; never update shared context silently.
-- Confirm the call source and access: recording, transcript, timestamped notes, or summary. If a referenced recording is not accessible, request the file, transcript, or notes.
-- Confirm call type, intended outcome, participants, and any known speaker-attribution gaps.
-- Confirm rep context: role, tenure, and target segment.
-- Confirm the coaching objective: discovery depth, commercial framing, next-step control, or objection handling.
-- Confirm scoring standard: use provided rubric or default to `references/call-coaching-rubric.md`.
-- Confirm whether names or customer details must be anonymized and that the supplied material may be used for coaching.
+Ask only for the inputs that change the review:
 
-Ask only for missing blockers. Continue from summaries or partial transcripts with lower confidence, but never imply that you heard a recording or observed a moment you could not access.
+1. The source you can actually access: recording, transcript, notes, or summary
+2. Call type, intended outcome, and who was in the room
+3. Rep role, tenure, and segment
+4. What the coach wants to change, if they already know
+5. Whether names must be anonymized
+
+If the recording is not reachable, work from what you have and say so. Never imply you heard a moment you could not access.
 
 ## Read The Right Reference
 
-- Read [references/call-coaching-rubric.md](references/call-coaching-rubric.md) before scoring.
+Read [references/call-coaching-rubric.md](references/call-coaching-rubric.md) for anchors, call-type applicability, and worked scoring excerpts. Skip it if the user already supplied a rubric and only wants the coaching plan.
 
 ## Default Workflow
 
-1. Set the call objective and choose only the rubric dimensions that should be observable for this call type.
-2. Establish evidence coverage. Review the recording directly when accessible; otherwise use the transcript or notes and record source limitations, missing sections, and speaker uncertainty.
-3. Build a moment log with timestamp or transcript location, speaker, observation, and why it mattered. Quote only the minimum needed.
-4. Score each applicable dimension against the `1`, `3`, and `5` behavior anchors. Use `2` or `4` only when evidence falls between anchors, and `N/O` when the behavior was not observable.
-5. Attach evidence and confidence to every score. Do not average unobserved dimensions or treat silence in partial evidence as failure.
-6. Separate strengths from gaps, then choose the top 1-3 behaviors with the greatest likely effect on the next comparable call.
-7. Turn each priority into a practice instruction, an in-call cue, and an observable success signal.
-8. Add a manager follow-up for the next 1-2 calls and restate that one call is directional evidence, not a rep-level verdict.
+1. Name the job of the call.
+   What was this conversation supposed to produce? Done when the intended next step fits in one sentence.
+2. Set evidence coverage.
+   Recording beats transcript beats notes. Flag missing sections and speaker uncertainty. Done when you can say what you observed versus inferred.
+3. Log the few moments that decided the call.
+   Timestamp or transcript location, speaker, what happened, why it mattered. Quote the minimum. Done when three to six moments explain the outcome.
+4. Score only what this call type made observable.
+   Use the `1`, `3`, and `5` anchors. Use `2` or `4` only between anchors. Use `N/O` when the behavior never appeared. Done when every score has evidence or an explicit `N/O`.
+5. Pick the next-call behaviors.
+   Keep 1-3. Drop anything a manager cannot hear next time. One call is directional, not a verdict on the rep.
+6. Write the practice.
+   For each priority: the behavior, an in-call cue, and a success signal. Done when the rep knows what to try and the manager knows what to listen for.
+7. Set the follow-up.
+   What to inspect on the next 1-2 comparable calls.
 
-## Tool Notes
-
-- For accessible audio or video, review the source and capture timestamps; use a transcript for search and quoting, not as a substitute for tone or sequencing when the recording is available.
-- Treat automated transcripts as fallible. Preserve uncertain wording and speaker attribution rather than silently correcting them.
-- If only notes or a summary exist, report lower evidence coverage and avoid precise claims about phrasing, timing, talk ratio, or tone.
-- Minimize sensitive excerpts, anonymize when requested, and do not publish coaching material without explicit approval.
+For a practice drill use `roleplay-scenario-builder`. For a multi-call discovery baseline use `discovery-rubric-auditor`. For spoken lines use `talk-track-builder`.
 
 ## Output Contract
 
-- `Call Context`: type, segment, rep level, and review objective.
-- `Evidence Coverage`: source used, accessible portion, transcript or speaker limitations, and overall confidence.
-- `Moment Log`: the few decisive moments with timestamp or transcript location.
-- `Scorecard`: applicable dimension score or `N/O`, behavior anchor, evidence, and confidence.
-- `Strengths To Keep`: behaviors to preserve.
-- `Top Gaps`: prioritized coaching gaps with impact notes.
-- `Next-Call Practice Plan`: concrete drills and execution checkpoints.
-- `Manager Follow-Up`: what to inspect in the next 1-2 calls.
+Return a review a manager can use before the next 1:1:
+
+- Call type, segment, rep level, and the review objective
+- Evidence coverage: source, accessible portion, speaker limits, confidence
+- The few decisive moments, located
+- Score or `N/O` per applicable dimension, with evidence
+- Strengths to keep
+- 1-3 next-call behaviors with cue and success signal
+- What to inspect on the next 1-2 calls
+- Assumptions, if you had to make any
+
+Do not add a team baseline, a roleplay pack, or a readiness decision.
 
 ## Quality Bar
 
-- Tie every score or claim to explicit call evidence.
-- Apply the same anchors regardless of rep confidence, style, accent, or familiarity.
-- Limit coaching to the fewest high-impact priorities instead of long issue lists.
-- Make actions behavior-specific and testable in the next call.
-- Avoid generic advice that cannot be inspected by a manager.
-- State clearly that a single call is directional coaching input, not a full rep-level verdict.
+- Every score cites a moment you could access.
+- Unobserved dimensions are `N/O`, not zeros.
+- Coaching is 1-3 next-call behaviors, not an issue list.
+- Each behavior is something a manager can hear on the next comparable call.
+- A single call is labeled directional, not a rep-level verdict.
+- The review refused the portfolio audit and the certification decision.

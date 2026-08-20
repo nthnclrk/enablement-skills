@@ -39,31 +39,31 @@
     {
       "name": "manager-coaching-cadence-output-01",
       "type": "structure",
-      "description": "The output substantively includes: Weekly coaching cadence schedule by manager",
+      "description": "Shows a capacity envelope and which reps get individual time this cycle.",
       "critical": true
     },
     {
       "name": "manager-coaching-cadence-output-02",
       "type": "structure",
-      "description": "The output substantively includes: Session agenda template and coaching-question prompts",
+      "description": "Names the 1-3 behaviors under inspection and a weekly loop with time budgets.",
       "critical": true
     },
     {
       "name": "manager-coaching-cadence-output-03",
       "type": "structure",
-      "description": "The output substantively includes: Observation log template for calls/deals/behavior checkpoints",
-      "critical": false
+      "description": "Defines a session shape that inspects one behavior: evidence, keep, change, and one commitment.",
+      "critical": true
     },
     {
       "name": "manager-coaching-cadence-output-04",
       "type": "structure",
-      "description": "The output substantively includes: Rep commitment tracker with due dates and verification signals",
+      "description": "Includes observation and commitment fields with owner, date, and a proof the manager can check.",
       "critical": false
     },
     {
       "name": "manager-coaching-cadence-output-05",
       "type": "structure",
-      "description": "The output substantively includes: Monthly trend review template and interpretation guidance",
+      "description": "Includes a trend review that separates skill from pipeline and process, and treats escalation as a condition rather than an invented number.",
       "critical": false
     }
   ],

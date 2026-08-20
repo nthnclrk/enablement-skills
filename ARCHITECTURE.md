@@ -27,7 +27,7 @@ This repository deliberately applies a stricter policy to every canonical skill:
 - the folder name and frontmatter `name` must match
 - frontmatter contains exactly `name` and `description`
 - `agents/openai.yaml` is required for Codex-facing interface metadata
-- `## Confirm Inputs First`, `## Default Workflow`, `## Output Contract`, and `## Quality Bar` are required
+- the body must do the craft jobs in `AGENTS.md` (job, taste, intake, procedure, quality). Heading names are not required
 - direct references must resolve and remain one level deep from `SKILL.md`
 - a starter or curated eval artifact is required
 
@@ -51,7 +51,7 @@ skills/<skill-name>/
 
 The skill folder is the unit of portable installation. A bundled copy or symlink must never become a second behavior source.
 
-`SKILL.md` contains the trigger description, workflow, output contract, and quality rules. Reusable frameworks and detailed domain material belong in direct references when they improve repeated execution. Deterministic work belongs in scripts only when a script is more reliable than instructions.
+`SKILL.md` contains the trigger description and whatever body shape the job needs. Reusable frameworks belong in direct references when they improve repeated execution. Deterministic work belongs in scripts only when a script is more reliable than instructions. Shared safety lives in `enablement-house-style`.
 
 ### `systems/`
 
@@ -149,7 +149,7 @@ Validation is intentionally split into three layers.
 bash scripts/validate.sh
 ```
 
-This command is read-only. It checks repository rules, including required files and sections, exact frontmatter policy, tracked Markdown links, interface metadata, eval coverage and schema, starter freshness, marketplace and plugin metadata, manifest versions, and bundle membership.
+This command is read-only. It checks repository rules, including required files, craft jobs (not heading names), exact frontmatter policy, tracked Markdown links, interface metadata, eval coverage and schema, starter freshness, marketplace and plugin metadata, manifest versions, and bundle membership.
 
 It does not run model behavior tests.
 

@@ -1,42 +1,47 @@
-# Source System Guide
+# Account brief sources
 
-Use this when an account brief depends on live system data rather than a manually assembled packet.
+Use this when the brief draws from CRM, calls, product, support, or contract records rather than a manually assembled packet.
 
-## Minimum Pull
+## What to pull
 
-- Stable account and opportunity identifiers, account hierarchy, owner, segment, and export as-of time
-- Open opportunity, renewal, expansion, amount, currency, stage, forecast, and close or renewal dates as relevant
-- Contact records and buying-role evidence
-- Recent material buyer interactions, commitments, objections, and next steps with dates and source locators
-- Product adoption, support, implementation, or success-plan signals when they affect the decision
-- Contractual or approval records when commercial terms depend on them
+Only fields that change this decision. Freeze an as-of snapshot before you summarize.
 
-Pull only data needed for the decision and respect source permissions, customer confidentiality, and internal access controls.
+- Account and opportunity IDs, owner, segment, export time
+- Open opportunity, renewal, expansion, amount, stage, close or renewal dates
+- Contacts with buying-role evidence, not title-only
+- Recent buyer interactions with dates and locators
+- Product, support, or implementation signals when they affect the decision
+- Contract or approval records when terms depend on them
 
-## Apply Field-Level Authority
+## Field authority
 
-Do not use one fixed source order for the entire brief.
+Do not rank whole systems. Rank the field.
 
-| Question | Prefer | Use Carefully |
-| --- | --- | --- |
-| Recorded opportunity state | Current CRM snapshot and stage history | Narrative notes that conflict with recorded fields |
-| Contract, term, or renewal obligation | Executed agreement or approved commercial record | CRM summary fields without verification |
-| Buyer statement, stance, or commitment | Direct communication, call recording, or transcript with date and speaker | Rep or manager interpretation |
-| Product adoption or usage | Defined product analytics with period and population | Anecdotal usage claims |
-| Support or implementation state | Current ticket, project, or success record | Informal summaries without dates |
-| Internal strategy or proposed action | Current account plan with owner and date | Older decks or copied notes |
+**Recorded opportunity state.** Prefer the current CRM snapshot and stage history. A narrative note that conflicts with the stage field is a conflict, not a correction.
 
-## Reconcile Sources
+**Contract, term, renewal obligation.** Prefer the executed agreement. A CRM renewal-date field without the contract is a hypothesis.
 
-1. Freeze an as-of snapshot before calculating or summarizing account state.
-2. Preserve source ID, date, speaker or system, and locator for each material claim.
-3. Label evidence as recorded fact, direct buyer signal, internal report, or inference.
-4. Resolve conflicts using field ownership, source purpose, directness, and timing. Newer is not automatically more authoritative.
-5. If a conflict remains, show both states and name the decision needed to resolve it.
-6. Judge freshness against the decision window; do not apply one arbitrary age threshold to every field.
+**Buyer stance or commitment.** Prefer the dated communication or transcript with a speaker. A rep summary is interpretation.
 
-## Safe Writeback Boundary
+**Usage.** Prefer defined product analytics with period and population. "They're not using it" without a metric is anecdotal.
 
-- Do not update account, opportunity, forecast, contact, task, or note records automatically.
-- Return the brief and any proposed field corrections for review.
-- Before an approved write, confirm the exact record, field, value, source, owner, and effective date.
+**Support or implementation.** Prefer the current ticket or project record. Slack summaries without dates go below.
+
+**Internal next move.** Prefer the current account plan with owner and date. Last quarter's QBR appendix is not the plan.
+
+## Reconcile
+
+1. Freeze the snapshot.
+2. Keep source ID, date, speaker or system, and locator on each material claim.
+3. Label: recorded fact, direct buyer signal, internal report, or inference.
+4. Resolve by field ownership, purpose, directness, and timing. Newer is not automatically right.
+5. If the conflict remains, show both and name the decision that resolves it.
+6. Judge freshness against this decision window, not a 30-day rule.
+
+**Fails.** Picking the CRM amount because it is "the system of record" when the signed order form disagrees.
+
+**Passes.** "Order form 3 March: 200 seats. CRM amount still shows the prior-year 120. Flag for ops before Thursday."
+
+## Write-back
+
+Return the brief and any proposed field corrections for review. Do not update account, opportunity, forecast, contact, task, or note records. Before an approved write: exact record, field, value, source, owner, effective date.

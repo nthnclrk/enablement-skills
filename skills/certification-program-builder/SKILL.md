@@ -3,66 +3,77 @@ name: certification-program-builder
 description: Create role-based readiness certifications with evidence requirements, defensible pass/fail standards, behaviorally anchored scoring, and assessor calibration. Use when the user asks to design or govern certification standards, practical assessments, assessor guides, retakes, or recertification for sales or customer-facing roles. Route learning sequence, practice, and broader ramp planning to onboarding-program-builder.
 ---
 
-# Certification Program Builder
+# Certification program builder
 
-Design certification that checks real job readiness, not course completion.
+Build an observable gate. If a quiz score or a manager vibe could pass someone, rewrite it.
+
+Certification states what a person may do after they pass, and what evidence proves it. The ramp that prepares them is `onboarding-program-builder`. A practice drill may supply a scenario; it does not set the decision.
+
+**Observable gate.** "Certified AE may run first-call discovery unsupervised. Pass: independently gets problem, cost, and a mutual next step. Hard fail: invents a customer result."
+
+**Quiz.** "80% on the product quiz plus manager sign-off."
+
+If two assessors cannot score the same evidence the same way, you do not have a standard yet.
 
 ## Confirm Inputs First
 
-Confirm:
+Ask only for the inputs that change the standard:
 
-- Use supplied current context or relevant sections of `.enablement/context.md` when available. Treat stale, inferred, or conflicted material as provisional; never update shared context silently.
-- Role, job-critical tasks, capabilities, and costly failure risks to certify
-- Certification purpose, readiness claim, stakes, and decisions the result will control
-- Existing job standard, policy, or threshold, including who owns it
-- Available authentic evidence, representative scenarios, and examples of ready or not-ready performance
-- Assessor group, subject-matter experts, cohort size and timing, learner population, assessor throughput, moderation and retake load, and evaluation capacity
-- Required accommodations, retake constraints, and recertification triggers
+1. Role, critical tasks, and the failures this gate must catch
+2. What the result will control, and who owns the job standard
+3. Authentic evidence already available, plus examples of ready and not-ready work
+4. Assessor group, cohort size, and evaluation capacity
+5. Accommodation, retake, and recertification constraints
 
-Ask only for blockers. Do not invent a pass threshold from convenience or treat course completion, tenure, confidence, or manager familiarity as readiness evidence.
+Do not invent a pass mark from convenience. Course completion, tenure, confidence, and manager familiarity are not readiness evidence.
 
 ## Read The Right Reference
 
-Read [references/certification-scoring-rules.md](references/certification-scoring-rules.md) before writing the rubric.
+Read [references/certification-scoring-rules.md](references/certification-scoring-rules.md) for anchors, hard fails, and calibration. Skip it if the user already has a governed rubric and only wants retake or recertification rules.
 
 ## Default Workflow
 
-1. Define the readiness claim: what the person may do after certification, under what conditions, and with what level of independence.
-2. Derive 4-6 dimensions from critical job tasks and failure risks, not from training modules.
-3. Define authentic evidence, minimum quantity, allowed support, and critical errors for each dimension.
-4. Write dimension-specific behavior anchors and practical assessment prompts that expose the required work.
-5. Set the standard using minimally competent performance. Separate overall threshold, critical-dimension minimums, and non-compensable hard fails; mark the standard provisional until owner review and pilot evidence support it.
-6. Pilot against representative ready, borderline, and not-ready samples; adjust ambiguous anchors or tasks before changing the standard for convenience.
-7. Calibrate assessors through independent benchmark scoring, variance review, agreed rationales, and a rescore gate before live decisions.
-8. Test delivery capacity. Compare cohort demand, assessment time, assessor throughput, moderation, accommodations, and expected retakes; return `fits`, `reduce`, `sequence`, or `blocked` with the binding constraint.
-9. Define decision, moderation, appeal, retake, accommodation, recertification, and version-change rules.
-10. Produce the certification pack with standard ownership, validation status, calibration records, and a feasible delivery decision.
+1. Write the readiness claim.
+   What they may do, in which situations, with what independence. Done when a manager can use that sentence to grant or withhold work.
+2. Derive 4-6 dimensions from the job and its failure risks.
+   Not from training modules.
+3. Define authentic evidence for each dimension.
+   Type, minimum quantity, allowed support, critical errors. Done when a quiz cannot substitute for the work.
+4. Write behavior anchors and practical prompts.
+   Dimension-specific `1` through `4`. Generic labels are not a rubric.
+5. Set the standard at minimally competent independent performance.
+   Overall threshold, critical-dimension minimums, non-compensable hard fails. Mark it `provisional` until the owner and a pilot support it.
+6. Pilot on ready, borderline, and not-ready samples.
+   If known-ready people fail, fix the task or the anchors before moving the number.
+7. Calibrate assessors.
+   Independent benchmark scoring, variance review, rescore gate. Do not go live while hard-fail calls still disagree.
+8. Test delivery capacity.
+   Demand, assessor time, moderation, accommodations, retakes. Return `fits`, `reduce`, `sequence`, or `blocked`.
+9. Write decision, appeal, retake, accommodation, recertification, and version rules.
+10. Ship the pack with owner, version, validation status, and the delivery decision.
 
-## Tool Notes
-
-- Keep certification workflow tool-agnostic.
-- If requested, map rubric and score capture to the user's existing docs or spreadsheet stack while preserving evidence links, assessor identity, rubric version, and decision history.
+A high score on a safe dimension cannot buy off a hard fail. Material rubric changes get a new version. Prior decisions keep the standard they used.
 
 ## Output Contract
 
-Default output includes:
+Return a pack an assessor can run:
 
-- Certification blueprint
-- Readiness claim and job-task-to-standard map
-- Evidence plan with authenticity, quantity, allowed support, and critical-error rules
-- Scoring rubric with behavior anchors
-- Evaluation prompt and scenario set
-- Pass/fail standard with rationale, owner, version, and `provisional` or `validated` status
+- Readiness claim and the job-task map
+- Evidence plan: authenticity, quantity, support, critical errors
+- Anchored rubric and practical prompts
+- Pass/fail logic with owner, version, and `provisional` or `validated`
 - Decision, moderation, appeal, and retake rules
-- Recertification cadence and scope rules
-- Assessor calibration pack with benchmark evidence, scoring key, agreement gate, and drift checks
-- Capacity ledger with cohort demand, assessor throughput, moderation and retake load, and a fit/reduce/sequence/blocked decision
+- Recertification window and change triggers
+- Calibration pack: benchmarks, agreement gate, drift checks
+- Capacity ledger and `fits` / `reduce` / `sequence` / `blocked`
+
+Do not write the ramp curriculum. That is `onboarding-program-builder`.
 
 ## Quality Bar
 
-- Rubric measures observable behavior, not vague confidence.
-- Two assessors should produce similar scores on the same evidence.
-- Pass criteria trace to minimally competent job performance and critical risk, not an arbitrary percentage.
-- Certification process includes anti-bias safeguards and documented recertification logic.
-- Certification is practical to run repeatedly.
-- Material standard or rubric changes create a new version and do not silently rewrite prior decisions.
+- Pass requires observable job evidence, not a course score.
+- Two assessors would reach the same decision on the same evidence.
+- Hard fails are non-compensable.
+- The standard is `provisional` until owner review and pilot evidence exist.
+- Identity, tenure, and confidence are not scored.
+- The gate refused the onboarding plan and the ungoverned roleplay pass mark.

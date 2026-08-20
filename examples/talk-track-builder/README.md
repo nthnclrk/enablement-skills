@@ -30,12 +30,13 @@ The proof cue should retain its limitation:
 
 ## Review Checklist
 
-- One call objective and one explicit next-step ask
+- One call objective and one explicit next-step ask, both written as spoken lines
 - Questions move from current process to impact, urgency, stakeholders, and decision criteria
+- Every "say" element is a line a seller could use live, not a topic to discuss
 - Branches contain a trigger, diagnostic line, response path, proof cue, and recovery close
 - The standard-integration deployment result is not generalized to custom ERP work
 - No invented pricing, customer logos, implementation guarantees, or universal ROI claim
-- The language is conversational enough to adapt rather than read verbatim
+- The language survives being read aloud without sounding like a brochure
 
 ## Deliberate Uncertainty
 

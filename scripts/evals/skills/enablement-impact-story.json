@@ -2,8 +2,8 @@
   "schema_version": 2,
   "skill": "enablement-impact-story",
   "source": "skills/enablement-impact-story/SKILL.md",
-  "notes": "Generated routing and basic-output starter. Curate realistic prompts and example-backed task scenarios before treating it as behavior evidence.",
-  "managed_by": "starter-generator",
+  "notes": "Curated eval for evidence-led impact narratives. Routing keeps the story separate from KPI-tree and instrumentation design.",
+  "managed_by": "curated",
   "should_trigger": [
     {
       "prompt": "Please create leadership-ready enablement impact narratives and, only when the evidence supports it, financial ROI analysis with explicit assumptions and risks.",
@@ -25,6 +25,11 @@
       "adjacent_skill": "enablement-metrics-and-instrumentation"
     },
     {
+      "prompt": "Design the KPI tree and instrumentation plan so we can measure this onboarding program going forward.",
+      "expected": false,
+      "adjacent_skill": "enablement-metrics-and-instrumentation"
+    },
+    {
       "prompt": "Please create role-based readiness certifications with evidence requirements, defensible pass/fail standards, behaviorally anchored scoring, and assessor calibration.",
       "expected": false,
       "adjacent_skill": "certification-program-builder"
@@ -37,15 +42,27 @@
   ],
   "output_structure_checks": [
     {
-      "name": "enablement-impact-story-core-output",
+      "name": "enablement-impact-claim-mode",
       "type": "structure",
-      "description": "Produces Executive summary narrative; Claim mode and why the evidence supports it.",
+      "description": "States the claim mode and includes an explicit what-we-cannot-claim-yet section.",
       "critical": true
     },
     {
-      "name": "enablement-impact-story-decision-discipline",
+      "name": "enablement-impact-movement-table",
+      "type": "structure",
+      "description": "Shows definition, population, baseline, current value, and comparable windows for each change claim.",
+      "critical": true
+    },
+    {
+      "name": "enablement-impact-roi-gate",
       "type": "semantic",
-      "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
+      "description": "Uses financial ROI only when incremental cost and monetized attributable benefit are both supportable; otherwise refuses the label.",
+      "critical": true
+    },
+    {
+      "name": "enablement-impact-no-invention",
+      "type": "forbidden_behavior",
+      "description": "Does not invent win rates, usage, ROI, or a measurement system in place of the narrative.",
       "critical": true
     }
   ]

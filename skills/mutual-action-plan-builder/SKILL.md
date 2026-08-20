@@ -3,86 +3,72 @@ name: mutual-action-plan-builder
 description: Build mutual action plans for complex deals and coordinated customer initiatives. Use when asked to create or improve a MAP, align buyers and sellers on milestones, or define stage-based execution with owners and dates. For proposal or RFP process orchestration, use proposal-rfp-orchestrator.
 ---
 
-# Mutual Action Plan Builder
+# Mutual action plan builder
 
-Create a shared plan with the customer that makes owners, milestones, and success criteria explicit.
+Write a plan both sides own. If only sellers have owners, it is a task list.
+
+A MAP is a shared execution plan for a complex deal or coordinated initiative. Every milestone has a buyer-side owner and a seller-side owner. If the user wants proposal or RFP process orchestration, use `proposal-rfp-orchestrator`.
+
+**Two owners.** "Security questionnaire submitted — buyer: Priya (InfoSec), seller: Jordan (SE). Exit: filed in their portal. Agreed 22 April, Priya's email."
+
+**Task list.** "Complete security review. Owner: AE. Due: end of quarter."
+
+Silence is not agreement. A calendar invite is not a commitment.
 
 ## Confirm Inputs First
 
-Collect the minimum required inputs:
+Ask only for the inputs that change the plan:
 
-- Use supplied current context or relevant sections of `.enablement/context.md` when available. Treat stale, inferred, or conflicted material as provisional; never update shared context silently.
-- Target outcome and target date
-- Current stage, task durations, mandatory lead times, capacity constraints, blackout dates, and major dependencies
-- Internal and customer-side stakeholders
-- Required milestones and approvals
-- Known risks and blockers
-- Existing customer confirmations, their source and date, and the current plan version
+1. Target outcome and target date, and whether the customer has agreed to them
+2. Current stage, known durations, lead times, blackout dates, and dependencies
+3. Buyer-side and seller-side stakeholders
+4. Required milestones and approvals
+5. Existing confirmations, with source and date
 
-If critical inputs are missing, ask for the smallest missing set. Use labeled assumptions only for the proposed workplan; never label an assumed owner, date, approval, requirement, action, or acceptance criterion as a customer commitment.
+If a customer owner, date, or acceptance criterion is unconfirmed, leave it proposed. Do not invent commitments, logos, pricing, or approval timelines.
 
 ## Read The Right Reference
 
-- For MAP fields, milestone quality, and gating definitions, read [references/map-framework.md](references/map-framework.md).
+Read [references/map-framework.md](references/map-framework.md) for agreement states, the two-owner test, and infeasible-date handling. Skip it if the user already has a live MAP and only wants a gap pass.
 
 ## Default Workflow
 
-1. Anchor on target outcome.
-Define the concrete outcome the plan must deliver and by when. Mark whether the outcome and target date are `draft`, `proposed`, or `agreed`.
-
+1. Anchor the outcome.
+   The concrete result the plan must deliver, and by when. Mark the outcome and date `draft`, `proposed`, or `agreed`. Done when you can say what "done" looks like in customer language.
 2. Reverse-map milestones.
-Work backward from the target date using verified task durations, mandatory lead times, dependencies, capacity, and blackout dates. Identify the critical path, latest-safe-start dates, and available slack. If the target cannot be met, state `target infeasible — replan required` rather than compressing unknown or mandatory work.
+   Work backward from the target using verified durations, lead times, capacity, and blackouts. Name the critical path, latest-safe-start dates, and slack. If the target cannot be met, say `target infeasible — replan required`. Do not compress unknown work.
+3. Put two owners on every milestone.
+   Buyer-side and seller-side. A missing buyer owner is a gap, not a seller-owned task. Keep unconfirmed customer owners proposed.
+4. Write entry and exit criteria a third party could inspect.
+   Not "security complete." What artifact, in what system, accepted by whom.
+5. Attach risk only where it changes a date.
+   Signal, mitigation, escalation trigger on the critical path. Internal scoring stays off the customer view.
+6. Check mutuality.
+   Agreement state and completion-evidence state are independent. Attach confirmation source and date. Do not infer `agreed` from silence, attendance, or a seller CRM note.
+7. Split the views.
+   Shared commitments on the customer-visible MAP. Negotiation strategy, internal risk, and contingency on the internal companion.
+8. Control changes.
+   When an agreed owner, date, milestone, or exit criterion changes, show the prior value and return the field to `proposed` or `changed` until the customer reconfirms.
 
-3. Assign shared ownership.
-Set internal and customer owners for each milestone.
-Make dependencies and handoffs explicit.
-Keep an unconfirmed customer owner as proposed rather than agreed.
-
-4. Add risk controls.
-Attach risk signals, mitigation actions, and escalation triggers to critical milestones.
-
-5. Validate mutuality.
-Make sure the plan is not seller-only.
-Apply the agreement and completion-evidence states in the reference. Attach the confirmation source and date; do not infer agreement from silence, a calendar invite, or an internal note.
-
-6. Split customer-visible and internal-private views.
-Keep shared commitments in the customer-facing MAP and move internal risk commentary, negotiation strategy, and contingency notes to an internal companion view.
-
-7. Control changes.
-When an agreed owner, date, milestone, or acceptance criterion changes, show the prior value and return the changed field to proposed until the customer reconfirms it.
-
-## Tool Notes
-
-- `CRM` can hold MAP status and owner fields when available.
-- `Docs/Sheets` can act as the living source of truth shared with the customer.
-- `Project tools` can help manage due dates and reminders.
-
-Keep workflow tool-agnostic when these systems are unavailable.
+For proposal or RFP orchestration use `proposal-rfp-orchestrator`. For a one-opportunity inspect use `deal-inspection-coach`.
 
 ## Output Contract
 
-Deliver:
+Return a plan both sides can execute:
 
-1. Plan summary (target outcome, date, stage)
-2. Stakeholder and owner map
-3. Milestone table with entry/exit criteria
-4. Agreement state, completion evidence, and last-confirmed source for each customer commitment
-5. Dependency and handoff map
-6. Schedule-feasibility decision with critical path, latest-safe-start dates, and slack
-7. Risk and escalation plan
-8. Customer-visible MAP view
-9. Internal-private MAP view
-10. Immediate next actions for the next agreed planning horizon
-11. Open questions and assumptions
+- Target outcome, date, and agreement state
+- Stakeholder map with buyer-side and seller-side owners
+- Milestone table: two owners, entry/exit criteria, dependencies, latest-safe-start, slack
+- Agreement state, completion evidence, and last-confirmed source for each customer commitment
+- Schedule-feasibility call: critical path or `target infeasible — replan required`
+- Customer-visible view and internal-private view
+- Immediate next actions and open questions
 
 ## Quality Bar
 
-- Ensure each milestone has an owner, due date, and clear completion criteria.
-- Make customer-side actions explicit, not implied.
-- Keep sequencing realistic and dependency-aware.
-- Never present an infeasible target as an executable plan; surface the constraint and the decision needed to replan.
-- Include escalation logic for high-risk milestones.
-- Keep internal-only commentary out of customer-visible outputs.
-- Do not fabricate customer commitments or approval timelines.
-- Keep agreement state separate from execution status: a task can be in progress without being customer-agreed, and an agreed task is not complete without evidence.
-- Reconfirm material changes instead of silently overwriting the agreed plan.
+- Every milestone has a buyer-side owner and a seller-side owner.
+- Exit criteria are inspectable, not status labels.
+- Customer commitments stay proposed until a source and date exist.
+- An infeasible target is named, not hidden by assumed compression.
+- Internal commentary is absent from the customer-visible view.
+- The plan refused the seller-only task list and the RFP workplan that do not belong here.

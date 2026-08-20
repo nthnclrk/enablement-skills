@@ -1,29 +1,28 @@
-Use this when stage redesign must eventually map into CRM fields, required notes, and reporting views.
+# Source system judgment
 
-# Source System Guide
+Use this when the stage model must later map into CRM fields, required notes, and reporting views.
 
-## System Mapping Inputs
+## Design the operating logic first
 
-- Current stage list and probability model.
-- Required fields by stage today.
-- Existing validation rules, approval steps, and forecast categories.
-- Reporting views used by managers, RevOps, and leadership.
+Write purpose, entry evidence, exit evidence, blocked transitions, and exception rules before you touch objects. CRM defaults are not process design.
 
-## Recommended Handling
+**Fails.** Keep the vendor's six stages and add required fields so managers "have data."
 
-- Design the operating logic first:
-  stage purpose, entry evidence, exit evidence, blocked transitions, exception rules.
-- Only then map that logic to CRM fields, required notes, dashboards, and automation.
-- Keep qualification-method mapping explicit so stage hygiene does not depend on tribal interpretation.
+**Passes.** Four buyer-signal stages. Then recommend which existing fields can hold the proof, which validation would over-collect, and which reports would lie during migration.
 
-## Implementation Risks
+## What to gather
 
-- CRM defaults masquerading as process design.
-- Stages that combine multiple customer outcomes.
-- Required fields that collect data but do not prove progression.
+Current stage list and probability model. Required fields by stage today. Existing validation, approvals, and forecast categories. Reporting views managers, RevOps, and leadership already use.
 
-## Safe Writeback Boundary
+## Implementation risks
 
-- Do not assume a direct one-to-one mapping from new stage cards to current CRM configuration.
-- Recommend field, validation, and reporting changes separately.
-- Do not create fields, change validation or automation, or move live opportunities without explicit approval of the exact configuration and migration plan.
+- CRM defaults masquerading as process
+- One stage that combines two buyer outcomes
+- Required fields that collect data but do not prove progression
+- Assuming a one-to-one map from new cards to current configuration
+
+Keep qualification-method mapping explicit so hygiene does not depend on tribal interpretation.
+
+## Safe writeback
+
+Recommend field, validation, and reporting changes separately. Do not create fields, change automation, or move live opportunities without explicit approval of the exact configuration and migration plan.

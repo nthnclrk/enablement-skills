@@ -4,6 +4,25 @@ All notable changes to this repo should be recorded here.
 
 The format is intentionally lightweight. Keep entries concise and useful for operators adopting updates.
 
+## [1.4.0] - 2026-08-20
+
+Package craft: jobs over headings.
+
+- Validation checks one job, taste, intake, procedure, and a human-scorable quality bar. Heading names are no longer required.
+- Added `enablement-house-style` to every bundle. Specialist skills no longer repeat the shared context paragraph.
+- `enablement-router` and `revenue-enablement-context` now use their own file shapes.
+- `templates/skill/` is a worked example with a README, not a blank form.
+- Added `scripts/evals/behavior/` for with-skill vs no-skill messy prompts.
+
+## [1.3.0] - 2026-08-20
+
+Craft pass across all 37 skills.
+
+- Rewrote each skill around one leading concept, a good/bad excerpt, done-checked procedures, and a quality bar a practitioner can score in two minutes.
+- Replaced form-first references with judgment files that teach the fail/pass test for that skill.
+- Tightened evals so output checks require the new contracts, not section-list prose.
+- Kept portable frontmatter as `name` and `description` only; trigger language stayed stable.
+
 ## [1.2.0] - 2026-08-11
 
 Evidence-led workflow and release-quality update.

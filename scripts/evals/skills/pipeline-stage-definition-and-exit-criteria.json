@@ -2,8 +2,8 @@
   "schema_version": 2,
   "skill": "pipeline-stage-definition-and-exit-criteria",
   "source": "skills/pipeline-stage-definition-and-exit-criteria/SKILL.md",
-  "notes": "Generated routing and basic-output starter. Curate realistic prompts and example-backed task scenarios before treating it as behavior evidence.",
-  "managed_by": "starter-generator",
+  "notes": "Curated eval for buyer-signal stage design. Routing cases stay on the operating model, not one live deal. Output checks require inspectable exit proof.",
+  "managed_by": "curated",
   "should_trigger": [
     {
       "prompt": "Please define sales stages, exit criteria, and required proof that managers can inspect and RevOps can enforce.",
@@ -20,12 +20,12 @@
   ],
   "should_not_trigger": [
     {
-      "prompt": "Please inspect one live opportunity and produce an evidence-backed manager view of stage validity, deal risk, missing proof, and next actions.",
+      "prompt": "Inspect this one stalled Northwind deal and tell me whether the claimed stage is valid and what buyer proof is missing.",
       "expected": false,
       "adjacent_skill": "deal-inspection-coach"
     },
     {
-      "prompt": "Please build a concise forecast risk brief that highlights commit risk, slippage, and intervention priorities for sales leadership.",
+      "prompt": "Prepare a concise forecast risk brief that highlights commit risk, slippage, and intervention priorities for this quarter.",
       "expected": false,
       "adjacent_skill": "forecast-risk-brief"
     },
@@ -37,15 +37,33 @@
   ],
   "output_structure_checks": [
     {
-      "name": "pipeline-stage-definition-and-exit-criteria-core-output",
+      "name": "pipeline-stage-definition-and-exit-criteria-output-01",
       "type": "structure",
-      "description": "Produces Stage card table: stage name, purpose, entry criteria, exit criteria, required proof; Recommended proof and exception owner by stage.",
+      "description": "Produces stage cards with buyer state, purpose, entry criteria, exit criteria, and required proof that blocks progression.",
       "critical": true
     },
     {
-      "name": "pipeline-stage-definition-and-exit-criteria-decision-discipline",
+      "name": "pipeline-stage-definition-and-exit-criteria-output-02",
       "type": "semantic",
-      "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
+      "description": "Treats sent proposals, booked meetings, and populated fields as activity unless buyer evidence proves the stage's buyer state.",
+      "critical": true
+    },
+    {
+      "name": "pipeline-stage-definition-and-exit-criteria-output-03",
+      "type": "structure",
+      "description": "Keeps required proof distinct from recommended coaching evidence and names an exception owner.",
+      "critical": true
+    },
+    {
+      "name": "pipeline-stage-definition-and-exit-criteria-output-04",
+      "type": "structure",
+      "description": "Includes a backtest or an explicit pilot hypothesis when history is insufficient, plus rollback ownership.",
+      "critical": false
+    },
+    {
+      "name": "pipeline-stage-definition-and-exit-criteria-output-05",
+      "type": "forbidden_behavior",
+      "description": "Does not invent historical conversion rates, aging norms, or CRM capabilities, and does not inspect a named live deal.",
       "critical": true
     }
   ]

@@ -1,31 +1,35 @@
-# Source System Guide
+# Source system judgment
 
-Use this when deal evidence is coming from CRM, call intelligence, or email summaries instead of a hand-prepared deal review packet.
+Use this when deal evidence is coming from CRM, call intelligence, or email summaries instead of a prepared packet.
 
-## CRM Inputs
+## What the CRM can and cannot prove
 
-- Minimum fields: account, opportunity, stage, amount, close date, next step, last activity date, key contacts, open tasks, qualification notes.
-- Useful extras: stage history, push history, MEDDPICC/SPICED fields, competitor field, procurement notes.
-- Capture the record's as-of time and field history where available; the current value alone can hide slippage or repeated changes.
+CRM is the base record for claimed stage, amount, close date, and next step. It is not buyer proof.
 
-## Call / Conversation Inputs
+Seller-entered fields and automated scores are pointers for inspection. A MEDDPICC field that is full can still be a seller assertion. A conversation-intelligence summary can mis-attribute a stakeholder.
 
-- Pull only the calls that materially affect the current deal path:
-  discovery, technical validation, commercial review, procurement, and executive alignment calls.
-- Extract:
-  stakeholder stance, urgency, blockers, decision process, proof requests, and objection patterns.
+**Fails.** Champion is confirmed because the Champion field is populated and the last call scored 82.
 
-## Recommended Handling
+**Passes.** Champion is inferred. The field names a user. The last call quote is from an evaluator who said they cannot approve budget.
 
-- Use CRM as the base record for deal state.
-- Use calls, notes, and MAP/proposal artifacts to confirm or challenge the claimed stage.
-- If evidence is contradictory, show that conflict explicitly instead of choosing the most optimistic source.
-- Distinguish buyer-authored or buyer-confirmed evidence from seller-entered fields and automated summaries.
-- Treat a future meeting, open task, or populated field as activity until the evidence shows buyer progress.
-- Preserve the source date for each material claim and flag stale evidence against the current decision window.
+Prefer recent buyer-authored or buyer-confirmed evidence over seller summaries. If they conflict, keep both and date them.
 
-## Safe Writeback Boundary
+## What to pull
 
-- Do not automatically update deal stage, probability, or qualification fields.
-- Output coaching actions and missing proof requirements first.
-- Do not send customer-facing messages, change a shared plan, or attribute a commitment to the buyer without explicit approval and source evidence.
+Minimum: account, opportunity, stage, amount, close date, next step, last activity date, key contacts, open tasks, qualification notes, as-of time.
+
+Useful extras: stage history, push history, competitor, procurement notes.
+
+From calls, pull only the ones that change the path: discovery, technical validation, commercial, procurement, executive. Extract stance, urgency, blockers, decision process, proof requests. Quote the minimum.
+
+Capture field history when you can. The current value hides slippage.
+
+## Thin or conflicted exports
+
+If stage history or push history is missing, you can still inspect the buying path. You cannot declare the close date stable.
+
+If CRM says verbal yes and the buyer email says "we have not started legal," the deal is conflicted, not committed.
+
+## Safe writeback
+
+Recommend stage, probability, or qualification changes. Do not apply them. Do not send customer-facing messages or attribute a commitment to the buyer without explicit approval and source evidence.

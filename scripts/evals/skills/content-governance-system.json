@@ -2,8 +2,8 @@
   "schema_version": 2,
   "skill": "content-governance-system",
   "source": "skills/content-governance-system/SKILL.md",
-  "notes": "Generated routing and basic-output starter. Curate realistic prompts and example-backed task scenarios before treating it as behavior evidence.",
-  "managed_by": "starter-generator",
+  "notes": "Curated eval for a runnable weekly content-ops model. Routing keeps governance separate from one-time gap inventory and backlog work.",
+  "managed_by": "curated",
   "should_trigger": [
     {
       "prompt": "Please design a practical content ops system for revenue enablement content, including taxonomy, ownership, lifecycle controls, and quality checks.",
@@ -25,6 +25,11 @@
       "adjacent_skill": "content-gap-analysis"
     },
     {
+      "prompt": "Audit our Highspot inventory and produce a 90-day backlog of create, update, consolidate, and retire work.",
+      "expected": false,
+      "adjacent_skill": "content-gap-analysis"
+    },
+    {
       "prompt": "Please diagnose an unclear field-performance problem or design the cross-functional wrapper for a multi-intervention revenue enablement initiative, including charter, capacity, pilot, governance, rollout, and measurement.",
       "expected": false,
       "adjacent_skill": "enablement-program-design"
@@ -37,15 +42,27 @@
   ],
   "output_structure_checks": [
     {
-      "name": "content-governance-system-core-output",
+      "name": "content-governance-weekly-cadence",
       "type": "structure",
-      "description": "Produces Governance charter with scope and decision rights; Taxonomy and metadata schema.",
+      "description": "Names the weekly operating cadence: who does what, on which day, and what done means.",
       "critical": true
     },
     {
-      "name": "content-governance-system-decision-discipline",
+      "name": "content-governance-two-axes",
+      "type": "structure",
+      "description": "Keeps publication status and review status independent, with live assets remaining published while due or overdue.",
+      "critical": true
+    },
+    {
+      "name": "content-governance-approval-boundary",
       "type": "semantic",
-      "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
+      "description": "Separates content approval from authorization to publish or change a live system.",
+      "critical": true
+    },
+    {
+      "name": "content-governance-not-inventory",
+      "type": "forbidden_behavior",
+      "description": "Does not substitute a one-time gap backlog for the operating model, or invent usage or ROI.",
       "critical": true
     }
   ]

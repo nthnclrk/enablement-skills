@@ -20,7 +20,7 @@ This repository applies a stricter contribution contract. Every canonical skill 
 - live at `skills/<skill-name>/`
 - use frontmatter containing exactly `name` and `description`
 - include `agents/openai.yaml`
-- include the required workflow and output sections
+- do the craft jobs in `AGENTS.md` (heading names may vary)
 - link directly to any bundled references it needs
 - have a matching eval artifact under `scripts/evals/skills/`
 
@@ -36,10 +36,10 @@ bash scripts/new-skill.sh my-new-skill
 
 For new and existing skills:
 
-1. Start from a concrete user job and deliverable.
+1. Start from a concrete user job and a real artifact you have already run, not a blank form.
 2. Make the frontmatter description state what the skill does, when it should trigger, and its closest boundaries.
-3. Keep `SKILL.md` compact and procedural.
-4. Put reusable detailed frameworks in direct `references/` only when they improve repeated execution.
+3. Write the four craft jobs in `AGENTS.md`. Copy `templates/skill/SKILL.md.tmpl` for a specialist example, then change the shape if the job is a map, a gate, or a short principle.
+4. Keep shared safety in `enablement-house-style`. Do not paste the same context paragraph into every leaf.
 5. Use scripts only for deterministic work that is safer or more reliable than instructions.
 6. Update should-trigger, should-not-trigger, and output scenarios when behavior or routing changes.
 7. Confirm that `agents/openai.yaml` still matches the skill.

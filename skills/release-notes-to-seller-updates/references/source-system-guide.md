@@ -1,30 +1,24 @@
-Use this when release communication or distribution depends on workspace tools instead of a single source document.
+# Release update source and destination judgment
 
-# Source System Guide
+Use this when the source or the send lives in workspace tools.
 
-## Useful Inputs
+## Pick the channel by the job
 
-- Product or engineering release notes
-- Internal wiki pages or specs
-- Slack announcement norms
-- Enablement platform destinations for final field-facing artifacts
+Treat the product or engineering artifact as the factual base. Then choose the destination by urgency and shelf life.
 
-## Recommended Handling
+- Slack: same-day awareness. Four to six lines. No launch kit.
+- Email: a digest a manager can forward. Facts plus one FAQ.
+- Wiki: the durable change register.
+- Enablement platform: a governed snippet that other assets can cite.
 
-- Treat the source-of-truth release artifact as the factual base.
-- Choose output channel by urgency and audience:
-  Slack for quick awareness, wiki for durable reference, email for digest, enablement platform for governed field assets.
-- Rework the message per channel instead of copy-pasting one format everywhere.
+**Fails.** Pasting the wiki page into Slack, then calling the field updated.
 
-## Minimum Pull
+**Passes.** Slack carries the action. The wiki holds the register. Both wait for human approval before they go out.
 
-- What changed
-- Why it matters
-- Who is affected
-- Known caveats / launch limits
-- Channel or destination needed
+## Minimum pull
 
-## Safe Writeback Boundary
+What changed, why a seller should care, who is affected, known caveats, and the requested channel. If the source does not state a date or status, pull `unknown`. Do not backfill from a tracker rumor.
 
-- Do not publish automatically into shared channels or content systems.
-- Return channel-ready variants for human review and distribution.
+## Safe writeback
+
+Do not publish into shared channels or content systems. Return channel-ready variants for review.

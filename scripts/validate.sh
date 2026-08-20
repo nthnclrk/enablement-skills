@@ -42,13 +42,6 @@ versions_md = repo_root / "VERSIONS.md"
 bundles_md = plugins_dir / "BUNDLES.md"
 marketplace_json = repo_root / ".claude-plugin" / "marketplace.json"
 
-required_sections = [
-    "## Confirm Inputs First",
-    "## Default Workflow",
-    "## Output Contract",
-    "## Quality Bar",
-]
-
 placeholder_markers = [
     "[REQUIRED]",
     "Describe what this skill does here",
@@ -251,33 +244,37 @@ for skill_dir in skill_dirs:
             if candidate != skill_name and candidate not in skill_names:
                 errors.append(f"{skill_name}: references missing skill '{candidate}' in description")
 
-    section_positions: dict[str, int] = {}
-    for section in required_sections:
-        position = text.find(section)
-        if position < 0:
-            errors.append(f"{skill_name}: missing required section '{section}'")
-        else:
-            section_positions[section] = position
-    if len(section_positions) == len(required_sections):
-        ordered_positions = [section_positions[section] for section in required_sections]
-        if ordered_positions != sorted(ordered_positions):
-            errors.append(f"{skill_name}: required sections are out of order")
+    body = re.sub(r"^---\r?\n.*?\r?\n---\r?\n", "", text, count=1, flags=re.S)
+    has_example = bool(
+        re.search(r'["“][^"”]{20,}["”]', body)
+        or re.search(r"\*\*(Fails|Passes)\.\*\*", body)
+    )
+    has_procedure = bool(re.search(r"^\d+\. ", body, flags=re.M)) or body.count("\n- ") >= 3
+    has_stop = bool(
+        re.search(r"(?i)(done when|not done|rewrite it|quality bar|the test\.)", body)
+    )
+    has_intake = bool(
+        re.search(
+            r"(?i)(ask only|if .+ missing|do not invent|when this applies|do not use for)",
+            body,
+        )
+    )
+    if not has_example:
+        errors.append(
+            f"{skill_name}: missing a concrete good/bad excerpt or worked example"
+        )
+    if not has_procedure:
+        errors.append(
+            f"{skill_name}: missing a procedure or named rules the agent can follow"
+        )
+    if not has_stop:
+        errors.append(f"{skill_name}: missing a checkable done-test or quality bar")
+    if not has_intake:
+        errors.append(f"{skill_name}: missing intake, scope, or invention bounds")
 
-    confirm_position = text.find("## Confirm Inputs First")
-    workflow_position = text.find("## Default Workflow")
-    output_position = text.find("## Output Contract")
-    reference_position = text.find("## Read The Right Reference")
-    tool_position = text.find("## Tool Notes")
-    if reference_position >= 0 and not (
-        confirm_position < reference_position < workflow_position
-    ):
-        warnings.append(
-            f"{skill_name}: 'Read The Right Reference' should appear between input confirmation and the workflow"
-        )
-    if tool_position >= 0 and not (workflow_position < tool_position < output_position):
-        warnings.append(
-            f"{skill_name}: 'Tool Notes' should appear between the workflow and output contract"
-        )
+    references_dir = skill_dir / "references"
+    if references_dir.is_dir() and any(references_dir.iterdir()) and "references/" not in text:
+        errors.append(f"{skill_name}: has references/ but SKILL.md never links into it")
 
     for candidate in sorted(extract_route_candidates(text)):
         if candidate != skill_name and candidate not in skill_names:
@@ -458,6 +455,8 @@ for plugin_dir in plugin_dirs:
         errors.append(f"{bundle_name}: references unknown skills: {', '.join(unknown)}")
     if "revenue-enablement-context" not in expected_members:
         errors.append(f"{bundle_name}: must include revenue-enablement-context")
+    if "enablement-house-style" not in expected_members:
+        errors.append(f"{bundle_name}: must include enablement-house-style")
 
 unbundled = sorted(skill_names - all_bundled_skills)
 if unbundled:

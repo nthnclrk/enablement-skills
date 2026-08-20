@@ -2,8 +2,8 @@
   "schema_version": 2,
   "skill": "onboarding-program-builder",
   "source": "skills/onboarding-program-builder/SKILL.md",
-  "notes": "Generated routing and basic-output starter. Curate realistic prompts and example-backed task scenarios before treating it as behavior evidence.",
-  "managed_by": "starter-generator",
+  "notes": "Curated eval for the craft-pass output contract. Routing prompts stay on practitioner language; output checks require the skill's leading test, not a section list.",
+  "managed_by": "curated",
   "should_trigger": [
     {
       "prompt": "Please build role-based ramp plans that help new hires become productive faster through job-critical practice, evidence checkpoints, and manager coaching.",
@@ -33,19 +33,42 @@
       "prompt": "Please audit a sample of discovery calls with one consistent rubric and turn portfolio-level patterns into manager-ready coaching priorities.",
       "expected": false,
       "adjacent_skill": "discovery-rubric-auditor"
+    },
+    {
+      "prompt": "Build a customer onboarding-to-value playbook with implementation milestones, adoption signals, and first-value events.",
+      "expected": false,
+      "adjacent_skill": "onboarding-to-value-playbook"
     }
   ],
   "output_structure_checks": [
     {
-      "name": "onboarding-program-builder-core-output",
+      "name": "onboarding-program-builder-output-01",
       "type": "structure",
-      "description": "Produces Outcome-gated ramp plan, with a 30-60-90 view only when requested or useful; Experience-level variant notes by role profile.",
+      "description": "Defines ready as inspectable weekly proof of behavior, not a 30-60-90 calendar or course completion.",
       "critical": true
     },
     {
-      "name": "onboarding-program-builder-decision-discipline",
+      "name": "onboarding-program-builder-output-02",
+      "type": "structure",
+      "description": "Maps job tasks to practice, live-work evidence, and a weekly manager check that names this week's observable proof.",
+      "critical": true
+    },
+    {
+      "name": "onboarding-program-builder-output-03",
+      "type": "structure",
+      "description": "Includes experience-level variants and a capacity ledger with a fits, reduce, sequence, or blocked decision.",
+      "critical": true
+    },
+    {
+      "name": "onboarding-program-builder-output-04",
+      "type": "structure",
+      "description": "Keeps the diagnostic tracker separate from any formal pass/fail and includes a certification handoff only when a gate is in scope.",
+      "critical": true
+    },
+    {
+      "name": "onboarding-program-builder-output-05",
       "type": "semantic",
-      "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
+      "description": "Treats course completion and calendar dates as insufficient proof of readiness, and does not write a customer time-to-value journey.",
       "critical": true
     }
   ]

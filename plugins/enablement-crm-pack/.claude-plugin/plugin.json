@@ -1,6 +1,6 @@
 {
   "name": "enablement-crm-pack",
-  "version": "0.3.0",
+  "version": "0.5.0",
   "description": "CRM workflow bundle with reusable context, account planning, deal inspection, forecasting, and renewals.",
   "author": {
     "name": "Nathan Clark"

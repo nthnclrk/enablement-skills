@@ -1,6 +1,10 @@
-# Enablement Router Reference Map
+# Enablement route map
 
-Use this map to select the primary job, reject the nearest wrong job, and build only the handoffs required for the user's outcome.
+Use this to pick the primary job, reject the nearest wrong job, and add only required handoffs.
+
+**Fails.** A four-skill tour for "write a talk track for this discovery call."
+
+**Passes.** `talk-track-builder`. Architecture is already implied. Do not add `discovery-and-demo-structure` unless they asked for the meeting design.
 
 ## Routing Rules
 

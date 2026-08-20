@@ -2,8 +2,8 @@
   "schema_version": 2,
   "skill": "call-review-coach",
   "source": "skills/call-review-coach/SKILL.md",
-  "notes": "Generated routing and basic-output starter. Curate realistic prompts and example-backed task scenarios before treating it as behavior evidence.",
-  "managed_by": "starter-generator",
+  "notes": "Curated eval for the craft-pass output contract. Routing prompts stay on practitioner language; output checks require the skill's leading test, not a section list.",
+  "managed_by": "curated",
   "should_trigger": [
     {
       "prompt": "Please review one sales call and turn recording, transcript, or notes evidence into clear coaching priorities and next-practice actions.",
@@ -33,19 +33,42 @@
       "prompt": "Please synthesize multi-source field feedback into traceable themes, segment differences, evidence limits, and owner-ready actions for enablement, product marketing, sales leadership, or product.",
       "expected": false,
       "adjacent_skill": "field-feedback-synthesizer"
+    },
+    {
+      "prompt": "Design a weekly coaching cadence for our managers with agendas, observation logs, and commitment tracking.",
+      "expected": false,
+      "adjacent_skill": "manager-coaching-cadence"
     }
   ],
   "output_structure_checks": [
     {
-      "name": "call-review-coach-core-output",
+      "name": "call-review-coach-output-01",
       "type": "structure",
-      "description": "Produces Call Context: type, segment, rep level, and review objective; Evidence Coverage: source used, accessible portion, transcript or speaker limitations, and overall confidence.",
+      "description": "Names call type, segment, rep level, and the review objective.",
       "critical": true
     },
     {
-      "name": "call-review-coach-decision-discipline",
+      "name": "call-review-coach-output-02",
+      "type": "structure",
+      "description": "States evidence coverage: source used, accessible portion, speaker limits, and confidence.",
+      "critical": true
+    },
+    {
+      "name": "call-review-coach-output-03",
+      "type": "structure",
+      "description": "Locates a few decisive moments and scores applicable dimensions with evidence or N/O.",
+      "critical": true
+    },
+    {
+      "name": "call-review-coach-output-04",
+      "type": "structure",
+      "description": "Limits coaching to 1-3 next-call behaviors, each with an in-call cue and a success signal a manager can hear.",
+      "critical": true
+    },
+    {
+      "name": "call-review-coach-output-05",
       "type": "semantic",
-      "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
+      "description": "Treats the single call as directional coaching, not a rep-level verdict, and does not produce a team baseline or certification decision.",
       "critical": true
     }
   ]

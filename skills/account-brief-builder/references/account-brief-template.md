@@ -1,62 +1,59 @@
-# Account Brief Template
+# Account brief judgment
 
-Use this template when the user does not specify a format. Keep unsupported fields as `Unknown` rather than completing them from inference.
+Use this when you are writing or checking an account brief. The skill body has the procedure.
 
-## 1) Brief Header
+## Decision-moment test
 
-- Account and business unit:
-- Commercial motion:
-- As-of date:
-- Decision window:
-- Decision required:
-- Intended audience:
+The brief is for one meeting or one decision. Keep a section if it changes what that meeting decides. Cut it if it is true of the account in general.
 
-## 2) Executive View
+A brief fails the test when it:
 
-- Current state:
-- Material change since the last review:
-- Most important upside or risk:
-- Recommended decision or intervention:
-- Evidence caveat:
+- Summarizes the account without naming the decision
+- Lists every stakeholder instead of the ones who can move this decision
+- Turns CRM hygiene into next actions
+- Resolves a CRM and call conflict by picking the friendlier number
 
-## 3) Commercial Snapshot
+**Fails.** "Acme is a strategic enterprise account. We should multi-thread, reduce churn risk, and expand into the EMEA business unit."
 
-| Item | Recorded State | Source ID | Source Date | Freshness Or Conflict Note |
-| --- | --- | --- | --- | --- |
+**Passes.** "Thursday's review decides whether we assign a new executive sponsor before we send commercial paper. Champion left 9 April. We are single-threaded into procurement."
 
-## 4) Stakeholder Map
+## Conflicts
 
-| Stakeholder | Buying Role | Influence | Stance | Status | Evidence | Coverage Gap | Next Move |
-| --- | --- | --- | --- | --- | --- | --- | --- |
+Do not blend sources. Show both states and name the decision needed to resolve them.
 
-Use `Confirmed`, `Inferred`, or `Unknown` for status. Do not infer a role or stance from title alone.
+**Fails.** "ARR is approximately $420k based on CRM and recent calls."
 
-## 5) Upside And Risk
+**Passes.** "CRM renewal field: $420k as of 12 April. Champion email 9 April: 'we are re-scoping the seat count.' Do not send commercial paper until finance confirms the number."
 
-| Item | Type | Evidence | Consequence | Time Sensitivity | Decision Impact | Evidence Confidence | Action Priority | Recommended Response |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+Newer is not automatically more authoritative. A signed contract beats a last-week call note on term. A call recording beats a CRM next-step field on buyer stance.
 
-Use `Upside` or `Risk` for type. Explain evidence confidence separately from likelihood or value.
+## Stakeholders
 
-## 6) Near-Term Action Plan
+Title is not a buying role. Do not infer economic buyer from VP.
 
-| Action | Owner | Owner Status | Due Date | Date Status | Dependency | Completion Evidence |
-| --- | --- | --- | --- | --- | --- | --- |
+Use `Confirmed`, `Inferred`, or `Unknown`. Stance needs evidence. Missing decision-maker and single-thread are the two coverage gaps that usually change the meeting.
 
-Use `Confirmed`, `Proposed`, or `Unknown` for owner and date status.
-Set the horizon from the decision window and latest-safe-start dates; do not default to 30 days.
+## Upside and risk
 
-## 7) Evidence And Conflict Notes
+Only items that change this decision. Each: evidence, consequence, trigger, confidence in the evidence.
 
-| Source ID | Source And Locator | Source Date | Fields Supported | Authority Or Limitation |
-| --- | --- | --- | --- | --- |
+Do not score likelihood. Do not invent a dollar impact. Evidence confidence is not commercial value.
 
-- Conflicting sources:
-- Stale sources:
-- Restricted evidence:
+## Thin evidence
 
-## 8) Open Questions And Planning Assumptions
+If you lack the decision owner, the commercial number, or the meeting date, return a briefing frame and the evidence request. Do not paper the unknown with planning language.
 
-- Decision-changing questions:
-- Reversible planning assumptions:
-- Facts that remain unknown:
+## Optional shape
+
+Use this only when the user wants a scanned card.
+
+```text
+Account / motion / as-of / decision moment / owner
+Current state and material change
+Recommendation and evidence caveat
+Commercial snapshot (source, date, conflict)
+Stakeholders that matter (role, stance, coverage)
+Upside and risk that change this decision
+Next actions (owner and date status)
+Open questions
+```

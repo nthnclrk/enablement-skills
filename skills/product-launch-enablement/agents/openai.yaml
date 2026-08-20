@@ -1,4 +1,4 @@
 interface:
   display_name: "Product Launch Enablement"
-  short_description: "Build launch readiness enablement plans"
+  short_description: "Full launch readiness, not a release note"
   default_prompt: "Use $product-launch-enablement to create a seller-ready launch enablement package for this product release."

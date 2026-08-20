@@ -1,65 +1,73 @@
-# Roleplay Scenario Framework
+# Roleplay judgment
 
-Use this framework to design scenario sets that progress in complexity and test real behavior.
+Use this when you are writing or checking a drill. The skill body has the procedure.
 
-## Scenario Archetypes
+## Practice test
 
-- `New Opportunity Discovery`: validate problem quality and urgency.
-- `Multi-Thread Stakeholder Call`: reconcile conflicting buyer priorities.
-- `Competitive Pressure`: handle direct comparison and displacement risk.
-- `Commercial Review`: defend value and terms under budget pressure.
-- `Executive Alignment`: gain alignment on outcomes and decision path.
+Keep a scenario if the seller has to do the target behavior to get through it. Cut it if they can succeed by sounding confident, following a script, or reading the hidden answer in the participant brief.
 
-## Difficulty Ladder
+**Fails.** Participant brief includes: "The economic buyer is skeptical because last year's vendor missed a Q3 date." Score: "executive presence."
 
-- `Level 1 (Baseline)`: one primary objective, limited pushback.
-- `Level 2 (Stretch)`: multiple objectives, moderate pushback, time pressure.
-- `Level 3 (Advanced)`: conflicting stakeholders, hidden blockers, ambiguous information.
+**Passes.** Participant sees a 12-minute VP Ops first call and "they already have a process." Facilitator reveals the missed-date cost only if the seller asks who owns the escalation. Score: did they diagnose before pitching.
 
-## Tension Design Rules
+## One behavior, one pressure
 
-- Select only the constraints needed to test the target behavior: a structural constraint, stakeholder dynamic, or commercial friction point.
-- When advancing difficulty, change one variable at a time so the behavior difference remains interpretable.
-- Define the facilitator-only reveal condition for every hidden fact; do not reveal it merely because the seller asks any question.
+Usual shells: new-opportunity discovery, multi-thread stakeholders, competitive pressure, commercial review, executive alignment. Pick one.
 
-## Scoring Dimensions
+Difficulty changes one variable at a time:
 
-- Outcome clarity and call control.
-- Depth and relevance of questioning.
-- Value articulation tied to business impact.
-- Objection diagnosis and response quality.
-- Next-step commitment quality.
+- Baseline: one objective, limited pushback
+- Stretch: time pressure or a second objective
+- Advanced: conflicting stakeholders or a hidden blocker
 
-For each selected dimension, replace the generic label with a scenario-specific behavior and use observable anchors:
+A structural constraint, a stakeholder dynamic, or a commercial friction point is enough. Do not stack all three.
+
+## Reveal rules
+
+Every hidden fact needs a reveal condition. Do not give it away because the seller asked any question.
+
+**Fails.** Buyer volunteers the budget and the competitor as soon as the seller says "tell me about your process."
+
+**Passes.** Budget stays hidden until the seller asks what happens if the miss continues one more quarter. Competitor stays hidden until they ask what the team already tried.
+
+Buyer lines follow what the seller just did. Do not write a memorized dialogue.
+
+## Scoring
+
+Replace generic labels with the behavior this drill tests.
 
 | Score | Anchor |
 | --- | --- |
-| `0 - Not demonstrated` | Omits the behavior or takes an action that blocks the intended outcome |
-| `1 - Partial` | Attempts the behavior, but misses material evidence, diagnosis, or follow-through |
-| `2 - Effective` | Demonstrates the behavior with relevant evidence, diagnosis, and follow-through |
-| `3 - Adaptive` | Sustains the behavior when conditions change and adjusts without losing decision quality |
+| `0` Not demonstrated | Omits the behavior or blocks the outcome |
+| `1` Partial | Attempts it, misses material evidence, diagnosis, or follow-through |
+| `2` Effective | Shows the behavior with evidence, diagnosis, and follow-through |
+| `3` Adaptive | Holds the behavior when the turn changes |
 
-Record the observed words or actions supporting each score. Define critical failures only for actions that make the scenario unsafe or commercially invalid, such as fabricating proof or making an unauthorized commitment. Do not invent a pass threshold when the organization has not supplied one.
+Record the words or actions. Critical failures are only actions that make the work unsafe or commercially invalid: fabricating proof, unauthorized commitments. Do not invent a pass threshold. Do not score style, confidence, or personality.
 
-## Participant And Facilitator Separation
+**Fails.** "4 out of 5. Strong presence. Needs to be more curious."
 
-- Participant brief: role, visible context, objective, constraints, and information the seller would reasonably know.
-- Facilitator-only guide: hidden blocker, buyer priorities, reveal conditions, acceptable evidence, scoring anchors, and escalation cues.
-- Buyer script: responses tied to seller behavior; avoid volunteering hidden facts or following a fully memorized dialogue.
+**Passes.** "Partial on diagnosis. At minute six they answered 'we have a process' with a product tour. Retry: one diagnostic question before any capability."
 
-## Run Protocol
+## Split the briefs
 
-1. State roles, target behavior, timebox, and pause or retry policy without revealing hidden facts.
-2. Run the scenario without coaching unless the agreed pause condition occurs.
-3. Reveal hidden information only when its condition is met and record observable evidence.
-4. Ask the participant to self-assess first against the target behavior.
-5. Have the facilitator cite evidence, score against anchors, and identify one correction.
-6. Retry the decision point or assign the next practice action; do not rerun the entire scenario unless needed.
+- Participant: role, visible context, objective, constraints, what a seller would reasonably know
+- Facilitator: hidden blocker, buyer priorities, reveal conditions, acceptable evidence, anchors, escalation cues
+- Buyer: responses tied to seller behavior
 
-## Debrief Prompts
+If the scorecard restates a hidden fact, it leaked.
 
-- What behavior created forward momentum?
-- Where did the seller lose control or clarity?
-- Which question changed the conversation quality?
-- What should be repeated in the next live call?
-- What one behavior should be corrected first?
+## Thin evidence
+
+No field example: invent the company and label it fictional. Never present invented logos, numbers, or implementation promises as real. If this scenario will feed a certification, ship only the drill and the evidence prompts. The gate lives in `certification-program-builder`.
+
+## Optional shape
+
+```text
+Target behavior / timebox / difficulty
+Participant brief
+Facilitator-only (hidden / reveal / cues)
+Buyer turns
+Anchors and critical failures
+Retry
+```

@@ -1,98 +1,77 @@
-# KPI Tree And Instrumentation Framework
+# KPI tree judgment
 
-Use the KPI tree to choose what matters. Use the contracts below to make each metric reproducible.
+Use this when you are choosing metrics or checking a tree. The skill body has the procedure.
 
-## 1) Logic Layers
+## Four tiers
 
-- `Outcome`: the commercial result, such as win rate, sales cycle, expansion, or time to productivity.
-- `Behavior`: the observable field action expected to influence the outcome.
-- `Activity`: the enablement exposure or practice intended to change the behavior.
+Label every metric before you write a target.
+
+| Tier | What it measures | Typical grain |
+| --- | --- | --- |
+| Adoption | Exposure or completion of enablement work | Person, session, asset |
+| Execution | The field behavior the work was meant to change | Call, opportunity, inspection |
+| Productivity | Whether the motion got faster or cleaner | Hire, opportunity, account |
+| Commercial | The business result leadership already manages | Opportunity, account, book |
+
+A tree fails when a commercial target has only an adoption lead.
+
+**Fails.** Success metric: certification completion. "Insight": completion will lift win rate.
+
+**Passes.** Adoption: first-attempt pass rate. Execution: inspected discovery quality. Productivity: day-90 ramp. Commercial: launch-eligible win rate. Attribution waits for exposure and a comparison.
 
 Do not use activity completion as a proxy for behavior or business impact.
 
-## 2) Metric Contract
+## Metric contract
 
 Define every metric with:
 
 | Field | Required definition |
 | --- | --- |
 | Business question | Decision the metric should inform |
-| Formula | Explicit calculation, including numerator and denominator |
+| Formula | Numerator and denominator, written out |
 | Unit and grain | One row per event, rep, opportunity, account, session, or cohort |
 | Eligible population | Who or what can enter the denominator |
-| Exclusions and filters | Test records, incomplete periods, roles, segments, and other exclusions |
-| Time semantics | Event time, snapshot time, lookback window, and cohort rule |
-| Dimensions | Approved segment cuts that do not change the metric definition |
-| Source fields | System, object/table, and named fields |
+| Exclusions and filters | Test records, incomplete periods, roles, segments |
+| Time semantics | Event time, snapshot time, lookback, cohort rule |
+| Source fields | System, object, named fields |
 | Stable keys | Entity IDs used to deduplicate and join |
-| Owner and cadence | Business owner, data owner, refresh schedule, and latency tolerance |
-| Baseline and target | Comparison period, target, and review threshold |
+| Owner and cadence | Business owner, data owner, refresh, latency |
+| Baseline and target | Comparison period, target, review threshold |
 
-If any required field is unknown, label the metric `not yet reproducible` and specify the missing decision or data.
+If any required field is unknown, label the metric `not yet reproducible`. Do not invent the missing number.
 
-## 3) Event Or Snapshot Contract
+## Events, grain, and joins
 
-Instrument a durable event when the behavior occurs at a distinct point in time. Use a point-in-time snapshot when the state can change and historical state matters.
+Instrument a durable state change when the behavior happens at a point in time. Use a snapshot when state can change and history matters. Prefer `certification_passed` over `button_clicked`.
 
-For each event or snapshot define:
+- Declare native grain before joining.
+- Aggregate a one-to-many source before the join, or counts fan out.
+- Join on stable IDs, not names.
+- Use event time. Do not attach today's owner, stage, or segment to past events unless that rewrite is the stated definition.
+- Define source precedence when two systems record the same field.
 
-- stable event name and business meaning
-- exact trigger and explicit non-triggers
-- entity grain and unique event or snapshot ID
-- event timestamp and ingestion timestamp
-- required entity keys, such as rep, account, opportunity, content, session, or cohort ID
-- required properties, allowed values, and null handling
-- producing system, consuming system, owner, and expected latency
-- deduplication or idempotency rule
-- privacy classification, access scope, and retention period
-
-Prefer a durable state transition such as `certification_passed` over a UI interaction such as `button_clicked` when measuring readiness.
-
-## 4) Grain And Join Rules
-
-- Declare the native grain of every source before joining.
-- Aggregate a one-to-many source to the intended metric grain before joining it; otherwise counts and amounts can fan out.
-- Join on stable IDs, not names or mutable labels.
-- Use event-time or effective-date joins for historical reporting; do not attach today's owner, stage, or segment to past events unless that is the stated definition.
-- Resolve many-to-many relationships with an explicit bridge and allocation rule.
-- Define source precedence when two systems record the same field, and preserve material conflicts for review.
-
-## 5) Filter And Time Rules
-
-- Fix the eligible population before inspecting results.
-- Exclude test and duplicate records with explicit, reviewable filters.
-- Use complete periods or identify partial-period data.
-- Keep baseline and comparison windows seasonally and operationally comparable where possible.
-- For cohorts, anchor time to a shared event such as start date, launch exposure, or certification date.
-
-## 6) QA Contract
-
-Define a threshold, failure action, and owner for:
-
-- `Completeness`: required-field and expected-record coverage.
-- `Uniqueness`: duplicate rate at the declared grain.
-- `Validity`: type, range, and allowed-value checks.
-- `Referential integrity`: unmatched keys across required joins.
-- `Timeliness`: source latency and stale refreshes.
-- `Reconciliation`: totals against the source-of-record report.
-- `Stability`: unexplained changes after logic or source updates.
-
-Block or downgrade a claim when a material QA check fails. Never hide a failed check inside a general caveat.
-
-## 7) Evidence Design
+## Evidence design
 
 Choose the strongest claim the design can support:
 
-- `descriptive`: what changed for the defined population; no contribution claim
-- `contribution`: exposure, timing, behavior, and comparison evidence make the initiative a plausible contributor while alternatives remain
+- `descriptive`: what changed for the defined population
+- `contribution`: exposure, timing, behavior, and a comparison make the initiative a plausible contributor
 - `causal`: an experimental or credible quasi-experimental design estimates a defined effect
 
-For contribution or causal work, record the eligible population, assignment or exposure event, estimand or decision question, comparison method, pre/post and lag windows, material covariates or confounders, sample-sufficiency rule, practical or statistical decision rule, and conditions that invalidate the result. Do not infer exposure from outcome or choose the comparison after inspecting results.
+A pre/post line is descriptive. Do not upgrade it after seeing the result. Do not infer exposure from a win or a loss.
 
-## 8) Decision And Interpretation Rules
+For contribution or causal work, record eligibility, exposure, comparison, lag, confounders, sufficiency, the decision rule, and what invalidates the result.
 
-- Set `continue`, `adjust`, and `stop/deprioritize` thresholds before the review when practical.
-- Pair lagging outcomes with leading behavior indicators, not activity alone.
-- Avoid causal claims from one trend line; record comparison limits and confounders.
-- Show trend direction with evidence confidence when data is incomplete.
-- Version metric definitions and record the effective date when logic changes.
+## Thin evidence
+
+If the baseline, join key, or population is missing, keep the tree and mark the metric `not yet reproducible`. Name the missing decision, owner, and required-by date.
+
+Do not invent win rates, usage, or ROI to fill the cell. Do not set a commercial target from an adoption trend.
+
+## QA and decisions
+
+Define a threshold, failure action, and owner for completeness, uniqueness, validity, referential integrity, timeliness, reconciliation, and unexplained changes after a logic update.
+
+A failed check blocks or downgrades the claim. It does not become a general caveat.
+
+Set `continue`, `adjust`, and `stop` thresholds before the review when you can. If you cannot, record that as a missing decision, not a number.

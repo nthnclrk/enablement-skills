@@ -3,77 +3,71 @@ name: content-governance-system
 description: Design a practical content ops system for revenue enablement content, including taxonomy, ownership, lifecycle controls, and quality checks. Use when asked to reduce content sprawl, define source-of-truth rules, or operationalize publishing and retirement workflows. Route gap prioritization to content-gap-analysis.
 ---
 
-# Content Governance System
+# Content governance system
 
-Build a lightweight governance model that keeps enablement content accurate, findable, and actively maintained.
+Design the weekly operating model that keeps enablement content accurate and findable. This is not an inventory. If the team cannot run it every week with the people they have, it is not done.
+
+**Fails.** "Classify all 400 assets, stand up a content council, and review everything quarterly."
+
+**Passes.** "Each Wednesday: owners clear due and overdue reviews, intake picks one request, publishers ship only approved versions. Live assets stay published while overdue for review. Urgent launch changes use a 48-hour exception with a named follow-up owner."
+
+A one-time coverage audit and backlog is `content-gap-analysis`.
 
 ## Confirm Inputs First
 
-- Use supplied current context or relevant sections of `.enablement/context.md` when available. Treat stale, inferred, or conflicted material as provisional; never update shared context silently.
-- Confirm current content repositories and owner landscape.
-- Confirm primary content types in scope.
-- Confirm review, claim-approval, system-write, and publishing authority.
-- Confirm current pain points.
-- Confirm governance audience and decision authority.
-- If inputs are incomplete, ask for only the minimum missing items. Use labeled assumptions only for reversible governance design; keep source-of-truth status, ownership, approvals, dates, and system-write authority unknown until verified.
+Ask only for the inputs that change the operating model:
+
+1. Repositories and content types in scope
+2. Who already owns accuracy, claim approval, and the right to publish
+3. Current pain: sprawl, stale claims, unclear source of truth, or blocked launches
+4. Who will run the weekly cadence, and how much time they actually have
+
+If ownership or system-write authority is unknown, leave it unknown. Do not invent usage.
 
 ## Read The Right Reference
 
-- Read [references/governance-model-template.md](references/governance-model-template.md) when you need lifecycle, ownership, and policy structure.
-- Read [references/source-system-guide.md](references/source-system-guide.md) when governance rules must map into publishing systems and review surfaces.
+Read [references/governance-model-template.md](references/governance-model-template.md) for the two status axes, approval-vs-publish split, and a weekly cadence you can copy. Read [references/source-system-guide.md](references/source-system-guide.md) when the rules must map into publishing systems the team already uses.
 
 ## Default Workflow
 
-1. Define governance scope and decision rights.
-2. Establish a taxonomy that balances discoverability and maintainability.
-3. Use two independent state axes across systems:
-   publication status (`draft`, `in_review`, `approved`, `published`, `retired`) and review status (`current`, `due`, `overdue`, `blocked`).
-4. Define entry, exit, review-trigger, and conditional SLA rules for each axis. A live asset remains `published` while due or overdue for review.
-5. Separate content approval from authorization to publish, relabel, archive, or change permissions in a system.
-6. Define intake and prioritization for new content requests.
-7. Define quality checks for message accuracy, proof, audience, and compliance.
-8. Define canonical-source, version, and distribution-copy rules across systems.
-9. Add an approved, time-boxed exception path for urgent changes.
-10. Define measurable operating metrics and a review cadence.
-11. Scale controls to content risk, change rate, and team capacity; do not create unused roles or gates.
-12. Route adjacent work:
-   For identifying high-impact missing assets, use content-gap-analysis.
-   For generating artifacts, use the relevant content production skill.
+1. Name the weekly job.
+   Who meets or reviews, on which day, and what gets decided. Done when a new owner could run next week without a kickoff project.
+2. Set decision rights.
+   Content approval, publish authorization, and system write are three different rights. A claim owner may approve wording and still lack permission to publish.
+3. Keep two independent axes.
+   Publication: `draft`, `in_review`, `approved`, `published`, `retired`. Review: `current`, `due`, `overdue`, `blocked`. A live asset stays `published` while due or overdue. Review status must not hide it from published denominators.
+4. Trigger review from risk, not a universal calendar.
+   Legal, security, pricing, and product claims review when the source changes or validity ends. Convenience content can wait.
+5. Define intake that matches capacity.
+   One prioritization path for new requests. No shadow queues. Urgent work uses a time-boxed exception that cannot skip legal or security approval.
+6. Name the quality checks that can fail a publish.
+   Message accuracy, proof, audience, compliance. Cosmetic checks that nobody enforces do not go in the model.
+7. Separate canonical source from distribution copies.
+   One content ID and version. Changes happen in the canonical source, then propagate. Do not create a second source of truth to "make it easier to find."
+8. Scale to the team you have.
+   Unused councils, unused gates, and unused metadata fields are failed governance. Measure current-content rate, orphan rate, and review completion — not a usage number you do not have.
 
-## Tool Notes
-
-- Tool-agnostic governance is the default.
-- Optional systems can operationalize workflows:
-  docs platforms, knowledge bases, ticketing tools, and analytics dashboards.
-- Use [references/source-system-guide.md](references/source-system-guide.md) for source-of-truth rules, system risks, and safe implementation boundaries.
-- If tooling is fragmented, define process first and map systems second.
+Do not publish, archive, relabel, or change permissions without explicit approval of the exact targets.
 
 ## Output Contract
 
-- Governance charter with scope and decision rights.
-- Taxonomy and metadata schema.
-- Publication and review-status policies with SLAs and exit criteria.
-- RACI-style ownership map and approval flow.
-- Approval and system-write authorization matrix.
-- Canonical-source, version, distribution, and retirement rules.
-- Intake and prioritization workflow.
-- KPI and cadence plan.
-- Exception workflow for urgent launch or legal/compliance-triggered changes.
-- Assumptions list when source inputs were incomplete.
+Return an operating model the team can run next week:
 
-## What To Avoid
+- Weekly cadence: who does what, on which day, and what "done" means
+- Scope and decision rights, including the approval-vs-publish split
+- Taxonomy and metadata the team will actually maintain
+- Publication and review policies with entry, exit, and SLAs
+- Intake, exception path, and retirement rules
+- Operating metrics that available systems can measure
+- Assumptions, and ownership or usage you refused to invent
 
-- Designing governance that only works for large teams.
-- Blocking urgent launch updates because exception paths are undefined.
-- Treating taxonomy cleanup as governance while ownership remains ambiguous.
-- Treating content approval as permission to change a live system.
-- Using arbitrary review intervals when risk or source changes should trigger review.
+Do not deliver a prioritized gap backlog. That is `content-gap-analysis`.
 
 ## Quality Bar
 
-- Governance model is simple enough to run in the agreed operating cadence.
-- Ownership and decision rights are unambiguous.
-- Publication and review-status names and transitions are identical in the policy, metadata, and mapped systems.
-- Lifecycle rules prevent stale content accumulation.
-- Quality checks are enforceable and not cosmetic.
-- Metrics can be measured with available systems.
+- A named person can run the cadence next week without a cleanup project.
+- Ownership and write authority are unambiguous.
+- Publication and review names match in the policy, the metadata, and the mapped systems.
+- Approval is not treated as permission to change a live system.
+- Urgent launches have an exception path that still protects mandatory approvals.
+- No invented usage or ROI.

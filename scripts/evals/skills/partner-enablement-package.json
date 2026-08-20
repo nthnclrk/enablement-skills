@@ -2,8 +2,8 @@
   "schema_version": 2,
   "skill": "partner-enablement-package",
   "source": "skills/partner-enablement-package/SKILL.md",
-  "notes": "Generated routing and basic-output starter. Curate realistic prompts and example-backed task scenarios before treating it as behavior evidence.",
-  "managed_by": "starter-generator",
+  "notes": "Curated eval for partner-safe packages. Routing keeps partner work off direct-sales onboarding and internal launch kits. Output checks require a partner-facing and internal split.",
+  "managed_by": "curated",
   "should_trigger": [
     {
       "prompt": "Please build partner-ready enablement packages with separated external and internal operator assets, permitted-motion guidance, governed claims, and package-level readiness criteria.",
@@ -33,19 +33,36 @@
       "prompt": "Please build cross-functional launch readiness plans and field-ready launch assets for revenue teams.",
       "expected": false,
       "adjacent_skill": "product-launch-enablement"
+    },
+    {
+      "prompt": "Build the direct-sales AE onboarding pack for new hires on our team. This is not for partners or resellers.",
+      "expected": false,
+      "adjacent_skill": "onboarding-program-builder"
     }
   ],
   "output_structure_checks": [
     {
-      "name": "partner-enablement-package-core-output",
+      "name": "partner-enablement-package-output-01",
       "type": "structure",
-      "description": "Produces Partner-Facing Package, limited to approved and relevant deliverables: positioning/talk track, qualification, handoff, onboarding, support, and readiness guidance; Internal Operator Pack: partner rights and motion, economics/governance, claim and source ledger, restricted-content map, readiness evidence, exceptions, support ownership, and risks.",
+      "description": "Returns a partner-facing package limited to approved messaging, qualification, handoff, and readiness guidance.",
       "critical": true
     },
     {
-      "name": "partner-enablement-package-decision-discipline",
+      "name": "partner-enablement-package-output-02",
+      "type": "structure",
+      "description": "Returns a separate internal operator pack for rights, economics, restricted content, and exceptions.",
+      "critical": true
+    },
+    {
+      "name": "partner-enablement-package-output-03",
       "type": "semantic",
-      "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
+      "description": "Partner-facing material is not a find-replaced direct-sales pack and does not leak internal economics or unapproved claims.",
+      "critical": true
+    },
+    {
+      "name": "partner-enablement-package-output-04",
+      "type": "forbidden_behavior",
+      "description": "Does not invent partner claims, discounts, territories, or readiness states.",
       "critical": true
     }
   ]

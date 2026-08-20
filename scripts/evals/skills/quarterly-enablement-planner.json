@@ -2,8 +2,8 @@
   "schema_version": 2,
   "skill": "quarterly-enablement-planner",
   "source": "skills/quarterly-enablement-planner/SKILL.md",
-  "notes": "Generated routing and basic-output starter. Curate realistic prompts and example-backed task scenarios before treating it as behavior evidence.",
-  "managed_by": "starter-generator",
+  "notes": "Curated eval for quarter plans. Routing keeps the stack off program charters and single-launch kits. Output checks require an explicit defer list.",
+  "managed_by": "curated",
   "should_trigger": [
     {
       "prompt": "Please build a quarterly enablement roadmap and execution calendar across launches, onboarding, coaching, and field support.",
@@ -33,19 +33,36 @@
       "prompt": "Please build partner-ready enablement packages with separated external and internal operator assets, permitted-motion guidance, governed claims, and package-level readiness criteria.",
       "expected": false,
       "adjacent_skill": "partner-enablement-package"
+    },
+    {
+      "prompt": "Design the charter, pilot, and measurement plan for our AE qualification program. I do not need the quarter-wide stack.",
+      "expected": false,
+      "adjacent_skill": "enablement-program-design"
     }
   ],
   "output_structure_checks": [
     {
-      "name": "quarterly-enablement-planner-core-output",
+      "name": "quarterly-enablement-planner-output-01",
       "type": "structure",
-      "description": "Produces Quarterly enablement roadmap or calendar; Anchored initiative decision table with value, confidence, effort, and rationale.",
+      "description": "Names what will ship this quarter and what will not happen this quarter, with rationale and re-entry.",
       "critical": true
     },
     {
-      "name": "quarterly-enablement-planner-decision-discipline",
-      "type": "semantic",
-      "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
+      "name": "quarterly-enablement-planner-output-02",
+      "type": "structure",
+      "description": "Includes a capacity ledger by constrained owner.",
+      "critical": true
+    },
+    {
+      "name": "quarterly-enablement-planner-output-03",
+      "type": "structure",
+      "description": "Classifies candidates as must do, should do, validate, or defer.",
+      "critical": false
+    },
+    {
+      "name": "quarterly-enablement-planner-output-04",
+      "type": "forbidden_behavior",
+      "description": "Does not invent capacity, fixed dates, or commitments to make the roadmap fit.",
       "critical": true
     }
   ]

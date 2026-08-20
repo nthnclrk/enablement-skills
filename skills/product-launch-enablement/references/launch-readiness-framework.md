@@ -1,84 +1,58 @@
-# Launch Readiness Framework
+# Launch readiness judgment
 
-Use this framework to turn launch tiering into evidence-backed gates, role readiness, and a proportionate post-launch review.
+Use this when you are classifying a launch, writing gates, or setting the first review. The skill body has the procedure.
 
-## Launch Control Record
+## The three sentences
 
-Record the decision inputs before planning assets or training:
+Every launch package needs three inspectable sentences: what changed, what did not, and what sellers should stop saying.
 
-| Field | Required detail |
-| --- | --- |
-| Change | Product, packaging, process, eligibility, or commercial change |
-| Audience | Roles, segments, regions, partners, and customer states affected |
-| Availability | Status, effective date, rollout scope, and source as-of date |
-| Behavior change | What each role must start, stop, or do differently |
-| Risk | Customer, commercial, legal, operational, and reversibility risks |
-| Owners | Claim owner, gate decision owner, delivery owner, and escalation owner |
+**Fails.** "Escalation Rules 2.0 is now available. Please enable your teams."
 
-Unknown availability, eligibility, claims, or approval states block distribution-ready guidance. They do not block an internal workplan that keeps those gaps visible.
+**Passes.** "From 20 August, Pro and Enterprise sellers can mention Escalation Rules 2.0 when a buyer inspects overdue handoffs. Existing rules keep running. Stop saying migration happens automatically."
 
-## Tier-Calibrated Depth
+If sentence 3 is missing, sellers keep the old line. Write it even when the change is small.
 
-Use the tier anchors in `SKILL.md`, then scale the response:
+## Tier from consequence
+
+Use the anchors in `SKILL.md`. Breadth scales cohorting, localization, and manager load. It does not pick the tier.
+
+A company-wide awareness update can stay Tier 1. A one-segment pricing or contract change can be Tier 3. When dimensions disagree, take the depth needed to control the material consequence and say why.
+
+Do not lower a tier because capacity is tight. Reduce scope, move timing with the decision owner, or surface the risk.
 
 | Tier | Minimum response |
 | --- | --- |
-| 1 | Targeted seller update, source-linked FAQ change, owner, and normal-cadence inspection |
-| 2 | Role variants, practice or manager reinforcement, cross-functional gates, and an early decision review |
-| 3 | Formal go/no-go ledger, scenario practice, manager calibration, operational readiness, exception path, and frequent early monitoring |
+| 1 | Targeted seller update, source-linked FAQ, owner, normal-cadence inspection |
+| 2 | Role variants, practice or manager reinforcement, cross-functional gates, early decision review |
+| 3 | Formal go/no-go ledger, scenario practice, manager calibration, operational readiness, exception path, frequent early monitoring |
 
-Breadth affects cohorting, localization, facilitator demand, manager load, and reinforcement effort. It does not by itself determine control depth. A broad awareness-only update can remain Tier 1 while still requiring a capacity-aware distribution plan; a narrow pricing, regulatory, contractual, or irreversible change can require Tier 3 controls.
+## Capacity is a decision
 
-Do not lower a tier because delivery capacity is constrained. Reduce scope, change timing with the decision owner, or surface the launch risk.
+Compare audience demand to facilitator, manager, constrained-owner, practice, and support time. Return one of `fits`, `reduce`, `sequence`, or `blocked`, with the binding constraint and owner.
 
-## Capacity Decision
+Capacity does not change the tier. It changes scope, sequence, timing, or the go/no-go. Do not invent hours to make a launch look feasible.
 
-Before marking delivery feasible, compare:
+## Gate evidence
 
-- audience and cohort demand by role or region
-- delivery, practice, manager-inspection, and reinforcement effort
-- constrained-owner throughput and fixed dependencies
-- support, implementation, and change-management load
-
-Return one decision: `fits`, `reduce`, `sequence`, or `blocked`, with the binding constraint and decision owner. Capacity does not change the launch tier; it changes scope, sequence, timing, or the go/no-go decision.
-
-## Gate Ledger
-
-Use one row per decision gate:
+Use one row per gate. A gate is `ready` only when current evidence meets the operational test.
 
 | Gate | Acceptance test | Evidence and as-of date | Claim owner | Decision owner | Status | Blocker or waiver |
 | --- | --- | --- | --- | --- | --- | --- |
 
-Allowed statuses:
+Allowed statuses: `not_assessed`, `blocked`, `ready`, `waived`. A waiver needs an authorized owner, rationale, and expiry.
 
-- `not_assessed`: evidence has not been reviewed
-- `blocked`: the acceptance test is unmet or evidence is missing
-- `ready`: current evidence meets the stated test
-- `waived`: the authorized decision owner accepted the residual risk, with rationale and expiry or review trigger
+An approved FAQ does not make a gate ready when the intake channel, system config, handoff, or response owner is unresolved. Training attendance is not field readiness. Define the observable: accurate explanation, correct qualification, safe claim, or inspected live example.
 
-At minimum, assess product truth, audience and eligibility, approved claims, seller behavior, manager inspection, RevOps/process change, support/escalation, and customer-transition readiness when relevant.
+When practice is required, include a runnable participant prompt, observable success anchors, critical errors, and retry guidance. Naming a future roleplay is not evidence.
 
-Set each acceptance test from the actual operational use. An approved FAQ or source asset does not make a gate ready when the required intake channel, system configuration, handoff, access, or response owner remains unresolved.
+## First decision window
 
-Training attendance alone is not field readiness. Define observable evidence such as an accurate explanation, correct qualification, safe claim use, successful workflow execution, or an inspected live example.
+Set the first review from tier, reversibility, sales or customer cycle, expected signal volume, and operating cadence. High-risk or hard-to-reverse changes need earlier review. Low-volume launches may need a longer evidence window.
 
-When scenario practice is part of the required package, include a runnable participant prompt, facilitator-only facts, observable success anchors, critical errors, and retry guidance. Referencing a future scenario is not completion evidence.
+Use a confirmed cadence. If you designed the rhythm, label it `proposed` and name who confirms it. Do not invent numeric sample thresholds. Define the qualitative condition that would cause continue, adjust, pause, or escalate.
 
-## Post-Launch Decision Loop
+Track only signals that can change a decision: unapproved claims, eligibility errors, message drift, inspection results, support friction, adoption with a denominator.
 
-Set the first decision window from tier, reversibility, sales or customer cycle, expected signal volume, and operating cadence. High-risk or hard-to-reverse changes need earlier and more frequent review; low-volume launches may need a longer evidence window.
+## Thin evidence
 
-Use a confirmed operating cadence where one exists. If the monitoring frequency is designed as part of the plan, label it `proposed`, name who must confirm it, and state what evidence volume would cause the cadence to change.
-
-Use sourced history, an agreed operating rule, or a named decision owner's approval for numeric signal and sample thresholds. Otherwise define the qualitative decision condition and leave the number unresolved.
-
-Track only signals that can change a decision:
-
-- inaccurate or unapproved claims
-- eligibility or workflow errors
-- recurring field questions and message drift
-- manager inspection results
-- support, implementation, or customer friction
-- adoption by eligible role or account, with denominator and source coverage
-
-For each material signal, record evidence, affected slice, severity, owner, response, and the decision to continue, adjust, pause, or escalate. Do not publish updates or change live launch status without explicit approval.
+Unknown dates, eligibility, claims, or approvals block distribution-ready guidance. They do not block an internal workplan that keeps those gaps visible. Do not invent a launch date to make the plan look finished.

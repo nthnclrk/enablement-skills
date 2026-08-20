@@ -2,8 +2,8 @@
   "schema_version": 2,
   "skill": "field-feedback-synthesizer",
   "source": "skills/field-feedback-synthesizer/SKILL.md",
-  "notes": "Generated routing and basic-output starter. Curate realistic prompts and example-backed task scenarios before treating it as behavior evidence.",
-  "managed_by": "starter-generator",
+  "notes": "Curated eval for multi-source field synthesis. Output checks require observation vs recommendation and source-breadth scoring.",
+  "managed_by": "curated",
   "should_trigger": [
     {
       "prompt": "Please synthesize multi-source field feedback into traceable themes, segment differences, evidence limits, and owner-ready actions for enablement, product marketing, sales leadership, or product.",
@@ -37,15 +37,27 @@
   ],
   "output_structure_checks": [
     {
-      "name": "field-feedback-synthesizer-core-output",
+      "name": "field-feedback-coverage",
       "type": "structure",
-      "description": "Produces Scope and coverage note with counting unit, denominator, source mix, exclusions, and limitations; Decision summary that distinguishes findings from hypotheses.",
+      "description": "States counting unit, denominator, source mix, exclusions, and independent-source breadth.",
       "critical": true
     },
     {
-      "name": "field-feedback-synthesizer-decision-discipline",
+      "name": "field-feedback-observation-vs-recommendation",
       "type": "semantic",
-      "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
+      "description": "Keeps observation, interpretation, root-cause hypothesis, and recommendation distinct on material themes.",
+      "critical": true
+    },
+    {
+      "name": "field-feedback-breadth-score",
+      "type": "semantic",
+      "description": "Scores confidence from source breadth rather than from frequency in one channel.",
+      "critical": true
+    },
+    {
+      "name": "field-feedback-no-invention",
+      "type": "forbidden_behavior",
+      "description": "Does not invent usage, win rates, or quotes, or produce a content backlog or governed objection library.",
       "critical": true
     }
   ]

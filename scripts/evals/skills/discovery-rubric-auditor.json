@@ -2,8 +2,8 @@
   "schema_version": 2,
   "skill": "discovery-rubric-auditor",
   "source": "skills/discovery-rubric-auditor/SKILL.md",
-  "notes": "Generated routing and basic-output starter. Curate realistic prompts and example-backed task scenarios before treating it as behavior evidence.",
-  "managed_by": "starter-generator",
+  "notes": "Curated eval for the craft-pass output contract. Routing prompts stay on practitioner language; output checks require the skill's leading test, not a section list.",
+  "managed_by": "curated",
   "should_trigger": [
     {
       "prompt": "Please audit a sample of discovery calls with one consistent rubric and turn portfolio-level patterns into manager-ready coaching priorities.",
@@ -37,15 +37,33 @@
   ],
   "output_structure_checks": [
     {
-      "name": "discovery-rubric-auditor-core-output",
+      "name": "discovery-rubric-auditor-output-01",
       "type": "structure",
-      "description": "Produces Audit Scope: who, what calls, and scoring window; Sample Shape: counts by comparison unit, exclusions, coverage, and material skew.",
+      "description": "Names audit scope and sample shape: counts by comparable unit, exclusions, coverage, and skew.",
       "critical": true
     },
     {
-      "name": "discovery-rubric-auditor-decision-discipline",
+      "name": "discovery-rubric-auditor-output-02",
+      "type": "structure",
+      "description": "Records calibration status, including single-reviewer limits or inter-rater reliability: not established.",
+      "critical": true
+    },
+    {
+      "name": "discovery-rubric-auditor-output-03",
+      "type": "structure",
+      "description": "Reports de-identified results with distributions and a denominator on every aggregate.",
+      "critical": true
+    },
+    {
+      "name": "discovery-rubric-auditor-output-04",
+      "type": "structure",
+      "description": "Separates recurring patterns from one-offs and names a few coaching moves for the next sample.",
+      "critical": true
+    },
+    {
+      "name": "discovery-rubric-auditor-output-05",
       "type": "semantic",
-      "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
+      "description": "Keeps thin or mixed samples directional, does not rank reps from unlike calls, and does not issue a pass/fail.",
       "critical": true
     }
   ]

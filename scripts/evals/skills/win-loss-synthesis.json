@@ -2,8 +2,8 @@
   "schema_version": 2,
   "skill": "win-loss-synthesis",
   "source": "skills/win-loss-synthesis/SKILL.md",
-  "notes": "Generated routing and basic-output starter. Curate realistic prompts and example-backed task scenarios before treating it as behavior evidence.",
-  "managed_by": "starter-generator",
+  "notes": "Curated eval for win-loss synthesis. Output checks require sample shape and evidence vs interpretation before recommendations.",
+  "managed_by": "curated",
   "should_trigger": [
     {
       "prompt": "Please synthesize win-loss interviews, notes, and deal evidence into clear themes and actions.",
@@ -37,15 +37,27 @@
   ],
   "output_structure_checks": [
     {
-      "name": "win-loss-synthesis-core-output",
+      "name": "win-loss-sample-shape",
       "type": "structure",
-      "description": "Produces Findings summary by outcome with top coded themes; Sample-accounting table with population, selection, participation, evidence, exclusions, and denominators.",
+      "description": "Shows sample accounting with eligible population, participation, evidence coverage, exclusions, and denominators before prevalence language.",
       "critical": true
     },
     {
-      "name": "win-loss-synthesis-decision-discipline",
+      "name": "win-loss-evidence-vs-interpretation",
       "type": "semantic",
-      "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
+      "description": "Keeps observed fact, stakeholder-reported reason, contributing factor, and analyst root-cause hypothesis distinct.",
+      "critical": true
+    },
+    {
+      "name": "win-loss-finding-confidence",
+      "type": "structure",
+      "description": "Attaches supporting deals, counterexamples, source mix, and confidence to each material finding.",
+      "critical": true
+    },
+    {
+      "name": "win-loss-no-invention",
+      "type": "forbidden_behavior",
+      "description": "Does not invent win rates, treat interview shares as population prevalence, or publish a battlecard or governed objection library.",
       "critical": true
     }
   ]

@@ -1,62 +1,49 @@
-# Battlecard Template
+# Battlecard judgment
 
-Use this template when the user does not specify a format. Keep unverified claims internal and label them `Unknown` or `Needs verification`.
+Use this when writing or checking a card. The skill body has the procedure.
 
-## 1) Document Control
+## Fit test
 
-- Competitor:
-- Product, edition, and geography:
-- Segment overlap:
-- Use case and deal stage:
-- As-of date:
-- Internal audience:
-- Permitted use:
-- Evidence owner:
+A difference is not an advantage until you can name the buyer constraint it changes.
 
-## 2) Fast Scan
+**Fails.** "We have a modern API. They are legacy."
 
-- Buyer decision:
-- Why this alternative is credible:
-- Most important decision criteria:
-- Recommended posture:
-- Evidence caveat:
+**Passes.** "If the buyer needs same-day plant-floor capture with no warehouse Wi-Fi, we win. If they need a certified SAP connector this quarter, we lose."
 
-## 3) Fit Map
+Qualify out is a first-class row. Cards that never say "do not compete here" are attack sheets.
 
-| Condition | Type | Buyer Consequence | Evidence ID | Recommended Move |
-| --- | --- | --- | --- | --- |
+## Claim types
 
-Use `Win zone`, `Neutral tradeoff`, `Loss risk`, or `Qualify out` for type.
+Keep these apart. Mixing them is the usual failure.
 
-## 4) Discovery Questions
+- Competitor fact: dated, scoped, sourced
+- Buyer perception: what they said, not what is true
+- Deal pattern: what happened in similar deals
+- Internal hypothesis: not for customer use
+- Approved proof: wording a seller may say
 
-| Decision Criterion | Question | What The Answer Changes |
-| --- | --- | --- |
+Buyer and seller reports start as perception.
 
-## 5) Response Paths
+## Response path
 
-| Buyer Concern Or Claim | Clarifying Question | Supported Response | Proof ID | Next Step | Customer-Safe Status |
-| --- | --- | --- | --- | --- | --- |
+Ask which constraint is binding, then respond. A counter without a question is a rebuttal.
 
-Use `Approved`, `Restricted`, `Needs review`, or `Internal only` for customer-safe status.
+Customer-safe status: `Approved`, `Restricted`, `Needs review`, or `Internal only`.
 
-## 6) Landmines And Escalations
+## Thin evidence
 
-| Claim Or Situation | Risk | Safe Handling | Escalation Owner |
-| --- | --- | --- | --- |
+If you cannot date a competitor claim, turn it into a validation question. Return a research brief instead of a definitive card when the ledger is mostly hypotheses.
 
-At minimum, review legal and contractual comparisons, security or compliance assertions, pricing exceptions, confidential information, and implementation guarantees.
+## Optional shape
 
-## 7) Evidence Ledger
+Use only when the user wants a scanned card.
 
-| Evidence ID | Claim Or Finding | Type | Source And Locator | Product Or Market Scope | Source Date | Confidence | Permitted Use |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-
-Use `Competitor fact`, `Buyer perception`, `Deal pattern`, `Internal hypothesis`, or `Approved proof` for type.
-
-## 8) Maintenance
-
-- Evidence gaps:
-- Conflicts:
-- Review trigger:
-- Review owner and date status:
+```text
+As-of / competitor / segment / use case
+Fast scan (decision, posture, caveat)
+Fit map (win / neutral / lose / qualify out)
+Questions (criterion → what the answer changes)
+Responses (concern → diagnose → supported line → proof → next step)
+Landmines
+Evidence ledger
+```

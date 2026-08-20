@@ -3,55 +3,68 @@ name: call-insights-to-objections
 description: Analyze a defined set of sales calls or notes and produce an evidence-backed objection brief by segment, persona, or stage. Use for recurring pushback, proof gaps, and message patterns across multiple conversations. Use call-review-coach for one-call coaching, win-loss-synthesis for outcome-cause research, and objection-library-builder for the governed response asset.
 ---
 
-# Call Insights To Objections
+# Call insights to objections
 
-Turn conversation evidence into prioritized objection themes and specific enablement actions.
+Cluster what buyers actually said across a defined call set. Stop at the brief. The governed library is a different job.
+
+**Fails.** "Approved response: 'Our implementation is proven and low-risk across similar rollouts.'"
+
+**Passes.** "Implementation capacity appeared in 6 of 18 usable discovery calls across 4 accounts. Buyer language: 'we do not have anyone to own the rollout.' Observed consequence: extra validation, not a hard stop. Route the response asset to `objection-library-builder`."
+
+One recorded call is `call-review-coach`. Why deals were won or lost is `win-loss-synthesis`.
 
 ## Confirm Inputs First
 
-- Use current context supplied by the user. If `.enablement/context.md` is available, read only the relevant ICP, persona, stage, and messaging sections. Treat stale, inferred, or conflicted context as provisional and never update it silently.
-- Confirm the question this analysis must answer, the time window, included call types, segments, personas, stages, and available call count.
-- Confirm the source format and metadata coverage: call ID, date, call type or stage, segment, persona, rep or team, and outcome when available.
-- Confirm whether the audience needs a diagnostic brief, a prioritized action backlog, or inputs for a governed objection library.
-- Ask only for missing inputs that would materially change the analysis. Do not force shared-context setup for a self-contained source set.
+Ask only for the inputs that change the clusters:
 
-Use assumptions only to frame reversible analysis choices, such as a proposed grouping. Do not assume source facts, metrics, quotes, commitments, dates, approvals, requirements, outcomes, or customer and product claims. Leave them unknown until verified.
+1. The decision this brief must inform
+2. Time window, call types, segments, personas, and available call count
+3. Source format: transcript, notes, or mixed, plus which metadata exists
+4. Whether the audience needs a diagnostic brief, an action backlog, or inputs for a later library
+
+Do not force shared-context setup for a self-contained source set. Do not invent outcomes, quotes, or usage.
 
 ## Read The Right Reference
 
-- Read [references/objection-coding-framework.md](references/objection-coding-framework.md) before coding objections, counting themes, or assigning evidence confidence.
-- Read [references/source-system-guide.md](references/source-system-guide.md) when pulling evidence from call platforms, shared notes, or message exports.
+Read [references/objection-coding-framework.md](references/objection-coding-framework.md) before you code, count, or assign confidence. Read [references/source-system-guide.md](references/source-system-guide.md) when the evidence comes from a call platform, shared notes, or a message export.
 
 ## Default Workflow
 
-1. **Define the analysis frame.** Record the decision question, inclusion and exclusion rules, time window, slices, source coverage, and unit of analysis before coding.
-2. **Build the evidence register.** Give every eligible conversation a stable source ID and retain the metadata needed to trace each finding. Treat missing or unusable content as missing coverage, not as an objection-free call.
-3. **Code without collapsing too early.** Separate explicit objections, implied concerns, questions, and seller interpretations. Tag the objection type, buyer language, response, observed consequence, and plausible root cause.
-4. **Normalize the counts.** Count a theme once per conversation for prevalence; report additional instances separately when repetition matters. Show the eligible-call denominator and source coverage for every compared slice.
-5. **Cluster and challenge themes.** Merge equivalent wording only when the underlying buyer concern is the same. Keep distinct concerns separate even when the recommended response overlaps.
-6. **Assess impact and confidence.** Base impact on observed consequences such as delay, extra validation, concessions, or a stated decision. Treat root cause and deal impact as hypotheses when the evidence does not establish them.
-7. **Choose an action.** For each priority theme, select the smallest useful response: message clarification, proof asset, product feedback, seller practice, process change, or further research. Name an owner and validation signal; propose a date only when it is not presented as a commitment.
-8. **Check bias and privacy.** Test whether one rep, account, team, or overrepresented slice drives the conclusion. Redact personal or confidential details and keep raw evidence access aligned with its source permissions.
+1. Frame the set.
+   Decision question, inclusion rules, window, slices, and unit of analysis. Done when a reviewer can see which conversations are in and which are out.
+2. Register every eligible conversation.
+   Stable source ID and the metadata needed to trace a finding. Unusable or missing content is missing coverage, not an objection-free call.
+3. Code without collapsing too early.
+   Explicit objection, implied concern, buyer question, and seller interpretation stay separate. Tag type, buyer language, response, observed consequence, and a root-cause hypothesis.
+4. Count once per conversation for prevalence.
+   Extra mentions are intensity, not a bigger sample. Show the eligible-call denominator and unique-account breadth on every compared slice.
+5. Cluster the same concern, not the same wording.
+   Merge only when the underlying buyer issue is the same. Keep distinct concerns separate even when the later response would overlap.
+6. Score impact from what happened on the call.
+   Blocking, material friction, open concern, or unknown. Deal impact and root cause stay hypotheses unless the evidence establishes them.
+7. Recommend the smallest next action.
+   Message clarification, proof, product feedback, seller practice, process, or more research. Owner and validation signal. Do not write approved response language.
+8. Check concentration and privacy.
+   One rep, account, or team must not silently drive the conclusion. Redact what a broad audience should not see.
 
-## Tool Notes
-
-- Work from transcripts, detailed notes, or structured exports; do not require proprietary platform scores.
-- Preserve source IDs and as-of dates through analysis. Use excerpts only where access and confidentiality rules permit.
-- Do not write findings back to a system, publish messaging, or attribute performance to an individual without explicit approval and appropriate evidence.
+Do not write findings back to a system or publish messaging without explicit approval.
 
 ## Output Contract
 
-- `Scope And Coverage`: decision question, inclusion rules, eligible and usable calls, unique account and rep or team coverage, metadata gaps, and represented slices.
-- `Objection Register`: theme, buyer wording summary, call count and denominator, affected slices, observed consequence, confidence, and source IDs.
-- `Evidence Pack`: short, redacted excerpts or precise paraphrases, clearly labeled, with source metadata.
-- `Action Backlog`: recommended response, rationale, owner, priority, validation signal, and any dependency.
-- `Blind Spots`: missing coverage, conflicts, likely biases, and questions that require more evidence.
+Return a brief enablement can act on without pretending it is a library:
+
+- Scope and coverage: question, inclusion rules, eligible vs usable calls, account and rep breadth, metadata gaps
+- Objection register: theme, buyer wording, count and denominator, slices, observed consequence, confidence, source IDs
+- Evidence pack: short redacted excerpts or labeled paraphrases
+- Action backlog: response type, owner, validation signal — not approved copy
+- Blind spots: missing coverage, conflicts, and what would change the ranking
+
+Do not produce the governed objection library. That is `objection-library-builder`.
 
 ## Quality Bar
 
-- Make every material finding traceable to source evidence and distinguish quotes from paraphrases.
-- Do not present uneven samples, missing transcripts, or repeated mentions within one call as broad prevalence.
-- Separate observed buyer language, analyst interpretation, root-cause hypothesis, and recommendation.
-- Compare segments, personas, or stages only when their denominators and source quality are visible.
-- Keep isolated signals visible without promoting them to recurring themes.
-- Produce actions specific enough to assign, test, and review.
+- Recurring means at least two independent accounts, unless the user set a different rule.
+- Buyer language, analyst interpretation, and recommendation are not the same sentence.
+- Isolated signals stay visible without being promoted to themes.
+- No invented outcomes, win rates, or approved responses.
+- A reader can trace every material theme to source IDs.

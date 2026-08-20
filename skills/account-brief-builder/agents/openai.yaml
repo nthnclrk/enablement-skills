@@ -1,4 +1,4 @@
 interface:
   display_name: "Account Brief Builder"
-  short_description: "Build evidence-led account decision briefs"
-  default_prompt: "Use $account-brief-builder to prepare an evidence-led account brief with stakeholder gaps, risks, and decision-ready next actions."
+  short_description: "One-decision account brief, not a wiki"
+  default_prompt: "Use $account-brief-builder to prepare an account brief for one decision moment, with stakeholder gaps, risks, and the next actions that resolve it."

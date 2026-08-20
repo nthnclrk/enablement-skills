@@ -2,8 +2,8 @@
   "schema_version": 2,
   "skill": "onboarding-to-value-playbook",
   "source": "skills/onboarding-to-value-playbook/SKILL.md",
-  "notes": "Generated routing and basic-output starter. Curate realistic prompts and example-backed task scenarios before treating it as behavior evidence.",
-  "managed_by": "starter-generator",
+  "notes": "Curated eval for customer first-value playbooks. Routing cases stay on customer onboarding, not seller ramp. Output checks require first value distinct from activation.",
+  "managed_by": "curated",
   "should_trigger": [
     {
       "prompt": "Please build customer onboarding-to-value playbooks that get customers to observable first value and reduce early churn risk.",
@@ -20,32 +20,50 @@
   ],
   "should_not_trigger": [
     {
-      "prompt": "Please build role-based ramp plans that help new hires become productive faster through job-critical practice, evidence checkpoints, and manager coaching.",
+      "prompt": "Build a 30-60-90 ramp plan that helps new AEs become productive through job-critical practice and manager coaching.",
       "expected": false,
       "adjacent_skill": "onboarding-program-builder"
     },
     {
-      "prompt": "Please build mutual action plans for complex deals and coordinated customer initiatives.",
+      "prompt": "Build a mutual action plan for this complex customer implementation.",
       "expected": false,
       "adjacent_skill": "mutual-action-plan-builder"
     },
     {
-      "prompt": "Please build customer-facing QBR and EBR deliverables that align customer goals, business outcomes, decisions, risks, and next steps.",
+      "prompt": "Build a customer-facing QBR that aligns outcomes, risks, and next steps for this account.",
       "expected": false,
       "adjacent_skill": "qbr-ebr-builder"
     }
   ],
   "output_structure_checks": [
     {
-      "name": "onboarding-to-value-playbook-core-output",
+      "name": "onboarding-to-value-playbook-output-01",
       "type": "structure",
-      "description": "Produces Onboarding-to-value journey map with milestones and owners; Customer-visible onboarding plan.",
+      "description": "Defines a first-value event with actor, observable result, evidence source, and who confirms it.",
       "critical": true
     },
     {
-      "name": "onboarding-to-value-playbook-decision-discipline",
+      "name": "onboarding-to-value-playbook-output-02",
       "type": "semantic",
-      "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
+      "description": "Keeps activation and setup distinct from first value and does not treat login or kickoff as value unless that is the agreed outcome.",
+      "critical": true
+    },
+    {
+      "name": "onboarding-to-value-playbook-output-03",
+      "type": "structure",
+      "description": "Includes a time-to-value clock with start event, end event, pauses, and owner, plus a segment-aware milestone map.",
+      "critical": true
+    },
+    {
+      "name": "onboarding-to-value-playbook-output-04",
+      "type": "structure",
+      "description": "Separates the customer-visible plan from the internal risk and escalation view.",
+      "critical": false
+    },
+    {
+      "name": "onboarding-to-value-playbook-output-05",
+      "type": "forbidden_behavior",
+      "description": "Does not invent TTV targets, usage metrics, SLAs, or pricing, and does not produce a seller ramp plan.",
       "critical": true
     }
   ]

@@ -2,8 +2,8 @@
   "schema_version": 2,
   "skill": "release-notes-to-seller-updates",
   "source": "skills/release-notes-to-seller-updates/SKILL.md",
-  "notes": "Generated routing and basic-output starter. Curate realistic prompts and example-backed task scenarios before treating it as behavior evidence.",
-  "managed_by": "starter-generator",
+  "notes": "Curated eval for field-usable seller updates. Routing keeps channel updates off full launch kits. Output checks require channel-ready copy, not a launch plan.",
+  "managed_by": "curated",
   "should_trigger": [
     {
       "prompt": "Please convert product or engineering release notes into concise field updates with customer impact, positioning implications, and action guidance.",
@@ -33,19 +33,36 @@
       "prompt": "Please build partner-ready enablement packages with separated external and internal operator assets, permitted-motion guidance, governed claims, and package-level readiness criteria.",
       "expected": false,
       "adjacent_skill": "partner-enablement-package"
+    },
+    {
+      "prompt": "Build the full launch kit for this release: training plan, go/no-go gates, owner matrix, and a post-launch adoption review.",
+      "expected": false,
+      "adjacent_skill": "product-launch-enablement"
     }
   ],
   "output_structure_checks": [
     {
-      "name": "release-notes-to-seller-updates-core-output",
+      "name": "release-notes-to-seller-updates-output-01",
       "type": "structure",
-      "description": "Produces Change register with releasestatus, effectivedate, selleraction, actionowner, source, and source as-of date; Asset-impact table with current version, disposition and exact change when verified; otherwise current asset not supplied, candidate impact, owner, and evidence needed.",
+      "description": "Produces a change register with status, date or unknown, seller action, owner, and source.",
       "critical": true
     },
     {
-      "name": "release-notes-to-seller-updates-decision-discipline",
+      "name": "release-notes-to-seller-updates-output-02",
+      "type": "structure",
+      "description": "States who the update is for, customer impact, what to say, and what not to say.",
+      "critical": true
+    },
+    {
+      "name": "release-notes-to-seller-updates-output-03",
+      "type": "structure",
+      "description": "States what did not change.",
+      "critical": true
+    },
+    {
+      "name": "release-notes-to-seller-updates-output-04",
       "type": "semantic",
-      "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
+      "description": "Channel variants are rewrites for the requested channel, not a launch plan with training, gates, or an owner matrix.",
       "critical": true
     }
   ]

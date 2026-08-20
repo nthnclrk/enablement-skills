@@ -3,76 +3,68 @@ name: release-notes-to-seller-updates
 description: Convert product or engineering release notes into concise field updates with customer impact, positioning implications, and action guidance. Use when asked to summarize releases for sales, update talk tracks after product changes, or create enablement-ready release briefs. Route full launch enablement to product-launch-enablement and public-facing release notes to the user's external marketing or product comms workflow.
 ---
 
-# Release Notes To Seller Updates
+# Release notes to seller updates
 
-Turn product release details into field updates that clarify why the change matters, who it matters to, and how to use it.
+Turn a release note into a field-usable update for the channel that will carry it. If it reads like a launch plan, rewrite it.
+
+A seller update is one change, one audience, one next action. Training plans, go/no-go ledgers, and owner matrices belong in `product-launch-enablement`.
+
+**Field-usable.** "From 18 August, Pro and Enterprise can opt into Escalation Rules 2.0. Mention it when a buyer inspects overdue handoffs. Do not pitch it to Starter."
+
+**Launch plan.** "Here is the training plan, go/no-go ledger, owner matrix, and 30-day adoption review."
+
+If a seller has to open another doc to know what to say today, it is not done.
 
 ## Confirm Inputs First
 
-- Use supplied current context or relevant sections of `.enablement/context.md` when available. Treat stale, inferred, or conflicted material as provisional; never update shared context silently.
-- Confirm the source material: release notes, changelog, product spec, internal memo, or engineering update.
-- Confirm the audience: AEs, SDRs, SEs, managers, CS, or a mixed revenue audience.
-- Confirm whether the change is net-new capability, iteration, packaging change, bug fix, or deprecation.
-- For each change, confirm `release_status` (`planned`, `rolling-out`, `available`, `paused`, `rolled-back`, or `deprecated`), `effective_date` with timezone and rollout scope, `seller_action`, `action_owner`, and `source` with its as-of date.
-- Confirm known target segments, affected use cases, and likely field questions.
-- Confirm the affected current asset inventory, version, owner, and source for talk tracks, FAQs, battlecards, demos, or playbooks when an asset disposition is requested.
-- Confirm whether the user needs a quick summary, talk-track update, FAQ update, or manager briefing.
+Ask only for the inputs that change the update:
 
-If inputs are incomplete, ask for only the highest-impact gaps. Use labeled assumptions only for reversible packaging choices; leave release status, effective dates, availability, eligibility, actions, owners, and claims unknown until verified.
+1. The source notes, spec, or changelog
+2. Who must act, and which channel carries the update
+3. Known status, effective date, and eligibility
+4. Current talk tracks, FAQs, or battlecards only if they asked for a diff
+
+If status or date is missing, leave it unknown. Do not invent launch dates, availability, or claims.
 
 ## Read The Right Reference
 
-- Read [references/release-transformation-guide.md](references/release-transformation-guide.md) for transformation rules and seller-language guardrails.
-- Read [references/source-system-guide.md](references/source-system-guide.md) when the source or distribution layer depends on shared docs, Slack, or enablement platforms.
+Read [references/release-transformation-guide.md](references/release-transformation-guide.md) for the field-usable test, status rules, and channel rewrite. Read [references/source-system-guide.md](references/source-system-guide.md) when the source or destination is Slack, a wiki, or an enablement platform.
 
 ## Default Workflow
 
 1. Build the factual change record.
-Separate product facts from seller implications. Do not treat code complete, announced, or partially rolled out as generally available; preserve the exact release status and effective date.
-2. Identify who should care.
-Call out the personas, segments, eligibility rules, or use cases affected.
-3. Diff the field assets.
-Compare the new facts with supplied current talk tracks, FAQs, battlecards, demos, and playbooks. Only then mark an asset `create`, `update`, `no-change`, or `retire`, with exact section, owner, and effective date. If the current asset or version was not supplied, return a candidate-impact row marked `current asset not supplied`; do not invent a disposition or exact diff.
-4. Translate into field language.
-Write the customer impact, qualification cues, approved proof, likely objections, and the action sellers should take after the effective date.
-5. State what did not change.
-Prevent confusion by saying what the release does not affect.
-6. Package it for the audience and channel.
-Adjust depth and urgency for AEs, SDRs, SEs, managers, or CS, then return something they can read quickly and apply immediately.
+   Separate product facts from seller implications. Code complete, announced, or partially rolled out is not generally available. Done when each change has status, date or `unknown`, eligibility, and source.
+2. Decide who should care.
+   Personas, segments, editions, or use cases that change. Routine fixes with no field action stay in a one-line digest or drop out. Done when you can name who acts and who can ignore it.
+3. Translate into field language.
+   Customer impact, when to mention it, the qualification cue, the action after the effective date, and approved proof only if you have it. Done when a seller can use it without opening the engineering notes.
+4. State what did not change.
+   What still works the old way. What this release does not allow. The line sellers should stop using if the old line is now wrong.
+5. Package it for the requested channel.
+   Slack, email, wiki, and manager briefing are different lengths of the same facts. Rewrite; do not paste. Done when each requested variant can be sent as-is after human approval.
+6. Diff current assets only if asked.
+   Mark `create`, `update`, `no_change`, or `retire` with section, owner, and date. If the current asset was not supplied, write `current asset not supplied`. Do not invent a disposition.
 
-## Tool Notes
-
-- Keep the workflow tool-agnostic by default.
-- Use [references/source-system-guide.md](references/source-system-guide.md) for channel selection, minimum pull guidance, and safe distribution boundaries.
-- Treat those systems as accelerators, not hard dependencies.
-- If the change is still ambiguous or the source notes are incomplete, preserve uncertainty instead of over-translating.
+For a full launch kit use `product-launch-enablement`. For partner-facing wording use `partner-enablement-package`.
 
 ## Output Contract
 
-Default to these deliverables unless the user asks for a narrower output:
+Return something the named audience can use in the named channel:
 
-- Change register with `release_status`, `effective_date`, `seller_action`, `action_owner`, `source`, and source as-of date
-- Asset-impact table with current version, disposition and exact change when verified; otherwise `current asset not supplied`, candidate impact, owner, and evidence needed
-- Seller summary with customer impact
-- Audience and use-case guidance
-- Talk-track changes or talking points
-- FAQ or objection notes
-- Risks, caveats, and what still needs clarification
-- Variant-ready copies for requested channels:
-  Slack, email, wiki, or manager briefing
+- Change register with status, date or `unknown`, seller action, owner, and source
+- Seller summary: who it is for, customer impact, what to say, what not to say
+- What did not change
+- Channel variants only for the channels they asked for
+- Asset-impact rows only when a diff was requested
+- Open questions and caveats
 
-## What To Avoid
-
-- Translating technical changes without stating customer-facing impact.
-- Mixing internal uncertainty with confident seller guidance.
-- Publishing one format and expecting it to work for every channel.
+Do not add training plans, go/no-go gates, or an owner matrix. Do not publish.
 
 ## Quality Bar
 
-- Updates are short enough to use quickly and specific enough to change field behavior.
-- Release status, effective date, action, owner, and source are explicit and traceable.
-- Seller instructions do not get ahead of customer availability or approved claims.
+- A seller can act from the named channel without another doc.
+- The update refused to become a launch plan.
+- Status and date match the source, or are marked unknown.
 - Customer impact is clearer than feature mechanics.
-- Talk-track guidance is accurate and avoids overstating the change.
-- Unknowns and caveats are labeled instead of guessed.
-- Output helps revenue teams act, not just stay informed.
+- Each channel variant is a rewrite, not a paste.
+- No invented dates, eligibility, proof, or asset dispositions.

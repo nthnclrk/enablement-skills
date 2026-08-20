@@ -2,7 +2,7 @@
   "schema_version": 2,
   "skill": "product-launch-enablement",
   "source": "skills/product-launch-enablement/SKILL.md",
-  "notes": "Curated eval focused on internal field readiness and cross-functional launch execution.",
+  "notes": "Curated eval for launch readiness. Routing keeps launch kits off release-note and quarter-plan prompts. Output checks require what changed, what did not, and what sellers should stop saying.",
   "managed_by": "curated",
   "should_trigger": [
     {
@@ -33,37 +33,42 @@
       "prompt": "Create a partner enablement package for channel reps with certification and co-sell guidance.",
       "expected": false,
       "adjacent_skill": "partner-enablement-package"
+    },
+    {
+      "prompt": "Turn this changelog into a four-line Slack update sellers can use today. I do not need training, gates, or an owner matrix.",
+      "expected": false,
+      "adjacent_skill": "release-notes-to-seller-updates"
     }
   ],
   "output_structure_checks": [
     {
       "name": "product-launch-enablement-output-01",
       "type": "structure",
-      "description": "The output substantively includes: A proportionate launch tier and readiness matrix; breadth affects delivery scale but does not alone force Tier 3 controls",
+      "description": "States what changed, what did not, and what sellers should stop saying.",
       "critical": true
     },
     {
       "name": "product-launch-enablement-output-02",
       "type": "structure",
-      "description": "The output substantively includes: Cross-functional owner and handoff matrix",
+      "description": "Names a launch tier with a one-sentence rationale from consequence, not audience size.",
       "critical": true
     },
     {
       "name": "product-launch-enablement-output-03",
       "type": "structure",
-      "description": "The output substantively includes: Internal launch narrative and FAQ",
-      "critical": false
+      "description": "Includes a cross-functional owner and handoff matrix.",
+      "critical": true
     },
     {
       "name": "product-launch-enablement-output-04",
       "type": "structure",
-      "description": "The output substantively includes: Training and reinforcement plan plus any required runnable practice scenarios with observable anchors and critical errors",
+      "description": "Returns a capacity decision of fits, reduce, sequence, or blocked.",
       "critical": false
     },
     {
       "name": "product-launch-enablement-output-05",
       "type": "structure",
-      "description": "The output substantively includes: A justified first post-launch decision window and monitoring rhythm based on launch tier, reversibility, evidence volume, sales cycle, and confirmed or explicitly proposed operating cadence",
+      "description": "Includes evidence-backed gates or an explicit first decision window with a confirmation owner when cadence is unconfirmed.",
       "critical": false
     }
   ],
@@ -80,7 +85,7 @@
         {
           "name": "launch-enablement-package",
           "type": "structure",
-          "description": "Includes launch tier, audience narrative, required field assets, runnable practice scenarios, evidence-backed readiness gates, training, and a first decision window justified by tier, reversibility, evidence volume, sales cycle, and operating cadence.",
+          "description": "Includes what changed, what did not, what sellers should stop saying, launch tier, role actions, evidence-backed gates, and a first decision window.",
           "critical": true
         },
         {
@@ -90,9 +95,15 @@
           "critical": true
         },
         {
+          "name": "launch-enablement-stop-saying",
+          "type": "semantic",
+          "description": "Tells sellers to stop saying existing rules upgrade automatically, matching the conflicting draft claim.",
+          "critical": true
+        },
+        {
           "name": "launch-enablement-no-false-readiness",
           "type": "forbidden_behavior",
-          "description": "Rejects the conflicting auto-upgrade claim, does not invent numeric monitoring thresholds, and does not mark unapproved content ready or published.",
+          "description": "Rejects the conflicting auto-upgrade claim, does not invent numeric monitoring thresholds or launch dates, and does not mark unapproved content ready or published.",
           "critical": true
         }
       ]

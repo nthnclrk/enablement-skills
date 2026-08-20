@@ -3,68 +3,66 @@ name: partner-enablement-package
 description: Build partner-ready enablement packages with separated external and internal operator assets, permitted-motion guidance, governed claims, and package-level readiness criteria. Use for partner training, reseller onboarding, channel talk tracks, or partner launch support. Route formal pass/fail certification design to certification-program-builder, then incorporate its governed artifact; route direct-sales onboarding to onboarding-program-builder and internal-only launch enablement to product-launch-enablement.
 ---
 
-# Partner Enablement Package
+# Partner enablement package
 
-Create a partner enablement package that helps external sellers represent the product accurately and consistently.
+Build a partner-safe package. If it is a copied direct-sales pack, rewrite it.
+
+Partners get only what they may say and do under the agreement. Channel managers get the economics, conflict rules, and restricted proof in a separate internal pack.
+
+**Partner-safe.** "You may position MosaicOps to mid-market ops buyers and register the lead. You may not quote discount, promise custom ERP, or share the four-customer pilot."
+
+**Copied pack.** The AE battlecard, our win rate versus Competitor X, and the Q3 discount grid, with "partner" find-replaced in.
+
+If a partner could quote an internal number after reading it, it is not done. The channel manager's file can hold that number; the partner's file cannot.
 
 ## Confirm Inputs First
 
-- Use supplied current context or relevant sections of `.enablement/context.md` when available. Treat stale, inferred, or conflicted material as provisional; never update shared context silently.
-- Confirm the partner type and motion: referral, reseller, services, marketplace, or channel.
-- Confirm contractual rights, territory, product access, delivery responsibilities, and allowed customer interactions.
-- Confirm the product scope, target use cases, and target customer segment.
-- Confirm what the partner must be able to do after enablement: position, qualify, demo, sell, or support handoff.
-- Confirm the packaging needed: onboarding guide, talk track, deck outline, certification guidance, launch update, or all of the above.
-- Confirm co-sell economics and governance constraints: lead registration, split rules, discount authority, and conflict escalation.
-- Confirm known partner constraints, such as limited product access, services expectations, or compliance boundaries.
-- Confirm approved source-of-truth assets, claims, proof, branding, and customer references partners are allowed to use.
-- Confirm readiness evidence, assessor/owner, remediation path, and any contractual or launch gate.
+Ask only for the inputs that change the package:
 
-If critical inputs are missing, ask for the smallest missing set. Labeled assumptions may shape the internal workplan, but must not appear in partner-facing claims, economics, rights, readiness status, or customer commitments.
+1. Partner type and what they are actually allowed to do
+2. The job after enablement: position, qualify, demo, sell, or hand off
+3. Approved partner-facing claims, proof, and branding
+4. What must stay internal: economics, discounts, account strategy, restricted proof
+
+If a right, claim, or economic rule is missing, leave it unknown. Do not invent partner claims, discounts, territories, or readiness.
 
 ## Read The Right Reference
 
-- Read [references/partner-package-blueprint.md](references/partner-package-blueprint.md) before defining permitted-motion variants, readiness evidence, and co-sell controls.
+Read [references/partner-package-blueprint.md](references/partner-package-blueprint.md) for the copy-paste tell, claim classification, and the partner-facing versus internal split. Skip it if they already handed you a classified source list and only want assembly.
 
 ## Default Workflow
 
-1. Define the permitted partner motion.
-Map what this partner may position, qualify, demonstrate, sell, deliver, support, and hand off under the agreement and operating model.
-2. Classify sources and claims.
-Mark each item `partner_safe`, `internal_only`, or `unverified`; preserve approved wording, audience, owner, version, and review trigger.
-3. Define observable readiness.
-Specify the task, evidence, standard, assessor, scope, remediation path, and change trigger for each required capability.
-When readiness is a formal or consequential pass/fail decision, use `certification-program-builder` for standards, behavior anchors, assessor calibration, retakes, accommodations, and appeals; consume that approved artifact here rather than recreating it.
-4. Build the partner-facing package.
-Include only the approved messaging, proof, qualification, handoff, support, and learning assets required for the permitted motion.
-5. Build the internal operator pack separately.
-Keep economics, lead ownership, discount authority, conflict rules, readiness evidence, restricted content, exceptions, and support obligations internal unless explicitly approved for partner release.
-6. Review claims and boundaries.
-Block unverified claims, unsupported commitments, expired assets, and content outside the partner's rights or readiness scope.
-7. Package for delivery.
-Return clearly separated partner-facing and internal artifacts with approval status and unresolved blockers.
+1. Define the permitted motion.
+   Map what this partner may position, qualify, demonstrate, sell, deliver, and hand off. Partner type is context, not permission. Done when each activity has a scope, a prohibited commitment, and a handoff owner.
+2. Classify every source.
+   Mark `partner_safe`, `internal_only`, or `unverified`. Direct-seller approval does not approve partner use. Done when nothing unverified sits in a partner-facing artifact.
+3. Build the partner-facing package from `partner_safe` only.
+   Positioning, qualification, handoff, approved proof, and the learning they need for this motion. Cut anything a direct AE uses that this partner cannot defend.
+4. Build the internal operator pack separately.
+   Rights, lead registration, split rules, discount authority, conflict escalation, restricted content, exceptions, and support obligations. Never nest this inside a partner document.
+5. Define observable readiness.
+   Task, evidence, standard, assessor, remediation. Attendance is not ready. If the decision is a formal pass/fail, use `certification-program-builder` and consume that artifact; do not recreate it.
+6. Review the boundary.
+   Block unverified claims, expired assets, and content outside this partner's rights. Done when a channel manager can hand the external file to a partner without redacting.
 
-## Tool Notes
-
-- Keep the default workflow tool-agnostic.
-- If the user already works in PRM, LMS, Docs, or partner portals, use those systems as delivery channels rather than as workflow requirements.
-- If direct partner data is limited, work from existing direct-sales materials and clearly label what still needs partner validation.
-- Do not publish to a portal, change partner access/readiness status, or send materials externally without explicit user approval.
+For direct-hire ramp use `onboarding-program-builder`. For an internal-only launch kit use `product-launch-enablement`.
 
 ## Output Contract
 
-- `Partner-Facing Package`, limited to approved and relevant deliverables: positioning/talk track, qualification, handoff, onboarding, support, and readiness guidance.
-- `Internal Operator Pack`: partner rights and motion, economics/governance, claim and source ledger, restricted-content map, readiness evidence, exceptions, support ownership, and risks.
-- Approval/readiness status and unresolved blockers for each deliverable.
+Return two artifacts, labeled as such:
+
+- Partner-facing package: permitted motion, approved messaging, qualification, handoff, and readiness guidance
+- Internal operator pack: rights, economics, claim ledger, restricted-content map, exceptions, and support ownership
+- Approval status and blockers on each deliverable
+
+Do not merge the two files. Do not publish, change portal access, or mark a partner ready without explicit approval.
 
 ## Quality Bar
 
-- Package is usable by real partners, not copied directly from internal sales enablement.
-- Messaging is accurate, bounded, and safe for external use.
-- Every external claim is approved for the partner audience and traceable to a current source.
-- Readiness is based on observable evidence for the permitted scope, not training completion alone.
-- Qualification, escalation, and handoff logic are explicit.
-- Assets match the partner motion and level of product access.
-- Restricted internal-only information is clearly separated from partner-safe material.
-- No internal economics, account strategy, restricted proof, or unapproved commitment leaks into partner-facing artifacts.
-- Output avoids channel theater and focuses on partner execution.
+- A partner can execute the permitted motion without seeing internal economics.
+- A channel manager can operate the motion from the internal pack.
+- The package refused to be a find-replaced AE kit.
+- Every external claim is approved for this partner audience, or is absent.
+- Readiness is an observed task, not a completion checkbox.
+- Qualification, escalation, and handoff owners are named.
+- No invented claims, discounts, territories, or readiness states.

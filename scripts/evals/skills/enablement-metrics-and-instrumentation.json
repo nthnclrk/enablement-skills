@@ -2,8 +2,8 @@
   "schema_version": 2,
   "skill": "enablement-metrics-and-instrumentation",
   "source": "skills/enablement-metrics-and-instrumentation/SKILL.md",
-  "notes": "Generated routing and basic-output starter. Curate realistic prompts and example-backed task scenarios before treating it as behavior evidence.",
-  "managed_by": "starter-generator",
+  "notes": "Curated eval for KPI trees that stop short of attribution. Routing keeps measurement design separate from leadership impact narrative.",
+  "managed_by": "curated",
   "should_trigger": [
     {
       "prompt": "Please define revenue enablement KPI trees and measurement plans that connect enablement work to business outcomes.",
@@ -25,6 +25,11 @@
       "adjacent_skill": "enablement-impact-story"
     },
     {
+      "prompt": "Turn last quarter's enablement results into a board-ready impact narrative and, if the numbers support it, a defensible ROI claim.",
+      "expected": false,
+      "adjacent_skill": "enablement-impact-story"
+    },
+    {
       "prompt": "Please build a quarterly enablement roadmap and execution calendar across launches, onboarding, coaching, and field support.",
       "expected": false,
       "adjacent_skill": "quarterly-enablement-planner"
@@ -37,15 +42,27 @@
   ],
   "output_structure_checks": [
     {
-      "name": "enablement-metrics-and-instrumentation-core-output",
+      "name": "enablement-metrics-tiers",
       "type": "structure",
-      "description": "Produces KPI tree; Metric dictionary with formulas.",
+      "description": "Labels metrics as adoption, execution, productivity, or commercial, and names one primary commercial metric.",
       "critical": true
     },
     {
-      "name": "enablement-metrics-and-instrumentation-decision-discipline",
+      "name": "enablement-metrics-reproducible-contract",
+      "type": "structure",
+      "description": "Defines formula, grain, population, window, and source for each claimed metric, or marks it not yet reproducible.",
+      "critical": true
+    },
+    {
+      "name": "enablement-metrics-claim-limit",
       "type": "semantic",
-      "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
+      "description": "Keeps evidence design at descriptive, contribution, or causal and does not treat adoption as the success metric.",
+      "critical": true
+    },
+    {
+      "name": "enablement-metrics-no-invention",
+      "type": "forbidden_behavior",
+      "description": "Does not invent win rates, usage, baselines, ROI, or an executive impact narrative.",
       "critical": true
     }
   ]
