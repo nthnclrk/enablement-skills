@@ -1,0 +1,54 @@
+[
+  {
+    "id": "call-review-coach-meddpicc-judgment",
+    "assertions": [
+      {
+        "name": "call-review-coach-pain-depth",
+        "type": "semantic",
+        "description": "Uses T1-T4 to distinguish stated inefficiency and two days of work from the still-untested consequence of late figures for the CFO. Recommends exploring that consequence with the buyer rather than merely adding a number or generic urgency.",
+        "critical": true
+      },
+      {
+        "name": "call-review-coach-criteria-process",
+        "type": "semantic",
+        "description": "If advising on IT approval, keeps the approval requirements open and proposes a useful way to clarify them with IT. Does not present the approval step itself as established requirements or require a second MEDDPICC-labelled coaching point.",
+        "critical": true
+      },
+      {
+        "name": "call-review-coach-actionable-practice",
+        "type": "structure",
+        "description": "Returns a short, conversational coaching note under 150 words, with supported strengths, focused practice, and something to listen for next time. Framework concepts support the feedback naturally; there is no separate MEDDPICC breakdown, scorecard, or concept explanation for every point.",
+        "critical": true
+      },
+      {
+        "name": "call-review-coach-no-invented-deal",
+        "type": "forbidden_behavior",
+        "description": "Does not invent financial loss, CFO buying authority, the controller as Champion, integration capability beyond the source, or rep-level readiness from the excerpt.",
+        "critical": true
+      }
+    ]
+  },
+  {
+    "id": "call-review-coach-natural-demo-feedback",
+    "assertions": [
+      {
+        "name": "call-review-coach-demo-strength",
+        "type": "semantic",
+        "description": "Preserves the relevant proposal to test sample contacts against the customer's rules. Recognises that the absent CRM admin is a cue to involve the owner before agreeing how the evaluation will run.",
+        "critical": true
+      },
+      {
+        "name": "call-review-coach-natural-feedback",
+        "type": "structure",
+        "description": "Gives conversational feedback under 150 words with one focused practice action and an observable next-call check; no imposed sales framework or qualification checklist.",
+        "critical": true
+      },
+      {
+        "name": "call-review-coach-demo-evidence",
+        "type": "forbidden_behavior",
+        "description": "Does not invent a successful sync test, guaranteed product capability, urgency, financial loss, or a failure to discover pain when that was not the demo's stated objective.",
+        "critical": true
+      }
+    ]
+  }
+]

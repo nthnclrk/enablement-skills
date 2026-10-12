@@ -35,7 +35,10 @@ jobs:
             exit 0
           fi
           claude plugin validate --strict .
+          claude plugin validate --strict skills/
           for plugin_dir in plugins/*; do
             [[ -d "${plugin_dir}" ]] || continue
-            claude plugin validate --strict "${plugin_dir}"
+            # The CLI warns instead of following bundle symlinks. The repository
+            # validator checks their targets; the real skills are checked above.
+            claude plugin validate "${plugin_dir}"
           done

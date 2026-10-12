@@ -50,6 +50,11 @@ Assertions use `name`, `type`, `description`, and `critical`. They are
 declarations for a future runner; this repository validator does not execute
 them.
 
+Apply full-deliverable checks only when that deliverable was requested. A focused
+revision should preserve the relevant evidence and decision rules without
+recreating every section. Include clean-input controls to check that useful
+wording survives an edit.
+
 ## Curating A Starter
 
 Generated starters are compact routing and basic-output scaffolds, not executed

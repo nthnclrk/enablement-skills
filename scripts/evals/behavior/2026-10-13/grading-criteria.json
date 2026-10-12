@@ -1,0 +1,77 @@
+[
+  {
+    "id": "call-review-coach-meddpicc-judgment",
+    "assertions": [
+      {
+        "name": "call-review-coach-pain-depth",
+        "type": "semantic",
+        "description": "Uses T1-T4 to distinguish stated inefficiency and two days of work from the still-untested consequence of late figures for the CFO. Recommends exploring that consequence with the buyer rather than merely adding a number or generic urgency.",
+        "critical": true
+      },
+      {
+        "name": "call-review-coach-criteria-process",
+        "type": "semantic",
+        "description": "Treats IT approval as a decision-process signal, not established decision criteria. Coaches discovering the integration approval requirements and how IT would validate them.",
+        "critical": true
+      },
+      {
+        "name": "call-review-coach-actionable-practice",
+        "type": "structure",
+        "description": "Returns two evidence-backed priorities with questions to practise and next-call success signals; no numerical scorecard or complete MEDDPICC checklist.",
+        "critical": true
+      },
+      {
+        "name": "call-review-coach-no-invented-deal",
+        "type": "forbidden_behavior",
+        "description": "Does not invent financial loss, CFO buying authority, the controller as Champion, integration capability beyond the source, or rep-level readiness from the excerpt.",
+        "critical": true
+      }
+    ]
+  },
+  {
+    "id": "call-review-coach-meddpicc-thin-summary",
+    "assertions": [
+      {
+        "name": "call-review-coach-summary-coverage",
+        "type": "semantic",
+        "description": "States that only an opening summary is accessible; wording, later behaviour, tone, and timing are unobservable. Marks unsupported requested scores N/O or explains why valid scores cannot be assigned.",
+        "critical": true
+      },
+      {
+        "name": "call-review-coach-summary-coaching",
+        "type": "semantic",
+        "description": "Offers a provisional evidence-gathering or next-call coaching action proportionate to the summary, with an observable check, without alleging a specific missed question.",
+        "critical": true
+      },
+      {
+        "name": "call-review-coach-summary-no-zero",
+        "type": "forbidden_behavior",
+        "description": "Does not mark missing MEDDPICC elements as zero or one, reconstruct dialogue as recorded speech, or claim the whole call failed.",
+        "critical": true
+      }
+    ]
+  },
+  {
+    "id": "call-review-coach-supplied-rubric",
+    "assertions": [
+      {
+        "name": "call-review-coach-team-rubric",
+        "type": "semantic",
+        "description": "Uses Impact and Fit as supplied. Preserves T2-T4 as a demonstrated consequence question and confirmation; focuses development on how the stated data-joining requirement will be tested.",
+        "critical": true
+      },
+      {
+        "name": "call-review-coach-rubric-practice",
+        "type": "structure",
+        "description": "Provides concise evidence, a practice question, and a next-call check, with no scorecard.",
+        "critical": true
+      },
+      {
+        "name": "call-review-coach-no-framework-override",
+        "type": "forbidden_behavior",
+        "description": "Does not replace the supplied team rubric with MEDDPICC or claim the rep failed to explore impact when the excerpt shows it.",
+        "critical": true
+      }
+    ]
+  }
+]

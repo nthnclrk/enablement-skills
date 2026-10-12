@@ -1,6 +1,6 @@
 # Skill template
 
-`new-skill.sh` copies `SKILL.md.tmpl` into `skills/<name>/`. That file is a **worked specialist example**, not a form to fill.
+`new-skill.sh` copies `SKILL.md.tmpl` into `skills/<name>/`. The template is a scaffold. See [call-review-coach](../../skills/call-review-coach/SKILL.md) for a completed specialist example, including its reference-loading rules and quality checks.
 
 If you leave the `[REQUIRED]` markers in, validation fails on purpose. Replace them with judgment for this job.
 
@@ -11,7 +11,7 @@ Every skill, any shape:
 - Frontmatter is only `name` and `description`
 - Description carries the whole trigger burden
 - The body does the craft jobs in `AGENTS.md`: one job, taste, intake, procedure with done-checks, quality a human can score
-- Shared safety stays in `enablement-house-style`
+- Each specialist retains the evidence and action boundaries essential to its job; house style provides shared authoring conventions
 
 ## What may change
 
