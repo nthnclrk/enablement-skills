@@ -2,7 +2,7 @@
   "schema_version": 2,
   "skill": "talk-track-builder",
   "source": "skills/talk-track-builder/SKILL.md",
-  "notes": "Curated eval for spoken-line talk tracks. Routing cases stay on live conversation language. Output checks require spoken lines, not topic labels.",
+  "notes": "Curated eval for spoken-line talk tracks. Routing cases stay on live conversation language. Output checks require spoken lines, not topic labels. Apply full-deliverable checks only when that deliverable was requested. Definitions are not executed results.",
   "managed_by": "curated",
   "should_trigger": [
     {
@@ -19,6 +19,10 @@
     },
     {
       "prompt": "Give me spoken opener, proof, and close lines for a 12-minute first discovery call. I already have the meeting structure.",
+      "expected": true
+    },
+    {
+      "prompt": "Write a 30-second opener for our next product demo. We have agreed the agenda and want to confirm the buyer's priority before showing anything.",
       "expected": true
     }
   ],
@@ -47,6 +51,16 @@
       "prompt": "Write a competitor battlecard with win zones and counters for our next head-to-head deal.",
       "expected": false,
       "adjacent_skill": "battlecard-builder"
+    },
+    {
+      "prompt": "My buyer says a competitor is 30% cheaper. I've got a call shortly. Help me respond naturally without inventing proof or offering a discount.",
+      "expected": false,
+      "adjacent_skill": "objection-library-builder"
+    },
+    {
+      "prompt": "Help me assess where we fit against Competitor X for a plant-floor evaluation. I need the requirements that favour each offer and when we should qualify out, not a reply to an objection.",
+      "expected": false,
+      "adjacent_skill": "battlecard-builder"
     }
   ],
   "output_structure_checks": [
@@ -59,7 +73,7 @@
     {
       "name": "talk-track-builder-output-02",
       "type": "structure",
-      "description": "States one call objective and one next-step ask as spoken lines, not topic labels.",
+      "description": "Makes the conversation purpose and useful next move clear in spoken language; a short opener or single response need not force a dated next-step ask.",
       "critical": true
     },
     {
@@ -79,6 +93,12 @@
       "type": "structure",
       "description": "Branches, when present, diagnose before responding and recover the ask.",
       "critical": false
+    },
+    {
+      "name": "talk-track-builder-practitioner-fit",
+      "type": "semantic",
+      "description": "Delivers lines a person can say, with branch logic only where useful; omits commentary about the editing or read-aloud process.",
+      "critical": true
     }
   ],
   "task_scenarios": [

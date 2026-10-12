@@ -5,17 +5,19 @@ description: Build developmental sales role-play scenarios with facilitator-only
 
 # Roleplay scenario builder
 
-Build a drill that changes one selling behavior. If it plays like theater, rewrite it.
+Give sellers a realistic opportunity to practise a specific behaviour, receive evidence-based feedback, and try it again.
 
 A scenario tests one behavior under one pressure. A recorded-call review is `call-review-coach`. A pass/fail gate is `certification-program-builder`.
 
 **Practice.** Participant sees: "VP Ops, 12 minutes, they already have a process." Facilitator holds: they will not name the cost until you ask who owns the escalation. Score: did the rep diagnose before pitching.
 
-**Theater.** A four-page buyer bio, a memorized script, and "be more consultative" as the score.
+**Weak scenario.** A four-page buyer bio, a memorized script, and "be more consultative" as the score.
 
 If the participant can succeed by performing confidence instead of the target behavior, it is not a drill.
 
-## Confirm Inputs First
+## Inputs
+
+Reuse supplied context first. If a missing company fact would change the result, check the relevant sections of `.enablement/context.md` when available. Preserve source dates and approval limits.
 
 Ask only for the inputs that change the drill:
 
@@ -27,11 +29,11 @@ Ask only for the inputs that change the drill:
 
 Label fictional company and buyer details as invented. Do not present them as real customers, competitors, or proof.
 
-## Read The Right Reference
+## Supporting material
 
 Read [references/roleplay-scenario-framework.md](references/roleplay-scenario-framework.md) for tension design, reveal rules, and worked pass/fail excerpts. Skip it if the user already has a scenario and only wants the scorecard or run protocol.
 
-## Default Workflow
+## Procedure
 
 1. Name the behavior and the evidence that would prove it.
    Separate a critical failure from a coachable miss. Done when a facilitator can see the behavior without inferring mindset.
@@ -44,17 +46,17 @@ Read [references/roleplay-scenario-framework.md](references/roleplay-scenario-fr
 5. Write the pressure the behavior has to survive.
    One unexpected turn. Buyer responses follow what the seller does, not a memorized dialogue.
 6. Write the run protocol.
-   Roles, timebox, reveal rules, pause or retry, observation, debrief order. Run without coaching unless the pause condition hits.
+   Set roles, timebox, reveal rules, observation, and debrief order. Choose coached practice or an unassisted observation round to suit the objective. Participants should know whether the facilitator may pause and coach; assessment conditions must follow the supplied standard.
 7. Anchor the score to visible behavior.
    Cite what happened. Use a supplied pass rule; do not invent one. In a certification, supply only the scenario and evidence prompts.
-8. End with one retry.
-   Participant self-assesses first. Facilitator names one behavior to run again.
+8. Debrief and retry.
+   Ask the participant what they noticed. Give evidence-based feedback on the target behaviour, then rerun the relevant moment. Compare attempts and agree where to apply the change in live work.
 
 For a real call use `call-review-coach`. For a discovery baseline use `discovery-rubric-auditor`. For the gate itself use `certification-program-builder`.
 
-## Output Contract
+## What to return
 
-Return a pack a facilitator can run cold:
+For a full scenario, include the items below. For a revision or short drill, return only the material needed to run it:
 
 - One scenario, or a progression that changes one variable at a time
 - Participant brief: context, objective, constraints, visible success criteria
@@ -65,11 +67,11 @@ Return a pack a facilitator can run cold:
 
 Do not leak facilitator facts. Do not issue a readiness decision.
 
-## Quality Bar
+## Quality bar
 
 - One target behavior, visible without scoring personality or confidence.
 - Participant brief and facilitator guide do not share hidden facts.
 - At least one turn the seller cannot script in advance.
 - Feedback cites what happened and names one retry.
 - Fictional proof stays labeled. No invented customer result.
-- The drill refused the live-call review and the certification decision.
+- The facilitator can compare the first attempt with the retry and name what changed.

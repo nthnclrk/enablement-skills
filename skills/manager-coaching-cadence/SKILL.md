@@ -5,72 +5,71 @@ description: Design a repeatable manager coaching cadence for revenue teams, inc
 
 # Manager coaching cadence
 
-Inspect one behavior every week. If the session could be a pipeline meeting, rewrite it.
+Design a sustainable coaching rhythm that helps reps practise a specific behaviour and apply it in live work.
 
-A cadence is a repeatable loop: evidence, one inspect, one commitment, a later check. One recorded call is `call-review-coach`. One stalled deal is `deal-inspection-coach`.
+A coaching cycle connects observation, feedback, rehearsal, application, and follow-up. Its frequency depends on the opportunities reps have to use the skill and the time managers can protect. A single recorded-call review belongs in `call-review-coach`; a deal diagnosis belongs in `deal-inspection-coach`.
 
-**Inspect.** "This week we inspect next-step quality. Each 1:1: one clip, one keep, one change, one commitment due Friday. Success: the next call names an owner and a date."
+**Coaching.** "The AE ended a discovery call with 'I'll follow up'. In the 1:1, replay the close, ask what they wanted to achieve, and rehearse a mutual next step. On the next eligible call, listen for the buyer agreeing an action, owner, and date."
 
 **Status.** "Managers will coach more consistently and hold reps accountable to a culture of excellence."
 
-If a manager cannot name the behavior they will listen for this week, there is no cadence yet.
+The manager should leave with a behaviour to coach and a realistic way to check its use.
 
-## Confirm Inputs First
+## Inputs
 
 Ask only for the inputs that change the rhythm:
 
 1. Team type, role mix, and how many reps
-2. The 1-3 behaviors worth inspecting, if known
+2. Behaviours worth coaching, the evidence for them, and opportunities to apply them
 3. Protected coaching time and existing meetings
 4. Evidence they can actually review: calls, deals, CRM, notes
 5. Who may see coaching notes, and where formal performance management begins
 
-If target behaviors or usable evidence are unknown, return an observation-baseline plan first. Do not present a full cadence as ready.
+Use current supplied context first, or relevant sections of `.enablement/context.md` if available. If the target behaviour or evidence is unknown, propose a small observation sample and a review decision before presenting a full cadence as ready. For a change to an existing rhythm, revise only the affected sessions and follow-up.
 
-## Read The Right Reference
+## Supporting material
 
-Read [references/manager-coaching-cadence-template.md](references/manager-coaching-cadence-template.md) for the capacity math, inspect-one-behavior test, and when a number is an invented threshold. Skip it if the user already has a working rhythm and only wants this week's inspect.
+Read [references/manager-coaching-cadence-template.md](references/manager-coaching-cadence-template.md) when calculating coverage, designing sessions, or defining escalation. For a narrow edit, consult only the relevant section.
 
-## Default Workflow
+## Procedure
 
-1. Pick the behaviors.
-   One to three, each with a signal a manager can hear or see. Done when this week's inspect fits in one sentence.
+1. Choose the coaching focus.
+   Use observed work to distinguish a skill gap from a process, incentive, capacity, or territory problem. Select a small set of team priorities and one focus per session. Each focus must describe what the rep will do differently and where it matters.
 2. Calculate capacity before coverage.
-   Protected minutes minus shared review, divided by a complete session. If it does not cover the team, prioritize by evidence, use group time for a shared gap, and rotate the rest. Never hide the shortfall by skipping review.
-3. Choose a rhythm that fits the team type and the envelope.
-   New weekdays and deadlines are proposals until the manager confirms them. Do not invent numeric promotion or escalation cutoffs.
-4. Build the loop with time budgets.
-   Evidence review, session, follow-up. Each session: one inspect, one keep, one change, one commitment.
+   Include evidence review, individual sessions, group practice, scheduling, and follow-up. Reserve time for outstanding application checks before adding new cycles. If demand exceeds protected time, prioritize by observed need, use group practice for a shared gap, and show who rotates. The complete time budget must reconcile; shortening preparation does not resolve excess demand.
+3. Choose a rhythm that fits the work.
+   Match follow-up to the next realistic opportunity to apply the behaviour. A high-volume team may generate evidence daily; an enterprise rep may need longer. Label new days and deadlines proposed until confirmed.
+4. Design a session the manager can run.
+   Review a relevant example together and ask what the rep intended. Identify one effective behaviour to retain and one change supported by the evidence. Rehearse the change, give specific feedback, and check whether the retry demonstrates it. Agree where the rep will apply it and what evidence both will review. Budget time for practice as well as discussion.
 5. Capture only role-relevant evidence.
-   Observation and commitment fields a manager will actually fill. Automated scores are leads, not findings. The rep can add context or correct the record.
-6. Set a trend review at a frequency the evidence volume can support.
-   Separate skill, process, and pipeline or territory. Done when the review cannot be mistaken for a forecast meeting.
-7. Define escalation as a condition, not a number.
-   Persistence, breadth, consequence, evidence sufficiency. Formal performance stays in the People process.
-8. Write a start plan for the first cycle.
+   Use observation and commitment fields a manager will actually fill. Automated scores are leads, not findings. The rep can add context or correct the record.
+6. Check application and adjust support.
+   Compare the agreed behaviour with the next eligible work sample. If it is absent, check opportunity, understanding, practice, and workflow barriers before concluding that coaching failed. Report trends only when evidence is comparable and sufficient.
+7. Define the boundary with formal performance management.
+   Use the organisation's established process and authority. If none is supplied, identify the decision owner and evidence needed; do not create promotion or escalation counts. Keep developmental notes separate and exclude unrelated personal information.
+8. Set up the first cycle.
+   Name the participants, evidence to review, practice task, follow-up opportunity, and time allocation. Leave unsupplied owners or commitments unresolved.
 
 For one call use `call-review-coach`. For one deal use `deal-inspection-coach`. For a practice drill use `roleplay-scenario-builder`.
 
-## Output Contract
+## What to return
 
-Return a rhythm a manager can run this week:
+Return the requested cadence or a focused revision. For a new cadence, lead with a compact run sheet the manager can use this week:
 
-- Capacity envelope and who gets individual time this cycle
-- The 1-3 behaviors under inspection
-- Weekly loop with time budgets; generated days labeled proposed
-- Session shape: evidence, keep, change, one commitment
-- Observation and commitment fields
-- Trend review that separates skill from pipeline and process
-- Escalation as a qualitative condition, with the owner who must set any numeric rule
-- Observation-baseline plan when evidence is not yet usable
+- Focus, rep coverage, and complete time budget
+- A reusable session guide: review, reflection, feedback, rehearsal, application
+- One small record of the commitment, evidence, and next check
+- The next cycle's priorities, including outstanding checks and any missing baseline
 
-Do not add a single-call scorecard or a deal diagnosis unless this week's inspect needs it.
+Explain only the trade-offs the manager needs to run or adapt the plan. Keep formal performance-process guidance brief unless escalation is part of the request. Do not repeat the same safeguards in the agenda, tracker, and closing checklist.
 
-## Quality Bar
+Keep call examples brief and relevant to the session. Do not share employee records or schedule meetings without explicit approval.
+
+## Quality bar
 
 - Capacity math is visible, and review time is not compressed to make coverage look fine.
-- Each session inspects one behavior, not a status list.
+- Each session includes feedback, practice, and a check of application.
 - Every commitment has an owner, a date, and a proof a manager can check.
 - Generated days and cutoffs are proposed or unresolved, not invented policy.
 - Coaching records stay separate from formal performance records.
-- The cadence refused the one-call review and the one-deal inspect.
+- Follow-up allows for the rep's actual opportunity to use the behaviour.

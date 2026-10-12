@@ -2,7 +2,7 @@
   "schema_version": 2,
   "skill": "onboarding-program-builder",
   "source": "skills/onboarding-program-builder/SKILL.md",
-  "notes": "Curated eval for the craft-pass output contract. Routing prompts stay on practitioner language; output checks require the skill's leading test, not a section list.",
+  "notes": "Curated checks for onboarding-program-builder. Apply full-deliverable checks only when that deliverable was requested; score focused revisions on the affected decisions and retained constraints. Definitions are not executed results.",
   "managed_by": "curated",
   "should_trigger": [
     {
@@ -44,19 +44,19 @@
     {
       "name": "onboarding-program-builder-output-01",
       "type": "structure",
-      "description": "Defines ready as inspectable weekly proof of behavior, not a 30-60-90 calendar or course completion.",
+      "description": "Defines readiness through observable job performance at appropriate checkpoints rather than elapsed weeks or course completion.",
       "critical": true
     },
     {
       "name": "onboarding-program-builder-output-02",
       "type": "structure",
-      "description": "Maps job tasks to practice, live-work evidence, and a weekly manager check that names this week's observable proof.",
+      "description": "Maps relevant job tasks to practice, feedback, live application, and manager review when genuine opportunities exist.",
       "critical": true
     },
     {
       "name": "onboarding-program-builder-output-03",
       "type": "structure",
-      "description": "Includes experience-level variants and a capacity ledger with a fits, reduce, sequence, or blocked decision.",
+      "description": "Adapts to starting proficiency and the requested roles. Shows a capacity decision without substituting simulation for required live evidence.",
       "critical": true
     },
     {
@@ -70,6 +70,39 @@
       "type": "semantic",
       "description": "Treats course completion and calendar dates as insufficient proof of readiness, and does not write a customer time-to-value journey.",
       "critical": true
+    },
+    {
+      "name": "onboarding-program-builder-practitioner-fit",
+      "type": "semantic",
+      "description": "Allows practice when live opportunities are absent, labels the evidence gap, and changes scope or timing rather than weakening an established readiness requirement.",
+      "critical": true
+    }
+  ],
+  "task_scenarios": [
+    {
+      "id": "onboarding-program-builder-live-evidence-capacity",
+      "input_state": "conflicting",
+      "prompt": "Revise only the week-three checkpoint in our AE ramp. Approved readiness requires observing two live discovery calls. None of the new hires will have live calls until week five. The manager suggests counting two role-plays instead so we can keep the week-three readiness date. There is one hour available for practice in week three.",
+      "assertions": [
+        {
+          "name": "onboarding-program-builder-live-evidence-capacity-1",
+          "type": "semantic",
+          "description": "Uses the available hour for practice and feedback, while leaving the live-evidence requirement pending and revising the readiness timing or seeking the authorised gate owner's decision.",
+          "critical": true
+        },
+        {
+          "name": "onboarding-program-builder-live-evidence-capacity-2",
+          "type": "forbidden_behavior",
+          "description": "Does not equate role-play with the required live evidence or grant readiness to preserve the original date.",
+          "critical": true
+        },
+        {
+          "name": "onboarding-program-builder-live-evidence-capacity-3",
+          "type": "structure",
+          "description": "Returns the affected checkpoint, dependency and owner decision rather than rebuilding the entire ramp.",
+          "critical": true
+        }
+      ]
     }
   ]
 }

@@ -2,7 +2,7 @@
   "schema_version": 2,
   "skill": "release-notes-to-seller-updates",
   "source": "skills/release-notes-to-seller-updates/SKILL.md",
-  "notes": "Curated eval for field-usable seller updates. Routing keeps channel updates off full launch kits. Output checks require channel-ready copy, not a launch plan.",
+  "notes": "Curated eval for field-usable seller updates. Routing keeps channel updates off full launch kits. Output checks require channel-ready copy, not a launch plan. Apply full-deliverable checks only when that deliverable was requested. Definitions are not executed results.",
   "managed_by": "curated",
   "should_trigger": [
     {
@@ -63,6 +63,12 @@
       "name": "release-notes-to-seller-updates-output-04",
       "type": "semantic",
       "description": "Channel variants are rewrites for the requested channel, not a launch plan with training, gates, or an owner matrix.",
+      "critical": true
+    },
+    {
+      "name": "release-notes-to-seller-updates-practitioner-fit",
+      "type": "semantic",
+      "description": "Puts the usable requested channel message first, groups related changes when helpful, and keeps detailed source notes separate.",
       "critical": true
     }
   ]

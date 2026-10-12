@@ -2,7 +2,7 @@
   "schema_version": 2,
   "skill": "pipeline-stage-definition-and-exit-criteria",
   "source": "skills/pipeline-stage-definition-and-exit-criteria/SKILL.md",
-  "notes": "Curated eval for buyer-signal stage design. Routing cases stay on the operating model, not one live deal. Output checks require inspectable exit proof.",
+  "notes": "Curated eval for buyer-signal stage design. Routing cases stay on the operating model, not one live deal. Output checks require inspectable exit proof. Apply full-deliverable checks only when that deliverable was requested. Definitions are not executed results.",
   "managed_by": "curated",
   "should_trigger": [
     {
@@ -64,6 +64,12 @@
       "name": "pipeline-stage-definition-and-exit-criteria-output-05",
       "type": "forbidden_behavior",
       "description": "Does not invent historical conversion rates, aging norms, or CRM capabilities, and does not inspect a named live deal.",
+      "critical": true
+    },
+    {
+      "name": "pipeline-stage-definition-and-exit-criteria-practitioner-fit",
+      "type": "semantic",
+      "description": "Makes each stage's buyer state distinct while retaining earlier requirements that must remain true; includes regression and exception handling.",
       "critical": true
     }
   ]

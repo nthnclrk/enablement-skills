@@ -1,41 +1,43 @@
 ---
 name: enablement-metrics-and-instrumentation
-description: Define revenue enablement KPI trees and measurement plans that connect enablement work to business outcomes. Use when the user asks for KPI frameworks, leading and lagging indicators, measurement plans, or instrumentation across CRM, learning, content, and performance systems. Route executive narrative packaging of results to enablement-impact-story.
+description: Define enablement metrics, KPI trees and measurement plans. Use for a single metric definition, leading and lagging indicators, or instrumentation across CRM, learning, content and performance systems. Route the leadership narrative of results already in hand to enablement-impact-story.
 ---
 
 # Enablement metrics and instrumentation
 
-Build a measurement system you can run. Do not overclaim attribution.
+Define a small set of reproducible measures that helps an owner decide whether to continue, adjust, or stop an enablement initiative.
 
-Tier every metric before you name a target: adoption, execution, productivity, or commercial. Completion is adoption. An inspected behavior is execution. Ramp or cycle time is productivity. Win rate is commercial. Skip a tier and the tree becomes a wish.
+Label what each measure represents: adoption, execution, productivity, or commercial outcome. Completion measures adoption; observed job behaviour measures execution. Include the links relevant to the initiative, and mark unmeasured links rather than inventing metrics to fill the tree.
 
 **Fails.** "If 80% of AEs complete certification, win rate will rise 8 points this quarter."
 
-**Passes.** "Adoption: first-attempt certification pass rate. Execution: inspected discovery quality on eligible calls. Productivity: day-90 ramp attainment. Commercial: launch-eligible win rate. We will not attribute the commercial number to certification until exposure and a comparison exist."
+**Passes.** "Adoption: eligible sellers completing certification. Readiness signal: first-attempt pass rate. Execution: observed discovery quality on eligible calls. Commercial: win rate for the defined opportunity cohort. Participation and assessment results alone cannot establish a commercial effect."
 
 If the user wants the leadership narrative of results already in hand, use `enablement-impact-story`.
 
-## Confirm Inputs First
+## Inputs
+
+Reuse supplied context first. If a missing company fact would change the result, check the relevant sections of `.enablement/context.md` when available. Preserve source dates and approval limits.
 
 Ask only for the inputs that change the tree:
 
-1. The initiative and the one commercial question it must inform
+1. The initiative and the question the measure must inform
 2. Eligible population, exclusions, and time window
 3. Systems, events, and join keys that actually exist
 4. Who reviews the numbers, and how often they decide
 
 If a baseline, formula, join, or owner is unknown, leave it unknown. Do not invent win rates, usage, or ROI.
 
-## Read The Right Reference
+## Supporting material
 
 Read [references/kpi-tree-framework.md](references/kpi-tree-framework.md) for the four tiers, metric contract, and claim limits. Read [references/kpi-tree-examples.md](references/kpi-tree-examples.md) when the initiative is onboarding or a product launch and you need a worked tree.
 
-## Default Workflow
+## Procedure
 
-1. Name the decision.
-   One commercial question. One primary commercial metric. Done when a reviewer could continue, adjust, or stop from that number plus its leading indicators.
+1. Name the question.
+   Establish what the owner needs to know or decide. For one metric, define its purpose and limits. For a programme measurement plan, identify the intended business outcome and the measures needed to assess progress. Done when each requested measure has a clear use; an operational question need not become a full commercial KPI tree.
 2. Tier the tree.
-   Map enablement work to adoption, then execution, then productivity, then commercial. Every commercial metric needs at least one execution lead. Activity with no behavior link does not enter the success set.
+   Explain how the work is expected to change behaviour and contribute to the outcome. Select a leading behaviour measure and the downstream measures the decision needs. Completion and usage may explain exposure, but cannot establish effectiveness alone.
 3. Write the contract.
    Formula, grain, population, filters, time window, source fields, and stable keys. Done when a second analyst could reproduce the number from the contract alone. Otherwise label it `not yet reproducible`.
 4. Instrument the missing events.
@@ -50,24 +52,24 @@ Read [references/kpi-tree-framework.md](references/kpi-tree-framework.md) for th
 
 Do not publish reports, change production tracking, or collect new data without a named system owner and explicit approval of the exact scope.
 
-## Output Contract
+## What to return
 
-Return a plan a measurement owner can implement:
+For one metric, return its definition, source, limitations, and decision use. For a full measurement plan, include:
 
-- The commercial question and the one primary commercial metric
+- The question or decision, intended business outcome, and primary measure
 - The tree, with every metric labeled adoption, execution, productivity, or commercial
 - A metric dictionary: formula, grain, population, window, source, keys, or `not yet reproducible`
 - Instrumentation and join rules for anything that does not exist yet
 - Evidence design and the claim it can support
 - QA checks with failure owners
 - Continue / adjust / stop rules, or the missing decision
-- Assumptions, and what you refused to invent
+- Assumptions and unresolved measurement inputs
 
 Do not attach an executive impact narrative unless the user asked for results they already have. That is `enablement-impact-story`.
 
-## Quality Bar
+## Quality bar
 
-- Every commercial metric has an execution lead; adoption is never the success metric.
+- Commercial claims have relevant execution evidence. Adoption can answer a participation question; it cannot establish effectiveness by itself.
 - A second analyst can reproduce every claimed number from the contract.
 - Attribution does not exceed the evidence design.
 - No invented win rates, usage, baselines, or ROI.

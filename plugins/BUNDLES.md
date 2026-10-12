@@ -2,7 +2,7 @@
 
 All plugin bundles use symlinks under `plugins/<bundle>/skills/` that point to the canonical skill folders in `skills/`. This keeps bundle membership explicit while avoiding duplicated skill copies.
 
-Every bundle includes `revenue-enablement-context` and `enablement-house-style`, so it can stand alone. Use context only when shared GTM context is missing, stale, or conflicting. House style is shared safety, not a deliverable. Direct specialist requests should go straight to the relevant specialist skill.
+Every bundle includes `revenue-enablement-context` for optional shared context and `enablement-house-style` for editorial or operating-rules reviews. Each specialist carries its own essential safeguards and can handle direct requests. Bundle membership does not automatically load sibling instructions.
 
 ## enablement-core
 

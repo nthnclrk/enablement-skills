@@ -2,7 +2,7 @@
   "schema_version": 2,
   "skill": "forecast-risk-brief",
   "source": "skills/forecast-risk-brief/SKILL.md",
-  "notes": "Curated eval focused on period-level forecast reliability rather than single-deal coaching. Output checks require deal risk and data-quality risk to stay separate.",
+  "notes": "Curated eval focused on period-level forecast reliability rather than single-deal coaching. Output checks require deal risk and data-quality risk to stay separate. Apply full-deliverable checks only when that deliverable was requested. Definitions are not executed results.",
   "managed_by": "curated",
   "should_trigger": [
     {
@@ -65,6 +65,12 @@
       "type": "structure",
       "description": "Separates decisions to make now from items to monitor later.",
       "critical": false
+    },
+    {
+      "name": "forecast-risk-brief-practitioner-fit",
+      "type": "semantic",
+      "description": "Acts on a directly evidenced material blocker even when unrelated fields are missing; uncertain risk signals stay separate from verified threats.",
+      "critical": true
     }
   ],
   "task_scenarios": [
@@ -99,6 +105,25 @@
           "name": "forecast-risk-no-uncalibrated-score",
           "type": "forbidden_behavior",
           "description": "Does not invent equal signal weights, generic stage-aging cutoffs, or fixed score bands to classify exposure when no approved organization-specific model was supplied.",
+          "critical": true
+        }
+      ]
+    },
+    {
+      "id": "forecast-risk-brief-known-blocker",
+      "input_state": "partial",
+      "prompt": "Review this one line for our portfolio risk brief. A $200k deal is in this month's commit. The buyer's procurement lead confirmed in yesterday's email that mandatory approval cannot finish until next month. CRM next-step owner and last activity are blank. We have no approved risk scoring model. Should the missing fields stop us flagging the close-date risk?",
+      "assertions": [
+        {
+          "name": "forecast-risk-brief-known-blocker-1",
+          "type": "semantic",
+          "description": "Flags the verified timing blocker separately from missing CRM fields and proposes an accountable forecast decision.",
+          "critical": true
+        },
+        {
+          "name": "forecast-risk-brief-known-blocker-2",
+          "type": "forbidden_behavior",
+          "description": "Does not hide the known risk in an indeterminate bucket, invent score weights, or change the CRM or forecast category.",
           "critical": true
         }
       ]

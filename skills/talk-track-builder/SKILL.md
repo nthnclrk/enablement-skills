@@ -1,11 +1,11 @@
 ---
 name: talk-track-builder
-description: Write persona- and stage-specific spoken language for a defined conversation moment or an existing call structure. Use for openers, value bridges, proof lines, closes, and branches that sellers or managers can deliver live. Route adaptive discovery architecture, demo selection, sequencing, and meeting-close design to discovery-and-demo-structure; route positioning to value-prop-and-positioning and objection systems to objection-library-builder.
+description: Write persona- and stage-specific spoken language for a defined conversation moment or an existing call structure. Use for openers, value bridges, proof lines, closes and conversation branches. Route a reply to a specific buyer concern to objection-library-builder, meeting architecture to discovery-and-demo-structure, and positioning to value-prop-and-positioning.
 ---
 
 # Talk track builder
 
-Write lines a seller can say out loud. If it reads like a script, rewrite it.
+Write natural spoken language that helps a seller handle a defined conversation moment.
 
 A talk track covers one conversation moment, one objective, and one next-step ask. If the user wants the meeting architecture (what to discover, what to demo, in what order), use `discovery-and-demo-structure` first.
 
@@ -13,9 +13,11 @@ A talk track covers one conversation moment, one objective, and one next-step as
 
 **Script.** "Thanks so much for taking the time today. I'm excited to share how our AI-powered platform delivers unmatched visibility across your operational handoffs."
 
-If a good AE would wince saying it to a VP, it is not done.
+Use wording the intended speaker could say naturally to this audience.
 
-## Confirm Inputs First
+## Inputs
+
+Reuse supplied context first. If a missing company fact would change the result, check the relevant sections of `.enablement/context.md` when available. Preserve source dates and approval limits.
 
 Ask only for the inputs that change the lines:
 
@@ -26,16 +28,16 @@ Ask only for the inputs that change the lines:
 
 If proof is missing, leave spoken proof slots marked `needs source`. Do not invent customers, numbers, pricing, or implementation promises.
 
-## Read The Right Reference
+## Supporting material
 
 Read [references/talk-track-framework.md](references/talk-track-framework.md) for the spoken-line test, branch pattern, and worked excerpts. Skip it if the user already gave you a structure and only wants lines.
 
-## Default Workflow
+## Procedure
 
 1. Name the job.
-   One objective. One next-step ask with an owner and a time. Done when both fit in the close the seller will actually say.
+   Identify the conversation objective and the appropriate next move. A full track may close with a proposed action, owner, and time; an opener or short reply may simply invite a useful answer. Fit the ask to the moment rather than inventing a commitment.
 2. Pick the moment, not the whole call.
-   Discovery, demo, commercial, renewal, expansion, or a coaching inspect. One primary. If the discovery or demo architecture is not yet defined, route that design to `discovery-and-demo-structure`.
+   Discovery, demo, commercial, renewal, expansion, or a coaching conversation. One primary. If the discovery or demo architecture is not yet defined, route that design to `discovery-and-demo-structure`.
 3. Write the through-line.
    Opening frame, one context check, the few questions that change the next move, a value bridge, proof only if you have it, close. Cut any beat that does not serve the objective.
 4. Write the lines.
@@ -52,9 +54,9 @@ Read [references/talk-track-framework.md](references/talk-track-framework.md) fo
 
 For message strategy use `value-prop-and-positioning`. For an objection system use `objection-library-builder`. For compete guidance use `battlecard-builder`. For coaching one recorded call use `call-review-coach`.
 
-## Output Contract
+## What to return
 
-Return a track a seller can open five minutes before the conversation:
+For an opener, reply, or close, return the lines and any material claim caveat. For a full track, include:
 
 - Who says it, to whom, in what moment, and how much time they have
 - The objective and the next-step ask, written as spoken lines
@@ -63,16 +65,16 @@ Return a track a seller can open five minutes before the conversation:
 - Branches only for turns this conversation will actually hit
 - Landmines
 - Assumptions, if you had to make any
-- What you split on the read-aloud pass, and whether it needs rehearsal
+- A rehearsal note only when delivery risk warrants it
 
 Do not add a discovery question bank, demo checklist, or manager scorecard unless this moment needs it.
 
-## Quality Bar
+## Quality bar
 
 - A seller can use this five minutes before the call without rewriting it.
 - Every "say" element is a spoken line, not a topic to discuss.
 - Every line survives being read aloud.
 - Each question changes the next move.
 - Every proof line has a source, or is marked as a gap.
-- One next-step ask is concrete enough for a manager to inspect.
-- The track refused the second conversation that does not belong here.
+- The next move fits the conversation moment, and any proposed commitment is clearly an ask.
+- The lines fit the requested moment, audience, and available speaking time.

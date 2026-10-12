@@ -1,4 +1,4 @@
 interface:
   display_name: "Objection Library Builder"
-  short_description: "Diagnose-then-respond objection play cards"
-  default_prompt: "Use $objection-library-builder to build a prioritized objection library with response patterns, proof links, and escalation rules."
+  short_description: "Respond to a buyer concern or build response cards"
+  default_prompt: "Use $objection-library-builder to help me respond to this buyer concern with a useful question, supported language, and an appropriate next step."

@@ -2,7 +2,7 @@
   "schema_version": 2,
   "skill": "revenue-enablement-context",
   "source": "skills/revenue-enablement-context/SKILL.md",
-  "notes": "Curated eval focused on foundational context creation and update behavior.",
+  "notes": "Check context gathering, conflict handling and preview-before-write. Self-contained tasks should proceed directly; workflow selection belongs to enablement-router. Apply full-deliverable checks only when that deliverable was requested. Definitions are not executed results.",
   "managed_by": "curated",
   "should_trigger": [
     {
@@ -55,7 +55,7 @@
     {
       "name": "revenue-enablement-context-output-03",
       "type": "structure",
-      "description": "Returns a compact handshake a specialist skill can consume without re-asking the basics.",
+      "description": "Returns only relevant context and open gaps for the next task so a specialist need not repeat intake.",
       "critical": true
     },
     {
@@ -67,8 +67,35 @@
     {
       "name": "revenue-enablement-context-output-05",
       "type": "forbidden_behavior",
-      "description": "Does not silently write or silently resolve conflicts, and does not force a full GTM bible onto a one-off task.",
+      "description": "Does not silently write or resolve conflicts, and does not require a full company brief for a self-contained task.",
       "critical": true
+    },
+    {
+      "name": "revenue-enablement-context-practitioner-fit",
+      "type": "semantic",
+      "description": "Uses supplied information before asking questions and requests only missing facts that materially affect this task or reusable context.",
+      "critical": true
+    }
+  ],
+  "task_scenarios": [
+    {
+      "id": "revenue-enablement-context-one-off-packet",
+      "input_state": "complete",
+      "prompt": "For this one-off handoff, summarise only these approved facts for a colleague preparing a short seller update: the feature routes tasks between teams; general availability is 15 October; existing customers must opt in; migration is not automatic. We do not need a company profile or saved context file.",
+      "assertions": [
+        {
+          "name": "revenue-enablement-context-one-off-packet-1",
+          "type": "semantic",
+          "description": "Returns the four relevant facts in a concise task packet, preserving the opt-in and migration limits.",
+          "critical": true
+        },
+        {
+          "name": "revenue-enablement-context-one-off-packet-2",
+          "type": "forbidden_behavior",
+          "description": "Does not request unrelated company information or write a persistent context file.",
+          "critical": true
+        }
+      ]
     }
   ]
 }

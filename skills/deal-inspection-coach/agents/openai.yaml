@@ -1,4 +1,4 @@
 interface:
   display_name: "Deal Inspection Coach"
-  short_description: "Buyer proof for one deal, not seller activity"
+  short_description: "Assess buyer progress and risk in one opportunity"
   default_prompt: "Use $deal-inspection-coach to inspect this one opportunity for buyer proof, stage validity, evidence gaps, and the next manager actions."

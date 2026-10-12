@@ -5,17 +5,17 @@ description: Convert product or engineering release notes into concise field upd
 
 # Release notes to seller updates
 
-Turn a release note into a field-usable update for the channel that will carry it. If it reads like a launch plan, rewrite it.
+Explain a product change in language sellers can use, with its availability, relevant customers, and the action to take.
 
-A seller update is one change, one audience, one next action. Training plans, go/no-go ledgers, and owner matrices belong in `product-launch-enablement`.
+Group related changes when they serve the same audience and action. Separate changes with different eligibility, timing, or customer implications. Training plans, go/no-go ledgers, and owner matrices belong in `product-launch-enablement`.
 
 **Field-usable.** "From 18 August, Pro and Enterprise can opt into Escalation Rules 2.0. Mention it when a buyer inspects overdue handoffs. Do not pitch it to Starter."
 
 **Launch plan.** "Here is the training plan, go/no-go ledger, owner matrix, and 30-day adoption review."
 
-If a seller has to open another doc to know what to say today, it is not done.
+Include the customer-facing wording and limits the seller needs today; link to detail only for follow-up.
 
-## Confirm Inputs First
+## Inputs
 
 Ask only for the inputs that change the update:
 
@@ -26,11 +26,11 @@ Ask only for the inputs that change the update:
 
 If status or date is missing, leave it unknown. Do not invent launch dates, availability, or claims.
 
-## Read The Right Reference
+## Supporting material
 
 Read [references/release-transformation-guide.md](references/release-transformation-guide.md) for the field-usable test, status rules, and channel rewrite. Read [references/source-system-guide.md](references/source-system-guide.md) when the source or destination is Slack, a wiki, or an enablement platform.
 
-## Default Workflow
+## Procedure
 
 1. Build the factual change record.
    Separate product facts from seller implications. Code complete, announced, or partially rolled out is not generally available. Done when each change has status, date or `unknown`, eligibility, and source.
@@ -47,9 +47,9 @@ Read [references/release-transformation-guide.md](references/release-transformat
 
 For a full launch kit use `product-launch-enablement`. For partner-facing wording use `partner-enablement-package`.
 
-## Output Contract
+## What to return
 
-Return something the named audience can use in the named channel:
+Lead with the ready-to-review message in the requested channel. Keep detailed source notes separate. For a digest or larger update, include as needed:
 
 - Change register with status, date or `unknown`, seller action, owner, and source
 - Seller summary: who it is for, customer impact, what to say, what not to say
@@ -60,10 +60,10 @@ Return something the named audience can use in the named channel:
 
 Do not add training plans, go/no-go gates, or an owner matrix. Do not publish.
 
-## Quality Bar
+## Quality bar
 
 - A seller can act from the named channel without another doc.
-- The update refused to become a launch plan.
+- The update includes only the channel variants and asset changes requested.
 - Status and date match the source, or are marked unknown.
 - Customer impact is clearer than feature mechanics.
 - Each channel variant is a rewrite, not a paste.

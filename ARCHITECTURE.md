@@ -51,7 +51,7 @@ skills/<skill-name>/
 
 The skill folder is the unit of portable installation. A bundled copy or symlink must never become a second behavior source.
 
-`SKILL.md` contains the trigger description and whatever body shape the job needs. Reusable frameworks belong in direct references when they improve repeated execution. Deterministic work belongs in scripts only when a script is more reliable than instructions. Shared safety lives in `enablement-house-style`.
+`SKILL.md` contains the trigger description and whatever body shape the job needs. Reusable frameworks belong in direct references when they improve repeated execution. Deterministic work belongs in scripts only when a script is more reliable than instructions. `enablement-house-style` supports explicit editorial reviews and shared authoring conventions. Each specialist retains its own essential evidence and action boundaries; sibling skills are not automatically loaded together.
 
 ### `systems/`
 

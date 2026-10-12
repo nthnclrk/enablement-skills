@@ -5,7 +5,7 @@ description: Inspect one live opportunity and produce an evidence-backed manager
 
 # Deal inspection coach
 
-Inspect one deal for buyer proof. Seller activity is not progress.
+Review one opportunity against what the buyer has confirmed, then identify the action most likely to resolve its next buying decision.
 
 A good inspection tells a manager what the buyer has confirmed, what is still unknown, and the one move that changes the deal. If the user wants a portfolio forecast, use `forecast-risk-brief`. If they want a buyer-shared plan, use `mutual-action-plan-builder`.
 
@@ -13,9 +13,9 @@ A good inspection tells a manager what the buyer has confirmed, what is still un
 
 **Seller activity.** "Twelve emails last week. Demo completed. Next step is follow up. Stage is Proposal because the deck went out."
 
-If a manager cannot tell buyer-confirmed from internally asserted, it is not done.
+Make buyer confirmation visibly distinct from the seller's interpretation.
 
-## Confirm Inputs First
+## Inputs
 
 Ask only for the inputs that change the diagnosis:
 
@@ -26,11 +26,11 @@ Ask only for the inputs that change the diagnosis:
 
 If a fact is missing, leave it unknown. Do not invent CRM fields, amounts, dates, stakeholders, or commitments.
 
-## Read The Right Reference
+## Supporting material
 
 Read [references/deal-inspection-framework.md](references/deal-inspection-framework.md) before rating evidence, stage validity, or risk. Read [references/source-system-guide.md](references/source-system-guide.md) when evidence comes from CRM, conversation intelligence, or email summaries.
 
-## Default Workflow
+## Procedure
 
 1. Name the job.
    One opportunity. One decision: validate stage, recover momentum, test forecast confidence, or choose an intervention. Done when you can say which, and why the others wait.
@@ -44,14 +44,14 @@ Read [references/deal-inspection-framework.md](references/deal-inspection-framew
    A risk is a supported condition that can kill or slip the deal. A gap is a consequential unknown. They need different actions. Skip a numeric score unless the org supplied a model.
 6. Pick the next moves.
    Few actions. Each needs an owner, the buyer progress it creates or the unknown it closes, and a verification check. Label dates as proposed unless the buyer confirmed them.
-7. Give the manager the inspect.
+7. Prepare the manager's review.
    The question to ask, the evidence to open, the decision to make, and when to escalate. Recommend stage or CRM changes; do not apply them.
 
 For one recorded call use `call-review-coach`. For a book of deals use `forecast-risk-brief`.
 
-## Output Contract
+## What to return
 
-Return a one-deal inspect a manager can run in the next 1:1:
+Return a focused answer to the deal question. For a full review, include:
 
 - Inspection decision: objective, as-of date, claimed stage, stage-validity finding, evidence confidence
 - Evidence ledger for material claims
@@ -61,9 +61,9 @@ Return a one-deal inspect a manager can run in the next 1:1:
 - Manager coaching: questions, focus, escalation
 - Assumptions, if you had to make any
 
-Do not add a portfolio forecast, a call scorecard, or a buyer-facing MAP unless this inspect needs it.
+Keep recommendations internal unless customer-facing material is requested. Share no deal notes or system changes without explicit approval.
 
-## Quality Bar
+## Quality bar
 
 - A manager can use this in the next 1:1 without rewriting it.
 - Stage support and evidence confidence are separate findings.

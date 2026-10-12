@@ -8,7 +8,7 @@ A difference is not an advantage until you can name the buyer constraint it chan
 
 **Fails.** "We have a modern API. They are legacy."
 
-**Passes.** "If the buyer needs same-day plant-floor capture with no warehouse Wi-Fi, we win. If they need a certified SAP connector this quarter, we lose."
+**Passes.** "Verified offline capture supports a plant-floor workflow with unreliable Wi-Fi. The supplied product record does not show the certified SAP connector this buyer requires. Confirm that requirement before recommending a fit."
 
 Qualify out is a first-class row. Cards that never say "do not compete here" are attack sheets.
 
@@ -32,7 +32,7 @@ Customer-safe status: `Approved`, `Restricted`, `Needs review`, or `Internal onl
 
 ## Thin evidence
 
-If you cannot date a competitor claim, turn it into a validation question. Return a research brief instead of a definitive card when the ledger is mostly hypotheses.
+If you cannot verify a competitor claim, ask about the buyer's requirement or request the missing evidence. Do not imply a weakness through a leading question. Missing information on a public page is not proof that a capability is absent. Return a research brief instead of a definitive card when the evidence is mostly hypothetical. For an imminent call, provide only the supported response and questions needed to establish fit.
 
 ## Optional shape
 

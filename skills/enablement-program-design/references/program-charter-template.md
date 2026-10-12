@@ -2,15 +2,15 @@
 
 Use this when you are diagnosing a performance problem or writing the charter. The skill body has the procedure.
 
-## Kickoff-deck tell
+## Make the design usable
 
-A program is done when a manager can inspect the behavior in the workflow. Completions are not that.
+A design is usable when the owner can connect the diagnosed barrier to an intervention, the behaviour to practise, and the evidence needed to judge application. Delivering the design does not establish that the programme worked.
 
 **Fails.** "A four-week enablement journey with kickoff, certification, office hours, and a dashboard of completions."
 
-**Passes.** "AEs will ask one inspectable qualification question before they book SE time. Managers check two calls a week. We stop if inspected calls do not show the question by week 4."
+**Passes.** "AEs are booking SE time before clarifying the buyer's evaluation criteria. Practise that discussion, add the criteria to the handoff, and review eligible calls. The pilot owner agrees the sample and review window before deciding whether to continue."
 
-If the output could be a slide titled "Program at a Glance," rewrite it.
+The owner must be able to run the pilot from the design: participants, work to practise, support, capacity, evidence, and decisions.
 
 ## Diagnose before you design
 
@@ -25,7 +25,7 @@ When the problem, owner, audience, or decision authority is unknown, write a dis
 | Role and workflow moment | Current behavior | Target behavior | Observable evidence | Intended outcome |
 | --- | --- | --- | --- | --- |
 
-The evidence column must be something a manager can see in a call, CRM field, deal review, or customer artifact. "Completed module 3" is not observable behavior.
+The evidence column must identify job performance a manager can inspect in a call, CRM field, deal review, or customer artifact. Completing a module alone does not establish that performance.
 
 List explicit exclusions. Adjacent problems this program will not solve belong here, not in a later "phase 2" that pretends they are in scope.
 
@@ -34,7 +34,7 @@ List explicit exclusions. Adjacent problems this program will not solve belong h
 | Diagnosed barrier | Evidence and confidence | Intervention | Manager inspection | Owner |
 | --- | --- | --- | --- | --- |
 
-Keep only what produces the target behavior. A kickoff without inspection is theater. Manager inspection without a defined behavior is a meeting.
+Each intervention should address a diagnosed barrier or help people apply the target behaviour. Define what managers will observe and how they will support practice and application.
 
 ## Capacity and pilot
 
@@ -47,7 +47,7 @@ Scope to named facilitator and manager time. Do not invent hours. If the plan ex
 | Rollout |  |  |  | Expand / hold / revise |  |
 | Reinforcement |  |  |  | Sustain / retire / replace |  |
 
-Record dates only when confirmed. The pilot is real only if week-N evidence can stop the program.
+Distinguish confirmed dates from proposed review windows. Agree what evidence will support continuing, adjusting, or stopping, allowing enough exposure and application opportunities to make that decision.
 
 ## Measurement
 

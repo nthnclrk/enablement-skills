@@ -1,4 +1,4 @@
 interface:
   display_name: "Discovery Rubric Auditor"
-  short_description: "Score the pattern, not the one-off"
+  short_description: "Assess discovery patterns across a comparable sample"
   default_prompt: "Use $discovery-rubric-auditor to score this discovery-call sample on one rubric and return the recurring pattern, not a one-off ranking."

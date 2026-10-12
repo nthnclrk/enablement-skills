@@ -1,4 +1,4 @@
 interface:
   display_name: "Call Insights To Objections"
-  short_description: "Cluster objections from calls, not a library"
+  short_description: "Find evidence-backed objection patterns across calls"
   default_prompt: "Use $call-insights-to-objections to analyze these conversations and produce an objection brief with sample coverage, traceable evidence, and prioritized actions."

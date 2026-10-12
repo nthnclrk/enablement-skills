@@ -1,4 +1,4 @@
 interface:
   display_name: "Onboarding Program Builder"
-  short_description: "Weekly proof they can do the job"
-  default_prompt: "Use $onboarding-program-builder to create an outcome-gated ramp whose each week produces observable proof of readiness, not course completion."
+  short_description: "Build new-hire readiness through practice and evidence"
+  default_prompt: "Use $onboarding-program-builder to build a new-hire ramp with relevant practice, manager feedback, and observable readiness checkpoints."

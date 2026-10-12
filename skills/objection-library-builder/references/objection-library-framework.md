@@ -29,7 +29,7 @@ Keep source wording separate from the analyst label. Never promote a paraphrase 
 
 ## Proof and lifecycle
 
-Proof needs approved wording, owner, last-verified date, and status. Product, pricing, policy, or legal changes retire the card. Do not leave two active versions.
+Proof needs approved wording, owner, last-verified date, and status. Product, pricing, policy, or legal changes trigger a review of affected claims. Propose a replacement or withdrawal where needed; changes to a shared library require explicit approval. Identify the current approved version so sellers can distinguish it from drafts.
 
 ## Escalation
 

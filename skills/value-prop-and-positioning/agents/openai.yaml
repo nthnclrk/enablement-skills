@@ -1,4 +1,4 @@
 interface:
   display_name: "Value Prop And Positioning"
-  short_description: "Positioning against the buyer's real alternative"
+  short_description: "Position value against the buyer's real alternatives"
   default_prompt: "Use $value-prop-and-positioning to define our positioning, persona value props, and proof-backed messaging for revenue conversations."

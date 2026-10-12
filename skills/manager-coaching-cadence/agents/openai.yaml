@@ -1,4 +1,4 @@
 interface:
   display_name: "Manager Coaching Cadence"
-  short_description: "Inspect one behavior every week"
-  default_prompt: "Use $manager-coaching-cadence to design a weekly coaching rhythm that inspects one behavior, fits manager capacity, and leaves one commitment."
+  short_description: "Build a rhythm for practice and live application"
+  default_prompt: "Use $manager-coaching-cadence to design a practical coaching rhythm with evidence review, rehearsal, and live-work follow-up within our available time."

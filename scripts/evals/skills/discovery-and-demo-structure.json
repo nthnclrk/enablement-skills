@@ -2,7 +2,7 @@
   "schema_version": 2,
   "skill": "discovery-and-demo-structure",
   "source": "skills/discovery-and-demo-structure/SKILL.md",
-  "notes": "Curated eval for the craft-pass output contract. Routing prompts stay on practitioner language; output checks require the skill's leading test, not a section list.",
+  "notes": "Curated checks for discovery-and-demo-structure. Apply full-deliverable checks only when that deliverable was requested; score focused revisions on the affected decisions and retained constraints. Definitions are not executed results.",
   "managed_by": "curated",
   "should_trigger": [
     {
@@ -39,7 +39,7 @@
     {
       "name": "discovery-and-demo-structure-core-output",
       "type": "structure",
-      "description": "Names the meeting decision, gates each demo block on a buyer signal, and keeps hypotheses labeled until confirmed.",
+      "description": "Names the meeting decision and the buyer signal for each demo block. When the buyer cannot articulate the problem, a brief verified example may test relevance before returning to discovery; it does not justify a feature tour.",
       "critical": true
     },
     {
@@ -47,6 +47,33 @@
       "type": "semantic",
       "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
       "critical": true
+    },
+    {
+      "name": "discovery-and-demo-structure-practitioner-fit",
+      "type": "semantic",
+      "description": "Uses only verified capabilities and a clear stop or transition condition for an exploratory example.",
+      "critical": true
+    }
+  ],
+  "task_scenarios": [
+    {
+      "id": "discovery-and-demo-structure-exploratory-example",
+      "input_state": "partial",
+      "prompt": "The operations buyer knows handoffs are frustrating but cannot yet explain where they fail. We have ten minutes and a verified demo of routing a request to another team with an audit history. Give me a short way to use that example to find out whether it is relevant, not a full demo plan.",
+      "assertions": [
+        {
+          "name": "discovery-and-demo-structure-exploratory-example-1",
+          "type": "semantic",
+          "description": "Uses a bounded exploratory example and a question that tests relevance, then returns to the buyer's actual workflow.",
+          "critical": true
+        },
+        {
+          "name": "discovery-and-demo-structure-exploratory-example-2",
+          "type": "forbidden_behavior",
+          "description": "Does not demand complete discovery before showing anything or invent capability, impact, or a lengthy feature tour.",
+          "critical": true
+        }
+      ]
     }
   ]
 }

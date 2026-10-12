@@ -5,7 +5,7 @@ description: Build concise, decision-ready account briefs for account reviews, a
 
 # Account brief builder
 
-Write the brief for one decision moment. If it reads like an account wiki, rewrite it.
+Prepare an account owner to make a specific decision using current commercial evidence.
 
 An account brief covers one account, one meeting or decision, and the next actions that resolve it. If the user wants a customer-facing QBR, use `qbr-ebr-builder`. If they want an executive meeting narrative with an ask, use `executive-briefing-builder`. If they want one opportunity inspected, use `deal-inspection-coach`.
 
@@ -13,9 +13,11 @@ An account brief covers one account, one meeting or decision, and the next actio
 
 **Account wiki.** "Acme is a strategic enterprise account with strong expansion potential. We should deepen multi-threading, mitigate churn risk, and align stakeholders on value."
 
-If a manager cannot decide from the first screen, it is not done.
+Put the recommendation, supporting evidence, and decision-critical gap on the first screen.
 
-## Confirm Inputs First
+## Inputs
+
+Reuse supplied context first. If a missing company fact would change the result, check the relevant sections of `.enablement/context.md` when available. Preserve source dates and approval limits.
 
 Ask only for the inputs that change the decision:
 
@@ -26,16 +28,16 @@ Ask only for the inputs that change the decision:
 
 If material account evidence is missing, return a labeled briefing frame and an evidence request. Do not invent metrics, logos, contract terms, or stakeholder roles.
 
-## Read The Right Reference
+## Supporting material
 
 Read [references/account-brief-template.md](references/account-brief-template.md) for the decision-moment test, conflict handling, and the scanned card. Skip it if the user already gave a structure and only wants the operating view.
 
 Read [references/source-system-guide.md](references/source-system-guide.md) when the brief draws from CRM, calls, product, support, or contract records.
 
-## Default Workflow
+## Procedure
 
-1. Name the decision moment.
-   One meeting or decision. One owner. One time horizon. Done when you can say what the named meeting must decide, and what happens if it does not.
+1. Define the decision.
+   Name the meeting, decision owner, and time horizon. For a refresh, identify what changed since the last brief and retain verified material that still matters. The opening should state what the owner needs to decide and the consequence of delay.
 2. Freeze the evidence.
    Record source, date, and locator for each material claim. Preserve conflicts. Do not blend CRM, call, and chat into one story.
 3. State the commercial facts.
@@ -51,11 +53,11 @@ Read [references/source-system-guide.md](references/source-system-guide.md) when
 
 Do not write to CRM, account plans, or customer-facing material without explicit approval.
 
-For a single-opportunity inspect use `deal-inspection-coach`. For a customer QBR use `qbr-ebr-builder`. For an executive meeting with an ask use `executive-briefing-builder`.
+For a single-deal review use `deal-inspection-coach`. For a customer QBR use `qbr-ebr-builder`. For an executive meeting with an ask use `executive-briefing-builder`.
 
-## Output Contract
+## What to return
 
-Return a brief a manager can open in the meeting:
+For a new brief, return the following. For a refresh or one question, update only the affected findings and actions:
 
 - Account, as-of date, the decision moment, and who owns it
 - Current state, material change, recommendation, and evidence caveat
@@ -67,11 +69,11 @@ Return a brief a manager can open in the meeting:
 
 Do not add a customer-facing narrative, meeting choreography, or a full account plan unless this moment needs it.
 
-## Quality Bar
+## Quality bar
 
 - A manager can decide from the first screen.
 - Every material claim has a current source, or is marked unknown.
 - Recorded facts, buyer signals, and internal hypotheses stay distinct.
 - Conflicts and missing decision roles stay visible.
 - Actions resolve this decision, not generic account hygiene.
-- The brief refused the QBR, the exec meeting script, and the single-deal inspect that do not belong here.
+- The recommendation addresses the account decision the user asked about.

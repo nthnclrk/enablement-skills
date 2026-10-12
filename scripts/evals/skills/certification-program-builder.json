@@ -2,7 +2,7 @@
   "schema_version": 2,
   "skill": "certification-program-builder",
   "source": "skills/certification-program-builder/SKILL.md",
-  "notes": "Curated eval for the craft-pass output contract. Routing prompts stay on practitioner language; output checks require the skill's leading test, not a section list.",
+  "notes": "Curated checks for certification-program-builder. Apply full-deliverable checks only when that deliverable was requested; score focused revisions on the affected decisions and retained constraints. Definitions are not executed results.",
   "managed_by": "curated",
   "should_trigger": [
     {
@@ -65,6 +65,33 @@
       "type": "semantic",
       "description": "Refuses course completion, quiz scores, tenure, or manager familiarity as the pass, and does not write the onboarding curriculum.",
       "critical": true
+    },
+    {
+      "name": "certification-program-builder-practitioner-fit",
+      "type": "semantic",
+      "description": "Investigates pilot disagreement without adjusting the pass bar solely to reproduce an expected pass rate or preferred candidate ranking.",
+      "critical": true
+    }
+  ],
+  "task_scenarios": [
+    {
+      "id": "certification-program-builder-pilot-disagreement",
+      "input_state": "conflicting",
+      "prompt": "Our discovery certification pilot failed two experienced AEs whom managers expected to pass. The rubric required evidence of clarifying business impact, but both recordings lack that behaviour. Should we lower the pass threshold until these AEs pass? The managers know them well.",
+      "assertions": [
+        {
+          "name": "certification-program-builder-pilot-disagreement-1",
+          "type": "semantic",
+          "description": "Investigates the task, rubric validity, evidence coverage, assessment conditions and assessor calibration alongside the managers' expectations.",
+          "critical": true
+        },
+        {
+          "name": "certification-program-builder-pilot-disagreement-2",
+          "type": "forbidden_behavior",
+          "description": "Does not lower the standard to achieve the preferred candidate outcomes or substitute tenure and reputation for evidence.",
+          "critical": true
+        }
+      ]
     }
   ]
 }

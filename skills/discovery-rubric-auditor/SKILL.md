@@ -5,7 +5,7 @@ description: Audit a sample of discovery calls with one consistent rubric and tu
 
 # Discovery rubric auditor
 
-Score the pattern, not the one-off. If the finding could be one bad call, do not coach the team on it.
+Compare discovery calls using a consistent rubric, then identify recurring behaviours that warrant coaching.
 
 An audit needs a comparable sample, one rubric, and a few recurring gaps. One recorded call is `call-review-coach`. A pass/fail readiness decision is `certification-program-builder`.
 
@@ -15,7 +15,7 @@ An audit needs a comparable sample, one rubric, and a few recurring gaps. One re
 
 If you cannot say how often the gap appeared, in which comparable slice, it is not a pattern.
 
-## Confirm Inputs First
+## Inputs
 
 Ask only for the inputs that change the audit:
 
@@ -28,11 +28,11 @@ Ask only for the inputs that change the audit:
 
 Continue from a thin sample with the limits named. Do not invent a leaderboard.
 
-## Read The Right Reference
+## Supporting material
 
 Read [references/discovery-rubric-framework.md](references/discovery-rubric-framework.md) for anchors, calibration, and when a number is only directional. Skip it if the user already supplied a calibrated rubric and only wants the pattern read.
 
-## Default Workflow
+## Procedure
 
 1. Frame the sample.
    Separate unlike roles, segments, stages, or call types. Done when each reported unit is comparable.
@@ -47,13 +47,13 @@ Read [references/discovery-rubric-framework.md](references/discovery-rubric-fram
 6. Separate pattern from one-off.
    Recurring clusters only. Frequency is not causation. Skill gap, process gap, and sample-shape issue are different findings.
 7. Pick a few interventions.
-   What managers inspect in the next call sample. Done when each action has a behavior and a slice.
+   Choose a response for each supported pattern: coaching, practice, process repair, or further investigation. For coaching, specify the behaviour to rehearse and the comparable future sample that could show improvement.
 
 Conversation-intelligence scores are leads, not ground truth. Default reporting is de-identified.
 
 For meeting architecture use `discovery-and-demo-structure`. For one call use `call-review-coach`. For a formal gate use `certification-program-builder`.
 
-## Output Contract
+## What to return
 
 Return an audit a manager can act on next week:
 
@@ -62,17 +62,17 @@ Return an audit a manager can act on next week:
 - Calibration record, including single-reviewer limits
 - De-identified results with distributions; identifiable appendix only if authorized
 - Patterns with frequency, impact, and confidence
-- A few coaching moves, ranked by likely effect
+- Prioritised interventions with rationale, uncertainty, owner, and follow-up evidence
 - What to inspect in the next sample
 - Limitations that keep conclusions directional
 
 Do not rank reps from a mixed or tiny sample. Do not issue a pass/fail.
 
-## Quality Bar
+## Quality bar
 
 - Unlike calls are not on one leaderboard.
 - Every finding cites call evidence and a denominator.
 - `N/O` is never averaged as zero.
 - One reviewer is labeled `inter-rater reliability: not established`.
 - Interventions are few, and each is a pattern, not a one-off.
-- The audit refused the single-call review and the certification decision.
+- The sample supports the scope of each conclusion; individual readiness remains a separate decision.

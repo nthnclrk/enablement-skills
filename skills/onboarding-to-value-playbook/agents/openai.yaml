@@ -1,4 +1,4 @@
 interface:
   display_name: "Onboarding To Value Playbook"
-  short_description: "First value by segment, not seller onboarding"
+  short_description: "Plan the customer's path to first value"
   default_prompt: "Use $onboarding-to-value-playbook to build a customer first-value playbook by segment, with milestones, owners, and early-risk controls."

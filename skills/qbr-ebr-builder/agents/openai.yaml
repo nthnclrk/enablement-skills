@@ -1,4 +1,4 @@
 interface:
   display_name: "QBR EBR Builder"
-  short_description: "Customer outcomes, not vendor activity"
+  short_description: "Review customer outcomes and agree next priorities"
   default_prompt: "Use $qbr-ebr-builder to draft a customer-facing QBR or EBR around customer outcomes, decisions in the room, and a joint action plan."

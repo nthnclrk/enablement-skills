@@ -5,7 +5,7 @@ description: Build a concise forecast risk brief that highlights commit risk, sl
 
 # Forecast risk brief
 
-Separate deal risk from data-quality risk. Then tell leadership what to do this week.
+Show leadership which forecast value is exposed, where the evidence is insufficient, and which interventions need attention.
 
 A good brief shows which commit value is threatened, which is merely untrustworthy, and which intervention belongs to each. If the user wants one deal inspected, use `deal-inspection-coach`.
 
@@ -15,7 +15,7 @@ A good brief shows which commit value is threatened, which is merely untrustwort
 
 If evidence confidence is being used as close likelihood, rewrite it.
 
-## Confirm Inputs First
+## Inputs
 
 Ask only for the inputs that change the brief:
 
@@ -27,11 +27,11 @@ Ask only for the inputs that change the brief:
 
 If a field is missing, leave it unknown. Do not invent amounts, dates, categories, or thresholds.
 
-## Read The Right Reference
+## Supporting material
 
 Read [references/forecast-risk-framework.md](references/forecast-risk-framework.md) before assigning a risk tier. Read [references/source-system-guide.md](references/source-system-guide.md) when the source is a CRM or BI export.
 
-## Default Workflow
+## Procedure
 
 1. Freeze the snapshot.
    One as-of date, one currency, one category set. Done when totals reconcile to the export and mixed currencies or duplicate IDs are flagged.
@@ -44,15 +44,15 @@ Read [references/forecast-risk-framework.md](references/forecast-risk-framework.
 5. Aggregate for leadership.
    Value and count by tier, category, rep, segment, stage, and close timing. Keep indeterminate outside the low/moderate/high totals.
 6. Apply the risk-confidence matrix.
-   High risk with usable evidence: intervene on the named blocker. High risk with low confidence: verify first. Indeterminate: name the smallest fact that would unlock a tier.
+   Address a directly evidenced blocker even when other fields are incomplete. Verify weakly supported concerns before acting on them. For indeterminate deals, name the smallest missing fact that would support a classification; evidence gaps must not erase a known hard stop.
 7. Assign interventions.
    Owner, confirmed or proposed date, verification check. A date you created is proposed. Escalate concentration only against a tolerance the user supplied; otherwise show the exposure and ask.
 
 For one strategic deal use `deal-inspection-coach`. For one call use `call-review-coach`. For stage-rule design use `pipeline-stage-definition-and-exit-criteria`.
 
-## Output Contract
+## What to return
 
-Return a brief a leadership review can use in 15 minutes:
+Lead with the exposure and decisions needed for the requested review. Include:
 
 - Forecast summary: scope, confidence band as evidence quality, caveats
 - Risk-tier breakdown with indeterminate held out
@@ -65,7 +65,7 @@ Return a brief a leadership review can use in 15 minutes:
 
 Do not add a single-deal coaching plan or a rewritten stage model unless this brief needs it.
 
-## Quality Bar
+## Quality bar
 
 - Leadership can act from this in the weekly review without a second analysis.
 - Deal risk and data-quality risk stay separate.

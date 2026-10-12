@@ -2,7 +2,7 @@
   "schema_version": 2,
   "skill": "partner-enablement-package",
   "source": "skills/partner-enablement-package/SKILL.md",
-  "notes": "Curated eval for partner-safe packages. Routing keeps partner work off direct-sales onboarding and internal launch kits. Output checks require a partner-facing and internal split.",
+  "notes": "Curated eval for partner-safe packages. Routing keeps partner work off direct-sales onboarding and internal launch kits. Output checks require a partner-facing and internal split. Apply full-deliverable checks only when that deliverable was requested. Definitions are not executed results.",
   "managed_by": "curated",
   "should_trigger": [
     {
@@ -44,13 +44,13 @@
     {
       "name": "partner-enablement-package-output-01",
       "type": "structure",
-      "description": "Returns a partner-facing package limited to approved messaging, qualification, handoff, and readiness guidance.",
+      "description": "Returns the requested partner-facing material using only approved messaging, qualification, handoff, and readiness guidance.",
       "critical": true
     },
     {
       "name": "partner-enablement-package-output-02",
       "type": "structure",
-      "description": "Returns a separate internal operator pack for rights, economics, restricted content, and exceptions.",
+      "description": "Keeps internal rights, economics, restricted content, and exceptions separate; does not force a second operator pack when only partner copy was requested.",
       "critical": true
     },
     {
@@ -63,6 +63,12 @@
       "name": "partner-enablement-package-output-04",
       "type": "forbidden_behavior",
       "description": "Does not invent partner claims, discounts, territories, or readiness states.",
+      "critical": true
+    },
+    {
+      "name": "partner-enablement-package-practitioner-fit",
+      "type": "semantic",
+      "description": "Tests readiness on the partner's permitted motion rather than assuming direct-seller responsibilities or rights.",
       "critical": true
     }
   ]

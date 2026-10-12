@@ -1,4 +1,4 @@
 interface:
   display_name: "Talk Track Builder"
-  short_description: "Spoken lines for one conversation moment, not a script"
+  short_description: "Write natural lines for a specific conversation"
   default_prompt: "Use $talk-track-builder to draft persona-specific spoken lines, proof inserts, branch language, and a clear next-step ask for this defined conversation moment."

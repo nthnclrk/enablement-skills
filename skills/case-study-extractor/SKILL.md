@@ -5,9 +5,9 @@ description: Extract credible customer stories, proof points, outcome claims, an
 
 # Case study extractor
 
-Permissioned proof. Evidence strength and permission to publish are different decisions.
+Extract customer evidence that a seller or writer can reuse with its limits and permissions intact.
 
-If the metric has no baseline, it is not a result yet. If the quote is reconstructed from a summary, it is not a quote.
+A measured current value can be reported with its definition, period, and population. A change claim also needs a comparable baseline. Reconstructed statements are paraphrases, not quotes.
 
 **Honest.** "In a three-customer pilot, unresolved handoffs fell 28% in 60 days. Directional. Not a benchmark. Named use requires customer approval we do not have."
 
@@ -15,7 +15,7 @@ If the metric has no baseline, it is not a result yet. If the quote is reconstru
 
 Default to internal. Mark every external-use field `Not approved` or `Unknown` until you have the permission.
 
-## Confirm Inputs First
+## Inputs
 
 Ask only for what changes claim strength or reuse:
 
@@ -26,18 +26,18 @@ Ask only for what changes claim strength or reuse:
 
 Do not invent numbers, quotes, or approvals.
 
-## Read The Right Reference
+## Supporting material
 
 Read [references/case-study-template.md](references/case-study-template.md) for claim statuses, the permission matrix, and story shape. Skip it if you are only extracting a quote bank.
 
-## Default Workflow
+## Procedure
 
 1. Set the boundary.
    Sources, audience, and reuse permissions before any narrative. Strength and permission stay separate.
 2. Extract units.
    Starting state, problem, intervention, adoption, result. Source IDs on each. Keep conflicts.
 3. Validate numbers.
-   Definition, baseline, result, period, population, calculation, attribution limit. Opinion is not causality.
+   Check definition, result, period, population, and calculation. Require a comparable baseline for improvement claims, and check what else changed before attributing the result to the intervention. Retain credible qualitative evidence when no defensible metric exists.
 4. Handle quotes exactly.
    Verbatim, with speaker, date, context, locator. Paraphrases stay outside quotation marks.
 5. Classify claims: `Verified`, `Supported`, `Anecdotal`, `Unverified`. Publication status is a different field.
@@ -48,17 +48,17 @@ For cross-account patterns use `field-feedback-synthesizer`. For final packaging
 
 Do not contact a customer, request approval, or publish without explicit user authorization.
 
-## Output Contract
+## What to return
 
 Every branch includes use status, locators, permission fields, and the gaps that block the requested use.
 
 - Quote bank, proof-point packet, internal narrative, customer-review draft, or publication packet
 - Never the larger dossier when a narrower branch is enough
 
-## Quality Bar
+## Quality bar
 
 - Every material claim and quote has a locator.
-- Numbers include baseline, period, population, and attribution limit.
+- Numbers include definition, period, population, and attribution limit; change claims also include a comparable baseline.
 - Quotes are exact. Paraphrases are labeled.
 - Unknown permission never reads as approved.
 - The internal version is useful to a seller and still safe for review.

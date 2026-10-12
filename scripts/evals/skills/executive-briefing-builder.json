@@ -2,7 +2,7 @@
   "schema_version": 2,
   "skill": "executive-briefing-builder",
   "source": "skills/executive-briefing-builder/SKILL.md",
-  "notes": "Curated eval for one-meeting executive briefs built around an ask and fallback. Near-misses keep QBR and internal account briefs on adjacent skills.",
+  "notes": "Check briefs for a specific executive meeting. Informational briefs need no invented negotiation; decision and negotiation briefs need confirmed authority. Keep QBRs and internal account reviews on their own skills. Apply full-deliverable checks only when that deliverable was requested. Definitions are not executed results.",
   "managed_by": "curated",
   "should_trigger": [
     {
@@ -19,6 +19,10 @@
     },
     {
       "prompt": "Prepare our CRO's pre-read for tomorrow's 30-minute meeting with Acme's COO. One ask, a fallback if they will not move, authorized concessions, and a timed meeting plan.",
+      "expected": true
+    },
+    {
+      "prompt": "Prepare an internal executive briefing on our rollout status. This is an information update, not a negotiation or approval meeting.",
       "expected": true
     }
   ],
@@ -53,7 +57,7 @@
     {
       "name": "executive-briefing-builder-output-01",
       "type": "structure",
-      "description": "States one primary ask and one fallback as sentences a leader can say, plus the meeting objective.",
+      "description": "States the meeting purpose and the decision or alignment sought. Includes an explicit ask and fallback when the meeting involves a decision or negotiation, without manufacturing a concession for an information briefing.",
       "critical": true
     },
     {
@@ -79,6 +83,33 @@
       "type": "structure",
       "description": "Labels internal-only material separately from any customer-shareable extract.",
       "critical": true
+    },
+    {
+      "name": "executive-briefing-builder-practitioner-fit",
+      "type": "semantic",
+      "description": "For a narrow request, returns the requested agenda, ask, or briefing section while preserving confirmed authority and internal sharing boundaries.",
+      "critical": true
+    }
+  ],
+  "task_scenarios": [
+    {
+      "id": "executive-briefing-informational-update",
+      "input_state": "partial",
+      "prompt": "Write a short internal pre-read for our CRO on the onboarding rollout. Three of five regions have started. South starts next Monday. West has no confirmed facilitator yet. The operations lead owns that gap and will update us on Friday. The CRO only needs to understand status; no decision, negotiation or concession is sought. Use these facts only.",
+      "assertions": [
+        {
+          "name": "executive-briefing-information-purpose",
+          "type": "semantic",
+          "description": "States the rollout status and facilitator gap, with the supplied owner and update timing. Returns a short internal information briefing.",
+          "critical": true
+        },
+        {
+          "name": "executive-briefing-no-invented-negotiation",
+          "type": "forbidden_behavior",
+          "description": "Does not invent a decision request, concession, walk-away, fallback or commercial approval requirement.",
+          "critical": true
+        }
+      ]
     }
   ]
 }

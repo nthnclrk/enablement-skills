@@ -1,4 +1,4 @@
 interface:
   display_name: "Enablement Metrics"
-  short_description: "KPI trees that stop short of attribution"
+  short_description: "Define useful enablement measures and data capture"
   default_prompt: "Use $enablement-metrics-and-instrumentation to create a KPI tree and instrumentation plan for this enablement initiative."

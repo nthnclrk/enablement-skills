@@ -5,7 +5,7 @@ description: Build partner-ready enablement packages with separated external and
 
 # Partner enablement package
 
-Build a partner-safe package. If it is a copied direct-sales pack, rewrite it.
+Prepare partners to carry out the activities their agreement permits, using claims and materials approved for that audience.
 
 Partners get only what they may say and do under the agreement. Channel managers get the economics, conflict rules, and restricted proof in a separate internal pack.
 
@@ -13,9 +13,11 @@ Partners get only what they may say and do under the agreement. Channel managers
 
 **Copied pack.** The AE battlecard, our win rate versus Competitor X, and the Q3 discount grid, with "partner" find-replaced in.
 
-If a partner could quote an internal number after reading it, it is not done. The channel manager's file can hold that number; the partner's file cannot.
+Keep restricted numbers in the channel manager's internal material, separate from the partner's file.
 
-## Confirm Inputs First
+## Inputs
+
+Reuse supplied context first. If a missing company fact would change the result, check the relevant sections of `.enablement/context.md` when available. Preserve source dates and approval limits.
 
 Ask only for the inputs that change the package:
 
@@ -26,11 +28,11 @@ Ask only for the inputs that change the package:
 
 If a right, claim, or economic rule is missing, leave it unknown. Do not invent partner claims, discounts, territories, or readiness.
 
-## Read The Right Reference
+## Supporting material
 
 Read [references/partner-package-blueprint.md](references/partner-package-blueprint.md) for the copy-paste tell, claim classification, and the partner-facing versus internal split. Skip it if they already handed you a classified source list and only want assembly.
 
-## Default Workflow
+## Procedure
 
 1. Define the permitted motion.
    Map what this partner may position, qualify, demonstrate, sell, deliver, and hand off. Partner type is context, not permission. Done when each activity has a scope, a prohibited commitment, and a handoff owner.
@@ -41,15 +43,15 @@ Read [references/partner-package-blueprint.md](references/partner-package-bluepr
 4. Build the internal operator pack separately.
    Rights, lead registration, split rules, discount authority, conflict escalation, restricted content, exceptions, and support obligations. Never nest this inside a partner document.
 5. Define observable readiness.
-   Task, evidence, standard, assessor, remediation. Attendance is not ready. If the decision is a formal pass/fail, use `certification-program-builder` and consume that artifact; do not recreate it.
+   Practise the permitted task with realistic partner constraints and feedback. Specify the evidence, standard, assessor, and remediation needed for independent work. Attendance alone cannot establish readiness. If the decision is a formal pass/fail, use `certification-program-builder` and consume that artifact; do not recreate it.
 6. Review the boundary.
    Block unverified claims, expired assets, and content outside this partner's rights. Done when a channel manager can hand the external file to a partner without redacting.
 
 For direct-hire ramp use `onboarding-program-builder`. For an internal-only launch kit use `product-launch-enablement`.
 
-## Output Contract
+## What to return
 
-Return two artifacts, labeled as such:
+For a complete package, separate the partner-facing and internal artifacts below. If only one is requested, return that artifact and flag any missing approvals without generating the other:
 
 - Partner-facing package: permitted motion, approved messaging, qualification, handoff, and readiness guidance
 - Internal operator pack: rights, economics, claim ledger, restricted-content map, exceptions, and support ownership
@@ -57,11 +59,11 @@ Return two artifacts, labeled as such:
 
 Do not merge the two files. Do not publish, change portal access, or mark a partner ready without explicit approval.
 
-## Quality Bar
+## Quality bar
 
 - A partner can execute the permitted motion without seeing internal economics.
 - A channel manager can operate the motion from the internal pack.
-- The package refused to be a find-replaced AE kit.
+- The materials reflect this partner's permitted activities and support needs.
 - Every external claim is approved for this partner audience, or is absent.
 - Readiness is an observed task, not a completion checkbox.
 - Qualification, escalation, and handoff owners are named.

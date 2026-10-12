@@ -2,7 +2,7 @@
   "schema_version": 2,
   "skill": "quarterly-enablement-planner",
   "source": "skills/quarterly-enablement-planner/SKILL.md",
-  "notes": "Curated eval for quarter plans. Routing keeps the stack off program charters and single-launch kits. Output checks require an explicit defer list.",
+  "notes": "Curated eval for quarter plans. Routing keeps the stack off program charters and single-launch kits. Output checks require an explicit defer list. Apply full-deliverable checks only when that deliverable was requested. Definitions are not executed results.",
   "managed_by": "curated",
   "should_trigger": [
     {
@@ -63,6 +63,12 @@
       "name": "quarterly-enablement-planner-output-04",
       "type": "forbidden_behavior",
       "description": "Does not invent capacity, fixed dates, or commitments to make the roadmap fit.",
+      "critical": true
+    },
+    {
+      "name": "quarterly-enablement-planner-practitioner-fit",
+      "type": "semantic",
+      "description": "For reprioritisation, shows the changed work, displaced commitments, and capacity impact without recreating unchanged plans.",
       "critical": true
     }
   ]

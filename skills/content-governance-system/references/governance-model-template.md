@@ -1,14 +1,14 @@
 # Governance model judgment
 
-Use this when you are designing the weekly operating model. The skill body has the procedure. This is not a content inventory.
+Use this to define recurring content responsibilities, review states, and approval boundaries. Use `content-gap-analysis` for a one-time inventory or backlog.
 
-## Weekly cadence first
+## Start with the recurring work
 
-If you cannot name the weekly job, the rest of the model will not run.
+Name the work, its owner, the review trigger, and the completion evidence. Choose a cadence those owners can sustain; use asynchronous review when a meeting adds no useful decision.
 
 **Fails.** "Stand up a content council. Review all 400 assets quarterly. Clean the taxonomy first."
 
-**Passes.** "Wednesday, 45 minutes. Owners clear due and overdue reviews. Intake owner picks one request. Publishers ship only approved versions. Exception queue is time-boxed. Done when overdue reviews are owned, not when every asset is perfect."
+**Passes.** "Proposed weekly review: owners record decisions on due assets asynchronously. The intake owner assigns urgent gaps. A short meeting resolves exceptions only. Each due review ends with an approved revision, confirmed validity, or a named owner and resolution date."
 
 Scale the cadence to the people who will actually show up. Unused councils are failed governance.
 
@@ -20,7 +20,7 @@ Publication: `draft` → `in_review` → `approved` → `published` → `retired
 
 Review: `current`, `due`, `overdue`, `blocked`.
 
-A published asset stays `published` while review is `due`, `overdue`, or `blocked`. Review status must not remove a live asset from published-content denominators.
+A published asset stays `published` while review is `due`, `overdue`, or `blocked`. Review status must not remove a live asset from published-content denominators. Known harmful or false content needs a specific proposed correction or withdrawal; an overdue date alone is not grounds to unpublish it.
 
 | Publication | Entry | Allowed next | Exit evidence |
 | --- | --- | --- | --- |

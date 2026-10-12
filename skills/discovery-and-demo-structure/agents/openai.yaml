@@ -1,4 +1,4 @@
 interface:
   display_name: "Discovery and Demo Structure"
-  short_description: "Discovery and demo flows gated by buyer signal"
+  short_description: "Connect discovery and demos to the buyer's needs"
   default_prompt: "Use $discovery-and-demo-structure to design an adaptive discovery guide and outcome-led demo flow using only verified capabilities and proof."

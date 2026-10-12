@@ -2,7 +2,7 @@
   "schema_version": 2,
   "skill": "battlecard-builder",
   "source": "skills/battlecard-builder/SKILL.md",
-  "notes": "Curated eval for the craft-pass output contract. Routing prompts stay on practitioner language; output checks require the skill's leading test, not a section list.",
+  "notes": "Check head-to-head fit, proof limits and qualify-out conditions. A specific objection reply belongs to objection-library-builder. Apply full-deliverable checks only when that deliverable was requested. Definitions are not executed results.",
   "managed_by": "curated",
   "should_trigger": [
     {
@@ -15,6 +15,10 @@
     },
     {
       "prompt": "I have rough notes. Please turn them into a usable battlecard and label anything that still needs confirmation.",
+      "expected": true
+    },
+    {
+      "prompt": "Help me assess where we fit against Competitor X for a plant-floor evaluation. I need the requirements that favour each offer and when we should qualify out, not a reply to an objection.",
       "expected": true
     }
   ],
@@ -33,6 +37,16 @@
       "prompt": "Please build concise, decision-ready account briefs for account reviews, account planning, renewal or expansion reviews, and customer meeting preparation.",
       "expected": false,
       "adjacent_skill": "account-brief-builder"
+    },
+    {
+      "prompt": "My buyer says a competitor is 30% cheaper. I've got a call shortly. Help me respond naturally without inventing proof or offering a discount.",
+      "expected": false,
+      "adjacent_skill": "objection-library-builder"
+    },
+    {
+      "prompt": "Write a 30-second opener for our next product demo. We have agreed the agenda and want to confirm the buyer's priority before showing anything.",
+      "expected": false,
+      "adjacent_skill": "talk-track-builder"
     }
   ],
   "output_structure_checks": [
@@ -46,6 +60,12 @@
       "name": "battlecard-builder-decision-discipline",
       "type": "semantic",
       "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
+      "critical": true
+    },
+    {
+      "name": "battlecard-builder-practitioner-fit",
+      "type": "semantic",
+      "description": "Does not infer a competitor weakness from missing public information. With sparse evidence, distinguishes a research brief from safe questions and responses for an imminent conversation.",
       "critical": true
     }
   ]

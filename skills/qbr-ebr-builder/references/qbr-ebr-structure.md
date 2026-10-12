@@ -4,18 +4,18 @@ Use this when you are writing or checking a QBR or EBR. The skill body has the p
 
 ## Outcome test
 
-The customer should hear their results, not our activity. Keep a slide if it changes a goal they set. Cut it if it reports vendor motion.
+Organise the review around the customer's goals, results, and next priorities. Include delivery activity only when it explains an outcome, a barrier, or a decision.
 
 A pack fails the test when it:
 
 - Leads with sessions delivered, tickets closed, or playbooks launched
 - Attributes a metric to us without a causal basis the customer accepts
 - Puts churn language, discount ceilings, or champion weakness on customer pages
-- Closes without a decision the room can take
+- Ends without clarifying agreed priorities or any decisions and actions needed
 
 **Fails.** "This quarter our CS team completed 14 enablement sessions and launched two playbooks. We remain a committed partner."
 
-**Passes.** "Time-to-invoice dropped from 9 days to 4. You still miss the 2-day target you set in January. Decision: fund AP automation this quarter, or accept 4 days as the new baseline."
+**Passes.** "Time-to-invoice fell from 9 days to 4, against your 2-day target. Manual exceptions account for most of the remaining delay. Agree who will assess the options before deciding whether to invest or revise the target."
 
 ## QBR vs EBR
 
@@ -29,11 +29,11 @@ Same evidence rules. Different altitude. Do not turn an EBR into a longer QBR.
 
 Customer-facing is the default. Internal mode is an appendix for the same review, only when asked.
 
-Customer pages may include outcome movement, agreed risks they already know, and joint next steps.
+Customer pages may include outcome movement, verified delivery risks, and joint next steps. Distinguish confirmed customer agreement from a new finding or proposal.
 
 Internal appendix may include evidence-confidence concerns, commercial risk, negotiation posture, escalation, and decisions we must make before the review.
 
-If a sentence would surprise the customer, it is appendix or it is cut.
+Prepare the owner to explain difficult or unexpected delivery facts. Keep private negotiation posture and unsupported stakeholder judgments out of the customer pack; do not hide a material delivery problem because it is new to the customer.
 
 ## Attribution
 
@@ -43,7 +43,7 @@ Correlation is not causation. If the customer has not accepted the interpretatio
 
 **Fails.** "Our platform reduced invoice cycle time 56%."
 
-**Passes.** "Invoice cycle time moved from 9 days to 4 in this period (finance extract, 30 June). You also added two AP clerks in May. We cannot isolate our contribution. Decision still stands: 2 days or 4."
+**Passes.** "Invoice cycle time moved from 9 days to 4 in this period (finance extract, 30 June). You also added two AP clerks in May, so we cannot isolate our contribution. The remaining exceptions still need an owner and a plan."
 
 ## Commitments
 
@@ -53,7 +53,7 @@ Close last cycle before opening the next. A new plan that ignores last quarter's
 
 ## Thin evidence
 
-No baseline, no customer-accepted goal, or no metric source: ask for the smallest blocking set. Build the frame and the evidence request. Do not invent the scorecard.
+Ask for missing evidence only where it changes the review. A missing baseline prevents an improvement claim, but a supported current result can still be reported. If goals are unconfirmed, make agreeing them part of the review rather than inventing them.
 
 ## Optional shape
 
@@ -62,7 +62,7 @@ No baseline, no customer-accepted goal, or no metric source: ask for the smalles
 1. Period goals and baseline
 2. Outcome scorecard
 3. What moved, what did not
-4. Risks the customer can hear
+4. Delivery risks and proposed responses
 5. Decisions and joint plan for the next agreed horizon
 
 ### EBR
@@ -70,7 +70,7 @@ No baseline, no customer-accepted goal, or no metric source: ask for the smalles
 1. Strategic objective
 2. Outcome and impact narrative
 3. Strategic options
-4. Executive asks
+4. Executive decisions, when needed
 5. Joint priorities and cadence
 
 Use tables only when the user wants a scanned scorecard. Unknown or conflicted values stay labeled. Do not fill them.

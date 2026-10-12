@@ -2,7 +2,7 @@
   "schema_version": 2,
   "skill": "enablement-metrics-and-instrumentation",
   "source": "skills/enablement-metrics-and-instrumentation/SKILL.md",
-  "notes": "Curated eval for KPI trees that stop short of attribution. Routing keeps measurement design separate from leadership impact narrative.",
+  "notes": "Check single metric definitions and full measurement plans. Keep adoption, assessment results, live behaviour and commercial claims distinct; route leadership narratives to enablement-impact-story. Apply full-deliverable checks only when that deliverable was requested. Definitions are not executed results.",
   "managed_by": "curated",
   "should_trigger": [
     {
@@ -15,6 +15,10 @@
     },
     {
       "prompt": "I have rough notes. Please turn them into a usable enablement metrics and instrumentation and label anything that still needs confirmation.",
+      "expected": true
+    },
+    {
+      "prompt": "Define our monthly practice participation metric from roster eligibility dates and attendance records. I only need this one operational measure.",
       "expected": true
     }
   ],
@@ -44,7 +48,7 @@
     {
       "name": "enablement-metrics-tiers",
       "type": "structure",
-      "description": "Labels metrics as adoption, execution, productivity, or commercial, and names one primary commercial metric.",
+      "description": "Connects the relevant adoption, execution, productivity, and commercial measures for the requested question, without forcing a four-tier tree for a single metric.",
       "critical": true
     },
     {
@@ -56,7 +60,7 @@
     {
       "name": "enablement-metrics-claim-limit",
       "type": "semantic",
-      "description": "Keeps evidence design at descriptive, contribution, or causal and does not treat adoption as the success metric.",
+      "description": "Keeps claims within the evidence design. Adoption can answer a participation question but cannot establish effectiveness or commercial impact by itself.",
       "critical": true
     },
     {
@@ -64,6 +68,45 @@
       "type": "forbidden_behavior",
       "description": "Does not invent win rates, usage, baselines, ROI, or an executive impact narrative.",
       "critical": true
+    },
+    {
+      "name": "enablement-metrics-and-instrumentation-practitioner-fit",
+      "type": "semantic",
+      "description": "Distinguishes calculation gaps from governance gaps. Missing targets or owners do not make an otherwise defined metric uncalculable; missing baselines block change claims, not current values.",
+      "critical": true
+    },
+    {
+      "name": "enablement-metrics-readiness-signal",
+      "type": "semantic",
+      "description": "Distinguishes certification participation from assessment pass rate and from observed job performance.",
+      "critical": true
+    }
+  ],
+  "task_scenarios": [
+    {
+      "id": "enablement-metrics-and-instrumentation-missing-governance",
+      "input_state": "partial",
+      "prompt": "Help me define our monthly practice participation metric, not the whole KPI tree. The roster has employee_id, eligible_from and eligible_to; attendance has employee_id, session_id and session_date. Count eligible AEs who attended at least one practice in the calendar month, divided by AEs eligible for at least one day that month. Attendance outside a person's eligible dates doesn't count. We haven't set a target or baseline, and the reporting owner is undecided.",
+      "assertions": [
+        {
+          "name": "enablement-metrics-and-instrumentation-missing-governance-1",
+          "type": "semantic",
+          "description": "Specifies distinct eligible employees, eligibility-date joins, calendar window, duplicates and QA; uses the supplied denominator rather than inventing a new population.",
+          "critical": true
+        },
+        {
+          "name": "enablement-metrics-and-instrumentation-missing-governance-2",
+          "type": "semantic",
+          "description": "Marks target and ownership as governance decisions, not reasons the metric cannot be calculated; marks change over time as unavailable without comparable prior data.",
+          "critical": true
+        },
+        {
+          "name": "enablement-metrics-and-instrumentation-missing-governance-3",
+          "type": "forbidden_behavior",
+          "description": "Does not claim that attendance proves behaviour change or expand into an entire instrumentation programme.",
+          "critical": true
+        }
+      ]
     }
   ]
 }

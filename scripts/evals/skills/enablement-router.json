@@ -2,7 +2,7 @@
   "schema_version": 2,
   "skill": "enablement-router",
   "source": "skills/enablement-router/SKILL.md",
-  "notes": "Curated eval focused on sequencing, near-miss boundary checks, and context insertion.",
+  "notes": "Curated eval focused on sequencing, near-miss boundary checks, and context insertion. Apply full-deliverable checks only when that deliverable was requested. Definitions are not executed results.",
   "managed_by": "curated",
   "should_trigger": [
     {
@@ -39,32 +39,38 @@
     {
       "name": "enablement-router-output-01",
       "type": "structure",
-      "description": "Defaults to one skill for a single-artifact ask. Extra steps have a required handoff and an availability mark.",
+      "description": "Defaults to the specialist for a direct ask. A sequence adds only separately requested work or a necessary dependency, with each skill's availability clear.",
       "critical": true
     },
     {
       "name": "enablement-router-output-02",
       "type": "structure",
-      "description": "The output substantively includes: A one-line boundary note per skill in the sequence",
+      "description": "Explains the chosen skill's job and closest boundary only as needed to prevent a routing error.",
       "critical": true
     },
     {
       "name": "enablement-router-output-03",
       "type": "structure",
-      "description": "The output substantively includes: Required inputs for each step",
+      "description": "Names missing inputs that would change the route or next deliverable.",
       "critical": false
     },
     {
       "name": "enablement-router-output-04",
       "type": "structure",
-      "description": "The output substantively includes: Expected output from each step",
+      "description": "Names the usable output or handoff from each recommended step.",
       "critical": false
     },
     {
       "name": "enablement-router-output-05",
       "type": "structure",
-      "description": "The output substantively includes: Explicit out-of-scope items to prevent skill drift",
+      "description": "Identifies process, incentive, product, or capacity problems that enablement cannot solve, while preserving useful work within scope.",
       "critical": false
+    },
+    {
+      "name": "enablement-router-practitioner-fit",
+      "type": "semantic",
+      "description": "Does not force context setup before a self-contained request or assume unavailable sibling skills were loaded.",
+      "critical": true
     }
   ]
 }

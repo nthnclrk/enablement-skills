@@ -1,4 +1,4 @@
 interface:
   display_name: "Revenue Enablement Context"
-  short_description: "Smallest useful GTM context, written only when asked"
-  default_prompt: "Use $revenue-enablement-context to set up or refresh .enablement/context.md from the sources I provide, previewing changes before writing."
+  short_description: "Prepare relevant, reusable company context"
+  default_prompt: "Use $revenue-enablement-context to prepare the relevant context from my sources, keeping gaps visible and previewing any proposed file before writing."

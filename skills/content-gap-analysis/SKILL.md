@@ -5,15 +5,15 @@ description: Audit revenue enablement content coverage and prioritize the highes
 
 # Content gap analysis
 
-Decide what to create, update, consolidate, or retire. First separate exists from used. An asset on the wiki that no one can find is not coverage.
+Prioritize content work by the field problem it will solve. Check whether an asset exists, fits the task, can be found, and is used before recommending a new one.
 
 **Fails.** "Zero views this quarter, so retire the security FAQ."
 
 **Passes.** "The security FAQ exists, is current, and drew 19 failed searches against 6 views. Action: improve discoverability, not retire. The mid-market ROI template does not exist; the enterprise calculator is out of scope. Action: create."
 
-A weekly operating model for owners, review, and publishing is `content-governance-system`. Raw field-note synthesis is `field-feedback-synthesizer`.
+A recurring operating model for owners, review, and publishing is `content-governance-system`. Raw field-note synthesis is `field-feedback-synthesizer`.
 
-## Confirm Inputs First
+## Inputs
 
 Ask only for the inputs that change the backlog:
 
@@ -24,11 +24,11 @@ Ask only for the inputs that change the backlog:
 
 If usage, ownership, or freshness is unknown, leave it unknown. Do not invent usage or ROI.
 
-## Read The Right Reference
+## Supporting material
 
 Read [references/content-gap-prioritization.md](references/content-gap-prioritization.md) for exists-vs-used tests, action types, and scoring rules. Read [references/source-system-guide.md](references/source-system-guide.md) when the inventory comes from a content repository, wiki, or field-signal channel.
 
-## Default Workflow
+## Procedure
 
 1. Build the inventory you can defend.
    Stable ID, owner, audience, status, last reviewed date, canonical location. Done when each in-scope asset has enough metadata to judge exists vs used.
@@ -37,7 +37,7 @@ Read [references/content-gap-prioritization.md](references/content-gap-prioritiz
 3. Classify the problem before you score it.
    Missing, stale, duplicated, hard to find, underused, or wrong format. Low usage is a clue, not a diagnosis.
 4. Separate exists from used.
-   Fit-for-purpose and findable is coverage. Fit-for-purpose and invisible is discoverability. Findable and unused is a distribution or quality question. Missing is create.
+   Test fit, access, discoverability, and use separately. A findable asset may still fail in a live conversation. Check a representative use case before recommending a rewrite; where demand is unverified, investigate before commissioning new content.
 5. Rate value with visible dimensions.
    Impact, frequency, strategic alignment. Evidence confidence and effort stay separate. Do not invent weights or divide by effort.
 6. Assign a decision tier.
@@ -49,20 +49,20 @@ Read [references/content-gap-prioritization.md](references/content-gap-prioritiz
 
 Do not retire, relabel, or republish anything without explicit approval of the exact targets.
 
-## Output Contract
+## What to return
 
-Return a backlog a planning owner can run this horizon:
+Return a backlog for the agreed planning horizon, or only the requested audit slice. For a full review, include:
 
 - Coverage map by role, stage, and job
 - Exists vs used on every priority item
 - Prioritized gaps with impact, frequency, alignment, confidence, decision tier, and rationale
 - Action type per gap: create, update, consolidate, retire, improve discoverability, or reinforce distribution
 - Owners, windows, and the validation or outcome signal
-- Assumptions, and usage or ROI you refused to invent
+- Assumptions and missing usage or financial evidence
 
 Do not design the operating model. That is `content-governance-system`.
 
-## Quality Bar
+## Quality bar
 
 - Exists and used are not treated as the same fact.
 - Prioritization reflects impact and frequency, not who asked loudest.

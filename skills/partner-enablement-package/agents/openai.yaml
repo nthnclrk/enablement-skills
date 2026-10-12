@@ -1,4 +1,4 @@
 interface:
   display_name: "Partner Enablement"
-  short_description: "Partner-safe pack, not a copied sales kit"
+  short_description: "Prepare partner guidance within approved rights"
   default_prompt: "Use $partner-enablement-package to produce a partner enablement package with approved sales assets, permitted-motion guidance, and package-level readiness criteria."

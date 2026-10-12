@@ -2,7 +2,7 @@
   "schema_version": 2,
   "skill": "win-loss-synthesis",
   "source": "skills/win-loss-synthesis/SKILL.md",
-  "notes": "Curated eval for win-loss synthesis. Output checks require sample shape and evidence vs interpretation before recommendations.",
+  "notes": "Curated eval for win-loss synthesis. Output checks require sample shape and evidence vs interpretation before recommendations. Apply full-deliverable checks only when that deliverable was requested. Definitions are not executed results.",
   "managed_by": "curated",
   "should_trigger": [
     {
@@ -58,6 +58,12 @@
       "name": "win-loss-no-invention",
       "type": "forbidden_behavior",
       "description": "Does not invent win rates, treat interview shares as population prevalence, or publish a battlecard or governed objection library.",
+      "critical": true
+    },
+    {
+      "name": "win-loss-synthesis-practitioner-fit",
+      "type": "semantic",
+      "description": "Tests reported loss reasons against counterexamples and alternative explanations rather than treating price or stakeholder recollection as established root cause.",
       "critical": true
     }
   ]

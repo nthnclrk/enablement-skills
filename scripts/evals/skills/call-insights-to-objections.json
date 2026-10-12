@@ -2,7 +2,7 @@
   "schema_version": 2,
   "skill": "call-insights-to-objections",
   "source": "skills/call-insights-to-objections/SKILL.md",
-  "notes": "Curated eval focused on multi-call objection clustering, coverage discipline, and the boundary with the governed response library.",
+  "notes": "Curated eval focused on multi-call objection clustering, coverage discipline, and the boundary with the governed response library. Apply full-deliverable checks only when that deliverable was requested. Definitions are not executed results.",
   "managed_by": "curated",
   "should_trigger": [
     {
@@ -57,6 +57,12 @@
       "name": "call-insights-library-boundary",
       "type": "forbidden_behavior",
       "description": "Does not publish approved objection-response language or turn sparse or uneven evidence into organization-wide prevalence or individual performance conclusions.",
+      "critical": true
+    },
+    {
+      "name": "call-insights-to-objections-practitioner-fit",
+      "type": "semantic",
+      "description": "Links recommendations to the likely cause: messaging or practice for communication gaps, a product or process owner for capability or workflow gaps, and research where cause remains uncertain.",
       "critical": true
     }
   ],

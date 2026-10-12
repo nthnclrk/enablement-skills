@@ -10,7 +10,8 @@ Use these as patterns, not universal definitions. Replace thresholds, population
 
 - Commercial / productivity: `Day-90 ramp attainment = eligible hires at or above the role threshold / eligible hires reaching day 90`. Grain: one row per hire. Join HRIS start date to CRM rep ID with an approved identity map.
 - Execution: median discovery-rubric score by hire and complete review period; preserve rubric version. Manager coaching coverage: eligible hires with a verified observation / eligible hires.
-- Adoption: `first-attempt certification pass rate = first-attempt passes / eligible first attempts`. Do not mix attempts and people.
+- Adoption: `certification participation = eligible hires completing an attempt / eligible hires due to attempt certification in the period`.
+- Readiness signal: `first-attempt certification pass rate = first-attempt passes / completed first attempts` for the defined cohort and period. Keep people and attempts distinct. A pass is assessment evidence, not adoption or proof of live performance.
 
 Event worth instrumenting: `certification_attempt_completed` with attempt ID, rep ID, certification version, assessor, completion time, score, outcome.
 

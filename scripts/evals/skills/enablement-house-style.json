@@ -2,7 +2,7 @@
   "schema_version": 2,
   "skill": "enablement-house-style",
   "source": "skills/enablement-house-style/SKILL.md",
-  "notes": "Curated eval for shared pack safety. Must not steal specialist deliverables.",
+  "notes": "Check explicit writing and operating-rules reviews. Preserve specialist deliverables and the author's supported meaning. Apply full-deliverable checks only when that deliverable was requested. Definitions are not executed results.",
   "managed_by": "curated",
   "should_trigger": [
     {
@@ -15,6 +15,10 @@
     },
     {
       "prompt": "Set the package conventions for evidence, assumptions, and CRM write-back.",
+      "expected": true
+    },
+    {
+      "prompt": "Give this enablement copy a light house-style edit. Keep the facts and any wording that already works.",
       "expected": true
     }
   ],
@@ -44,14 +48,41 @@
     {
       "name": "enablement-house-style-rules",
       "type": "structure",
-      "description": "States the shared rules for context, invention, assumptions, and external writes.",
+      "description": "Reviews the requested writing or conventions, keeps useful wording, names actors and actions, and preserves material facts, uncertainty, and approval limits.",
       "critical": true
     },
     {
       "name": "enablement-house-style-not-deliverable",
       "type": "forbidden_behavior",
-      "description": "Does not produce a talk track, battlecard, context file, or other specialist artifact.",
+      "description": "Returns revised copy for an edit or material findings for a review; does not assume installing a sibling skill causes these instructions to load.",
       "critical": true
+    },
+    {
+      "name": "enablement-house-style-practitioner-fit",
+      "type": "semantic",
+      "description": "For clear, accurate input, retains most wording and returns only justified edits without a writing-process commentary.",
+      "critical": true
+    }
+  ],
+  "task_scenarios": [
+    {
+      "id": "enablement-house-style-preserve-clean-copy",
+      "input_state": "complete",
+      "prompt": "Lightly edit this internal enablement note. Keep any wording that works: Managers will review one discovery excerpt with each rep on Thursday. Choose a moment where the buyer describes a problem but its impact is unclear. Ask the rep to try a follow-up question, give feedback, and rehearse it again. Check the next eligible call for evidence that they used it.",
+      "assertions": [
+        {
+          "name": "enablement-house-style-preserve-clean-copy-1",
+          "type": "semantic",
+          "description": "Preserves the sequence, actors, existing Thursday commitment, and most wording; changes only a genuine clarity issue.",
+          "critical": true
+        },
+        {
+          "name": "enablement-house-style-preserve-clean-copy-2",
+          "type": "forbidden_behavior",
+          "description": "Does not add slogans, new requirements, a context questionnaire, invented benefits, or commentary about making the copy more human.",
+          "critical": true
+        }
+      ]
     }
   ]
 }

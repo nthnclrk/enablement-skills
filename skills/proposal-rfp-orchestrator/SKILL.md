@@ -5,17 +5,19 @@ description: Orchestrate proposal and RFP response work across owners, deadlines
 
 # Proposal RFP orchestrator
 
-Decide bid or no-bid before anyone writes. Then run a compliance matrix, not a writing sprint.
+Help a proposal lead decide whether to bid, assign the response work, and verify every requirement before submission.
 
 A good response process names the disqualifier, the owner of every atomic requirement, and the gate that stops an unverified yes. If the user wants a meeting brief, use `executive-briefing-builder` or `account-brief-builder`.
 
-**Bid/no-bid first.** "Mandatory SOC 2 Type II is required. We have Type I only. Decision owner: VP Sales. Status: no-bid unless security can produce a dated exception."
+**Bid/no-bid first.** "The buyer requires SOC 2 Type II; our evidence covers Type I. The bid owner must obtain an explicit buyer-approved exception under the solicitation rules or decline. Internal approval cannot waive the buyer's requirement."
 
 **Writing sprint.** "We'll figure out security in the challenge review. Start the executive summary."
 
 If a mandatory answer is still a guess, the package is not ready.
 
-## Confirm Inputs First
+## Inputs
+
+Reuse supplied context first. If a missing company fact would change the result, check the relevant sections of `.enablement/context.md` when available. Preserve source dates and approval limits.
 
 Ask only for the inputs that change the workplan:
 
@@ -26,11 +28,11 @@ Ask only for the inputs that change the workplan:
 
 If a planning input is missing, label the workplan assumption. Never use an assumption to answer a mandatory requirement or to make a factual, legal, security, commercial, or product claim.
 
-## Read The Right Reference
+## Supporting material
 
 Read [references/proposal-governance-framework.md](references/proposal-governance-framework.md) before building the compliance matrix, review gates, or readiness verdict.
 
-## Default Workflow
+## Procedure
 
 1. Control the solicitation, then decide bid/no-bid.
    Confirm the authoritative version and addenda. Test mandatory disqualifiers, buyer access, solution fit, delivery capacity, economics, evidence readiness, and effort. Done when a named owner has bid, no-bid, or a dated exception path. Do not start section drafts before that.
@@ -43,13 +45,13 @@ Read [references/proposal-governance-framework.md](references/proposal-governanc
 5. Apply hard stops.
    Unverified mandatory answers stay blocked with owner, evidence required, and due time. Never convert a placeholder into buyer-facing text.
 6. Run the gates.
-   Draft, challenge, final. Reconcile new addenda before each gate and show what changed.
+   Use the review stages the team can staff: draft, challenge, and final where appropriate. Reconcile addenda and test compliance at each relevant stage. An internal exception does not waive a mandatory buyer requirement; record the buyer's authorised acceptance.
 7. Package for submission.
    Compliance, formatting, approvals, delivery instructions. Mark READY, READY WITH APPROVED EXCEPTION, or NOT READY. Do not send or upload without explicit user approval.
 
-## Output Contract
+## What to return
 
-Return a controlled response process the proposal lead can run:
+For a matrix or readiness review, return that deliverable and its blockers. For a full response plan, include:
 
 - Bid/no-bid decision with owner and disqualifiers
 - Solicitation-control log and atomic requirement matrix
@@ -61,7 +63,7 @@ Return a controlled response process the proposal lead can run:
 
 Do not write unverified answer text, invent certifications or references, or produce a meeting brief instead of a response plan.
 
-## Quality Bar
+## Quality bar
 
 - Bid/no-bid is explicit before drafting advice.
 - Every atomic requirement has a parent, owner, verification state, and status.

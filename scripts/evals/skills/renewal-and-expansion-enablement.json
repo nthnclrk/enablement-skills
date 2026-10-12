@@ -2,7 +2,7 @@
   "schema_version": 2,
   "skill": "renewal-and-expansion-enablement",
   "source": "skills/renewal-and-expansion-enablement/SKILL.md",
-  "notes": "Curated eval for reusable save, healthy-renewal, and expansion plays. Routing cases stay on the segment motion, not one account.",
+  "notes": "Curated eval for reusable save, healthy-renewal, and expansion plays. Routing cases stay on the segment motion, not one account. Apply full-deliverable checks only when that deliverable was requested. Definitions are not executed results.",
   "managed_by": "curated",
   "should_trigger": [
     {
@@ -39,7 +39,7 @@
     {
       "name": "renewal-and-expansion-enablement-output-01",
       "type": "structure",
-      "description": "Separates save, healthy-renewal, and expansion plays rather than combining them into one motion.",
+      "description": "Covers only the requested save, renewal, or expansion motions and keeps their decisions distinct.",
       "critical": true
     },
     {
@@ -64,6 +64,12 @@
       "name": "renewal-and-expansion-enablement-output-05",
       "type": "forbidden_behavior",
       "description": "Does not invent contract dates, usage metrics, health thresholds, or pricing, and does not diagnose a named account as the primary deliverable.",
+      "critical": true
+    },
+    {
+      "name": "renewal-and-expansion-enablement-practitioner-fit",
+      "type": "semantic",
+      "description": "Does not let a value-evidence gap block time-critical contractual renewal work; keeps expansion claims subject to verified value and authority.",
       "critical": true
     }
   ]

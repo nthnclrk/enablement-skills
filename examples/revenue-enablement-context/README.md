@@ -39,7 +39,7 @@ Before writing:
 After approval:
 
 - saved `.enablement/context.md`
-- compact context handshake and unresolved review queue
+- compact task context and unresolved review queue
 - resumed battlecard using the approved context
 
 For a recurring launch, account, or program, the skill may also propose `.enablement/briefs/<slug>.md`. One-off details should stay in the task instead of expanding the durable context.
@@ -54,7 +54,7 @@ Use $revenue-enablement-context to set up our reusable context from scratch. Wal
 
 A narrow source-based request can proceed without full setup. The skill should label its limits and offer context capture afterward rather than blocking the task.
 
-## Working Handshake Alternative
+## One-off context summary
 
 For an immediate task that does not justify a reusable file:
 

@@ -5,71 +5,76 @@ description: Review one sales call and turn recording, transcript, or notes evid
 
 # Call review coach
 
-Turn one call into the next call's behavior. If the note could apply to any rep, rewrite it.
+Use evidence from one call to help a rep practise a specific change for their next comparable conversation.
 
 A review covers one conversation, a few moments, and one to three things to try next time. A sample of discovery calls is `discovery-rubric-auditor`. A practice drill is `roleplay-scenario-builder`.
 
-**Next-call behavior.** "After the buyer names a pain, ask what it costs before you talk product. Success on the next call: they name a number or the person who owns that number."
+**Next-call behavior.** "When the buyer says manual reporting takes half a day, stay with what that delays before you show dashboards. Try: 'What does that work stop your team from doing?' Success on the next call: the buyer explains a consequence and you check your understanding."
 
 **Generic note.** "Be more consultative and tighten discovery. Work on active listening and next-step control."
 
 If a manager cannot hear the change on the next comparable call, it is not coaching.
 
-## Confirm Inputs First
+## Inputs
 
 Ask only for the inputs that change the review:
 
 1. The source you can actually access: recording, transcript, notes, or summary
 2. Call type, intended outcome, and who was in the room
 3. Rep role, tenure, and segment
-4. What the coach wants to change, if they already know
-5. Whether names must be anonymized
+4. The team's sales methodology or coaching rubric, if available
+5. What the coach wants to change, if they already know
+6. Whether names must be anonymized
+
+Lead with what happened on the call and the most useful change for the rep. Use the team's rubric or methodology to inform your judgment when it is available. A familiar sales concept can help explain a coaching point, but the advice should make sense in plain language. Organise ordinary feedback around the conversation and the rep's next move; reserve an element-by-element framework assessment for an explicit request.
 
 If the recording is not reachable, work from what you have and say so. Never imply you heard a moment you could not access.
 
-## Read The Right Reference
+## Supporting material
 
-Read [references/call-coaching-rubric.md](references/call-coaching-rubric.md) for anchors, call-type applicability, and worked scoring excerpts. Skip it if the user already supplied a rubric and only wants the coaching plan.
+Read the relevant sections of [references/call-coaching-rubric.md](references/call-coaching-rubric.md) when checking feedback or scoring a review. It covers coaching language, call-type applicability, and scoring anchors. A supplied team rubric takes precedence over the generic anchors.
 
-## Default Workflow
+## Procedure
 
 1. Name the job of the call.
    What was this conversation supposed to produce? Done when the intended next step fits in one sentence.
 2. Set evidence coverage.
-   Recording beats transcript beats notes. Flag missing sections and speaker uncertainty. Done when you can say what you observed versus inferred.
+   Use the most direct accessible source appropriate to the judgment. Audio can support tone or timing; a transcript supports wording, subject to transcription errors. Notes support narrower conclusions. Flag missing sections and speaker uncertainty so every judgment has an explicit evidence basis.
 3. Log the few moments that decided the call.
-   Timestamp or transcript location, speaker, what happened, why it mattered. Quote the minimum. Done when three to six moments explain the outcome.
+   Give a timestamp or source location, speaker, and observed action. Explain what the exchange established or left untested and why it matters to this call's objective. Mention a methodology concept only when it helps explain the coaching. Select enough moments to support the priorities; do not pad the review to a fixed count or infer the eventual deal outcome.
 4. Score only what this call type made observable.
-   Use the `1`, `3`, and `5` anchors. Use `2` or `4` only between anchors. Use `N/O` when the behavior never appeared. Done when every score has evidence or an explicit `N/O`.
+   Score when requested or needed for an agreed coaching process. Use the supplied rubric or the reference anchors. Distinguish an observed miss from insufficient evidence or no opportunity to demonstrate the behaviour (`N/O`). Every score needs an accessible example.
 5. Pick the next-call behaviors.
-   Keep 1-3. Drop anything a manager cannot hear next time. One call is directional, not a verdict on the rep.
+   Keep 1-3. Connect each priority to its evidence and include a buyer-facing question or response to practise. Drop anything a manager cannot hear next time. One call is directional, not a verdict on the rep.
 6. Write the practice.
-   For each priority: the behavior, an in-call cue, and a success signal. Done when the rep knows what to try and the manager knows what to listen for.
+   Replay or reconstruct the relevant moment from accessible evidence. Ask the rep what they intended, practise a different response, and compare the retry with the target behaviour. Include an in-call cue and a success signal the manager can check.
 7. Set the follow-up.
-   What to inspect on the next 1-2 comparable calls.
+   Agree the next comparable opportunity and what evidence to review. If the behaviour is absent, check whether the opportunity occurred before drawing a conclusion about progress.
 
-For a practice drill use `roleplay-scenario-builder`. For a multi-call discovery baseline use `discovery-rubric-auditor`. For spoken lines use `talk-track-builder`.
+For a practice drill use `roleplay-scenario-builder`. For a multi-call discovery baseline use `discovery-rubric-auditor`. For a reusable talk track use `talk-track-builder`.
 
-## Output Contract
+## What to return
 
-Return a review a manager can use before the next 1:1:
+Match the format to the request. For a short coaching note, weave the evidence, what to keep, and what to try into direct feedback. Keep evidence limits brief when they matter. A fuller manager review can include:
 
 - Call type, segment, rep level, and the review objective
 - Evidence coverage: source, accessible portion, speaker limits, confidence
 - The few decisive moments, located
-- Score or `N/O` per applicable dimension, with evidence
+- Scores only when requested or useful to the agreed process, with evidence and `N/O` where appropriate
 - Strengths to keep
-- 1-3 next-call behaviors with cue and success signal
-- What to inspect on the next 1-2 calls
+- 1-3 next-call behaviors with evidence, why they matter, a question or response to practise, cue, and success signal
+- A short rehearsal and a follow-up check on the next comparable opportunity
 - Assumptions, if you had to make any
 
-Do not add a team baseline, a roleplay pack, or a readiness decision.
+Keep employee details relevant to the coaching purpose. A short rehearsal belongs in this review; a full scenario pack, team baseline, or readiness assessment is separate work. Sharing coaching records requires explicit approval.
 
-## Quality Bar
+## Quality bar
 
 - Every score cites a moment you could access.
 - Unobserved dimensions are `N/O`, not zeros.
 - Coaching is 1-3 next-call behaviors, not an issue list.
 - Each behavior is something a manager can hear on the next comparable call.
+- Feedback sounds like coaching for this conversation. Methodology references clarify a point rather than define the outline.
+- Unknown deal information stays unknown; a coaching suggestion is not a finding about the rest of the deal.
 - A single call is labeled directional, not a rep-level verdict.
-- The review refused the portfolio audit and the certification decision.
+- The review supports development; it does not infer team trends or certify readiness from one call.

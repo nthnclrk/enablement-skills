@@ -2,7 +2,7 @@
   "schema_version": 2,
   "skill": "content-gap-analysis",
   "source": "skills/content-gap-analysis/SKILL.md",
-  "notes": "Curated eval focused on exists vs used, and on distinguishing missing content from quality, discoverability, and governance work.",
+  "notes": "Curated eval focused on exists vs used, and on distinguishing missing content from quality, discoverability, and governance work. Apply full-deliverable checks only when that deliverable was requested. Definitions are not executed results.",
   "managed_by": "curated",
   "should_trigger": [
     {
@@ -44,7 +44,7 @@
     {
       "name": "content-gap-exists-vs-used",
       "type": "structure",
-      "description": "Separates exists from used on priority items and includes a coverage map by role, stage, and job-to-be-done.",
+      "description": "Separates content existence, fitness, access, discoverability, and use on priority items; scopes coverage to the roles, stages, and jobs requested.",
       "critical": true
     },
     {
@@ -63,6 +63,12 @@
       "name": "content-gap-no-usage-overreach",
       "type": "forbidden_behavior",
       "description": "Does not treat low views alone as a retirement case, invent usage or ROI, or design the weekly operating model.",
+      "critical": true
+    },
+    {
+      "name": "content-gap-analysis-practitioner-fit",
+      "type": "semantic",
+      "description": "Checks a representative use case before choosing rewrite over improved access or discoverability; does not invent demand for an unused asset.",
       "critical": true
     }
   ],

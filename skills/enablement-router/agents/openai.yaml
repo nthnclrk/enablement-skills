@@ -1,4 +1,4 @@
 interface:
   display_name: "Enablement Router"
-  short_description: "Shortest path to the right enablement skill"
+  short_description: "Choose the right skill and necessary handoffs"
   default_prompt: "Use $enablement-router to map my request to the smallest coherent skill path, show availability, and make each handoff explicit."

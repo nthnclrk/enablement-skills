@@ -15,9 +15,27 @@ A note fails the test when it:
 
 **Fails.** "Great energy. Needs to be more consultative. Discovery 2."
 
-**Passes.** "At 11:40 the buyer named missed handoffs. The rep went to product. Next call: ask what a miss costs before you demo. Success: they name a number or the owner of that number."
+**Passes.** "At 11:40 the buyer named missed handoffs. The rep went to product. Next call: ask what happens when a handoff is missed. Listen for the buyer explaining the consequence, then check you've understood it. If they don't know yet, agree how to find out."
 
-## Score only what appeared
+## Write feedback a coach would give
+
+Start with what the rep did and what happened next. Explain why that moment matters, then give them something to try. Keep a useful question or response when the rep already demonstrated it. Let the requested format decide how much structure the feedback needs.
+
+A team's methodology can inform this judgment. Bring a concept into the feedback when it helps explain the recommendation; ordinary coaching should still follow the conversation. Naming a problem leaves its consequences open, and naming an approval step leaves its requirements open. Explore the relevant gap rather than inventing its answer or filling every framework element.
+
+**Fails.** “MEDDPICC Pain: weak. Build urgency. Decision Criteria: incomplete.”
+
+**Passes.** “Your question brought out that reporting takes half a day. You then moved to dashboards. Stay with what that work stops the team from doing: ‘What gets delayed while you're putting the report together?’ On the next call, listen for the buyer explaining the consequence and check you've understood it.”
+
+For a team using MEDDPICC, this is an example of implicating the pain. Include that explanation when it helps the rep apply their team's methodology.
+
+That practice question is a proposed line, not a transcript quote. A buyer who cannot answer yet leaves an evidence gap; check how the rep explored it before judging their execution. Give only the coaching supported by the accessible part of the call.
+
+The illustrative MEDDPICC reference follows [MEDDICC's Implicate the Pain guidance](https://meddicc.com/what-is-meddpicc/implicate-the-pain), checked on 13 October 2026.
+
+## Score when the task needs it
+
+Use scores when requested or when an established coaching process requires them. Feedback and a short practice task can be useful without a numerical assessment. Preserve a supplied rubric; otherwise use the anchors below.
 
 - `N/O`: the available evidence never exposed the behavior. Exclude from any rollup.
 - `1`: required behavior was absent or actively harmed the outcome.
@@ -66,5 +84,6 @@ Moments (located)
 Scores (anchor, evidence, or N/O)
 Keep
 Next-call behaviors (cue + success signal)
-Inspect next 1-2 calls
+Rehearsal and feedback on the retry
+Next comparable opportunity and application check
 ```

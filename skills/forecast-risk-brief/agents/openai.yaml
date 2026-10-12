@@ -1,4 +1,4 @@
 interface:
   display_name: "Forecast Risk Brief"
-  short_description: "Deal risk vs data-quality risk, portfolio"
+  short_description: "Separate forecast exposure from evidence gaps"
   default_prompt: "Use $forecast-risk-brief to separate deal risk from data-quality risk across this period and return an intervention-focused leadership brief."

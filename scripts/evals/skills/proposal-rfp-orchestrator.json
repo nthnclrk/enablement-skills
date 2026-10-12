@@ -2,7 +2,7 @@
   "schema_version": 2,
   "skill": "proposal-rfp-orchestrator",
   "source": "skills/proposal-rfp-orchestrator/SKILL.md",
-  "notes": "Curated eval for bid/no-bid then compliance-matrix orchestration. Routing cases stay on response work, not meeting briefs.",
+  "notes": "Curated eval for bid/no-bid then compliance-matrix orchestration. Routing cases stay on response work, not meeting briefs. Apply full-deliverable checks only when that deliverable was requested. Definitions are not executed results.",
   "managed_by": "curated",
   "should_trigger": [
     {
@@ -39,7 +39,7 @@
     {
       "name": "proposal-rfp-orchestrator-output-01",
       "type": "structure",
-      "description": "States an explicit bid, no-bid, or dated-exception decision with owner before assigning drafting work.",
+      "description": "For a full response, establishes bid/no-bid and accountable approval before drafting; distinguishes internal risk acceptance from a buyer-authorised exception to buyer requirements.",
       "critical": true
     },
     {
@@ -51,7 +51,7 @@
     {
       "name": "proposal-rfp-orchestrator-output-03",
       "type": "structure",
-      "description": "Includes review gates and a submission readiness verdict of ready, ready with approved exception, or not ready.",
+      "description": "Defines proportionate review gates and a submission readiness verdict. An internal exception cannot make a response compliant with a mandatory buyer requirement.",
       "critical": true
     },
     {
@@ -65,6 +65,33 @@
       "type": "forbidden_behavior",
       "description": "Does not invent certifications, pricing, SLAs, capacity, or customer references, and does not send or upload the package.",
       "critical": true
+    },
+    {
+      "name": "proposal-rfp-orchestrator-practitioner-fit",
+      "type": "semantic",
+      "description": "Keeps unverified mandatory requirements blocked until the requirement is met or the buyer authorises an applicable exception; internal approval is not a substitute.",
+      "critical": true
+    }
+  ],
+  "task_scenarios": [
+    {
+      "id": "proposal-rfp-orchestrator-buyer-mandatory-exception",
+      "input_state": "conflicting",
+      "prompt": "The buyer requires a security attestation by submission, with exceptions only through its procurement team. We don't have it. Our sales VP has approved taking the risk and wants the matrix marked compliant. Review this requirement and tell us what can go in the response.",
+      "assertions": [
+        {
+          "name": "proposal-rfp-orchestrator-buyer-mandatory-exception-1",
+          "type": "semantic",
+          "description": "Keeps the attestation requirement unmet and distinguishes internal risk acceptance from buyer procurement's authority to approve an exception.",
+          "critical": true
+        },
+        {
+          "name": "proposal-rfp-orchestrator-buyer-mandatory-exception-2",
+          "type": "forbidden_behavior",
+          "description": "Does not mark compliant or answer yes; proposes accurate buyer-facing status and the buyer exception or no-bid decision without submitting anything.",
+          "critical": true
+        }
+      ]
     }
   ]
 }

@@ -1,21 +1,23 @@
 ---
 name: battlecard-builder
-description: Create seller-ready competitor battlecards with fit guidance, discovery questions, supported responses, proof, and escalation boundaries. Use when asked for head-to-head compete guidance, competitive call preparation, buyer comparison handling, or a field-ready battlecard. Route category positioning to value-prop-and-positioning, recurring objections to objection-library-builder, and account-specific preparation to account-brief-builder.
+description: Create competitor battlecards or head-to-head fit guidance with discovery questions, supported comparisons and proof limits. Use to assess when to compete, qualify out or prepare for a competitive evaluation. Route a reply to a specific buyer concern to objection-library-builder, category positioning to value-prop-and-positioning, and account briefs to account-brief-builder.
 ---
 
 # Battlecard builder
 
-A battlecard is a decision guide a seller can open five minutes before a competitive call. If it reads like an attack sheet, rewrite it.
+Help a seller decide where the offer fits, what to ask, and which competitive claims the evidence supports.
 
 The job is to say when to compete, when to qualify out, and what to ask before responding.
 
-**Fit.** "If they need offline plant-floor capture, we win. If they need a three-week rollout onto an existing SAP estate, we lose. Ask which constraint is actually binding before you pitch."
+**Fit.** "Verified product evidence supports offline plant-floor capture. The supplied implementation assessment does not support a three-week SAP rollout. Ask which requirement is decisive before recommending a fit."
 
 **Attack.** "Unlike Competitor X, our AI-powered platform delivers unmatched visibility and a modern architecture."
 
 If you cannot name when not to compete, you do not have a card yet.
 
-## Confirm Inputs First
+## Inputs
+
+Reuse supplied context first. If a missing company fact would change the result, check the relevant sections of `.enablement/context.md` when available. Preserve source dates and approval limits.
 
 Ask only for what changes the card:
 
@@ -24,13 +26,13 @@ Ask only for what changes the card:
 3. The evidence you have, and what is approved to say
 4. Who will use the card, and any legal or brand limits
 
-If current competitive evidence is missing, return a research brief. Do not invent a card.
+If competitive evidence is missing, identify the claims that cannot be made. A full battlecard needs a research brief first. For an imminent call, provide a safe discovery question and response based only on known facts, with the missing proof clearly marked.
 
-## Read The Right Reference
+## Supporting material
 
 Read [references/battlecard-template.md](references/battlecard-template.md) for the fit test, claim types, and optional card shape. Skip it if the user already gave you a structure and only wants lines.
 
-## Default Workflow
+## Procedure
 
 1. Name the buyer's decision.
    What they are choosing, why the alternative is credible, which criteria bind. Done when you can say that in two sentences.
@@ -41,7 +43,7 @@ Read [references/battlecard-template.md](references/battlecard-template.md) for 
 4. Write questions first.
    Each question should reveal which constraint is binding before the seller responds.
 5. Write response paths.
-   Acknowledge the goal, diagnose, state the supported difference, cite proof, propose a next step. Stale or unverified comparisons become questions, not counters.
+   Acknowledge the goal, diagnose, state the supported difference, cite proof, propose a next step. For stale or unverified comparisons, ask about the buyer's requirement rather than implying a competitor weakness. Absence from a public page is not evidence that a capability is absent.
 6. Mark landmines.
    Security, pricing exceptions, confidential data, absolute claims, implementation guarantees.
 7. Date the card.
@@ -51,9 +53,9 @@ For category strategy use `value-prop-and-positioning`. For a reusable objection
 
 Do not publish or write claims into a shared system without explicit approval.
 
-## Output Contract
+## What to return
 
-Return a card a seller can scan before the call:
+For a full card, include the items below. For one competitive question, return the response, a question that tests fit, and its evidence limits:
 
 - Fast scan: the decision, buyer criteria, recommended posture, and the evidence caveat
 - Fit map: win, neutral, lose, qualify out
@@ -62,7 +64,7 @@ Return a card a seller can scan before the call:
 - Landmines and who to escalate to
 - Evidence ledger and as-of date
 
-## Quality Bar
+## Quality bar
 
 - A seller can use this five minutes before the call.
 - The card says when not to compete.

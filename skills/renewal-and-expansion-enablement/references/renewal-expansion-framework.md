@@ -4,11 +4,11 @@ Use this when you are writing segment plays, signals, or manager checkpoints. On
 
 ## Three plays, not one motion
 
-Save, healthy renewal, and expansion have different triggers and different commercial rules.
+Save, healthy renewal, and expansion have different triggers and commercial rules. Include only the motions the user needs.
 
 **Fails.** Every account gets a QBR, a 10% discount ladder, and an upsell talk track at 90 days.
 
-**Passes.** Save: restore the purchased outcome and named executive coverage before commercials. Healthy renewal: lock notice, budget, and signature against the contract. Expansion: only after value, a new buyer task, stakeholders, capacity, and commercial path are present.
+**Passes.** Save: assign recovery actions and confirm the customer's priorities while protecting contractual deadlines. Healthy renewal: confirm notice, budget, and signature against the contract. Expansion: check value, a new buyer task, stakeholders, capacity, and commercial path before proposing more scope.
 
 A healthy renewal is not expansion-ready. An at-risk account does not get a growth play because whitespace exists.
 
@@ -62,7 +62,7 @@ For each play: trigger, owner, sequence, commercial boundary, exit evidence, ins
 
 - Standard renewal when required signals are positive and confidence is sufficient
 - Save when a defined risk trigger fires
-- Verify data first when a material signal is unknown
+- Verify an unknown signal before using it to justify a recommendation; continue time-critical contractual work on verified terms
 - Expansion discovery only when the readiness set is present
 - Expansion close only when qualification and commercial path are verified
 

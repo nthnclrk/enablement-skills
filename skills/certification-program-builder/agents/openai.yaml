@@ -1,4 +1,4 @@
 interface:
   display_name: "Certification Program Builder"
-  short_description: "An observable gate, not a quiz"
+  short_description: "Define and assess role-specific readiness"
   default_prompt: "Use $certification-program-builder to create a role-based readiness gate with observable evidence, anchored scoring, and assessor calibration."

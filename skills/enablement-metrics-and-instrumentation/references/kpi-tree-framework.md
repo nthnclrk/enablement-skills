@@ -13,11 +13,11 @@ Label every metric before you write a target.
 | Productivity | Whether the motion got faster or cleaner | Hire, opportunity, account |
 | Commercial | The business result leadership already manages | Opportunity, account, book |
 
-A tree fails when a commercial target has only an adoption lead.
+Explain the proposed link from exposure to behaviour and outcomes. Include relevant tiers and identify unmeasured links; every initiative does not need a metric in every tier.
 
 **Fails.** Success metric: certification completion. "Insight": completion will lift win rate.
 
-**Passes.** Adoption: first-attempt pass rate. Execution: inspected discovery quality. Productivity: day-90 ramp. Commercial: launch-eligible win rate. Attribution waits for exposure and a comparison.
+**Passes.** Adoption: eligible reps who participated in practice. Execution: observed discovery quality on eligible calls. Productivity: time to independent work. Commercial: eligible-opportunity win rate. Assessment pass rate is supporting evidence of readiness, not proof of live behaviour or commercial effect.
 
 Do not use activity completion as a proxy for behavior or business impact.
 
@@ -38,7 +38,7 @@ Define every metric with:
 | Owner and cadence | Business owner, data owner, refresh, latency |
 | Baseline and target | Comparison period, target, review threshold |
 
-If any required field is unknown, label the metric `not yet reproducible`. Do not invent the missing number.
+If the calculation, population, time window, source, or required keys are unknown, label the metric `not yet reproducible`. A missing target or review owner is a separate operating gap; it does not make an otherwise defined calculation irreproducible.
 
 ## Events, grain, and joins
 
@@ -64,7 +64,7 @@ For contribution or causal work, record eligibility, exposure, comparison, lag, 
 
 ## Thin evidence
 
-If the baseline, join key, or population is missing, keep the tree and mark the metric `not yet reproducible`. Name the missing decision, owner, and required-by date.
+If a required join key or population is missing, mark the metric `not yet reproducible`. A missing baseline blocks a change claim but may still permit a current-value calculation. Name the missing input and its owner; propose a required-by date only when useful and label it proposed.
 
 Do not invent win rates, usage, or ROI to fill the cell. Do not set a commercial target from an adoption trend.
 

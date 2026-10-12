@@ -1,4 +1,4 @@
 interface:
   display_name: "Renewal And Expansion Enablement"
-  short_description: "Separate save, healthy renewal, and expansion"
+  short_description: "Build distinct renewal, save, and expansion plays"
   default_prompt: "Use $renewal-and-expansion-enablement to create separate save, healthy-renewal, and expansion plays with signals, commercial guardrails, and manager checkpoints."

@@ -46,11 +46,11 @@ Heading names are not required. A coaching skill, a router, and a house-style sk
 4. A procedure or named rules, with a checkable done-test on each step.
 5. Gotchas the model will hit without being told, and a quality bar a human can score in two minutes.
 
-Shared safety belongs in `enablement-house-style`. Do not copy it into every leaf.
+Use `enablement-house-style` for shared authoring conventions and explicit editorial reviews. Bundled skills do not inherit one another's instructions. Each specialist must carry the evidence, confidentiality, and action boundaries essential to its own job. Keep those constraints specific; do not copy the full house-style guide into each skill.
 
 A common specialist shape is still fine: inputs, when to load a reference, procedure, what to return, done-when. Use it when it helps. Drop it when the job is a map, a gate, or a short principle.
 
-See `templates/skill/` for a worked example, not a blank form.
+Use `templates/skill/` to scaffold a new skill. Its README links to a completed specialist example; replace every placeholder with guidance for the actual job.
 
 ## Trigger Quality
 

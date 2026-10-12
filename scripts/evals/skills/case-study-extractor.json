@@ -2,7 +2,7 @@
   "schema_version": 2,
   "skill": "case-study-extractor",
   "source": "skills/case-study-extractor/SKILL.md",
-  "notes": "Curated eval for the craft-pass output contract. Routing prompts stay on practitioner language; output checks require the skill's leading test, not a section list.",
+  "notes": "Curated checks for case-study-extractor. Apply full-deliverable checks only when that deliverable was requested; score focused revisions on the affected decisions and retained constraints. Definitions are not executed results.",
   "managed_by": "curated",
   "should_trigger": [
     {
@@ -39,13 +39,19 @@
     {
       "name": "case-study-extractor-core-output",
       "type": "structure",
-      "description": "Keeps evidence strength separate from publication permission. Quotes are exact. Metrics include baseline, period, and attribution limit.",
+      "description": "Keeps evidence strength separate from publication permission. Quotes are exact. Change claims include a comparable baseline and period; a supported current result or qualitative finding does not require a fabricated baseline.",
       "critical": true
     },
     {
       "name": "case-study-extractor-decision-discipline",
       "type": "semantic",
       "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
+      "critical": true
+    },
+    {
+      "name": "case-study-extractor-practitioner-fit",
+      "type": "semantic",
+      "description": "Preserves a credible qualitative result or supported current value when no defensible change or financial claim is available.",
       "critical": true
     }
   ]

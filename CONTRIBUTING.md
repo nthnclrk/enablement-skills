@@ -38,8 +38,8 @@ For new and existing skills:
 
 1. Start from a concrete user job and a real artifact you have already run, not a blank form.
 2. Make the frontmatter description state what the skill does, when it should trigger, and its closest boundaries.
-3. Write the four craft jobs in `AGENTS.md`. Copy `templates/skill/SKILL.md.tmpl` for a specialist example, then change the shape if the job is a map, a gate, or a short principle.
-4. Keep shared safety in `enablement-house-style`. Do not paste the same context paragraph into every leaf.
+3. Cover the craft jobs in `AGENTS.md`. Use `templates/skill/SKILL.md.tmpl` as a starting point, then change the shape if the job is a map, a gate, or a short principle.
+4. Keep each specialist's essential evidence, confidentiality, and action boundaries in that skill. Use `enablement-house-style` for shared authoring conventions and explicit reviews; sibling skills do not load automatically.
 5. Use scripts only for deterministic work that is safer or more reliable than instructions.
 6. Update should-trigger, should-not-trigger, and output scenarios when behavior or routing changes.
 7. Confirm that `agents/openai.yaml` still matches the skill.

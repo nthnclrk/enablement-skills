@@ -5,9 +5,9 @@ description: Package a defined or approved narrative into a concise one-pager, a
 
 # One-pager and slide outline
 
-Package an existing narrative. Do not invent the strategy here.
+Turn supplied messaging into a one-pager or slide outline that helps its audience understand the evidence and take the intended action.
 
-One artifact, one job. Slide headlines are assertions, not topic labels.
+Use slide headlines to carry the argument where the evidence supports a claim. Navigation, instructions, and genuine questions may use other heading forms.
 
 **Assertion.** "Missed handoffs are now a Friday-ship risk, not an ops nuisance."
 
@@ -15,7 +15,9 @@ One artifact, one job. Slide headlines are assertions, not topic labels.
 
 If the user needs positioning first, use `value-prop-and-positioning`. If they need a launch plan, use `product-launch-enablement`. This skill does not produce finished slides.
 
-## Confirm Inputs First
+## Inputs
+
+Reuse supplied context first. If a missing company fact would change the result, check the relevant sections of `.enablement/context.md` when available. Preserve source dates and approval limits.
 
 Ask only for what changes the artifact:
 
@@ -27,31 +29,33 @@ Ask only for what changes the artifact:
 
 Do not invent evidence or approved claims.
 
-## Read The Right Reference
+## Supporting material
 
 Read [references/narrative-outline-template.md](references/narrative-outline-template.md) for the one-pager flow and slide-headline rules. Skip it if the user already specified a house format.
 
-## Default Workflow
+## Procedure
 
 1. Pick the branch before drafting. Do not produce both unless asked.
 2. Build a claim register: fact, interpretation, assumption, source, approval.
 3. Write one thesis and one ask. Everything else supports those two sentences.
 4. Change the information hierarchy for the job: executive decision, seller action, partner execution, or internal alignment. Do not only change tone.
-5. One-pager: assertion, context, problem, approach, proof, decision, next steps. One page.
+5. One-pager: lead with the point the reader needs, then include the context, proof, and action necessary to support it. Fit the requested page limit; preserve a supplied structure when it works.
 6. Slides: one assertion, one evidence cue, one speaker intent per slide.
 7. If both are requested, reuse the same evidence spine.
 8. Appendix only when it protects the core from clutter.
 9. Final pass: claims, audience safety, length, next action.
 
-## Output Contract
+Sending or publishing the material requires explicit approval of the audience and final copy.
 
-Always include the evidence map and any approval gaps.
+## What to return
+
+Keep source and approval notes separate from the reader-facing copy. For a light edit, preserve accurate content and the author's voice; report only material evidence or approval gaps.
 
 - One-pager only, slide outline only, or both, matching the request
 - Audience variants only when asked or when the audience actually changes the argument
 - No visual design, no slide production
 
-## Quality Bar
+## Quality bar
 
 - One dominant argument.
 - Slide headlines can be read as claims.

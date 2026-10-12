@@ -1,4 +1,4 @@
 interface:
   display_name: "Quarterly Enablement Planner"
-  short_description: "What will not happen this quarter"
+  short_description: "Prioritise quarterly work within available capacity"
   default_prompt: "Use $quarterly-enablement-planner to build a realistic quarterly enablement calendar tied to our priorities and capacity."

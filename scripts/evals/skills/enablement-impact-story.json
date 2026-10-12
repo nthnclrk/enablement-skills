@@ -2,7 +2,7 @@
   "schema_version": 2,
   "skill": "enablement-impact-story",
   "source": "skills/enablement-impact-story/SKILL.md",
-  "notes": "Curated eval for evidence-led impact narratives. Routing keeps the story separate from KPI-tree and instrumentation design.",
+  "notes": "Curated eval for evidence-led impact narratives. Routing keeps the story separate from KPI-tree and instrumentation design. Apply full-deliverable checks only when that deliverable was requested. Definitions are not executed results.",
   "managed_by": "curated",
   "should_trigger": [
     {
@@ -44,7 +44,7 @@
     {
       "name": "enablement-impact-claim-mode",
       "type": "structure",
-      "description": "States the claim mode and includes an explicit what-we-cannot-claim-yet section.",
+      "description": "Makes evidence limits clear beside the relevant claim. A short update need not name a formal claim mode or include a separate cannot-claim section.",
       "critical": true
     },
     {
@@ -56,7 +56,7 @@
     {
       "name": "enablement-impact-roi-gate",
       "type": "semantic",
-      "description": "Uses financial ROI only when incremental cost and monetized attributable benefit are both supportable; otherwise refuses the label.",
+      "description": "Calculates financial ROI only with supportable incremental cost and monetised attributable benefit. Does not add an ROI discussion when it does not affect the requested decision.",
       "critical": true
     },
     {
@@ -64,6 +64,39 @@
       "type": "forbidden_behavior",
       "description": "Does not invent win rates, usage, ROI, or a measurement system in place of the narrative.",
       "critical": true
+    },
+    {
+      "name": "enablement-impact-story-practitioner-fit",
+      "type": "semantic",
+      "description": "Preserves an accurate short draft and its recommendation; does not expand it into a measurement plan or introduce irrelevant financial caveats.",
+      "critical": true
+    }
+  ],
+  "task_scenarios": [
+    {
+      "id": "enablement-impact-story-short-clean-update",
+      "input_state": "partial",
+      "prompt": "Tighten this into an update of no more than 120 words for our COO. Keep any wording that already works. Cohort A: 30 new AEs, median time to independently run discovery was 42 days, versus 51 days for the previous 28 hires using the same definition. This was the first cohort using our practice programme. We also changed hiring criteria and manager coverage. We have no comparison design or complete cost figure. Draft: The new cohort reached independent discovery nine days sooner than the previous cohort. The practice programme may have contributed, but hiring criteria and manager coverage also changed. We recommend continuing the programme while checking whether the next cohort sustains the improvement. Please make the recommendation clear, but don't turn this into a measurement project.",
+      "assertions": [
+        {
+          "name": "enablement-impact-story-short-clean-update-1",
+          "type": "structure",
+          "description": "Returns no more than 120 words, retains useful original wording, and makes a bounded continuation recommendation.",
+          "critical": true
+        },
+        {
+          "name": "enablement-impact-story-short-clean-update-2",
+          "type": "semantic",
+          "description": "Preserves the nine-day observed difference and the alternative explanations; does not imply that the programme caused it.",
+          "critical": true
+        },
+        {
+          "name": "enablement-impact-story-short-clean-update-3",
+          "type": "forbidden_behavior",
+          "description": "Does not require a full memo, new metrics, ROI analysis, or an evaluation project.",
+          "critical": true
+        }
+      ]
     }
   ]
 }

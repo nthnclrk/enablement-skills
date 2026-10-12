@@ -12,7 +12,7 @@ Keep a standard if two assessors can watch the same work and reach the same pass
 
 ## Dimensions from the job
 
-State what a certified person may do, with what independence, in which situations. Use 4-6 dimensions tied to critical tasks and failure risk. Training completion is not a dimension.
+State what a certified person may do, with what independence, in which situations. Use enough dimensions to cover critical tasks and material failure risks while keeping the assessment feasible. Each dimension needs a distinct decision purpose. Training completion is not a competence dimension.
 
 Write dimension-specific examples for each band:
 

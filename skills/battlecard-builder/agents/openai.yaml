@@ -1,4 +1,4 @@
 interface:
   display_name: "Battlecard Builder"
-  short_description: "Fit-first battlecards: when to compete, when not"
+  short_description: "Compare fit, proof, and competitive responses"
   default_prompt: "Use $battlecard-builder to build a current competitor battlecard with fit guidance, discovery questions, supported responses, and escalation boundaries."

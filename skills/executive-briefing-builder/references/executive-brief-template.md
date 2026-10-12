@@ -4,12 +4,12 @@ Use this when you are writing or checking an executive briefing. The skill body 
 
 ## Ask test
 
-Name the meeting type first: inform, align, unblock, or negotiate. Then write one primary ask and one fallback. If you cannot, you are still in research.
+Name the meeting purpose: inform, align, unblock, or negotiate. State what the participants should understand, agree, or decide. A decision or negotiation brief needs a clear ask and a useful fallback; an information briefing need not manufacture either.
 
 A brief fails the test when it:
 
 - Uses "align," "explore," or "discuss" as the ask
-- Has a desired outcome but no fallback
+- Seeks a commercial decision without considering a feasible fallback
 - Puts an unapproved concession in the customer extract
 - Treats a hypothesized stance as a confirmed position
 
@@ -19,12 +19,12 @@ A brief fails the test when it:
 
 ## Ask types
 
-- **Inform.** The room needs a fact or a recommendation. The ask is acknowledgment or a dated follow-up, not a signature.
+- **Inform.** The room needs a fact or an interpretation. State what it means and whether any action is needed.
 - **Align.** Two sides disagree on priority or sequence. The ask is a shared decision, not a status update.
 - **Unblock.** Something is stuck: security, legal, a missing owner. The ask names the blocker and the person who can clear it.
 - **Negotiate.** Commercial terms are in play. The ask, fallback, and walk-away all need confirmed authority before the meeting.
 
-Write the fallback in the same sentence shape as the ask. "Leave with a next meeting" is only a fallback when no commercial move is authorized.
+When a fallback is needed, make it specific and within confirmed authority. A follow-up meeting is useful only if it resolves a named gap; it is not automatically a substitute for a decision.
 
 ## Authority
 
@@ -38,7 +38,7 @@ Pair every ask, offer, and concession with an approver and a status. Unapproved 
 
 Confirmed role and authority are facts. Concern and desired movement are often hypotheses. Label them.
 
-Do not invent a decision-maker because the meeting is "executive." If authority is unknown, the brief is internal working material until someone names who can say yes.
+Do not infer decision authority from seniority. If authority is unknown, keep the affected ask or concession provisional; supported informational material can still be prepared.
 
 ## Layers
 
@@ -50,7 +50,7 @@ If the user did not ask for a customer extract, do not write one.
 
 ## Thin evidence
 
-Missing ask, missing authority, or missing shareability boundary: label the brief internal working material and block the affected external section. Do not invent the number that would make the story land.
+For a decision or negotiation, missing authority blocks the affected ask or concession. Missing sharing permission blocks the affected external section. Preserve verified material and identify the smallest decision needed to complete the brief.
 
 ## Optional shape
 
@@ -58,7 +58,7 @@ Use this only when the user wants a one-page scan.
 
 ```text
 Meeting / date / duration / distribution
-The ask (spoken) and the fallback (spoken)
+Purpose; spoken ask and fallback when needed
 Recommendation, material evidence, principal risk
 Open approvals
 Room: confirmed authority vs hypothesized stance

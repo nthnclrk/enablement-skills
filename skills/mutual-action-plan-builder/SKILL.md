@@ -5,7 +5,7 @@ description: Build mutual action plans for complex deals and coordinated custome
 
 # Mutual action plan builder
 
-Write a plan both sides own. If only sellers have owners, it is a task list.
+Build a customer-shared plan with clear responsibilities, feasible milestones, and evidence of what both sides have agreed.
 
 A MAP is a shared execution plan for a complex deal or coordinated initiative. Every milestone has a buyer-side owner and a seller-side owner. If the user wants proposal or RFP process orchestration, use `proposal-rfp-orchestrator`.
 
@@ -15,7 +15,9 @@ A MAP is a shared execution plan for a complex deal or coordinated initiative. E
 
 Silence is not agreement. A calendar invite is not a commitment.
 
-## Confirm Inputs First
+## Inputs
+
+Reuse supplied context first. If a missing company fact would change the result, check the relevant sections of `.enablement/context.md` when available. Preserve source dates and approval limits.
 
 Ask only for the inputs that change the plan:
 
@@ -27,11 +29,11 @@ Ask only for the inputs that change the plan:
 
 If a customer owner, date, or acceptance criterion is unconfirmed, leave it proposed. Do not invent commitments, logos, pricing, or approval timelines.
 
-## Read The Right Reference
+## Supporting material
 
 Read [references/map-framework.md](references/map-framework.md) for agreement states, the two-owner test, and infeasible-date handling. Skip it if the user already has a live MAP and only wants a gap pass.
 
-## Default Workflow
+## Procedure
 
 1. Anchor the outcome.
    The concrete result the plan must deliver, and by when. Mark the outcome and date `draft`, `proposed`, or `agreed`. Done when you can say what "done" looks like in customer language.
@@ -41,8 +43,8 @@ Read [references/map-framework.md](references/map-framework.md) for agreement st
    Buyer-side and seller-side. A missing buyer owner is a gap, not a seller-owned task. Keep unconfirmed customer owners proposed.
 4. Write entry and exit criteria a third party could inspect.
    Not "security complete." What artifact, in what system, accepted by whom.
-5. Attach risk only where it changes a date.
-   Signal, mitigation, escalation trigger on the critical path. Internal scoring stays off the customer view.
+5. Identify dependencies and risks to delivery or acceptance.
+   Include risks to the outcome even when the date appears unchanged. Name the signal, response, and escalation owner. Keep internal commercial scoring off the customer view.
 6. Check mutuality.
    Agreement state and completion-evidence state are independent. Attach confirmation source and date. Do not infer `agreed` from silence, attendance, or a seller CRM note.
 7. Split the views.
@@ -50,11 +52,13 @@ Read [references/map-framework.md](references/map-framework.md) for agreement st
 8. Control changes.
    When an agreed owner, date, milestone, or exit criterion changes, show the prior value and return the field to `proposed` or `changed` until the customer reconfirms.
 
-For proposal or RFP orchestration use `proposal-rfp-orchestrator`. For a one-opportunity inspect use `deal-inspection-coach`.
+Sending the plan to a customer or changing a shared plan or CRM record requires explicit approval of the recipients and changes.
 
-## Output Contract
+For proposal or RFP orchestration use `proposal-rfp-orchestrator`. For a single-deal review use `deal-inspection-coach`.
 
-Return a plan both sides can execute:
+## What to return
+
+For a plan review, return the gaps and proposed changes while preserving confirmed commitments. For a new plan, include:
 
 - Target outcome, date, and agreement state
 - Stakeholder map with buyer-side and seller-side owners
@@ -64,11 +68,11 @@ Return a plan both sides can execute:
 - Customer-visible view and internal-private view
 - Immediate next actions and open questions
 
-## Quality Bar
+## Quality bar
 
 - Every milestone has a buyer-side owner and a seller-side owner.
 - Exit criteria are inspectable, not status labels.
 - Customer commitments stay proposed until a source and date exist.
 - An infeasible target is named, not hidden by assumed compression.
 - Internal commentary is absent from the customer-visible view.
-- The plan refused the seller-only task list and the RFP workplan that do not belong here.
+- Each side can see its responsibilities and which commitments still need confirmation.

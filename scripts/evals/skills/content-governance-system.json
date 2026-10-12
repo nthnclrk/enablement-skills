@@ -2,7 +2,7 @@
   "schema_version": 2,
   "skill": "content-governance-system",
   "source": "skills/content-governance-system/SKILL.md",
-  "notes": "Curated eval for a runnable weekly content-ops model. Routing keeps governance separate from one-time gap inventory and backlog work.",
+  "notes": "Curated eval for a runnable weekly content-ops model. Routing keeps governance separate from one-time gap inventory and backlog work. Apply full-deliverable checks only when that deliverable was requested. Definitions are not executed results.",
   "managed_by": "curated",
   "should_trigger": [
     {
@@ -44,13 +44,13 @@
     {
       "name": "content-governance-weekly-cadence",
       "type": "structure",
-      "description": "Names the weekly operating cadence: who does what, on which day, and what done means.",
+      "description": "Defines who acts, when review is due, and what done means using a cadence the owners can sustain; does not require a weekly meeting.",
       "critical": true
     },
     {
       "name": "content-governance-two-axes",
       "type": "structure",
-      "description": "Keeps publication status and review status independent, with live assets remaining published while due or overdue.",
+      "description": "Keeps publication status and review status independent. An overdue review alone does not justify withdrawal; known harmful or false content gets a specific proposed correction or withdrawal.",
       "critical": true
     },
     {
@@ -63,6 +63,12 @@
       "name": "content-governance-not-inventory",
       "type": "forbidden_behavior",
       "description": "Does not substitute a one-time gap backlog for the operating model, or invent usage or ROI.",
+      "critical": true
+    },
+    {
+      "name": "content-governance-system-practitioner-fit",
+      "type": "semantic",
+      "description": "Separates permission to approve content from permission to publish, retire, or alter the live system.",
       "critical": true
     }
   ]

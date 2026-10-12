@@ -5,7 +5,7 @@ description: Synthesize win-loss interviews, notes, and deal evidence into clear
 
 # Win-loss synthesis
 
-Turn mixed win-loss evidence into findings a leader can defend. Separate what the source said from what you think it means. Do not recommend until the sample shape is on the page.
+Use buyer and deal evidence to explain patterns in wins, losses, and no-decisions, with conclusions limited to the sample studied.
 
 **Fails.** "Price is why we lose. 67% of interviews mentioned it."
 
@@ -13,7 +13,7 @@ Turn mixed win-loss evidence into findings a leader can defend. Separate what th
 
 For a single competitive asset, use `battlecard-builder`. For recurring objections across live calls, use `call-insights-to-objections`.
 
-## Confirm Inputs First
+## Inputs
 
 Ask only for the inputs that change the findings:
 
@@ -24,11 +24,11 @@ Ask only for the inputs that change the findings:
 
 If sample accounting is incomplete, proceed with labeled limits. Do not imply the sample represents the eligible population. Do not invent win rates.
 
-## Read The Right Reference
+## Supporting material
 
 Read [references/win-loss-coding-framework.md](references/win-loss-coding-framework.md) before you code themes, assign a primary reason, or quantify a finding. Skip it only if the user already coded the set and wants implications from a finished ledger.
 
-## Default Workflow
+## Procedure
 
 1. Draw the boundary.
    Eligible population, inclusion rules, outcome definitions, and what counts as evidence. Done when a reviewer can see who is in and who is out.
@@ -43,13 +43,13 @@ Read [references/win-loss-coding-framework.md](references/win-loss-coding-framew
 6. Protect people and accounts.
    Approved attribution only. Suppress thin cells. No rep-performance verdicts unless that use was approved.
 7. Recommend only what the sample can carry.
-   Owner-addressable messaging, coaching, process, or product moves. Sequence by evidence, not by how strongly someone feels.
+   Recommend messaging, coaching, process, or product changes with a responsible owner. Include counterexamples and a way to test the proposed explanation. A mention of price may describe a symptom; compare buyer criteria, perceived value, and alternatives before prescribing discounting.
 
 Do not publish identifiable quotes or write findings into an external system without explicit approval of the artifact, audience, and destination.
 
-## Output Contract
+## What to return
 
-Return a synthesis a leader can inspect:
+For a targeted question, return the supported finding and its limits. For a full synthesis, include:
 
 - Sample-accounting table: population, selection, participation, evidence, exclusions, denominators
 - Findings by outcome, each with supporting deals, counterexamples, source mix, and confidence
@@ -57,11 +57,11 @@ Return a synthesis a leader can inspect:
 - Segment or competitor cuts only where the slice can support them
 - Coding-calibration note: codebook version, agreement or recode, reliability limits
 - Implications with owner, decision, and dependency
-- What the sample cannot support, including invented win rates you refused
+- Limits on population, segment, and outcome claims
 
 Do not produce a battlecard or a governed objection library from this pass.
 
-## Quality Bar
+## Quality bar
 
 - Sample shape appears before any percentage or priority list.
 - Interview shares are not presented as population prevalence unless the design supports it.

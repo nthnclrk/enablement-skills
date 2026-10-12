@@ -1,4 +1,4 @@
 interface:
   display_name: "Roleplay Scenario Builder"
-  short_description: "Practice one behavior, not theater"
-  default_prompt: "Use $roleplay-scenario-builder to build one focused practice drill with a facilitator-only brief, observable anchors, and a single retry."
+  short_description: "Build focused practice with feedback and retry"
+  default_prompt: "Use $roleplay-scenario-builder to build a focused practice drill with participant and facilitator guidance, specific feedback, and a retry."

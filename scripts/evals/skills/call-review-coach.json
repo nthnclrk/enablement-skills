@@ -2,7 +2,7 @@
   "schema_version": 2,
   "skill": "call-review-coach",
   "source": "skills/call-review-coach/SKILL.md",
-  "notes": "Curated eval for the craft-pass output contract. Routing prompts stay on practitioner language; output checks require the skill's leading test, not a section list.",
+  "notes": "Check evidence-based feedback for one call, including short notes, supplied rubrics and incomplete excerpts. Keep multi-call baselines and full roleplay packs separate. Apply full-deliverable checks only when that deliverable was requested. Definitions are not executed results.",
   "managed_by": "curated",
   "should_trigger": [
     {
@@ -15,6 +15,10 @@
     },
     {
       "prompt": "I have rough notes. Please turn them into a usable call review and label anything that still needs confirmation.",
+      "expected": true
+    },
+    {
+      "prompt": "Review this one discovery call using our MEDDPICC framework and give me two coaching priorities with questions the rep can practise.",
       "expected": true
     }
   ],
@@ -56,7 +60,7 @@
     {
       "name": "call-review-coach-output-03",
       "type": "structure",
-      "description": "Locates a few decisive moments and scores applicable dimensions with evidence or N/O.",
+      "description": "Locates decisive moments in the accessible evidence. Uses behaviour scores only when requested or part of an agreed process; otherwise gives evidence-based coaching without a scorecard.",
       "critical": true
     },
     {
@@ -70,6 +74,126 @@
       "type": "semantic",
       "description": "Treats the single call as directional coaching, not a rep-level verdict, and does not produce a team baseline or certification decision.",
       "critical": true
+    },
+    {
+      "name": "call-review-coach-practitioner-fit",
+      "type": "semantic",
+      "description": "Connects feedback to a focused rehearsal and retry, then checks application on the next eligible interaction; missing opportunity is not failed learning.",
+      "critical": true
+    },
+    {
+      "name": "call-review-coach-framework-judgment",
+      "type": "semantic",
+      "description": "Keeps ordinary feedback organised around observed call moments and useful changes for the rep. A supplied methodology informs judgment; relevant concepts can be mentioned naturally without a separate methodology explanation for every priority. Uses a formal framework breakdown only when explicitly requested.",
+      "critical": true
+    }
+  ],
+  "task_scenarios": [
+    {
+      "id": "call-review-coach-meddpicc-judgment",
+      "input_state": "partial",
+      "prompt": "I'm coaching an AE who sells accounting software to finance teams. This is an early discovery excerpt; the call goal was to understand month-end close problems and agree what to evaluate next. Our team uses MEDDPICC. Write a short coaching note directly to the rep for tomorrow's 1:1: what should they keep doing and practise before the next call? Keep it under 150 words.\nT1 Finance controller: “We re-key invoices into two systems. The close slips most months.”\nT2 AE: “How long does the re-keying take?”\nT3 Finance controller: “Two days each month. The CFO still gets the figures later than she'd like.”\nT4 AE: “Our invoice sync removes the duplicate entry.”\nT5 Finance controller: “IT has to approve the integration before we choose anything.”\nT6 AE: “I'll send an integration guide and book a demo.”",
+      "assertions": [
+        {
+          "name": "call-review-coach-pain-depth",
+          "type": "semantic",
+          "description": "Uses T1-T4 to distinguish stated inefficiency and two days of work from the still-untested consequence of late figures for the CFO. Recommends exploring that consequence with the buyer rather than merely adding a number or generic urgency.",
+          "critical": true
+        },
+        {
+          "name": "call-review-coach-criteria-process",
+          "type": "semantic",
+          "description": "If advising on IT approval, keeps the approval requirements open and proposes a useful way to clarify them with IT. Does not present the approval step itself as established requirements or require a second MEDDPICC-labelled coaching point.",
+          "critical": true
+        },
+        {
+          "name": "call-review-coach-actionable-practice",
+          "type": "structure",
+          "description": "Returns a short, conversational coaching note under 150 words, with supported strengths, focused practice, and something to listen for next time. Framework concepts support the feedback naturally; there is no separate MEDDPICC breakdown, scorecard, or concept explanation for every point.",
+          "critical": true
+        },
+        {
+          "name": "call-review-coach-no-invented-deal",
+          "type": "forbidden_behavior",
+          "description": "Does not invent financial loss, CFO buying authority, the controller as Champion, integration capability beyond the source, or rep-level readiness from the excerpt.",
+          "critical": true
+        }
+      ]
+    },
+    {
+      "id": "call-review-coach-meddpicc-thin-summary",
+      "input_state": "partial",
+      "prompt": "We use MEDDPICC. Please score this discovery call and give me one coaching action. All I have is an automated summary of the first four minutes: the buyer mentioned manual reporting; the seller agreed the agenda. The rest of the recording is unavailable. The summary doesn't say what was asked or answered. The goal of the call was to understand reporting problems and agree an evaluation next step.",
+      "assertions": [
+        {
+          "name": "call-review-coach-summary-coverage",
+          "type": "semantic",
+          "description": "States that only an opening summary is accessible; wording, later behaviour, tone, and timing are unobservable. Marks unsupported requested scores N/O or explains why valid scores cannot be assigned.",
+          "critical": true
+        },
+        {
+          "name": "call-review-coach-summary-coaching",
+          "type": "semantic",
+          "description": "Offers a provisional evidence-gathering or next-call coaching action proportionate to the summary, with an observable check, without alleging a specific missed question.",
+          "critical": true
+        },
+        {
+          "name": "call-review-coach-summary-no-zero",
+          "type": "forbidden_behavior",
+          "description": "Does not mark missing MEDDPICC elements as zero or one, reconstruct dialogue as recorded speech, or claim the whole call failed.",
+          "critical": true
+        }
+      ]
+    },
+    {
+      "id": "call-review-coach-supplied-rubric",
+      "input_state": "partial",
+      "prompt": "Review this excerpt from a marketing software discovery call for a senior AE. We're aiming to agree an evaluation. Use our team rubric: Impact means the buyer explains a consequence; Fit means they name a requirement and how we'll test it. Give two short coaching notes with a practice question and a next-call check. No scores.\nT1 Marketing lead: “Matching campaign data takes Friday afternoon.”\nT2 AE: “What does that stop you doing?”\nT3 Marketing lead: “We miss Monday's budget meeting, so decisions get pushed a week.”\nT4 AE: “So budget decisions slip because the figures arrive late?”\nT5 Marketing lead: “Exactly. Any replacement must join CRM and ad data without us uploading CSVs.”\nT6 AE: “We can cover that in a demo.”",
+      "assertions": [
+        {
+          "name": "call-review-coach-team-rubric",
+          "type": "semantic",
+          "description": "Uses Impact and Fit as supplied. Preserves T2-T4 as a demonstrated consequence question and confirmation; focuses development on how the stated data-joining requirement will be tested.",
+          "critical": true
+        },
+        {
+          "name": "call-review-coach-rubric-practice",
+          "type": "structure",
+          "description": "Provides concise evidence, a practice question, and a next-call check, with no scorecard.",
+          "critical": true
+        },
+        {
+          "name": "call-review-coach-no-framework-override",
+          "type": "forbidden_behavior",
+          "description": "Does not replace the supplied team rubric with MEDDPICC or claim the rep failed to explore impact when the excerpt shows it.",
+          "critical": true
+        }
+      ]
+    },
+    {
+      "id": "call-review-coach-natural-demo-feedback",
+      "input_state": "partial",
+      "prompt": "I'm coaching an AE after this excerpt from a marketing software demo. The goal was to test whether CRM sync handles duplicate contacts correctly and agree the evaluation. Give me short feedback I can say directly to the rep: what worked and one thing to practise next time. Keep it under 150 words.\nT1 Marketing ops lead: “We need to check duplicates don't enter our CRM.”\nT2 AE: “Let's run sample contacts and compare the results with your deduplication rules.”\nT3 Marketing ops lead: “Yes. But the CRM admin owns those rules and isn't here.”\nT4 AE: “Okay. I'll send instructions for the trial this afternoon.”",
+      "assertions": [
+        {
+          "name": "call-review-coach-demo-strength",
+          "type": "semantic",
+          "description": "Preserves the relevant proposal to test sample contacts against the customer's rules. Recognises that the absent CRM admin is a cue to involve the owner before agreeing how the evaluation will run.",
+          "critical": true
+        },
+        {
+          "name": "call-review-coach-natural-feedback",
+          "type": "structure",
+          "description": "Gives conversational feedback under 150 words with one focused practice action and an observable next-call check; no imposed sales framework or qualification checklist.",
+          "critical": true
+        },
+        {
+          "name": "call-review-coach-demo-evidence",
+          "type": "forbidden_behavior",
+          "description": "Does not invent a successful sync test, guaranteed product capability, urgency, financial loss, or a failure to discover pain when that was not the demo's stated objective.",
+          "critical": true
+        }
+      ]
     }
   ]
 }

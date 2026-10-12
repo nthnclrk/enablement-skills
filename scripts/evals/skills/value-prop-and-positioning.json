@@ -2,7 +2,7 @@
   "schema_version": 2,
   "skill": "value-prop-and-positioning",
   "source": "skills/value-prop-and-positioning/SKILL.md",
-  "notes": "Curated eval for the craft-pass output contract. Routing prompts stay on practitioner language; output checks require the skill's leading test, not a section list.",
+  "notes": "Curated checks for value-prop-and-positioning. Apply full-deliverable checks only when that deliverable was requested; score focused revisions on the affected decisions and retained constraints. Definitions are not executed results.",
   "managed_by": "curated",
   "should_trigger": [
     {
@@ -46,6 +46,12 @@
       "name": "value-prop-and-positioning-decision-discipline",
       "type": "semantic",
       "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
+      "critical": true
+    },
+    {
+      "name": "value-prop-and-positioning-practitioner-fit",
+      "type": "semantic",
+      "description": "Preserves approved positioning and strong existing wording for a focused rewrite; does not reopen strategy without a decision-changing gap.",
       "critical": true
     }
   ]

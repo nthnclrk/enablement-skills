@@ -5,7 +5,7 @@ description: Analyze a defined set of sales calls or notes and produce an eviden
 
 # Call insights to objections
 
-Cluster what buyers actually said across a defined call set. Stop at the brief. The governed library is a different job.
+Identify recurring buyer concerns in a defined call set and recommend what the team should investigate or change.
 
 **Fails.** "Approved response: 'Our implementation is proven and low-risk across similar rollouts.'"
 
@@ -13,7 +13,7 @@ Cluster what buyers actually said across a defined call set. Stop at the brief. 
 
 One recorded call is `call-review-coach`. Why deals were won or lost is `win-loss-synthesis`.
 
-## Confirm Inputs First
+## Inputs
 
 Ask only for the inputs that change the clusters:
 
@@ -24,11 +24,11 @@ Ask only for the inputs that change the clusters:
 
 Do not force shared-context setup for a self-contained source set. Do not invent outcomes, quotes, or usage.
 
-## Read The Right Reference
+## Supporting material
 
 Read [references/objection-coding-framework.md](references/objection-coding-framework.md) before you code, count, or assign confidence. Read [references/source-system-guide.md](references/source-system-guide.md) when the evidence comes from a call platform, shared notes, or a message export.
 
-## Default Workflow
+## Procedure
 
 1. Frame the set.
    Decision question, inclusion rules, window, slices, and unit of analysis. Done when a reviewer can see which conversations are in and which are out.
@@ -42,16 +42,16 @@ Read [references/objection-coding-framework.md](references/objection-coding-fram
    Merge only when the underlying buyer issue is the same. Keep distinct concerns separate even when the later response would overlap.
 6. Score impact from what happened on the call.
    Blocking, material friction, open concern, or unknown. Deal impact and root cause stay hypotheses unless the evidence establishes them.
-7. Recommend the smallest next action.
-   Message clarification, proof, product feedback, seller practice, process, or more research. Owner and validation signal. Do not write approved response language.
+7. Recommend a response to the underlying concern.
+   Distinguish a message the buyer misunderstood from a real capability, capacity, or commercial constraint. Assign message clarification, proof, product feedback, seller practice, process repair, or research accordingly. Each recommendation needs an owner and a way to check whether it helped. Draft language remains unapproved.
 8. Check concentration and privacy.
    One rep, account, or team must not silently drive the conclusion. Redact what a broad audience should not see.
 
 Do not write findings back to a system or publish messaging without explicit approval.
 
-## Output Contract
+## What to return
 
-Return a brief enablement can act on without pretending it is a library:
+Return the findings needed for the stated decision. For a full analysis, include:
 
 - Scope and coverage: question, inclusion rules, eligible vs usable calls, account and rep breadth, metadata gaps
 - Objection register: theme, buyer wording, count and denominator, slices, observed consequence, confidence, source IDs
@@ -61,9 +61,9 @@ Return a brief enablement can act on without pretending it is a library:
 
 Do not produce the governed objection library. That is `objection-library-builder`.
 
-## Quality Bar
+## Quality bar
 
-- Recurring means at least two independent accounts, unless the user set a different rule.
+- Repeated concerns within one account stay account-specific. Report independent-account breadth before calling a concern recurring across the market.
 - Buyer language, analyst interpretation, and recommendation are not the same sentence.
 - Isolated signals stay visible without being promoted to themes.
 - No invented outcomes, win rates, or approved responses.

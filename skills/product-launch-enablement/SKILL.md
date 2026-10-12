@@ -5,7 +5,7 @@ description: Build cross-functional launch readiness plans and field-ready launc
 
 # Product launch enablement
 
-Make the field ready for a launch. If it reads like a release note, rewrite it.
+Prepare each affected revenue role to explain a launch accurately and handle the customer situations it creates.
 
 A launch package tells each role what changed, what did not, and what they should stop saying. If the user only wants a Slack or email update from the notes, use `release-notes-to-seller-updates`.
 
@@ -13,9 +13,11 @@ A launch package tells each role what changed, what did not, and what they shoul
 
 **Release note.** "We shipped conditional triggers, team escalation, and audit history. Please share with your teams."
 
-If a seller could still pitch the old story after reading it, it is not done.
+Make clear what each affected role must change in its customer work.
 
-## Confirm Inputs First
+## Inputs
+
+Reuse supplied context first. If a missing company fact would change the result, check the relevant sections of `.enablement/context.md` when available. Preserve source dates and approval limits.
 
 Ask only for the inputs that change readiness:
 
@@ -27,11 +29,11 @@ Ask only for the inputs that change readiness:
 
 If a date, eligibility rule, or claim is missing, leave it unknown. Do not invent launch dates, availability, or capacity.
 
-## Read The Right Reference
+## Supporting material
 
 Read [references/launch-readiness-framework.md](references/launch-readiness-framework.md) for tiering, gate evidence, and the first decision window. Read [references/source-system-guide.md](references/source-system-guide.md) when the plan has to land in docs, Slack, an LMS, or a tracker.
 
-## Default Workflow
+## Procedure
 
 1. Name the change and the non-change.
    One sentence for what is new. One for what still works the old way. One for the line sellers must retire. Done when all three are specific enough to inspect.
@@ -44,7 +46,7 @@ Read [references/launch-readiness-framework.md](references/launch-readiness-fram
 5. Build only the kit this tier needs.
    FAQ, talk-track change, objection notes, proof with source. Add runnable practice when Tier 2 or 3 requires it. Route a full spoken track to `talk-track-builder`.
 6. Set evidence-backed go/no-go gates.
-   Product truth, approved claims, eligibility, field readiness, support. A gate is `ready` only when the operational path works, not when a doc was approved. Attendance is not readiness.
+   Check product truth, approved claims, eligibility, field readiness, and support. Demonstrate the changed task and verify the handoff with the responsible owner. Mark simulated tests as such. A gate needs evidence of a working path; document approval or attendance alone is insufficient.
 7. Map handoffs.
    PMM, enablement, sales, CS, RevOps, support. Done when a seller knows who to ping for eligibility, proof, pricing, and custom work.
 8. Set the first post-launch decision window.
@@ -52,9 +54,9 @@ Read [references/launch-readiness-framework.md](references/launch-readiness-fram
 
 For a partner or channel pack use `partner-enablement-package`. For what will not happen this quarter use `quarterly-enablement-planner`.
 
-## Output Contract
+## What to return
 
-Return a package a launch owner can run:
+Return the requested readiness plan or assets. For a complete launch package, include:
 
 - Launch tier, one-sentence rationale, and what sellers should stop saying
 - Role actions and the field message
@@ -67,10 +69,10 @@ Return a package a launch owner can run:
 
 Do not add a quarter roadmap or a partner-facing pack unless asked. Do not publish or mark a gate ready without evidence.
 
-## Quality Bar
+## Quality bar
 
 - A seller can explain what changed, what did not, and what to stop saying.
-- The package refused to be a release-note restatement.
+- The affected roles can perform the changed task, with escalation routes for unresolved cases.
 - Tier follows consequence, not audience size.
 - Every field-facing claim has a named owner, or is marked blocked.
 - Capacity is a decision, not a hidden overbook.

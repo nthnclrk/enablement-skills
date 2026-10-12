@@ -2,7 +2,7 @@
   "schema_version": 2,
   "skill": "account-brief-builder",
   "source": "skills/account-brief-builder/SKILL.md",
-  "notes": "Curated eval for one-decision account briefs. Near-misses keep QBR, executive briefing, and MAP on adjacent skills. Output checks require a named decision moment, not an account wiki.",
+  "notes": "Check one-decision account briefs. Route customer QBRs, executive meeting narratives and mutual action plans to their own skills. Apply full-deliverable checks only when that deliverable was requested. Definitions are not executed results.",
   "managed_by": "curated",
   "should_trigger": [
     {
@@ -79,6 +79,12 @@
       "type": "structure",
       "description": "Includes near-term actions with owner and date status, plus source conflicts or open questions.",
       "critical": false
+    },
+    {
+      "name": "account-brief-builder-practitioner-fit",
+      "type": "semantic",
+      "description": "For an update to an existing brief, changes only material facts and recommendations; keeps current verified content and puts the decision on the first screen.",
+      "critical": true
     }
   ]
 }

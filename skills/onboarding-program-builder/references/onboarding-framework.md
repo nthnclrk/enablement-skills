@@ -2,9 +2,9 @@
 
 Use this when you are writing or checking a ramp. The skill body has the procedure.
 
-## Weekly-proof test
+## Work-evidence test
 
-Keep a week if a manager can watch the hire do the job and say pass-this-week or not-yet. Cut it if the proof is a module, a date, or "completed onboarding."
+Each phase needs a task the hire can practise and evidence the manager can use to adjust support. Course completion records exposure. A work sample shows what the learner can currently do; a separate certification process governs formal pass/fail decisions.
 
 **Fails.** "Days 1-30: complete product training and shadow four calls."
 
@@ -20,7 +20,7 @@ Keep a week if a manager can watch the hire do the job and say pass-this-week or
 
 **Fails.** "Day 60: the hire is pipeline-ready."
 
-**Passes.** "Autonomy starts when two live discoveries show problem, cost, and a mutual next step without a manager prompt. That may be week 5 or week 9."
+**Passes.** "Independent discovery requires representative evidence of problem exploration, impact, and a mutual next step without prompting. The role owner confirms the sample and standard; the calendar estimate does not grant independence."
 
 ## Start from the job
 
@@ -30,9 +30,9 @@ Missing starting evidence is unknown, not low ability. Compress or add support o
 
 ## Experience changes the support
 
-- New hire: more guided practice, tighter weekly proof.
-- Internal transfer: compress company process, add role-transition drills.
-- Experienced external: faster baseline, stronger product and process calibration.
+- New to the role: use guided practice where the baseline reveals gaps.
+- Internal transfer: reuse demonstrated company knowledge and practise unfamiliar role tasks.
+- Experienced external: check product and process knowledge as well as selling skills; prior tenure alone does not justify skipping practice.
 
 Do not give all three the same 30-60-90 and call it a variant.
 
@@ -48,7 +48,7 @@ Build the ledger before assigning the cohort: learners, facilitators, SMEs, mana
 
 **Fails.** "Twelve AEs start Monday. Managers will certify readiness in week 4."
 
-**Passes.** "Four managers can inspect two live calls a week. Sequence the cohort or drop the live-call gate to a roleplay until capacity `fits`."
+**Passes.** "Manager capacity is insufficient for the required live-call reviews. Sequence the cohort or secure qualified review capacity. Simulations can provide interim practice, but they do not replace required live-work evidence unless the standard's owner validates that change."
 
 ## Certification and customer value stay outside
 

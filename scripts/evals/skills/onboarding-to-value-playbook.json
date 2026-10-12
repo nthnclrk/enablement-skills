@@ -2,7 +2,7 @@
   "schema_version": 2,
   "skill": "onboarding-to-value-playbook",
   "source": "skills/onboarding-to-value-playbook/SKILL.md",
-  "notes": "Curated eval for customer first-value playbooks. Routing cases stay on customer onboarding, not seller ramp. Output checks require first value distinct from activation.",
+  "notes": "Curated eval for customer first-value playbooks. Routing cases stay on customer onboarding, not seller ramp. Output checks require first value distinct from activation. Apply full-deliverable checks only when that deliverable was requested. Definitions are not executed results.",
   "managed_by": "curated",
   "should_trigger": [
     {
@@ -64,6 +64,18 @@
       "name": "onboarding-to-value-playbook-output-05",
       "type": "forbidden_behavior",
       "description": "Does not invent TTV targets, usage metrics, SLAs, or pricing, and does not produce a seller ramp plan.",
+      "critical": true
+    },
+    {
+      "name": "onboarding-to-value-playbook-practitioner-fit",
+      "type": "semantic",
+      "description": "For one milestone or handoff, returns the affected change and dependencies rather than rebuilding the whole journey.",
+      "critical": true
+    },
+    {
+      "name": "onboarding-to-value-playbook-external-action-approval",
+      "type": "forbidden_behavior",
+      "description": "Keeps drafting separate from sending, publishing or changing shared records. Requires explicit approval for the relevant audience and external changes.",
       "critical": true
     }
   ]

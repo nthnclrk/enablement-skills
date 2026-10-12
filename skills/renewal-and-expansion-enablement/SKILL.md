@@ -5,7 +5,7 @@ description: Build reusable renewal and expansion motions for customer-facing te
 
 # Renewal and expansion enablement
 
-Write three different plays: save, healthy renewal, and expansion. Do not run them as one motion.
+Help customer teams choose and run the appropriate response to renewal risk, a healthy renewal, or an expansion opportunity.
 
 A good playbook tells a CSM which play they are in, what signal put them there, and what they must not do. If the user wants one account diagnosed, use `account-brief-builder`. If they want a customer-facing QBR, use `qbr-ebr-builder`.
 
@@ -17,7 +17,9 @@ A good playbook tells a CSM which play they are in, what signal put them there, 
 
 If every account gets a QBR, a discount ladder, and an upsell track, rewrite it.
 
-## Confirm Inputs First
+## Inputs
+
+Reuse supplied context first. If a missing company fact would change the result, check the relevant sections of `.enablement/context.md` when available. Preserve source dates and approval limits.
 
 Ask only for the inputs that change the plays:
 
@@ -29,16 +31,16 @@ Ask only for the inputs that change the plays:
 
 If a date, notice period, or threshold is missing, leave it unknown. Do not invent contract terms, usage metrics, health scores, or expansion cutoffs.
 
-## Read The Right Reference
+## Supporting material
 
 Read [references/renewal-expansion-framework.md](references/renewal-expansion-framework.md) before defining lifecycle plays, signals, or manager checkpoints.
 
-## Default Workflow
+## Procedure
 
 1. Build timelines from the contract.
    Term, notice, pricing notice, budget, procurement, legal, signature. Latest safe start = required completion minus verified lead time minus owner-approved contingency. Unknown dates are blockers, not a generic 90-day countdown.
 2. Separate the three motions.
-   Save triggers, healthy-renewal triggers, expansion-readiness triggers. A healthy renewal is not expansion-ready. An at-risk account does not get a growth play because whitespace exists.
+   Define the triggers for the motions in scope. A healthy renewal does not establish expansion readiness. Address value or service risk before recommending growth; preserve contractual notice and renewal actions that cannot wait.
 3. Define each signal.
    Formula or observation, source, account baseline, window, freshness, threshold owner, and unknown state. System health scores are inputs, not ground truth. Missing data is never healthy.
 4. Write the plays.
@@ -47,14 +49,14 @@ Read [references/renewal-expansion-framework.md](references/renewal-expansion-fr
    What CS, AM, Sales, and Support do next. For spoken lines on a defined moment, use `talk-track-builder`. For a shared customer plan, use `mutual-action-plan-builder`.
 6. Set commercial guardrails.
    Discount authority, deal desk, legal and procurement states, exception rules. Keep owners explicit.
-7. Set manager inspect.
+7. Set manager review points.
    Review prompts tied to contractual milestones and signal changes, not a blanket monthly ritual.
 
 Do not update renewal dates, health states, or commercial fields without explicit approval.
 
-## Output Contract
+## What to return
 
-Return a segment playbook a CS or AM team can run:
+Build only the motions and segments requested. For a complete playbook, include:
 
 - Play matrix by segment: save, healthy renewal, expansion
 - Contract-derived milestone map with source, owner, latest safe start, and gaps
@@ -67,7 +69,7 @@ Return a segment playbook a CS or AM team can run:
 
 Do not diagnose a named account or write a QBR narrative here.
 
-## Quality Bar
+## Quality bar
 
 - A CSM can tell which of the three plays they are in.
 - Timelines are contract-derived, with source and owner on each milestone.

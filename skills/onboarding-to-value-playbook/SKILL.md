@@ -5,7 +5,7 @@ description: Build customer onboarding-to-value playbooks that get customers to 
 
 # Onboarding to value playbook
 
-Get a customer to first value by segment. This is customer onboarding, not seller ramp.
+Help a customer achieve an observable first result, with responsibilities and support matched to their onboarding needs.
 
 A good playbook names the first observable value event, who confirms it, and the few milestones that make it happen. If the user wants new-hire seller ramp, use `onboarding-program-builder`. If they want a partner pack, use `partner-enablement-package`.
 
@@ -15,7 +15,9 @@ A good playbook names the first observable value event, who confirms it, and the
 
 If setup completion is being sold as time-to-value, rewrite it.
 
-## Confirm Inputs First
+## Inputs
+
+Reuse supplied context first. If a missing company fact would change the result, check the relevant sections of `.enablement/context.md` when available. Preserve source dates and approval limits.
 
 Ask only for the inputs that change the journey:
 
@@ -27,11 +29,11 @@ Ask only for the inputs that change the journey:
 
 If a baseline, SLA, or horizon is missing, leave it `TBD`. Do not invent usage thresholds, TTV targets, or pricing.
 
-## Read The Right Reference
+## Supporting material
 
 Read [references/ttv-playbook-framework.md](references/ttv-playbook-framework.md) before setting value events, milestones, or risk triggers. Skip it if the user already defined first value and only wants the operating cadence.
 
-## Default Workflow
+## Procedure
 
 1. Define first value, not first login.
    Actor, observable result, evidence source, acceptance criteria, who confirms. Setup and login are activation unless the customer agreed they are the outcome. Done when you can say what "they got value" looks like in one sentence.
@@ -52,9 +54,11 @@ Read [references/ttv-playbook-framework.md](references/ttv-playbook-framework.md
 9. Hook renewal and expansion later.
    Readiness checks from the contract horizon and demonstrated value. Do not bolt on an upsell track during first-value work. For reusable renewal plays, use `renewal-and-expansion-enablement`.
 
-## Output Contract
+Sending a customer plan or changing a shared onboarding or CRM record requires explicit approval of the recipients and changes.
 
-Return a playbook CS and services can run by segment:
+## What to return
+
+For one segment or handoff, return that portion and its dependencies. For a full playbook, include:
 
 - First-value definition and time-to-value clock
 - Journey map with milestones and owners
@@ -67,12 +71,12 @@ Return a playbook CS and services can run by segment:
 
 Do not write a seller ramp plan, a named-account MAP, or a QBR.
 
-## Quality Bar
+## Quality bar
 
 - A CSM can tell first value from activation in one sentence.
 - The journey changes by segment.
 - Customer-visible and internal views stay consistent on dates.
 - No invented TTV targets, usage metrics, SLAs, or pricing.
 - Each value event is observable, source-linked, and distinct from setup.
-- Risk triggers fire early enough to intervene before churn.
-- The playbook refused seller onboarding.
+- Each risk trigger has an owner and a response that can act within the customer's remaining time window.
+- The CSM can identify the next dependency preventing the customer from reaching first value.

@@ -5,7 +5,7 @@ description: Design an adaptive discovery guide and outcome-led demo flow for a 
 
 # Discovery and demo structure
 
-Demo only after a buying signal. If the flow shows product before it knows what "good" looks like for this buyer, rewrite it.
+Design a conversation that helps the seller understand the buyer's problem and demonstrate only what the buyer needs to evaluate.
 
 This skill designs the meeting architecture. For spoken lines inside an existing structure, use `talk-track-builder`.
 
@@ -15,7 +15,9 @@ This skill designs the meeting architecture. For spoken lines inside an existing
 
 If there is no credible decision this meeting can produce, propose one before you build the path.
 
-## Confirm Inputs First
+## Inputs
+
+Reuse supplied context first. If a missing company fact would change the result, check the relevant sections of `.enablement/context.md` when available. Preserve source dates and approval limits.
 
 Ask only for what changes the flow:
 
@@ -26,11 +28,11 @@ Ask only for what changes the flow:
 
 Do not invent buyer commitments, metrics, or product claims.
 
-## Read The Right Reference
+## Supporting material
 
 Read [references/discovery-demo-framework.md](references/discovery-demo-framework.md) for topic patterns, demo-gating rules, and meeting modes. Skip it if you are only tightening an existing guide.
 
-## Default Workflow
+## Procedure
 
 1. Name the decision.
    What the buyer should be able to decide next, and what the seller must learn or prove. Done when that sentence is specific.
@@ -41,7 +43,7 @@ Read [references/discovery-demo-framework.md](references/discovery-demo-framewor
 4. Plan stakeholder coverage.
    What each role can confirm, what needs someone else, where views may conflict.
 5. Gate the demo.
-   Each block maps to an expressed outcome, criterion, or risk. Use only verified capabilities. Include the stop condition.
+   Map each block to a confirmed outcome, criterion, or risk. For an exploratory buyer who cannot yet articulate the problem, offer a short, clearly framed example to test relevance, then return to discovery. Use verified capabilities and specify when to stop or change direction.
 6. Write the transition.
    Restate what you heard. Ask permission to show the matching path.
 7. Design the close.
@@ -50,7 +52,7 @@ Read [references/discovery-demo-framework.md](references/discovery-demo-framewor
 
 For scoring completed discovery use `discovery-rubric-auditor`. For one recorded call use `call-review-coach`.
 
-## Output Contract
+## What to return
 
 - Meeting frame: type, audience, knowns, hypotheses, decision, time
 - Discovery path with listen-fors and branches
@@ -61,10 +63,10 @@ For scoring completed discovery use `discovery-rubric-auditor`. For one recorded
 
 Discovery-only, demo-only, or combined. Do not ship all three unless asked.
 
-## Quality Bar
+## Quality bar
 
 - Every question and demo block serves the named decision.
-- Demo blocks have a gate. No platform tour.
+- Each demo block has a reason to show it, a question to test relevance, and a stop or transition condition.
 - Hypotheses stay labeled until the buyer confirms them.
 - The guide is usable live, not a 40-question checklist.
 - No invented capability, proof, or commitment.

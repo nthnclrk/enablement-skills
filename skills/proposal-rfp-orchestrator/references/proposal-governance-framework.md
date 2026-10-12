@@ -8,7 +8,7 @@ A writing plan is wasted work if a mandatory disqualifier is already true.
 
 **Fails.** Kick off drafting while security "looks into" a required certification.
 
-**Passes.** Required certification is unmet. Bid/no-bid owner: VP Sales. Path: no-bid, or a dated security exception before any section is assigned.
+**Passes.** "The required certification is unmet. The bid owner must obtain a buyer-approved exception under the solicitation rules or decline. Security confirms the evidence; it cannot waive the buyer's requirement."
 
 Test: mandatory disqualifiers, buyer access, solution fit, delivery capacity, economics, evidence readiness, required effort, decision authority.
 
@@ -43,7 +43,7 @@ Do not copy that placeholder into a buyer-facing answer. An internal exception c
 
 ## Review gates
 
-Use three gates unless the user asks for another model:
+Use the review stages the team can staff, preserving the relevant checks:
 
 - Draft: version, addenda, structure, coverage, owners, placeholders
 - Challenge: recheck addenda, then stress-test claims, evidence, exceptions, and risk
@@ -53,7 +53,7 @@ Use three gates unless the user asks for another model:
 
 Authorized owner records `READY`, `READY WITH APPROVED EXCEPTION`, or `NOT READY`.
 
-The package is not ready while a mandatory answer, artifact, or approval is unverified. Do not send or upload without explicit user approval.
+The package is not ready while a mandatory answer, artifact, or approval is unverified. An exception to a mandatory buyer requirement needs evidence that the buyer's authorised process accepts it. Internal approval alone cannot establish compliance. Do not send or upload without explicit user approval.
 
 ## Roles
 

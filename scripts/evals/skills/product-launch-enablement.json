@@ -2,7 +2,7 @@
   "schema_version": 2,
   "skill": "product-launch-enablement",
   "source": "skills/product-launch-enablement/SKILL.md",
-  "notes": "Curated eval for launch readiness. Routing keeps launch kits off release-note and quarter-plan prompts. Output checks require what changed, what did not, and what sellers should stop saying.",
+  "notes": "Curated eval for launch readiness. Routing keeps launch kits off release-note and quarter-plan prompts. Output checks require what changed, what did not, and what sellers should stop saying. Apply full-deliverable checks only when that deliverable was requested. Definitions are not executed results.",
   "managed_by": "curated",
   "should_trigger": [
     {
@@ -70,6 +70,12 @@
       "type": "structure",
       "description": "Includes evidence-backed gates or an explicit first decision window with a confirmation owner when cadence is unconfirmed.",
       "critical": false
+    },
+    {
+      "name": "product-launch-enablement-practitioner-fit",
+      "type": "semantic",
+      "description": "Tests whether affected roles can perform the changed task and handoff; document approval or attendance alone does not establish launch readiness.",
+      "critical": true
     }
   ],
   "task_scenarios": [

@@ -2,7 +2,7 @@
   "schema_version": 2,
   "skill": "field-feedback-synthesizer",
   "source": "skills/field-feedback-synthesizer/SKILL.md",
-  "notes": "Curated eval for multi-source field synthesis. Output checks require observation vs recommendation and source-breadth scoring.",
+  "notes": "Curated eval for multi-source field synthesis. Output checks require observation vs recommendation and source-breadth scoring. Apply full-deliverable checks only when that deliverable was requested. Definitions are not executed results.",
   "managed_by": "curated",
   "should_trigger": [
     {
@@ -58,6 +58,12 @@
       "name": "field-feedback-no-invention",
       "type": "forbidden_behavior",
       "description": "Does not invent usage, win rates, or quotes, or produce a content backlog or governed objection library.",
+      "critical": true
+    },
+    {
+      "name": "field-feedback-synthesizer-practitioner-fit",
+      "type": "semantic",
+      "description": "Without a trustworthy denominator, offers supported qualitative findings and their limits instead of inventing prevalence or withholding all analysis.",
       "critical": true
     }
   ]

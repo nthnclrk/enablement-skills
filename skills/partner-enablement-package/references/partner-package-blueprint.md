@@ -2,9 +2,9 @@
 
 Use this when you are classifying sources, drawing the permitted-motion line, or splitting partner-facing from internal. The skill body has the procedure.
 
-## The copy-paste tell
+## Design for the partner's role
 
-If you can find-replace "AE" with "partner" and ship it, it is not a partner package.
+Adapt the material to the partner's permitted activities, access, incentives, and handoffs. Direct-seller instructions may assume rights or responsibilities the partner does not have.
 
 **Fails.** The direct-sales battlecard, internal win rate, and Q3 discount grid, lightly rebranded.
 
@@ -23,7 +23,7 @@ Classify every source and deliverable:
 - `internal_only`: required by the channel team, not releasable
 - `unverified`: source, permission, freshness, or agreement fit is incomplete; keep it out of partner-facing output
 
-Never nest an internal-only section inside a document meant for partners. Produce a second artifact.
+Keep internal-only material out of a document meant for partners. Put it in a separate artifact when an internal operator pack is requested or needed to complete the work.
 
 ## Permitted motion
 

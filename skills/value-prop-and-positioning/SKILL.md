@@ -5,7 +5,7 @@ description: Build and refine value propositions and messaging frameworks for re
 
 # Value prop and positioning
 
-Positioning is decision support against the buyer's real alternative. If it reads like a slogan, rewrite it.
+Explain why a defined buyer would choose this offer over a credible alternative, using differences the evidence supports.
 
 The alternative that matters most is often no change: the spreadsheet, the manual workaround, the in-house tool they already paid for.
 
@@ -15,7 +15,9 @@ The alternative that matters most is often no change: the spreadsheet, the manua
 
 If you cannot name what the buyer would do instead, you do not have positioning yet.
 
-## Confirm Inputs First
+## Inputs
+
+Reuse supplied context first. If a missing company fact would change the result, check the relevant sections of `.enablement/context.md` when available. Preserve source dates and approval limits.
 
 Ask only for what changes the thesis:
 
@@ -26,11 +28,11 @@ Ask only for what changes the thesis:
 
 Do not turn an unverified hypothesis into an external outcome claim.
 
-## Read The Right Reference
+## Supporting material
 
 Read [references/positioning-canvas.md](references/positioning-canvas.md) for thesis modes, the alternatives map, and the differentiation chain. Skip it if the user already has a canvas and only wants a rewrite.
 
-## Default Workflow
+## Procedure
 
 1. Name the buyer task.
    Trigger, progress sought, current approach, decision criteria, cost of staying put. Done when you can say why this is a decision, not a feature launch.
@@ -47,7 +49,9 @@ Read [references/positioning-canvas.md](references/positioning-canvas.md) for th
 
 For live lines use `talk-track-builder`. For compete guidance use `battlecard-builder`. For objection systems use `objection-library-builder`.
 
-## Output Contract
+## What to return
+
+For a narrow rewrite, preserve the established strategy and return the revised language with any material evidence gap. Use the full framework below when the positioning itself needs development.
 
 - Thesis, labeled with its mode
 - Buyer task and decision criteria
@@ -59,7 +63,9 @@ For live lines use `talk-track-builder`. For compete guidance use `battlecard-bu
 - Proof ledger with source, freshness, and permission
 - Assumptions, if you had to make any
 
-## Quality Bar
+## Quality bar
+
+Retain strong existing language. A wording change should improve clarity, relevance, or evidence fidelity rather than merely sound different.
 
 - The thesis dies if you remove the alternative.
 - Each pillar links task, mechanism, outcome, and proof.

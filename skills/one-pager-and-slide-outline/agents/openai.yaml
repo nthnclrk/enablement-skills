@@ -1,4 +1,4 @@
 interface:
   display_name: "One Pager And Slide Outline"
-  short_description: "One-pagers and assertion-led slide outlines"
-  default_prompt: "Use $one-pager-and-slide-outline to turn this source material into the requested one-pager, assertion-led slide outline, or both."
+  short_description: "Shape evidence into a clear one-pager or slide outline"
+  default_prompt: "Use $one-pager-and-slide-outline to turn this source material into the requested one-pager or slide outline, preserving useful wording and supported claims."

@@ -1,4 +1,4 @@
 interface:
   display_name: "Pipeline Stage Design"
-  short_description: "Buyer-signal stage exit criteria, not activity"
+  short_description: "Define pipeline stages using buyer evidence"
   default_prompt: "Use $pipeline-stage-definition-and-exit-criteria to define buyer-signal stage entry and exit criteria with inspectable proof and governance rules."

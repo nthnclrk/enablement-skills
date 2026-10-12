@@ -4,13 +4,13 @@ Use this when designing or checking a meeting architecture. The skill body has t
 
 ## Demo gate
 
-Include a demo block only when you have a verified buyer outcome, concern, or decision criterion, a matching approved capability, and a stop condition.
+Use a confirmed buyer outcome, concern, or criterion to select each demo block. In an exploratory conversation, a short example can help the buyer test relevance. Label that purpose, ask what fits or differs in their situation, and return to discovery. Use approved capabilities and a clear stop condition in either case.
 
 **Fails.** "Start with the platform overview, then walk all six modules."
 
 **Passes.** "You said late handoffs hit the Friday ship. Show missed-window alert and owner assignment. Stop if that is not the belief they need."
 
-If discovery does not support a block, remove it. Combined meetings reserve time to validate context before choosing what to show.
+Remove blocks that do not help the buyer evaluate a relevant question. Combined meetings reserve time to validate context and change the sequence as the buyer responds.
 
 ## Modes
 
@@ -34,4 +34,4 @@ Recap confirmed outcomes and open questions. Ask for a next step. Do not write a
 
 ## Thin evidence
 
-If you do not know the decision this meeting can produce, propose one and stop. Do not fill the hour with product.
+If the intended decision is unclear, propose a useful meeting outcome and ask for confirmation where it changes the design. A provisional guide can proceed with that assumption visible; avoid filling the time with unrelated features.

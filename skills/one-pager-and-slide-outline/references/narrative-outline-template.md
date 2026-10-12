@@ -8,7 +8,7 @@ Use this when packaging an existing narrative. The skill body has the procedure.
 
 **Passes.** "Missed handoffs are now a Friday-ship risk, not an ops nuisance."
 
-If the headline cannot be argued with, it is a topic label.
+Use a claim headline when it carries a supported point. Keep useful navigation labels, instructions, and genuine questions where those better serve the reader.
 
 ## One job
 
@@ -23,13 +23,13 @@ Do not carry internal-only claims into customer or partner outputs.
 
 ## One-pager flow
 
-Title as assertion. Context. Problem and consequence. Approach. Proof. Decision. Next actions with owners.
+Lead with the point the reader needs. Include the context, consequence, approach, proof, and next action that support it. This is an optional flow, not a requirement to add every section.
 
 Fit the channel. Do not also produce slides unless asked.
 
 ## Slide rules
 
-One assertion, one evidence cue, one speaker intent per slide. Detail goes to an appendix. Do not also produce a one-pager unless asked.
+Give each substantive slide one main point, its evidence or illustration, and a clear speaker purpose. Keep source and approval notes separate from audience-facing copy. Do not also produce a one-pager unless asked.
 
 ## Thin evidence
 

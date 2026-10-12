@@ -5,7 +5,7 @@ description: Define sales stages, exit criteria, and required proof that manager
 
 # Pipeline stage definition and exit criteria
 
-Write stages as buyer-signal checkpoints. If a seller can pass a stage by sending a deck, the stage is broken.
+Define stages that reflect the buyer's progress and give managers consistent evidence for moving a deal forward.
 
 A good stage says what the buyer decided and what proof a manager can inspect. If the user wants one live deal reviewed, use `deal-inspection-coach`. If they want a period forecast, use `forecast-risk-brief`.
 
@@ -13,9 +13,11 @@ A good stage says what the buyer decided and what proof a manager can inspect. I
 
 **Activity checklist.** "Discovery exits when the AE logs a discovery call and fills the MEDDPICC fields."
 
-If two stages can be true at once, they are not stages yet.
+The assignment rule should yield one current stage, while allowing earlier evidence to remain true and legitimate regressions to be recorded.
 
-## Confirm Inputs First
+## Inputs
+
+Reuse supplied context first. If a missing company fact would change the result, check the relevant sections of `.enablement/context.md` when available. Preserve source dates and approval limits.
 
 Ask only for the inputs that change the model:
 
@@ -26,16 +28,16 @@ Ask only for the inputs that change the model:
 
 If history is missing, label the model a hypothesis. Do not invent conversion rates, aging norms, or CRM behavior.
 
-## Read The Right Reference
+## Supporting material
 
 Read [references/stage-exit-framework.md](references/stage-exit-framework.md) before writing stage cards or governance. Read [references/source-system-guide.md](references/source-system-guide.md) when the output must later map into CRM fields and reporting.
 
-## Default Workflow
+## Procedure
 
 1. Establish the baseline.
    Find stages that are vague, skipped, slow, frequently regressed, or weakly tied to outcomes. Record data gaps. Done when you can name the broken stages and what evidence you lack.
 2. Give each stage one buyer signal.
-   One purpose. One reason to move. Done when you can say the buyer state in a sentence a manager would use in inspect.
+   One purpose. One reason to move. Done when you can say the buyer state in a sentence a manager would use in a deal review.
 3. Set entry, exit, and proof.
    Required proof blocks progression except through a documented exception. Recommended proof coaches; it does not block. Keep required proof to the minimum buyer-validated evidence that reduces that stage's named risk.
 4. Name the anti-patterns.
@@ -45,13 +47,13 @@ Read [references/stage-exit-framework.md](references/stage-exit-framework.md) be
 6. Backtest before rollout.
    Apply the criteria to won, lost, no-decision, and open deals. Report how many would progress, remain, regress, or need an exception. If history cannot support that, define a pilot.
 7. Set inspection and rollback.
-   Manager and RevOps cadence. Success thresholds for completeness, exception rate, aging, conversion, and forecast variance. Named rollback owner and restoration path.
+   Define the manager and RevOps review rhythm, pilot measures, rollback owner, and restoration path. Use historical or owner-approved thresholds; otherwise name who must set them. Separate changes in recorded stage from changes in actual buyer progress.
 8. Map to systems last.
    Design the operating logic first. Then recommend fields, notes, and dashboards. Do not move live opportunities or flip required fields without explicit approval.
 
-## Output Contract
+## What to return
 
-Return a stage model RevOps can implement and a manager can inspect:
+For a stage repair, return the changed criteria and adjacent-stage effects. For a full model, include:
 
 - Stage cards: name, buyer state, purpose, entry, exit, required proof, recommended proof, exception owner
 - Historical baseline and backtest, including data limits
@@ -64,7 +66,7 @@ Return a stage model RevOps can implement and a manager can inspect:
 
 Do not inspect a named live deal or produce a forecast brief here.
 
-## Quality Bar
+## Quality bar
 
 - A manager can pass or fail a deal against a stage without a side conversation.
 - Required proof is minimal, buyer-validated, and distinct from coaching evidence.

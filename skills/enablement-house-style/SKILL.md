@@ -1,21 +1,21 @@
 ---
 name: enablement-house-style
-description: Shared operating rules for this enablement pack covering context files, evidence, assumptions, and external writes. Use when setting package conventions or when a specialist skill is silent on safety. Do not use for a talk track, battlecard, call review, program design, context file, or other specialist deliverable.
+description: Review enablement writing and package conventions for clear actions, supported claims, appropriate context use, and sharing boundaries. Use for a house-style or operating-rules review; use the relevant specialist to create a deliverable.
 ---
 
 # Enablement house style
 
-Shared rules. Not a deliverable.
+Make enablement material clear enough for the intended practitioner to use, with claims and permissions they can trust.
 
-These rules apply to every skill in this pack. Load this file when a specialist skill is silent on context, evidence, or writes. Do not use for a talk track, battlecard, or other specialist deliverable.
+Use this skill to review writing or establish package conventions. Specialist skills carry their own essential constraints and work independently. Installing this file beside them does not automatically load its instructions.
 
-**Fails.** Inventing a customer logo so a talk track lands.
+**Fails.** "Drive strategic alignment through a best-in-class coaching engine."
 
-**Passes.** A proof slot marked `needs source`.
+**Passes.** "Managers review a call excerpt, help the rep practise a clearer follow-up question, and check its use on the next comparable call."
 
 ## When this applies
 
-Any enablement skill in this pack. Skip it for a clear specialist ask unless safety is the question.
+Confirm the audience, intended use, and any requested scope of revision. Reuse supplied context and preserve accurate material that already works. Review only the relevant writing or operating rules.
 
 ## Rules
 
@@ -25,9 +25,12 @@ Any enablement skill in this pack. Skip it for a clear specialist ask unless saf
 4. Label assumptions. Keep facts, inferences, and conflicts distinct.
 5. Do not write to CRM, email, Slack, or a CMS without an explicit yes.
 6. Internal-only material stays internal.
+7. Name who acts, what they do, and how the reader can judge the result. Explain an unfamiliar term before relying on it.
+8. Prefer direct instructions to slogans, repeated contrasts, or commentary about the writing process. Keep concrete examples and caveats that change a decision.
+9. Match the output to the request. Keep source and approval notes distinct from customer-facing copy. Preserve good wording rather than changing it to demonstrate activity.
 
 ## The test
 
-Would a tired enablement lead trust this on Tuesday? If not, rewrite it.
+Can the intended reader identify the action, owner, evidence, and relevant limitation? Are any claims more precise than their sources allow?
 
-Done when a specialist skill can run without restating these rules, and the output would survive a skeptical manager.
+Return revised copy when asked to edit, or the few material findings when asked to review. Done when the writing supports the reader's task, preserves the facts and voice, and keeps approval gaps visible.

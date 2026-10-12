@@ -4,12 +4,12 @@ Use this when you are choosing a claim or checking a memo. The skill body has th
 
 ## Claim mode
 
-Use one label per claim. Default to the least assertive mode that still helps the decision.
+Label the strength of each outcome claim. Use the level the evidence supports. Financial ROI is a calculation that also needs a defensible attribution basis; it does not establish causality by itself.
 
 | Mode | What you may say | What you may not say |
 | --- | --- | --- |
 | Observed result | The metric changed for this population and window | Enablement caused it |
-| Contribution | Timing, adoption, and behavior make enablement a plausible contributor | Isolated effect or ROI |
+| Contribution | Exposure, timing, and observed behaviour support a plausible contribution | A precisely isolated causal effect |
 | Causal effect | A credible experiment or quasi-experiment estimates the initiative effect | A pre/post line "basically proves it" |
 | Financial ROI | Monetized attributable benefit versus complete incremental cost | Pipeline influenced, unmonetized movement, or a missing-cost ratio |
 
@@ -21,7 +21,7 @@ A pre/post change alone supports an observed result, not causality.
 
 ## What we cannot claim yet
 
-Write this as its own section. Name the blocked claim, the missing evidence, and the cheapest next proof.
+Name the unsupported claim only when the draft makes or implies it, or the decision depends on it. Use a separate section in a full memo when helpful; in a short update, preserve sound caveats beside the claim. A missing cost figure does not require an ROI disclaimer in every non-financial update.
 
 Typical blocks:
 
@@ -34,9 +34,9 @@ Do not bury these in an appendix.
 
 ## Movement table
 
-For each material metric record definition, population, denominator, source, as-of date, baseline and comparison periods, baseline value, current value, absolute change, and relative change.
+For a full analysis, record each material metric's definition, population, denominator, source, as-of date, comparison periods, values, and useful change calculations. For a brief update, include only the detail needed to interpret the result. Do not add a relative percentage when the absolute change already answers the question.
 
-Do not calculate relative change when the baseline is zero. Do not compare values with different definitions or populations. Do not invent the missing cell.
+Do not calculate relative change when the baseline is zero. Check that definitions, population eligibility, and periods are comparable before presenting a change. Do not invent a missing value.
 
 ## Contribution chain
 
@@ -62,7 +62,7 @@ ROI % = (Net Benefit / Total Incremental Cost) × 100
 
 Gross revenue is not economic benefit. If only revenue is available, label it a `revenue-to-cost scenario` and do not call it ROI. Pipeline influenced is not realized benefit. Do not add leading and lagging indicators together or count the same benefit twice.
 
-If total cost is zero, material cost is missing, or monthly attributable economic benefit is not positive, do not calculate ROI. An unsupported attribution guess blocks ROI.
+If total cost is zero or material cost is missing, do not calculate ROI. An unsupported attribution guess also blocks it. Zero or negative attributable benefit can produce a valid negative ROI when the inputs are established. Positive recurring net benefit is needed for a meaningful payback-period estimate, not for ROI itself.
 
 Only when the user explicitly asks for a planning model may you build one. Label it `Hypothetical planning scenario — not an impact result`.
 

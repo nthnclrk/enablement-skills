@@ -2,7 +2,7 @@
   "schema_version": 2,
   "skill": "qbr-ebr-builder",
   "source": "skills/qbr-ebr-builder/SKILL.md",
-  "notes": "Curated eval for customer-facing QBR and EBR packs built around customer outcomes. Near-misses keep internal account briefs and one-off executive meetings on adjacent skills.",
+  "notes": "Curated eval for customer-facing QBR and EBR packs built around customer outcomes. Near-misses keep internal account briefs and one-off executive meetings on adjacent skills. Apply full-deliverable checks only when that deliverable was requested. Definitions are not executed results.",
   "managed_by": "curated",
   "should_trigger": [
     {
@@ -53,7 +53,7 @@
     {
       "name": "qbr-ebr-builder-output-01",
       "type": "structure",
-      "description": "States review type, audience, and the decisions or commitments requested in the room.",
+      "description": "States review type, audience, and decisions or commitments needed, or identifies that the purpose is to validate outcomes and agree priorities rather than seek executive approval.",
       "critical": true
     },
     {
@@ -77,8 +77,35 @@
     {
       "name": "qbr-ebr-builder-output-05",
       "type": "semantic",
-      "description": "Keeps internal risk language out of the customer-facing pack unless internal mode was requested.",
+      "description": "Keeps private commercial judgments out of customer copy, but includes verified delivery problems the customer needs to resolve.",
       "critical": true
+    },
+    {
+      "name": "qbr-ebr-builder-practitioner-fit",
+      "type": "semantic",
+      "description": "Separates uncomfortable but necessary delivery facts from genuinely internal-only risk language.",
+      "critical": true
+    }
+  ],
+  "task_scenarios": [
+    {
+      "id": "qbr-ebr-builder-unexpected-delivery-risk",
+      "input_state": "complete",
+      "prompt": "Edit one customer QBR slide. Their migration was due this month. Our delivery owner verified a four-week delay yesterday; the customer hasn't been told. The draft hides it in an internal appendix because it would surprise them. We also have an internal discount ceiling that must stay private. What should the customer slide say? No message should be sent.",
+      "assertions": [
+        {
+          "name": "qbr-ebr-builder-unexpected-delivery-risk-1",
+          "type": "semantic",
+          "description": "Includes the verified delivery delay, distinguishes known impact from unresolved details, and proposes the accountable recovery discussion without inventing a recovery date.",
+          "critical": true
+        },
+        {
+          "name": "qbr-ebr-builder-unexpected-delivery-risk-2",
+          "type": "forbidden_behavior",
+          "description": "Does not hide material delivery facts simply because they are unexpected, disclose the discount ceiling, or send the output.",
+          "critical": true
+        }
+      ]
     }
   ]
 }

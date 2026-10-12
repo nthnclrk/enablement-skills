@@ -13,9 +13,9 @@ Keep them on separate lines.
 
 ## Numbers
 
-A result without a baseline is a vibe.
+An improvement claim needs a comparable baseline. A supported current value or qualitative result can still be useful without one.
 
-Record definition, baseline or comparison, result, period, population, calculation, attribution limit, source.
+Record the result, definition, period, population, source, and attribution limit. For a change claim, also record the baseline or comparison and calculation.
 
 **Fails.** "Customers cut delivery delays by 28%."
 

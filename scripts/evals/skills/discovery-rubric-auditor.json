@@ -2,7 +2,7 @@
   "schema_version": 2,
   "skill": "discovery-rubric-auditor",
   "source": "skills/discovery-rubric-auditor/SKILL.md",
-  "notes": "Curated eval for the craft-pass output contract. Routing prompts stay on practitioner language; output checks require the skill's leading test, not a section list.",
+  "notes": "Curated checks for discovery-rubric-auditor. Apply full-deliverable checks only when that deliverable was requested; score focused revisions on the affected decisions and retained constraints. Definitions are not executed results.",
   "managed_by": "curated",
   "should_trigger": [
     {
@@ -57,13 +57,19 @@
     {
       "name": "discovery-rubric-auditor-output-04",
       "type": "structure",
-      "description": "Separates recurring patterns from one-offs and names a few coaching moves for the next sample.",
+      "description": "Separates recurring patterns from one-offs and recommends coaching, practice, process repair, or further investigation according to the evidence.",
       "critical": true
     },
     {
       "name": "discovery-rubric-auditor-output-05",
       "type": "semantic",
       "description": "Keeps thin or mixed samples directional, does not rank reps from unlike calls, and does not issue a pass/fail.",
+      "critical": true
+    },
+    {
+      "name": "discovery-rubric-auditor-practitioner-fit",
+      "type": "semantic",
+      "description": "Tests whether the recommended intervention addresses the observed gap and defines comparable follow-up evidence rather than assuming another training session is needed.",
       "critical": true
     }
   ]

@@ -6,15 +6,27 @@ Use this to pick the primary job, reject the nearest wrong job, and add only req
 
 **Passes.** `talk-track-builder`. Architecture is already implied. Do not add `discovery-and-demo-structure` unless they asked for the meeting design.
 
+## Contents
+
+- [Routing rules](#routing-rules)
+- [Foundation, planning, and measurement](#foundation-planning-and-measurement)
+- [Messaging, content, and insight](#messaging-content-and-insight)
+- [Coaching, practice, and readiness](#coaching-practice-and-readiness)
+- [Deal, account, and customer lifecycle](#deal-account-and-customer-lifecycle)
+- [Launch and partner enablement](#launch-and-partner-enablement)
+- [Useful sequences](#useful-sequences)
+- [Handoffs](#handoff-and-ownership-contract)
+- [Route output](#minimal-route-output)
+
 ## Routing Rules
 
 - Treat the environment's visible skill catalog as the source of truth for availability.
 - Mark a selected skill `Available now` only when it is present; otherwise mark it `Additional skill needed`.
-- Choose one skill by default. Add a step only when its output is required by the next step.
+- Choose one skill when it can complete the request. Add a step for a distinct requested deliverable or a required dependency.
 - Insert `revenue-enablement-context` only when missing shared assumptions would materially weaken the requested work.
 - Ask one question only when the answer changes the primary job, order, or audience mode.
 - Stop the route when the requested outcome is achieved; do not add adoption or measurement work automatically.
-- When the performance cause is unclear, route to `enablement-program-design` in discovery mode. Do not assume enablement is the answer; stop if evidence points to product, process, incentives, capacity, territory, or another non-enablement cause.
+- When the performance cause is unclear, route to `enablement-program-design` in discovery mode. If evidence points to another owner, identify that responsibility and any limited enablement support that remains useful.
 
 ## Foundation, Planning, And Measurement
 
@@ -32,9 +44,9 @@ Use this to pick the primary job, reject the nearest wrong job, and add only req
 | Skill | Primary job | Nearest boundary |
 | --- | --- | --- |
 | `value-prop-and-positioning` | Define positioning, differentiation, and persona value | Use `battlecard-builder` for one competitor and `talk-track-builder` for spoken lines |
-| `talk-track-builder` | Write persona- and stage-specific live conversation language | Use `value-prop-and-positioning` for message strategy and `objection-library-builder` for a reusable objection system |
-| `objection-library-builder` | Build a reusable objection taxonomy and response playbook | Use `call-review-coach` for one call and `battlecard-builder` for competitor-specific counters |
-| `battlecard-builder` | Produce competitor-specific field guidance | Use `value-prop-and-positioning` for broad category positioning |
+| `talk-track-builder` | Write persona- and stage-specific live conversation language | Use `value-prop-and-positioning` for message strategy and `objection-library-builder` for a reply to a specific buyer concern or a response library |
+| `objection-library-builder` | Respond to a specific buyer concern or build a reusable response library | Use `call-review-coach` for coaching a recorded call and `battlecard-builder` for competitor-specific fit guidance |
+| `battlecard-builder` | Assess head-to-head fit or produce competitor-specific field guidance | Use `objection-library-builder` for a reply to a specific buyer concern and `value-prop-and-positioning` for broad category positioning |
 | `discovery-and-demo-structure` | Design discovery questions and demo sequence | Use `discovery-rubric-auditor` to score calls and `call-review-coach` for one-call coaching |
 | `one-pager-and-slide-outline` | Package source material into a concise brief or deck structure | Use `value-prop-and-positioning` or `product-launch-enablement` when the underlying strategy is unresolved |
 | `case-study-extractor` | Turn customer evidence into a credible case narrative | Use `field-feedback-synthesizer` for broad themes and `one-pager-and-slide-outline` for final packaging |
@@ -80,7 +92,7 @@ Use this to pick the primary job, reject the nearest wrong job, and add only req
 
 ## Useful Sequences
 
-Skip any step whose output already exists. A slash means choose the matching branch, not run every option.
+These are possible handoffs, not mandatory routes. Use a later step only when the user requested that work or the deliverable depends on it. Skip work already completed. A slash means choose the relevant branch.
 
 - Foundational work: `revenue-enablement-context` -> requested specialist.
 - Launch readiness: `product-launch-enablement` -> `talk-track-builder` / `objection-library-builder` -> `manager-coaching-cadence` when behavior adoption is explicitly required.

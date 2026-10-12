@@ -5,7 +5,7 @@ description: Synthesize multi-source field feedback into traceable themes, segme
 
 # Field feedback synthesizer
 
-Turn a defined feedback corpus into findings a decision owner can use. Score source breadth before you recommend. Observation is what the sources said. Recommendation is what someone should do next. Keep them apart.
+Turn a defined set of field feedback into traceable findings and actions. Weigh independent sources and contradictory evidence before recommending a response.
 
 **Fails.** "The field is telling us the security FAQ is broken. Rewrite it this week."
 
@@ -13,7 +13,7 @@ Turn a defined feedback corpus into findings a decision owner can use. Score sou
 
 Asset-demand scoring is `content-gap-analysis`. Recurring call objections are `call-insights-to-objections`. Why deals closed is `win-loss-synthesis`. One recorded call is `call-review-coach`.
 
-## Confirm Inputs First
+## Inputs
 
 Ask only for the inputs that change the synthesis:
 
@@ -22,13 +22,13 @@ Ask only for the inputs that change the synthesis:
 3. Counting unit and denominator: records, respondents, accounts, opportunities, or calls
 4. Confidentiality and quotation boundaries
 
-If the corpus, counting unit, or question is unresolved, return an analysis plan rather than quantified findings. Do not invent usage, win rates, or quotes.
+If the corpus or question is unresolved, return an analysis plan. If only the denominator is missing, qualitative findings may still be useful; label coverage limits and avoid prevalence claims. Do not invent usage, win rates, or quotes.
 
-## Read The Right Reference
+## Supporting material
 
 Read [references/feedback-coding-framework.md](references/feedback-coding-framework.md) before you code the corpus, score breadth, or write a recommendation. Skip it if the user already coded the set and wants implications from a finished register.
 
-## Default Workflow
+## Procedure
 
 1. Frame the sample.
    Question, inclusion rules, collection method, counting unit, denominator, and known bias. Done when a reviewer can see what this corpus can and cannot represent.
@@ -49,9 +49,9 @@ Read [references/feedback-coding-framework.md](references/feedback-coding-framew
 
 Do not distribute verbatim feedback or write findings into product, CRM, or planning systems without explicit approval of content, audience, and destination.
 
-## Output Contract
+## What to return
 
-Return a synthesis the decision owner can inspect:
+For a narrow question, return the relevant findings and source limits. For a full synthesis, include:
 
 - Scope and coverage: counting unit, denominator, source mix, exclusions, limits
 - Decision summary that separates findings from hypotheses
@@ -64,7 +64,7 @@ Return a synthesis the decision owner can inspect:
 
 Do not produce a content backlog or an objection library from this pass.
 
-## Quality Bar
+## Quality bar
 
 - Every material finding traces to included records without extra sensitive detail.
 - Duplicate copies are not counted as independent sources.

@@ -5,17 +5,19 @@ description: Diagnose an unclear field-performance problem or design the cross-f
 
 # Enablement program design
 
-Design a program that changes observable field behavior and gives managers something to inspect. If it reads like a kickoff deck, rewrite it.
+Diagnose a field-performance problem and design the enablement work, practice, and manager support that could address it.
 
-A program is one performance problem, one target behavior, and one inspection. Content calendars, completion dashboards, and "journeys" are not a program.
+A program connects a defined performance problem to the barriers, interventions, and evidence needed to address it. Use a primary target behaviour to focus the work; include supporting behaviours only where the diagnosis warrants them.
 
-**Program.** "AEs will ask one inspectable qualification question before they book SE time. Managers check two calls a week. We stop if inspected calls do not show the question by week 4."
+**Program.** "AEs are booking SE time before confirming the buyer's evaluation criteria. Practise that conversation, add the criteria to the handoff, and review eligible calls. The pilot owner will set a review window and decide whether the evidence supports continuation."
 
 **Kickoff.** "A four-week enablement journey with kickoff, certification, office hours, and a dashboard of completions."
 
-If a manager cannot tell from a live artifact whether the behavior happened, it is not done.
+Define application through evidence a manager can observe in the work.
 
-## Confirm Inputs First
+## Inputs
+
+Reuse supplied context first. If a missing company fact would change the result, check the relevant sections of `.enablement/context.md` when available. Preserve source dates and approval limits.
 
 Ask only for the inputs that change the design:
 
@@ -27,11 +29,11 @@ Ask only for the inputs that change the design:
 
 If the problem, owner, audience, or decision authority is unknown, return a discovery brief. Do not invent capacity, baselines, or dates.
 
-## Read The Right Reference
+## Supporting material
 
 Read [references/program-charter-template.md](references/program-charter-template.md) for the kickoff-deck tell, diagnosis rules, and the charter shape. Skip it if they already diagnosed the barrier and only want the wrapper filled in.
 
-## Default Workflow
+## Procedure
 
 1. Diagnose the performance problem.
    Separate evidence from interpretation. Skill and knowledge are not the same as process, product, incentive, capacity, territory, or management. Done when you can name the cause, the confidence, and what remains unknown. If enablement is not a material response, stop and name the owner who should take it.
@@ -42,7 +44,7 @@ Read [references/program-charter-template.md](references/program-charter-templat
 4. Set the capacity envelope.
    Audience volume, facilitator time, manager time, content effort. Reduce scope or sequence cohorts when the plan exceeds capacity. Do not invent hours to make it fit.
 5. Build the pilot.
-   Cohort, entry, duration, evidence, and the rule to continue, adjust, or stop. Done when week-N evidence can kill the program.
+   Define the cohort, entry conditions, duration, and evidence needed to continue, adjust, or stop. Include exposure and opportunity to apply the behaviour. Agree the review window with the owner; weak results may require a change to the intervention, not just more training.
 6. Establish governance and measurement.
    Decision rights, approval gates, one primary behavior metric, one primary business outcome. Record definitions, sources, baseline status, and limitations. Do not invent baselines or targets.
 7. Produce the charter.
@@ -50,9 +52,9 @@ Read [references/program-charter-template.md](references/program-charter-templat
 
 For a standalone launch kit use `product-launch-enablement`. For a coaching rhythm use `manager-coaching-cadence`. For pass/fail standards use `certification-program-builder`. For new-hire ramp use `onboarding-program-builder`. For what will not happen this quarter use `quarterly-enablement-planner`.
 
-## Output Contract
+## What to return
 
-Return a charter a first-time owner can run:
+If diagnosis is unresolved, return the discovery brief and next evidence request. For a programme design or revision, include only the relevant parts of this charter:
 
 - Decision brief: problem, evidence, target behavior, outcome, and open decisions
 - Exclusions: adjacent problems this program will not solve
@@ -64,10 +66,10 @@ Return a charter a first-time owner can run:
 
 Do not add a quarter stack or a launch kit unless asked. Do not enroll anyone or publish materials.
 
-## Quality Bar
+## Quality bar
 
 - A manager can inspect the target behavior in the workflow.
-- The charter refused to be a kickoff deck.
+- The owner can identify the barrier, intervention, pilot evidence, and next decision.
 - Every intervention ties to a diagnosed barrier.
 - Scope fits named capacity, or the conflict is visible.
 - The pilot can stop the program.

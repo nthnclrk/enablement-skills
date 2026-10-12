@@ -2,7 +2,7 @@
   "schema_version": 2,
   "skill": "deal-inspection-coach",
   "source": "skills/deal-inspection-coach/SKILL.md",
-  "notes": "Curated eval for one-deal buyer-proof inspection. Routing cases stay on a single opportunity. Output checks require buyer proof, not seller activity.",
+  "notes": "Curated eval for one-deal buyer-proof inspection. Routing cases stay on a single opportunity. Output checks require buyer proof, not seller activity. Apply full-deliverable checks only when that deliverable was requested. Definitions are not executed results.",
   "managed_by": "curated",
   "should_trigger": [
     {
@@ -69,6 +69,12 @@
       "name": "deal-inspection-coach-output-05",
       "type": "forbidden_behavior",
       "description": "Does not invent CRM fields, amounts, dates, stakeholders, or commitments, and does not apply stage or field changes.",
+      "critical": true
+    },
+    {
+      "name": "deal-inspection-coach-practitioner-fit",
+      "type": "semantic",
+      "description": "For a focused deal question, gives the supported finding and next action without requiring an entire inspection pack.",
       "critical": true
     }
   ]

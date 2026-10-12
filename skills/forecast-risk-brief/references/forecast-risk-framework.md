@@ -54,7 +54,7 @@ Do not upgrade confidence because the deal looks healthy.
 | Deal risk | Confidence | Default |
 | --- | --- | --- |
 | High | High or medium | Intervene now on the named blocker |
-| High | Low | Verify the missing facts, then decide if rescue is feasible |
+| High | Low | Act on a directly evidenced hard stop while verifying other gaps; verify a weakly supported threat before treating it as fact |
 | Moderate | High | Tighten the weakest signal; monitor at the next decision point |
 | Moderate | Low | Repair evidence before treating the deal as stable |
 | Low | High | Monitor |
@@ -66,7 +66,7 @@ Preserve supplied owner dates. A date you created is `proposed`.
 
 ## Thin evidence
 
-If the export lacks next steps, push history, or a snapshot date, say what you can count and keep the rest indeterminate. Do not invent amounts, categories, or cycle-time norms.
+If the export lacks next steps, push history, or a snapshot date, say what can still be established and which classifications are indeterminate. Missing fields do not erase a directly evidenced hard stop. Do not invent amounts, categories, or cycle-time norms.
 
 ## Optional shape
 

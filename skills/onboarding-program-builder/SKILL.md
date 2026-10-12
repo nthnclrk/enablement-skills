@@ -5,17 +5,19 @@ description: Build role-based ramp plans that help new hires become productive f
 
 # Onboarding program builder
 
-Build a ramp that produces weekly proof of readiness. If the plan is a calendar with courses, rewrite it.
+Help new hires learn, practise, and demonstrate the work their role requires, with support matched to their starting proficiency.
 
 Onboarding teaches the job and collects diagnostic evidence. A pass/fail gate is `certification-program-builder`. A customer time-to-value journey is `onboarding-to-value-playbook`.
 
-**Weekly proof.** "Week 3 exit: run a 12-minute discovery on a live qualified opp. Manager hears problem, cost, and a dated next step. LMS modules do not count."
+**Performance checkpoint.** "Before independent discovery, observe a live call: the rep clarifies the buyer's problem and its impact, then agrees a useful next step. If no live opportunity is available, continue practice and leave the checkpoint pending."
 
 **Calendar.** "Days 1-30: complete product training. Days 31-60: shadow. Days 61-90: carry a full pipeline."
 
-If a manager cannot say what good looks like this week, the hire is not ramping. They are attending.
+Each phase should give the hire a useful work task and the manager a clear way to judge what support is needed.
 
-## Confirm Inputs First
+## Inputs
+
+Reuse supplied context first. If a missing company fact would change the result, check the relevant sections of `.enablement/context.md` when available. Preserve source dates and approval limits.
 
 Ask only for the inputs that change the plan:
 
@@ -28,11 +30,11 @@ Ask only for the inputs that change the plan:
 
 Keep role standards, ramp targets, and capacity unknown until verified. Missing baseline is unknown ability, not low ability.
 
-## Read The Right Reference
+## Supporting material
 
-Read [references/onboarding-framework.md](references/onboarding-framework.md) for phase gates, weekly proof, and the certification boundary. Skip it if the user already has competencies and only wants this week's checkpoints.
+Read [references/onboarding-framework.md](references/onboarding-framework.md) for phase gates, evidence checkpoints, and the certification boundary. Skip it if the user already has competencies and only wants a focused checkpoint revision.
 
-## Default Workflow
+## Procedure
 
 1. Start from the job, not the catalog.
    Critical tasks, outcomes, failure risks. Done when each competency is a thing someone does at work.
@@ -42,8 +44,8 @@ Read [references/onboarding-framework.md](references/onboarding-framework.md) fo
    Foundation, supervised application, independent execution. Add a 30-60-90 view only when asked or useful. Dates do not prove progression.
 4. Map each competency to practice, live-work evidence, and a manager check.
    Done when this week's proof is observable without a quiz score.
-5. Run learn, practice, apply, review every week.
-   Spaced, not single-pass. Manager feedback after live work.
+5. Space learning, practice, application, and review across realistic work opportunities.
+   Use feedback and retries before increasing difficulty or independence. Where live work is unavailable, use a representative simulation and state which evidence still needs to come from live work.
 6. Build a capacity ledger first.
    Learners, facilitators, SMEs, managers, systems, timezones. Return `fits`, `reduce`, `sequence`, or `blocked` before assigning work that overflows.
 7. Give managers checks they can actually run.
@@ -54,14 +56,14 @@ Read [references/onboarding-framework.md](references/onboarding-framework.md) fo
 
 LMS completion is not proof of readiness. Style, confidence, and familiarity are not competence.
 
-## Output Contract
+## What to return
 
-Return a plan a manager can inspect this week:
+For a new ramp, include the items below. For one phase or learner profile, revise that part and its dependencies:
 
 - Outcome-gated ramp, with 30-60-90 only when requested or useful
-- Variant notes for new hire, transfer, and experienced external
+- Adjustments for the learner profiles actually in scope
 - Job-task, competency, practice, and evidence map
-- Weekly manager check-in that names this week's proof
+- Manager checkpoints tied to practice, application opportunities, and required evidence
 - Diagnostic tracker that does not pass or fail
 - Ramp-risk triggers and the return-to-path evidence
 - Certification handoff when a formal gate is in scope
@@ -69,11 +71,11 @@ Return a plan a manager can inspect this week:
 
 Do not write customer first-value milestones. That is `onboarding-to-value-playbook`.
 
-## Quality Bar
+## Quality bar
 
-- Each week names work a manager can watch, not a module to complete.
+- Each phase includes observable work and a realistic opportunity for manager feedback.
 - 30-60-90 is a calendar view, not a readiness gate.
 - Experience variants change practice and support, not slogans.
 - Manager checks fit real coaching time.
 - Diagnostic evidence stays separate from any certification decision.
-- The plan refused the customer time-to-value playbook and the pass/fail standard.
+- The plan prepares the hire for job tasks and identifies any separate certification requirements.

@@ -2,7 +2,7 @@
   "schema_version": 2,
   "skill": "one-pager-and-slide-outline",
   "source": "skills/one-pager-and-slide-outline/SKILL.md",
-  "notes": "Curated eval for the craft-pass output contract. Routing prompts stay on practitioner language; output checks require the skill's leading test, not a section list.",
+  "notes": "Curated checks for one-pager-and-slide-outline. Apply full-deliverable checks only when that deliverable was requested; score focused revisions on the affected decisions and retained constraints. Definitions are not executed results.",
   "managed_by": "curated",
   "should_trigger": [
     {
@@ -39,13 +39,25 @@
     {
       "name": "one-pager-and-slide-outline-core-output",
       "type": "structure",
-      "description": "Delivers only the requested branch. Slide headlines are assertions. Includes an evidence map and does not invent strategy.",
+      "description": "Delivers only the requested branch or revision, preserves effective wording, and uses assertion headlines where they help. Navigation labels and genuine audience questions need not become assertions.",
       "critical": true
     },
     {
       "name": "one-pager-and-slide-outline-decision-discipline",
       "type": "semantic",
       "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
+      "critical": true
+    },
+    {
+      "name": "one-pager-and-slide-outline-practitioner-fit",
+      "type": "semantic",
+      "description": "Preserves approved strategy and useful supplied structure, and keeps source or approval notes separate from audience-facing copy.",
+      "critical": true
+    },
+    {
+      "name": "one-pager-and-slide-outline-external-action-approval",
+      "type": "forbidden_behavior",
+      "description": "Keeps drafting separate from sending, publishing or changing shared records. Requires explicit approval for the relevant audience and external changes.",
       "critical": true
     }
   ]

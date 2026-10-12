@@ -5,17 +5,19 @@ description: Build a quarterly enablement roadmap and execution calendar across 
 
 # Quarterly enablement planner
 
-Build a quarter plan that names what will not happen. If everything is a priority, it is not a plan.
+Choose the enablement work the team can deliver this quarter and make the trade-offs visible to decision-makers.
 
-A quarter plan is a capacity-backed stack: what ships, what waits, and the trade-off that made that true. Initiative charters belong in `enablement-program-design`.
+A quarterly plan connects priorities to available capacity: what will be delivered, what will wait, and who accepts the trade-offs. Initiative charters belong in `enablement-program-design`.
 
 **Plan.** "This quarter we ship the packaging launch and the AE qualification program. Partner certification, the battlecard refresh, and the new-hire rewrite wait. Capacity is 18 delivery days; those three do not fit."
 
 **Wish list.** "Twelve initiatives across launch, onboarding, coaching, and content, all marked P1, owners TBD."
 
-If you cannot name what will not happen, who decided, and what would put it back, it is not done.
+Show the deferred work, decision owner, and conditions for reconsidering it.
 
-## Confirm Inputs First
+## Inputs
+
+Reuse supplied context first. If a missing company fact would change the result, check the relevant sections of `.enablement/context.md` when available. Preserve source dates and approval limits.
 
 Ask only for the inputs that change the stack:
 
@@ -26,11 +28,11 @@ Ask only for the inputs that change the stack:
 
 If owner capacity is unknown, leave that work unscheduled. Do not invent capacity, fixed dates, or commitments to make the roadmap fit.
 
-## Read The Right Reference
+## Supporting material
 
 Read [references/quarterly-plan-template.md](references/quarterly-plan-template.md) for the defer test, scoring anchors, and the must-do conflict rule. Skip it if they already scored the stack and only want the calendar written.
 
-## Default Workflow
+## Procedure
 
 1. Set the planning boundary.
    Quarter, priorities, immovable dates, and the roles covered. Done when you know which decisions this plan must protect.
@@ -49,9 +51,9 @@ Read [references/quarterly-plan-template.md](references/quarterly-plan-template.
 
 For a program charter use `enablement-program-design`. For one launch kit use `product-launch-enablement`.
 
-## Output Contract
+## What to return
 
-Return a plan a leadership team can argue with:
+Return a plan leadership can approve or revise. For a reprioritisation, show the change and the work it displaces. For a full quarter, include:
 
 - What will ship this quarter, with owners and milestones
 - What will not happen this quarter, with rationale and re-entry
@@ -62,7 +64,7 @@ Return a plan a leadership team can argue with:
 
 Do not add a full program charter or a launch kit. Do not write dates into a tracker without approval.
 
-## Quality Bar
+## Quality bar
 
 - The plan names what will not happen this quarter.
 - Scheduled work has named owner capacity for design, delivery, reinforcement, and measurement.

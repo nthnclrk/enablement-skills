@@ -2,7 +2,7 @@
   "schema_version": 2,
   "skill": "objection-library-builder",
   "source": "skills/objection-library-builder/SKILL.md",
-  "notes": "Curated eval for the craft-pass output contract. Routing prompts stay on practitioner language; output checks require the skill's leading test, not a section list.",
+  "notes": "Check short replies to a buyer concern and reusable response libraries. Distinguish both from competitive fit analysis and broader conversation scripts. Apply full-deliverable checks only when that deliverable was requested. Definitions are not executed results.",
   "managed_by": "curated",
   "should_trigger": [
     {
@@ -15,6 +15,10 @@
     },
     {
       "prompt": "I have rough notes. Please turn them into a usable objection library and label anything that still needs confirmation.",
+      "expected": true
+    },
+    {
+      "prompt": "My buyer says a competitor is 30% cheaper. I've got a call shortly. Help me respond naturally without inventing proof or offering a discount.",
       "expected": true
     }
   ],
@@ -33,13 +37,23 @@
       "prompt": "Please build and refine value propositions and messaging frameworks for revenue teams.",
       "expected": false,
       "adjacent_skill": "value-prop-and-positioning"
+    },
+    {
+      "prompt": "Help me assess where we fit against Competitor X for a plant-floor evaluation. I need the requirements that favour each offer and when we should qualify out, not a reply to an objection.",
+      "expected": false,
+      "adjacent_skill": "battlecard-builder"
+    },
+    {
+      "prompt": "Write a 30-second opener for our next product demo. We have agreed the agenda and want to confirm the buyer's priority before showing anything.",
+      "expected": false,
+      "adjacent_skill": "talk-track-builder"
     }
   ],
   "output_structure_checks": [
     {
       "name": "objection-library-builder-core-output",
       "type": "structure",
-      "description": "Play cards diagnose before they answer, preserve source wording, and include escalation plus proof approval state.",
+      "description": "For a library, returns source-grounded play cards with diagnosis, response, proof status, and escalation. For an imminent conversation, gives a usable question and supported spoken response without requiring the library workflow.",
       "critical": true
     },
     {
@@ -47,6 +61,39 @@
       "type": "semantic",
       "description": "Makes the requested decision or next action explicit while separating verified evidence, provisional assumptions, conflicts, and decision-critical unknowns.",
       "critical": true
+    },
+    {
+      "name": "objection-library-builder-practitioner-fit",
+      "type": "semantic",
+      "description": "Treats buyer-reported competitor pricing as unverified, makes no unsupported superiority or savings claim, and offers no concession beyond supplied authority.",
+      "critical": true
+    }
+  ],
+  "task_scenarios": [
+    {
+      "id": "objection-library-builder-urgent-price-response",
+      "input_state": "partial",
+      "prompt": "I've got a call in 30 minutes. Our buyer said: Competitor X is 30% cheaper, so I don't see why we'd pay more. We're selling scheduling software to an operations team. That's all I know about their quote. Our verified capability is routing work between teams with an audit history. I have no approved savings numbers and can't offer a discount. Help me answer them naturally. I don't need a whole playbook.",
+      "assertions": [
+        {
+          "name": "objection-library-builder-urgent-price-response-1",
+          "type": "semantic",
+          "description": "Provides a neutral diagnostic question, a short supported spoken response, and a next move that follows from the buyer's answer. Establishes relevance before treating a verified capability as a reason to choose.",
+          "critical": true
+        },
+        {
+          "name": "objection-library-builder-urgent-price-response-2",
+          "type": "forbidden_behavior",
+          "description": "Does not treat the 30% report as a verified like-for-like comparison, claim unsupported differentiation or savings, or offer a discount.",
+          "critical": true
+        },
+        {
+          "name": "objection-library-builder-urgent-price-response-3",
+          "type": "semantic",
+          "description": "Keeps turns short enough to say aloud and does not require company-context setup or a reusable library.",
+          "critical": true
+        }
+      ]
     }
   ]
 }

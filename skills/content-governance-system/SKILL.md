@@ -5,7 +5,7 @@ description: Design a practical content ops system for revenue enablement conten
 
 # Content governance system
 
-Design the weekly operating model that keeps enablement content accurate and findable. This is not an inventory. If the team cannot run it every week with the people they have, it is not done.
+Give content owners a manageable way to keep enablement material accurate, approved, and easy to find.
 
 **Fails.** "Classify all 400 assets, stand up a content council, and review everything quarterly."
 
@@ -13,31 +13,33 @@ Design the weekly operating model that keeps enablement content accurate and fin
 
 A one-time coverage audit and backlog is `content-gap-analysis`.
 
-## Confirm Inputs First
+## Inputs
+
+Reuse supplied context first. If a missing company fact would change the result, check the relevant sections of `.enablement/context.md` when available. Preserve source dates and approval limits.
 
 Ask only for the inputs that change the operating model:
 
 1. Repositories and content types in scope
 2. Who already owns accuracy, claim approval, and the right to publish
 3. Current pain: sprawl, stale claims, unclear source of truth, or blocked launches
-4. Who will run the weekly cadence, and how much time they actually have
+4. Who will own recurring review and publishing work, and how much time they have
 
 If ownership or system-write authority is unknown, leave it unknown. Do not invent usage.
 
-## Read The Right Reference
+## Supporting material
 
-Read [references/governance-model-template.md](references/governance-model-template.md) for the two status axes, approval-vs-publish split, and a weekly cadence you can copy. Read [references/source-system-guide.md](references/source-system-guide.md) when the rules must map into publishing systems the team already uses.
+Read [references/governance-model-template.md](references/governance-model-template.md) for publication and review states, approval boundaries, and a sustainable operating cadence. Read [references/source-system-guide.md](references/source-system-guide.md) when the rules must map into publishing systems the team already uses.
 
-## Default Workflow
+## Procedure
 
-1. Name the weekly job.
-   Who meets or reviews, on which day, and what gets decided. Done when a new owner could run next week without a kickoff project.
+1. Set a workable review rhythm.
+   Name the owner, decisions, time budget, and events that require attention. Use an existing cadence where it works. A small team may review asynchronously; proposed dates and service levels need owner confirmation.
 2. Set decision rights.
    Content approval, publish authorization, and system write are three different rights. A claim owner may approve wording and still lack permission to publish.
 3. Keep two independent axes.
    Publication: `draft`, `in_review`, `approved`, `published`, `retired`. Review: `current`, `due`, `overdue`, `blocked`. A live asset stays `published` while due or overdue. Review status must not hide it from published denominators.
 4. Trigger review from risk, not a universal calendar.
-   Legal, security, pricing, and product claims review when the source changes or validity ends. Convenience content can wait.
+   Legal, security, pricing, and product claims need review when their source changes or validity ends. If a published asset contains a known harmful or unauthorised claim, propose a targeted withdrawal or correction to its authorised owner; an overdue date alone does not justify retirement.
 5. Define intake that matches capacity.
    One prioritization path for new requests. No shadow queues. Urgent work uses a time-boxed exception that cannot skip legal or security approval.
 6. Name the quality checks that can fail a publish.
@@ -49,21 +51,21 @@ Read [references/governance-model-template.md](references/governance-model-templ
 
 Do not publish, archive, relabel, or change permissions without explicit approval of the exact targets.
 
-## Output Contract
+## What to return
 
-Return an operating model the team can run next week:
+For a new operating model, include the items below. For a policy repair, return the affected rule, owner, and system implications:
 
-- Weekly cadence: who does what, on which day, and what "done" means
+- Review rhythm: owner, time budget, triggers, decisions, and completion checks
 - Scope and decision rights, including the approval-vs-publish split
 - Taxonomy and metadata the team will actually maintain
 - Publication and review policies with entry, exit, and SLAs
 - Intake, exception path, and retirement rules
 - Operating metrics that available systems can measure
-- Assumptions, and ownership or usage you refused to invent
+- Unresolved ownership and missing usage evidence
 
 Do not deliver a prioritized gap backlog. That is `content-gap-analysis`.
 
-## Quality Bar
+## Quality bar
 
 - A named person can run the cadence next week without a cleanup project.
 - Ownership and write authority are unambiguous.

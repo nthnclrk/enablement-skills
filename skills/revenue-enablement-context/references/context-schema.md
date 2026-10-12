@@ -37,7 +37,7 @@ Use `Reuse: limited — [scope]` or `Reuse: not approved` when appropriate. In a
 
 <!-- enablement-context-schema: 1 -->
 
-## Context Handshake
+## Scope And Ownership
 
 - Canonical path: `.enablement/context.md`
 - Business scope:

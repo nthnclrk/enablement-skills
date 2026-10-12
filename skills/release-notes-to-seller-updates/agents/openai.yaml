@@ -1,4 +1,4 @@
 interface:
   display_name: "Seller Updates"
-  short_description: "Field-usable update by channel, not a launch plan"
+  short_description: "Turn product changes into practical seller guidance"
   default_prompt: "Use $release-notes-to-seller-updates to turn product release notes into concise seller updates, talk tracks, and FAQ changes."

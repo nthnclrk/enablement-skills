@@ -2,7 +2,7 @@
   "schema_version": 2,
   "skill": "enablement-program-design",
   "source": "skills/enablement-program-design/SKILL.md",
-  "notes": "Curated eval for behavior-change programs. Routing keeps program charters off quarter stacks and standalone launch kits. Output checks require manager-inspectable behavior, not a kickoff deck.",
+  "notes": "Curated eval for behavior-change programs. Routing keeps program charters off quarter stacks and standalone launch kits. Output checks require manager-inspectable behavior, not a kickoff deck. Apply full-deliverable checks only when that deliverable was requested. Definitions are not executed results.",
   "managed_by": "curated",
   "should_trigger": [
     {
@@ -63,6 +63,12 @@
       "name": "enablement-program-design-output-04",
       "type": "forbidden_behavior",
       "description": "Does not invent capacity, baselines, or dates.",
+      "critical": true
+    },
+    {
+      "name": "enablement-program-design-practitioner-fit",
+      "type": "semantic",
+      "description": "Selects interventions for the diagnosed performance barrier and sets pilot decisions against realistic exposure and application opportunities.",
       "critical": true
     }
   ]
