@@ -1,6 +1,6 @@
 {
   "name": "enablement-messaging",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Messaging and content bundle with reusable context, positioning, talk tracks, objections, and battlecards.",
   "author": {
     "name": "Nathan Clark"

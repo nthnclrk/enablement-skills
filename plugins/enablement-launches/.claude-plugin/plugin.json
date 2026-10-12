@@ -1,6 +1,6 @@
 {
   "name": "enablement-launches",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Launch bundle with reusable context, product-change enablement, seller updates, and partner support.",
   "author": {
     "name": "Nathan Clark"

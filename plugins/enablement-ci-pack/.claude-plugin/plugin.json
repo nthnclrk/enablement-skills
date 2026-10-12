@@ -1,6 +1,6 @@
 {
   "name": "enablement-ci-pack",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Conversation-intelligence bundle with reusable context, call analysis, objection mining, and coaching.",
   "author": {
     "name": "Nathan Clark"

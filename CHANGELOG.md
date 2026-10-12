@@ -4,6 +4,30 @@ All notable changes to this repo should be recorded here.
 
 The format is intentionally lightweight. Keep entries concise and useful for operators adopting updates.
 
+## [Unreleased]
+
+## [1.5.0] - 2026-10-13
+
+Coaching and workflow improvements across all 38 skills.
+
+- Call reviews connect specific evidence to feedback, a short rehearsal and a next-call check. Manager coaching plans account for preparation, practice and follow-up time.
+- Specialists return the amount of help requested: a response to one objection, a single metric definition, a briefing section or a full deliverable.
+- Objection responses, competitive fit assessments and talk tracks have clearer routing boundaries.
+- Updated decision rules cover onboarding readiness, certification, exploratory demos, customer reviews and proposal exceptions.
+- Measurement guidance distinguishes participation, assessment results and live performance. Missing baselines limit change claims; supported current values and negative ROI remain valid.
+- Each specialist carries its essential evidence and action boundaries. Customer sharing and changes to shared records need explicit approval. Reusable company context remains optional.
+- Updated references, skill-picker copy and evaluation definitions. Retained focused behaviour trials with their prompts, outputs, independent reviews and coverage limits.
+- All seven Claude bundles move to `0.6.0`. Skill names, bundle membership and installation commands are unchanged.
+
+### Changed defaults
+
+- Call reviews include scores when requested or required by the team's established process. A supplied rubric takes precedence.
+- A request for one partner asset returns that asset; the full pack is optional.
+- Impact updates keep evidence limits beside the relevant claims. A separate limitations section is optional.
+- House style is an explicit writing and review workflow. Bundling it does not automatically load its instructions into another skill.
+
+Repository and portable-format validation passed. Executed checks cover selected workflows; the with-skill comparisons have mixed results and do not establish package-wide improvement. See the [behaviour records](scripts/evals/behavior/README.md).
+
 ## [1.4.0] - 2026-08-20
 
 Package craft: jobs over headings.

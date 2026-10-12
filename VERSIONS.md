@@ -2,6 +2,12 @@
 
 This file tracks repo-level and bundle-level versions for packaging and update checks.
 
+## Current release
+
+Source version `1.5.0` and all seven Claude bundles at `0.6.0`. See the [release notes](CHANGELOG.md#150---2026-10-13) and [GitHub releases](https://github.com/nthnclrk/enablement-skills/releases) for publication history.
+
+The v1.4.0 source tag remains in place. The v1.5.0 release also includes the v1.3.0 and v1.4.0 changes for readers upgrading from the previous published GitHub Release, v1.2.0.
+
 ## Versioning Policy
 
 - Use semantic versioning (`MAJOR.MINOR.PATCH`).
@@ -13,21 +19,28 @@ This file tracks repo-level and bundle-level versions for packaging and update c
 
 | Component | Version | Last Updated | Status | Notes |
 | --- | --- | --- | --- | --- |
-| `repo` | `1.4.0` | `2026-08-20` | `active` | Craft jobs over required headings, house-style skill, template is a worked example, with-skill vs no-skill behavior notes. |
+| `repo` | `1.5.0` | `2026-10-13` | `active` | Request-sized outputs, practical coaching, evidence and approval rules, and recorded behaviour checks. |
 
 ## Bundle Versions
 
 | Bundle | Version | Last Updated | Status | Notes |
 | --- | --- | --- | --- | --- |
-| `enablement-core` | `0.5.0` | `2026-08-20` | `active` | Adds house-style; router and context may use their own file shapes. |
-| `enablement-messaging` | `0.5.0` | `2026-08-20` | `active` | Adds house-style; specialist files no longer repeat pack safety. |
-| `enablement-programs` | `0.5.0` | `2026-08-20` | `active` | Adds house-style; specialist files no longer repeat pack safety. |
-| `enablement-measurement` | `0.5.0` | `2026-08-20` | `active` | Adds house-style; specialist files no longer repeat pack safety. |
-| `enablement-launches` | `0.5.0` | `2026-08-20` | `active` | Adds house-style; specialist files no longer repeat pack safety. |
-| `enablement-crm-pack` | `0.5.0` | `2026-08-20` | `active` | Adds house-style; specialist files no longer repeat pack safety. |
-| `enablement-ci-pack` | `0.5.0` | `2026-08-20` | `active` | Adds house-style; specialist files no longer repeat pack safety. |
+| `enablement-core` | `0.6.0` | `2026-10-13` | `active` | Optional context, direct specialist routing, planning and field-work updates. |
+| `enablement-messaging` | `0.6.0` | `2026-10-13` | `active` | Focused objection responses, competitive fit guidance and audience approval rules. |
+| `enablement-programs` | `0.6.0` | `2026-10-13` | `active` | Coaching practice, readiness evidence and feasible manager schedules. |
+| `enablement-measurement` | `0.6.0` | `2026-10-13` | `active` | Reproducible metrics, assessment distinctions and bounded impact claims. |
+| `enablement-launches` | `0.6.0` | `2026-10-13` | `active` | Request-sized launch and partner outputs with evidence and sharing boundaries. |
+| `enablement-crm-pack` | `0.6.0` | `2026-10-13` | `active` | Account, proposal, customer-value and shared-record approval rules. |
+| `enablement-ci-pack` | `0.6.0` | `2026-10-13` | `active` | Evidence-based call feedback, practice and limits on cross-call conclusions. |
 
 ## Change Log Summary
+
+### 1.5.0 - 2026-10-13
+
+- Revised all 38 skills and their supporting instructions to fit the requested work.
+- Updated coaching, evidence, readiness, measurement and external-action rules.
+- Aligned evaluation definitions and retained focused behaviour checks with their limitations.
+- Kept names, bundle membership and installation commands stable; all bundles are now `0.6.0`.
 
 ### 1.4.0 - 2026-08-20
 

@@ -8,7 +8,9 @@ The canonical skills follow the portable Agent Skills folder format and can be u
 
 ## At A Glance
 
-- Current release: [`v1.4.0`](https://github.com/nthnclrk/enablement-skills/releases/tag/v1.4.0) — practitioner-written skills, house-style safety, craft jobs over identical headings
+- Release: [`v1.5.0`](https://github.com/nthnclrk/enablement-skills/releases/tag/v1.5.0)
+- Source version: `1.5.0`; all seven Claude bundles: `0.6.0`. See [VERSIONS.md](VERSIONS.md).
+- This release updates coaching, request-sized outputs, evidence rules and approval boundaries across the collection. See the [changelog](CHANGELOG.md#150---2026-10-13).
 - `38` canonical skills in [`skills/`](skills/)
 - `7` system playbooks in [`systems/`](systems/) plus [`systems/REGISTRY.md`](systems/REGISTRY.md)
 - `7` Claude marketplace bundles in [`plugins/`](plugins/)
@@ -17,9 +19,9 @@ The canonical skills follow the portable Agent Skills folder format and can be u
 
 ## Start Here
 
-### First Use: Establish Shared Context
+### Start with your task
 
-If the request depends on company-specific facts, begin with [`revenue-enablement-context`](skills/revenue-enablement-context/SKILL.md). Give it the smallest useful source packet available, such as:
+Choose the specialist that matches the work and provide the relevant material you already have. If several tasks need the same company facts, use [`revenue-enablement-context`](skills/revenue-enablement-context/SKILL.md) to prepare reusable context from sources such as:
 
 - ICP, segment, and persona material
 - current positioning, pricing, and proof
@@ -27,9 +29,9 @@ If the request depends on company-specific facts, begin with [`revenue-enablemen
 - recurring objections and competitors
 - current priorities, programs, and metrics
 
-The skill separates confirmed, inferred, conflicted, and missing information; records provenance, freshness, sensitivity, and reuse boundaries; and exposes important gaps. For an immediate task, it can return a lightweight working-context handshake without creating a file. When reusable storage is useful and wanted, it proposes `.enablement/context.md`, previews the content before writing, and asks for confirmation. Downstream skills receive only the relevant sections and do not reopen confirmed inputs without a reason.
+The context skill separates confirmed, inferred, conflicted, and missing information, with sources, verification dates, and reuse limits. For one task, it can return a short context summary. When reusable storage would help, it previews `.enablement/context.md` and asks for confirmation before writing. Specialists use only the sections relevant to their task.
 
-Skip this step when the request is self-contained or the required context is already current. Do not turn context setup into a blocker for a simple, well-specified job. Shared safety rules live in [`enablement-house-style`](skills/enablement-house-style/SKILL.md). Do not open that skill to build a specialist artifact.
+Self-contained requests can go straight to the specialist. Ask for the amount of help you need: a single objection response, a change to tomorrow's coaching session, or a complete programme. Use [`enablement-house-style`](skills/enablement-house-style/SKILL.md) for an explicit writing or operating-rules review. Each specialist includes the safeguards needed for its own work.
 
 ### Choose The Work
 
@@ -43,7 +45,7 @@ Use the skill that matches the deliverable:
 
 Use [`enablement-router`](skills/enablement-router/SKILL.md) when the ask is ambiguous, spans several deliverables, or needs a short sequence of skills. For a direct request such as “review this call” or “build a battlecard,” go straight to the specialist skill.
 
-If a manager knows the team is missing target but does not yet know why, start with the router. It sends the work to program discovery without assuming training is the answer and stops the enablement path when evidence points to product, process, capacity, incentives, territory, or another non-enablement cause.
+If a manager knows the team is missing target but does not yet know why, start with the router. It sends the work to programme discovery to establish the cause. When evidence points to product, process, capacity, incentives, territory or another cause outside enablement, it identifies the responsible owner and any useful enablement support.
 
 ### Choose An Install Bundle
 
@@ -61,7 +63,7 @@ Install the full skill source when you want the complete library. Choose a bundl
 
 Some skills appear in more than one bundle because they support more than one operating team. [`plugins/BUNDLES.md`](plugins/BUNDLES.md) is the explicit membership list; [`skills/`](skills/) remains the source of truth.
 
-Every bundle includes `revenue-enablement-context` and `enablement-house-style` so it can stand alone. Use context only when shared context is missing, stale, or conflicting. House style is shared safety, not a deliverable. Direct specialist requests should still go straight to the specialist skill.
+Every bundle includes `revenue-enablement-context` and `enablement-house-style`. They support optional context setup and editorial review. Bundling does not automatically load one skill's instructions into another; direct requests use the relevant specialist.
 
 ## What You Can Use It For
 
@@ -159,7 +161,7 @@ This command is read-only. It checks:
 
 - canonical skill files and repository-required metadata
 - exact `name` and `description` frontmatter policy
-- required skill sections and unresolved scaffold placeholders
+- basic craft checks and unresolved scaffold placeholders
 - relative links across tracked Markdown files
 - `agents/openai.yaml` interface fields
 - eval artifact coverage, schema, and starter freshness
@@ -193,7 +195,7 @@ Use the scenarios under `scripts/evals/skills/` to test:
 - whether required output sections and decisions appear
 - whether the result remains useful with incomplete or messy input
 
-The repository currently stores eval scenarios but does not ship a model runner. Behavior claims require executing representative tasks and reviewing the outputs.
+The repository stores eval scenarios and [executed behaviour checks](scripts/evals/behavior/README.md), but does not ship a model runner. The recorded comparisons cover selected tasks and have mixed results; they do not establish improvement across every skill or model.
 
 Use the [quality rubric](scripts/evals/README.md#quality-rubric) to review routing, evidence discipline, practitioner judgment, output utility, resilience, safety, and incremental value.
 
